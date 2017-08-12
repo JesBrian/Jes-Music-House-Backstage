@@ -1,0 +1,92 @@
+
+    <meta charset="UTF-8">
+
+
+
+    <style>
+        .paging
+        {
+            float: right;
+            margin-right:20px;
+            margin-top:20px;
+        }
+        .paging>button
+        {
+            width:40px;
+            height:40px;
+            border: none;
+            margin-right:8px;
+            color: #3F3F3F;
+            font-size:18px;
+            font-weight:700;
+            background: url(../images/a.png);
+            background-size:100% 100%;
+        }
+        .paging>.pageOperation
+        {
+            height:30px;
+            padding-top:1px;
+            line-height:30px;
+        }
+
+        .paging>button:active
+        {
+            color: #809cdf;
+            background: url(../images/Select.png);
+            background-size:100% 100%;
+            background-color: #2e2e2e;
+            -webkit-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+        }
+        .paging>button.active
+        {
+            -webkit-box-shadow:0 0 4px 4px #5bc2d4;
+            -moz-box-shadow:0 0 4px 4px #5bc2d4;
+            box-shadow:0 0 4px 4px #5bc2d4;
+        }
+    </style>
+
+
+    <div style="width:95%; height:90%; padding:10px 20px 20px;">
+
+        <div style="height:300px;">
+            <h4>创建的歌单</h4>
+
+            <nav class="paging">
+                <button class="pageOperation  MyIF ahead" ></button>
+                <button class="pageOperation MyIF double-arrow-left"></button>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button class="pageOperation MyIF double-arrow-right"></button>
+                <button class="pageOperation MyIF back"></button>
+            </nav>
+
+        </div>
+
+        <div>
+            <h4>收藏的歌单</h4>
+
+            <nav class="paging">
+                <button class="pageOperation  MyIF ahead" ></button>
+                <button class="pageOperation MyIF double-arrow-left"></button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button class="active">4</button>
+                <button>5</button>
+                <button class="pageOperation MyIF double-arrow-right"></button>
+                <button class="pageOperation MyIF back"></button>
+            </nav>
+        </div>
+    </div>
+
+
+
+
+    <!-- CSS部分 -->
+
+    <!-- 自用字体图标 -->
+    <link rel="stylesheet" type="text/css" href="../plugins/myfonticon/iconfont.css">

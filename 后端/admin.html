@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+
+    <title>后台框架</title>
+
+
+    <link href="plugins/easyui/themes/easyui.css" rel="stylesheet" type="text/css">
+    <link href="plugins/easyui/themes/insdep_theme_default.css" rel="stylesheet" type="text/css">
+
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="plugins/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="plugins/easyui/jquery.easyui.min.js"></script>
+
+
+</head>
+
+<body>
+    <div id="master-layout">
+        <div data-options="region:'north',border:false,bodyCls:'theme-header-layout'">
+            <div class="theme-navigate">
+            </div>
+        </div>
+
+        <!--开始左侧菜单-->
+        <div data-options="region:'west',bodyCls:'theme-left-layout'" style="width:180px;">
+
+            <!--正常菜单-->
+            <div class="theme-left-normal">
+                <!--theme-left-switch 如果不需要缩进按钮，删除该对象即可-->
+                <div class="left-control-switch theme-left-switch" style="position: absolute; top:50px; left:155px;"><i class="fa fa-chevron-left fa-lg"></i></div>
+
+                <!--start class="easyui-layout"-->
+                <div class="easyui-layout" data-options="border:false,fit:true">
+
+                    <!--start region:'north'-->
+                    <div data-options="region:'north',border:false">
+
+                        <!--start theme-left-user-panel-->
+                        <div class="theme-left-user-panel" style=" background-color:black">
+                            <dl>
+                                <dt style="margin:-10px -5px auto -5px;">
+                                    <img src="images/Holy_Dragon,_Sanctuary_Guard_Regalie_(Full_Art).png" width="40" height="40" style="border-radius:5px;">
+                                </dt>
+                                <dd>
+                                    <p style="color: #888888">管理员：</p>
+                                    <b style="padding-left:10px; color: #01ebff">JesBrian</b>
+                                </dd>
+
+                            </dl>
+                        </div>
+                        <!--end theme-left-user-panel-->
+
+                    </div>
+                    <!--end region:'north'-->
+
+                    <!--start region:'center'-->
+                    <div data-options="region:'center',border:false">
+
+                        <!--start easyui-accordion-->
+                        <div class="easyui-accordion" data-options="border:false,fit:true">
+                            <div title="<img src='images/icon/菜单-页面.png' width='24' style='float:left; margin-top:-2px;'/><font style='margin-left:10px; font-size:15px; font-weight:500; color:#DD7E90'>公共信息</font>" >
+                                <ul class="easyui-datalist" data-options="border:false,fit:true" >
+                                    <li>企业文化</li>
+                                    <li>公文</li>
+                                    <li>新闻公告</li>
+                                    <li>重大信息</li>
+                                </ul>
+                            </div>
+                            <div title="<font style='color:#F7B889'>个人事务</font>">
+                                <ul class="easyui-datalist" data-options="border:false,fit:true">
+                                    <a href="#"><li>内部邮件</li></a>
+                                    <li>我的日志</li>
+                                    <li>我的提醒</li>
+                                </ul>
+                            </div>
+                            <div title="<font style='color:#EBE86C'>通讯录</font>"></div>
+                            <div title="<font style='color:#60E099'>流程中心</font>">
+                                <ul class="easyui-datalist" data-options="border:false,fit:true">
+                                    <li>启动流程</li>
+                                    <li>待办流程</li>
+                                    <li>我发起的流程</li>
+                                </ul>
+                            </div>
+                            <div title="<font style='color:#26C7FF'>文档中心</font>"></div>
+                            <div title="<font style='color:#B373F7  '>个人设置</font>">
+                                <ul class="easyui-datalist" data-options="border:false,fit:true">
+                                    <li>修改密码</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!--end easyui-accordion-->
+
+                    </div>
+                    <!--end region:'center'-->
+                </div>
+                <!--end class="easyui-layout"-->
+
+            </div>
+            <!--最小化菜单-->
+            <div class="theme-left-minimal">
+                <ul class="easyui-datalist" data-options="border:false,fit:true">
+                    <li><i class="fa fa-home fa-2x"></i><p>主题</p></li>
+                    <li><i class="fa fa-book fa-2x"></i><p>组件</p></li>
+                    <li><i class="fa fa-pencil fa-2x"></i><p>编辑</p></li>
+                    <li><i class="fa fa-cog fa-2x"></i><p>设置</p></li>
+                    <li><a class="left-control-switch"><i class="fa fa-chevron-right fa-2x"></i><p>打开</p></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <!--结束左侧菜单-->
+
+        <!-- 中间主要页面部分 -->
+        <div id="mainPanle" region="center" border="true">
+            <div id="tabs" class="easyui-tabs" data-options="tabWidth:180, tools:'#tab-tools'" fit="true" split="true">
+                <div title="Music House - 后台主页">
+                    <div class="cs-home-remark">
+                        <h2 style="margin-left:50px; margin-top:20px;">欢迎登陆 MH-音悦屋 后台管理页面</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 页脚 -->
+        <div region="south" border="true" split="false" style="height:25px; padding:3px 50px 0 0;  color:#01ebff; text-align:right; overflow:hidden; background:#1e1e1e;">
+            <font style="margin-right:200px;">音悦屋后台管理系统 Ver-1.0</font>
+            <font>&copy; 2017 - 2019 JesBrian All Rights Reserved</font>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        $(function(){
+            /*布局部分*/
+            $('#master-layout').layout({
+                fit:true/*布局框架全屏*/
+            });
+
+            /*左侧菜单控制部分*/
+            var left_control_status=true;
+            var left_control_panel=$("#master-layout").layout("panel",'west');
+            $(".left-control-switch").on("click",function(){
+                if(left_control_status){
+                    left_control_panel.panel('resize',{width:70});
+                    left_control_status=false;
+                    $(".theme-left-normal").hide();
+                    $(".theme-left-minimal").show();
+                }else{
+                    left_control_panel.panel('resize',{width:180});
+                    left_control_status=true;
+                    $(".theme-left-normal").show();
+                    $(".theme-left-minimal").hide();
+                }
+                $("#master-layout").layout('resize', {width:'100%'})
+            });
+        });
+    </script>
+
+
+</body>
+</html>

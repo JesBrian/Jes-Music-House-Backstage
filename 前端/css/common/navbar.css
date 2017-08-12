@@ -1,0 +1,167 @@
+/*控制MH图标的部分*/
+#logo {
+    float: left;
+    padding: 6px 20px 0 50px;
+}
+
+#logo img {
+    width: 200px;
+}
+
+/* 控制单选框 */
+.webdesigntuts-workshop input {
+    background: #736fff;
+    background: -webkit-linear-gradient(#907dff, #736fff);
+    background: -moz-linear-gradient(#907dff, #736fff);
+    background: -o-linear-gradient(#907dff, #736fff);
+    background: -ms-linear-gradient(#907dff, #736fff);
+    background: linear-gradient(#907dff, #736fff);
+    border: 1px solid #736fff;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 2px 0 #685bff;
+    color: #62d1ff;
+    font-size: 14px;
+    font-weight: 400;
+    text-shadow: 0 -1px 0 #907dff;
+}
+
+.ie .webdesigntuts-workshop input {
+    line-height: 40px;
+}
+
+.webdesigntuts-workshop input::-webkit-input-placeholder {
+    color: #62d1ff;
+}
+
+.webdesigntuts-workshop input:-moz-placeholder {
+    color: #62d1ff;
+}
+
+.webdesigntuts-workshop input:focus {
+    -webkit-animation: glow 800ms ease-out infinite alternate;
+    -moz-animation: glow 800ms ease-out infinite alternate;
+    -o-animation: glow 800ms ease-out infinite alternate;
+    -ms-animation: glow 800ms ease-out infinite alternate;
+    animation: glow 800ms ease-out infinite alternate;
+    background: #736fff;
+    background: -webkit-linear-gradient(#907dff, #736fff);
+    background: -moz-linear-gradient(#907dff, #736fff);
+    background: -o-linear-gradient(#907dff, #736fff);
+    background: -ms-linear-gradient(#907dff, #736fff);
+    background: linear-gradient(#907dff, #736fff);
+    border-color: #01e6ff;
+    box-shadow: 0 0 5px rgba(1, 230, 255, 0.2), inset 0 0 5px rgba(1, 230, 255, 0.1), 0 2px 0 #c8c8ff;
+    color: #62d1ff;
+    outline: none;
+}
+
+.webdesigntuts-workshop input:focus::-webkit-input-placeholder {
+    color: #62d1ff;
+}
+
+.webdesigntuts-workshop input:focus:-moz-placeholder {
+    color: #62d1ff;
+}
+
+.webdesigntuts-workshop button {
+    background: #685bff;
+    background: -webkit-linear-gradient(#736fff, #685bff);
+    background: -moz-linear-gradient(#736fff, #685bff);
+    background: -o-linear-gradient(#736fff, #685bff);
+    background: -ms-linear-gradient(#736fff, #685bff);
+    background: linear-gradient(#736fff, #685bff);
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    box-sizing: content-box;
+    border: 1px solid #736fff;
+    border-left-color: #685bff;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 #685bff;
+    color: #fff;
+    font-family: 'Cabin', helvetica, arial, sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+    text-shadow: 0 -1px 0 #907dff;
+}
+
+.webdesigntuts-workshop button:hover, .webdesigntuts-workshop button:focus {
+    background: #736fff;
+    background: -webkit-linear-gradient(#907dff, #736fff);
+    background: -moz-linear-gradient(#907dff, #736fff);
+    background: -o-linear-gradient(#907dff, #736fff);
+    background: -ms-linear-gradient(#907dff, #736fff);
+    background: linear-gradient(#907dff, #736fff);
+    color: #01c7de;
+    outline: none;
+}
+
+.webdesigntuts-workshop button:active {
+    background: #736fff;
+    background: -webkit-linear-gradient(#907dff, #736fff);
+    background: -moz-linear-gradient(#907dff, #736fff);
+    background: -o-linear-gradient(#907dff, #736fff);
+    background: -ms-linear-gradient(#907dff, #736fff);
+    background: linear-gradient(#907dff, #736fff);
+    box-shadow: 0 1px 0 #685bff, inset 1px 0 1px #736fff;
+    top: 1px;
+    color: #01c7de;
+}
+
+@-webkit-keyframes glow {
+    0% {
+        border-color: rgba(1, 230, 255, 0.89);
+        box-shadow: 0 0 5px rgba(1, 230, 255, 0.2), inset 0 0 5px rgba(1, 230, 255, 0.1), 0 2px 0 #bcb8ff;
+    }
+    100% {
+        border-color: #01e6ff;
+        box-shadow: 0 0 20px rgba(1, 230, 255, 0.6), inset 0 0 10px rgba(1, 230, 255, 0.4), 0 2px 0 #bcb8ff;
+    }
+}
+
+@-moz-keyframes glow {
+    0% {
+        border-color: rgba(1, 230, 255, 0.89);
+        box-shadow: 0 0 5px rgba(1, 230, 255, 0.2), inset 0 0 5px rgba(1, 230, 255, 0.1), 0 2px 0 #bcb8ff;
+    }
+    100% {
+        border-color: #01e6ff;
+        box-shadow: 0 0 20px rgba(1, 230, 255, 0.6), inset 0 0 10px rgba(1, 230, 255, 0.4), 0 2px 0 #bcb8ff;
+    }
+}
+
+@-o-keyframes glow {
+    0% {
+        border-color: rgba(1, 230, 255, 0.89);
+        box-shadow: 0 0 5px rgba(1, 230, 255, 0.2), inset 0 0 5px rgba(1, 230, 255, 0.1), 0 2px 0 #bcb8ff;
+    }
+    100% {
+        border-color: #01e6ff;
+        box-shadow: 0 0 20px rgba(1, 230, 255, 0.6), inset 0 0 10px rgba(1, 230, 255, 0.4), 0 2px 0 #bcb8ff;
+    }
+}
+
+@-ms-keyframes glow {
+    0% {
+        border-color: rgba(1, 230, 255, 0.89);
+        box-shadow: 0 0 5px rgba(1, 230, 255, 0.2), inset 0 0 5px rgba(1, 230, 255, 0.1), 0 2px 0 #bcb8ff;
+    }
+    100% {
+        border-color: #01e6ff;
+        box-shadow: 0 0 20px rgba(1, 230, 255, 0.6), inset 0 0 10px rgba(1, 230, 255, 0.4), 0 2px 0 #bcb8ff;
+    }
+}
+
+@keyframes glow {
+    0% {
+        border-color: rgba(1, 230, 255, 0.89);
+        box-shadow: 0 0 5px rgba(1, 230, 255, 0.2), inset 0 0 5px rgba(1, 230, 255, 0.1), 0 2px 0 #bcb8ff;
+    }
+    100% {
+        border-color: #01e6ff;
+        box-shadow: 0 0 20px rgba(1, 230, 255, 0.6), inset 0 0 10px rgba(1, 230, 255, 0.4), 0 2px 0 #bcb8ff;
+    }
+}
+
+/*控制导航菜单的部分*/

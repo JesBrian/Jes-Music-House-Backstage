@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ♪ MusicHouse ♪ </title>
+
+    <!-- CSS部分 -->
+
+    <!-- 自用字体图标 -->
+    <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
+
+    <!--BootStrap框架 CSS-->
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+
+    <!--顶部导航栏 CSS-->
+    <link href="css/common/navbar.css" rel="stylesheet"/>
+
+    <!--滚动条 CSS-->
+    <link href="css/common/scrollbar.css" rel="stylesheet"/>
+
+
+    <!-- 临时CSS -->
+    <style type="text/css">
+        body
+        {
+            background-color:transparent;
+        }
+        li
+        {
+            list-style-type:none;
+        }
+        .MyIF
+        {
+            color:#42d4ff;
+        }
+
+        .box-show-out
+        {
+            -webkit-box-shadow:0 0 5px 5px #49DFFF;
+            -moz-box-shadow:0 0 5px 5px #49DFFF;
+            box-shadow:0 0 5px 5px #49DFFF;
+        }
+        .box-show-out2
+        {
+            width:1125px;
+            border-radius:15px;
+            background-color:#2E2E2E;
+            -webkit-box-shadow:0 0 5px 5px #B29AFF;
+            -moz-box-shadow:0 0 5px 5px #B29AFF;
+            box-shadow:0 0 5px 5px #B29AFF;
+        }
+
+        /* 控制渐变效果 */
+        .end-boder
+        {
+            font-weight: 900;
+            background-image: -webkit-linear-gradient(left, #2ed8ff, #9b7cf7 25%, #2ed8ff 50%, #9b7cf7 75%, #2ed8ff);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-background-size: 200% 100%;
+            -webkit-animation: masked-animation 3s infinite linear;
+        }
+        @-webkit-keyframes masked-animation
+        {
+            0%  { background-position: 0 0;}
+            100% { background-position: -100% 0;}
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+    <!-- 热门新消息 -->
+    <div class="container box-show-out2" id="new-hot" style=" width:1000px; height:400px; margin-top:10px; background:url(bg.jpg) no-repeat; background-size:100% 100%;">
+        <iframe src="component/test.html" style=" margin-left:290px; margin-top:22px; height:380px; width:710px; border:none;"></iframe>
+    </div>
+
+
+    <!-- 个性化推荐 -->
+    <div class="container box-show-out2" style="margin-top:80px; height:255px;">
+        <iframe style="width:1110px; height:240px; margin:10px 0 0 -5px; border:none;" src="component/personalityRecommendation.html"></iframe>
+    </div>
+
+
+    <!-- 热门推荐、排行榜 -->
+    <div style="height:520px;">
+        <div class="box-show-out2" id="" style="margin:80px 40px 0 37px; width:800px; float:left">
+            <iframe style="width:788px; height:425px; margin:10px 0 0 5px; border:none;" src="component/songClassification.html"></iframe>
+        </div>
+        <div class="box-show-out2"  style="margin-top:80px; width:285px; float:left">
+            <iframe style="height:432px; width:265px; border:none; margin:10px 0 -5px 10px;" src="component/popularRanking.html"></iframe>
+        </div>
+    </div>
+
+
+
+    <!-- 新碟上架 -->
+    <!-- 临时CSS -->
+    <style type="text/css">
+        #new-disc {
+            background: url(images/index/new-disc/bg.jpg) no-repeat bottom;
+            background-color: #2E2E2E;
+        }
+    </style>
+
+
+    <div class="container box-show-out2" id="new-disc" style="margin-top:80px; height:255px; position: relative">
+        <div id="new-disc-title">
+            <span class="MyIF music-albu-2" style="float:left; margin:-10px 10px 0 7px; font-size:40px;"></span>
+            <h3 class="end-boder" style="color: #1b86ff">新碟上架</h3>
+            <a href="http://www.baidu.com" style="float: right; margin:-40px 20px 0 0; color:#000000">
+                <button>
+                    <span class="MyIF cubes-1"></span>百度
+                </button>
+            </a>
+            <hr style="margin:-5px 0 0 0; border:3px solid #60e099;"/>
+        </div>
+
+        <span id="left" class="MyIF num-arrow-left" style="position: absolute; top: 140px;"></span>
+        <span id="right" class="MyIF num-arrow-right" style="position: absolute; top: 140px; right:73px;"></span>
+
+        <div class="container" style=" width:80%; height: 165px; margin-top:15px; overflow: hidden;">
+
+            <ul style="margin:35px auto 0 -56px; width:1500%; position: relative">
+                <li style="float: left; margin:auto 28px;">
+                    <a href="#"><img src="images/common/disc.png" width="120px;"></a>
+                    <p><a href="#" style="align-content:center;">A</a></p>
+                </li>
+                <li style="float: left; margin:auto 28px;">
+                    <a href="#"><img src="images/common/disc.png" width="120px;"></a>
+                    <p><a href="#" style="align-content:center;">B</a></p>
+                </li>
+                <li style="float: left; margin:auto 28px;">
+                    <a href="#"><img src="images/common/disc.png" width="120px;"></a>
+                    <p><a href="#" style="align-content:center;">C</a></p>
+                </li>
+                <li style="float: left; margin:auto 28px;">
+                    <a href="#"><img src="images/common/disc.png" width="120px;"></a>
+                    <p><a href="#" style="align-content:center;">D</a></p>
+                </li>
+                <li style="float: left; margin:auto 28px;">
+                    <a href="#"><img src="images/common/disc.png" width="120px;"></a>
+                    <p><a href="#" style="align-content:center;">E</a></p>
+                </li>
+                <li style="float: left; margin:auto 28px;">
+                    <a href="#"><img src="images/common/disc.png" width="120px;"></a>
+                    <p><a href="#" style="align-content:center;">F</a></p>
+                </li>
+                <li style="float: left; margin:auto 28px;">
+                    <a href="#"><img src="images/common/disc.png" width="120px;"></a>
+                    <p><a href="#" style="align-content:center;">G</a></p>
+                </li>
+                <li style="float: left; margin:auto 28px;">
+                    <a href="#"><img src="images/common/disc.png" width="120px;"></a>
+                    <p><a href="#" style="align-content:center;">H</a></p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div style="height:70px;"></div>
+
+
+
+    <!-- Jsc部分 -->
+
+    <!--jQuery框架-->
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+
+    <!--BootStrap所需Jsc-->
+    <script src="plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <!--临时Jsc-->
+    <script language="javascript">
+
+        var _index = 0;
+
+        $("#left").click(function () {
+            if (_index == 0) {
+                $("#new-disc ul").prepend($("#new-disc ul").html());
+                $("#new-disc ul").css("left", "-1405px");
+                _index = 8
+            }
+            _index--;
+            $("#new-disc ul").stop().animate({left: -_index * 176}, 666);
+        });
+
+        $("#right").click(function () {
+            _index++;
+            var len = $("#new-disc ul li").length;
+            if (_index + 5 > len) {
+                $("#new-disc ul").stop().append($("#new-disc ul").html());
+            }
+            $("#new-disc ul").stop().animate({left: -_index * 176}, 666);
+        });
+    </script>
+
+</body>

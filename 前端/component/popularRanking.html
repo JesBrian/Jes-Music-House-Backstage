@@ -1,0 +1,183 @@
+
+    <base target="_blank"/>
+
+    <!-- 自用字体图标 -->
+    <link rel="stylesheet" type="text/css" href="../plugins/myfonticon/iconfont.css">
+
+    <!--BootStrap框架 CSS-->
+    <link rel="stylesheet" type="text/css" href="../plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+
+    <style type="text/css">
+        body
+        {
+            background-color:#2E2E2E;
+        }
+        ul, li
+        {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        a,a:hover,a:visited
+        {
+            text-decoration:none;
+        }
+        .MyIF
+        {
+            color:#42d4ff;
+        }
+
+        /* 控制渐变效果 */
+        .end-boder
+        {
+            font-weight: 900;
+            background-image: -webkit-linear-gradient(left, #2ed8ff, #9b7cf7 25%, #2ed8ff 50%, #9b7cf7 75%, #2ed8ff);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-background-size: 200% 100%;
+            -webkit-animation: masked-animation 3s infinite linear;
+        }
+        @-webkit-keyframes masked-animation
+        {
+            0%  { background-position: 0 0;}
+            100% { background-position: -100% 0;}
+        }
+
+    </style>
+
+
+    <div style=" position:absolute; width:265px;">
+        
+        <div>
+            <a id="" href="test.html">
+                <span class="MyIF exponential" style="float:left; margin:-15px 0 0 3px; font-size:40px;"></span>
+                <h3 class="end-boder" style=" color:#1b86ff; margin:5px 0 0 0; display: inline;">排行榜</h3>
+            </a>
+            <a href="http://www.baidu.com" style="float: right; margin:0 20px 0 0; color:#000000">
+                <button>
+                    <span class="MyIF cubes-1"></span>百度
+                </button>
+            </a>
+            <hr style="margin:2px 0 0 0; border:3px solid #60e099;"/>
+        </div>
+
+
+        <style>
+            .list-group div
+            {
+                width:35px;
+                float: left;
+                padding-left:5px;
+            }
+            .list-group div span
+            {
+                font-size:12px;
+                position:relative;
+            }
+            a.list-group-item
+            {
+                padding:8px;
+                color:#B29AFF;
+                background-size:100% 100%;
+                background-color:#222222;
+                border-color: #49DFFF;
+            }
+            a.list-group-item:focus
+            {
+                color:#B29AFF;
+                background-color:#222222;
+            }
+            a.list-group-item:hover
+            {
+                color:#4B97FF;
+                background:url(../排行榜bg.png);
+                background-size:100% 100%;
+            }
+            a.list-group-item:hover .MyIF
+            {
+                position:relative;
+                -webkit-animation:fontmove 0.5s forwards; /* Safari and Chrome */
+                -webkit-animation-iteration-count: 1;
+            }
+            @keyframes fontmove
+            {
+                0%   {top:0px; left:0px;}
+                100% {top:0px; left:10px;}
+            }
+            @-webkit-keyframes fontmove /* Safari and Chrome */
+            {
+                0%   {top:0px; left:0px;}
+                100% {top:0px; left:10px;}
+            }
+        </style>
+
+
+        <div class="list-group" style=" margin:15px 5px 0 5px;
+            -webkit-box-shadow:0 0 2px 2px #49DFFF;
+            -moz-box-shadow:0 0 2px 2px #49DFFF;
+            box-shadow:0 0 2px 2px #49DFFF;">
+
+            <a href="#" class="list-group-item">
+                <div>
+                    <span class="MyIF double-arrow-right"></span>
+                </div>
+                Cras justo odio
+            </a>
+            <a href="#" class="list-group-item">
+                <div>
+                    <span class="MyIF double-arrow-right"></span>
+                </div>
+                Dapibus ac facilisis in
+            </a>
+            <a href="#" class="list-group-item">
+                <div>
+                    <span class="MyIF double-arrow-right"></span>
+                </div>
+                Morbi leo risus
+            </a>
+            <a href="#" class="list-group-item">
+                <div>
+                    <span class="MyIF double-arrow-right"></span>
+                </div>
+                Porta ac consectetur ac
+            </a>
+            <a href="#" class="list-group-item">
+                <div>
+                    <span class="MyIF double-arrow-right"></span>
+                </div>
+                Vestibulum at eros
+            </a>
+            <a href="#" class="list-group-item">
+                <div>
+                    <span class="MyIF double-arrow-right"></span>
+                </div>
+                Cras justo odio
+            </a>
+            <a href="#" class="list-group-item">
+                <div>
+                    <span class="MyIF double-arrow-right"></span>
+                </div>
+                Dapibus ac facilisis in
+            </a>
+            <a href="#" class="list-group-item">
+                <div>
+                    <span class="MyIF double-arrow-right"></span>
+                </div>
+                Morbi leo risus
+            </a>
+            <a href="#" class="list-group-item">
+                <div>
+                    <span class="MyIF double-arrow-right"></span>
+                </div>
+                Porta ac consectetur ac
+            </a>
+            <a href="#" class="list-group-item">
+                <div>
+                    <span class="MyIF double-arrow-right"></span>
+                </div>
+                Vestibulum at eros
+            </a>
+        </div>
+
+    </div>

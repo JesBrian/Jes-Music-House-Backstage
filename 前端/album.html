@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> ♪ JesBrian - MH ♪ </title>
+
+
+    <!-- CSS部分 -->
+
+    <!-- 自用字体图标 -->
+    <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
+
+    <!-- 临时CSS -->
+    <style type="text/css">
+        body
+        {
+            background-color:transparent;
+        }
+        li
+        {
+            list-style-type:none;
+        }
+        a,a:hover,a:focus,a:active
+        {
+            text-decoration:none;
+        }
+        .MyIF
+        {
+            color:#42d4ff;
+        }
+
+        .box-show-out
+        {
+            -webkit-box-shadow:0 0 5px 5px #49DFFF;
+            -moz-box-shadow:0 0 5px 5px #49DFFF;
+            box-shadow:0 0 5px 5px #49DFFF;
+        }
+        .box-show-out2
+        {
+            border-radius:15px;
+            background-color:#2E2E2E;
+            -webkit-box-shadow:0 0 5px 5px #B29AFF;
+            -moz-box-shadow:0 0 5px 5px #B29AFF;
+            box-shadow:0 0 5px 5px #B29AFF;
+        }
+
+
+        /* 控制渐变效果 */
+        .end-boder
+        {
+            font-weight: 900;
+            background-image: -webkit-linear-gradient(left, #2ed8ff, #9b7cf7 25%, #2ed8ff 50%, #9b7cf7 75%, #2ed8ff);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-background-size: 200% 100%;
+            -webkit-animation: masked-animation 3s infinite linear;
+        }
+        @-webkit-keyframes masked-animation
+        {
+            0%  { background-position: 0 0;}
+            100% { background-position: -100% 0;}
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+    <style>
+        nav>a>div
+        {
+            width:100px;
+            height:40px;
+            padding-left:32px;
+            background: url(images/common/first.png);
+            background-size:100% 100%;
+            font:italic normal bold 12px/2.5em 宋体,verdana;
+        }
+        nav>a>div.MyIF:hover
+        {
+            color: white;
+        }
+        nav>a:nth-of-type(2)>div
+        {
+            width:95px;
+            padding-left:40px;
+            background: url(images/common/second.png);
+            background-size:100% 100%;
+        }
+        nav>a:last-child>div
+        {
+            width:100px;
+            color: #585451;
+            padding-left:55px;
+            background: url(images/common/last.png);
+            background-size:100% 100%;
+        }
+    </style>
+    <!-- 面包屑导航 -->
+    <nav style="position: absolute; top:0px; left:130px;">
+        <a href="main.html" style="position: relative;z-index:99;">
+            <div class="MyIF home"> 主页</div>
+        </a>
+        <a href="#" style="position: absolute; top:0px; left:108px;">
+            <div class="MyIF administrators-1"> 歌单</div>
+        </a>
+    </nav>
+
+
+
+    <div style="height: 70px;"></div>
+
+    <!-- Jsc部分 -->
+
+    <!--jQuery框架-->
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+
+
+</body>
+</html>
