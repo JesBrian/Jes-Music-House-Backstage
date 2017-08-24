@@ -3,8 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="edge" />
-    <link rel="shortcut icon" href="favicon.ico" />
-
 
     <title>后台框架</title>
 
@@ -12,11 +10,20 @@
     <link href="plugins/easyui/themes/easyui.css" rel="stylesheet" type="text/css">
     <link href="plugins/easyui/themes/insdep_theme_default.css" rel="stylesheet" type="text/css">
 
-    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- 自用字体图标 -->
+    <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
+
 
     <script type="text/javascript" src="plugins/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="plugins/easyui/jquery.easyui.min.js"></script>
 
+
+    <style>
+        .MyIF
+        {
+            color:#42d4ff;
+        }
+    </style>
 
 </head>
 
@@ -24,6 +31,99 @@
     <div id="master-layout">
         <div data-options="region:'north',border:false,bodyCls:'theme-header-layout'">
             <div class="theme-navigate">
+                <img src="images/common/MH-Logo.png" style="width:180px; margin:2px 0 0 15px;">
+
+                <style>
+                    #adminNav
+                    {
+                        width:150px;
+                        height:40px;
+                        top:8px;
+                        right:45px;
+                        float: right;
+                        border-radius:3px;
+                        background:url(images/common/Button.png);
+                        background-size:100% 100%;
+                        color: #585858;
+                        line-height:40px;
+                        cursor: pointer;
+                        position: fixed;
+                    }
+                    #adminNav:hover
+                    {
+                        -webkit-box-shadow:0 0 3px 3px #49DFFF;
+                        -moz-box-shadow:0 0 3px 3px #49DFFF;
+                        box-shadow:0 0 3px 3px #49DFFF;
+                        -webkit-transition: all .4s ease-in-out;
+                        transition: all .4s ease-in-out;
+                    }
+                    #adminNavOperation
+                    {
+                        width:110px;
+                        position: fixed;
+                        list-style: none;
+                        padding-left:15px;
+                        top:48px;
+                    }
+                    #adminOperation
+                    {
+                        position: fixed;
+                        visibility: hidden;
+                        -webkit-transform: translate(0, -100%);
+                        -moz-transform: translate(0, -100%);
+                        -ms-transform: translate(0, -100%);
+                        transform: translate(0, -100%);
+                        -webkit-transition: all 0.5s 0.1s;
+                        -moz-transition: all 0.5s 0.1s;
+                        -ms-transition: all 0.5s 0.1s;
+                        transition: all 0.5s 0.1s;
+                    }
+                    #adminNav:hover #adminOperation
+                    {
+                        visibility: visible;
+                    }
+                    #adminOperation>a
+                    {
+                        width: 100%;
+                        height:28px;
+                        padding:0 0 0 18px;
+                        border-left: 4px solid #967CFF;
+                        border-bottom:2px solid black;
+                        line-height:28px;
+                        display: block;
+                        color: #BDBDBD;
+                        background-color:#222222;
+                        background: -webkit-linear-gradient(top, #222222, #444444);
+                    }
+                    #adminOperation>a:hover
+                    {
+                        color: white;
+                        border-left: 4px solid #3bdd88;
+                        background-color:#111111;
+                        background: -webkit-linear-gradient(top, #111111, #121212);
+                        box-shadow:5px 5px 5px #1e1e1e;
+                    }
+                    #adminNav:hover #adminOperation {
+                        -webkit-transform: translate(0, 0);
+                        -moz-transform: translate(0, 0);
+                        -ms-transform: translate(0, 0);
+                        transform: translate(0, 0);
+                    }
+                </style>
+
+                <nav id="adminNav">
+                    <p style=" width:105px; margin-left:12px; float:left; text-align:center; font-size:13px; font-weight:600; font-family: 华文楷体;">JesBrian -- 苏敬雄</p>
+                    <span class="MyIF double-arrow-down" style=" color:#585858; margin-right: 12px; float:right;"></span>
+
+                    <div id="adminNavOperation">
+                        <div id="adminOperation">
+                            <a><span class="MyIF IDcard-2" style="margin-right:12px;"></span>账户信息</a>
+                            <a><span class="MyIF feedback" style="margin-right:12px;"></span>查看消息</a>
+                            <a><span class="MyIF exit-2" style="margin-right:12px;"></span>安全退出</a>
+                        </div>
+                    </div>
+                </nav>
+
             </div>
         </div>
 
@@ -33,7 +133,7 @@
             <!--正常菜单-->
             <div class="theme-left-normal">
                 <!--theme-left-switch 如果不需要缩进按钮，删除该对象即可-->
-                <div class="left-control-switch theme-left-switch" style="position: absolute; top:50px; left:155px;"><i class="fa fa-chevron-left fa-lg"></i></div>
+                <div class="left-control-switch theme-left-switch" style="position: absolute; top:50px; left:155px;"><i class="MyIF double-arrow-left"></i></div>
 
                 <!--start class="easyui-layout"-->
                 <div class="easyui-layout" data-options="border:false,fit:true">
@@ -42,10 +142,10 @@
                     <div data-options="region:'north',border:false">
 
                         <!--start theme-left-user-panel-->
-                        <div class="theme-left-user-panel" style=" background-color:black">
+                        <div class="theme-left-user-panel" style=" background-color:black; background: -webkit-linear-gradient(top, #000000, #3B3B3B);">
                             <dl>
                                 <dt style="margin:-10px -5px auto -5px;">
-                                    <img src="images/Holy_Dragon,_Sanctuary_Guard_Regalie_(Full_Art).png" width="40" height="40" style="border-radius:5px;">
+                                    <img src="images/Holy_Dragon,_Sanctuary_Guard_Regalie_(Full_Art).png" style="width:40px; height:40px; -webkit-box-shadow:0 0 3px 3px #73ddda; -moz-box-shadow:0 0 3px 3px #73ddda; box-shadow:0 0 3px 3px #73ddda; border-radius:2px;">
                                 </dt>
                                 <dd>
                                     <p style="color: #888888">管理员：</p>
@@ -64,33 +164,60 @@
 
                         <!--start easyui-accordion-->
                         <div class="easyui-accordion" data-options="border:false,fit:true">
-                            <div title="<img src='images/icon/菜单-页面.png' width='24' style='float:left; margin-top:-2px;'/><font style='margin-left:10px; font-size:15px; font-weight:500; color:#DD7E90'>公共信息</font>" >
+                            <div title="<img src='images/icon/菜单-页面.png' width='24' style='float:left; margin:-5px 0 0 -8px;'/><font style='margin-left:8px; color:#DD7E90'>公共信息</font>" >
                                 <ul class="easyui-datalist" data-options="border:false,fit:true" >
-                                    <li>企业文化</li>
-                                    <li>公文</li>
-                                    <li>新闻公告</li>
-                                    <li>重大信息</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
                                 </ul>
                             </div>
-                            <div title="<font style='color:#F7B889'>个人事务</font>">
+                            <div title="<img src='images/icon/菜单-页面.png' width='24' style='float:left; margin:-5px 0 0 -8px;'/><font style='margin-left:8px; font-size:15px; font-weight:500; color:#F7B889'>公共信息</font>" >
                                 <ul class="easyui-datalist" data-options="border:false,fit:true">
-                                    <a href="#"><li>内部邮件</li></a>
-                                    <li>我的日志</li>
-                                    <li>我的提醒</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
                                 </ul>
                             </div>
-                            <div title="<font style='color:#EBE86C'>通讯录</font>"></div>
-                            <div title="<font style='color:#60E099'>流程中心</font>">
+                            <div title="<img src='images/icon/菜单-页面.png' width='24' style='float:left; margin:-5px 0 0 -8px;'/><font style='margin-left:8px; font-size:15px; font-weight:500; color:#EBE86C'>公共信息</font>" >
                                 <ul class="easyui-datalist" data-options="border:false,fit:true">
-                                    <li>启动流程</li>
-                                    <li>待办流程</li>
-                                    <li>我发起的流程</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
                                 </ul>
                             </div>
-                            <div title="<font style='color:#26C7FF'>文档中心</font>"></div>
-                            <div title="<font style='color:#B373F7  '>个人设置</font>">
+                            <div title="<img src='images/icon/菜单-页面.png' width='24' style='float:left; margin:-5px 0 0 -8px;'/><font style='margin-left:8px; font-size:15px; font-weight:500; color:#60E099'>公共信息</font>" >
                                 <ul class="easyui-datalist" data-options="border:false,fit:true">
-                                    <li>修改密码</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                </ul>
+                            </div>
+                            <div title="<img src='images/icon/菜单-页面.png' width='24' style='float:left; margin:-5px 0 0 -8px;'/><font style='margin-left:8px; font-size:15px; font-weight:500; color:#26C7FF'>公共信息</font>" >
+                                <ul class="easyui-datalist" data-options="border:false,fit:true">
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                </ul>
+                            </div>
+                            <div title="<img src='images/icon/菜单-页面.png' width='24' style='float:left; margin:-5px 0 0 -8px;'/><font style='margin-left:8px; font-size:15px; font-weight:500; color:#B373F7'>公共信息</font>" >
+                                <ul class="easyui-datalist" data-options="border:false,fit:true">
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
+                                    <li><span class="MyIF all-user"></span>重大信息vcasvas</li>
                                 </ul>
                             </div>
 
@@ -104,13 +231,12 @@
 
             </div>
             <!--最小化菜单-->
-            <div class="theme-left-minimal">
+            <div class="theme-left-minimal" style="margin-left:-10px; padding-left:-8px;">
                 <ul class="easyui-datalist" data-options="border:false,fit:true">
-                    <li><i class="fa fa-home fa-2x"></i><p>主题</p></li>
-                    <li><i class="fa fa-book fa-2x"></i><p>组件</p></li>
-                    <li><i class="fa fa-pencil fa-2x"></i><p>编辑</p></li>
-                    <li><i class="fa fa-cog fa-2x"></i><p>设置</p></li>
-                    <li><a class="left-control-switch"><i class="fa fa-chevron-right fa-2x"></i><p>打开</p></a></li>
+                    <li><img src="images/icon/home.png" style="width:25px;"><p>主页</p></li>
+                    <li><img src="images/icon/message.png" style="width:25px;"><p>信息</p></li>
+                    <li><img src="images/icon/fix.png" style="width:25px;"><p>设置</p></li>
+                    <li><a class="left-control-switch"><img src="images/icon/cube.png" style="width:25px;"><p>菜单</p></a></li>
                 </ul>
             </div>
 
@@ -119,20 +245,51 @@
 
         <!-- 中间主要页面部分 -->
         <div id="mainPanle" region="center" border="true">
-            <div id="tabs" class="easyui-tabs" data-options="tabWidth:180, tools:'#tab-tools'" fit="true" split="true">
-                <div title="Music House - 后台主页">
+            <div id="tabs" class="easyui-tabs" data-options="tabWidth:250, tools:'#tab-tools'" fit="true" split="true">
+                <div title="<font style='font-size:18px; font-weight:500'>Music House - 后台管理</font>">
                     <div class="cs-home-remark">
-                        <h2 style="margin-left:50px; margin-top:20px;">欢迎登陆 MH-音悦屋 后台管理页面</h2>
+                        <h2 style="margin-left:50px; margin-top:20px;">欢迎登陆 MH-音悦屋 后台管理系统</h2>
+
+
+                        <style>
+                            #nowTime
+                            {
+                                filter:alpha(opacity:10); opacity:0.1;
+                                -webkit-transition: all 0.6s 0.1s;
+                                -moz-transition: all 0.6s 0.1s;
+                                -ms-transition: all 0.6s 0.1s;
+                                transition: all 0.6s 0.1s;
+                                cursor:pointer;
+                            }
+                            #nowTime:hover
+                            {
+                                filter:alpha(opacity:80); opacity:0.8;
+                                -webkit-transition: all 0.6s 0.1s;
+                                -moz-transition: all 0.6s 0.1s;
+                                -ms-transition: all 0.6s 0.1s;
+                                transition: all 0.6s 0.1s;
+                                box-shadow:3px 3px 5px #161616;
+                            }
+                        </style>
+                        <div id="nowTime" style="width:133px; height:40px; top:150px; right:70px; position:fixed; border:4px ridge #1b1b1b; border-radius:3px; background-color:#3c3f41; line-height:20px; color:white; font-size:15px;">
+                            <img src="images/icon/时间%20分钟.png" style="width:26px; margin:6px 8px 0 8px; float: left;">
+                            <span></span>-<span></span>-<span></span>
+                            <span style="margin-left:5px;"></span>：<span></span>：<span></span>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
         </div>
-
+        <div id="tab-tools">
+            <a href="javascript:void(0)" class="easyui-linkbutton" style="background:url(images/icon/刷新-2.png) no-repeat; background-position:8px 2px; background-size:60%;" data-options="plain:true" onclick="refresh()"></a>
+        </div>
 
         <!-- 页脚 -->
-        <div region="south" border="true" split="false" style="height:25px; padding:3px 50px 0 0;  color:#01ebff; text-align:right; overflow:hidden; background:#1e1e1e;">
-            <font style="margin-right:200px;">音悦屋后台管理系统 Ver-1.0</font>
-            <font>&copy; 2017 - 2019 JesBrian All Rights Reserved</font>
+        <div region="south" border="true" split="false" style="height:25px; padding:3px 35px 0 0;  color:#4DCAD5; text-align:right; background:#1e1e1e; background:-webkit-linear-gradient(top, #000000, #3B3B3B);">
+            <span style="margin-right:200px;">音悦屋后台管理系统 Ver-1.0</span>
+            <span style="margin-right:20px;">&copy; 2017 - 2019 JesBrian All Rights Reserved</span>
         </div>
     </div>
 
@@ -147,11 +304,11 @@
             });
 
             /*左侧菜单控制部分*/
-            var left_control_status=true;
+            var left_control_status = true;
             var left_control_panel=$("#master-layout").layout("panel",'west');
             $(".left-control-switch").on("click",function(){
                 if(left_control_status){
-                    left_control_panel.panel('resize',{width:70});
+                    left_control_panel.panel('resize',{width:65});
                     left_control_status=false;
                     $(".theme-left-normal").hide();
                     $(".theme-left-minimal").show();
@@ -164,6 +321,40 @@
                 $("#master-layout").layout('resize', {width:'100%'})
             });
         });
+
+
+
+        /* jQuery获取实时时间 */
+        $(function(){
+            function time(){
+                var date=new Date();
+                var y = date.getFullYear();
+                var M = date.getMonth() + 1;
+                var d = date.getDate();
+                var h = date.getHours();
+                var m = date.getMinutes();
+                var s = date.getSeconds();
+                $('#nowTime>span').eq(0).html(y);
+                $('#nowTime>span').eq(1).html(M);
+                $('#nowTime>span').eq(2).html(d);
+                $('#nowTime>span').eq(3).html(h);
+                $('#nowTime>span').eq(4).html(m);
+                $('#nowTime>span').eq(5).html(s);
+                for(var i=0;i<$('#nowTime>span').length;i++){
+                    if($('#nowTime>span').eq(i).text().length==1){
+                        $('#nowTime>span').eq(i).html(function(index,html){
+                            return 0+html;
+                        });
+                    }
+                }
+            }
+            time();
+            setInterval(time,1000);
+        });
+
+
+
+
     </script>
 
 

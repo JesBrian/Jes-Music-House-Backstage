@@ -38,7 +38,7 @@
 }
 
 *::-webkit-scrollbar-corner, *::-webkit-scrollbar-resizer, *::-webkit-scrollbar-button {
-    background: #fff;
+    background: #3D3D3D;
 }
 
 .window-mask, .datagrid-mask, .datagrid-body .datagrid-editable table, .calendar table, .filebox-label {
@@ -215,16 +215,16 @@
 }
 
 .panel-header, .accordion, .accordion .accordion-header {
-    background: #f8f8f8;
+    background: #3D3D3D;
 }
 
 .panel-body {
-    background-color: #fff;
+    background-color: #666;
 }
 
 .panel-title {
-    font-weight: bold;
     height: 16px;
+    font-size:15px;
     line-height: 16px;
 }
 
@@ -280,7 +280,7 @@
 }
 
 .accordion .accordion-header-selected {
-    background: #fff;
+    background: #3D3D3D;
 }
 
 .window {
@@ -299,7 +299,7 @@
 
 .window .window-body {
     border-radius: 0 0 3px 3px;
-    border-color: #fff;
+    border-color: #3D3D3D;
 }
 
 .window .window-body-noheader {
@@ -359,7 +359,7 @@
 }
 
 .window {
-    background-color: #f8f8f8;
+    background-color: #3D3D3D;
     background-repeat: repeat-x;
 }
 
@@ -410,7 +410,7 @@
     float: left;
     height: 24px;
     border-left: 1px solid #ccc;
-    border-right: 1px solid #fff;
+    border-right: 1px solid #3D3D3D;
     margin: 2px 1px;
 }
 
@@ -604,7 +604,7 @@
 }
 
 .l-btn {
-    background: #fff;
+    background: #3D3D3D;
     border: 1px solid #dedede;
 }
 
@@ -678,7 +678,7 @@
 .textbox {
     position: relative;
     border: 1px solid #ccc;
-    background-color: #fff;
+    background-color: #3D3D3D;
     vertical-align: middle;
     display: inline-block;
     overflow: hidden;
@@ -721,7 +721,7 @@
 
 .textbox .textbox-button,
 .textbox .textbox-button:hover {
-    background: #f8f8f8;
+    background: #3D3D3D;
     position: absolute;
     top: 0;
     padding: 0;
@@ -779,7 +779,7 @@
 
 .textbox .textbox-addon {
     padding: 0 5px;
-    background-color: #fff;
+    background-color: #3D3D3D;
     border: none;
     z-index: 1;
 }
@@ -874,7 +874,7 @@
 
 .textbox-invalid {
     border-color: #ff8400;
-    background-color: #fff;
+    background-color: #3D3D3D;
 }
 
 .textbox-disabled .textbox-text {
@@ -1023,7 +1023,7 @@
 
 .combobox-item-selected {
     background-color: #0c80d7;
-    color: #FFF;
+    color: #3D3D3D;
 }
 
 .combobox-icon {
@@ -1053,7 +1053,7 @@
     text-decoration: none;
     border-radius: 3px;
     background: #1b8cf2;
-    color: #fff;
+    color: #3D3D3D;
 }
 
 .tagbox-remove {
@@ -1250,19 +1250,19 @@
 }
 
 .layout-split-north {
-    border-bottom: 5px solid #f8f8f8;
+    border-bottom: 5px solid #3D3D3D;
 }
 
 .layout-split-south {
-    border-top: 5px solid #f8f8f8;
+    border-top: 5px solid #3D3D3D;
 }
 
 .layout-split-east {
-    border-left: 5px solid #f8f8f8;
+    border-left: 5px solid #3D3D3D;
 }
 
 .layout-split-west {
-    border-right: 5px solid #f8f8f8;
+    border-right: 5px solid #3D3D3D;
 }
 
 .layout-expand {
@@ -1659,7 +1659,14 @@
 }
 
 .tabs li a.tabs-inner:hover, .tabs li.tabs-selected a.tabs-inner {
-    background-color: #fff;
+    background-color: #666;
+    color: #fff;
+    background: -webkit-linear-gradient(top,#454545 0,#666 100%);
+    background: -moz-linear-gradient(top,#454545 0,#666 100%);
+    background: -o-linear-gradient(top,#454545 0,#666 100%);
+    background: linear-gradient(to bottom,#454545 0,#666 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#454545,endColorstr=#666,GradientType=0);
 }
 
 .tabs-header-bottom .tabs li.tabs-selected a.tabs-inner, .tabs li.tabs-selected a.tabs-inner, .tabs li a.tabs-inner {
@@ -1673,7 +1680,7 @@
 .tabs li a.tabs-inner,
 .tabs-header,
 .tabs-tool {
-    background-color: #f8f8f8;
+    background-color: #3D3D3D;
 }
 
 .tabs-header-plain {
@@ -1701,19 +1708,19 @@
 }
 
 .tabs li.tabs-selected a.tabs-inner {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #3D3D3D;
 }
 
 .tabs-header-bottom .tabs li.tabs-selected a.tabs-inner {
-    border-top: 1px solid #fff;
+    border-top: 1px solid #3D3D3D;
 }
 
 .tabs-header-left .tabs li.tabs-selected a.tabs-inner {
-    border-right: 1px solid #fff;
+    border-right: 1px solid #3D3D3D;
 }
 
 .tabs-header-right .tabs li.tabs-selected a.tabs-inner {
-    border-left: 1px solid #fff;
+    border-left: 1px solid #3D3D3D;
 }
 
 .tabs-header .tabs-pill li.tabs-selected a.tabs-inner, .tabs-header .tabs-pill li a.tabs-inner {
@@ -1721,7 +1728,7 @@
 }
 
 .tabs-header .tabs-pill li.tabs-selected a.tabs-inner {
-    background: #fff;
+    background: #3D3D3D;
     filter: none;
 }
 
@@ -1797,7 +1804,7 @@
     float: left;
     height: 24px;
     border-left: 1px solid #ccc;
-    border-right: 1px solid #fff;
+    border-right: 1px solid #3D3D3D;
     margin: 2px 1px;
 }
 
@@ -1997,7 +2004,7 @@
 }
 
 .datagrid-mask-msg {
-    background: #fff url('images/loading.gif') no-repeat scroll 5px center;
+    background: #3D3D3D url('images/loading.gif') no-repeat scroll 5px center;
 }
 
 .datagrid-header,
@@ -2314,7 +2321,7 @@
     float: left;
     height: 24px;
     border-left: 1px solid #ccc;
-    border-right: 1px solid #fff;
+    border-right: 1px solid #3D3D3D;
     margin: 3px 1px;
 }
 
@@ -2432,7 +2439,7 @@
     height: 26px;
     line-height: 26px;
     cursor: pointer;
-    color: #fff;
+    color: #3D3D3D;
 
 }
 
@@ -2484,7 +2491,7 @@
 }
 
 .calendar-day {
-    border: 1px solid #fff;
+    border: 1px solid #3D3D3D;
     padding: 0;
     cursor: pointer;
     background: #f2f2f2;
@@ -2589,7 +2596,7 @@
 
 .calendar-body,
 .calendar-menu {
-    background: #fff;
+    background: #3D3D3D;
 }
 
 .calendar-body th {
@@ -2603,7 +2610,7 @@
 .calendar-hover,
 .calendar-nav-hover,
 .calendar-menu-hover {
-    color: #fff;
+    color: #3D3D3D;
     background-color: #ff8000;
 }
 
@@ -2622,7 +2629,7 @@
 
 .calendar-selected {
     background-color: #79c942;
-    color: #fff;
+    color: #3D3D3D;
     border: none;
     padding: 0;
 }
@@ -2652,7 +2659,7 @@
     filter: alpha(opacity=80);
     padding: 3px 10px;
     border: 1px solid #dfe2e8;
-    background-color: #fff;
+    background-color: #3D3D3D;
 }
 
 .datebox-button a:hover {
@@ -2671,7 +2678,7 @@
 
 .datebox .textbox-addon-right,
 .datebox .textbox-addon-left {
-    background-color: #fff;
+    background-color: #3D3D3D;
 }
 
 .datebox .combo-arrow {
@@ -2689,7 +2696,7 @@
 }
 
 .spinner-arrow {
-    background-color: #f8f8f8;
+    background-color: #3D3D3D;
     display: inline-block;
     overflow: hidden;
     vertical-align: top;
@@ -2802,7 +2809,7 @@
 
 .progressbar-value .progressbar-text {
     background-color: #337ab7;
-    color: #fff;
+    color: #3D3D3D;
 }
 
 .progressbar, .progressbar .progressbar-text, .progressbar .progressbar-value {
@@ -2853,7 +2860,7 @@
 
 .searchbox .textbox-addon {
     padding: 0 6px;
-    background: #f8f8f8;
+    background: #3D3D3D;
 }
 
 .searchbox .textbox-addon-right {
@@ -3102,11 +3109,11 @@
 .menu-sep {
     margin: 7px 0;
     border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #3D3D3D;
 }
 
 .menu, .menu-content {
-    background-color: #ffffff;
+    background-color: #3D3D3D;
 }
 
 .menu {
@@ -3119,7 +3126,7 @@
 }
 
 .menu-active {
-    border-color: #ffffff;
+    border-color: #3D3D3D;
     background: #f5f5f5;
 }
 
@@ -3503,7 +3510,7 @@
 }
 
 .tree-node-proxy {
-    background-color: #ffffff;
+    background-color: #3D3D3D;
     border-color: #95B8E7;
 }
 
@@ -3599,7 +3606,7 @@
 }
 
 .tooltip {
-    background-color: #f8f8f8;
+    background-color: #3D3D3D;
     border-color: #dedede;
 }
 
@@ -3608,7 +3615,7 @@
 }
 
 .tooltip-right .tooltip-arrow {
-    border-right-color: #fff;
+    border-right-color: #3D3D3D;
 }
 
 .tooltip-left .tooltip-arrow-outer {
@@ -3616,7 +3623,7 @@
 }
 
 .tooltip-left .tooltip-arrow {
-    border-left-color: #fff;
+    border-left-color: #3D3D3D;
 }
 
 .tooltip-top .tooltip-arrow-outer {
@@ -3624,7 +3631,7 @@
 }
 
 .tooltip-top .tooltip-arrow {
-    border-top-color: #fff;
+    border-top-color: #3D3D3D;
 }
 
 .tooltip-bottom .tooltip-arrow-outer {
@@ -3632,7 +3639,7 @@
 }
 
 .tooltip-bottom .tooltip-arrow {
-    border-bottom-color: #fff;
+    border-bottom-color: #3D3D3D;
 }
 
 .switchbutton {
@@ -3673,12 +3680,12 @@
 
 .switchbutton-on {
     background: #2385ea;
-    color: #fff;
+    color: #3D3D3D;
 }
 
 .switchbutton-off {
     margin: 1px 0 0 -2px;
-    background-color: #fff;
+    background-color: #3D3D3D;
     line-height: 20px !important;
 }
 
@@ -3696,7 +3703,7 @@
     position: absolute;
     top: 1px;
     left: 50%;
-    background-color: #fff;
+    background-color: #3D3D3D;
     color: #000000;
     margin-left: -14px !important;
 }
@@ -3782,7 +3789,7 @@
 
 /*禁用header背景*/
 .theme-header-unbackground .panel-header, .theme-header-unbackground .window-header {
-    background: #fff;
+    background: #3D3D3D;
 }
 
 /*强制设置去除header高度*/
@@ -3802,7 +3809,7 @@
 /*主题颜色*/
 /*默认主题*/
 .theme-panel-default .panel-header {
-    background-color: #f8f8f8;
+    background-color: #3D3D3D;
 }
 
 /*默认红色主题*/
@@ -3909,7 +3916,7 @@
 
 /*默认简约主题*/
 .theme-panel-simple .panel-header {
-    background-color: #fff;
+    background-color: #3D3D3D;
 }
 
 .theme-panel-default .panel-header .panel-title span, .theme-panel-default .panel-header .panel-title p, .theme-panel-simple .panel-header .panel-title span, .theme-panel-simple .panel-header .panel-title p {
@@ -3929,7 +3936,7 @@
 }
 
 .theme-panel-red .panel-header .panel-title, .theme-panel-orange .panel-header .panel-title, .theme-panel-green .panel-header .panel-title, .theme-panel-blue .panel-header .panel-title, .theme-panel-deepblue .panel-header .panel-title, .theme-panel-black .panel-header .panel-title {
-    color: #fff;
+    color: #3D3D3D;
 }
 
 .theme-panel-red .panel-tool-close, .theme-panel-red .panel-tool-collapse, .theme-panel-red .panel-tool-min, .theme-panel-red .panel-tool-max, .theme-panel-orange .panel-tool-close, .theme-panel-orange .panel-tool-collapse, .theme-panel-orange .panel-tool-min, .theme-panel-orange .panel-tool-max, .theme-panel-green .panel-tool-close, .theme-panel-green .panel-tool-collapse, .theme-panel-green .panel-tool-min, .theme-panel-green .panel-tool-max, .theme-panel-blue .panel-tool-close, .theme-panel-blue .panel-tool-collapse, .theme-panel-blue .panel-tool-min, .theme-panel-blue .panel-tool-max, .theme-panel-deepblue .panel-tool-close, .theme-panel-deepblue .panel-tool-collapse, .theme-panel-deepblue .panel-tool-min, .theme-panel-deepblue .panel-tool-max, .theme-panel-black .panel-tool-close, .theme-panel-black .panel-tool-collapse, .theme-panel-black .panel-tool-min, .theme-panel-black .panel-tool-max {
@@ -4065,9 +4072,9 @@
 }
 
 .theme-tab-simple .tabs li.tabs-selected a.tabs-inner {
-    background: #fff;
+    background: #3D3D3D;
     border: 1px solid #c5c5c5;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #3D3D3D;
 }
 
 .theme-tab-red-line .tabs li.tabs-selected a.tabs-inner,
@@ -4093,17 +4100,17 @@
 
 .theme-tab-simple .tabs-header-left li.tabs-selected a.tabs-inner {
     border: 1px solid #c5c5c5;
-    border-right: 1px solid #fff;
+    border-right: 1px solid #3D3D3D;
 }
 
 .theme-tab-simple .tabs-header-right li.tabs-selected a.tabs-inner {
     border: 1px solid #c5c5c5;
-    border-left: 1px solid #fff;
+    border-left: 1px solid #3D3D3D;
 }
 
 .theme-tab-simple .tabs-header-bottom li.tabs-selected a.tabs-inner {
     border: 1px solid #c5c5c5;
-    border-top: 1px solid #fff;
+    border-top: 1px solid #3D3D3D;
 }
 
 .theme-tab-simple .tabs li.tabs-selected a.tabs-inner {
@@ -4258,22 +4265,22 @@
 
 .theme-tab-red-block .tabs li.tabs-selected a.tabs-inner {
     background: #d03724;
-    color: #fff;
+    color: #3D3D3D;
 }
 
 .theme-tab-blue-block .tabs li.tabs-selected a.tabs-inner {
     background: #1b8cf2;
-    color: #fff;
+    color: #3D3D3D;
 }
 
 .theme-tab-green-block .tabs li.tabs-selected a.tabs-inner {
     background: #1d9c30;
-    color: #fff;
+    color: #3D3D3D;
 }
 
 .theme-tab-black-block .tabs li.tabs-selected a.tabs-inner {
     background: #343536;
-    color: #fff;
+    color: #3D3D3D;
 }
 
 .theme-tab-red-block .tabs li a.tabs-inner,
@@ -4663,7 +4670,7 @@
 }
 
 .theme-datalist-mailStyle .datagrid-cell {
-    border-left: 3px solid #FFF;
+    border-left: 3px solid #3D3D3D;
 }
 
 .theme-datalist-mailStyle .datagrid-row-over .datagrid-cell, .theme-datalist-mailStyle .datagrid-row-selected .datagrid-cell {
@@ -4889,7 +4896,7 @@
 }
 
 .alert-yellow, .button-line-yellow, .button-line-yellow:hover, .button-line-yellow:active {
-    background-color: #fff8db;
+    background-color: #3D3D3D8db;
     border-color: #b58105;
 }
 
@@ -4992,7 +4999,7 @@
 
 .label, .badge {
     padding: 2px 6px;
-    color: #fff;
+    color: #3D3D3D;
     background: #777777;
     font-style: normal;
     font-family: Arial, "Microsoft YaHei", "微软雅黑";
@@ -5035,7 +5042,7 @@
 .color-brown,
 .color-grey,
 .color-black {
-    color: #fff !important;
+    color: #3D3D3D !important;
 }
 
 .color-red, .button-red, .button-danger, .color-important, .progressbar-red .progressbar-value .progressbar-text {
@@ -5223,7 +5230,7 @@
 .button-brown,
 .button-grey,
 .button-black {
-    color: #fff !important;
+    color: #3D3D3D !important;
     padding: 1px !important;
     border: none !important;
 }
@@ -5346,7 +5353,7 @@
 }
 
 .font-white, .alert-black, .text-white {
-    color: #ffffff !important;
+    color: #3D3D3D3D3D3D !important;
 }
 
 .progressbar-pattern .progressbar-text {
@@ -5459,7 +5466,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #FFF;
+    background: #3D3D3D;
     animation: animation-progressbar 2s ease infinite;
 }
 
@@ -5500,7 +5507,7 @@
 .button-loading .l-btn-text:after {
     animation: animation-button-loading 0.6s linear;
     animation-iteration-count: infinite;
-    border-color: #ffffff transparent transparent;
+    border-color: #3D3D3D transparent;
 }
 
 .l-btn-text .fa-lg {

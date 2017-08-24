@@ -118,8 +118,9 @@ i, cite, em, var, address, dfn { /*斜体*/
 /*头部公共框架*/
 #theme-login-layout .layout-panel-north .layout-body,
 .theme-header-layout {
-    height: 46px !important;
-    background: #1d1d1d left center no-repeat;
+    height:60px;
+    background:#2E2E2E;
+    background: -webkit-linear-gradient(bottom, #000000,#3B3B3B);
 }
 
 /*左侧菜单样式*/
@@ -175,15 +176,25 @@ i, cite, em, var, address, dfn { /*斜体*/
 .theme-left-layout .datagrid-row-selected, .theme-left-layout .datagrid-row-over, .theme-left-layout .accordion-header-selected
 .accordion .accordion-collapse:link, .accordion .accordion-collapse:visited, .accordion .accordion-collapse:hover, .accordion .accordion-collapse:active, .accordion .accordion-collapse:focus,
 .accordion .accordion-expand:link, .accordion .accordion-expand:visited, .accordion .accordion-expand:hover, .accordion .accordion-expand:active, .accordion .accordion-expand:focus {
-    background-color: #433f3c !important;
+    background-color: #232323;
 }
 
+.theme-left-layout .datalist
+{
+    padding:0px;
+}
+
+.datalist
+{
+    margin-top:-1px;
+    background: -webkit-linear-gradient(left, #303030, #252525, #171717);
+}
 .theme-left-layout .theme-left-normal .datalist .datagrid-cell {
-    margin: 2px 3px;
-    color: #878787;
-    border: 1px solid #393939;
-    border-left: 5px solid #32f6ff;
-    border-right: 5px solid #809cdf;
+    margin-left:12px;
+    padding-left:12px;
+    border-left: 2px solid #25b8dd;
+    color: #AFAFAF;
+    border-top: 1px solid #232323;
 }
 
 /*BUG*/

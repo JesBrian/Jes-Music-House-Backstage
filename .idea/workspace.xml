@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="153d198d-cda7-42de-954f-02d699ab9021" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/前端/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="254" column="56" lean-forward="false" selection-start-line="254" selection-start-column="56" selection-end-line="254" selection-end-column="56" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#form#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#form#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#form#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#span#0;n#form#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#2;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#h3#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#3;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#td#0;n#tr#3;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#3;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#4;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#td#0;n#tr#4;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#4;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#h3#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#3;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#h3#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>F8F8F8</find>
+      <find>datalist</find>
+      <find>white</find>
+      <find>fff</find>
+      <find>.tabs li a.tabs-inner:hove</find>
+      <find>color:white;</find>
+      <find>li.tabs-selected a.tabs-inner</find>
+      <find>margin-left:8px; font-size:15px; font-weight:500; color:#DD7E90'</find>
+      <find>3D3D3D</find>
+      <find>stateChangeIE</find>
+      <find>activeThis</find>
+      <find>select</find>
+      <find>Single Date mode:</find>
+      <find>range13</find>
+      <find>asDatepicker</find>
+      <find>show</find>
+      <find>container</find>
+      <find>继续选择</find>
+      <find>multiple</find>
+      <find>andArea</find>
+      <find>font</find>
+      <find>z-index</find>
+      <find>Welcome!</find>
+      <find>trigger-custom2</find>
+      <find>time</find>
+      <find>height</find>
+      <find>color</find>
+      <find>callframe</find>
+      <find>IframeLoadEND</find>
+      <find>mainFrame</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>s/icon/菜单-页面.png' width='24' style='float:left; margin:-5px 0 0 -8px;'/&gt;&lt;font style='margin-left:8px; font-size:15px;</replace>
+      <replace>3D3D3D</replace>
+      <replace>margin-left:8px; color:#DD7E90'</replace>
+      <replace>indexIframe</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/前端/function/rank.html" />
+        <option value="$PROJECT_DIR$/前端/function/recommend.html" />
+        <option value="$PROJECT_DIR$/前端/function/album.html" />
+        <option value="$PROJECT_DIR$/前端/main.html" />
+        <option value="$PROJECT_DIR$/../../201607221530/css/normalize.css" />
+        <option value="$PROJECT_DIR$/../../201607221530/css/style.css" />
+        <option value="$PROJECT_DIR$/../../201607221530/index.html" />
+        <option value="$PROJECT_DIR$/Test】.html" />
+        <option value="$PROJECT_DIR$/Test.html" />
+        <option value="$PROJECT_DIR$/后端/plugins/easyui/themes/easyui.css" />
+        <option value="$PROJECT_DIR$/后端/plugins/easyui/themes/insdep_theme_default.css" />
+        <option value="$PROJECT_DIR$/后端/admin.html" />
+        <option value="$PROJECT_DIR$/前端/css/common/navbar.css" />
+        <option value="$PROJECT_DIR$/前端/js/searchableSelect.js" />
+        <option value="$PROJECT_DIR$/前端/Test/js/jquery.daterangepicker.js" />
+        <option value="$PROJECT_DIR$/前端/Test2/jquery-1.10.2.js" />
+        <option value="$PROJECT_DIR$/前端/Test2/Test.html" />
+        <option value="$PROJECT_DIR$/前端/css/common/asDatepicker.css" />
+        <option value="$PROJECT_DIR$/前端/js/asDatepicker.js" />
+        <option value="$PROJECT_DIR$/前端/function/account.html" />
+        <option value="$PROJECT_DIR$/前端/Test/control/css/zyUpload.css" />
+        <option value="$PROJECT_DIR$/前端/Test/demo.html" />
+        <option value="$PROJECT_DIR$/前端/Test/control/js/zyUpload.js" />
+        <option value="$PROJECT_DIR$/前端/Test/core/zyFile.js" />
+        <option value="$PROJECT_DIR$/前端/Test/demo.js" />
+        <option value="$PROJECT_DIR$/前端/Test/css/styles.css" />
+        <option value="$PROJECT_DIR$/前端/css/common/searchableSelect.css" />
+        <option value="$PROJECT_DIR$/前端/Test/css/iziToast.min.css" />
+        <option value="$PROJECT_DIR$/前端/Test/js/demo.js" />
+        <option value="$PROJECT_DIR$/前端/Test/index.html" />
+        <option value="$PROJECT_DIR$/前端/js/iziToast.min.js" />
+        <option value="$PROJECT_DIR$/前端/popalbum.html" />
+        <option value="$PROJECT_DIR$/前端/css/common/niftymodals.css" />
+        <option value="$PROJECT_DIR$/前端/js/niftymodals.js" />
+        <option value="$PROJECT_DIR$/前端/update.html" />
+        <option value="$PROJECT_DIR$/前端/songlist.html" />
+        <option value="$PROJECT_DIR$/前端/Test.html" />
+        <option value="$PROJECT_DIR$/前端/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="93" />
+    <option name="y" value="176" />
+    <option name="width" value="1602" />
+    <option name="height" value="865" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MusicHouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="使用框架的毕设" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MusicHouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="使用框架的毕设" type="462c0819:PsiDirectoryNode" />
+              <item name="前端" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MusicHouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="使用框架的毕设" type="462c0819:PsiDirectoryNode" />
+              <item name="前端" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MusicHouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="使用框架的毕设" type="462c0819:PsiDirectoryNode" />
+              <item name="前端" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MyBlog" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="SearchEverywhereHistoryKey" value="menu_arrows_white.png&#9;FILE&#9;file://C:/Users/JesBrian/Desktop/毕业简历素材/使用框架的毕设/后端/plugins/easyui/themes/images/menu_arrows_white.png&#10;tabs_icons_white.png&#9;FILE&#9;file://C:/Users/JesBrian/Desktop/毕业简历素材/使用框架的毕设/后端/plugins/easyui/themes/images/tabs_icons_white.png&#10;tagbox_icons_white.png&#9;FILE&#9;file://C:/Users/JesBrian/Desktop/毕业简历素材/使用框架的毕设/后端/plugins/easyui/themes/images/tagbox_icons_white.png" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JesBrian\Desktop\毕业简历素材\使用框架的毕设\前端\js" />
+      <recent name="C:\Users\JesBrian\Desktop\毕业简历素材\使用框架的毕设\前端\css\common" />
+      <recent name="C:\Users\JesBrian\Desktop\毕业简历素材\使用框架的毕设\前端\Test" />
+      <recent name="C:\Users\JesBrian\Desktop\毕业简历素材\使用框架的毕设\前端\Test2" />
+      <recent name="C:\Users\JesBrian\Desktop\毕业简历素材\使用框架的毕设" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\JesBrian\Desktop\毕业简历素材\使用框架的毕设\前端\plugins\daterangepicker" />
+      <recent name="C:\Users\JesBrian\Desktop\毕业简历素材\使用框架的毕设\前端\plugins" />
+      <recent name="C:\Users\JesBrian\Desktop\毕业简历素材\使用框架的毕设\前端\js" />
+      <recent name="C:\Users\JesBrian\Desktop\毕业简历素材\使用框架的毕设\后端" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MusicHouse/前端/index.html" />
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="153d198d-cda7-42de-954f-02d699ab9021" name="Default" comment="" />
+      <created>1501851199221</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1501851199221</updated>
+      <workItem from="1501851201243" duration="14118000" />
+      <workItem from="1501871004356" duration="2265000" />
+      <workItem from="1501905253043" duration="6516000" />
+      <workItem from="1502004827441" duration="3356000" />
+      <workItem from="1502008330990" duration="385000" />
+      <workItem from="1502009997011" duration="1204000" />
+      <workItem from="1502071789580" duration="5268000" />
+      <workItem from="1502109033513" duration="1880000" />
+      <workItem from="1502202519075" duration="186000" />
+      <workItem from="1502203544589" duration="705000" />
+      <workItem from="1502267146940" duration="783000" />
+      <workItem from="1502381653533" duration="11918000" />
+      <workItem from="1502461778168" duration="339000" />
+      <workItem from="1502611771416" duration="10000" />
+      <workItem from="1502611807565" duration="9000" />
+      <workItem from="1502611841270" duration="6000" />
+      <workItem from="1502622462803" duration="618000" />
+      <workItem from="1502634702287" duration="10000" />
+      <workItem from="1502634819366" duration="7000" />
+      <workItem from="1502636147463" duration="2209000" />
+      <workItem from="1502638822811" duration="791000" />
+      <workItem from="1502644879836" duration="5269000" />
+      <workItem from="1502671696262" duration="4708000" />
+      <workItem from="1502678612489" duration="1528000" />
+      <workItem from="1502682215393" duration="1614000" />
+      <workItem from="1502686996850" duration="1236000" />
+      <workItem from="1502772224562" duration="19000" />
+      <workItem from="1502781735579" duration="5426000" />
+      <workItem from="1502789010590" duration="247000" />
+      <workItem from="1502789436834" duration="6273000" />
+      <workItem from="1502807849775" duration="7980000" />
+      <workItem from="1502816734665" duration="262000" />
+      <workItem from="1502843827025" duration="69000" />
+      <workItem from="1502864464000" duration="6991000" />
+      <workItem from="1502874182392" duration="5044000" />
+      <workItem from="1502889358315" duration="764000" />
+      <workItem from="1502894710828" duration="1795000" />
+      <workItem from="1502896922879" duration="1545000" />
+      <workItem from="1502936144538" duration="23000" />
+      <workItem from="1502957879956" duration="5942000" />
+      <workItem from="1502975271780" duration="1921000" />
+      <workItem from="1502977405482" duration="1521000" />
+      <workItem from="1503017995215" duration="4164000" />
+      <workItem from="1503113549701" duration="16000" />
+      <workItem from="1503113576275" duration="133000" />
+      <workItem from="1503201899359" duration="32000" />
+      <workItem from="1503216341953" duration="719000" />
+      <workItem from="1503221262902" duration="1327000" />
+      <workItem from="1503291770296" duration="451000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="119602000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09989429" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/前端/plugins/daterangepicker/daterangepicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2098">
+          <caret line="1490" column="9" lean-forward="false" selection-start-line="1490" selection-start-column="9" selection-end-line="1490" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/plugins/daterangepicker/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/Test2/jquery-1.10.2.js" />
+    <entry file="file://$PROJECT_DIR$/前端/Test2/demo/js/prism.js" />
+    <entry file="file://$PROJECT_DIR$/前端/Test2/test/index.html" />
+    <entry file="file://$PROJECT_DIR$/前端/Test2/Test.html" />
+    <entry file="file://$PROJECT_DIR$/前端/js/asDatepicker.js" />
+    <entry file="file://$PROJECT_DIR$/前端/css/common/asDatepicker.css" />
+    <entry file="file://$PROJECT_DIR$/前端/css/common/daterangepicker.css" />
+    <entry file="file://$PROJECT_DIR$/前端/plugins/daterangepicker/index.html" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/jquery.json-2.4.js" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/uploads/521.jpg" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/zyPopup/images/close.png" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/zyPopup/images/finish.png" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/zyPopup/images/loading.gif" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/control/images/add_img.png" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/control/images/bg.png" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/control/images/fileType/pdf.png" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/control/images/fileType/rar.png" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/control/js/zydemo.js" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/up.php" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/demo.html" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/control/js/zyUpload.js" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/core/zyFile.js" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/demo.js" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/control/css/zyUpload.css" />
+    <entry file="file://$PROJECT_DIR$/前端/function/account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/Test/css/styles.css" />
+    <entry file="file://$PROJECT_DIR$/前端/css/common/searchableSelect.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/Test/css/iziToast.min.css" />
+    <entry file="file://$PROJECT_DIR$/前端/css/common/iziToast.css" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/js/iziToast.js" />
+    <entry file="file://$PROJECT_DIR$/前端/js/iziToast.js" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/css/iziToast.css" />
+    <entry file="file://$PROJECT_DIR$/前端/Test/index.html" />
+    <entry file="file://$PROJECT_DIR$/前端/js/iziToast.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="5" column="3856" lean-forward="false" selection-start-line="5" selection-start-column="3856" selection-end-line="5" selection-end-column="3856" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/Test/js/demo.js" />
+    <entry file="file://$PROJECT_DIR$/前端/css/common/iziToast.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="5" column="1131" lean-forward="false" selection-start-line="5" selection-start-column="1131" selection-end-line="5" selection-end-column="1131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/plugins/myfonticon/iconfont.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="61" column="1" lean-forward="false" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/popalbum.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="801">
+          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/css/common/niftymodals.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="801">
+          <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/js/niftymodals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="151" column="16" lean-forward="true" selection-start-line="151" selection-start-column="16" selection-end-line="151" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/js/searchableSelect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1663">
+          <caret line="59" column="55" lean-forward="false" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/Test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="34" column="52" lean-forward="false" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/songlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7542">
+          <caret line="372" column="16" lean-forward="true" selection-start-line="372" selection-start-column="16" selection-end-line="372" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="801">
+          <caret line="120" column="70" lean-forward="false" selection-start-line="120" selection-start-column="70" selection-end-line="120" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/后端/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="78" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/css/common/navbar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="254" column="56" lean-forward="false" selection-start-line="254" selection-start-column="56" selection-end-line="254" selection-end-column="56" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#form#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#form#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#form#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#span#0;n#form#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#h3#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#3;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#0;n#tr#3;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#3;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#4;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#0;n#tr#4;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#4;n#table#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#h3#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#h3#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
