@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ♪ MusicHouse ♪ </title>
+
+    <!-- CSS部分 -->
+
+    <!-- 自用字体图标 -->
+    <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
+
+    <!--顶部导航栏 CSS-->
+    <link href="css/common/navbar.css" rel="stylesheet"/>
+
+    <!--拟态框-->
+    <link rel="stylesheet" type="text/css" href="css/common/niftymodals.css"/>
+
+    <!-- 带搜索框的下拉列表 -->
+    <link href="css/common/searchableSelect.css" rel="stylesheet" type="text/css">
+
+    <!--消息Tips-->
+    <link rel="stylesheet" href="css/common/iziToast.min.css">
+
+    <!--滚动条 CSS-->
+    <link href="css/common/scrollbar.css" rel="stylesheet"/>
+
+    <!-- 临时CSS -->
+    <style type="text/css">
+        body {  color:white; background-color:#2E2E2E; background: -webkit-linear-gradient(left, #171717, #FFF, #171717); }
+        li,ul {  list-style-type:none;  }
+        a { text-decoration:none;  }
+
+        .box-show-out {  -webkit-box-shadow:0 0 5px 5px #49DFFF;  -moz-box-shadow:0 0 5px 5px #49DFFF;  box-shadow:0 0 5px 5px #49DFFF;  }
+        .box-show-out2 {  width:1125px;  border-radius:15px;  background-color:#2E2E2E;  -webkit-box-shadow:0 0 5px 5px #B29AFF;  -moz-box-shadow:0 0 5px 5px #B29AFF;  box-shadow:0 0 5px 5px #B29AFF;  }
+    </style>
+
+
+    <!-- 网页图标 -->
+    <link rel="shortcut icon" href="images/common/MH-Logo.ico">
+    <link rel="Bookmark" href="images/common/MH-Logo.ico">
+
+</head>
+
+<body>
+    <!--顶部导航栏 [包括Logo、搜索框、导航菜单]-->
+    <nav id="navbar-index" >
+        <div id="navbar-content-index" class="box-show-out">
+            <!-- MH-Logo -->
+            <div id="logo">
+                <a href="index.html"><img src="images/common/MH-Logo.png"/></a>
+            </div>
+            <!-- 导航菜单 -->
+            <ul id="navbar-menu-index">
+                <li id="home" class="activeThis"><a href="main.html" target="indexIframe"><span class="MyIF home"></span> 主页</a></li>
+                <li id="download"><a href="download.html" target="indexIframe"><span class="MyIF XCX"></span> 小程序</a></li>
+                <li id="newdisc"><a href="newdisc.html" target="indexIframe"><span class="MyIF music-albu-1"></span> 新碟上架</a></li>
+                <li id="popalbum"><a href="popalbum.html" target="indexIframe"><span class="MyIF music-info"></span> 热门歌单</a></li>
+                <li id="songlist"><a href="songlist.html" target="indexIframe"><span class="MyIF data-analysis"></span> 播放排行</a></li>
+                <li id="singer"><a href="singer.html" target="indexIframe"><span class="MyIF singer"></span> 音乐人</a></li>
+            </ul>
+            <!-- 用户登陆 -->
+            <a id="navbar-user-index" onclick="window.top.niftymodalsByModelName('modal-login','');"></a>
+            <!-- 搜索框 -->
+            <section class="webdesigntuts-workshop">
+                <form action="" method="post">
+                    <input type="search" placeholder=" 搜索一下 ">
+                    <button type="submit"><span class="MyIF search"></span></button>
+                </form>
+            </section>
+        </div>
+    </nav>
+
+
+
+    <!--主体内容 [各种不同功能]-->
+    <div style="width:100%">
+        <div class="box-show-out" style="width:1200px; padding:120px 0 40px 0; margin:0px auto; background: url(images/index/index-bg.jpg); background-size:100% auto; position: relative;">
+            <iframe src="main.html" name="indexIframe" id="indexIframe" scrolling="no" frameborder="0" height="100%" width="100%" onload='IFrameReSize("indexIframe");' ></iframe>
+        </div>
+    </div>
+
+
+
+
+    <!--右下角浮动导航栏 [主页、播放列表、账户信息、评价服务、回到顶部]-->
+    <style type="text/css">
+        #float-nav {  width:40px;  height:275px;  position:fixed;  right:15px;  bottom:-5px;  }
+        #float-nav li {  width:40px;  height:40px;  float:left;  position:relative;  margin-top:10px;  background: #222222;  }
+        #float-nav li a {  cursor:default;  position:absolute;  width:40px;  height:40px;  top:0;  right:0;  overflow:hidden;  transition:all 0.3s;  opacity:0.6;  filter:Alpha(opacity=60);  color:#fff;  font:13px/40px "微软雅黑";  background:#222222;  -webkit-box-shadow:0 0 2px 2px #809cdf;  -moz-box-shadow:0 0 2px 2px #809cdf;  box-shadow:0 0 2px 2px #809cdf;  }
+        #float-nav li a:hover {  width:100px;  opacity:1;  filter:Alpha(opacity=100);  -webkit-box-shadow:0 0 2px 2px #49DFFF;  -moz-box-shadow:0 0 2px 2px #49DFFF;  box-shadow:0 0 2px 2px #49DFFF;  }
+        #float-nav span {  height:30px;  width:27px;  border:5px solid black;  background-color: #01c7de;  padding-left:3px;  margin-right:4px;  float:left;  color:white;  font-size:25px;  line-height:29px;  }
+    </style>
+    <ul id="float-nav">
+        <li><a href="main.html" target="indexIframe"><span class="MyIF home"></span>主页</a></li>
+        <li><a href="#"><span class="MyIF collection-music"></span>播放列表</a></li>
+        <li><a href="account.html" target="indexIframe"><span class="MyIF mysteryman"></span>账户信息</a></li>
+        <li onclick="window.top.niftymodalsByModelName('modal-questionnaire','');"><a><span class="MyIF questionnaire-1"></span>评价服务</a></li>
+        <li id="goToTop"><a><span class="MyIF convenient"></span>回到顶部</a></li>
+    </ul>
+
+
+
+
+    <!-- 弹出拟态框 -->
+    <div class="md-container md-effect-1" id="modal-login">
+        <div class="md-content">
+            <h3><img src="images/icon/登录.png" style="width:35px; margin:0 8px -7px 0;"/>账户登录</h3>
+            <button class="md-close close-all MyIF all-arrow"></button>
+            <div style="height:205px;">
+                <form action="account.html" target="indexIframe" method="post" style="width:70%; height:205px; border-right:2px solid; float:left;
+    border-image: -webkit-linear-gradient(#25b8dd, #a051ff, #25b8dd) 2;
+    border-image: -moz-linear-gradient(#25b8dd, #a051ff, #25b8dd) 2;
+    border-image: linear-gradient(#25b8dd, #a051ff, #25b8dd) 2;">
+                    <table style="width:100%; margin:8px 0 18px -18px; ">
+                        <style>
+                            .input-info
+                            {
+                                border:5px solid #67D6CE;
+                                -webkit-transition: all 0.4s 0.1s;
+                                -moz-transition: all 0.4s 0.1s;
+                                -ms-transition: all 0.4s 0.1s;
+                                transition: all 0.4s 0.1s;
+                            }
+                            .input-info:focus
+                            {
+                                border:5px solid #188add;
+                                -webkit-transition: all 0.4s 0.1s;
+                                -moz-transition: all 0.4s 0.1s;
+                                -ms-transition: all 0.4s 0.1s;
+                                transition: all 0.4s 0.1s;
+                            }
+                        </style>
+                        <tr>
+                            <td style="padding:5px 0 10px 0;"><span class="MyIF IDcard-1" style="margin-left:18px; margin-right:8px;"></span>用户名</td>
+                            <td style="padding:5px 0 10px 0;"><input class="input-info" type="text" style="width:250px; height:25px; border-radius:2px;"/></td>
+                        </tr>
+                        <tr>
+                            <td><span class="MyIF yuechi" style="margin-left:18px; margin-right:8px;"></span>密码</td>
+                            <td><input class="input-info" type="password" style="width:250px; height:25px; border-radius:2px;"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding-top:28px; text-align:center;">
+                                <button type="reset">重新填写</button><button type="submit" class="md-close">确认登陆</button>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <span style="float:right; margin-right:10px;">
+                        <a href="#" target="_blank" style="font-size:14px;">忘记密码</a>&nbsp;/
+                        <a style="font-size:14px; cursor:pointer;" class="md-close" onclick="niftymodalsByModelName('modal-register','','')">新用户注册</a>
+                    </span>
+
+                </form>
+
+                <div style="width:28%; height:205px; float: right; text-align: right;">
+                    <button style="width:120px; height:40px; margin:15px 25px 0 8px; padding-left:10px; text-align:left; font-size:16px; line-height:42px; background:url(images/common/button-glass.png); background-size:100% 100%; border-radius:8px;"> 微信登陆 <span class="MyIF wechat" style=" float:right;"></span></button><br/>
+                    <button style="width:120px; height:40px; margin:15px 25px 0 8px; padding-left:10px; text-align:left; font-size:16px; line-height:42px; background:url(images/common/button-glass.png); background-size:100% 100%; border-radius:8px;"> QQ登陆 <span class="MyIF qq" style=" float:right;"></span></button><br/>
+                    <button style="width:120px; height:40px; margin:15px 25px 0 8px; padding-left:10px; text-align:left; font-size:16px; line-height:42px; background:url(images/common/button-glass.png); background-size:100% 100%; border-radius:8px;"> 微博登陆 <span class="MyIF weibo" style=" float:right;"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="md-container md-effect-1" id="modal-register">
+        <div class="md-content">
+            <h3><img src="images/icon/添加用户.png" style="width:35px; margin:0 8px -7px 0;"/>账户注册</h3>
+            <button class="md-close close-all MyIF all-arrow"></button>
+            <div style="height:280px;">
+                <form action="account.html" target="indexIframe" method="post" style="width:70%; margin-left:108px; ">
+                    <table style="width:100%; margin:8px 0 18px -18px; ">
+                        <style>
+                            .input-info
+                            {
+                                border:5px solid #67D6CE;
+                                -webkit-transition: all 0.4s 0.1s;
+                                -moz-transition: all 0.4s 0.1s;
+                                -ms-transition: all 0.4s 0.1s;
+                                transition: all 0.4s 0.1s;
+                            }
+                            .input-info:focus
+                            {
+                                border:5px solid #188add;
+                                -webkit-transition: all 0.4s 0.1s;
+                                -moz-transition: all 0.4s 0.1s;
+                                -ms-transition: all 0.4s 0.1s;
+                                transition: all 0.4s 0.1s;
+                            }
+                        </style>
+                        <tr>
+                            <td style="padding:5px 0 10px 0;"><span class="MyIF IDcard-1" style="margin-left:18px; margin-right:8px;"></span>用户名</td>
+                            <td style="padding:5px 0 10px 0;"><input class="input-info" type="text" style="width:250px; height:25px; border-radius:2px;"/></td>
+                        </tr>
+                        <tr>
+                            <td style="padding:5px 0 10px 0;"><span class="MyIF IDcard-1" style="margin-left:18px; margin-right:8px;"></span>邮箱</td>
+                            <td style="padding:5px 0 10px 0;"><input class="input-info" type="text" style="width:250px; height:25px; border-radius:2px;"/></td>
+                        </tr>
+                        <tr>
+                            <td><span class="MyIF yuechi" style="margin-left:18px; margin-right:8px;"></span>密码</td>
+                            <td><input class="input-info" type="password" style="width:250px; height:25px; border-radius:2px;"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding-top:28px; text-align:center;">
+                                <button type="reset">重新填写</button><button type="submit" class="md-close" onclick="alertTips('1','注册成功!完善资料有助于系统提供更精确的个性推荐')">确认注册</button>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p style="width:100%; text-align:right;">
+                        已有账号？<a style="font-size:14px; cursor:pointer;" class="md-close" onclick="niftymodalsByModelName('modal-login','','')">点此立刻登陆</a>
+                    </p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="md-container md-effect-1" id="modal-category" style="width:920px;">
+        <div class="md-content">
+            <h3><img src="images/icon/立方体-3.png" style="width:35px; margin:8px 8px -7px 0;"/>选择分类</h3>
+            <button class="md-close close-all MyIF all-arrow"></button>
+            <div style="padding-right:36px;">
+                <a href="#" style=" padding:0 0 8px 52px; display:block; border-bottom:1px solid black;">全部风格</a>
+                <table cellpadding="0" cellspacing="0" style="width:100%; margin-bottom:18px;">
+                    <style>
+                        dd
+                        {
+                            margin:0;
+                            float: left;
+                        }
+                        .songtype
+                        {
+                            margin:3px 16px;
+                            float: left;
+                            font-size:14px;
+                            color:#2E2E2E;
+                            cursor:pointer;
+                        }
+                        .songtype:hover
+                        {
+                            text-decoration:underline;
+                        }
+                    </style>
+                    <tr>
+                        <td style="width:18%; text-align: center; border-right:1px solid black; border-bottom:1px solid black;">
+                            <span class="MyIF earth" style="font-size:24px;"></span> 语种
+                        </td>
+                        <td style="border-bottom:1px solid black; padding:8px;">
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">华语</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">欧美</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">日语</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">韩语</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">粤语</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">小语种</dd><dd>|</dd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:18%; text-align: center; border-right:1px solid black; border-bottom:1px solid black;">
+                            <span class="MyIF instrument" style="font-size:24px;"></span> 风格
+                        </td>
+                        <td style="border-bottom:1px solid black; padding:8px;">
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">流行</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">摇滚</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">民谣</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">电子</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">舞曲</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">说唱</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">轻音乐</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">爵士</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">乡村</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">R&B/Soul</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">古典</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">民族</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">英伦</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">金属</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">朋克</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">蓝调</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">雷鬼</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">世界音乐</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">拉丁</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">另类/独立</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">New Age</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">古风</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">后摇</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">Bossa Nova</dd><dd>|</dd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:18%; text-align: center; border-right:1px solid black; border-bottom:1px solid black;">
+                            <span class="MyIF cofee" style="font-size:24px;"></span> 场景
+                        </td>
+                        <td style="border-bottom:1px solid black;  padding:8px;">
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">清晨</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">夜晚</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">学习</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">工作</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">午休</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">下午茶</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">地铁</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">驾车</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">运动</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">旅行</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">散步</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">酒吧</dd><dd>|</dd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:18%; text-align: center; border-right:1px solid black; border-bottom:1px solid black;">
+                            <span class="MyIF exciting" style="font-size:24px;"></span> 情感
+                        </td>
+                        <td style="border-bottom:1px solid black; padding:8px;">
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">怀旧</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">清新</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">浪漫</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">性感</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">伤感</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">治愈</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">放松</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">孤独</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">感动</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">兴奋</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">快乐</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">安静</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">思念</dd><dd>|</dd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:18%; text-align: center; border-right:1px solid black; border-bottom:1px solid black;">
+                            <span class="MyIF theme" style="font-size:24px;"></span> 主题
+                        </td>
+                        <td style="border-bottom:1px solid black; padding:8px;">
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">影视原声</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">ACG</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">校园</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">游戏</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">70后</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">80后</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">90后</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">网络歌曲</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">KTV</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">经典</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">翻唱</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">吉他</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">钢琴</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">器乐</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">儿童</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">榜单</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">00后</dd><dd>|</dd>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="md-container md-effect-1" id="modal-questionnaire">
+        <div class="md-content">
+            <h3><img src="images/icon/菜单.png" style="width:35px; margin:8px 8px -7px 0;"/>调查问卷</h3>
+            <button class="md-close close-all MyIF all-arrow"></button>
+            <div style="margin-right:18px; text-align:center;">
+
+                <style>
+                    input[type='radio'] + label {
+                        text-align: center;
+                        display: inline-block;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+
+                    input[type='radio'] {
+                        display: none;
+                    }
+                    input[type='radio'] + label {
+                        z-index: 1;
+                        margin: 0 10px 10px 0;
+                        width: 115.5px;
+                        height: 37.29px;
+                        line-height: 36.3px;
+                        position: relative;
+                        letter-spacing: .1em;
+                        color: #0e0e0e;
+                        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+                        font-weight: 500;
+                        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #111111), color-stop(100%, #000000));
+                        background-image: -moz-linear-gradient(#111111, #000000);
+                        background-image: -webkit-linear-gradient(#111111, #000000);
+                        background-image: linear-gradient(#111111, #000000);
+                        -moz-border-radius: 3px;
+                        -webkit-border-radius: 3px;
+                        border-radius: 3px;
+                        -moz-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
+                        -webkit-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
+                        box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
+                    }
+                    input[type='radio'] + label:after {
+                        z-index: -1;
+                        content: '';
+                        cursor: pointer;
+                        top: 1.98px;
+                        margin-left: 50%;
+                        left: -55px;
+                        height: 33px;
+                        display: block;
+                        position: absolute;
+                        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));
+                        background-image: -moz-linear-gradient(#444444, #373738);
+                        background-image: -webkit-linear-gradient(#444444, #373738);
+                        background-image: linear-gradient(#444444, #373738);
+                        -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+                        -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+                        box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+                        -moz-border-radius: 2px;
+                        -webkit-border-radius: 2px;
+                        border-radius: 2px;
+                    }
+                    input[type='radio'] + label:hover {
+                        color: #AEAEAE;
+                        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+                    }
+                    input[type='radio'] + label:hover:after {
+                        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #545454), color-stop(100%, #373738));
+                        background-image: -moz-linear-gradient(#545454, #373738);
+                        background-image: -webkit-linear-gradient(#545454, #373738);
+                        background-image: linear-gradient(#545454, #373738);
+                    }
+                    input[type='radio']:checked + label {
+                        color: #00ccff;
+                        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0px 30px rgba(0, 255, 255, 0.7);
+                        -moz-box-shadow: 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
+                        -webkit-box-shadow: 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
+                        box-shadow: 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
+                    }
+                    input[type='radio']:checked + label:after {
+                        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #262627), color-stop(100%, #2d2d2e));
+                        background-image: -moz-linear-gradient(#262627, #2d2d2e);
+                        background-image: -webkit-linear-gradient(#262627, #2d2d2e);
+                        background-image: linear-gradient(#262627, #2d2d2e);
+                        -moz-box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+                        -webkit-box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+                        box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+                    }
+                    input[type='radio'] + label {
+                        letter-spacing: 0;
+                        width:88px;
+                        height:23px;
+                        margin:3px 8px 0 0;
+                        padding:3px;
+                        font-size:16px;
+                        line-height:23px;
+                    }
+                    input[type='radio'] + label:after {
+                        top:0px;
+                        left:-47px;
+                        width:88px;
+                        height:23px;
+                        padding:3px;
+                    }
+                    input[type='radio'] + label > span
+                    {
+                        font-size:14px;
+                        font-weight:700;
+                    }
+                    input[type='checkbox'] + label {
+                        text-align: center;
+                        display: inline-block;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                    input[type='checkbox'] {
+                        display: none;
+                    }
+                    input[type='checkbox'] + label {
+                        z-index: 1;
+                        margin: 0 10px 10px 0;
+                        width: 115.5px;
+                        height: 37.29px;
+                        line-height: 36.3px;
+                        position: relative;
+                        letter-spacing: .1em;
+                        color: #0e0e0e;
+                        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+                        font-weight: 500;
+                        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #111111), color-stop(100%, #000000));
+                        background-image: -moz-linear-gradient(#111111, #000000);
+                        background-image: -webkit-linear-gradient(#111111, #000000);
+                        background-image: linear-gradient(#111111, #000000);
+                        -moz-border-radius: 3px;
+                        -webkit-border-radius: 3px;
+                        border-radius: 3px;
+                        -moz-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
+                        -webkit-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
+                        box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
+                    }
+                    input[type='checkbox'] + label:after {
+                        z-index: -1;
+                        content: '';
+                        cursor: pointer;
+                        top: 1.98px;
+                        margin-left: 50%;
+                        left: -55px;
+                        height: 33px;
+                        display: block;
+                        position: absolute;
+                        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));
+                        background-image: -moz-linear-gradient(#444444, #373738);
+                        background-image: -webkit-linear-gradient(#444444, #373738);
+                        background-image: linear-gradient(#444444, #373738);
+                        -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+                        -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+                        box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+                        -moz-border-radius: 2px;
+                        -webkit-border-radius: 2px;
+                        border-radius: 2px;
+                    }
+                    input[type='checkbox'] + label:hover {
+                        color: #AEAEAE;
+                        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+                    }
+                    input[type='checkbox'] + label:hover:after {
+                        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #545454), color-stop(100%, #373738));
+                        background-image: -moz-linear-gradient(#545454, #373738);
+                        background-image: -webkit-linear-gradient(#545454, #373738);
+                        background-image: linear-gradient(#545454, #373738);
+                    }
+                    input[type='checkbox']:checked + label {
+                        color: #00ccff;
+                        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0px 30px rgba(0, 255, 255, 0.7);
+                        -moz-box-shadow: 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
+                        -webkit-box-shadow: 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
+                        box-shadow: 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
+                    }
+                    input[type='checkbox']:checked + label:after {
+                        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #262627), color-stop(100%, #2d2d2e));
+                        background-image: -moz-linear-gradient(#262627, #2d2d2e);
+                        background-image: -webkit-linear-gradient(#262627, #2d2d2e);
+                        background-image: linear-gradient(#262627, #2d2d2e);
+                        -moz-box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+                        -webkit-box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+                        box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+                    }
+                    input[type='checkbox'] + label {
+                        letter-spacing: 0;
+                        width:70px;
+                        height:22px;
+                        margin:3px 18px 8px 0;
+                        padding:3px 12px;
+                        font-size:14px;
+                        font-weight:500;
+                        line-height:22px;
+                    }
+                    input[type='checkbox'] + label:after {
+                        top:0;
+                        left:-47px;
+                        width:70px;
+                        height:22px;
+                        padding:3px 12px;
+                    }
+                    input[type='checkbox'] + label > b
+                    {
+                        font-size:13px;
+                    }
+                </style>
+
+                <form action="" method="post">
+                    <p style="text-align:left">1、您认为我们网站的服务质量如何：</p>
+                    <input type="radio" id='verybad' name="quality"><label for='verybad' class="MyIF cry"><span> 很差</span></label>
+                    <input type="radio" id='bad' name="quality"><label for='bad' class="MyIF unhappy"><span> 差</span></label>
+                    <input type="radio" id='normal' name="quality"><label for='normal' class="MyIF expressionless"><span> 一般</span></label>
+                    <input type="radio" id='good' name="quality"><label for='good' class="MyIF happy"><span> 好</span></label>
+                    <input type="radio" id='verygood' name="quality"><label for='verygood' class="MyIF exciting"><span> 很好</span></label>
+
+                    <p style="text-align: left">2、您认为我们网站存在哪些缺点 [可多选] ：</p>
+                    <input type="checkbox" id='1verybad' name="quality"><label for='1verybad' ><b>加速度载慢</b></label>
+                    <input type="checkbox" id='1bad' name="quality"><label for='1bad' ><b>歌曲收录少</b></label>
+                    <input type="checkbox" id='1normal' name="quality"><label for='1normal' ><b>曲库更新迟</b></label>
+                    <input type="checkbox" id='1good' name="quality"><label for='1good' ><b>歌曲音质差</b></label><br/>
+                    <input type="checkbox" id='1verygood' name="quality"><label for='1verygood' ><b>会员收费高</b></label>
+                    <input type="checkbox" id='2verygood' name="quality"><label for='2verygood' ><b>歌曲价格高</b></label>
+                    <input type="checkbox" id='3verygood' name="quality"><label for='3verygood' ><b>功能不齐全</b></label>
+                    <input type="checkbox" id='4verygood' name="quality"><label for='4verygood' ><b>推荐不合理</b></label>
+
+                    <p style="text-align: left">3、如还有任何问题、疑问或者不满或者改进意见请写下：</p>
+                    <textarea style="width:75%; height:58px; margin:0 0 0 -30px; resize:none; font:normal normal normal 14px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:3px; padding:8px 10px; border:none; border-radius:5px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);"></textarea>
+
+                    <p style="text-align: left"> 请填写正确的邮箱，以便我们对您的问题以邮箱方式回应，谢谢您的支持！</p>
+                    <input type="text" style="width:72%; margin:0 0 0 -30px; padding:8px 18px; border:none; border-radius:3px; font:normal normal normal 14px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:3px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+
+                </form>
+                <button class="md-close" onclick="alertTips(1,'问卷提交成功');" style="width:120px; height:40px; margin:18px 0px 8px 368px; padding-left:10px; text-align:left; font-size:16px; line-height:42px; background:url(images/common/button-glass.png); background-size:100% 100%; border-radius:8px;"> 提交信息 <span class="MyIF qq" style=" float:right;"></span></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="md-container md-effect-1" id="modal-warning">
+        <div class="md-content">
+            <h3><img src="images/icon/警告.png" style="width:35px; margin:8px 8px -7px 0;"/>操作提示</h3>
+            <button class="md-close close-all MyIF all-arrow"></button>
+            <div>
+                <span id="warning-text">操作警告！！！</span>
+                <div style="padding:30px 8px 8px 0; text-align: right;">
+                    <button id="sureOper" class="md-close" onclick="alertTips(0,'信息修改成功');">确认</button>
+                    <button class="md-close">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 弹出拟态框后背景遮幕 -->
+    <div class="md-overlay"></div>
+
+
+    <!-- Jsc部分 -->
+
+    <!--jQuery框架-->
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="js/searchableSelect.js"></script>
+
+    <!--拟态框JavaScript-->
+    <script src="js/niftymodals.js"></script>
+
+    <!--操作消息Tips JavaScript-->
+    <script src="js/iziToast.min.js" type="text/javascript"></script>
+
+
+    <!-- 临时JavaScript -->
+    <script type="text/javascript">
+
+        /**
+         * 右下角回到顶部
+         */
+        $("#goToTop").click(function(){
+            $("html,body").animate({scrollTop:0},800);//点击go to top按钮时，以800的速度回到顶部，这里的800可以根据你的需求修改
+            return false;
+        });
+
+        /**
+         * iframe高度自适应
+         */
+        function IFrameReSize(iframename) {
+            var pTar = document.getElementById(iframename);
+            if (pTar) {  //ff
+                if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight) {
+                    pTar.height = pTar.contentDocument.body.offsetHeight;
+
+                } //ie
+                else if (pTar.Document && pTar.Document.body.scrollHeight) {
+                    pTar.height = pTar.Document.body.scrollHeight;
+                }
+            }
+        }
+
+        /**
+         * 根据传入的model名字来弹出相应的模拟框
+         */
+        function niftymodalsByModelName(modal,url,text) {
+            $("#" + modal).niftyModal();
+            if(text != '') {
+                $("#warning-text").html(text);
+            }
+        }
+
+        /**
+         * 操作消息提示
+         */
+        function alertTips(type,message) {
+            if(type) {
+                iziToast.info({
+                    title: 'Success -- ',
+                    message: message,
+                    position: 'bottomLeft',
+                    transitionIn: 'flipInX',
+                    transitionOut: 'flipOutX'
+                });
+            } else {
+                iziToast.error({
+                    title: 'Error -- ',
+                    message: message,
+                    position: 'bottomLeft',
+                    transitionIn: 'flipInX',
+                    transitionOut: 'flipOutX'
+                });
+            }
+        }
+
+
+
+
+
+        $('#home>a').click(function () {
+            $('#home').addClass('activeThis');
+            $('#newdisc').removeClass('activeThis');
+            $('#popalbum').removeClass('activeThis');
+            $('#songlist').removeClass('activeThis');
+            $('#singer').removeClass('activeThis');
+            $('#download').removeClass('activeThis');
+        });
+        $('#download>a').click(function () {
+            $('#download').addClass('activeThis');
+            $('#home').removeClass('activeThis');
+            $('#newdisc').removeClass('activeThis');
+            $('#popalbum').removeClass('activeThis');
+            $('#songlist').removeClass('activeThis');
+            $('#singer').removeClass('activeThis');
+        });
+        $('#newdisc>a').click(function () {
+            $('#newdisc').addClass('activeThis');
+            $('#popalbum').removeClass('activeThis');
+            $('#songlist').removeClass('activeThis');
+            $('#singer').removeClass('activeThis');
+            $('#download').removeClass('activeThis');
+            $('#home').removeClass('activeThis');
+        });
+        $('#popalbum>a').click(function () {
+            $('#popalbum').addClass('activeThis');
+            $('#songlist').removeClass('activeThis');
+            $('#singer').removeClass('activeThis');
+            $('#download').removeClass('activeThis');
+            $('#home').removeClass('activeThis');
+            $('#newdisc').removeClass('activeThis');
+        });
+        $('#songlist>a').click(function () {
+            $('#songlist').addClass('activeThis');
+            $('#singer').removeClass('activeThis');
+            $('#download').removeClass('activeThis');
+            $('#home').removeClass('activeThis');
+            $('#newdisc').removeClass('activeThis');
+            $('#popalbum').removeClass('activeThis');
+        });
+        $('#singer>a').click(function () {
+            $('#singer').addClass('activeThis');
+            $('#home').removeClass('activeThis');
+            $('#newdisc').removeClass('activeThis');
+            $('#popalbum').removeClass('activeThis');
+            $('#songlist').removeClass('activeThis');
+            $('#download').removeClass('activeThis');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+.searchable-select-hide {
+    display: none;
+}
+
+.searchable-select {
+    width: 150px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #00CDFF;
+    position: relative;
+    float: left;
+    margin: 0 30px 0 18px;
+}
+
+.searchable-select-holder {
+    padding: 6px;
+    border-radius: 5px;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));
+    background-image: -moz-linear-gradient(#444444, #373738);
+    background-image: -webkit-linear-gradient(#444444, #373738);
+    background-image: linear-gradient(#444444, #373738);
+    -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+    min-height: 20px;
+    box-sizing: border-box;
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.searchable-select-caret {
+    position: absolute;
+    width: 0;
+    height: 0;
+    box-sizing: border-box;
+    border-color: black transparent transparent transparent;
+    top: 0;
+    bottom: 0;
+    border-style: solid;
+    border-width: 5px;
+    margin: auto;
+    right: 10px;
+}
+
+.searchable-select-dropdown {
+    position: absolute;
+    border-radius: 5px;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));
+    background-image: -moz-linear-gradient(#444444, #373738);
+    background-image: -webkit-linear-gradient(#444444, #373738);
+    background-image: linear-gradient(#444444, #373738);
+    -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 4px;
+    border-top: none;
+    top: 35px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.searchable-select-input {
+    margin-top: 5px;
+    border: none;
+    outline: none;
+    padding: 4px;
+    width: 100%;
+    color:#00CDFF;
+    box-sizing: border-box;
+}
+
+.searchable-scroll {
+    margin-top: 4px;
+    position: relative;
+}
+
+.searchable-scroll.has-privious {
+    padding-top: 16px;
+}
+
+.searchable-scroll.has-next {
+    padding-bottom: 16px;
+}
+
+.searchable-has-privious {
+    top: 0;
+}
+
+.searchable-has-next {
+    bottom: 0;
+}
+
+.searchable-has-privious, .searchable-has-next {
+    height: 16px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    text-align: center;
+    z-index: 10;
+    border-radius: 5px;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));
+    background-image: -moz-linear-gradient(#444444, #373738);
+    background-image: -webkit-linear-gradient(#444444, #373738);
+    background-image: linear-gradient(#444444, #373738);
+    -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+    line-height: 8px;
+    cursor: pointer;
+}
+
+.searchable-select-items {
+    max-height: 200px;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.searchable-select-items::-webkit-scrollbar {
+    display: none;
+}
+
+.searchable-select-item {
+    padding: 5px 5px;
+    cursor: pointer;
+    min-height: 30px;
+    box-sizing: border-box;
+}
+
+.searchable-select-item.hover {
+    background: #555;
+    color: white;
+}
+
+.searchable-select-item.selected {
+    background: #a89eff;
+    color: white;
+}

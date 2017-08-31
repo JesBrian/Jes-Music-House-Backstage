@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> ♪ JesBrian - MH ♪ </title>
+
+
+    <!-- CSS部分 -->
+
+    <!-- 自用字体图标 -->
+    <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
+
+    <!-- 临时CSS -->
+    <style type="text/css">
+        body
+        {
+            background-color:transparent;
+        }
+        li
+        {
+            list-style-type:none;
+        }
+        a,a:hover,a:focus,a:active
+        {
+            text-decoration:none;
+        }
+        .MyIF
+        {
+            color:#42d4ff;
+        }
+
+        .box-show-out
+        {
+            -webkit-box-shadow:0 0 5px 5px #49DFFF;
+            -moz-box-shadow:0 0 5px 5px #49DFFF;
+            box-shadow:0 0 5px 5px #49DFFF;
+        }
+        .box-show-out2
+        {
+            border-radius:15px;
+            background-color:#2E2E2E;
+            -webkit-box-shadow:0 0 5px 5px #B29AFF;
+            -moz-box-shadow:0 0 5px 5px #B29AFF;
+            box-shadow:0 0 5px 5px #B29AFF;
+        }
+
+
+        /* 控制渐变效果 */
+        .end-boder
+        {
+            font-weight: 900;
+            background-image: -webkit-linear-gradient(left, #2ed8ff, #9b7cf7 25%, #2ed8ff 50%, #9b7cf7 75%, #2ed8ff);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-background-size: 200% 100%;
+            -webkit-animation: masked-animation 3s infinite linear;
+        }
+        @-webkit-keyframes masked-animation
+        {
+            0%  { background-position: 0 0;}
+            100% { background-position: -100% 0;}
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+    <div class="box-show-out2" style="width:900px;  margin-left:auto; margin-right:115px; margin-top:25px; padding-bottom:70px;">
+        <style>
+            nav>a>div
+            {
+                width:100px;
+                height:40px;
+                padding-left:32px;
+                background: url(images/common/first.png);
+                background-size:100% 100%;
+                font:italic normal bold 12px/2.5em 宋体,verdana;
+            }
+            nav>a>div.MyIF:hover
+            {
+                color: white;
+            }
+            nav>a:nth-of-type(2)>div
+            {
+                width:95px;
+                padding-left:40px;
+                background: url(images/common/second.png);
+                background-size:100% 100%;
+            }
+            nav>a:last-child>div
+            {
+                width:100px;
+                color: #585451;
+                padding-left:55px;
+                background: url(images/common/last.png);
+                background-size:100% 100%;
+            }
+        </style>
+        <!-- 面包屑导航 -->
+        <nav style="position: absolute; top:0px; left:130px;">
+            <a href="main.html" style="position: relative;z-index:99;">
+                <div class="MyIF home"> 主页</div>
+            </a>
+            <a href="#" style="position: absolute; top:0px; left:108px;">
+                <div class="MyIF music-box"> 播放</div>
+            </a>
+        </nav>
+
+
+        <style>
+            #per,#account
+            {
+                width:120px;
+                height:50px;
+                display:block;
+                margin-top:7px;
+                border-radius:4px;
+                color: #01ebff;
+                letter-spacing:2px;
+                background: url(images/common/button-active.png) no-repeat;
+                background-size: 100% 100%;
+                background-color: #222222;
+            }
+            #navbar a.active
+            {
+                color: #585858;
+                font-weight:700;
+                -webkit-text-stroke: 0.2px #2b2a2a;
+                background: url(images/common/button-normal.png) no-repeat;
+                background-size: 100% 100%;
+                -webkit-box-shadow:0 0 2px 2px #32f6ff;
+                -moz-box-shadow:0 0 2px 2px #32f6ff;
+                box-shadow:0 0 2px 2px #32f6ff;
+                -webkit-transition: all .3s ease-out;
+                transition: all .3s ease-out;
+            }
+        </style>
+        <!-- 伪导航栏 -->
+        <div id="navbar" style="position: absolute; top:222px; left:25px; text-align:center; line-height:50px;">
+            <a id="account" class="active">总排行榜</a>
+        </div>
+
+        <div style="width:85%; height:90%; padding:20px; margin: auto;">
+
+            <style>
+                table{
+                    width:100%;
+                    background-color: #2e2e2e;
+                    font-size:13px;
+                    border:10px groove #222222;
+                    border-radius:2px;
+                }
+                caption
+                {
+                    font-size:23px;
+                    color: #809cdf;
+                    margin:auto 0 10px;
+                }
+                th{
+                    line-height:35px;
+                    border-right: 2px solid #1b1b1b;
+                    color: #5bc2d4;
+                    font-weight:500;
+                    font-size:15px;
+                    background:#171717;
+                    background: -webkit-linear-gradient(top, #3A3A3A, #171717);
+                }
+                tbody td{
+                    height: 30px;
+                    color: #8A8A8A;
+                    padding-left:12px;
+                }
+                tbody td:first-child{
+                    width:80px;
+                }
+                tbody td:last-child{
+                    width:50px;
+                    padding-right:8px;
+                    text-align: right;
+                }
+                tbody tr:nth-of-type(even){
+                    background-color: #393939;
+                }
+                tbody tr:nth-of-type(odd){
+                    background-color: #585451;
+                }
+                tbody tr:hover > td{
+                    color:#FFF;
+                    background-color: #1E1E1E;
+                }
+            </style>
+
+            <a href="#" style="width:105px; height:40px; margin-right:20px; padding-left:12px; padding-right:3px; border-radius:8px;
+                            background:url(images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; float:right;
+                            color: #585858; font-size:16px; font-weight:700; line-height:40px;">
+                收藏全部
+                <span class="MyIF add-collection" style="float:right; font-size:24px; color:white"></span>
+            </a>
+            <a href="#" style="width:105px; height:40px; margin-right:5px; padding-left:12px; padding-right:3px; border-radius:8px;
+                            background:url(images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; float:right;
+                            color: #585858; font-size:16px; font-weight:700; line-height:40px;">
+                播放全部
+                <span class="MyIF play" style="float:right; font-size:24px; color:white"></span>
+            </a>
+
+            <table class="table box-show-out" cellpadding="0" cellspacing="0">
+                <caption><span class="MyIF exponential" style="font-size:23px;"></span> 排行榜</caption>
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>歌曲</th>
+                    <th>次数</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td><td>Bangalore</td><td>560001</td>
+                    </tr>
+                    <tr>
+                        <td>02</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>03</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>04</td><td>Bangalore</td><td>560001</td>
+                    </tr>
+                    <tr>
+                        <td>05</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>06</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>07</td><td>Bangalore</td><td>560001</td>
+                    </tr>
+                    <tr>
+                        <td>08</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>09</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>10</td><td>Bangalore</td><td>560001</td>
+                    </tr>
+                    <tr>
+                        <td>11</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>12</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>13</td><td>Bangalore</td><td>560001</td>
+                    </tr>
+                    <tr>
+                        <td>14</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>15</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>16</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>17</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>18</td><td>Bangalore</td><td>560001</td>
+                    </tr>
+                    <tr>
+                        <td>19</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>20</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>01</td><td>Bangalore</td><td>560001</td>
+                    </tr>
+                    <tr>
+                        <td>02</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>03</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>04</td><td>Bangalore</td><td>560001</td>
+                    </tr>
+                    <tr>
+                        <td>05</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>06</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>07</td><td>Bangalore</td><td>560001</td>
+                    </tr>
+                    <tr>
+                        <td>08</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>09</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>10</td><td>Bangalore</td><td>560001</td>
+                    </tr>
+                    <tr>
+                        <td>11</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>12</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>13</td><td>Bangalore</td><td>560001</td>
+                    </tr>
+                    <tr>
+                        <td>14</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>15</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>16</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>17</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>18</td><td>Bangalore</td><td>560001</td>
+                    </tr>
+                    <tr>
+                        <td>19</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>20</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>01</td><td>Bangalore</td><td>560001</td>
+                    </tr>
+                    <tr>
+                        <td>02</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>03</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>04</td><td>Bangalore</td><td>560001</td>
+                    </tr>
+                    <tr>
+                        <td>05</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>06</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>07</td><td>Bangalore</td><td>560001</td>
+                    </tr>
+                    <tr>
+                        <td>08</td><td>Mumbai</td><td>400003</td>
+                    </tr>
+                    <tr>
+                        <td>09</td><td>Pune</td><td>411027</td>
+                    </tr>
+                    <tr>
+                        <td>10</td><td>Bangalore</td><td>560001</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <div style="height:70px;"></div>
+
+
+    <!-- Jsc部分 -->
+
+    <!--jQuery框架-->
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+
+</body>
+</html>
