@@ -72,83 +72,78 @@
 </head>
 <body>
 
+    <style>
+        nav>a>div
+        {
+            width:100px;
+            height:40px;
+            padding-left:32px;
+            background: url(images/common/first.png);
+            background-size:100% 100%;
+            font:italic normal bold 12px/2.5em 宋体,verdana;
+        }
+        nav>a>div.MyIF:hover
+        {
+            color: white;
+        }
+        nav>a:nth-of-type(2)>div
+        {
+            width:95px;
+            padding-left:40px;
+            background: url(images/common/second.png);
+            background-size:100% 100%;
+        }
+        nav>a:last-child>div
+        {
+            width:100px;
+            color: #585451;
+            padding-left:55px;
+            background: url(images/common/last.png);
+            background-size:100% 100%;
+        }
+    </style>
+    <!-- 面包屑导航 -->
+    <nav style="position: absolute; top:0; left:130px;">
+        <a href="main.html" style="position: relative; z-index:99;"><div class="MyIF home"> 主页</div></a>
+        <a href="#" style="position: absolute; top:0; left:108px; z-index:98;"><div class="MyIF exponential"> 歌单</div></a>
+    </nav>
+
+
+    <style>
+        #per,#account
+        {
+            width:120px;
+            height:50px;
+            display:block;
+            margin-top:7px;
+            border-radius:4px;
+            color: #01ebff;
+            letter-spacing:2px;
+            background: url(images/common/button-active.png) no-repeat;
+            background-size: 100% 100%;
+            background-color: #222222;
+        }
+        #navbar a.active
+        {
+            color: #585858;
+            font-weight:700;
+            -webkit-text-stroke: 0.2px #2b2a2a;
+            background: url(images/common/button-normal.png) no-repeat;
+            background-size: 100% 100%;
+            -webkit-box-shadow:0 0 2px 2px #32f6ff;
+            -moz-box-shadow:0 0 2px 2px #32f6ff;
+            box-shadow:0 0 2px 2px #32f6ff;
+            -webkit-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+        }
+    </style>
+    <!-- 伪导航栏 -->
+    <div id="navbar" style="position: absolute; top:222px; left:25px; text-align:center; line-height:50px;">
+        <a href="#" id="account" class="active">最新潮流</a>
+        <a href="#" id="per">最火热门</a>
+    </div>
+
     <div class="box-show-out2" style="width:900px;  margin-left:auto; margin-right:115px; margin-top:25px; padding-bottom:70px;">
-        <style>
-            nav>a>div
-            {
-                width:100px;
-                height:40px;
-                padding-left:32px;
-                background: url(images/common/first.png);
-                background-size:100% 100%;
-                font:italic normal bold 12px/2.5em 宋体,verdana;
-            }
-            nav>a>div.MyIF:hover
-            {
-                color: white;
-            }
-            nav>a:nth-of-type(2)>div
-            {
-                width:95px;
-                padding-left:40px;
-                background: url(images/common/second.png);
-                background-size:100% 100%;
-            }
-            nav>a:last-child>div
-            {
-                width:100px;
-                color: #585451;
-                padding-left:55px;
-                background: url(images/common/last.png);
-                background-size:100% 100%;
-            }
-        </style>
-        <!-- 面包屑导航 -->
-        <nav style="position: absolute; top:0px; left:130px;">
-            <a href="main.html" style="position: relative;z-index:99;">
-                <div class="MyIF home"> 主页</div>
-            </a>
-            <a href="#" style="position: absolute; top:0px; left:108px;">
-                <div class="MyIF exponential"> 歌单</div>
-            </a>
-        </nav>
-
-
-        <style>
-            #per,#account
-            {
-                width:120px;
-                height:50px;
-                display:block;
-                margin-top:7px;
-                border-radius:4px;
-                color: #01ebff;
-                letter-spacing:2px;
-                background: url(images/common/button-active.png) no-repeat;
-                background-size: 100% 100%;
-                background-color: #222222;
-            }
-            #navbar a.active
-            {
-                color: #585858;
-                font-weight:700;
-                -webkit-text-stroke: 0.2px #2b2a2a;
-                background: url(images/common/button-normal.png) no-repeat;
-                background-size: 100% 100%;
-                -webkit-box-shadow:0 0 2px 2px #32f6ff;
-                -moz-box-shadow:0 0 2px 2px #32f6ff;
-                box-shadow:0 0 2px 2px #32f6ff;
-                -webkit-transition: all .3s ease-out;
-                transition: all .3s ease-out;
-            }
-        </style>
-        <!-- 伪导航栏 -->
-        <div id="navbar" style="position: absolute; top:222px; left:25px; text-align:center; line-height:50px;">
-            <a href="#" id="account" class="active">最新潮流</a>
-            <a href="#" id="per">最火热门</a>
-        </div>
-
-
         <div style="width:92%; height:100%; padding:40px 0 0 0; margin: auto;">
 
             <div style="width:80%; margin:0 auto; padding:8px 15px; border:8px groove #585858; box-shadow:0 18px 20px #161616;">

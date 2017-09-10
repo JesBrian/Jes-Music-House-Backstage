@@ -99,13 +99,9 @@
         }
     </style>
     <!-- 面包屑导航 -->
-    <nav style="position: absolute; top:0px; left:130px;">
-        <a href="main.html" style="position: relative;z-index:99;">
-            <div class="MyIF home"> 主页</div>
-        </a>
-        <a href="#" style="position: absolute; top:0px; left:108px;">
-            <div class="MyIF administrators-1"> 个人</div>
-        </a>
+    <nav style="position: absolute; top:0; left:130px;">
+        <a href="main.html" style="position: relative; z-index:99;"><div class="MyIF home"> 主页</div></a>
+        <a href="#" style="position: absolute; top:0; left:108px; z-index:98;"><div class="MyIF administrators-1"> 个人</div></a>
     </nav>
 
     <style>
@@ -138,15 +134,15 @@
     </style>
     <!-- 伪导航栏 -->
     <div id="navbar" style="position: absolute; top:222px; left:25px; text-align:center; line-height:50px;">
-        <a href="function/account.html" target="function"  id="account" class="active">账户信息</a>
-        <a href="function/recommend.html" target="function" id="per">个性推荐</a>
-        <a href="function/rank.html" target="function"  id="rank" >听歌排行</a>
-        <a href="function/album.html" target="function"  id="album" >我的歌单</a>
+        <a href="function/accountInfo.html" target="function" id="account" class="active">账户信息</a>
+        <a href="function/accountRecommend.html" target="function" id="per">个性推荐</a>
+        <a href="function/accountRank.html" target="function" id="rank" >听歌排行</a>
+        <a href="function/accountAlbum.html" target="function" id="album" >我的歌单</a>
     </div>
 
     <!-- 功能页面 -->
     <div class="box-show-out2" style="width:900px; height:800px; margin-left:auto; margin-right:115px; margin-top:25px;">
-        <iframe name="function" style="width: 98%; height: 97%; padding:20px 12px; border: none;" src="function/account.html"></iframe>
+        <iframe name="function" style="width: 98%; height: 97%; padding:20px 12px; border: none;" src="function/accountInfo.html"></iframe>
     </div>
 
     <div style="height: 70px;"></div>

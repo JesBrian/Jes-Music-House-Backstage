@@ -173,9 +173,7 @@ i, cite, em, var, address, dfn { /*斜体*/
     border-image: linear-gradient(#dd7e90, #F7B889, #ebe86c, #60E099, #26c7ff, #3972ff, #B373F7) 25;
 }
 
-.theme-left-layout .datagrid-row-selected, .theme-left-layout .datagrid-row-over, .theme-left-layout .accordion-header-selected
-.accordion .accordion-collapse:link, .accordion .accordion-collapse:visited, .accordion .accordion-collapse:hover, .accordion .accordion-collapse:active, .accordion .accordion-collapse:focus,
-.accordion .accordion-expand:link, .accordion .accordion-expand:visited, .accordion .accordion-expand:hover, .accordion .accordion-expand:active, .accordion .accordion-expand:focus {
+.theme-left-layout .datagrid-row-selected, .theme-left-layout .datagrid-row-over, .theme-left-layout .accordion-header-selected .accordion .accordion-collapse:link, .accordion .accordion-collapse:visited, .accordion .accordion-collapse:hover, .accordion .accordion-collapse:active, .accordion .accordion-collapse:focus, .accordion .accordion-expand:link, .accordion .accordion-expand:visited, .accordion .accordion-expand:hover, .accordion .accordion-expand:active, .accordion .accordion-expand:focus {
     background-color: #232323;
 }
 

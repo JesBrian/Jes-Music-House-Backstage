@@ -30,8 +30,6 @@ $(function () {
             'default-default': 'This is costom language'
         };
 
-
-
     $('#date-range13').dateRangePicker(
         {
             autoClose: true,

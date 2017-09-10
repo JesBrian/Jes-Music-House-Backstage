@@ -10,19 +10,22 @@
     <!-- 自用字体图标 -->
     <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
 
-    <!--顶部导航栏 CSS-->
+    <!-- 顶部导航栏 -->
     <link href="css/common/navbar.css" rel="stylesheet"/>
 
-    <!--拟态框-->
+    <!-- 音乐播放器 -->
+    <link rel="stylesheet" href="css/common/audioplayer.css"/>
+
+    <!-- 拟态框 -->
     <link rel="stylesheet" type="text/css" href="css/common/niftymodals.css"/>
 
     <!-- 带搜索框的下拉列表 -->
     <link href="css/common/searchableSelect.css" rel="stylesheet" type="text/css">
 
-    <!--消息Tips-->
+    <!-- 消息Tips -->
     <link rel="stylesheet" href="css/common/iziToast.min.css">
 
-    <!--滚动条 CSS-->
+    <!-- 滚动条 -->
     <link href="css/common/scrollbar.css" rel="stylesheet"/>
 
     <!-- 临时CSS -->
@@ -30,6 +33,10 @@
         body {  color:white; background-color:#2E2E2E; background: -webkit-linear-gradient(left, #171717, #FFF, #171717); }
         li,ul {  list-style-type:none;  }
         a { text-decoration:none;  }
+        p,h1,h2,h3,h4,h5,h6 {  margin:0;  padding:0;  }
+        dd {  margin:0;  float: left;  }
+
+        .hover-undeline:hover {  text-decoration:underline;  }
 
         .box-show-out {  -webkit-box-shadow:0 0 5px 5px #49DFFF;  -moz-box-shadow:0 0 5px 5px #49DFFF;  box-shadow:0 0 5px 5px #49DFFF;  }
         .box-show-out2 {  width:1125px;  border-radius:15px;  background-color:#2E2E2E;  -webkit-box-shadow:0 0 5px 5px #B29AFF;  -moz-box-shadow:0 0 5px 5px #B29AFF;  box-shadow:0 0 5px 5px #B29AFF;  }
@@ -63,29 +70,44 @@
             <a id="navbar-user-index" onclick="window.top.niftymodalsByModelName('modal-login','');"></a>
             <!-- 搜索框 -->
             <section class="webdesigntuts-workshop">
-                <form action="" method="post">
-                    <input type="search" placeholder=" 搜索一下 ">
+                <form action="search.html" target="indexIframe" method="post">
+                    <input type="search" placeholder=" 搜索一下 " required>
                     <button type="submit"><span class="MyIF search"></span></button>
                 </form>
             </section>
         </div>
     </nav>
 
-
-
     <!--主体内容 [各种不同功能]-->
     <div style="width:100%">
-        <div class="box-show-out" style="width:1200px; padding:120px 0 40px 0; margin:0px auto; background: url(images/index/index-bg.jpg); background-size:100% auto; position: relative;">
-            <iframe src="main.html" name="indexIframe" id="indexIframe" scrolling="no" frameborder="0" height="100%" width="100%" onload='IFrameReSize("indexIframe");' ></iframe>
+        <div style="width:1350px; margin:0 auto;">
+            <div class="box-show-out" style="width:1200px; padding:120px 0 40px 0; margin:0 auto; background: url(images/index/index-bg.jpg); background-size:100% auto; position:relative;">
+                <iframe src="main.html" name="indexIframe" id="indexIframe" scrolling="no" frameborder="0" height="100%" width="100%" onload='IFrameReSize("indexIframe");'></iframe>
+            </div>
         </div>
     </div>
 
+    <!--网页页脚 [各种信息]-->
+    <footer style="width:100%;">
+        <div class="box-show-out" style="width:1350px; height:98px; margin:0 auto; z-index:4; position:relative; background-image:-webkit-linear-gradient(#232323, #303030, #3C3C3C);  background-image:-moz-linear-gradient(#232323,#303030,#3C3C3C);  background-image:linear-gradient(#232323,#303030,#3C3C3C);">
+            <div style="margin:8px 108px; float:left; font:normal normal normal 14px/1.5em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">
+                <a class="hover-undeline" href="#">关于我们</a> | <a class="hover-undeline" href="#">客户服务</a> | <a class="hover-undeline" href="#">服务条款</a> | <a class="hover-undeline" href="#">免责声明</a><br/>
+                <span style="margin:0 18px; font-size:13px;">JesBrian个人版权所有&nbsp;&nbsp;&nbsp;©2017 - 2019</span>
+            </div>
+            <div style="margin:0 108px; float:right;">
+                <a title="入驻我们" class="MyIF mysteryman" style="width:40px; height:40px; margin:8px; font:bold normal normal 28px/40px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);"></a>
+                <a title="关注我们" class="MyIF code-1" style="width:40px; height:40px; margin:8px; font:bold normal normal 28px/40px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);"></a>
+                <a title="意见反馈" class="MyIF questionnaire-1" style="width:40px; height:40px; margin:8px; font:bold normal normal 28px/40px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);"></a>
+                <a title="资助我们" class="MyIF coin" style="width:40px; height:40px; margin:8px; font:bold normal normal 28px/40px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);"></a>
+            </div>
 
+        </div>
+    </footer>
 
 
     <!--右下角浮动导航栏 [主页、播放列表、账户信息、评价服务、回到顶部]-->
     <style type="text/css">
-        #float-nav {  width:40px;  height:275px;  position:fixed;  right:15px;  bottom:-5px;  }
+        #float-nav {  width:38px;  position:fixed;  right:15px;  bottom:38px; z-index:4; }
         #float-nav li {  width:40px;  height:40px;  float:left;  position:relative;  margin-top:10px;  background: #222222;  }
         #float-nav li a {  cursor:default;  position:absolute;  width:40px;  height:40px;  top:0;  right:0;  overflow:hidden;  transition:all 0.3s;  opacity:0.6;  filter:Alpha(opacity=60);  color:#fff;  font:13px/40px "微软雅黑";  background:#222222;  -webkit-box-shadow:0 0 2px 2px #809cdf;  -moz-box-shadow:0 0 2px 2px #809cdf;  box-shadow:0 0 2px 2px #809cdf;  }
         #float-nav li a:hover {  width:100px;  opacity:1;  filter:Alpha(opacity=100);  -webkit-box-shadow:0 0 2px 2px #49DFFF;  -moz-box-shadow:0 0 2px 2px #49DFFF;  box-shadow:0 0 2px 2px #49DFFF;  }
@@ -93,16 +115,416 @@
     </style>
     <ul id="float-nav">
         <li><a href="main.html" target="indexIframe"><span class="MyIF home"></span>主页</a></li>
-        <li><a href="#"><span class="MyIF collection-music"></span>播放列表</a></li>
         <li><a href="account.html" target="indexIframe"><span class="MyIF mysteryman"></span>账户信息</a></li>
         <li onclick="window.top.niftymodalsByModelName('modal-questionnaire','');"><a><span class="MyIF questionnaire-1"></span>评价服务</a></li>
-        <li id="goToTop"><a><span class="MyIF convenient"></span>回到顶部</a></li>
+        <li onclick="gotoTop(800)"><a><span class="MyIF convenient"></span>回到顶部</a></li>
     </ul>
 
+    <!--音乐播放器-->
+    <style>
+        #audioplayer-songimg{
+            width:31px; height:30px; top:7px; left:170px; position:absolute; z-index:5; border:none; border-radius:3px;
+        }
+        .audioplayer-PREV-NEXT{
+            width:114px; height:22px; top:19px; left:42px; border-top: 1px solid #73DDDA; border-top-color: rgba(115, 221, 218, .5); position:absolute; z-index:5;
+        }
+        #audioplayer-PREV{
+            width:49%; height:100%; left:1px; border-right: 1px solid #73DDDA; border-right-color: rgba(115, 221, 218, .5); position:absolute; font-size:17px; line-height:22px; color:#5ACEDD;
+        }
+        #audioplayer-NEXT{
+            width:49%; height:100%; right:0; position:absolute; font-size:17px; line-height:22px; color:#73DDDA;
+        }
+        #audioplayer-playmode {
+            width:42px; height:38px; top:0.5px; right:46px; padding:2px; position:absolute; z-index:5; border-left: 1px solid #73DDDA; border-left-color: rgba(115, 221, 218, .5); color:#5ACEDD;
+        }
+        .audioplayer-songlist {
+            width:42px; height:38px; top:0.5px; right:92px; padding:2px; position:absolute; z-index:5; border-left: 1px solid #73DDDA; border-left-color: rgba(115, 221, 218, .5); color:#5ACEDD;
+        }
+        .audioplayer-collection {
+            width:42px; height:38px; top:0.5px; right:139px; padding:2px; position:absolute; z-index:5; border-left: 1px solid #73DDDA; border-left-color: rgba(115, 221, 218, .5); color:#5ACEDD;
+        }
+
+        #audioplayer-PREV:hover, #audioplayer-PREV:focus, #audioplayer-NEXT:hover, #audioplayer-NEXT:focus, #audioplayer-playmode:hover, #audioplayer-playmode:focus, .audioplayer-songlist:hover, .audioplayer-songlist:focus, .audioplayer-collection:hover, .audioplayer-collection:focus {
+            background-color: #222;
+            color:#8575bc;
+            cursor: pointer;
+        }
+
+        #audioplayer-songlistContent {
+            width:998px;
+            height:288px;
+            top:-294px;
+            right:148px;
+            padding:2px;
+            position:absolute;
+            z-index:4;
+            text-align:center;
+            border:none;
+            border-radius:5px;
+            font:normal normal normal 14px/20px Arial, 'Microsoft YaHei', '微软雅黑';
+            color:#00CDFF;
+            display:none;
+            background-color:#2E2E2E;
+            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));
+            background-image: -moz-linear-gradient(#444444, #373738);
+            background-image: -webkit-linear-gradient(#444444, #373738);
+            background-image: linear-gradient(#444444, #373738);
+            -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        #songlistContent-close,.hoverChange {
+            margin:1px 8px 0;
+            float:right;
+            color:#9F9F9F;
+            cursor:pointer;
+        }
+        #songlistContent-close:hover,.hoverChange:hover {
+            color:#00CDFF;
+        }
+        #audioplayer-playmodeText {
+            width:66px;
+            height:18px;
+            top:-30px;
+            right:33px;
+            padding:2px;
+            position:absolute;
+            z-index:4;
+            text-align:center;
+            border:none;
+            border-radius:3px;
+            font:normal normal normal 14px/20px Arial, 'Microsoft YaHei', '微软雅黑';
+            color:#00CDFF;
+            display: none;
+            background-color:#2E2E2E;
+            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));
+            background-image: -moz-linear-gradient(#444444, #373738);
+            background-image: -webkit-linear-gradient(#444444, #373738);
+            background-image: linear-gradient(#444444, #373738);
+            -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        pre {
+            margin:0;
+            padding:0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+    <div class="box-show-out" style="width:100%; height:43px; bottom:0; left:0; right:0; margin:0 auto; position:fixed; z-index:9; background-color:#2E2E2E;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));
+    background-image: -moz-linear-gradient(#444444, #373738);
+    background-image: -webkit-linear-gradient(#444444, #373738);
+    background-image: linear-gradient(#444444, #373738);">
+        <div id="audioplayerCont" style=" margin:0 auto; width:1300px; position: relative; text-align:center;">
+            <a href="song.html" target="indexIframe"><img id="audioplayer-songimg" src="images/common/touxiang.jpg"></a>
+            <p style="top:3px; left:250px; position:absolute; z-index:5; color:#8575bc; font-size:14px;">
+                <a href="song.html" target="indexIframe" class="hover-undeline" style="margin:0 8px; color:#8575bc;">The name of the song 歌名</a>
+                -
+                <a href="singer.html" target="indexIframe" class="hover-undeline" style="margin:0 8px; color:#8575bc;">The name of the singer 歌手名</a>
+            </p>
+            <div class="audioplayer-PREV-NEXT">
+                <span id="audioplayer-PREV" class="MyIF ahead" title="上一首"></span>
+                <span id="audioplayer-NEXT" class="MyIF back" title="下一首"></span>
+            </div>
+            <audio preload="auto" controls src="audio/东京不太热.mp3"></audio>
+            <div class="audioplayer-collection" title="收藏" onclick="window.top.niftymodalsByModelName('modal-collection','');">
+                <span style="font-size:20px; line-height:42px;" class="MyIF add-collection"></span>
+            </div>
+            <div class="audioplayer-songlist" title="播放列表">
+                <span style="font-size:20px; line-height:42px;" class="MyIF menu"></span>
+            </div>
+            <div id="audioplayer-songlistContent">
+                <span style="margin:2px 28px 0; float:left;">播放列表 [ <i>666</i> ]</span>
+                <span id="songlistCollection" class="hoverChange hover-undeline" onclick="window.top.niftymodalsByModelName('modal-collection','');" style="margin:2px 18px 0 238px; float:left;"><i class="MyIF collection-music"></i> 收藏全部</span>
+                <span id="songlistClean" class="hoverChange hover-undeline" onclick="alertTips(1,'播放列表已被清空');" style="margin:2px 0; float:left;"><i class="MyIF recycle-2"></i> 清除列表</span>
+                <i id="songlistContent-close">X</i>
+                <span style="width:360px; height:18px; margin:5px 8px; float:right; overflow:hidden">The Name of the Song 歌 savubsmklc差多少空间fewewwefewng 歌名</span>
+                <div id="songlistContent" style="width:568px; height:253px; margin:28px 8px 8px; padding:0; text-align:left; font-size:13px; color:#6A6A6A; background-color:#222; border-radius:4px;  overflow-y:scroll;">
+                    <style>
+                        #songlistContent li{
+                            padding:0 8px;
+                            cursor:pointer;
+                            line-height:25px;
+                        }
+                        #songlistContent li:hover{
+                            color:#DDD;
+                            background-color:#2E2E2E;
+                        }
+                        #songlistContent li.active{
+                            color:#00CDFF;
+                            background-color:#151515;
+                        }
+                        #songlistContent i{
+                            margin-right:8px;
+                        }
+                        #songlistContent i:hover{
+                            color: #2FFF3A;
+                        }
+                    </style>
+                    <ul style="margin:0; padding:0;">
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌A The Name of the Song 歌A</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌B The Name of the Song 歌B</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌C The Name of the Song 歌C</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌D The Name of the Song 歌D</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌E The Name of the Song 歌E</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li class="active">
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌F The Name of the Song 歌F</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌G The Name of the Song 歌G</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌H The Name of the Song 歌H</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌I The Name of the Song 歌I</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌J The Name of the Song 歌J</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌K The Name of the Song 歌K</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌L The Name of the Song 歌L</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌M The Name of the Song 歌M</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌N The Name of the Song 歌N</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌O The Name of the Song 歌O</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌P The Name of the Song 歌P</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌Q The Name of the Song 歌Q</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌R The Name of the Song 歌R</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌S The Name of the Song 歌S</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌T The Name of the Song 歌T</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌U The Name of the Song 歌U</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌V The Name of the Song 歌V</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌W The Name of the Song 歌W</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌X The Name of the Song 歌X</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌Y The Name of the Song 歌Y</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+                        <li>
+                            <i class="MyIF play"></i>
+                            <span style="width:230px; height:18px; display:inline-block; overflow:hidden;">The Name of the Song 歌Z The Name of the Song 歌Z</span>
+                            <span style="margin:0 5px; float:right">00:00</span>
+                            <span style="width:108px; height:20px; margin:0 18px; float:right; overflow:hidden;">作者作者作者作者</span>
+                            <span style="float:right;"> <i class="MyIF add-collection"></i> <i class="MyIF download"></i> <i class="MyIF recycle-2"></i></span>
+                        </li>
+
+                    </ul>
+                </div>
+                <div id="" style="width:388px; height:237px; margin:-261px 8px 8px; padding:8px; float:right; text-align:left; font-size:12px; color:#6A6A6A; background-color:#222; border-radius:4px; overflow-y:scroll;">
+                <pre class="">
+[00:00.00]平凡之路 - 朴树
+[00:04.01]作词：韩寒 朴树
+[00:08.02]作曲：朴树 编曲：朴树
+
+[00:12.02]徘徊着的 在路上的
+[00:17.37]你要走吗
+[00:23.20]易碎的 骄傲着
+[00:28.75]那也曾是我的模样
+[00:34.55]沸腾着的 不安着的
+[00:40.26]你要去哪
+[00:46.00]谜一样的 沉默着的
+[00:51.75]故事你真的在听吗
+[00:56.25]我曾经跨过山和大海
+[00:59.55]也穿过人山人海
+[01:02.70]我曾经拥有着一切
+[01:05.00]转眼都飘散如烟
+[01:07.75]我曾经失落失望失掉所有方向
+[01:13.46]直到看见平凡才是唯一的答案
+[01:31.70]当你仍然
+[01:33.10]还在幻想
+[01:37.40]你的明天
+[01:43.00]她会好吗 还是更烂
+[01:49.78]对我而言是另一天
+[01:53.33]我曾经毁了我的一切
+[01:56.54]只想永远地离开
+[01:59.82]我曾经堕入无边黑暗
+[02:02.14]想挣扎无法自拔
+[02:04.79]我曾经像你像他像那野草野花
+[02:10.54]绝望着 渴望着
+[02:13.54]也哭也笑平凡着
+[03:03.38]向前走 就这么走
+[03:06.23]就算你被给过什么
+[03:09.08]向前走 就这么走
+[03:11.83]就算你被夺走什么
+[03:14.78]向前走 就这么走
+[03:17.58]就算你会错过什么
+[03:20.33]向前走 就这么走
+[03:23.13]就算你会
+[03:25.78]我曾经跨过山和大海
+[03:28.14]也穿过人山人海
+[03:30.44]我曾经拥有着一切
+[03:33.69]转眼都飘散如烟
+[03:36.24]我曾经失落失望失掉所有方向
+[03:42.04]直到看见平凡才是唯一的答案
+[03:47.69]我曾经毁了我的一切
+[03:50.84]只想永远地离开
+[03:53.39]我曾经堕入无边黑暗
+[03:56.29]想挣扎无法自拔
+[03:59.04]我曾经像你像他像那野草野花
+[04:04.79]绝望着 渴望着 也哭也笑平凡着
+[04:10.64]我曾经跨过山和大海
+[04:13.54]也穿过人山人海
+[04:16.14]我曾经问遍整个世界
+[04:19.49]从来没得到答案
+[04:22.88]我不过像你像他像那野草野花
+[04:27.64]冥冥中这是我 唯一要走的路啊
+[04:34.65]时间无言
+[04:36.15]如此这般
+[04:40.30]明天已在眼前
+[04:46.45]风吹过的 路依然远
+[04:51.55]你的故事讲到了哪
+                </pre>
+                </div>
+            </div>
+            <div id="audioplayer-playmode" title="播放模式">
+                <span style="font-size:20px; line-height:42px;" class="MyIF loop"></span>
+            </div>
+            <span id="audioplayer-playmodeText">播放模式</span>
+        </div>
+    </div>
 
 
 
-    <!-- 弹出拟态框 -->
+    <!-- 拟态框 -->
     <div class="md-container md-effect-1" id="modal-login">
         <div class="md-content">
             <h3><img src="images/icon/登录.png" style="width:35px; margin:0 8px -7px 0;"/>账户登录</h3>
@@ -223,11 +645,6 @@
                 <a href="#" style=" padding:0 0 8px 52px; display:block; border-bottom:1px solid black;">全部风格</a>
                 <table cellpadding="0" cellspacing="0" style="width:100%; margin-bottom:18px;">
                     <style>
-                        dd
-                        {
-                            margin:0;
-                            float: left;
-                        }
                         .songtype
                         {
                             margin:3px 16px;
@@ -236,22 +653,18 @@
                             color:#2E2E2E;
                             cursor:pointer;
                         }
-                        .songtype:hover
-                        {
-                            text-decoration:underline;
-                        }
                     </style>
                     <tr>
                         <td style="width:18%; text-align: center; border-right:1px solid black; border-bottom:1px solid black;">
                             <span class="MyIF earth" style="font-size:24px;"></span> 语种
                         </td>
                         <td style="border-bottom:1px solid black; padding:8px;">
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">华语</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">欧美</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">日语</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">韩语</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">粤语</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">小语种</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">华语</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">欧美</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">日语</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">韩语</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">粤语</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">小语种</dd><dd>|</dd>
                         </td>
                     </tr>
                     <tr>
@@ -259,30 +672,30 @@
                             <span class="MyIF instrument" style="font-size:24px;"></span> 风格
                         </td>
                         <td style="border-bottom:1px solid black; padding:8px;">
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">流行</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">摇滚</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">民谣</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">电子</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">舞曲</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">说唱</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">轻音乐</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">爵士</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">乡村</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">R&B/Soul</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">古典</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">民族</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">英伦</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">金属</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">朋克</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">蓝调</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">雷鬼</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">世界音乐</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">拉丁</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">另类/独立</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">New Age</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">古风</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">后摇</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">Bossa Nova</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">流行</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">摇滚</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">民谣</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">电子</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">舞曲</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">说唱</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">轻音乐</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">爵士</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">乡村</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">R&B/Soul</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">古典</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">民族</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">英伦</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">金属</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">朋克</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">蓝调</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">雷鬼</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">世界音乐</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">拉丁</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">另类/独立</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">New Age</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">古风</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">后摇</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">Bossa Nova</dd><dd>|</dd>
                         </td>
                     </tr>
                     <tr>
@@ -290,18 +703,18 @@
                             <span class="MyIF cofee" style="font-size:24px;"></span> 场景
                         </td>
                         <td style="border-bottom:1px solid black;  padding:8px;">
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">清晨</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">夜晚</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">学习</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">工作</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">午休</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">下午茶</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">地铁</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">驾车</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">运动</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">旅行</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">散步</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">酒吧</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">清晨</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">夜晚</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">学习</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">工作</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">午休</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">下午茶</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">地铁</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">驾车</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">运动</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">旅行</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">散步</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">酒吧</dd><dd>|</dd>
                         </td>
                     </tr>
                     <tr>
@@ -309,19 +722,19 @@
                             <span class="MyIF exciting" style="font-size:24px;"></span> 情感
                         </td>
                         <td style="border-bottom:1px solid black; padding:8px;">
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">怀旧</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">清新</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">浪漫</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">性感</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">伤感</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">治愈</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">放松</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">孤独</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">感动</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">兴奋</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">快乐</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">安静</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">思念</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">怀旧</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">清新</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">浪漫</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">性感</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">伤感</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">治愈</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">放松</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">孤独</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">感动</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">兴奋</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">快乐</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">安静</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">思念</dd><dd>|</dd>
                         </td>
                     </tr>
                     <tr>
@@ -329,26 +742,107 @@
                             <span class="MyIF theme" style="font-size:24px;"></span> 主题
                         </td>
                         <td style="border-bottom:1px solid black; padding:8px;">
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">影视原声</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">ACG</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">校园</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">游戏</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">70后</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">80后</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">90后</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">网络歌曲</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">KTV</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">经典</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">翻唱</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">吉他</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">钢琴</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">器乐</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">儿童</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">榜单</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype md-close">00后</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">影视原声</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">ACG</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">校园</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">游戏</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">70后</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">80后</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">90后</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">网络歌曲</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">KTV</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">经典</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">翻唱</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">吉他</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">钢琴</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">器乐</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">儿童</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">榜单</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">00后</dd><dd>|</dd>
                         </td>
                     </tr>
                 </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="md-container md-effect-1" id="modal-collection" style="width:760px;">
+        <div class="md-content">
+            <h3><img src="images/icon/音乐盒.png" style="width:35px; margin:0 8px -7px 0;"/>歌曲收藏</h3>
+            <button class="md-close close-all MyIF all-arrow"></button>
+            <div style="height:288px; overflow:auto;">
+                <div style="margin-bottom:18px; display:block; font-size:18px; font-weight:700; line-height:38px;">
+                    添加到歌单
+                    <p style="width:98px; height:35px; margin-right:180px; padding:2px 7px; float:right; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                        <i class="MyIF cubes-1" style="font-size:28px;"></i>
+                        <span style="width:58px; margin-left:3px; font:normal normal normal 14px/35px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">新建歌单</span>
+                    </p>
+                </div>
+                <div style="width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                    <img src="images/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">casccasnjlkvcnmasl</span>
+                </div>
+                <div style="width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                    <img src="images/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">casccasnjlkvcnmasl</span>
+                </div>
+                <div style="width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                    <img src="images/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">casccasnjlkvcnmasl</span>
+                </div>
+                <div style="width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                    <img src="images/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">casccasnjlkvcnmasl</span>
+                </div>
+                <div style="width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                    <img src="images/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">casccasnjlkvcnmasl</span>
+                </div>
+                <div style="width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                    <img src="images/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">casccasnjlkvcnmasl</span>
+                </div>
+                <div style="width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                    <img src="images/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">casccasnjlkvcnmasl</span>
+                </div>
+                <div style="width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                    <img src="images/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">casccasnjlkvcnmasl</span>
+                </div>
+                <div style="width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                    <img src="images/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">casccasnjlkvcnmasl</span>
+                </div>
+                <div style="width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                    <img src="images/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">casccasnjlkvcnmasl</span>
+                </div>
+                <div style="width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                    <img src="images/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">casccasnjlkvcnmasl</span>
+                </div>
+                <div style="width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                    <img src="images/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">casccasnjlkvcnmasl</span>
+                </div>
+                <div style="width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                    <img src="images/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">casccasnjlkvcnmasl</span>
+                </div>
+                <div style="width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                    <img src="images/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">casccasnjlkvcnmasl</span>
+                </div>
+                <div style="width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                    <img src="images/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">casccasnjlkvcnmasl</span>
+                </div>
+                <div style="width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block; border-radius:5px; cursor:pointer; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                    <img src="images/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; ">casccasnjlkvcnmasl</span>
+                </div>
+
             </div>
         </div>
     </div>
@@ -562,14 +1056,14 @@
                 </style>
 
                 <form action="" method="post">
-                    <p style="text-align:left">1、您认为我们网站的服务质量如何：</p>
+                    <p style="text-align:left;">1、您认为我们网站的服务质量如何：</p>
                     <input type="radio" id='verybad' name="quality"><label for='verybad' class="MyIF cry"><span> 很差</span></label>
                     <input type="radio" id='bad' name="quality"><label for='bad' class="MyIF unhappy"><span> 差</span></label>
                     <input type="radio" id='normal' name="quality"><label for='normal' class="MyIF expressionless"><span> 一般</span></label>
                     <input type="radio" id='good' name="quality"><label for='good' class="MyIF happy"><span> 好</span></label>
                     <input type="radio" id='verygood' name="quality"><label for='verygood' class="MyIF exciting"><span> 很好</span></label>
 
-                    <p style="text-align: left">2、您认为我们网站存在哪些缺点 [可多选] ：</p>
+                    <p style="margin-top:18px; text-align:left">2、您认为我们网站存在哪些缺点 [可多选] ：</p>
                     <input type="checkbox" id='1verybad' name="quality"><label for='1verybad' ><b>加速度载慢</b></label>
                     <input type="checkbox" id='1bad' name="quality"><label for='1bad' ><b>歌曲收录少</b></label>
                     <input type="checkbox" id='1normal' name="quality"><label for='1normal' ><b>曲库更新迟</b></label>
@@ -579,10 +1073,10 @@
                     <input type="checkbox" id='3verygood' name="quality"><label for='3verygood' ><b>功能不齐全</b></label>
                     <input type="checkbox" id='4verygood' name="quality"><label for='4verygood' ><b>推荐不合理</b></label>
 
-                    <p style="text-align: left">3、如还有任何问题、疑问或者不满或者改进意见请写下：</p>
+                    <p style="margin-top:18px; text-align:left">3、如还有任何问题、疑问或者不满或者改进意见请写下：</p>
                     <textarea style="width:75%; height:58px; margin:0 0 0 -30px; resize:none; font:normal normal normal 14px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:3px; padding:8px 10px; border:none; border-radius:5px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);"></textarea>
 
-                    <p style="text-align: left"> 请填写正确的邮箱，以便我们对您的问题以邮箱方式回应，谢谢您的支持！</p>
+                    <p style="margin-top:18px; text-align: left"> 请填写正确的邮箱，以便我们对您的问题以邮箱方式回应，谢谢您的支持！</p>
                     <input type="text" style="width:72%; margin:0 0 0 -30px; padding:8px 18px; border:none; border-radius:3px; font:normal normal normal 14px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:3px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
 
                 </form>
@@ -611,15 +1105,19 @@
 
     <!-- Jsc部分 -->
 
-    <!--jQuery框架-->
+    <!-- jQuery框架 -->
     <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
 
+    <!-- 音乐播放器 -->
+    <script src="js/audioplayer.js"></script>
+
+    <!-- 带搜索框的下拉列表 -->
     <script type="text/javascript" src="js/searchableSelect.js"></script>
 
-    <!--拟态框JavaScript-->
+    <!-- 拟态框 -->
     <script src="js/niftymodals.js"></script>
 
-    <!--操作消息Tips JavaScript-->
+    <!-- 操作消息Tips -->
     <script src="js/iziToast.min.js" type="text/javascript"></script>
 
 
@@ -629,23 +1127,23 @@
         /**
          * 右下角回到顶部
          */
-        $("#goToTop").click(function(){
-            $("html,body").animate({scrollTop:0},800);//点击go to top按钮时，以800的速度回到顶部，这里的800可以根据你的需求修改
-            return false;
-        });
+        function gotoTop(speed) {
+            $("html,body").animate({scrollTop:0},speed);//点击go to top按钮时，以800的速度回到顶部，这里的800可以根据你的需求修改
+        }
 
         /**
-         * iframe高度自适应
+         * iframe高度自适应 -- 并且自动回到顶部
          */
         function IFrameReSize(iframename) {
-            var pTar = document.getElementById(iframename);
-            if (pTar) {  //ff
-                if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight) {
+            var pTar = document.getElementById("indexIframe");
+            if (pTar) {
+                if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight) {   //ff
                     pTar.height = pTar.contentDocument.body.offsetHeight;
-
-                } //ie
-                else if (pTar.Document && pTar.Document.body.scrollHeight) {
+                    gotoTop(8);
+                }
+                else if (pTar.Document && pTar.Document.body.scrollHeight) {    //ie
                     pTar.height = pTar.Document.body.scrollHeight;
+                    gotoTop(8);
                 }
             }
         }
