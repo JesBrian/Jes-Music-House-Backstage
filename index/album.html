@@ -22,6 +22,7 @@
         {
             color:#42d4ff;
         }
+        .hover-undeline:hover {  text-decoration:underline;  }
 
         .box-show-out
         {
@@ -62,7 +63,7 @@
             background-color: #2e2e2e;
             font-size:13px;
             border:5px groove #222222;
-            border-radius:2px;
+            border-radius:5px;
         }
         caption
         {
@@ -148,29 +149,35 @@
 
     <div class="box-show-out2" style="width:900px; margin-left:auto; margin-right:115px; margin-top:25px; padding-bottom:80px;">
 
-        <div style="height:auto; padding:68px 38px 28px 58px; position:relative; float:left;">
+        <!-- 歌单基本信息 -->
+        <div style="height:auto; padding:68px 38px 28px 58px; position:relative; float:left; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#BDBDBD; ">
             <div style="width:180px; height:155px; float:left; background:url(images/common/disc.png); background-size:100% 100%;">
                 <img src="images/common/touxiang.jpg" style="width:131px; height:131px; margin:12px; float:left;">
             </div>
-
             <div style="width:75%; float:right; position:relative;">
-                <h3>歌单名歌单名歌单名歌单名歌单名</h3>
-
-                <img src="images/common/touxiang.jpg" style="width:28px; height:28px; position:absolute; border:none; border-radius:4px;">
+                <h3 style="margin:-28px 0 18px; font-size:28px; color:#FFF;">歌单名歌单名歌单名歌单名歌单名</h3>
+                <img src="images/common/touxiang.jpg" style="width:28px; height:28px; left:18px; position:absolute; border:none; border-radius:4px;">
                 <p style="height:28px; margin:0 0 0 58px; line-height:30px; display:inline-block;">
-                    <span>用户名用户名用户名</span>
-                    <span style="margin:-28px 0 0 0;">2017-07-15</span> 创建
+                    <a href="user.html" class="hover-undeline" style="color:#00CDFF">用户名用户名用户名</a><span style="margin:0 5px 0 18px;">2017-07-15</span>创建
                 </p>
-                <dl>
-                    <dt>标签：</dt>
-                    <dd style="margin:0 18px 0 8px;">666</dd><dd style="margin:0 18px 0 8px;">888</dd><dd style="margin:0 18px 0 8px;">999</dd>
-                </dl><br/>
-                <dl>
+                <dl style="margin:18px;">
+                    <dt style="font-size:14px; color:#FFF;">标签：</dt>
+                    <dd style="margin:8px 8px 8px 50px; padding:3.5px 18px 3.5px 35px; position:relative; border-radius:4px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                        <a href="popalbum.html" class="hover-undeline" style="color:#00CDFF;"><img src="images/common/tag-1.png" style="width:38px; top:-8px; left:-12px; position:absolute;">666</a>
+                    </dd>
+                    <dd style="margin:8px 8px 8px 50px; padding:3.5px 18px 3.5px 35px; position:relative; border-radius:4px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                        <a href="popalbum.html" class="hover-undeline" style="color:#00CDFF;"><img src="images/common/tag-2.png" style="width:38px; top:-8px; left:-12px; position:absolute;">888</a>
+                    </dd>
+                    <dd style="margin:8px 8px 8px 50px; padding:3.5px 18px 3.5px 35px; position:relative; border-radius:4px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                        <a href="popalbum.html" class="hover-undeline" style="color:#00CDFF;"><img src="images/common/tag-3.png" style="width:38px; top:-8px; left:-12px; position:absolute;">999</a>
+                    </dd>
+                </dl>
+                <br/>
+                <dl style="margin:18px;">
                     <dt>简介：</dt>
                     <dd>cftvghbj额突然反应规矩开门咯额的人发帖关于i健康摸老婆；1岩体基坑买咯；推荐科摩罗批复同意规矩吗，开车v让他发给你就米堪称v他不会你家门口她与i捐款门，ouhnjm恶心上大学吃软饭v塘沽海能加密卡vcftgyuhnjmik</dd>
                 </dl>
             </div>
-
         </div>
 
         <div style="width:88%; margin:0 auto;">

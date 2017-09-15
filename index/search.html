@@ -127,9 +127,9 @@
     </style>
     <!-- 伪导航栏 -->
     <div id="navbar" style="top:222px; left:25px; position:absolute; text-align:center; line-height:50px;">
-        <a id="song" class="active" href="function/searchSong.html">单曲</a>
-        <a id="album" href="function/searchAlbum.html">歌单</a>
-        <a id="singer"  href="function/searchSinger.html">歌手</a>
+        <a id="song" class="active" href="function/searchSong.html" target="function">单曲</a>
+        <a id="album" href="function/searchAlbum.html" target="function">歌单</a>
+        <a id="singer"  href="function/searchSinger.html" target="function">歌手</a>
     </div>
 
 
@@ -310,6 +310,7 @@
         </section>
 
         <!-- 功能页面 -->
+        <iframe name="function" id="function" style="width:88%; margin:20px auto; border:1px solid black;" src="function/searchSong.html" onload="IFrameReSize();"></iframe>
 
     </div>
 
@@ -319,7 +320,6 @@
 
     <!--jQuery框架-->
     <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
-
 
 </body>
 </html>

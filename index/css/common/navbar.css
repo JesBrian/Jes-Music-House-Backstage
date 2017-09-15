@@ -1,7 +1,9 @@
 /* 顶部导航栏 */
     /*总体布局*/
-#navbar-index {  width:100%;  position:fixed;  top:-20px;  left:-3px;  z-index:999;  }
-#navbar-content-index {  width:1350px;  height:65px;  margin:0 auto;  position:static;  background-image:-webkit-linear-gradient(#3C3C3C, #303030, #232323);  background-image:-moz-linear-gradient(#3C3C3C,#303030,#232323);  background-image:linear-gradient(#3C3C3C,#303030,#232323);  }
+#navbar-index {  width:102%;
+    height:80px;
+    position:fixed;  top:-20px;  left:-3px;  z-index:999;  background-image:-webkit-linear-gradient(#3C3C3C, #303030, #232323);  background-image:-moz-linear-gradient(#3C3C3C,#303030,#232323);  background-image:linear-gradient(#3C3C3C,#303030,#232323);  }
+#navbar-content-index {  width:1350px;  height:65px;  margin:0 auto;  position:static;  }
 
     /*控制MH图标的部分*/
 #logo {  float:left;  margin:8px 20px 0 15px;  }

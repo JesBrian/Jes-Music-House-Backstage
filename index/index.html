@@ -9,22 +9,16 @@
 
     <!-- 自用字体图标 -->
     <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
-
     <!-- 顶部导航栏 -->
     <link href="css/common/navbar.css" rel="stylesheet"/>
-
     <!-- 音乐播放器 -->
     <link rel="stylesheet" href="css/common/audioplayer.css"/>
-
     <!-- 拟态框 -->
     <link rel="stylesheet" type="text/css" href="css/common/niftymodals.css"/>
-
     <!-- 带搜索框的下拉列表 -->
     <link href="css/common/searchableSelect.css" rel="stylesheet" type="text/css">
-
     <!-- 消息Tips -->
     <link rel="stylesheet" href="css/common/iziToast.min.css">
-
     <!-- 滚动条 -->
     <link href="css/common/scrollbar.css" rel="stylesheet"/>
 
@@ -51,8 +45,8 @@
 
 <body>
     <!--顶部导航栏 [包括Logo、搜索框、导航菜单]-->
-    <nav id="navbar-index" >
-        <div id="navbar-content-index" class="box-show-out">
+    <nav id="navbar-index" class="box-show-out">
+        <div id="navbar-content-index">
             <!-- MH-Logo -->
             <div id="logo">
                 <a href="index.html"><img src="images/common/MH-Logo.png"/></a>
@@ -81,7 +75,7 @@
     <!--主体内容 [各种不同功能]-->
     <div style="width:100%">
         <div style="width:1350px; margin:0 auto;">
-            <div class="box-show-out" style="width:1200px; padding:120px 0 40px 0; margin:0 auto; background: url(images/index/index-bg.jpg); background-size:100% auto; position:relative;">
+            <div class="box-show-out" style="width:1200px; padding:88px 0 40px 0; margin:0 auto; background: url(images/index/index-bg.jpg); background-size:100% auto; position:relative;">
                 <iframe src="main.html" name="indexIframe" id="indexIframe" scrolling="no" frameborder="0" height="100%" width="100%" onload='IFrameReSize("indexIframe");'></iframe>
             </div>
         </div>
@@ -659,12 +653,12 @@
                             <span class="MyIF earth" style="font-size:24px;"></span> 语种
                         </td>
                         <td style="border-bottom:1px solid black; padding:8px;">
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">华语</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">欧美</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">日语</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">韩语</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">粤语</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">小语种</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">华语</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">欧美</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">日语</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">韩语</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">粤语</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">小语种</dd><dd>|</dd>
                         </td>
                     </tr>
                     <tr>
@@ -672,30 +666,30 @@
                             <span class="MyIF instrument" style="font-size:24px;"></span> 风格
                         </td>
                         <td style="border-bottom:1px solid black; padding:8px;">
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">流行</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">摇滚</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">民谣</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">电子</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">舞曲</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">说唱</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">轻音乐</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">爵士</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">乡村</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">R&B/Soul</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">古典</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">民族</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">英伦</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">金属</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">朋克</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">蓝调</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">雷鬼</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">世界音乐</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">拉丁</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">另类/独立</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">New Age</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">古风</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">后摇</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">Bossa Nova</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">流行</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">摇滚</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">民谣</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">电子</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">舞曲</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">说唱</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">轻音乐</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">爵士</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">乡村</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">R&B/Soul</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">古典</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">民族</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">英伦</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">金属</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">朋克</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">蓝调</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">雷鬼</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">世界音乐</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">拉丁</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">另类/独立</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">New Age</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">古风</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">后摇</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">Bossa Nova</dd><dd>|</dd>
                         </td>
                     </tr>
                     <tr>
@@ -703,18 +697,18 @@
                             <span class="MyIF cofee" style="font-size:24px;"></span> 场景
                         </td>
                         <td style="border-bottom:1px solid black;  padding:8px;">
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">清晨</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">夜晚</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">学习</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">工作</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">午休</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">下午茶</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">地铁</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">驾车</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">运动</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">旅行</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">散步</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">酒吧</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">清晨</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">夜晚</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">学习</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">工作</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">午休</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">下午茶</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">地铁</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">驾车</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">运动</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">旅行</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">散步</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">酒吧</dd><dd>|</dd>
                         </td>
                     </tr>
                     <tr>
@@ -722,19 +716,19 @@
                             <span class="MyIF exciting" style="font-size:24px;"></span> 情感
                         </td>
                         <td style="border-bottom:1px solid black; padding:8px;">
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">怀旧</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">清新</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">浪漫</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">性感</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">伤感</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">治愈</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">放松</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">孤独</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">感动</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">兴奋</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">快乐</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">安静</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">思念</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">怀旧</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">清新</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">浪漫</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">性感</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">伤感</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">治愈</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">放松</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">孤独</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">感动</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">兴奋</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">快乐</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">安静</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">思念</dd><dd>|</dd>
                         </td>
                     </tr>
                     <tr>
@@ -742,23 +736,23 @@
                             <span class="MyIF theme" style="font-size:24px;"></span> 主题
                         </td>
                         <td style="border-bottom:1px solid black; padding:8px;">
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">影视原声</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">ACG</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">校园</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">游戏</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">70后</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">80后</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">90后</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">网络歌曲</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">KTV</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">经典</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">翻唱</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">吉他</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">钢琴</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">器乐</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">儿童</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">榜单</dd><dd>|</dd>
-                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close">00后</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">影视原声</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">ACG</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">校园</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">游戏</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">70后</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">80后</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">90后</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">网络歌曲</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">KTV</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">经典</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">翻唱</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">吉他</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">钢琴</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">器乐</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">儿童</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">榜单</dd><dd>|</dd>
+                            <dd href="popalbum.html" target="indexIframe" class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">00后</dd><dd>|</dd>
                         </td>
                     </tr>
                 </table>
@@ -1125,7 +1119,7 @@
     <script type="text/javascript">
 
         /**
-         * 右下角回到顶部
+         * 回到顶部
          */
         function gotoTop(speed) {
             $("html,body").animate({scrollTop:0},speed);//点击go to top按钮时，以800的速度回到顶部，这里的800可以根据你的需求修改
@@ -1146,6 +1140,28 @@
                     gotoTop(8);
                 }
             }
+        }
+
+        /**
+         * iframe高度自适应 -- 但不会回到顶部
+         */
+        function IFrameReSize1() {
+            var pTar = document.getElementById("indexIframe");
+            if (pTar) {
+                if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight) {   //ff
+                    pTar.height = pTar.contentDocument.body.offsetHeight;
+                }
+                else if (pTar.Document && pTar.Document.body.scrollHeight) {    //ie
+                    pTar.height = pTar.Document.body.scrollHeight;
+                }
+            }
+        }
+
+        /**
+         * 改变歌单分类名称
+         */
+        function changeSongTypeName(ongTypeObj) {
+            $(window.frames["indexIframe"].document).find("#songTypeName").html($(ongTypeObj).html());
         }
 
         /**
@@ -1233,6 +1249,8 @@
             $('#songlist').removeClass('activeThis');
             $('#download').removeClass('activeThis');
         });
+
+
     </script>
 
 </body>

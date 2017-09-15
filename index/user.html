@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title> ♪ JesBrian - MH ♪ </title>
 
-
     <!-- CSS部分 -->
 
     <!-- 自用字体图标 -->
@@ -12,37 +11,17 @@
 
     <!-- 临时CSS -->
     <style type="text/css">
-        body
-        {
-            background-color:transparent;
-        }
-        li
-        {
-            list-style-type:none;
-        }
-        a,a:hover,a:focus,a:active
-        {
-            text-decoration:none;
-        }
-        .MyIF
-        {
-            color:#42d4ff;
-        }
+        body {  color:white; }
+        li,ul {  list-style-type:none;  }
+        a { text-decoration:none;  }
+        p,h1,h2,h3,h4,h5,h6 {  margin:0;  padding:0;  }
+        dd {  margin:0;  float: left;  }
 
-        .box-show-out
-        {
-            -webkit-box-shadow:0 0 5px 5px #49DFFF;
-            -moz-box-shadow:0 0 5px 5px #49DFFF;
-            box-shadow:0 0 5px 5px #49DFFF;
-        }
-        .box-show-out2
-        {
-            border-radius:15px;
-            background-color:#2E2E2E;
-            -webkit-box-shadow:0 0 5px 5px #B29AFF;
-            -moz-box-shadow:0 0 5px 5px #B29AFF;
-            box-shadow:0 0 5px 5px #B29AFF;
-        }
+        .hover-undeline:hover {  text-decoration:underline;  }
+
+        .MyIF {  color:#42d4ff;  }
+        .box-show-out {  -webkit-box-shadow:0 0 5px 5px #49DFFF;  -moz-box-shadow:0 0 5px 5px #49DFFF;  box-shadow:0 0 5px 5px #49DFFF;  }
+        .box-show-out2 {  width:1125px;  border-radius:15px;  background-color:#2E2E2E;  -webkit-box-shadow:0 0 5px 5px #B29AFF;  -moz-box-shadow:0 0 5px 5px #B29AFF;  box-shadow:0 0 5px 5px #B29AFF;  }
 
 
         /* 控制渐变效果 */
@@ -66,7 +45,6 @@
 
 </head>
 <body>
-
 
     <style>
         nav>a>div
@@ -99,9 +77,9 @@
         }
     </style>
     <!-- 面包屑导航 -->
-    <nav style="top:0; left:130px; position: absolute;">
+    <nav style="position: absolute; top:0; left:130px;">
         <a href="main.html" style="position: relative; z-index:99;"><div class="MyIF home"> 主页</div></a>
-        <a href="#" style="position: absolute; top:0; left:108px; z-index:98;"><div class="MyIF administrators-1"> 个人</div></a>
+        <a href="#" style="position: absolute; top:0; left:108px; z-index:98;"><div class="MyIF user"> 用户</div></a>
     </nav>
 
     <style>
@@ -134,18 +112,16 @@
     </style>
     <!-- 伪导航栏 -->
     <div id="navbar" style="position: absolute; top:222px; left:25px; text-align:center; line-height:50px;">
-        <a href="function/accountInfo.html" target="function" id="account" class="active">账户信息</a>
-        <a href="function/accountRecommend.html" target="function" id="per">个性推荐</a>
-        <a href="function/accountRank.html" target="function" id="rank" >听歌排行</a>
-        <a href="function/accountAlbum.html" target="function" id="album" >我的歌单</a>
+        <a href="function/userInfo.html" target="function" id="account" class="active">用户信息</a>
+        <a href="function/userAlbum.html" target="function" id="album" >他的歌单</a>
     </div>
 
     <!-- 功能页面 -->
     <div class="box-show-out2" style="width:900px; height:800px; margin:25px 115px 0 auto;">
-        <iframe name="function" style="width: 98%; height: 97%; padding:20px 12px; border: none;" src="function/accountInfo.html"></iframe>
+        <iframe name="function" style="width: 98%; height: 97%; padding:20px 12px; border: none;" src="function/userInfo.html"></iframe>
     </div>
 
-    <div style="height: 70px;"></div>
+    <div style="height:70px;"></div>
 
     <!-- Jsc部分 -->
 
@@ -178,6 +154,12 @@
             $('#album').removeClass('active');
         });
     </script>
+
+    <!-- Jsc部分 -->
+
+    <!--jQuery框架-->
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+
 
 </body>
 </html>
