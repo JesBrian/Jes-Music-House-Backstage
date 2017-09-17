@@ -123,7 +123,7 @@
                 <h3 style="margin:-28px 0 18px; font-size:23px; color:#FFF;">歌名歌名歌名歌名歌名歌名歌名歌名歌名歌名歌名歌名歌名</h3>
                 <span style="margin:0 12px 0 28px; font-size:14px; color:#FFF;">歌手：</span><a href="singer.html" class="hover-undeline" style="color:#00CDFF;">歌手名歌手名歌手名歌手名歌手名歌手名</a>
                 <div style="width:76%; height:330px; margin:8px 0;  padding:48px 38px 68px 108px;  background:url(images/common/music-bg.jpg) no-repeat; background-size:100% 100%;">
-                    <pre class="" style="width:95%; height:100%; overflow-y:scroll; color:#888;">
+                    <pre id="lyricContent" class="" style="width:95%; height:100%; overflow-y:scroll; color:#888;">
 [00:00.00]平凡之路 - 朴树
 [00:04.01]作词：韩寒 朴树
 [00:08.02]作曲：朴树 编曲：朴树
@@ -205,23 +205,36 @@
 
 
             <style>
-                .reply:hover {
+                .replyButton:hover {
                     color:#70ff92;
                 }
-
+                .replyList{
+                    width:95%;
+                    margin:0 auto 18px;
+                    padding:18px;
+                    border-top:0.5px solid #848484;
+                    border-bottom:0.5px solid #2E2E2E;
+                }
+                .replyList:hover{
+                    border:0.5px solid;
+                    border-image:-webkit-linear-gradient(left, #dd7e90, #F7B889, #ebe86c, #60E099, #26c7ff, #3972ff, #B373F7)25; /* Safari 5.1 - 6.0 */
+                    border-image:-o-linear-gradient(right, #dd7e90, #F7B889, #ebe86c, #60E099, #26c7ff, #3972ff, #B373F7)25; /* Opera 11.1 - 12.0 */
+                    border-image:-moz-linear-gradient(right, #dd7e90, #F7B889, #ebe86c, #60E099, #26c7ff, #3972ff, #B373F7)25; /* Firefox 3.6 - 15 */
+                    border-image:linear-gradient(to right, #dd7e90, #F7B889, #ebe86c, #60E099, #26c7ff, #3972ff, #B373F7)25; /* 标准的语法 */
+                }
             </style>
 
 
             <!-- 精彩评论部分 -->
             <div style="font-size:13px; color:#D6D6D6;">
                 <h4 style="margin:38px 28px 3px; font-size:17px; color:#70FF92;">精彩评论</h4>
-                <div style="width:95%; padding:18px; border-top:0.5px solid #848484;">
+                <div class="replyList">
                     <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
                     <a href="user.html" style="color:#00BFE8;">User Name</a>
                     <span>： 我是邪恶吃的旅途法规及目录哦怕卡恶臭的效率饭通提供一边和途法规及目录哦怕卡恶臭的效率饭通过i健康美丽破而产生咸蛋超人需方提供一边和你见面的人想法v塘沽海那几款买了哦怕</span>
                     <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
                 </div>
-                <div style="width:95%; padding:18px; border-top:0.5px solid #848484;">
+                <div class="replyList">
                     <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
                     <a href="user.html" style="color:#00BFE8;">User Name</a>
                     <span>： 666</span>
@@ -231,13 +244,13 @@
                     </div>
                     <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
                 </div>
-                <div style="width:95%; padding:18px; border-top:0.5px solid #848484;">
+                <div class="replyList">
                     <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
                     <a href="user.html" style="color:#00BFE8;">User Name</a>
                     <span>： hscnjklsackl;sam;cjsagchsacjksavcnlksajvmlksajmvlksamvsalk;vmbvska</span>
                     <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
                 </div>
-                <div style="width:95%; padding:18px; border-top:0.5px solid #848484;">
+                <div class="replyList">
                     <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
                     <a href="user.html" style="color:#00BFE8;">User Name</a>
                     <span>： cshncuisa才能杀就开车v你没v擦拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就没v和vNSA尽快充满啊焦虑层面来说卡VMLCHNSAljnclsanjmv吃撒KJCNHKJSA才能杀骷髅你</span>
@@ -248,25 +261,25 @@
             <!-- 最新评论部分 -->
             <div style="font-size:13px; color:#D6D6D6;">
                 <h4 style="margin:38px 28px 3px; font-size:17px; color:#70FF92;">最新评论</h4>
-                <div style="width:95%; padding:18px; border-top:0.5px solid #848484;">
+                <div class="replyList">
                     <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
                     <a href="user.html" style="color:#00BFE8;">User Name</a>
                     <span>： 我是邪恶吃的旅途法规及目录哦怕卡恶臭的效率饭通提供一边和途法规及目录哦怕卡恶臭的效率饭通过i健康美丽破而产生咸蛋超人需方提供一边和你见面的人想法v塘沽海那几款买了哦怕</span>
                     <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
                 </div>
-                <div style="width:95%; padding:18px; border-top:0.5px solid #848484;">
+                <div class="replyList">
                     <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
                     <a href="user.html" style="color:#00BFE8;">User Name</a>：
                     <span>666</span>
                     <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
                 </div>
-                <div style="width:95%; padding:18px; border-top:0.5px solid #848484;">
+                <div class="replyList">
                     <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
                     <a href="user.html" style="color:#00BFE8;">User Name</a>
                     <span>： hscnjklsackl;sam;cjsagchsacjksavcnlksajvmlksajmvlksamvsalk;vmbvska</span>
                     <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
                 </div>
-                <div style="width:95%; padding:18px; border-top:0.5px solid #848484;">
+                <div class="replyList">
                     <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
                     <a href="user.html" style="color:#00BFE8;">User Name</a>
                     <span>： cshncuisa才能杀就开车v你没v擦拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就没v和vNSA尽快充满啊焦虑层面来说卡VMLCHNSAljnclsanjmv吃撒KJCNHKJSA才能杀骷髅你</span>
@@ -276,19 +289,19 @@
                     </div>
                     <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
                 </div>
-                <div style="width:95%; padding:18px; border-top:0.5px solid #848484;">
+                <div class="replyList">
                     <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
                     <a href="user.html" style="color:#00BFE8;">User Name</a>
                     <span>： 和你见面的csav超市上班呢急啊看xaxma从今年赛哦</span>
                     <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
                 </div>
-                <div style="width:95%; padding:18px; border-top:0.5px solid #848484;">
+                <div class="replyList">
                     <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
                     <a href="user.html" style="color:#00BFE8;">User Name</a>
                     <span>： 我是邪恶吃的旅途<img class="emoji_icon" src="plugins/emoji/icon/25.png">法规及目录哦怕卡恶臭的效率饭通提供一边和途法规及目录哦怕卡恶臭的效率饭通过i健康美丽破而产生咸蛋超人需方提供一边和你见面的人想法v塘沽海那几款买了哦怕</span>
                     <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
                 </div>
-                <div style="width:95%; padding:18px; border-top:0.5px solid #848484;">
+                <div class="replyList">
                     <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
                     <a href="user.html" style="color:#00BFE8;">User Name</a>
                     <span>： 666</span>
@@ -298,19 +311,19 @@
                     </div>
                     <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
                 </div>
-                <div style="width:95%; padding:18px; border-top:0.5px solid #848484;">
+                <div class="replyList">
                     <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
                     <a href="user.html" style="color:#00BFE8;">User Name</a>
                     <span>： hscnjklsackl;sam;cjsagchsacjksavcnlksajvmlksajmvlksamvsalk;vmbvska</span>
                     <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
                 </div>
-                <div style="width:95%; padding:18px; border-top:0.5px solid #848484;">
+                <div class="replyList">
                     <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
                     <a href="user.html" style="color:#00BFE8;">User Name</a>
                     <span>： cshncuisa才能杀就开车v你没v擦拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就没v和vNSA尽快充满啊焦虑层面来说卡VMLCHNSAljnclsanjmv吃撒KJCNHKJSA才能杀骷髅你</span>
                     <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
                 </div>
-                <div style="width:95%; padding:18px; border-top:0.5px solid #848484;">
+                <div class="replyList">
                     <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
                     <a href="user.html" style="color:#00BFE8;">User Name</a>
                     <span>： 和你见面的csav超市上班呢急啊看xaxma从今年赛哦</span>
@@ -391,8 +404,6 @@
     <!--外挂插件-->
     <link rel="stylesheet" href="plugins/emoji/jquery.emoji.css"/>
 
-    <script src="plugins/emoji/jquery.mousewheel-3.0.6.min.js"></script>
-    <script src="plugins/emoji/jquery.mCustomScrollbar.min.js"></script>
     <script src="plugins/emoji/jquery.emoji.min.js"></script>
 
 
@@ -439,8 +450,6 @@
             window.top.IFrameReSize1();
         });
 
-
-
         $("i.emojiButton").click(function () {
             $("#replyTest").emoji({
                 button:".emojiButton",
@@ -464,6 +473,22 @@
 
     </script>
 
+
+    <!--plugins滚动条插件-->
+    <link rel="stylesheet" href="plugins/scrollbar/jquery.mCustomScrollbar.css">
+    <script src="plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        (function($){
+            $(window).on("load",function(){
+
+                $.mCustomScrollbar.defaults.scrollButtons.enable=false; //enable scrolling buttons by default
+                $.mCustomScrollbar.defaults.axis="y"; //enable 2 axis scrollbars by default
+
+                $("#lyricContent").mCustomScrollbar({theme:"minimal"});
+
+            });
+        })(jQuery);
+    </script>
 
 
 

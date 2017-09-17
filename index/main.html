@@ -16,20 +16,14 @@
 
     <!-- 临时CSS -->
     <style type="text/css">
-        body
-        {
-            background-color:transparent;
-        }
+        body {  color:white; }
+        li,ul {  list-style-type:none;  }
         a { text-decoration:none;  }
-        p
-        {
-            margin:0;
-            padding:0;
-        }
-        li
-        {
-            list-style-type:none;
-        }
+        p,h1,h2,h3,h4,h5,h6 {  margin:0;  padding:0;  }
+        dd {  margin:0;  float: left;  }
+
+        .hover-undeline:hover {  text-decoration:underline;  }
+
         .MyIF
         {
             color:#42d4ff;
@@ -214,7 +208,7 @@
                 <h3 class="end-boder" style="margin:auto 15px auto 58px; border-bottom:5px groove #54ffa3; box-shadow:0 18px 20px #161616; font-size:23px; color: #1b86ff; line-height:40px;">
                     热门推荐
                 </h3>
-                <a href="#" style="margin:-32px 25px 0 0; float:right; color: white; font-family: 新宋体">更多 <span class="MyIF double-arrow-right"></span></a>
+                <a href="popalbum.html" style="margin:-32px 25px 0 0; float:right; color: white; font-family: 新宋体">更多 <span class="MyIF double-arrow-right"></span></a>
             </div>
 
             <div id="wrapper">
@@ -322,10 +316,10 @@
             tbody td{
                 height: 30px;
                 color: #8A8A8A;
-                padding-left:12px;
+                padding-left:8px;
             }
             tbody td:first-child{
-                width:20px;
+                width:12px;
             }
             tbody td:last-child{
                 width:25px;
@@ -354,12 +348,12 @@
             @keyframes fontmove
             {
                 0%   {top:0; left:0;}
-                100% {top:0; left:10px;}
+                100% {top:0; left:6px;}
             }
             @-webkit-keyframes fontmove /* Safari and Chrome */
             {
                 0%   {top:0; left:0;}
-                100% {top:0; left:10px;}
+                100% {top:0; left:6px;}
             }
         </style>
         <div class="box-show-out2"  style="width:285px; height:440px; margin-top:80px; float:left">
@@ -368,7 +362,7 @@
                 <h3 class="end-boder" style="margin:auto 15px auto 58px; border-bottom:5px groove #54ffa3; box-shadow:0 18px 20px #161616; font-size:23px; color: #1b86ff; line-height:40px;">
                     排行榜
                 </h3>
-                <a href="#" style="margin:-32px 25px 0 0; float:right; color: white; font-family: 新宋体">更多 <span class="MyIF double-arrow-right"></span></a>
+                <a href="songlist.html" style="margin:-32px 25px 0 0; float:right; color: white; font-family: 新宋体">更多 <span class="MyIF double-arrow-right"></span></a>
             </div>
 
             <table class="table" cellpadding="0" cellspacing="0" style="width:90%; height:80%; margin:25px auto;">
@@ -376,52 +370,92 @@
                 <tr>
                     <td><span class="MyIF double-arrow-right"></span></td>
                     <td>01 Bangalore</td>
-                    <td><i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i></td>
+                    <td style="position:relative">
+                        <p style="top:3px; right:0; position:absolute;">
+                            <i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i><i class="MyIF download" style="margin:0 2px" title="下载"></i>
+                        </p>
+                    </td>
                 </tr>
                 <tr>
                     <td><span class="MyIF double-arrow-right"></span></td>
                     <td>02 Mumbai</td>
-                    <td><i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i></td>
+                    <td style="position:relative">
+                        <p style="top:3px; right:0; position:absolute;">
+                            <i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i><i class="MyIF download" style="margin:0 2px" title="下载"></i>
+                        </p>
+                    </td>
                 </tr>
                 <tr>
                     <td><span class="MyIF double-arrow-right"></span></td>
                     <td>03 Pune</td>
-                    <td><i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i></td>
+                    <td style="position:relative">
+                        <p style="top:3px; right:0; position:absolute;">
+                            <i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i><i class="MyIF download" style="margin:0 2px" title="下载"></i>
+                        </p>
+                    </td>
                 </tr>
                 <tr>
                     <td><span class="MyIF double-arrow-right"></span></td>
                     <td>04 Bangalore</td>
-                    <td><i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i></td>
+                    <td style="position:relative">
+                        <p style="top:3px; right:0; position:absolute;">
+                            <i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i><i class="MyIF download" style="margin:0 2px" title="下载"></i>
+                        </p>
+                    </td>
                 </tr>
                 <tr>
                     <td><span class="MyIF double-arrow-right"></span></td>
                     <td>05 Mumbai</td>
-                    <td><i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i></td>
+                    <td style="position:relative">
+                        <p style="top:3px; right:0; position:absolute;">
+                            <i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i><i class="MyIF download" style="margin:0 2px" title="下载"></i>
+                        </p>
+                    </td>
                 </tr>
                 <tr>
                     <td><span class="MyIF double-arrow-right"></span></td>
                     <td>06 Pune</td>
-                    <td><i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i></td>
+                    <td style="position:relative">
+                        <p style="top:3px; right:0; position:absolute;">
+                            <i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i><i class="MyIF download" style="margin:0 2px" title="下载"></i>
+                        </p>
+                    </td>
                 </tr>
                 <tr>
                     <td><span class="MyIF double-arrow-right"></span></td>
                     <td>07 Bangalore</td>
-                    <td><i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i></td>
+                    <td style="position:relative">
+                        <p style="top:3px; right:0; position:absolute;">
+                            <i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i><i class="MyIF download" style="margin:0 2px" title="下载"></i>
+                        </p>
+                    </td>
                 </tr>
                 <tr>
                     <td><span class="MyIF double-arrow-right"></span></td>
                     <td>08 Mumbai</td>
-                    <td><i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i></td>
+                    <td style="position:relative">
+                        <p style="top:3px; right:0; position:absolute;">
+                            <i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i><i class="MyIF download" style="margin:0 2px" title="下载"></i>
+                        </p>
+                    </td>
                 </tr>
                 <tr>
                     <td><span class="MyIF double-arrow-right"></span></td>
                     <td>09 Pune</td>
-                    <td><i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i></td>
+                    <td style="position:relative">
+                        <p style="top:3px; right:0; position:absolute;">
+                            <i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i><i class="MyIF download" style="margin:0 2px" title="下载"></i>
+                        </p>
+                    </td>
                 </tr>
                 <tr>
                     <td><span class="MyIF double-arrow-right"></span></td>
                     <td>10 Bangalore</td>
-                    <td><i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i></td>
+                    <td style="position:relative">
+                        <p style="top:3px; right:0; position:absolute;">
+                            <i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i><i class="MyIF download" style="margin:0 2px" title="下载"></i>
+                        </p>
+                    </td>
                 </tr>
                 </tbody>
             </table>
@@ -445,7 +479,7 @@
             <h3 class="end-boder" style="margin:auto 15px auto 58px; border-bottom:5px groove #54ffa3; box-shadow:0 18px 20px #161616; font-size:23px; color: #1b86ff; line-height:40px;">
                 新碟上架
             </h3>
-            <a href="#" style="margin:-32px 25px 0 0; float:right; color: white; font-family:新宋体">更多 <span class="MyIF double-arrow-right"></span></a>
+            <a href="newdisc.html" style="margin:-32px 25px 0 0; float:right; color: white; font-family:新宋体">更多 <span class="MyIF double-arrow-right"></span></a>
         </div>
 
         <span id="left" class="MyIF num-arrow-left" style="position: absolute; top: 140px; left:10px;"></span>

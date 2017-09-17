@@ -1,0 +1,59 @@
+
+    <link rel="stylesheet" href="../plugins/uploadAvatar/style.css" type="text/css"/>
+
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+
+    <script type="text/javascript" src="../plugins/uploadAvatar/cropbox.js"></script>
+
+
+    <div id="uploadAvatarContainer">
+        <div class="imageBox">
+            <div class="thumbBox"></div>
+            <div class="spinner" style="display: none">Loading...</div>
+        </div>
+        <div class="action">
+            <!-- <input type="file" id="file" style=" width: 200px">-->
+            <div class="new-contentarea tc"><a href="javascript:void(0)" class="upload-img">
+                <label for="upload-file">上传图像</label>
+            </a>
+                <input type="file" class="" name="upload-file" id="upload-file"/>
+            </div>
+            <input type="button" id="btnCrop" class="Btnsty_peyton" value="预览">
+            <input type="button" id="btnZoomIn" class="Btnsty_peyton" value="十">
+            <input type="button" id="btnZoomOut" class="Btnsty_peyton" value="一">
+        </div>
+        <div class="cropped"></div>
+    </div>
+
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            var options =
+                {
+                    thumbBox: '.thumbBox',
+                    spinner: '.spinner',
+                    imgSrc: 'images/avatar.png'
+                };
+            var cropper = $('.imageBox').cropbox(options);
+            $('#upload-file').on('change', function () {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    options.imgSrc = e.target.result;
+                    cropper = $('.imageBox').cropbox(options);
+                };
+                reader.readAsDataURL(this.files[0]);
+                this.files = [];
+            });
+            $('#btnCrop').on('click', function () {
+                var img = cropper.getDataURL();
+                $('.cropped').html('');
+                $('.cropped').append('<img src="' + img + '" align="absmiddle" style="width:128px; margin-top:28px; border-radius:5px; box-shadow:0 0 12px #7E7E7E;"><p>预览效果</p><button>确认修改</button>');
+            });
+            $('#btnZoomIn').on('click', function () {
+                cropper.zoomIn();
+            });
+            $('#btnZoomOut').on('click', function () {
+                cropper.zoomOut();
+            })
+        });
+    </script>
