@@ -65,29 +65,80 @@
     height:32px;
     margin-right:25px;
     border:none;
-    border-radius:3px;
-    background:url(../../images/common/button-normal.png);
-    background-size:100% 100%;
     box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.6);
     color:#5A5A5A;
     line-height:35px;
     font-weight:600;
     font-family:宋体;
 }
+
+
 .close-all {
-    top:6px;
-    right:6px;
+    width: 26px;
+    height: 25px;
+    top:0;
+    right:0;
+    color: #AEAEAE;
+    font-weight: bold;
+    line-height:1.6em;
     position: absolute;
-    width:30px;
-    height: 30px;
-    border:none;
-    border-right:1px #2E2E2E;
-    border-radius:3px;
-    background:url(../../images/common/button-square-normal.png);
-    background-size:100% 100%;
-    color:white;
-    box-shadow:0 0.5em 1em rgba(0, 0, 0, 0.6);
+    border-radius:2px;
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2e3537), color-stop(100%, #424748));
+    background-image: -moz-linear-gradient(#2e3537, #424748);
+    background-image: -webkit-linear-gradient(#2e3537, #424748);
+    background-image: linear-gradient(#2e3537, #424748);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0px 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0px 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0px 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
 }
+.close-all:after {
+    width: 37px;
+    height: 36px;
+    top: -5.5px;
+    left:-18.5px;
+    margin-left: 50%;
+    content: '';
+    display: block;
+    border-radius:3px;
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2af1fc), color-stop(100%, #17b2e6));
+    background-image: -moz-linear-gradient(#2af1fc, #17b2e6);
+    background-image: -webkit-linear-gradient(#2af1fc, #17b2e6);
+    background-image: linear-gradient(#2af1fc, #17b2e6);
+    -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    z-index: -1;
+}
+
+/* -------------------
+    SuperBtn Hover
+-------------------- */
+.close-all:hover {
+    color: #70ff92;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #545454), color-stop(100%, #373738));
+    background-image: -moz-linear-gradient(#545454, #373738);
+    background-image: -webkit-linear-gradient(#545454, #373738);
+    background-image: linear-gradient(#545454, #373738);
+}
+.close-all:hover:after {
+    -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2);
+    -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2);
+}
+.close-all:active {
+    color: #00ccff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0px 30px rgba(0, 255, 255, 0.7);
+    background: #333;
+    -moz-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+    -webkit-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+    box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+}
+
 
 /*显示与取消拟态框效果*/
 .md-effect-1 .md-content {  -webkit-transform:scale(0.7);  -moz-transform:scale(0.7);  -ms-transform:scale(0.7);  transform:scale(0.7);  opacity:0;  -webkit-transition:all 0.3s;  -moz-transition:all 0.3s;  transition:all 0.3s;  }

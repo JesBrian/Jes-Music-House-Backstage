@@ -96,7 +96,7 @@
     </style>
     <!-- 面包屑导航 -->
     <nav style="position: absolute; top:0; left:130px;">
-        <a href="main.html" style="position: relative;z-index:99;"><div class="MyIF home"> 主页</div></a>
+        <a href="main.html" style="position:absolute; z-index:99;"><div class="MyIF home"> 主页</div></a>
         <a href="popalbum.html" style="position: absolute; top:0; left:115px; z-index:98;"><div class="MyIF exponential"> 歌单</div></a>
         <a href="#" style="position: absolute; top:0; left:225px; z-index:97;"><div class="MyIF alter-information"> 歌曲</div></a>
     </nav>
@@ -197,9 +197,9 @@
             <div>
                 <img src="images/common/touxiang.jpg" style="width:40px; height:40px; margin:38px 3px; border-radius:4px;">
                 <div style="width:93%; display:inline-block;">
-                    <textarea id="replyTest" placeholder="请填写评论" style="width:88%; height:55px; margin:0 25px; resize:none; display:block; font:normal normal normal 14px/1.3em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:3px; padding:8px 10px; border:none; border-radius:5px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);"></textarea>
+                    <textarea id="replyTest" placeholder="请填写评论" style="width:88%; height:58px; margin:0 25px; resize:none; display:block; font:normal normal normal 14px/1.3em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:3px; padding:8px 10px; border:none; border-radius:5px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);"></textarea>
                     <i class="MyIF exciting emojiButton" style="margin:0 28px 0 58px;"></i><span>限制 <i>110</i> 字</span>
-                    <button style="width:76px; height:28px; margin:18px 88px 0; float:right; border:none; border-radius:4px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">发表评论</button>
+                    <button id="replyTestButton" style="width:76px; height:28px; margin:18px 88px 0; float:right; border:none; border-radius:4px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">发表评论</button>
                 </div>
             </div>
 
@@ -298,7 +298,7 @@
                 <div class="replyList">
                     <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
                     <a href="user.html" style="color:#00BFE8;">User Name</a>
-                    <span>： 我是邪恶吃的旅途<img class="emoji_icon" src="plugins/emoji/icon/25.png">法规及目录哦怕卡恶臭的效率饭通提供一边和途法规及目录哦怕卡恶臭的效率饭通过i健康美丽破而产生咸蛋超人需方提供一边和你见面的人想法v塘沽海那几款买了哦怕</span>
+                    <span>： 我是邪恶吃的旅途<img class="emojiIcon" src="plugins/emoji/icon/25.png">法规及目录哦怕卡恶臭的效率饭通提供一边和途法规及目录哦怕卡恶臭的效率饭通过i健康美丽破而产生咸蛋超人需方提供一边和你见面的人想法v塘沽海那几款买了哦怕</span>
                     <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
                 </div>
                 <div class="replyList">
@@ -307,7 +307,7 @@
                     <span>： 666</span>
                     <div style="width:89%; padding:13px; margin:8px 0 3px 52px; border-radius:4px; background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); color:#929292; word-break:break-all; word-wrap:break-word;">
                         <a href="user.html" style="color:#00BFE8;">JesBrian</a>：
-                        888321xrdctfvygb<img class="emoji_icon" src="plugins/emoji/icon/25.png">uhnijmok,l.xrdctfvygbuc肠胃不好金山词霸很可能就立刻才搬家啊来考察p,xr就立刻才搬家啊来考察p,xr就立刻才搬家啊来考察p,xr就立刻才搬家啊来考察p,xrtcyvubinomkxrtcfyvgbuhinjmk888321xrdctfvygbuhnijmok,l.xrdctfvygbuc肠胃不好金山词霸很可能就立刻才搬家啊来考察p,xrtcyvubinomkxrtcfyvgbuhinjmk
+                        888321xrdctfvygb<img class="emojiIcon" src="plugins/emoji/icon/25.png">uhnijmok,l.xrdctfvygbuc肠胃不好金山词霸很可能就立刻才搬家啊来考察p,xr就立刻才搬家啊来考察p,xr就立刻才搬家啊来考察p,xr就立刻才搬家啊来考察p,xrtcyvubinomkxrtcfyvgbuhinjmk888321xrdctfvygbuhnijmok,l.xrdctfvygbuc肠胃不好金山词霸很可能就立刻才搬家啊来考察p,xrtcyvubinomkxrtcfyvgbuhinjmk
                     </div>
                     <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
                 </div>
@@ -418,7 +418,7 @@
             /*新建一个回复区域*/
             $(this).parent().parent().append(
                 "<div id='replyTextArea' style=\"width:100%; display:inline-block;  border:none; border-radius:5px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);\">\n" +
-                "   <div contenteditable='true' id='replyDiv' style=\"width:91%; height:60px; margin:16px 25px 0; padding:3px 8px; border:0.8px solid #2b2a2a; resize:none; display:block; font:normal normal normal 13px/1.4em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:2px; background-color:#6A6A6A\">User Name：</div>\n" +
+                "   <textarea id='replyDiv' style=\"width:91%; height:56px; margin:16px 25px 0; padding:3px 8px; border:0.8px solid #2b2a2a; resize:none; display:block; font:normal normal normal 13px/1.4em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:2px; background-color:#6A6A6A; overflow:auto;\">User Name：</textarea>\n" +
                 "   <i class='MyIF exciting emoji' style=\"margin:0 28px 0 58px;\"></i><span>限制 <i>110</i> 字</span>\n" +
                 "   <button id='sureReply' style=\"width:70px; height:23px; margin:6px 88px 6px; float:right; border:none; border-radius:4px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);\">发表评论</button>\n" +
                 "</div>"
@@ -433,7 +433,7 @@
                     path: "plugins/emoji/icon/",
                     maxNum: 50,
                     file: ".png",
-                    placeholder: "[{alias}]",
+                    placeholder: "[-{alias}-]",
                     alias: {
                         1:"呵呵", 2:"哈哈", 3:"吐舌", 4:"啊", 5:"酷", 6:"怒", 7:"开心", 8:"汗", 9:"泪", 10:"黑线", 11:"鄙视", 12:"不高兴", 13:"真棒", 14:"钱", 15:"疑问", 16:"阴脸", 17:"吐", 18:"咦", 19:"委屈", 20:"花心", 21:"呼~", 22:"笑脸", 23:"冷", 24:"太开心", 25:"滑稽", 26:"勉强", 27:"狂汗", 28:"乖", 29:"睡觉", 30:"惊哭", 31:"生气", 32:"惊讶", 33:"喷", 34:"爱心", 35:"心碎", 36:"玫瑰", 37:"礼物", 38:"彩虹", 39:"星星月亮", 40:"太阳", 41:"钱币", 42:"灯泡", 43:"茶杯", 44:"蛋糕", 45:"音乐", 46:"haha", 47:"胜利", 48:"大拇指", 49:"弱", 50:"OK"
                     },
@@ -444,7 +444,7 @@
             });
 
             $("#sureReply").click(function () {
-                alert($("#replyDiv").html());
+                alert($("#replyDiv").val());
             });
 
             window.top.IFrameReSize1();
@@ -460,7 +460,7 @@
                     path: "plugins/emoji/icon/",
                     maxNum: 50,
                     file: ".png",
-                    placeholder: "[{alias}]",
+                    placeholder: "[-{alias}-]",
                     alias: {
                         1:"呵呵", 2:"哈哈", 3:"吐舌", 4:"啊", 5:"酷", 6:"怒", 7:"开心", 8:"汗", 9:"泪", 10:"黑线", 11:"鄙视", 12:"不高兴", 13:"真棒", 14:"钱", 15:"疑问", 16:"阴脸", 17:"吐", 18:"咦", 19:"委屈", 20:"花心", 21:"呼~", 22:"笑脸", 23:"冷", 24:"太开心", 25:"滑稽", 26:"勉强", 27:"狂汗", 28:"乖", 29:"睡觉", 30:"惊哭", 31:"生气", 32:"惊讶", 33:"喷", 34:"爱心", 35:"心碎", 36:"玫瑰", 37:"礼物", 38:"彩虹", 39:"星星月亮", 40:"太阳", 41:"钱币", 42:"灯泡", 43:"茶杯", 44:"蛋糕", 45:"音乐", 46:"haha", 47:"胜利", 48:"大拇指", 49:"弱", 50:"OK"
                     },
@@ -470,6 +470,10 @@
                 }]
             });
         });
+
+        $("#replyTestButton").click(function () {
+            alert($("#replyTest").val());
+        })
 
     </script>
 
@@ -485,7 +489,6 @@
                 $.mCustomScrollbar.defaults.axis="y"; //enable 2 axis scrollbars by default
 
                 $("#lyricContent").mCustomScrollbar({theme:"minimal"});
-
             });
         })(jQuery);
     </script>

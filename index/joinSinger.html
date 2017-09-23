@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> ♪ JesBrian - MH ♪ </title>
+
+    <!-- CSS部分 -->
+
+    <!-- 自用字体图标 -->
+    <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
+    <!-- 带搜索框的下拉列表 -->
+    <link href="css/common/searchableSelect.css" rel="stylesheet" type="text/css">
+
+
+    <!-- 临时CSS -->
+    <style type="text/css">
+        body {  color:white; }
+        li,ul {  list-style-type:none;  }
+        a { text-decoration:none; cursor:pointer;  }
+        p,h1,h2,h3,h4,h5,h6 {  margin:0;  padding:0;  }
+        dd {  margin:0;  float: left;  }
+        input[type="text"],input[type="password"] {  background-color:#2E2E2E;
+            padding-left: 8px;
+            padding-right: 8px;
+            color:#00CDFF;
+        }
+
+        .hover-undeline:hover {  text-decoration:underline;  }
+
+
+        .MyIF {  color:#42d4ff;  }
+
+        .box-show-out
+        {
+            -webkit-box-shadow:0 0 5px 5px #49DFFF;
+            -moz-box-shadow:0 0 5px 5px #49DFFF;
+            box-shadow:0 0 5px 5px #49DFFF;
+        }
+        .box-show-out2
+        {
+            border-radius:15px;
+            background-color:#2E2E2E;
+            -webkit-box-shadow:0 0 5px 5px #B29AFF;
+            -moz-box-shadow:0 0 5px 5px #B29AFF;
+            box-shadow:0 0 5px 5px #B29AFF;
+        }
+
+
+        /* 控制渐变效果 */
+        .end-boder
+        {
+            font-weight: 900;
+            background-image: -webkit-linear-gradient(left, #2ed8ff, #9b7cf7 25%, #2ed8ff 50%, #9b7cf7 75%, #2ed8ff);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-background-size: 200% 100%;
+            -webkit-animation: masked-animation 3s infinite linear;
+        }
+        @-webkit-keyframes masked-animation
+        {
+            0%  { background-position: 0 0;}
+            100% { background-position: -100% 0;}
+        }
+
+
+
+
+        input[type='checkbox'] + label {
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        input[type='checkbox'] {
+            display: none;
+        }
+        input[type='checkbox'] + label {
+            z-index: 1;
+            margin: 0 10px 10px 0;
+            width: 115.5px;
+            height: 37.29px;
+            line-height: 36.3px;
+            position: relative;
+            letter-spacing: .1em;
+            color: #0e0e0e;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+            font-weight: 500;
+            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #111111), color-stop(100%, #000000));
+            background-image: -moz-linear-gradient(#111111, #000000);
+            background-image: -webkit-linear-gradient(#111111, #000000);
+            background-image: linear-gradient(#111111, #000000);
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            -moz-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
+            -webkit-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
+        }
+        input[type='checkbox'] + label:after {
+            z-index: -1;
+            content: '';
+            cursor: pointer;
+            top: 1.98px;
+            margin-left: 50%;
+            left: -55px;
+            height: 33px;
+            display: block;
+            position: absolute;
+            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));
+            background-image: -moz-linear-gradient(#444444, #373738);
+            background-image: -webkit-linear-gradient(#444444, #373738);
+            background-image: linear-gradient(#444444, #373738);
+            -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+        }
+        input[type='checkbox'] + label:hover {
+            color: #AEAEAE;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+        }
+        input[type='checkbox'] + label:hover:after {
+            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #545454), color-stop(100%, #373738));
+            background-image: -moz-linear-gradient(#545454, #373738);
+            background-image: -webkit-linear-gradient(#545454, #373738);
+            background-image: linear-gradient(#545454, #373738);
+        }
+        input[type='checkbox']:checked + label {
+            color: #00ccff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0px 30px rgba(0, 255, 255, 0.7);
+            -moz-box-shadow: 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
+            -webkit-box-shadow: 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
+            box-shadow: 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
+        }
+        input[type='checkbox']:checked + label:after {
+            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #262627), color-stop(100%, #2d2d2e));
+            background-image: -moz-linear-gradient(#262627, #2d2d2e);
+            background-image: -webkit-linear-gradient(#262627, #2d2d2e);
+            background-image: linear-gradient(#262627, #2d2d2e);
+            -moz-box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+            -webkit-box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+            box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+        }
+        input[type='checkbox'] + label {
+            letter-spacing: 0;
+            width:70px;
+            height:22px;
+            margin:3px 18px 8px 0;
+            padding:3px 12px;
+            font-size:14px;
+            font-weight:500;
+            line-height:22px;
+        }
+        input[type='checkbox'] + label:after {
+            top:0;
+            left:-47px;
+            width:70px;
+            height:22px;
+            padding:3px 12px;
+        }
+        input[type='checkbox'] + label > b
+        {
+            font-size:13px;
+        }
+
+
+
+
+
+
+
+        a.joinSinger {
+            width: 108px;
+            height: 31px;
+            top: -50px;
+            left: 60px;
+            color: #AEAEAE;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+            font-weight: bold;
+            letter-spacing: .08em;
+            line-height: 32px;
+            position: relative;
+            border-radius:2px;
+            background-size: 100%;
+            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2e3537), color-stop(100%, #424748));
+            background-image: -moz-linear-gradient(#2e3537, #424748);
+            background-image: -webkit-linear-gradient(#2e3537, #424748);
+            background-image: linear-gradient(#2e3537, #424748);
+            -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0px 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0px 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0px 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
+        }
+        a.joinSinger:after {
+            width: 123px;
+            height: 45px;
+            top: -6px;
+            left: -61px;
+            margin-left: 50%;
+            content: '';
+            display: block;
+            border-radius:3px;
+            background-size: 100%;
+            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2af1fc), color-stop(100%, #17b2e6));
+            background-image: -moz-linear-gradient(#2af1fc, #17b2e6);
+            background-image: -webkit-linear-gradient(#2af1fc, #17b2e6);
+            background-image: linear-gradient(#2af1fc, #17b2e6);
+            -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6);
+            -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6);
+            position: absolute;
+            z-index: -1;
+        }
+
+        /* -------------------
+            SuperBtn Hover
+        -------------------- */
+        a.superBtn:hover {
+            color: #70ff92;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+            background-size: 100%;
+            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #545454), color-stop(100%, #373738));
+            background-image: -moz-linear-gradient(#545454, #373738);
+            background-image: -webkit-linear-gradient(#545454, #373738);
+            background-image: linear-gradient(#545454, #373738);
+        }
+        a.superBtn:hover:after {
+            -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2);
+            -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2);
+            box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2);
+        }
+        a.superBtn:active {
+            color: #00ccff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0px 30px rgba(0, 255, 255, 0.7);
+            background: #333;
+            -moz-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+            -webkit-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+            box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <style>
+        nav>a>div
+        {
+            width:100px;
+            height:40px;
+            padding-left:32px;
+            background: url(images/common/first.png);
+            background-size:100% 100%;
+            font:italic normal bold 12px/2.5em 宋体,verdana;
+        }
+        nav>a>div.MyIF:hover
+        {
+            color: white;
+        }
+        nav>a:nth-of-type(2)>div
+        {
+            width:95px;
+            padding-left:40px;
+            background: url(images/common/second.png);
+            background-size:100% 100%;
+        }
+        nav>a:last-child>div
+        {
+            width:100px;
+            color: #585451;
+            padding-left:55px;
+            background: url(images/common/last.png);
+            background-size:100% 100%;
+        }
+    </style>
+    <!-- 面包屑导航 -->
+    <nav style="position:absolute; top:0; left:130px;">
+        <a href="main.html" style="position:absolute; z-index:99;"><div class="MyIF home"> 主页</div></a>
+        <a href="#" style="position: absolute; top:0; left:108px; z-index:98;"><div class="MyIF singer"> 歌手</div></a>
+    </nav>
+
+    <div class="box-show-out2" style="width:900px;  margin-left:auto; margin-right:115px; margin-top:25px; padding-bottom:80px; position:relative;">
+        <span id="step-title" style="width:160px; height:40px; top:8px; left:40%; position:absolute; z-index:50; border-radius:4px; font:normal normal normal 20px/35px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+            <i class="MyIF information" style="font-size:24px;"></i><span> 阅读协议</span>
+        </span>
+        <div id="joinSingerContent" style="width:93%; height:480px; padding:56px 18px 8px 38px; color:#AAA;">
+            <!--第0步 阅读协议-->
+            <div id="step-0-content" style="font-size:13.3px;">
+                <span style="margin:8px 58px; font-size:20px; font-weight:700; color:#CCC;">Music House 音乐人服务条款</span>
+                <div style="margin:8px 0;">
+                    <p style="text-indent:1.5em; font-size:14.5px; font-weight:600; color:#CCC;">您好，欢迎加入【Music House音乐人】，Music House音乐人是Music House倾力为您打造的专注原创音乐发现与分享的平台。以下4条，有利于您更好的了解这款产品：</p>
+                    <p style="margin-left:22px; text-indent:1.2em;">1、Music House音乐人致力于协助您将原创音乐广泛地传播出去。</p>
+                    <p style="margin-left:22px; text-indent:1.2em;">2、在申请Music House音乐人成功之后，您将获得Music House音乐人认证，您的音乐将进入网易云音乐正版曲库。<p/>
+                    <p style="margin-left:22px; text-indent:1.2em;">3、您的普通用户帐号将开通音乐人帐号权限，您将获得专属歌手主页，与歌迷更便捷地沟通交流。<p/>
+                    <p style="margin-left:22px; text-indent:1.2em;">4、您将获得Music House为您开发的更多音乐推广与统计工具。<p/><br/><br/>
+
+                    <p style="text-indent:1.5em; font-size:14.5px; font-weight:600; color:#CCC;">为了使您更清晰的理解、使用Music House音乐人平台，也为了您与Music House的共赢计划，Music House希望您仔细阅读以下全部内容（特别是粗体下划线标注的内容）。如您选择使用并点击“同意”的，即表示已经与Music House达成协议，并自愿接受本协议的所有内容。如您对本协议内容有任何不认可或不理解，请不要进行后续操作。</p>
+
+                    <p style="margin:0 8px; line-height:30px; font-size:14.5px; font-weight:600; color:#CCC;">第一条 总则：</p>
+                    <p style="margin-left:22px; text-indent:1.2em;">1、当您同意本协议的条款并按照页面提示，完成全部的Music House音乐人帐号权限开通程序并通过Music House后台管理人员审核后，您才能真正入驻Music House音乐人。<p/>
+                    <p style="margin-left:22px; text-indent:1.2em;">2、您了解并知悉，Music House有权拒绝为您开通Music House音乐人帐号权限。<p/>
+
+                    <p style="margin:0 8px; line-height:30px; font-size:14.5px;font-weight:600; color:#CCC;">第二条 服务内容：</p>
+                    <p style="margin-left:22px; text-indent:1.2em;">1、您通过Music House音乐人上传音乐作品的行为即表示您有权且同意将该音乐作品及相关图文信息在全球范围内的信息网络传播权（包括但不限于表演者权、录音制作者权、词曲著作权）授权给Music House使用，允许Music House使用、传播、复制、修改、再许可、翻译、创建衍生作品、宣传推广、出版、表演及展示此等授权内容。前述授权是非排他、免费的、永久的、不可撤销的，除非您与Music House另行有约定。您依然是音乐作品的权利人，您有将音乐作品授权给任何其他家音乐服务商的权利。<p/>
+                    <p style="margin-left:22px; text-indent:1.2em;">2、您理解并同意，Music House无须就您上传的任何内容支付费用，除非您与Music House另行有其他书面约定。<p/>
+                    <p style="margin-left:22px; text-indent:1.2em;">3、您承诺并保证，您通过Music House音乐人上传的音乐作品系原创作品，并未涉嫌抄袭，且您通过Music House音乐人上传音乐作品的行为并未侵犯任何第三方的合法权益。如因您违反上述承诺或保证，给Music House造成损失的，您同意Music House有权要求您赔偿因此遭受的一切损失，包括但不限于经济损失、行政罚款、解决争议之和解金、赔偿款、诉讼费、公证费及律师费等。<p/>
+                    <p style="margin-left:22px; text-indent:1.2em;">4、您知悉并同意，在您使用Music House提供的技术服务时，您的音乐作品可能会经过Music House音乐人进行编码或译码，您的音乐作品也可能会与其他音乐人的音乐作品进行打包推广或开展联合活动，但Music House保证不会破坏您音乐作品的原意，也不会对您的音乐作品进行实质性修改。<p/>
+                    <p style="margin-left:22px; text-indent:1.2em;">5、您承诺并保证，您上传的音乐作品及相关资料不包含任何损坏文档、病毒、蠕虫、木马或其他类似损害程序代码的内容，否则由此造成的损失由您承担。<p/>
+                    <p style="margin-left:22px; text-indent:1.2em;">6、您在使用Music House音乐人服务时，您承诺将遵守法律、法规的规定以及Music House音乐人的服务要求，若您违反本协议约定使用Music House音乐人服务的，Music House有权随时停止您的帐号服务、收回帐号（包括音乐人帐号权限及普通用户权限）并追究法律责任。<p/>
+                    <p style="margin-left:22px; text-indent:1.2em;">7、您理解并同意，即便您上传了音乐作品，Music House仍有权根据音乐作品的具体情况及政策形势，不将该音乐作品对用户公布或向用户提供播放及下载服务。在使用您的音乐作品过程中，Music House也有权根据实际情况，暂停对您的音乐作品提供播放及下载服务。<p/>
+                    <p style="margin-left:22px; text-indent:1.2em;">8、您同意，出于某些原因（包括但不限于版权纠纷、行为过激、违反国家相关法律法规、过长时间无使用等等），Music House可以对您的Music House音乐人帐号权限进行限权或停止服务等处理，或清除您在Music House音乐人上发布的不适当的音乐作品或言论。由于存在上述情况，Music House提醒您自行备份音乐作品和相关信息，因Music House依照本协议约定从网易公司系统删除您的音乐作品和其他信息内容的，您同意Music House无需对您或任何第三人可能造成的损失进行赔偿。<p/>
+
+
+                    <p style="margin:0 8px; line-height:30px; font-size:14.5px;font-weight:600; color:#CCC;">第三条 其他：</p>
+                    <p style="margin-left:22px; text-indent:1.2em;">1、Music House有权在必要时通过在Music House音乐人上发出公告等合理方式变更本条款的内容，相关变更已经发布即生效。若您继续使用本服务条款涉及的服务，则视为对修改内容的同意，当发生有关争议时，以最新的服务条款为准；若您认为变更后的内容无法接受，您应停止使用本服务条款涉及的服务并通知Music House。<p/>
+                    <p style="margin-left:22px; text-indent:1.2em;">2、本条款适用中华人民共和国的法律，如出现纠纷，您和Music House司一致同意将纠纷交由XXXX人民法院管辖。<p/>
+                    <p style="margin-left:22px; text-indent:1.2em;">3、由于您的Music House音乐人帐号权限是基于Music House云音乐注册用户帐号升级而来，因此，针对Music House音乐普通用户在网页与软件上的《服务条款》（包括但不限于《Music House音乐服务条款》以及其他对网易云音乐普通用户有效的协议）对您仍然有效。本协议未约定的内容以《服务条款》为准，若本协议与《服务条款》约定不一致，则以本协议为准。<p/>
+                    <p style="margin-left:22px; text-indent:1.2em;">4、如果您对本条款内容有任何疑问，请发送邮件至我们的客服邮箱：（musichouseservice@163.com）。<p/>
+
+                    <p style="margin:18px 28px; font-size:16px; color:#CCC; text-align:right;">
+                        Music House&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;By JesBrian
+                    </p>
+                </div>
+                <form style="margin:-18px 28px 28px;">
+                    <input type="checkbox" id='isAgree' name="isAgree"><label for='isAgree' style="width:78px;"><b>同意以上条款</b></label>
+                </form>
+            </div>
+            <!--第1步 填写资料-->
+            <div id="step-1-content" style="display:none; padding-left:38px;">
+
+                <style>
+                    #step-1-content dl {  margin:0 8px 48px;  line-height:2em;  }
+                    #step-1-content dd
+                    {
+                        width:120px; margin:auto 18px; text-align:right;
+                    }
+                    .s1c-Bg
+                    {
+                        width:68%; height:25px; padding:8px 18px; border-radius:3px; border:0.5px solid #464646; font:normal normal normal 15px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:2px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+                    }
+
+                    input[type='radio'] + label {
+                        text-align: center;
+                        display: inline-block;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+
+                    input[type='radio'] {
+                        display: none;
+                    }
+                    input[type='radio'] + label {
+                        z-index: 1;
+                        margin: 0 10px 10px 0;
+                        width: 115.5px;
+                        height: 37.29px;
+                        line-height: 36.3px;
+                        position: relative;
+                        letter-spacing: .1em;
+                        color: #0e0e0e;
+                        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+                        font-weight: 500;
+                        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #111111), color-stop(100%, #000000));
+                        background-image: -moz-linear-gradient(#111111, #000000);
+                        background-image: -webkit-linear-gradient(#111111, #000000);
+                        background-image: linear-gradient(#111111, #000000);
+                        -moz-border-radius: 3px;
+                        -webkit-border-radius: 3px;
+                        border-radius: 3px;
+                        -moz-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
+                        -webkit-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
+                        box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
+                    }
+                    input[type='radio'] + label:after {
+                        z-index: -1;
+                        content: '';
+                        cursor: pointer;
+                        top: 1.98px;
+                        margin-left: 50%;
+                        left: -55px;
+                        height: 33px;
+                        display: block;
+                        position: absolute;
+                        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));
+                        background-image: -moz-linear-gradient(#444444, #373738);
+                        background-image: -webkit-linear-gradient(#444444, #373738);
+                        background-image: linear-gradient(#444444, #373738);
+                        -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+                        -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+                        box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+                        -moz-border-radius: 2px;
+                        -webkit-border-radius: 2px;
+                        border-radius: 2px;
+                    }
+                    input[type='radio'] + label:hover {
+                        color: #AEAEAE;
+                        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+                    }
+                    input[type='radio'] + label:hover:after {
+                        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #545454), color-stop(100%, #373738));
+                        background-image: -moz-linear-gradient(#545454, #373738);
+                        background-image: -webkit-linear-gradient(#545454, #373738);
+                        background-image: linear-gradient(#545454, #373738);
+                    }
+                    input[type='radio']:checked + label {
+                        color: #00ccff;
+                        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0px 30px rgba(0, 255, 255, 0.7);
+                        -moz-box-shadow: 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
+                        -webkit-box-shadow: 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
+                        box-shadow: 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
+                    }
+                    input[type='radio']:checked + label:after {
+                        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #262627), color-stop(100%, #2d2d2e));
+                        background-image: -moz-linear-gradient(#262627, #2d2d2e);
+                        background-image: -webkit-linear-gradient(#262627, #2d2d2e);
+                        background-image: linear-gradient(#262627, #2d2d2e);
+                        -moz-box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+                        -webkit-box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+                        box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+                    }
+                    input[type='radio'] + label {
+                        letter-spacing: 0;
+                        width:88px;
+                        height:23px;
+                        margin:3px 8px 0 0;
+                        padding:3px;
+                        font-size:16px;
+                        line-height:23px;
+                    }
+                    input[type='radio'] + label:after {
+                        top:0px;
+                        left:-47px;
+                        width:88px;
+                        height:23px;
+                        padding:3px;
+                    }
+                    input[type='radio'] + label > span
+                    {
+                        font-size:14px;
+                        font-weight:700;
+                    }
+                </style>
+
+                <form action="" method="post">
+                    <p style="margin:8px 0 2px; font-size:24px; font-weight:700;">1. 艺人信息</p>
+                    <dl>
+                        <dd>艺人名</dd><input type="text" class="s1c-Bg">
+                    </dl>
+                    <dl>
+                        <dd>歌手图片</dd><input type="file" class="s1c-Bg" style="width:65.5%;">
+                    </dl>
+                    <dl>
+                        <dd>性别</dd>
+                        <input type="radio" id='man' name="sex" checked><label for='man' class="MyIF boy-2"><span>&nbsp;&nbsp;男</span></label>
+                        <input type="radio" id='girl' name="sex"><label for='girl' class="MyIF girl-2"><span>&nbsp;&nbsp;女</span></label>
+                        <input type="radio" id='team' name="sex"><label for='team' class="MyIF all-user"><span>&nbsp;&nbsp;团体</span></label>
+                    </dl>
+                    <dl>
+                        <dd>地区</dd>
+                        <select>
+                            <option selected>华语</option>
+                            <option>日本</option>
+                            <option>韩国</option>
+                            <option>欧美</option>
+                            <option>日韩</option>
+                            <option>其他</option>
+                        </select><br/>
+                    </dl>
+                    <dl>
+                        <dd>流派风格</dd>
+                        <select>
+                            <option selected>华语</option>
+                            <option>日本</option>
+                            <option>韩国</option>
+                            <option>欧美</option>
+                            <option>日韩</option>
+                            <option>其他</option>
+                        </select><br/>
+                    </dl>
+                    <dl>
+                        <dd>所属公司/品牌</dd><input type="text" class="s1c-Bg">
+                    </dl>
+                    <dl>
+                        <dd>介绍</dd><textarea placeholder="字数控制在40-500字之间" class="s1c-Bg" style="width:68%; height:88px; padding:8px; resize:none; line-height:1.2em;"></textarea>
+                    </dl>
+
+
+                    <p style="margin:8px 0 2px; font-size:24px; font-weight:700;">2. 实名认证</p>
+                    <dl>
+                        <dd>真实姓名</dd><input type="text" class="s1c-Bg">
+                    </dl>
+                    <dl>
+                        <dd>手机号</dd><input type="text" class="s1c-Bg">
+                    </dl>
+                    <dl>
+                        <dd>验证码</dd><input type="text" style="width:48%;" class="s1c-Bg">
+                        <span style="position:relative; z-index:9; top:51px; left:-28px;"><a style="display:inline-block; text-align:center;" class="joinSinger superBtn">获取验证码</a></span>
+                    </dl>
+                    <dl>
+                        <dd>邮箱</dd><input type="text" class="s1c-Bg">
+                    </dl>
+                    <dl>
+                        <dd>国籍</dd>
+                        <select>
+                            <option selected>中国 China</option>
+                            <option>中国 China</option>
+                            <option>中国 China</option>
+                            <option>中国 China</option>
+                            <option>中国 China</option>
+                            <option>中国 China</option>
+                            <option>中国 China</option>
+                            <option>中国 China</option>
+                            <option>中国 China</option>
+                        </select><br/>
+                    </dl>
+                    <dl>
+                        <dd>证件号</dd><input type="text" class="s1c-Bg">
+                    </dl>
+                    <dl>
+                        <dd>证件正面图</dd><input type="file" class="s1c-Bg" style="width:65.5%;">
+                    </dl>
+                    <dl>
+                        <dd>证件反面图</dd><input type="file" class="s1c-Bg" style="width:65.5%;">
+                    </dl>
+                </form>
+            </div>
+            <!--第2步 等待审核-->
+            <div id="step-2-content" style="display:none; padding:28px;">
+                <p style="text-indent:2em;">您所填写的入驻Music House音乐人资料已提交至Music House后台管理员处，平台方管理员会及时审核您的入驻Music House音乐人资料，并及时发邮件及消息通知您，请密切留意邮箱，谢谢您对我们的大力支持！</p>
+                <p style="margin:18px 28px; font-size:16px; color:#CCC; text-align:right;">
+                    Music House&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;By JesBrian
+                </p>
+            </div>
+        </div>
+
+        <style>
+            .banClick {  color:#9B9B9B;  cursor:not-allowed;  }
+            .allowClick {  color:#00CDFF;  cursor:pointer;  }
+            .nowActive {  color:#70ff92;  cursor:default;  }
+        </style>
+        <div id="step-button-group" style="width:100%; height:60px; bottom:12px; position:absolute;">
+            <span id="prevStep" class="banClick" style="padding:3px 12px; top:3px; left:1%; position:absolute; border-radius:4px; font:bold normal normal 18px/28px Arial, 'Microsoft YaHei', '微软雅黑'; text-align:center; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                <i class="MyIF double-arrow-left" style="font-size:18px;"></i> 上一步
+            </span>
+            <p style="margin:8px 28px; text-align:center;">
+                <a class="nowActive" style="padding:8px 14px; display:inline-block; border-radius:4px; font:normal normal normal 20px/25px Arial, 'Microsoft YaHei', '微软雅黑'; text-align:center; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);"><i class="MyIF information" style="font-size:18px;"></i> 阅读协议</a>
+                <i class="MyIF num-arrow-right" style="color:#9B9B9B"></i>
+                <a class="banClick" style="padding:8px 14px; display:inline-block; border-radius:4px; font:normal normal normal 20px/25px Arial, 'Microsoft YaHei', '微软雅黑'; text-align:center; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);"><i class="MyIF alter-information" style="font-size:18px;"></i> 填写资料</a>
+                <i class="MyIF num-arrow-right" style="color:#9B9B9B"></i>
+                <a class="banClick" style="padding:8px 14px; display:inline-block; border-radius:4px; font:normal normal normal 20px/25px Arial, 'Microsoft YaHei', '微软雅黑'; text-align:center; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);"><i class="MyIF check" style="font-size:18px;"></i> 等待审核</a>
+            </p>
+            <span id="nextStep" class="banClick" style="padding:3px 12px; top:3px; right:1%; position:absolute; border-radius:4px; font:bold normal normal 18px/28px Arial, 'Microsoft YaHei', '微软雅黑'; text-align:center; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
+                下一步 <i class="MyIF double-arrow-right" style="font-size:18px;"></i>
+            </span>
+        </div>
+    </div>
+
+
+    <div style="height:70px;"></div>
+
+    <!-- Jsc部分 -->
+
+    <!--jQuery框架-->
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+
+    <!-- 带搜索框的下拉列表 -->
+    <script type="text/javascript" src="js/searchableSelect.js"></script>
+
+    <!--plugins滚动条插件-->
+    <link rel="stylesheet" href="plugins/scrollbar/jquery.mCustomScrollbar.css">
+    <script src="plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        (function($){
+            $(window).on("load",function(){
+                $.mCustomScrollbar.defaults.scrollButtons.enable=false;
+                $.mCustomScrollbar.defaults.axis="y";
+
+                $("#joinSingerContent").mCustomScrollbar({theme:"inset-2"});
+            });
+        })(jQuery);
+
+
+        var nowStepNum = 0;//记录现在填写信息到在一步了 -- 从0开始
+        var allowStepNum = 0;//记录poor guy填写的资料能去到哪一步 -- 从0开始
+
+        /*上/下步按钮，根据现在是第几步，以及能走到第几步来显示内容和按钮状态。先将下/上一步的内容滚上去，再将上/下一步的内容滚下来，并且按钮必须是可以点击的也就是class != banClick*/
+        $("#prevStep, #nextStep").click(function () {//先修改step步数再修改按钮点击状态
+            if(!$(this).hasClass("banClick")) {
+                $("#step-" + nowStepNum + "-content").fadeOut();
+                if(this.id == "prevStep") --nowStepNum;
+                if(this.id == "nextStep") ++nowStepNum;
+                $("#step-" + nowStepNum + "-content").fadeIn();
+                changeClickStatus();    //根据能够走到的步数和现在的步数做对比对DOM元素调效果，进而控制能否点击
+            }
+        });
+
+        /*第零步不允许条例的话无法进入第一步*/
+        $("#isAgree").change(function () {
+            if($("#isAgree").is(':checked')) allowStepNum = 1;
+            else allowStepNum = 0;
+            changeClickStatus();    //根据能够走到的步数和现在的步数做对比对DOM元素调效果，进而控制能否点击
+        });
+
+        /*第一步不填完所有的表单信息无法进入第二步*/
+        $("#step-1-content form").change(function () {
+            var i=0;
+            $("input.s1c-Bg").each(function(){  //遍历含有 s1c-bg class 的input标签，判断是否有内容未填写[因为selected里会用js生成输入框，但不是必定输入]
+                if($(this).val() == "") i=1;
+            });
+            if ($('textarea').val()=='') {  //判断textarea标签是否填写
+                i=1;
+            }
+            if (i==1) {  //如果有未填写的，则return false阻止 [ Ajax -- 以后保证填这坑 -_-| ] 提交
+                allowStepNum = 1;
+            } else {
+                allowStepNum = 2;
+            }
+            changeClickStatus();    //根据能够走到的步数和现在的步数做对比对DOM元素调效果，进而控制能否点击
+        });
+
+        /**
+         * 改变上/下步按钮的点击状态
+         */
+        function changeClickStatus() {
+            $("#step-button-group a").removeClass("nowActive");     //显示填写资料的进度步数
+            for(var i = 0; i <= nowStepNum; i++) {
+                $("#step-button-group a").eq(i).addClass("nowActive");
+            }
+
+            $("#step-title>span").text($("#step-button-group a").eq(nowStepNum).text());  //修改每一步的标题内容
+            $("#step-title>i").removeClass().addClass($("#step-button-group a>i").eq(nowStepNum).attr("class"));
+
+            $("#step-button-group p>i").css("color","#9B9B9B");     //修改填写资料的进度步图标[颜色]
+            for(var i = 0; i < nowStepNum; i++) {
+                $("#step-button-group p>i").eq(i).css("color","#22e8ff");
+            }
+
+            /*改变按钮状态*/
+            if(nowStepNum == 0) {
+                $("#prevStep").removeClass("allowClick");
+                if(!$("#prevStep").hasClass("banClick")) {
+                    $("#prevStep").addClass("banClick");
+                }
+            }
+            if(nowStepNum == 1) {
+                $("#prevStep").removeClass("banClick");
+                if(!$("#prevStep").hasClass("allowClick")) {
+                    $("#prevStep").addClass("allowClick");
+                }
+            }
+            if(nowStepNum == 2) {
+                $("#prevStep").removeClass("banClick");
+                if(!$("#prevStep").hasClass("allowClick")) {
+                    $("#prevStep").addClass("allowClick");
+                }
+                $("#nextStep").removeClass("allowClick");
+                if(!$("#nextStep").hasClass("banClick")) {
+                    $("#nextStep").addClass("banClick");
+                }
+            }
+
+            /*判断现在所处步数与能走的步数，然后改变按钮状态*/
+            if(nowStepNum < allowStepNum) {
+                $("#nextStep").removeClass("banClick");
+                if(!$("#nextStep").hasClass("allowClick")) {
+                    $("#nextStep").addClass("allowClick");
+                }
+            } else {
+                $("#nextStep").removeClass("allowClick");
+                if(!$("#nextStep").hasClass("banClick")) {
+                    $("#nextStep").addClass("banClick");
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>

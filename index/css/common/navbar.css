@@ -6,7 +6,7 @@
 #navbar-content-index {  width:1350px;  height:65px;  margin:0 auto;  position:static;  }
 
     /*控制MH图标的部分*/
-#logo {  float:left;  margin:8px 20px 0 15px;  }
+#logo {  float:left;  margin:8px 20px 0 0;  }
 #logo img {  width: 200px;  }
 
     /*控制导航菜单的部分*/
@@ -50,6 +50,10 @@
     100% {  border-color: #01e6ff;  box-shadow: 0 0 20px rgba(1, 230, 255, 0.6), inset 0 0 10px rgba(1, 230, 255, 0.4), 0 2px 0 #bcb8ff;  }
 }
 
-    /*控制用户登陆的部分*/
-#navbar-user-index {  width:50px;  height:45px;  float:right;  margin:12px 10px 0 28px;  border-radius:5px;  background:url(../../images/common/login_btn.png);  background-size:100% 100%;  }
-#navbar-user-index:hover {  -webkit-box-shadow:0 0 2px 3px #49DFFF;  -moz-box-shadow:0 0 2px 3px #49DFFF;  box-shadow:0 0 2px 3px #49DFFF;  -webkit-transition: all .2s ease-out;  transition: all .2s ease-out;  }
+/*控制用户登陆的部分*/
+#navbar-user-index {
+    float:right;
+    margin: 12px 28px 0 28px;
+    position:relative;
+    z-index:9;
+}
