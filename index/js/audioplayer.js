@@ -124,7 +124,7 @@
                 $("#audioplayer-playmode").click(function () {
                     ++playmodeClickTemp;
                     playmodeClickTemp %= 3;
-                    var playmodeLogo = $("#audioplayer-playmode > span");
+                    var playmodeLogo = $("#audioplayer-playmode");
                     var playmodeText = $("#audioplayer-playmodeText");
                     playmodeLogo.removeClass();
                     playmodeText.fadeIn();
@@ -272,4 +272,45 @@
 
 $(function () {
     $('audio').audioPlayer();
+
+
+    /**
+     * 音乐播放器播放列表鼠标移动到那一首歌曲上出现各种操作
+     */
+    $("#songlistContent li").mousemove(function () {
+        $(this).find($("span.songlistOper")).fadeIn();
+    }).mouseleave(function () {
+        $(this).find($("span.songlistOper")).fadeOut();
+    });
+    addPlayIcon();
+
+    /**
+     * 音乐播放器播放列表鼠标点击那个歌曲播放哪个歌曲，并且添加class active
+     */
+    $("#songlistContent li>a:first-child").click(function () {
+        removePlayIcon();
+        $("#songlistContent li").removeClass("active"); //先将之前有active的去掉然后添加刚点击的active
+        $(this).parent().addClass("active");
+        addPlayIcon();
+    })
 });
+
+
+/**
+ * 音乐播放器播放列表播放哪一首歌，加播放的图标[ 逻辑--有class active的添加图标 ]
+ */
+function addPlayIcon() {
+    $("#songlistContent li").each(function(){
+        if($(this).hasClass("active")) {
+            $(this).prepend("<i class='MyIF play'></i>");
+        }
+    });
+}
+function removePlayIcon() {
+    $("#songlistContent li").each(function(){
+        if($(this).hasClass("active")) {
+            $(this).find($("i.play")).remove();
+        }
+    });
+}
+

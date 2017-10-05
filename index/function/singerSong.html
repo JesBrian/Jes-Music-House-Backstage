@@ -2,10 +2,9 @@
     <meta charset="UTF-8">
 
 
-    <div style="width:95%; height:90%; padding:0 20px 20px; ">
+    <div style="width:95%; height:90%; padding:10px 20px 20px; ">
 
         <style>
-
             body {  color:white;  }
             li,ul {  margin:0; padding:0; list-style-type:none;  }
             a {  text-decoration:none;  cursor:pointer;  text-align:center;  }
@@ -25,12 +24,9 @@
             }
 
 
-
-
             a.joinSinger {
                 width: 108px;
                 height: 31px;
-                top: -50px;
                 left: 60px;
                 color: #AEAEAE;
                 text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -88,14 +84,12 @@
             }
             a.superBtn:active {
                 color: #00ccff;
-                text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0px 30px rgba(0, 255, 255, 0.7);
+                text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 255, 255, 0.7);
                 background: #333;
-                -moz-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
-                -webkit-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
-                box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+                -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+                -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
+                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
             }
-
-
 
 
             table
@@ -147,17 +141,17 @@
 
         </style>
 
-        <span style="top:68px; left:55%; position:relative; z-index:9;">
-                <a class="superBtn joinSinger MyIF play" title="立即播放" style="margin-right:28px; display:inline-block; text-align:center; cursor:pointer;"> 立即播放</a>
-                <a class="superBtn joinSinger MyIF menu" title="添加到播放列表" style="margin-right:28px; display:inline-block; text-align:center; cursor:pointer;"> 添加列表</a>
-            </span>
-
+        <span style="margin-bottom:-8px; float:right; position:relative; z-index:9;">
+            <a class="joinSinger superBtn MyIF play" style="margin-right:18px; display:inline-block; text-align:center;"> 立即播放</a>
+            <a class="joinSinger superBtn MyIF menu" style="margin-right:18px; display:inline-block; text-align:center;"> 添加列表</a>
+            <a class="joinSinger superBtn MyIF add-collection" style="margin-right:38px; display:inline-block; text-align:center;"> 添加收藏</a>
+        </span>
         <table class="table box-show-out" cellpadding="0" cellspacing="0">
-            <caption style="margin-left:-480px;"><span class="MyIF music-info" style="font-size:23px;"></span> 听歌排行</caption>
+            <caption style="margin-left:-480px;"><span class="MyIF exponential" style="font-size:23px;"></span> 热门歌曲</caption>
             <thead>
             <tr>
                 <th></th>
-                <th>歌曲</th>
+                <th>热门歌曲</th>
                 <th>次数</th>
             </tr>
             </thead>

@@ -6,432 +6,439 @@
 
 
     <!-- CSS部分 -->
+    <link rel="stylesheet" type="text/css" href="css/index/common.css">
 
+    <link rel="stylesheet" type="text/css" href="css/index/newdisc.css">
+    
     <!-- 自用字体图标 -->
     <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
 
-    <!-- 临时CSS -->
-    <style type="text/css">
-        body
-        {
-            background-color:transparent;
-        }
-        li
-        {
-            list-style-type:none;
-        }
-        a,a:hover,a:focus,a:active
-        {
-            text-decoration:none;
-        }
-
-        .MyIF
-        {
-            color:#42d4ff;
-        }
-
-        .box-show-out
-        {
-            -webkit-box-shadow:0 0 5px 5px #49DFFF;
-            -moz-box-shadow:0 0 5px 5px #49DFFF;
-            box-shadow:0 0 5px 5px #49DFFF;
-        }
-        .box-show-out2
-        {
-            border-radius:15px;
-            background-color:#2E2E2E;
-            -webkit-box-shadow:0 0 5px 5px #B29AFF;
-            -moz-box-shadow:0 0 5px 5px #B29AFF;
-            box-shadow:0 0 5px 5px #B29AFF;
-        }
-
-
-        /* 控制渐变效果 */
-        .end-boder
-        {
-            font-weight: 900;
-            background-image: -webkit-linear-gradient(left, #2ed8ff, #9b7cf7 25%, #2ed8ff 50%, #9b7cf7 75%, #2ed8ff);
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-            -webkit-background-size: 200% 100%;
-            -webkit-animation: masked-animation 3s infinite linear;
-        }
-        @-webkit-keyframes masked-animation
-        {
-            0%  { background-position: 0 0;}
-            100% { background-position: -100% 0;}
-        }
-
-    </style>
-
-
 </head>
 <body>
-
-    <style>
-        nav>a>div
-        {
-            width:100px;
-            height:40px;
-            padding-left:32px;
-            background: url(images/common/first.png);
-            background-size:100% 100%;
-            font:italic normal bold 12px/2.5em 宋体,verdana;
-        }
-        nav>a>div.MyIF:hover
-        {
-            color: white;
-        }
-        nav>a:nth-of-type(2)>div
-        {
-            width:95px;
-            padding-left:40px;
-            background: url(images/common/second.png);
-            background-size:100% 100%;
-        }
-        nav>a:last-child>div
-        {
-            width:100px;
-            color: #585451;
-            padding-left:55px;
-            background: url(images/common/last.png);
-            background-size:100% 100%;
-        }
-    </style>
     <!-- 面包屑导航 -->
-    <nav style="position: absolute; top:0; left:130px;">
-        <a href="main.html" style="position:absolute; z-index:99;"><div class="MyIF home"> 主页</div></a>
-        <a href="#" style="position: absolute; top:0; left:108px; z-index:98;"><div class="MyIF music-albu-2"> 新碟</div></a>
+    <nav id="breadcrumb">
+        <a href="main.html" style="z-index:99;"><div class="MyIF home"> 主页</div></a>
+        <a href="#" style="top:0; left:108px; z-index:98;"><div class="MyIF music-albu-2"> 新碟</div></a>
     </nav>
 
-    <div class="box-show-out2" style="width:900px;  margin-left:auto; margin-right:115px; margin-top:25px; padding-bottom:80px;">
-        <div style="width:92%; padding:60px 0 0 0; margin: auto;">
+    <div class="box-show2 newdisc-main">
+        <div>
 
-            <style>
-                table{
-                    width:100%;
-                    background-color: #2e2e2e;
-                    font-size:13px;
-                    border:5px groove #222222;
-                    border-radius:5px;
-                }
-                caption
-                {
-                    font-size:23px;
-                    color: #809cdf;
-                    margin:auto 0 10px;
-                }
-                th{
-                    line-height:35px;
-                    border-right: 2px solid #1b1b1b;
-                    color: #5bc2d4;
-                    font-weight:500;
-                    font-size:15px;
-                    background:#171717;
-                    background: -webkit-linear-gradient(top, #3A3A3A, #171717);
-                }
-                tbody td{
-                    height: 30px;
-                    color: #8A8A8A;
-                    padding-left:12px;
-                }
-                tbody td:first-child{
-                    width:80px;
-                }
-                tbody td:last-child{
-                    width:80px;
-                    padding-right:8px;
-                    text-align: right;
-                }
-                tbody tr:nth-of-type(even){
-                    background-color: #393939;
-                }
-                tbody tr:nth-of-type(odd){
-                    background-color: #585451;
-                }
-                tbody tr:hover > td{
-                    color:#FFF;
-                    background-color: #1E1E1E;
-                }
-            </style>
-
-
-            <div style="width:100%; height:200px; margin:18px auto 66px; position:relative;">
-                <div style="width:18%; display:inline-block;">
-                    <a href="album.html" >
-                        <div href="#" style="width:150px; height:129px; background:url(images/common/disc.png); background-size:100% 100%;">
-                            <img src="images/common/touxiang.jpg" style="width:109px; height:109px; margin:10px; float:left;">
-                        </div>
-                        <p style="height:20px; margin-top:2px; border-radius:5px; font:normal normal normal 14px/20px Arial,'Microsoft YaHei','微软雅黑'; color:#00CDFF; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center;">DiscName</p>
+            <div class="newdisc-part">
+                <div class="newdisc-info">
+                    <a href="album.html">
+                        <div><img src="images/common/touxiang.jpg"></div>
+                        <p class="s1c-Bg box-show3 hover-undeline">DiscName</p>
                     </a>
-                    <a href="#" onclick="window.top.niftymodalsByModelName('modal-collection','');" style="width:100px; height:38px; margin:0 13px 8px; padding-left:12px; padding-right:3px; display:inline-block; border-radius:8px; background:url(images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color: #585858; font-size:16px; font-weight:700; line-height:38px;">
-                        收藏全部
-                        <span class="MyIF add-collection" style="float:right; font-size:22px; color:white"></span>
-                    </a>
-
                 </div>
-                <a href="#" style="width:100px; height:38px; top:-18px; right:0; padding-left:12px; padding-right:3px; position:absolute; border-radius:8px; background:url(images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color: #585858; font-size:16px; font-weight:700; line-height:38px;">
-                    播放全部
-                    <span class="MyIF play" style="float:right; font-size:22px; color:white"></span>
+                <a class="glassButton" href="album.html">
+                    查看歌单
+                    <i class="MyIF questionnaire-2"></i>
                 </a>
-                <table class="box-show-out" cellpadding="0" cellspacing="0" style="width:78%; height:200px; margin:18px auto; float:right;">
+                <table class="box-show1 specialTable" cellpadding="0" cellspacing="0">
                     <tr>
                         <th></th><th>歌单名</th><th>次数</th>
                     </tr>
                     <tr>
-                        <td>01</td><td>Bangalore</td><td>560001</td>
+                        <td>01</td>
+                        <td>
+                            <a href="song.html">Bangalore</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>560001</td>
                     </tr>
                     <tr>
-                        <td>02</td><td>Mumbai</td><td>400003</td>
+                        <td>02</td>
+                        <td>
+                            <a href="song.html">Mumbai</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>400003</td>
                     </tr>
                     <tr>
-                        <td>03</td><td>Pune</td><td>411027</td>
+                        <td>03</td>
+                        <td>
+                            <a href="song.html">Pune</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>411027</td>
                     </tr>
                     <tr>
-                        <td>04</td><td>Bangalore</td><td>560001</td>
+                        <td>04</td>
+                        <td>
+                            <a href="song.html">Bangalore</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>560001</td>
                     </tr>
                     <tr>
-                        <td>05</td><td>Mumbai</td><td>400003</td>
+                        <td>05</td>
+                        <td>
+                            <a href="song.html">Mumbai</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>400003</td>
                     </tr>
                 </table>
             </div>
-            <div style="width:100%; height:200px; margin:18px auto 66px; position:relative;">
-                <div style="width:18%; display:inline-block;">
-                    <a href="album.html" >
-                        <div href="#" style="width:150px; height:129px; background:url(images/common/disc.png); background-size:100% 100%;">
-                            <img src="images/common/touxiang.jpg" style="width:109px; height:109px; margin:10px; float:left;">
-                        </div>
-                        <p style="height:20px; margin-top:2px; border-radius:5px; font:normal normal normal 14px/20px Arial,'Microsoft YaHei','微软雅黑'; color:#00CDFF; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center;">DiscName</p>
-                    </a>
-                    <a href="#" onclick="window.top.niftymodalsByModelName('modal-collection','');" style="width:100px; height:38px; margin:0 13px 8px; padding-left:12px; padding-right:3px; display:inline-block; border-radius:8px; background:url(images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color: #585858; font-size:16px; font-weight:700; line-height:38px;">
-                        收藏全部
-                        <span class="MyIF add-collection" style="float:right; font-size:22px; color:white"></span>
-                    </a>
 
+            <div class="newdisc-part">
+                <div class="newdisc-info">
+                    <a href="album.html">
+                        <div><img src="images/common/touxiang.jpg"></div>
+                        <p class="s1c-Bg box-show3 hover-undeline">DiscName</p>
+                    </a>
                 </div>
-                <a href="#" style="width:100px; height:38px; top:-18px; right:0; padding-left:12px; padding-right:3px; position:absolute; border-radius:8px; background:url(images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color: #585858; font-size:16px; font-weight:700; line-height:38px;">
-                    播放全部
-                    <span class="MyIF play" style="float:right; font-size:22px; color:white"></span>
+                <a class="glassButton" href="album.html">
+                    查看歌单
+                    <i class="MyIF questionnaire-2"></i>
                 </a>
-                <table class="box-show-out" cellpadding="0" cellspacing="0" style="width:78%; height:200px; margin:18px auto; float:right;">
+                <table class="box-show1 specialTable" cellpadding="0" cellspacing="0">
                     <tr>
                         <th></th><th>歌单名</th><th>次数</th>
                     </tr>
                     <tr>
-                        <td>01</td><td>Bangalore</td><td>560001</td>
+                        <td>01</td>
+                        <td>
+                            <a href="song.html">Bangalore</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>560001</td>
                     </tr>
                     <tr>
-                        <td>02</td><td>Mumbai</td><td>400003</td>
+                        <td>02</td>
+                        <td>
+                            <a href="song.html">Mumbai</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>400003</td>
                     </tr>
                     <tr>
-                        <td>03</td><td>Pune</td><td>411027</td>
+                        <td>03</td>
+                        <td>
+                            <a href="song.html">Pune</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>411027</td>
                     </tr>
                     <tr>
-                        <td>04</td><td>Bangalore</td><td>560001</td>
+                        <td>04</td>
+                        <td>
+                            <a href="song.html">Bangalore</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>560001</td>
                     </tr>
                     <tr>
-                        <td>05</td><td>Mumbai</td><td>400003</td>
+                        <td>05</td>
+                        <td>
+                            <a href="song.html">Mumbai</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>400003</td>
                     </tr>
                 </table>
             </div>
-            <div style="width:100%; height:200px; margin:18px auto 66px; position:relative;">
-                <div style="width:18%; display:inline-block;">
-                    <a href="album.html" >
-                        <div href="#" style="width:150px; height:129px; background:url(images/common/disc.png); background-size:100% 100%;">
-                            <img src="images/common/touxiang.jpg" style="width:109px; height:109px; margin:10px; float:left;">
-                        </div>
-                        <p style="height:20px; margin-top:2px; border-radius:5px; font:normal normal normal 14px/20px Arial,'Microsoft YaHei','微软雅黑'; color:#00CDFF; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center;">DiscName</p>
-                    </a>
-                    <a href="#" onclick="window.top.niftymodalsByModelName('modal-collection','');" style="width:100px; height:38px; margin:0 13px 8px; padding-left:12px; padding-right:3px; display:inline-block; border-radius:8px; background:url(images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color: #585858; font-size:16px; font-weight:700; line-height:38px;">
-                        收藏全部
-                        <span class="MyIF add-collection" style="float:right; font-size:22px; color:white"></span>
-                    </a>
 
+            <div class="newdisc-part">
+                <div class="newdisc-info">
+                    <a href="album.html">
+                        <div><img src="images/common/touxiang.jpg"></div>
+                        <p class="s1c-Bg box-show3 hover-undeline">DiscName</p>
+                    </a>
                 </div>
-                <a href="#" style="width:100px; height:38px; top:-18px; right:0; padding-left:12px; padding-right:3px; position:absolute; border-radius:8px; background:url(images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color: #585858; font-size:16px; font-weight:700; line-height:38px;">
-                    播放全部
-                    <span class="MyIF play" style="float:right; font-size:22px; color:white"></span>
+                <a class="glassButton" href="album.html">
+                    查看歌单
+                    <i class="MyIF questionnaire-2"></i>
                 </a>
-                <table class="box-show-out" cellpadding="0" cellspacing="0" style="width:78%; height:200px; margin:18px auto; float:right;">
+                <table class="box-show1 specialTable" cellpadding="0" cellspacing="0">
                     <tr>
                         <th></th><th>歌单名</th><th>次数</th>
                     </tr>
                     <tr>
-                        <td>01</td><td>Bangalore</td><td>560001</td>
+                        <td>01</td>
+                        <td>
+                            <a href="song.html">Bangalore</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>560001</td>
                     </tr>
                     <tr>
-                        <td>02</td><td>Mumbai</td><td>400003</td>
+                        <td>02</td>
+                        <td>
+                            <a href="song.html">Mumbai</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>400003</td>
                     </tr>
                     <tr>
-                        <td>03</td><td>Pune</td><td>411027</td>
+                        <td>03</td>
+                        <td>
+                            <a href="song.html">Pune</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>411027</td>
                     </tr>
                     <tr>
-                        <td>04</td><td>Bangalore</td><td>560001</td>
+                        <td>04</td>
+                        <td>
+                            <a href="song.html">Bangalore</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>560001</td>
                     </tr>
                     <tr>
-                        <td>05</td><td>Mumbai</td><td>400003</td>
+                        <td>05</td>
+                        <td>
+                            <a href="song.html">Mumbai</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>400003</td>
                     </tr>
                 </table>
             </div>
-            <div style="width:100%; height:200px; margin:18px auto 66px; position:relative;">
-                <div style="width:18%; display:inline-block;">
-                    <a href="album.html" >
-                        <div href="#" style="width:150px; height:129px; background:url(images/common/disc.png); background-size:100% 100%;">
-                            <img src="images/common/touxiang.jpg" style="width:109px; height:109px; margin:10px; float:left;">
-                        </div>
-                        <p style="height:20px; margin-top:2px; border-radius:5px; font:normal normal normal 14px/20px Arial,'Microsoft YaHei','微软雅黑'; color:#00CDFF; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center;">DiscName</p>
-                    </a>
-                    <a href="#" onclick="window.top.niftymodalsByModelName('modal-collection','');" style="width:100px; height:38px; margin:0 13px 8px; padding-left:12px; padding-right:3px; display:inline-block; border-radius:8px; background:url(images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color: #585858; font-size:16px; font-weight:700; line-height:38px;">
-                        收藏全部
-                        <span class="MyIF add-collection" style="float:right; font-size:22px; color:white"></span>
-                    </a>
 
+            <div class="newdisc-part">
+                <div class="newdisc-info">
+                    <a href="album.html">
+                        <div><img src="images/common/touxiang.jpg"></div>
+                        <p class="s1c-Bg box-show3 hover-undeline">DiscName</p>
+                    </a>
                 </div>
-                <a href="#" style="width:100px; height:38px; top:-18px; right:0; padding-left:12px; padding-right:3px; position:absolute; border-radius:8px; background:url(images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color: #585858; font-size:16px; font-weight:700; line-height:38px;">
-                    播放全部
-                    <span class="MyIF play" style="float:right; font-size:22px; color:white"></span>
+                <a class="glassButton" href="album.html">
+                    查看歌单
+                    <i class="MyIF questionnaire-2"></i>
                 </a>
-                <table class="box-show-out" cellpadding="0" cellspacing="0" style="width:78%; height:200px; margin:18px auto; float:right;">
+                <table class="box-show1 specialTable" cellpadding="0" cellspacing="0">
                     <tr>
                         <th></th><th>歌单名</th><th>次数</th>
                     </tr>
                     <tr>
-                        <td>01</td><td>Bangalore</td><td>560001</td>
+                        <td>01</td>
+                        <td>
+                            <a href="song.html">Bangalore</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>560001</td>
                     </tr>
                     <tr>
-                        <td>02</td><td>Mumbai</td><td>400003</td>
+                        <td>02</td>
+                        <td>
+                            <a href="song.html">Mumbai</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>400003</td>
                     </tr>
                     <tr>
-                        <td>03</td><td>Pune</td><td>411027</td>
+                        <td>03</td>
+                        <td>
+                            <a href="song.html">Pune</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>411027</td>
                     </tr>
                     <tr>
-                        <td>04</td><td>Bangalore</td><td>560001</td>
+                        <td>04</td>
+                        <td>
+                            <a href="song.html">Bangalore</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>560001</td>
                     </tr>
                     <tr>
-                        <td>05</td><td>Mumbai</td><td>400003</td>
+                        <td>05</td>
+                        <td>
+                            <a href="song.html">Mumbai</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>400003</td>
                     </tr>
                 </table>
             </div>
-            <div style="width:100%; height:200px; margin:18px auto 66px; position:relative;">
-                <div style="width:18%; display:inline-block;">
-                    <a href="album.html" >
-                        <div href="#" style="width:150px; height:129px; background:url(images/common/disc.png); background-size:100% 100%;">
-                            <img src="images/common/touxiang.jpg" style="width:109px; height:109px; margin:10px; float:left;">
-                        </div>
-                        <p style="height:20px; margin-top:2px; border-radius:5px; font:normal normal normal 14px/20px Arial,'Microsoft YaHei','微软雅黑'; color:#00CDFF; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center;">DiscName</p>
-                    </a>
-                    <a href="#" onclick="window.top.niftymodalsByModelName('modal-collection','');" style="width:100px; height:38px; margin:0 13px 8px; padding-left:12px; padding-right:3px; display:inline-block; border-radius:8px; background:url(images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color: #585858; font-size:16px; font-weight:700; line-height:38px;">
-                        收藏全部
-                        <span class="MyIF add-collection" style="float:right; font-size:22px; color:white"></span>
-                    </a>
 
+            <div class="newdisc-part">
+                <div class="newdisc-info">
+                    <a href="album.html">
+                        <div><img src="images/common/touxiang.jpg"></div>
+                        <p class="s1c-Bg box-show3 hover-undeline">DiscName</p>
+                    </a>
                 </div>
-                <a href="#" style="width:100px; height:38px; top:-18px; right:0; padding-left:12px; padding-right:3px; position:absolute; border-radius:8px; background:url(images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color: #585858; font-size:16px; font-weight:700; line-height:38px;">
-                    播放全部
-                    <span class="MyIF play" style="float:right; font-size:22px; color:white"></span>
+                <a class="glassButton" href="album.html">
+                    查看歌单
+                    <i class="MyIF questionnaire-2"></i>
                 </a>
-                <table class="box-show-out" cellpadding="0" cellspacing="0" style="width:78%; height:200px; margin:18px auto; float:right;">
+                <table class="box-show1 specialTable" cellpadding="0" cellspacing="0">
                     <tr>
                         <th></th><th>歌单名</th><th>次数</th>
                     </tr>
                     <tr>
-                        <td>01</td><td>Bangalore</td><td>560001</td>
+                        <td>01</td>
+                        <td>
+                            <a href="song.html">Bangalore</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>560001</td>
                     </tr>
                     <tr>
-                        <td>02</td><td>Mumbai</td><td>400003</td>
+                        <td>02</td>
+                        <td>
+                            <a href="song.html">Mumbai</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>400003</td>
                     </tr>
                     <tr>
-                        <td>03</td><td>Pune</td><td>411027</td>
+                        <td>03</td>
+                        <td>
+                            <a href="song.html">Pune</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>411027</td>
                     </tr>
                     <tr>
-                        <td>04</td><td>Bangalore</td><td>560001</td>
+                        <td>04</td>
+                        <td>
+                            <a href="song.html">Bangalore</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>560001</td>
                     </tr>
                     <tr>
-                        <td>05</td><td>Mumbai</td><td>400003</td>
+                        <td>05</td>
+                        <td>
+                            <a href="song.html">Mumbai</a>
+                            <span class='songlistOper' style="top:-6px; right:8px; position:absolute; display:none;">
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF play"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF add-collection" onclick="window.top.niftymodalsByModelName('modal-collection','','')"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF menu"></i>
+                                <i style="margin:0 5px; font-size:23px;" class="MyIF download"></i>
+                            </span>
+                        </td>
+                        <td>400003</td>
                     </tr>
                 </table>
             </div>
-            <div style="width:100%; height:200px; margin:18px auto 66px; position:relative;">
-                <div style="width:18%; display:inline-block;">
-                    <a href="album.html" >
-                        <div href="#" style="width:150px; height:129px; background:url(images/common/disc.png); background-size:100% 100%;">
-                            <img src="images/common/touxiang.jpg" style="width:109px; height:109px; margin:10px; float:left;">
-                        </div>
-                        <p style="height:20px; margin-top:2px; border-radius:5px; font:normal normal normal 14px/20px Arial,'Microsoft YaHei','微软雅黑'; color:#00CDFF; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center;">DiscName</p>
-                    </a>
-                    <a href="#" onclick="window.top.niftymodalsByModelName('modal-collection','');" style="width:100px; height:38px; margin:0 13px 8px; padding-left:12px; padding-right:3px; display:inline-block; border-radius:8px; background:url(images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color: #585858; font-size:16px; font-weight:700; line-height:38px;">
-                        收藏全部<span class="MyIF add-collection" style="float:right; font-size:22px; color:white"></span>
-                    </a>
 
-                </div>
-                <a href="#" style="width:100px; height:38px; top:-18px; right:0; padding-left:12px; padding-right:3px; position:absolute; border-radius:8px; background:url(images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color: #585858; font-size:16px; font-weight:700; line-height:38px;">
-                    播放全部
-                    <span class="MyIF play" style="float:right; font-size:22px; color:white"></span>
-                </a>
-                <table class="box-show-out" cellpadding="0" cellspacing="0" style="width:78%; height:200px; margin:18px auto; float:right;">
-                    <tr>
-                        <th></th><th>歌单名</th><th>次数</th>
-                    </tr>
-                    <tr>
-                        <td>01</td><td>Bangalore</td><td>560001</td>
-                    </tr>
-                    <tr>
-                        <td>02</td><td>Mumbai</td><td>400003</td>
-                    </tr>
-                    <tr>
-                        <td>03</td><td>Pune</td><td>411027</td>
-                    </tr>
-                    <tr>
-                        <td>04</td><td>Bangalore</td><td>560001</td>
-                    </tr>
-                    <tr>
-                        <td>05</td><td>Mumbai</td><td>400003</td>
-                    </tr>
-                </table>
-            </div>
-
-            <style>
-                .paging
-                {
-                    margin:20px;
-                    float: right;
-                }
-                .paging>button
-                {
-                    width:40px;
-                    height:40px;
-                    border: none;
-                    margin-right:8px;
-                    color: #3F3F3F;
-                    font-size:18px;
-                    font-weight:700;
-                    background: url(./images/common/button-square-normal.png);
-                    background-size:100% 100%;
-                    box-shadow:0 5px 20px #161616;
-                }
-                .paging>.pageOperation
-                {
-                    height:30px;
-                    padding-top:1px;
-                    line-height:30px;
-                }
-
-                .paging>button:active
-                {
-                    color: #809cdf;
-                    background: url(./images/common/button-square-active.png);
-                    background-size:100% 100%;
-                    background-color: #2e2e2e;
-                    -webkit-transition: all .3s ease-out;
-                    transition: all .3s ease-out;
-                }
-                .paging>button.active
-                {
-                    -webkit-box-shadow:0 0 4px 4px #5bc2d4;
-                    -moz-box-shadow:0 0 4px 4px #5bc2d4;
-                    box-shadow:0 0 4px 4px #5bc2d4;
-                }
-            </style>
 
             <nav class="paging">
                 <button class="pageOperation  MyIF ahead" ></button>
@@ -446,15 +453,23 @@
             </nav>
 
         </div>
-
     </div>
 
-    <div style="height: 70px;"></div>
+    <div style="height:70px;"></div>
 
     <!-- Jsc部分 -->
 
     <!--jQuery框架-->
     <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+
+    <script language="JavaScript">
+        $("table.specialTable tr").mousemove(function () {
+            $(this).find($("span.songlistOper")).fadeIn();
+        }).mouseleave(function () {
+            $(this).find($("span.songlistOper")).fadeOut();
+        });
+
+    </script>
 
 
 

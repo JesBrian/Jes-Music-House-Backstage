@@ -1,0 +1,9 @@
+/*
+ * 前端新碟上架 CSS
+ */
+
+.songlist-main {  width:900px; margin:25px 115px 0 auto; padding-bottom:70px;  }
+.songlist-main > span {  top:98px; left:50%; position:relative; z-index:9;  }
+.songlist-main > span > a {  margin-right:28px;  }
+.songlist-main > div {  width:85%; height:90%; padding:20px; margin: auto;  }
+.specialTable .songist-songlist a:hover {  color:#70ff92; text-decoration:underline;  }

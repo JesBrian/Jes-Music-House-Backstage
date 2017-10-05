@@ -6,134 +6,25 @@
 
 
     <!-- CSS部分 -->
+    <link rel="stylesheet" type="text/css" href="css/index/common.css">
+
+    <link rel="stylesheet" type="text/css" href="css/index/account.css">
+
 
     <!-- 自用字体图标 -->
     <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
 
-    <!-- 临时CSS -->
-    <style type="text/css">
-        body
-        {
-            background-color:transparent;
-        }
-        li
-        {
-            list-style-type:none;
-        }
-        a,a:hover,a:focus,a:active
-        {
-            text-decoration:none;
-        }
-        .MyIF
-        {
-            color:#42d4ff;
-        }
-
-        .box-show-out
-        {
-            -webkit-box-shadow:0 0 5px 5px #49DFFF;
-            -moz-box-shadow:0 0 5px 5px #49DFFF;
-            box-shadow:0 0 5px 5px #49DFFF;
-        }
-        .box-show-out2
-        {
-            border-radius:15px;
-            background-color:#2E2E2E;
-            -webkit-box-shadow:0 0 5px 5px #B29AFF;
-            -moz-box-shadow:0 0 5px 5px #B29AFF;
-            box-shadow:0 0 5px 5px #B29AFF;
-        }
-
-
-        /* 控制渐变效果 */
-        .end-boder
-        {
-            font-weight: 900;
-            background-image: -webkit-linear-gradient(left, #2ed8ff, #9b7cf7 25%, #2ed8ff 50%, #9b7cf7 75%, #2ed8ff);
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-            -webkit-background-size: 200% 100%;
-            -webkit-animation: masked-animation 3s infinite linear;
-        }
-        @-webkit-keyframes masked-animation
-        {
-            0%  { background-position: 0 0;}
-            100% { background-position: -100% 0;}
-        }
-
-    </style>
-
-
 </head>
 <body>
 
-
-    <style>
-        nav>a>div
-        {
-            width:100px;
-            height:40px;
-            padding-left:32px;
-            background: url(images/common/first.png);
-            background-size:100% 100%;
-            font:italic normal bold 12px/2.5em 宋体,verdana;
-        }
-        nav>a>div.MyIF:hover
-        {
-            color: white;
-        }
-        nav>a:nth-of-type(2)>div
-        {
-            width:95px;
-            padding-left:40px;
-            background: url(images/common/second.png);
-            background-size:100% 100%;
-        }
-        nav>a:last-child>div
-        {
-            width:100px;
-            color: #585451;
-            padding-left:55px;
-            background: url(images/common/last.png);
-            background-size:100% 100%;
-        }
-    </style>
     <!-- 面包屑导航 -->
-    <nav style="top:0; left:130px; position: absolute;">
-        <a href="main.html" style="position:absolute; z-index:99;"><div class="MyIF home"> 主页</div></a>
-        <a href="#" style="position: absolute; top:0; left:108px; z-index:98;"><div class="MyIF administrators-1"> 个人</div></a>
+    <nav id="breadcrumb">
+        <a href="main.html" style="z-index:99;"><div class="MyIF home"> 主页</div></a>
+        <a href="#" style="top:0; left:108px; z-index:98;"><div class="MyIF administrators-1"> 个人</div></a>
     </nav>
 
-    <style>
-        #per,#rank,#album,#account
-        {
-            width:120px;
-            height:50px;
-            display:block;
-            margin-top:7px;
-            border-radius:4px;
-            color: #01ebff;
-            letter-spacing:2px;
-            background: url(images/common/button-active.png) no-repeat;
-            background-size: 100% 100%;
-            background-color: #222222;
-        }
-        #navbar a.active
-        {
-            color: #585858;
-            font-weight:700;
-            -webkit-text-stroke: 0.2px #2b2a2a;
-            background: url(images/common/button-normal.png) no-repeat;
-            background-size: 100% 100%;
-            -webkit-box-shadow:0 0 2px 2px #32f6ff;
-            -moz-box-shadow:0 0 2px 2px #32f6ff;
-            box-shadow:0 0 2px 2px #32f6ff;
-            -webkit-transition: all .3s ease-out;
-            transition: all .3s ease-out;
-        }
-    </style>
     <!-- 伪导航栏 -->
-    <div id="navbar" style="position: absolute; top:222px; left:25px; text-align:center; line-height:50px;">
+    <div id="leftNavbar">
         <a href="function/accountInfo.html" target="function" id="account" class="active">账户信息</a>
         <a href="function/accountRecommend.html" target="function" id="per">个性推荐</a>
         <a href="function/accountRank.html" target="function" id="rank" >听歌排行</a>
@@ -141,11 +32,11 @@
     </div>
 
     <!-- 功能页面 -->
-    <div class="box-show-out2" style="width:900px; height:800px; margin:25px 115px 0 auto;">
-        <iframe name="function" style="width: 98%; height: 97%; padding:20px 12px; border: none;" src="function/accountInfo.html"></iframe>
+    <div class="box-show2 account-main">
+        <iframe name="function" src="function/accountInfo.html"></iframe>
     </div>
 
-    <div style="height: 70px;"></div>
+    <div style="height:70px;"></div>
 
     <!-- Jsc部分 -->
 

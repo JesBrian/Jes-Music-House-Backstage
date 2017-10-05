@@ -12,10 +12,11 @@
 
     <!-- 临时CSS -->
     <style type="text/css">
-        body {  background-color:transparent;  }
-        li {  list-style-type:none;  }
-        a,a:hover,a:focus,a:active {  text-decoration:none;  }
-        p {margin:0; padding:0; }
+        body {  color:white;  }
+        li,ul {  margin:0; padding:0; list-style-type:none;  }
+        a {  text-decoration:none;  cursor:pointer;  text-align:center;  }
+        p,h1,h2,h3,h4,h5,h6 {  margin:0;  padding:0;  }
+        dd {  margin:0;  float: left;  }
 
         .MyIF
         {
@@ -69,6 +70,7 @@
             background: url(images/common/first.png);
             background-size:100% 100%;
             font:italic normal bold 12px/2.5em 宋体,verdana;
+            text-align:left;
         }
         nav>a>div.MyIF:hover
         {
@@ -126,10 +128,10 @@
         }
     </style>
     <!-- 伪导航栏 -->
-    <div id="navbar" style="top:222px; left:25px; position:absolute; text-align:center; line-height:50px;">
-        <a id="song" class="active" href="function/searchSong.html" target="function">单曲</a>
-        <a id="album" href="function/searchAlbum.html" target="function">歌单</a>
-        <a id="singer"  href="function/searchSinger.html" target="function">歌手</a>
+    <div id="navbar" style="top:108px; left:25px; position:absolute; text-align:center; line-height:50px;">
+        <a id="song" class="active" href="function/searchSong.html" target="function">查询单曲</a>
+        <a id="album" href="function/searchAlbum.html" target="function">查询歌单</a>
+        <a id="singer"  href="function/searchSinger.html" target="function">查询歌手</a>
     </div>
 
 
@@ -320,6 +322,24 @@
 
     <!--jQuery框架-->
     <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+
+    <script>
+        $('#song').click(function () {
+            $('#song').addClass('active');
+            $('#album').removeClass('active');
+            $('#singer').removeClass('active');
+        });
+        $('#album').click(function () {
+            $('#album').addClass('active');
+            $('#song').removeClass('active');
+            $('#singer').removeClass('active');
+        });
+        $('#singer').click(function () {
+            $('#singer').addClass('active');
+            $('#song').removeClass('active');
+            $('#album').removeClass('active');
+        });
+    </script>
 
 </body>
 </html>

@@ -6,395 +6,192 @@
 
 
     <!-- CSS部分 -->
+    <link rel="stylesheet" type="text/css" href="css/index/common.css">
+
+    <link rel="stylesheet" type="text/css" href="css/index/popalbum.css">
+
 
     <!-- 自用字体图标 -->
     <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
 
-    <!-- 临时CSS -->
-    <style type="text/css">
-        body
-        {
-            background-color:transparent;
-        }
-        p
-        {
-            margin:0;
-            padding:0;
-        }
-        li
-        {
-            list-style-type:none;
-        }
-        a,a:hover,a:focus,a:active
-        {
-            text-decoration:none;
-            cursor:pointer;
-        }
-        .MyIF
-        {
-            color:#42d4ff;
-        }
-
-        .box-show-out
-        {
-            -webkit-box-shadow:0 0 5px 5px #49DFFF;
-            -moz-box-shadow:0 0 5px 5px #49DFFF;
-            box-shadow:0 0 5px 5px #49DFFF;
-        }
-        .box-show-out2
-        {
-            border-radius:15px;
-            background-color:#2E2E2E;
-            -webkit-box-shadow:0 0 5px 5px #B29AFF;
-            -moz-box-shadow:0 0 5px 5px #B29AFF;
-            box-shadow:0 0 5px 5px #B29AFF;
-        }
-
-
-        /* 控制渐变效果 */
-        .end-boder
-        {
-            font-weight: 900;
-            background-image: -webkit-linear-gradient(left, #2ed8ff, #9b7cf7 25%, #2ed8ff 50%, #9b7cf7 75%, #2ed8ff);
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-            -webkit-background-size: 200% 100%;
-            -webkit-animation: masked-animation 3s infinite linear;
-        }
-        @-webkit-keyframes masked-animation
-        {
-            0%  { background-position: 0 0;}
-            100% { background-position: -100% 0;}
-        }
-
-
-
-        /* -------------------
-            SuperBtn
-        -------------------- */
-        a.superBtn {
-            color: #AEAEAE;
-            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
-            font-weight: bold;
-            letter-spacing: .08em;
-            width: 120px;
-            height: 30px;
-            top:-3px;
-            line-height: 32px;
-            position: relative;
-            border-radius:2px;
-            background-size: 100%;
-            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2e3537), color-stop(100%, #424748));
-            background-image: -moz-linear-gradient(#2e3537, #424748);
-            background-image: -webkit-linear-gradient(#2e3537, #424748);
-            background-image: linear-gradient(#2e3537, #424748);
-            -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0px 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
-            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0px 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0px 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
-        }
-        a.superBtn:after {
-            width: 134px;
-            height: 40px;
-            top: -4.95px;
-            margin-left: 50%;
-            left: -67px;
-            content: '';
-            display: block;
-            border-radius:3px;
-            background-size: 100%;
-            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2af1fc), color-stop(100%, #17b2e6));
-            background-image: -moz-linear-gradient(#2af1fc, #17b2e6);
-            background-image: -webkit-linear-gradient(#2af1fc, #17b2e6);
-            background-image: linear-gradient(#2af1fc, #17b2e6);
-            -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6);
-            -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6);
-            box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6);
-            position: absolute;
-            z-index: -1;
-        }
-
-        /* -------------------
-            SuperBtn Hover
-        -------------------- */
-        a.superBtn:hover {
-            color: #70ff92;
-            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
-            background-size: 100%;
-            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #545454), color-stop(100%, #373738));
-            background-image: -moz-linear-gradient(#545454, #373738);
-            background-image: -webkit-linear-gradient(#545454, #373738);
-            background-image: linear-gradient(#545454, #373738);
-        }
-        a.superBtn:hover:after {
-            -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2);
-            -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2);
-            box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2);
-        }
-        a.superBtn:active {
-            color: #00ccff;
-            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0px 30px rgba(0, 255, 255, 0.7);
-            background: #333;
-            -moz-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
-            -webkit-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
-            box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
-        }
-
-    </style>
-
-
 </head>
 <body>
 
-    <style>
-        nav>a>div
-        {
-            width:100px;
-            height:40px;
-            padding-left:32px;
-            background: url(images/common/first.png);
-            background-size:100% 100%;
-            font:italic normal bold 12px/2.5em 宋体,verdana;
-        }
-        nav>a>div.MyIF:hover
-        {
-            color: white;
-        }
-        nav>a:nth-of-type(2)>div
-        {
-            width:95px;
-            padding-left:40px;
-            background: url(images/common/second.png);
-            background-size:100% 100%;
-        }
-        nav>a:last-child>div
-        {
-            width:100px;
-            color: #585451;
-            padding-left:55px;
-            background: url(images/common/last.png);
-            background-size:100% 100%;
-        }
-    </style>
     <!-- 面包屑导航 -->
-    <nav style="position: absolute; top:0; left:130px;">
-        <a href="main.html" style="position:absolute; z-index:99;"><div class="MyIF home"> 主页</div></a>
-        <a href="#" style="position: absolute; top:0; left:108px; z-index:98;"><div class="MyIF exponential"> 歌单</div></a>
+    <nav id="breadcrumb">
+        <a href="main.html" style="z-index:99;"><div class="MyIF home"> 主页</div></a>
+        <a href="#" style="top:0; left:108px; z-index:98;"><div class="MyIF exponential"> 歌单</div></a>
     </nav>
 
-
-    <style>
-        #per,#account
-        {
-            width:120px;
-            height:50px;
-            display:block;
-            margin-top:7px;
-            border-radius:4px;
-            color: #01ebff;
-            letter-spacing:2px;
-            background: url(images/common/button-active.png) no-repeat;
-            background-size: 100% 100%;
-            background-color: #222222;
-        }
-        #navbar a.active
-        {
-            color: #585858;
-            font-weight:700;
-            -webkit-text-stroke: 0.2px #2b2a2a;
-            background: url(images/common/button-normal.png) no-repeat;
-            background-size: 100% 100%;
-            -webkit-box-shadow:0 0 2px 2px #32f6ff;
-            -moz-box-shadow:0 0 2px 2px #32f6ff;
-            box-shadow:0 0 2px 2px #32f6ff;
-            -webkit-transition: all .3s ease-out;
-            transition: all .3s ease-out;
-        }
-    </style>
     <!-- 伪导航栏 -->
-    <div id="navbar" style="position: absolute; top:222px; left:25px; text-align:center; line-height:50px;">
+    <div id="leftNavbar">
         <a href="#" id="account" class="active">最新潮流</a>
         <a href="#" id="per">最火热门</a>
     </div>
 
-    <div class="box-show-out2" style="width:900px;  margin-left:auto; margin-right:115px; margin-top:25px; padding-bottom:70px;">
-        <div style="width:92%; height:100%; padding:40px 0 0 0; margin: auto;">
-
-            <div style="width:80%; margin:0 auto; padding:15px; border-radius:4px; border:0.5px solid #464646; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                <span id="songTypeName" style="margin:auto 18px; color:white; font-size:26px;">全部</span>
-                <span style="position:relative; z-index:9;">
-                    <a class='superBtn' onclick="window.top.niftymodalsByModelName('modal-category','');" style="display:inline-block; text-align:center;">选择分类</a>
+    <div class="box-show2 popalbum-main">
+        <div>
+            <div id="popalbum-kindstContent" class="s1c-Bg box-show3">
+                <span id="songTypeName">全部</span>
+                <span>
+                    <a class='superBtn joinSinger MyIF kinds' onclick="window.top.niftymodalsByModelName('modal-category','');">选择分类</a>
                 </span>
             </div>
 
-            <div style="width:100%; margin:25px 0 -28px 0; padding:18px 0 78px;">
+            <div id="popalbum-content">
 
-                <div style="width:138px; height:175px; margin:8px 0 18px 18px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
+                <div class="s1c-Bg box-show3">
                     <a href="album.html">
-                        <img src="images/common/touxiang.jpg" style="width:110px; height:110px; margin:15px auto 2px; border-radius:8px;">
-                        <p style="width:138px; height:23px; margin:0 auto; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">146cs吃撒kas</p>
-                        <p style="width:138px; height:23px; margin:-3px 8px; font:normal normal normal 12px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:left; overflow:hidden;">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
                     </a>
                 </div>
-                <div style="width:138px; height:175px; margin:8px 0 18px 18px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
+                <div class="s1c-Bg box-show3">
                     <a href="album.html">
-                        <img src="images/common/touxiang.jpg" style="width:110px; height:110px; margin:15px auto 2px; border-radius:8px;">
-                        <p style="width:138px; height:23px; margin:0 auto; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">146cs吃撒kas</p>
-                        <p style="width:138px; height:23px; margin:-3px 8px; font:normal normal normal 12px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:left; overflow:hidden;">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
                     </a>
                 </div>
-                <div style="width:138px; height:175px; margin:8px 0 18px 18px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
+                <div class="s1c-Bg box-show3">
                     <a href="album.html">
-                        <img src="images/common/touxiang.jpg" style="width:110px; height:110px; margin:15px auto 2px; border-radius:8px;">
-                        <p style="width:138px; height:23px; margin:0 auto; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">146cs吃撒kas</p>
-                        <p style="width:138px; height:23px; margin:-3px 8px; font:normal normal normal 12px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:left; overflow:hidden;">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
                     </a>
                 </div>
-                <div style="width:138px; height:175px; margin:8px 0 18px 18px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
+                <div class="s1c-Bg box-show3">
                     <a href="album.html">
-                        <img src="images/common/touxiang.jpg" style="width:110px; height:110px; margin:15px auto 2px; border-radius:8px;">
-                        <p style="width:138px; height:23px; margin:0 auto; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">146cs吃撒kas</p>
-                        <p style="width:138px; height:23px; margin:-3px 8px; font:normal normal normal 12px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:left; overflow:hidden;">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
                     </a>
                 </div>
-                <div style="width:138px; height:175px; margin:8px 0 18px 18px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
+                <div class="s1c-Bg box-show3">
                     <a href="album.html">
-                        <img src="images/common/touxiang.jpg" style="width:110px; height:110px; margin:15px auto 2px; border-radius:8px;">
-                        <p style="width:138px; height:23px; margin:0 auto; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">146cs吃撒kas</p>
-                        <p style="width:138px; height:23px; margin:-3px 8px; font:normal normal normal 12px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:left; overflow:hidden;">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
                     </a>
                 </div>
-
-                <div style="width:138px; height:175px; margin:8px 0 18px 18px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
+                <div class="s1c-Bg box-show3">
                     <a href="album.html">
-                        <img src="images/common/touxiang.jpg" style="width:110px; height:110px; margin:15px auto 2px; border-radius:8px;">
-                        <p style="width:138px; height:23px; margin:0 auto; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">146cs吃撒kas</p>
-                        <p style="width:138px; height:23px; margin:-3px 8px; font:normal normal normal 12px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:left; overflow:hidden;">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
                     </a>
                 </div>
-                <div style="width:138px; height:175px; margin:8px 0 18px 18px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
+                <div class="s1c-Bg box-show3">
                     <a href="album.html">
-                        <img src="images/common/touxiang.jpg" style="width:110px; height:110px; margin:15px auto 2px; border-radius:8px;">
-                        <p style="width:138px; height:23px; margin:0 auto; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">146cs吃撒kas</p>
-                        <p style="width:138px; height:23px; margin:-3px 8px; font:normal normal normal 12px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:left; overflow:hidden;">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
                     </a>
                 </div>
-                <div style="width:138px; height:175px; margin:8px 0 18px 18px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
+                <div class="s1c-Bg box-show3">
                     <a href="album.html">
-                        <img src="images/common/touxiang.jpg" style="width:110px; height:110px; margin:15px auto 2px; border-radius:8px;">
-                        <p style="width:138px; height:23px; margin:0 auto; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">146cs吃撒kas</p>
-                        <p style="width:138px; height:23px; margin:-3px 8px; font:normal normal normal 12px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:left; overflow:hidden;">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
                     </a>
                 </div>
-                <div style="width:138px; height:175px; margin:8px 0 18px 18px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
+                <div class="s1c-Bg box-show3">
                     <a href="album.html">
-                        <img src="images/common/touxiang.jpg" style="width:110px; height:110px; margin:15px auto 2px; border-radius:8px;">
-                        <p style="width:138px; height:23px; margin:0 auto; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">146cs吃撒kas</p>
-                        <p style="width:138px; height:23px; margin:-3px 8px; font:normal normal normal 12px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:left; overflow:hidden;">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
                     </a>
                 </div>
-                <div style="width:138px; height:175px; margin:8px 0 18px 18px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
+                <div class="s1c-Bg box-show3">
                     <a href="album.html">
-                        <img src="images/common/touxiang.jpg" style="width:110px; height:110px; margin:15px auto 2px; border-radius:8px;">
-                        <p style="width:138px; height:23px; margin:0 auto; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">146cs吃撒kas</p>
-                        <p style="width:138px; height:23px; margin:-3px 8px; font:normal normal normal 12px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:left; overflow:hidden;">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
                     </a>
                 </div>
-
-                <div style="width:138px; height:175px; margin:8px 0 18px 18px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
+                <div class="s1c-Bg box-show3">
                     <a href="album.html">
-                        <img src="images/common/touxiang.jpg" style="width:110px; height:110px; margin:15px auto 2px; border-radius:8px;">
-                        <p style="width:138px; height:23px; margin:0 auto; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">146cs吃撒kas</p>
-                        <p style="width:138px; height:23px; margin:-3px 8px; font:normal normal normal 12px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:left; overflow:hidden;">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
                     </a>
                 </div>
-                <div style="width:138px; height:175px; margin:8px 0 18px 18px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
+                <div class="s1c-Bg box-show3">
                     <a href="album.html">
-                        <img src="images/common/touxiang.jpg" style="width:110px; height:110px; margin:15px auto 2px; border-radius:8px;">
-                        <p style="width:138px; height:23px; margin:0 auto; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">146cs吃撒kas</p>
-                        <p style="width:138px; height:23px; margin:-3px 8px; font:normal normal normal 12px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:left; overflow:hidden;">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
                     </a>
                 </div>
-                <div style="width:138px; height:175px; margin:8px 0 18px 18px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
+                <div class="s1c-Bg box-show3">
                     <a href="album.html">
-                        <img src="images/common/touxiang.jpg" style="width:110px; height:110px; margin:15px auto 2px; border-radius:8px;">
-                        <p style="width:138px; height:23px; margin:0 auto; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">146cs吃撒kas</p>
-                        <p style="width:138px; height:23px; margin:-3px 8px; font:normal normal normal 12px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:left; overflow:hidden;">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
                     </a>
                 </div>
-                <div style="width:138px; height:175px; margin:8px 0 18px 18px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
+                <div class="s1c-Bg box-show3">
                     <a href="album.html">
-                        <img src="images/common/touxiang.jpg" style="width:110px; height:110px; margin:15px auto 2px; border-radius:8px;">
-                        <p style="width:138px; height:23px; margin:0 auto; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">146cs吃撒kas</p>
-                        <p style="width:138px; height:23px; margin:-3px 8px; font:normal normal normal 12px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:left; overflow:hidden;">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
                     </a>
                 </div>
-                <div style="width:138px; height:175px; margin:8px 0 18px 18px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
+                <div class="s1c-Bg box-show3">
                     <a href="album.html">
-                        <img src="images/common/touxiang.jpg" style="width:110px; height:110px; margin:15px auto 2px; border-radius:8px;">
-                        <p style="width:138px; height:23px; margin:0 auto; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">146cs吃撒kas</p>
-                        <p style="width:138px; height:23px; margin:-3px 8px; font:normal normal normal 12px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:left; overflow:hidden;">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
                     </a>
                 </div>
-
-
-
-                <style>
-                    .paging
-                    {
-                        margin:20px;
-                        float: right;
-                    }
-                    .paging>button
-                    {
-                        width:40px;
-                        height:40px;
-                        border: none;
-                        margin-right:8px;
-                        color: #3F3F3F;
-                        font-size:18px;
-                        font-weight:700;
-                        background: url(./images/common/button-square-normal.png);
-                        background-size:100% 100%;
-                        box-shadow:0 5px 20px #161616;
-                    }
-                    .paging>.pageOperation
-                    {
-                        height:30px;
-                        padding-top:1px;
-                        line-height:30px;
-                    }
-
-                    .paging>button:active
-                    {
-                        color: #809cdf;
-                        background: url(./images/common/button-square-active.png);
-                        background-size:100% 100%;
-                        background-color: #2e2e2e;
-                        -webkit-transition: all .3s ease-out;
-                        transition: all .3s ease-out;
-                    }
-                    .paging>button.active
-                    {
-                        -webkit-box-shadow:0 0 4px 4px #5bc2d4;
-                        -moz-box-shadow:0 0 4px 4px #5bc2d4;
-                        box-shadow:0 0 4px 4px #5bc2d4;
-                    }
-                </style>
-
-                <div>
-                    <nav class="paging">
-                        <button class="pageOperation  MyIF ahead" ></button>
-                        <button class="pageOperation MyIF double-arrow-left"></button>
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button class="active">4</button>
-                        <button>5</button>
-                        <button class="pageOperation MyIF double-arrow-right"></button>
-                        <button class="pageOperation MyIF back"></button>
-                    </nav>
+                <div class="s1c-Bg box-show3">
+                    <a href="album.html">
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                    </a>
+                </div>
+                <div class="s1c-Bg box-show3">
+                    <a href="album.html">
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                    </a>
+                </div>
+                <div class="s1c-Bg box-show3">
+                    <a href="album.html">
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                    </a>
+                </div>
+                <div class="s1c-Bg box-show3">
+                    <a href="album.html">
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                    </a>
+                </div>
+                <div class="s1c-Bg box-show3">
+                    <a href="album.html">
+                        <img src="images/common/touxiang.jpg">
+                        <p class="popalbum-song">146cs吃撒kas</p>
+                        <p class="popalbum-singer">by 14651csa相互行啊没看项目，阿奎罗下马萨卡nclkjasmclkascasmclkas</p>
+                    </a>
                 </div>
 
+                <nav class="paging">
+                    <button class="pageOperation  MyIF ahead" ></button>
+                    <button class="pageOperation MyIF double-arrow-left"></button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button class="active">4</button>
+                    <button>5</button>
+                    <button class="pageOperation MyIF double-arrow-right"></button>
+                    <button class="pageOperation MyIF back"></button>
+                </nav>
 
             </div>
         </div>
@@ -418,8 +215,6 @@
             $('#account').addClass('active');
             $('#per').removeClass('active');
         });
-
-
     </script>
 
 

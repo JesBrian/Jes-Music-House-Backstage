@@ -6,113 +6,93 @@
 
 
     <!-- CSS部分 -->
+    <link rel="stylesheet" type="text/css" href="css/index/common.css">
+
+    <link rel="stylesheet" type="text/css" href="css/index/aboutSong.css">
+
 
     <!-- 自用字体图标 -->
     <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
 
-    <!-- 临时CSS -->
-    <style type="text/css">
-        body
-        {
-            background-color:transparent;
-        }
-        li
-        {
-            list-style-type:none;
-        }
-        a,a:hover,a:focus,a:active
-        {
-            text-decoration:none;
-        }
-        .MyIF
-        {
-            color:#42d4ff;
-        }
-
-        .box-show-out
-        {
-            -webkit-box-shadow:0 0 5px 5px #49DFFF;
-            -moz-box-shadow:0 0 5px 5px #49DFFF;
-            box-shadow:0 0 5px 5px #49DFFF;
-        }
-        .box-show-out2
-        {
-            border-radius:15px;
-            background-color:#2E2E2E;
-            -webkit-box-shadow:0 0 5px 5px #B29AFF;
-            -moz-box-shadow:0 0 5px 5px #B29AFF;
-            box-shadow:0 0 5px 5px #B29AFF;
-        }
-
-
-        /* 控制渐变效果 */
-        .end-boder
-        {
-            font-weight: 900;
-            background-image: -webkit-linear-gradient(left, #2ed8ff, #9b7cf7 25%, #2ed8ff 50%, #9b7cf7 75%, #2ed8ff);
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-            -webkit-background-size: 200% 100%;
-            -webkit-animation: masked-animation 3s infinite linear;
-        }
-        @-webkit-keyframes masked-animation
-        {
-            0%  { background-position: 0 0;}
-            100% { background-position: -100% 0;}
-        }
-
-    </style>
-
-
 </head>
 <body>
 
-
-    <style>
-        nav>a>div
-        {
-            width:100px;
-            height:40px;
-            padding-left:32px;
-            background: url(images/common/first.png);
-            background-size:100% 100%;
-            font:italic normal bold 12px/2.5em 宋体,verdana;
-        }
-        nav>a>div.MyIF:hover
-        {
-            color: white;
-        }
-        nav>a:nth-of-type(2)>div
-        {
-            width:95px;
-            padding-left:40px;
-            background: url(images/common/second.png);
-            background-size:100% 100%;
-        }
-        nav>a:last-child>div
-        {
-            width:100px;
-            color: #585451;
-            padding-left:55px;
-            background: url(images/common/last.png);
-            background-size:100% 100%;
-        }
-    </style>
     <!-- 面包屑导航 -->
-    <nav style="position: absolute; top:0; left:130px;">
-        <a href="main.html" style="position:absolute; z-index:99;"><div class="MyIF home"> 主页</div></a>
-        <a href="#" style="position: absolute; top:0; left:108px; z-index:98;"><div class="MyIF administrators-1"> 歌手</div></a>
+    <nav id="breadcrumb">
+        <a href="main.html" style="z-index:99;"><div class="MyIF home"> 主页</div></a>
+        <a href="#" style="top:0; left:108px; z-index:98;"><div class="MyIF administrators-1"> 歌手</div></a>
     </nav>
 
+    <!-- 伪导航栏 -->
+    <div id="leftNavbar">
+        <a href="function/singerSong.html" target="function" id="account" class="active">热门单曲</a>
+        <a href="function/singerAlbum.html" target="function" id="per">所有专辑</a>
+        <a href="function/singerInfo.html" target="function" id="rank" >歌手介绍</a>
+    </div>
 
+    <div id="singer-main" class="box-show2">
+        <div>
+            <h2>XXXXX歌手 XXXXX乐团</h2>
+            <div id="singer-img" class="box-show3">
+                <img src="images/index/main/new-hot/3.jpg">
+                <span>
+                    <a class="joinSinger superBtn MyIF singer"> 个人主页</a>
+                </span>
+            </div>
+            <div id="otherSinger" class="box-show3">
+                <h5 class="otherSinger-title">相似歌手</h5>
+                <a href="singer.html" class="s1c-Bg box-show3">
+                    <img src="images/common/touxiang.jpg">
+                    <p class="hover-undeline">侧屋成为就是吧擦节后从数据看</p>
+                </a>
+                <a href="singer.html" class="s1c-Bg box-show3">
+                    <img src="images/common/touxiang.jpg">
+                    <p class="hover-undeline">侧屋成为就是吧擦节后从数据看</p>
+                </a>
+                <a href="singer.html" class="s1c-Bg box-show3">
+                    <img src="images/common/touxiang.jpg">
+                    <p class="hover-undeline">侧屋成为就是吧擦节后从数据看</p>
+                </a>
+                <a href="singer.html" class="s1c-Bg box-show3">
+                    <img src="images/common/touxiang.jpg">
+                    <p class="hover-undeline">侧屋成为就是吧擦节后从数据看</p>
+                </a>
+                <a href="singer.html" class="s1c-Bg box-show3">
+                    <img src="images/common/touxiang.jpg">
+                    <p class="hover-undeline">侧屋成为就是吧擦节后从数据看</p>
+                </a>
+            </div>
 
-    <div style="height: 70px;"></div>
+            <iframe name="function" id="function" src="function/singerSong.html"></iframe>
+
+        </div>
+    </div>
+
+    <div style="height:70px;"></div>
+
 
     <!-- Jsc部分 -->
 
     <!--jQuery框架-->
     <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
 
+    <script>
+        $('#per').click(function () {
+            $('#per').addClass('active');
+            $('#rank').removeClass('active');
+            $('#account').removeClass('active');
+        });
+        $('#rank').click(function () {
+            $('#rank').addClass('active');
+            $('#per').removeClass('active');
+            $('#account').removeClass('active');
+        });
+        $('#account').click(function () {
+            $('#account').addClass('active');
+            $('#rank').removeClass('active');
+            $('#per').removeClass('active');
+        });
+    </script>
 
 </body>
 </html>

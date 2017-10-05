@@ -1,0 +1,9 @@
+/*
+ * 前端新碟上架 CSS
+ */
+
+.musician-main {  width:900px; margin:25px 115px 0 auto; padding-bottom:70px;  }
+.musician-main > div {  width:100%; height:440px; position:relative; background:url(../../images/index/musician-bg.png) no-repeat; background-size:100% 88%;  }
+.musician-main span {  top:68%; left:35%; position:absolute; z-index:9;  }
+#musician-info {  left:18%; bottom:28px; position:absolute;  }
+#musician-info > a {  margin:0 25px;  }

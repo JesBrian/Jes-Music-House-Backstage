@@ -1,0 +1,19 @@
+/*
+ * 前端账户信息 CSS
+ */
+
+.update-main {  width:900px; margin:25px 115px 0 auto; padding-bottom:18px;  }
+.update-main>div {  padding:28px 0 5px 50px; position:relative;  }
+.update-main table {  width:85%; height:600px; margin-bottom:38px;  }
+.update-main textarea {  width:100%; height: 52px; padding:8px 15px; border:2px solid #2E2E2E; resize:none; font:normal normal normal 16px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:3px;  }
+.update-main .mail {  width:60%; height:18px; padding:8px 18px; float:left; font:normal normal normal 16px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:3px;  }
+#date-range13 {  width:227px; padding:8px 0; font-size:16px; color:#00CDFF; text-align:center; letter-spacing:3px;  }
+#updateAvatar {  width:128px; top:208px; right:95px; position:absolute;  }
+#updateAvatar>img {  width:120px; height:120px; display:inline-block; border-radius:4px;  }
+#commitInfo {  bottom:8px; right:120px; position:absolute;  }
+
+
+
+input[type='radio']+label {  width:143px; height:30px; margin:3px 8px 0 0; padding:3px; font-size:22px; line-height: 30px;  }
+input[type='radio']+label:after {  top:0; left:-74.5px; width:143px; height:30px; padding:3px;  }
+input[type='radio']+label > span {  font-size:18px;  }

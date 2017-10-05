@@ -6,6 +6,10 @@
 
 
     <!-- CSS部分 -->
+    <link rel="stylesheet" type="text/css" href="css/index/common.css">
+
+    <link rel="stylesheet" type="text/css" href="css/index/update.css">
+
 
     <!-- 自用字体图标 -->
     <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
@@ -13,338 +17,108 @@
     <!-- 带搜索框的下拉列表 -->
     <link href="css/common/searchableSelect.css" rel="stylesheet" type="text/css">
 
-    <!-- 临时CSS -->
-    <style type="text/css">
-        body {  color:white; background:transparent; }
-        li,ul {  list-style-type:none;  }
-        a { text-decoration:none;  }
-        p { margin:0; pa}
-
-        .box-show-out {  -webkit-box-shadow:0 0 5px 5px #49DFFF;  -moz-box-shadow:0 0 5px 5px #49DFFF;  box-shadow:0 0 5px 5px #49DFFF;  }
-        .box-show-out2 {  width:1125px;  border-radius:15px;  background-color:#2E2E2E;  -webkit-box-shadow:0 0 5px 5px #B29AFF;  -moz-box-shadow:0 0 5px 5px #B29AFF;  box-shadow:0 0 5px 5px #B29AFF;  }
-
-
-
-        /* 控制渐变效果 */
-        .end-boder
-        {
-            font-weight: 900;
-            background-image: -webkit-linear-gradient(left, #2ed8ff, #9b7cf7 25%, #2ed8ff 50%, #9b7cf7 75%, #2ed8ff);
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-            -webkit-background-size: 200% 100%;
-            -webkit-animation: masked-animation 3s infinite linear;
-        }
-        @-webkit-keyframes masked-animation
-        {
-            0%  { background-position: 0 0;}
-            100% { background-position: -100% 0;}
-        }
-
-    </style>
-
-
 </head>
 <body>
 
-
-    <style>
-        nav>a>div
-        {
-            width:100px;
-            height:40px;
-            padding-left:32px;
-            background: url(images/common/first.png);
-            background-size:100% 100%;
-            font:italic normal bold 12px/2.5em 宋体,verdana;
-        }
-        nav>a>div.MyIF
-        {
-            color:#42d4ff;
-        }
-        nav>a>div.MyIF:hover
-        {
-            color: white;
-        }
-        nav>a:nth-of-type(2)>div
-        {
-            width:95px;
-            padding-left:40px;
-            background: url(images/common/second.png);
-            background-size:100% 100%;
-        }
-        nav>a:last-child>div
-        {
-            width:100px;
-            color: #585451;
-            padding-left:55px;
-            background: url(images/common/last.png);
-            background-size:100% 100%;
-        }
-    </style>
     <!-- 面包屑导航 -->
-    <nav style="position: absolute; top:0; left:130px;">
-        <a href="main.html" style="position:absolute; z-index:99;"><div class="MyIF home"> 主页</div></a>
-        <a href="account.html" style="position:absolute; top:0; left:115px; z-index:98;"><div class="MyIF administrators-1"> 个人</div></a>
-        <a href="#" style="position:absolute; top:0; left:225px; z-index:97;"><div class="MyIF alter-information"> 修改</div></a>
+    <nav id="breadcrumb">
+        <a href="main.html" style="z-index:99;"><div class="MyIF home"> 主页</div></a>
+        <a href="account.html" style="top:0; left:115px; z-index:98;"><div class="MyIF administrators-1"> 个人</div></a>
+        <a href="#" style="top:0; left:225px; z-index:97;"><div class="MyIF alter-information"> 修改</div></a>
     </nav>
 
-
-    <div class="box-show-out2" style="width:900px; height:800px; margin-left:auto;  margin-top:25px; margin-right:115px;">
-
-        <div style="padding:50px 0 5px 50px;">
-
-            <form style="height:700px; position: relative; color:white">
-                <table style="width:85%; height:600px;">
-                    <tr>
-                        <td>简介：</td>
-                        <td style="width:90%; ">
-                            <textarea style="width:100%; height: 52px; padding:8px 15px; resize:none; font:normal normal normal 16px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:3px; border:none; border-radius:5px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>地区：</td>
-                        <td style="width:90%; ">
+    <div class="box-show2 update-main">
+        <div>
+            <table>
+                <tr>
+                    <td>简介：</td>
+                    <td><textarea class="s1c-Bg box-show3"></textarea></td>
+                </tr>
+                <tr>
+                    <td>地区：</td>
+                    <td>
+                        <select>
+                            <option value="HTML素材网">广东</option>
+                            <option value="BlackBerry">深证</option>
+                            <option value="device">吃撒</option>
+                            <option value="with">vwvw</option>
+                            <option value="entertainment">没有人没人</option>
+                            <option value="and">and</option>
+                            <option value="social">vwev</option>
+                            <option value="networking">樱桃慢慢</option>
+                            <option value="apps">vds</option>
+                            <option value="or">vvq别人</option>
+                            <option value="reviews">reviews</option>
+                            <option value="by">by</option>
+                            <option value="real">real</option>
+                        </select>
+                        <select>
+                            <option value="HTML素材网">HTML素材网</option>
+                            <option value="BlackBerry">BlackBerry</option>
+                            <option value="device">device</option>
+                            <option value="with">with</option>
+                            <option value="entertainment">entertainment</option>
+                            <option value="Afbb">Afbb</option>
+                            <option value="Akademie">Akademie</option>
+                            <option value="Berlin">Berlin</option>
+                            <option value="reviews">reviews</option>
+                            <option value="by">by</option>
+                            <option value="real">real</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>性别：</td>
+                    <td>
+                        <input type='radio' id='boy' name='radio'>
+                        <label for='boy' class="MyIF boy-2"><span> 可爱的男孩</span></label>
+                        <input type='radio' id='girl' name='radio'>
+                        <label for='girl' class="MyIF girl-2"><span> 性感的女孩</span></label>
+                        <input type='radio' id='secrecy' name='radio' checked='checked'>
+                        <label for='secrecy' class="MyIF mysteryman"><span> 神秘的秀吉</span></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>生日：</td>
+                    <td><input id="date-range13" class="s1c-Bg box-show3" type="text" value="1999-01-01"></td>
+                </tr>
+                <tr>
+                    <td>邮箱：</td>
+                    <td>
+                        <input class="s1c-Bg box-show3 mail" type="text">
+                        <div style="margin-top:4px; display:inline-block">
                             <select>
-                                <option value="HTML素材网">广东</option>
-                                <option value="BlackBerry">深证</option>
-                                <option value="device">吃撒</option>
-                                <option value="with">vwvw</option>
-                                <option value="entertainment">没有人没人</option>
-                                <option value="and">and</option>
-                                <option value="social">vwev</option>
-                                <option value="networking">樱桃慢慢</option>
-                                <option value="apps">vds</option>
-                                <option value="or">vvq别人</option>
-                                <option value="apps">被</option>
-                                <option value="that">不为别人问你</option>
-                                <option value="will">比呢</option>
-                                <option value="boost">耳脑部</option>
-                                <option value="your">v去额我不去</option>
-                                <option value="productivity">不然</option>
-                                <option value="Download">version</option>
-                                <option value="or">女人</option>
-                                <option value="buy">veq</option>
-                                <option value="apps">vw</option>
-                                <option value="from">from</option>
-                                <option value="Afbb">v晚辈完备</option>
-                                <option value="Akademie">Akademie</option>
-                                <option value="Berlin">Berlin</option>
-                                <option value="reviews">reviews</option>
-                                <option value="by">by</option>
-                                <option value="real">real</option>
-                            </select>
-                            <select>
-                                <option value="HTML素材网">HTML素材网</option>
-                                <option value="BlackBerry">BlackBerry</option>
-                                <option value="device">device</option>
-                                <option value="with">with</option>
-                                <option value="entertainment">entertainment</option>
-                                <option value="and">and</option>
-                                <option value="social">social</option>
-                                <option value="networking">networking</option>
-                                <option value="apps">apps</option>
-                                <option value="or">or</option>
-                                <option value="apps">apps</option>
-                                <option value="that">that</option>
-                                <option value="will">will</option>
-                                <option value="boost">boost</option>
-                                <option value="your">your</option>
-                                <option value="productivity">productivity</option>
-                                <option value="Download">Download</option>
-                                <option value="or">or</option>
-                                <option value="buy">buy</option>
-                                <option value="apps">apps</option>
-                                <option value="from">from</option>
-                                <option value="Afbb">Afbb</option>
-                                <option value="Akademie">Akademie</option>
-                                <option value="Berlin">Berlin</option>
-                                <option value="reviews">reviews</option>
-                                <option value="by">by</option>
-                                <option value="real">real</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <style>
-                            input[type='radio'] + label {
-                                text-align: center;
-                                display: inline-block;
-                                text-decoration: none;
-                                cursor: pointer;
-                            }
-
-                            input[type='radio'] {
-                                display: none;
-                            }
-
-                            /* -------------------
-                                Default State
-                            -------------------- */
-                            input[type='radio'] + label {
-                                z-index: 1;
-                                margin: 0 10px 10px 0;
-                                width: 115.5px;
-                                height: 37.29px;
-                                line-height: 36.3px;
-                                position: relative;
-                                letter-spacing: .1em;
-                                color: #0e0e0e;
-                                text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
-                                font-weight: 500;
-                                background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #111111), color-stop(100%, #000000));
-                                background-image: -moz-linear-gradient(#111111, #000000);
-                                background-image: -webkit-linear-gradient(#111111, #000000);
-                                background-image: linear-gradient(#111111, #000000);
-                                -moz-border-radius: 3px;
-                                -webkit-border-radius: 3px;
-                                border-radius: 3px;
-                                -moz-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
-                                -webkit-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
-                                box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
-                            }
-
-                            input[type='radio'] + label:after {
-                                z-index: -1;
-                                content: '';
-                                cursor: pointer;
-                                top: 1.98px;
-                                margin-left: 50%;
-                                left: -55px;
-                                height: 33px;
-                                display: block;
-                                position: absolute;
-                                background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));
-                                background-image: -moz-linear-gradient(#444444, #373738);
-                                background-image: -webkit-linear-gradient(#444444, #373738);
-                                background-image: linear-gradient(#444444, #373738);
-                                -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
-                                -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
-                                box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
-                                -moz-border-radius: 2px;
-                                -webkit-border-radius: 2px;
-                                border-radius: 2px;
-                            }
-
-                            /* -------------------
-                                Hover States
-                            -------------------- */
-                            input[type='radio'] + label:hover {
-                                color: #AEAEAE;
-                                text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
-                            }
-
-                            input[type='radio'] + label:hover:after {
-                                background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #545454), color-stop(100%, #373738));
-                                background-image: -moz-linear-gradient(#545454, #373738);
-                                background-image: -webkit-linear-gradient(#545454, #373738);
-                                background-image: linear-gradient(#545454, #373738);
-                            }
-
-                            /* -------------------
-                                Active States
-                            -------------------- */
-                            input[type='radio']:checked + label {
-                                color: #00ccff;
-                                text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0px 30px rgba(0, 255, 255, 0.7);
-                                -moz-box-shadow: 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
-                                -webkit-box-shadow: 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
-                                box-shadow: 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
-                            }
-
-                            input[type='radio']:checked + label:after {
-                                background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #262627), color-stop(100%, #2d2d2e));
-                                background-image: -moz-linear-gradient(#262627, #2d2d2e);
-                                background-image: -webkit-linear-gradient(#262627, #2d2d2e);
-                                background-image: linear-gradient(#262627, #2d2d2e);
-                                -moz-box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
-                                -webkit-box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
-                                box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
-                            }
-
-                            /* -------------------
-                                Radio Specific Style
-                            -------------------- */
-                            input[type='radio'] + label {
-                                letter-spacing: 0;
-                                width:143px;
-                                height:30px;
-                                margin:3px 8px 0 0;
-                                padding:3px;
-                                font-size:22px;
-                                line-height: 30px;
-                            }
-
-                            input[type='radio'] + label:after {
-                                top:0px;
-                                left:-74.5px;
-                                width:143px;
-                                height:30px;
-                                padding:3px;
-                            }
-                            input[type='radio'] + label > span
-                            {
-                                font-size:18px;
-                            }
-                        </style>
-                        <td>性别：</td>
-                        <td style="width:90%;">
-                            <input type='radio' id='boy' name='radio'>
-                            <label for='boy' class="MyIF boy-2"><span> 可爱的男孩</span></label>
-                            <input type='radio' id='girl' name='radio'>
-                            <label for='girl' class="MyIF girl-2"><span> 性感的女孩</span></label>
-                            <input type='radio' id='secrecy' name='radio' checked='checked'>
-                            <label for='secrecy' class="MyIF mysteryman"><span> 神秘的秀吉</span></label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>生日：</td>
-                        <td style="width:90%;">
-                            <input id="date-range13" value="1999-01-01" style="width:227px; padding:8px 0; font-size:16px; color:#00CDFF; text-align:center; letter-spacing:3px; border:none; border-radius:5px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>兴趣：</td>
-                        <td style="width:90%; ">
-                            <textarea style="width:100%; height:46px; resize:none;  padding:8px 18px; font:normal normal normal 16px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:3px; border:none; border-radius:5px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>邮箱：</td>
-                        <td style="width:90%; ">
-                            <input type="text" style="width:60%; height:18px; padding:8px 18px; float:left; font:normal normal normal 16px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:3px; border:none; border-radius:5px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                            <select>
-                                <option>@qq.com</option>
+                                <option>@foxmail.com</option>
                                 <option>@163.com</option>
                                 <option>@126.com</option>
+                                <option>@qq.com</option>
+                                <option>@sina.com</option>
                                 <option>@hotmail.com</option>
                                 <option>@gmail.com</option>
-                                <option>@googlemail.com</option>
                             </select>
-                        </td>
-                    </tr>
-                </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>兴趣：</td>
+                    <td><textarea class="s1c-Bg box-show3"></textarea></td>
+                </tr>
+            </table>
 
-                <div onclick="window.top.niftymodalsByModelName('modal-uploadAvatar','','')">
-                    <img class="" src="images/common/touxiang.jpg" title="修改图像" style="width:120px; height:120px; top:168px; right:120px; position:absolute; float:left; border-radius:4px; -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                    <a href="#" style="width:105px; height:40px; top:298px; right:120px; position:absolute; padding-left:12px; padding-right:3px; border-radius:8px; background:url(images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color: #585858; font-size:16px; font-weight:700; line-height:40px;">
-                        修改头像
-                        <span class="MyIF avatar" style="float:right; font-size:24px; color:white"></span>
-                    </a>
-                </div>
-
-
-                <a style="width:135px; height:40px; right:50px; bottom:20px; padding-left:36px; border:none; border-radius:8px; position:absolute; background:url(images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color: #585858; font-size:16px; font-weight:700; line-height:40px; cursor:pointer;"
-                    onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要更新个人信息？');">
-                    提交修改
-                    <span class="MyIF alter-information" style="margin-right:8px; float:right; font-size:24px; color:white"></span>
+            <div id="updateAvatar" onclick="window.top.niftymodalsByModelName('modal-uploadAvatar','','')">
+                <img src="images/common/touxiang.jpg" class="box-show3" title="点击修改头像">
+                <a class="glassButton">
+                    修改头像<i class="MyIF avatar"></i>
                 </a>
-            </form>
+            </div>
 
+            <a id="commitInfo" class="glassButton" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要更新个人信息？');">
+                提交修改<i class="MyIF alter-information"></i>
+            </a>
         </div>
     </div>
 
-    <div style="height:90px;"></div>
+    <div style="height:70px;"></div>
 
     <!-- Jsc部分 -->
 

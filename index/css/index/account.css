@@ -1,0 +1,6 @@
+/*
+ * 前端账户信息 CSS
+ */
+
+.account-main, .outherUser-main {  width:900px; height:800px; margin:25px 115px 0 auto; padding-bottom:70px;  }
+.account-main>iframe, .outherUser-main>iframe {  width:98%; height: 97%; padding:20px 12px; border:none;  }

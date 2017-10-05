@@ -6,281 +6,116 @@
     <title> ♪ MusicHouse ♪ </title>
 
     <!-- CSS部分 -->
+    <link rel="stylesheet" type="text/css" href="css/index/common.css">
+
+
+    <link rel="stylesheet" type="text/css" href="css/index/main.css">
 
     <!-- 自用字体图标 -->
     <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
 
     <!--滚动条 CSS-->
     <link href="css/common/scrollbar.css" rel="stylesheet"/>
-
-
-    <!-- 临时CSS -->
-    <style type="text/css">
-        body {  color:white; }
-        li,ul {  list-style-type:none;  }
-        a { text-decoration:none;  }
-        p,h1,h2,h3,h4,h5,h6 {  margin:0;  padding:0;  }
-        dd {  margin:0;  float: left;  }
-
-        .hover-undeline:hover {  text-decoration:underline;  }
-
-        .MyIF
-        {
-            color:#42d4ff;
-        }
-
-        .box-show-out
-        {
-            -webkit-box-shadow:0 0 5px 5px #49DFFF;
-            -moz-box-shadow:0 0 5px 5px #49DFFF;
-            box-shadow:0 0 5px 5px #49DFFF;
-        }
-        .box-show-out2
-        {
-            width:1000px;
-            border-radius:10px;
-            background-color:#2E2E2E;
-            -webkit-box-shadow:0 0 5px 5px #B29AFF;
-            -moz-box-shadow:0 0 5px 5px #B29AFF;
-            box-shadow:0 0 5px 5px #B29AFF;
-        }
-
-        /* 控制渐变效果 */
-        .end-boder
-        {
-            font-weight:900;
-            background-image: -webkit-linear-gradient(left, #2ed8ff, #9b7cf7 25%, #2ed8ff 50%, #9b7cf7 75%, #2ed8ff);
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-            -webkit-background-size: 200% 100%;
-            -webkit-animation: masked-animation 3s infinite linear;
-        }
-        @-webkit-keyframes masked-animation
-        {
-            0%  { background-position: 0 0;}
-            100% { background-position: -100% 0;}
-        }
-
-    </style>
+    
 
 </head>
 <body>
 
 
     <!-- 热门新消息 -->
-    <div class="box-show-out2" id="new-hot" style="height:400px; margin:25px auto 0px; background:url(images/index/main/new-hot-bg.jpg) no-repeat; background-size:100% 100%;">
-        <iframe src="component/test.html" style=" margin-left:290px; margin-top:22px; height:380px; width:710px; border:none;"></iframe>
+    <div id="new-hot" class="box-show2">
+        <iframe src="component/test.html"></iframe>
     </div>
 
-
     <!-- 个性化推荐 -->
-    <div class="box-show-out2" style="height:255px; margin:80px auto 0;">
-        <div id="per-recommend-title">
-            <span class="MyIF cubes-1" style="float:left; margin:-10px 30px 0 7px; font-size:40px;"></span>
-            <h3 class="end-boder" style="margin:auto 15px auto 58px; border-bottom:5px groove #54ffa3; box-shadow:0 18px 20px #161616; font-size:23px; color: #1b86ff; line-height:40px;">
-                个性推荐
-            </h3>
-            <a href="#" style="margin:-32px 25px 0 0; float:right; color: white; font-family: 新宋体">更多 <span class="MyIF double-arrow-right"></span></a>
+    <div id="personalRecommend" class="box-show2">
+        <div class="partTitle">
+            <span class="MyIF hot"></span>
+            <h3 class="end-boder">个性推荐</h3>
         </div>
-
-        <div style="width:100%; height:175px; margin:18px auto 0; ">
-            <div style="width:300px; height:150px; margin:12px 0 0 28px; border-radius:15px; box-shadow:0 18px 20px #161616; background:url(images/common/calendar.png) no-repeat; background-size:100% 100%; float: left;">
-            </div>
-
-            <div style="width:158px; height:175px; margin:0 0 0 50px;  float:left; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
-                <a href="album.html">
-                    <img src="images/common/touxiang.jpg" style="width:120px; height:120px; margin:15px auto 5px; border-radius:8px;">
-                    <p style="width:138px; height:26px; margin:0 auto; font:normal normal normal 12px/13px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">14651csa相互行啊没看项目，阿奎罗下马萨卡c陈飒擦撒v是v啊vcasmclkas</p>
-                </a>
-            </div>
-            <div style="width:158px; height:175px; margin:0 0 0 50px;  float:left; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
-                <a href="album.html">
-                    <img src="images/common/touxiang.jpg" style="width:120px; height:120px; margin:15px auto 5px; border-radius:8px;">
-                    <p style="width:138px; height:26px; margin:0 auto; font:normal normal normal 12px/13px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">14651csa相互行啊没看项目，阿奎罗下马萨卡c陈飒擦撒v是v啊vcasmclkas</p>
-                </a>
-            </div>
-            <div style="width:158px; height:175px; margin:0 0 0 50px;  float:left; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); text-align:center">
-                <a href="album.html">
-                    <img src="images/common/touxiang.jpg" style="width:120px; height:120px; margin:15px auto 5px; border-radius:8px;">
-                    <p style="width:138px; height:26px; margin:0 auto; font:normal normal normal 12px/13px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">14651csa相互行啊没看项目，阿奎罗下马萨卡c陈飒擦撒v是v啊vcasmclkas</p>
-                </a>
-            </div>
+        <div id="today"></div><!-- 显示今天日期 -->
+        <!-- 三个推荐的歌单 -->
+        <div class="personalRecommendAlbum s1c-Bg box-show3">
+            <a href="album.html">
+                <img src="images/common/touxiang.jpg"><p>14651csa相互行啊没看项目，阿奎罗下马萨卡c陈飒擦撒v是v啊vcasmclkas</p>
+            </a>
+        </div>
+        <div class="personalRecommendAlbum s1c-Bg box-show3">
+            <a href="album.html">
+                <img src="images/common/touxiang.jpg"><p>14651csa相互行啊没看项目，阿奎罗下马萨卡c陈飒擦撒v是v啊vcasmclkas</p>
+            </a>
+        </div>
+        <div class="personalRecommendAlbum s1c-Bg box-show3">
+            <a href="album.html">
+                <img src="images/common/touxiang.jpg"><p>14651csa相互行啊没看项目，阿奎罗下马萨卡c陈飒擦撒v是v啊vcasmclkas</p>
+            </a>
         </div>
     </div>
 
 
     <!-- 热门推荐、排行榜 -->
-    <div style="height:520px;">
+    <div id="hot-rank">
 
         <!-- 热门推荐[左] -->
-        <style>
-            #wrapper
-            {
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-align: center;
-                -webkit-align-items: center;
-                -ms-flex-align: center;
-                align-items: center;
-            }
-            #left-side
-            {
-                height:70%;
-                width:13%;
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-align: center;
-                -webkit-align-items: center;
-                -ms-flex-align: center;
-                align-items: center;
-                -webkit-box-pack: center;
-                -webkit-justify-content: center;
-                -ms-flex-pack: center;
-                justify-content: center;
-            }
-            #left-side ul li
-            {
-                width:105px;
-                margin-left: -118px;
-                padding: 10px;
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: -ms-flexbox;
-                display: flex;
-                line-height: 34px;
-                color:#a072ee;
-                cursor: pointer;
-                -webkit-transition: all .2s ease-out;
-                transition: all .2s ease-out;
-            }
-            #left-side ul li:hover
-            {
-                color:#4b97ff;
-                -webkit-transition: all .2s ease-out;
-                transition: all .2s ease-out;
-            }
-            #left-side ul li.active {
-                color:#4b97ff;
-                background:url(./images/common/button-frame.jpg) no-repeat;
-                background-size: 100% 100%;
-                -webkit-box-shadow:0 0 2px 2px #60e099;
-                -moz-box-shadow:0 0 2px 2px #60e099;
-                box-shadow:0 0 2px 2px #60e099;
-                -webkit-transition: all .4s ease-out;
-                transition: all .4s ease-out;
-            }
-
-            #right-side {
-                height:340px;
-                width:100%;
-                margin:35px 20px -10px 0;
-                overflow: hidden;
-                background:url(./images/index/main/hot-recommon-bg.jpg) no-repeat right bottom;
-                background-color: #101010;
-                -webkit-box-shadow:0 0 2px 2px #49DFFF;
-                -moz-box-shadow:0 0 2px 2px #49DFFF;
-                box-shadow:0 0 2px 2px #49DFFF;
-            }
-            #first
-            {
-                height:340px;
-                -webkit-transition: all .6s ease-in-out;
-                transition: all .6s ease-in-out;
-                margin-top:0;
-                opacity:1;
-            }
-            #second
-            {
-                height:340px;
-                -webkit-transition: all .6s ease-in-out;
-                transition: all .6s ease-in-out;
-                margin-top:340px;
-                opacity:1;
-            }
-        </style>
-        <div class="box-show-out2" style="width:700px; height:440px; margin:80px 25px 0 88px; float:left">
-            <div >
-                <span class="MyIF hot" style="float:left; margin:-10px 30px 0 7px; font-size:40px;"></span>
-                <h3 class="end-boder" style="margin:auto 15px auto 58px; border-bottom:5px groove #54ffa3; box-shadow:0 18px 20px #161616; font-size:23px; color: #1b86ff; line-height:40px;">
-                    热门推荐
-                </h3>
-                <a href="popalbum.html" style="margin:-32px 25px 0 0; float:right; color: white; font-family: 新宋体">更多 <span class="MyIF double-arrow-right"></span></a>
+        <div id="hot-album" class="box-show2">
+            <div class="partTitle">
+                <span class="MyIF hot"></span>
+                <h3 class="end-boder">热门推荐</h3>
+                <a class="hover-undeline" href="popalbum.html">更多 <span class="MyIF double-arrow-right"></span></a>
             </div>
 
             <div id="wrapper">
                 <div id="left-side">
                     <ul>
-                        <li class="choose active">
-                            <span class="MyIF cubes-3" style="font-size:35px;"></span>&nbsp;热门推荐
-                        </li>
-                        <li class="pay">
-                            <span class="MyIF cubes-4" style="font-size:35px;"></span>&nbsp;歌曲分类
-                        </li>
+                        <li class="choose active"><span class="MyIF cubes-3" style="font-size:35px;"></span>&nbsp;热门推荐</li>
+                        <li class="pay"><span class="MyIF cubes-4" style="font-size:35px;"></span>&nbsp;歌曲分类</li>
                     </ul>
                 </div>
                 <div id="right-side">
                     <div id="first" class="active">
-                        <a href="album.html" style="width:110px; height:152px; margin:9px 9.6px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                            <img src="images/common/touxiang.jpg" style="width:100px; height:100px; margin:5px; border-radius:8px;">
-                            <p style="width:98px; height:32px; padding:0 5px; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">欧美霸歌CASx气女王a</p>
+                        <a class="s1c-Bg box-show3 hot-album-part" href="album.html">
+                            <img class="box-show3" src="images/common/touxiang.jpg"><p>欧美霸歌CASx气女王a</p>
                         </a>
-                        <a href="album.html" style="width:110px; height:152px; margin:9px 9.6px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                            <img src="images/common/touxiang.jpg" style="width:100px; height:100px; margin:5px; border-radius:8px;">
-                            <p style="width:98px; height:32px; padding:0 5px; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">欧美霸歌CASx气女王a</p>
+                        <a class="s1c-Bg box-show3 hot-album-part" href="album.html">
+                            <img class="box-show3" src="images/common/touxiang.jpg"><p>欧美霸歌CASx气女王a</p>
                         </a>
-                        <a href="album.html" style="width:110px; height:152px; margin:9px 9.6px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                            <img src="images/common/touxiang.jpg" style="width:100px; height:100px; margin:5px; border-radius:8px;">
-                            <p style="width:98px; height:32px; padding:0 5px; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">欧美霸歌CASx气女王a</p>
+                        <a class="s1c-Bg box-show3 hot-album-part" href="album.html">
+                            <img class="box-show3" src="images/common/touxiang.jpg"><p>欧美霸歌CASx气女王a</p>
                         </a>
-                        <a href="album.html" style="width:110px; height:152px; margin:9px 9.6px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                            <img src="images/common/touxiang.jpg" style="width:100px; height:100px; margin:5px; border-radius:8px;">
-                            <p style="width:98px; height:32px; padding:0 5px; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">欧美霸歌CASx气女王a</p>
+                        <a class="s1c-Bg box-show3 hot-album-part" href="album.html">
+                            <img class="box-show3" src="images/common/touxiang.jpg"><p>欧美霸歌CASx气女王a</p>
                         </a>
-                        <a href="album.html" style="width:110px; height:152px; margin:9px 9.6px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                            <img src="images/common/touxiang.jpg" style="width:100px; height:100px; margin:5px; border-radius:8px;">
-                            <p style="width:98px; height:32px; padding:0 5px; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">欧美霸歌CASx气女王a</p>
+                        <a class="s1c-Bg box-show3 hot-album-part" href="album.html">
+                            <img class="box-show3" src="images/common/touxiang.jpg"><p>欧美霸歌CASx气女王a</p>
                         </a>
-                        <a href="album.html" style="width:110px; height:152px; margin:9px 9.6px; display:inline-block;  border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                            <img src="images/common/touxiang.jpg" style="width:100px; height:100px; margin:5px; border-radius:8px;">
-                            <p style="width:98px; height:32px; padding:0 5px; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">欧美霸歌CASx气女王a</p>
+                        <a class="s1c-Bg box-show3 hot-album-part" href="album.html">
+                            <img class="box-show3" src="images/common/touxiang.jpg"><p>欧美霸歌CASx气女王a</p>
                         </a>
-                        <a href="album.html" style="width:110px; height:152px; margin:9px 9.6px; display:inline-block;  border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                            <img src="images/common/touxiang.jpg" style="width:100px; height:100px; margin:5px; border-radius:8px;">
-                            <p style="width:98px; height:32px; padding:0 5px; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">欧美霸歌CASx气女王a</p>
+                        <a class="s1c-Bg box-show3 hot-album-part" href="album.html">
+                            <img class="box-show3" src="images/common/touxiang.jpg"><p>欧美霸歌CASx气女王a</p>
                         </a>
                     </div>
                     <div id="second">
-                        <a href="album.html" style="width:110px; height:152px; margin:9px 9.6px; display:inline-block;  border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                            <img src="images/common/touxiang.jpg" style="width:100px; height:100px; margin:5px; border-radius:8px;">
-                            <p style="width:98px; height:32px; padding:0 5px; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">欧美霸歌CASx气女王b</p>
+                        <a class="s1c-Bg box-show3 hot-album-part" href="album.html">
+                            <img class="box-show3" src="images/common/touxiang.jpg"><p>欧美霸歌CASx气女王a</p>
                         </a>
-                        <a href="album.html" style="width:110px; height:152px; margin:9px 9.6px; display:inline-block;  border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                            <img src="images/common/touxiang.jpg" style="width:100px; height:100px; margin:5px; border-radius:8px;">
-                            <p style="width:98px; height:32px; padding:0 5px; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">欧美霸歌CASx气女王b</p>
+                        <a class="s1c-Bg box-show3 hot-album-part" href="album.html">
+                            <img class="box-show3" src="images/common/touxiang.jpg"><p>欧美霸歌CASx气女王a</p>
                         </a>
-                        <a href="album.html" style="width:110px; height:152px; margin:9px 9.6px; display:inline-block;  border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                            <img src="images/common/touxiang.jpg" style="width:100px; height:100px; margin:5px; border-radius:8px;">
-                            <p style="width:98px; height:32px; padding:0 5px; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">欧美霸歌CASx气女王b</p>
+                        <a class="s1c-Bg box-show3 hot-album-part" href="album.html">
+                            <img class="box-show3" src="images/common/touxiang.jpg"><p>欧美霸歌CASx气女王a</p>
                         </a>
-                        <a href="album.html" style="width:110px; height:152px; margin:9px 9.6px; display:inline-block;  border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                            <img src="images/common/touxiang.jpg" style="width:100px; height:100px; margin:5px; border-radius:8px;">
-                            <p style="width:98px; height:32px; padding:0 5px; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">欧美霸歌CASx气女王b</p>
+                        <a class="s1c-Bg box-show3 hot-album-part" href="album.html">
+                            <img class="box-show3" src="images/common/touxiang.jpg"><p>欧美霸歌CASx气女王a</p>
                         </a>
-                        <a href="album.html" style="width:110px; height:152px; margin:9px 9.6px; display:inline-block;  border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                            <img src="images/common/touxiang.jpg" style="width:100px; height:100px; margin:5px; border-radius:8px;">
-                            <p style="width:98px; height:32px; padding:0 5px; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">欧美霸歌CASx气女王b</p>
+                        <a class="s1c-Bg box-show3 hot-album-part" href="album.html">
+                            <img class="box-show3" src="images/common/touxiang.jpg"><p>欧美霸歌CASx气女王a</p>
                         </a>
-                        <a href="album.html" style="width:110px; height:152px; margin:9px 9.6px; display:inline-block;  border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                            <img src="images/common/touxiang.jpg" style="width:100px; height:100px; margin:5px; border-radius:8px;">
-                            <p style="width:98px; height:32px; padding:0 5px; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">欧美霸歌CASx气女王b</p>
+                        <a class="s1c-Bg box-show3 hot-album-part" href="album.html">
+                            <img class="box-show3" src="images/common/touxiang.jpg"><p>欧美霸歌CASx气女王a</p>
                         </a>
-                        <a href="album.html" style="width:110px; height:152px; margin:9px 9.6px; display:inline-block; border-radius:5px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">
-                            <img src="images/common/touxiang.jpg" style="width:100px; height:100px; margin:5px; border-radius:8px;">
-                            <p style="width:98px; height:32px; padding:0 5px; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;">欧美霸歌CASx气女王b</p>
+                        <a class="s1c-Bg box-show3 hot-album-part" href="album.html">
+                            <img class="box-show3" src="images/common/touxiang.jpg"><p>欧美霸歌CASx气女王a</p>
                         </a>
                     </div>
                 </div>
@@ -288,55 +123,8 @@
             </div>
         </div>
 
-
         <!-- 排行榜[右] -->
         <style>
-            table{
-                width:100%;
-                background-color: #2e2e2e;
-                font-size:13px;
-                border:5px groove #222222;
-                border-radius:5px;
-            }
-            caption
-            {
-                font-size:23px;
-                color: #809cdf;
-                margin:auto 0 10px;
-            }
-            th{
-                line-height:35px;
-                border-right: 2px solid #1b1b1b;
-                color: #5bc2d4;
-                font-weight:500;
-                font-size:15px;
-                background:#171717;
-                background: -webkit-linear-gradient(top, #3A3A3A, #171717);
-            }
-            tbody td{
-                height: 30px;
-                color: #8A8A8A;
-                padding-left:8px;
-            }
-            tbody td:first-child{
-                width:12px;
-            }
-            tbody td:last-child{
-                width:25px;
-                padding-right:5px;
-                text-align: right;
-            }
-            tbody tr:nth-of-type(even){
-                background-color: #393939;
-            }
-            tbody tr:nth-of-type(odd){
-                background-color: #585451;
-            }
-            tbody tr:hover > td{
-                color:#FFF;
-                background-color: #1E1E1E;
-            }
-            
 
             tbody tr:hover span.MyIF
             {
@@ -356,20 +144,18 @@
                 100% {top:0; left:6px;}
             }
         </style>
-        <div class="box-show-out2"  style="width:285px; height:440px; margin-top:80px; float:left">
-            <div >
-                <span class="MyIF exponential" style="float:left; margin:-10px 30px 0 7px; font-size:40px;"></span>
-                <h3 class="end-boder" style="margin:auto 15px auto 58px; border-bottom:5px groove #54ffa3; box-shadow:0 18px 20px #161616; font-size:23px; color: #1b86ff; line-height:40px;">
-                    排行榜
-                </h3>
-                <a href="songlist.html" style="margin:-32px 25px 0 0; float:right; color: white; font-family: 新宋体">更多 <span class="MyIF double-arrow-right"></span></a>
+        <div class="box-show2"  style="width:285px; height:440px; margin-top:80px; float:left">
+            <div class="partTitle">
+                <span class="MyIF exponential"></span>
+                <h3 class="end-boder">排行榜</h3>
+                <a class="hover-undeline" href="rank.html">更多 <span class="MyIF double-arrow-right"></span></a>
             </div>
 
-            <table class="table" cellpadding="0" cellspacing="0" style="width:90%; height:80%; margin:25px auto;">
+            <table class="specialTable" cellpadding="0" cellspacing="0">
                 <tbody>
                 <tr>
                     <td><span class="MyIF double-arrow-right"></span></td>
-                    <td>01 Bangalore</td>
+                    <td>01 Bangalorez</td>
                     <td style="position:relative">
                         <p style="top:3px; right:0; position:absolute;">
                             <i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i><i class="MyIF download" style="margin:0 2px" title="下载"></i>
@@ -380,9 +166,6 @@
                     <td><span class="MyIF double-arrow-right"></span></td>
                     <td>02 Mumbai</td>
                     <td style="position:relative">
-                        <p style="top:3px; right:0; position:absolute;">
-                            <i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i><i class="MyIF download" style="margin:0 2px" title="下载"></i>
-                        </p>
                     </td>
                 </tr>
                 <tr>
@@ -398,9 +181,6 @@
                     <td><span class="MyIF double-arrow-right"></span></td>
                     <td>04 Bangalore</td>
                     <td style="position:relative">
-                        <p style="top:3px; right:0; position:absolute;">
-                            <i class="MyIF play" style="margin:0 2px" title="播放"></i><i  class="MyIF menu" style="margin:0 2px" title="添加到播放列表"></i><i class="MyIF add-collection" style="margin:0 2px" title="收藏"></i><i class="MyIF download" style="margin:0 2px" title="下载"></i>
-                        </p>
                     </td>
                 </tr>
                 <tr>
@@ -465,101 +245,75 @@
 
 
     <!-- 新碟上架 -->
-    <!-- 临时CSS -->
-    <style type="text/css">
-        #new-disc {
-            background: url(images/index/main/new-disc-bg.jpg) no-repeat bottom;
-            background-color: #2E2E2E;
-        }
-    </style>
-
-    <div class="box-show-out2" id="new-disc" style="width:1000px; height:255px; margin:80px auto 0px; position: relative">
-        <div id="new-disc-title">
-            <span class="MyIF music-albu-2" style="float:left; margin:-10px 30px 0 7px; font-size:40px;"></span>
-            <h3 class="end-boder" style="margin:auto 15px auto 58px; border-bottom:5px groove #54ffa3; box-shadow:0 18px 20px #161616; font-size:23px; color: #1b86ff; line-height:40px;">
-                新碟上架
-            </h3>
-            <a href="newdisc.html" style="margin:-32px 25px 0 0; float:right; color: white; font-family:新宋体">更多 <span class="MyIF double-arrow-right"></span></a>
+    <div class="box-show2" id="new-disc" style="">
+        <div class="partTitle">
+            <span class="MyIF music-albu-2"></span>
+            <h3 class="end-boder">新碟上架</h3>
+            <a class="hover-undeline" href="newdisc.html">更多 <span class="MyIF double-arrow-right"></span></a>
         </div>
 
-        <span id="left" class="MyIF num-arrow-left" style="position: absolute; top: 140px; left:10px;"></span>
-        <span id="right" class="MyIF num-arrow-right" style="position: absolute; top: 140px; right:10px;"></span>
+        <span id="new-disc-left" class="MyIF num-arrow-left"></span>
+        <span id="new-disc-right" class="MyIF num-arrow-right"></span>
 
-        <div style=" width:85%; height: 180px; margin:10px 0px; overflow: hidden;">
-            <ul style="margin:35px auto 0 -56px; width:1500%; position: relative">
-                <li style="float:left; margin:auto 28px;">
-                    <a href="album.html">
-                        <div style="width:120px; height:103px; background:url(images/common/disc.png); background-size:100% 100%;">
-                            <img src="images/common/touxiang.jpg" style="width:93px; height:93px; margin:5px; float:left;">
-                        </div>
-                        <p style="font:normal normal normal 14px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">DiscName1</p>
-                    </a>
-                    <a href="singer.html"><p style="width:120px; height:28px; text-align:center; overflow:hidden; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">SingerName1</p></a>
-                </li>
-                <li style="float:left; margin:auto 28px;">
-                    <a href="album.html">
-                        <div style="width:120px; height:103px; background:url(images/common/disc.png); background-size:100% 100%;">
-                            <img src="images/common/touxiang.jpg" style="width:93px; height:93px; margin:5px; float:left;">
-                        </div>
-                        <p style="font:normal normal normal 14px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">DiscName2</p>
-                    </a>
-                    <a href="singer.html"><p style="width:120px; height:28px; text-align:center; overflow:hidden; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">SingerName2</p></a>
-                </li>
-                <li style="float:left; margin:auto 28px;">
-                    <a href="album.html">
-                        <div style="width:120px; height:103px; background:url(images/common/disc.png); background-size:100% 100%;">
-                            <img src="images/common/touxiang.jpg" style="width:93px; height:93px; margin:5px; float:left;">
-                        </div>
-                        <p style="font:normal normal normal 14px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">DiscName3</p>
-                    </a>
-                    <a href="singer.html"><p style="width:120px; height:28px; text-align:center; overflow:hidden; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">SingerName1</p></a>
-                </li>
-                <li style="float:left; margin:auto 28px;">
-                    <a href="album.html">
-                        <div style="width:120px; height:103px; background:url(images/common/disc.png); background-size:100% 100%;">
-                            <img src="images/common/touxiang.jpg" style="width:93px; height:93px; margin:5px; float:left;">
-                        </div>
-                        <p style="font:normal normal normal 14px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">DiscName4</p>
-                    </a>
-                    <a href="singer.html"><p style="width:120px; height:28px; text-align:center; overflow:hidden; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">SingerName4</p></a>
-                </li>
-                <li style="float:left; margin:auto 28px;">
-                    <a href="album.html">
-                        <div style="width:120px; height:103px; background:url(images/common/disc.png); background-size:100% 100%;">
-                            <img src="images/common/touxiang.jpg" style="width:93px; height:93px; margin:5px; float:left;">
-                        </div>
-                        <p style="font:normal normal normal 14px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">DiscName5</p>
-                    </a>
-                    <a href="singer.html"><p style="width:120px; height:28px; text-align:center; overflow:hidden; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">SingerName5</p></a>
-                </li>
-                <li style="float:left; margin:auto 28px;">
-                    <a href="album.html">
-                        <div style="width:120px; height:103px; background:url(images/common/disc.png); background-size:100% 100%;">
-                            <img src="images/common/touxiang.jpg" style="width:93px; height:93px; margin:5px; float:left;">
-                        </div>
-                        <p style="font:normal normal normal 14px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">DiscName6</p>
-                    </a>
-                    <a href="singer.html"><p style="width:120px; height:28px; text-align:center; overflow:hidden; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">SingerName6</p></a>
-                </li>
-                <li style="float:left; margin:auto 28px;">
-                    <a href="album.html">
-                        <div style="width:120px; height:103px; background:url(images/common/disc.png); background-size:100% 100%;">
-                            <img src="images/common/touxiang.jpg" style="width:93px; height:93px; margin:5px; float:left;">
-                        </div>
-                        <p style="font:normal normal normal 14px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">DiscName7</p>
-                    </a>
-                    <a href="singer.html"><p style="width:120px; height:28px; text-align:center; overflow:hidden; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">SingerName7</p></a>
-                </li>
-                <li style="float:left; margin:auto 28px;">
-                    <a href="album.html">
-                        <div style="width:120px; height:103px; background:url(images/common/disc.png); background-size:100% 100%;">
-                            <img src="images/common/touxiang.jpg" style="width:93px; height:93px; margin:5px; float:left;">
-                        </div>
-                        <p style="font:normal normal normal 14px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">DiscName8</p>
-                    </a>
-                    <a href="singer.html"><p style="width:120px; height:28px; text-align:center; overflow:hidden; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;">SingerName8</p></a>
-                </li>
+        <div id="new-disc-content">
+            <ul>
 
+                <li>
+                    <a href="album.html">
+                        <div class="new-disc-image"><img src="images/common/touxiang.jpg"></div>
+                        <p class="new-disc-name">DiscName1</p>
+                    </a>
+                    <a href="singer.html"><p class="new-disc-singer">SingerName1</p></a>
+                </li>
+                <li>
+                    <a href="album.html">
+                        <div class="new-disc-image"><img src="images/common/touxiang.jpg"></div>
+                        <p class="new-disc-name">DiscName2</p>
+                    </a>
+                    <a href="singer.html"><p class="new-disc-singer">SingerName2</p></a>
+                </li>
+                <li>
+                    <a href="album.html">
+                        <div class="new-disc-image"><img src="images/common/touxiang.jpg"></div>
+                        <p class="new-disc-name">DiscName3</p>
+                    </a>
+                    <a href="singer.html"><p class="new-disc-singer">SingerName3</p></a>
+                </li>
+                <li>
+                    <a href="album.html">
+                        <div class="new-disc-image"><img src="images/common/touxiang.jpg"></div>
+                        <p class="new-disc-name">DiscName4</p>
+                    </a>
+                    <a href="singer.html"><p class="new-disc-singer">SingerName4</p></a>
+                </li>
+                <li>
+                    <a href="album.html">
+                        <div class="new-disc-image"><img src="images/common/touxiang.jpg"></div>
+                        <p class="new-disc-name">DiscName5</p>
+                    </a>
+                    <a href="singer.html"><p class="new-disc-singer">SingerName5</p></a>
+                </li>
+                <li>
+                    <a href="album.html">
+                        <div class="new-disc-image"><img src="images/common/touxiang.jpg"></div>
+                        <p class="new-disc-name">DiscName6</p>
+                    </a>
+                    <a href="singer.html"><p class="new-disc-singer">SingerName6</p></a>
+                </li>
+                <li>
+                    <a href="album.html">
+                        <div class="new-disc-image"><img src="images/common/touxiang.jpg"></div>
+                        <p class="new-disc-name">DiscName7</p>
+                    </a>
+                    <a href="singer.html"><p class="new-disc-singer">SingerName7</p></a>
+                </li>
+                <li>
+                    <a href="album.html">
+                        <div class="new-disc-image"><img src="images/common/touxiang.jpg"></div>
+                        <p class="new-disc-name">DiscName8</p>
+                    </a>
+                    <a href="singer.html"><p class="new-disc-singer">SingerName8</p></a>
+                </li>
 
             </ul>
         </div>
@@ -579,7 +333,7 @@
 
         /*新碟上架Jsc*/
         var _index = 0;
-        $("#left").click(function () {
+        $("#new-disc-left").click(function () {
             if (_index == 0) {
                 $("#new-disc ul").prepend($("#new-disc ul").html());
                 $("#new-disc ul").css("left", "-1405px");
@@ -588,7 +342,7 @@
             _index--;
             $("#new-disc ul").stop().animate({left: -_index * 176}, 666);
         });
-        $("#right").click(function () {
+        $("#new-disc-right").click(function () {
             _index++;
             var len = $("#new-disc ul li").length;
             if (_index + 5 > len) {

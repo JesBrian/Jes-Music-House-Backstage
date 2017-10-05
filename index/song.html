@@ -6,124 +6,45 @@
 
 
     <!-- CSS部分 -->
+    <link rel="stylesheet" type="text/css" href="css/index/common.css">
+
+    <link rel="stylesheet" type="text/css" href="css/index/aboutSong.css">
+
 
     <!-- 自用字体图标 -->
     <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
 
-    <!-- 临时CSS -->
-    <style type="text/css">
-        body {  color:white;  }
-        li,ul {  list-style-type:none;  }
-        a { text-decoration:none;  }
-        p,h1,h2,h3,h4,h5,h6 {  margin:0;  padding:0;  }
-        dd {  margin:0;  float: left;  }
-
-        .hover-undeline:hover {  text-decoration:underline;  }
-
-        .MyIF
-        {
-            color:#42d4ff;
-        }
-
-        .box-show-out
-        {
-            -webkit-box-shadow:0 0 5px 5px #49DFFF;
-            -moz-box-shadow:0 0 5px 5px #49DFFF;
-            box-shadow:0 0 5px 5px #49DFFF;
-        }
-        .box-show-out2
-        {
-            border-radius:15px;
-            background-color:#2E2E2E;
-            -webkit-box-shadow:0 0 5px 5px #B29AFF;
-            -moz-box-shadow:0 0 5px 5px #B29AFF;
-            box-shadow:0 0 5px 5px #B29AFF;
-        }
-
-
-        /* 控制渐变效果 */
-        .end-boder
-        {
-            font-weight: 900;
-            background-image: -webkit-linear-gradient(left, #2ed8ff, #9b7cf7 25%, #2ed8ff 50%, #9b7cf7 75%, #2ed8ff);
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-            -webkit-background-size: 200% 100%;
-            -webkit-animation: masked-animation 3s infinite linear;
-        }
-        @-webkit-keyframes masked-animation
-        {
-            0%  { background-position: 0 0;}
-            100% { background-position: -100% 0;}
-        }
-
-    </style>
-
 
 </head>
 <body>
-
-
-    <style>
-        nav>a>div
-        {
-            width:100px;
-            height:40px;
-            padding-left:32px;
-            background: url(images/common/first.png);
-            background-size:100% 100%;
-            font:italic normal bold 12px/2.5em 宋体,verdana;
-        }
-        nav>a>div.MyIF:hover
-        {
-            color: white;
-        }
-        nav>a:nth-of-type(2)>div
-        {
-            width:95px;
-            padding-left:40px;
-            background: url(images/common/second.png);
-            background-size:100% 100%;
-        }
-        nav>a:last-child>div
-        {
-            width:100px;
-            color: #585451;
-            padding-left:55px;
-            background: url(images/common/last.png);
-            background-size:100% 100%;
-        }
-    </style>
     <!-- 面包屑导航 -->
-    <nav style="position: absolute; top:0; left:130px;">
-        <a href="main.html" style="position:absolute; z-index:99;"><div class="MyIF home"> 主页</div></a>
-        <a href="popalbum.html" style="position: absolute; top:0; left:115px; z-index:98;"><div class="MyIF exponential"> 歌单</div></a>
-        <a href="#" style="position: absolute; top:0; left:225px; z-index:97;"><div class="MyIF alter-information"> 歌曲</div></a>
+    <nav id="breadcrumb">
+        <a href="main.html" style="z-index:99;"><div class="MyIF home"> 主页</div></a>
+        <a href="popalbum.html" style="top:0; left:115px; z-index:98;"><div class="MyIF exponential"> 歌单</div></a>
+        <a href="#" style="top:0; left:225px; z-index:97;"><div class="MyIF alter-information"> 歌曲</div></a>
     </nav>
 
 
-    <div class="box-show-out2" style="width:900px; margin-left:auto; margin-right:115px; margin-top:25px; padding-bottom:80px;">
-
-        <div style="width:92%; height:auto; padding:68px 38px 28px; position:relative; float:left;">
-            <div style="width:180px; height:180px; margin-top:38px; float:left; background:url(images/common/disk.png); background-size:100% 100%;">
-                <img src="images/common/touxiang.jpg" style="width:108px; height:108px; margin:36px 38px; border-radius:50%;">
-                <span style="width:108px; height:30px; margin:8px 38px; border:0.5px solid #464646; line-height:31px; text-align:center; display:inline-block; border-radius:4px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); cursor:pointer;">
-                    <span style="width:74px; height:30px; border-right:0.5px solid #242424; float:left;">播放</span>
-                    <span style="width:32px; height:30px; border-left:0.5px solid #5F5F5F; border-top-right-radius:4px; border-bottom-right-radius:4px; float:right;">+</span>
-                </span>
-                <span style="width:108px; height:30px; margin:8px 38px; border:0.5px solid #464646; line-height:31px; text-align:center; display:inline-block; border-radius:4px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); cursor:pointer;">
-                    <span>收藏该曲</span>
-                </span>
-                <span style="width:108px; height:30px; margin:8px 38px; border:0.5px solid #464646; line-height:31px; text-align:center; display:inline-block; border-radius:4px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); cursor:pointer;">
-                    <span>评论该曲</span>
+    <div class="box-show2" id="song-main">
+        <!-- 歌曲信息及操作 -->
+        <div id="song-info">
+            <div>
+                <img src="images/common/touxiang.jpg">
+                <span>
+                    <a class="superBtn joinSinger MyIF play"> 播放该曲</a>
+                    <a class="superBtn joinSinger MyIF menu"> 播放列表</a>
+                    <a class="superBtn joinSinger MyIF feedback"> 查看评论</a>
                 </span>
             </div>
 
-            <div style="width:75%; float:right; position:relative;  font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑';">
-                <h3 style="margin:-28px 0 18px; font-size:23px; color:#FFF;">歌名歌名歌名歌名歌名歌名歌名歌名歌名歌名歌名歌名歌名</h3>
-                <span style="margin:0 12px 0 28px; font-size:14px; color:#FFF;">歌手：</span><a href="singer.html" class="hover-undeline" style="color:#00CDFF;">歌手名歌手名歌手名歌手名歌手名歌手名</a>
-                <div style="width:76%; height:330px; margin:8px 0;  padding:48px 38px 68px 108px;  background:url(images/common/music-bg.jpg) no-repeat; background-size:100% 100%;">
-                    <pre id="lyricContent" class="" style="width:95%; height:100%; overflow-y:scroll; color:#888;">
+            <div>
+                <h3>歌名歌名歌名歌名歌名歌名歌名歌名歌名歌名歌名歌名歌名</h3>
+                <a class="glassButton" onclick="window.top.niftymodalsByModelName('modal-collection','','')">
+                    收藏全部<i class="MyIF add-collection"></i>
+                </a>
+                <span class="singerName">歌手：<a href="singer.html" class="hover-undeline">歌手名歌手名歌手名歌手名歌手名歌手名</a></span>
+                <div id="song-lyric">
+                    <pre id="lyricContent">
 [00:00.00]平凡之路 - 朴树
 [00:04.01]作词：韩寒 朴树
 [00:08.02]作曲：朴树 编曲：朴树
@@ -188,214 +109,144 @@
                     </pre>
                 </div>
             </div>
-
         </div>
 
         <!-- 评论 -->
-        <i style="margin:0 88px 2px; font-size:30px; font-weight:500;">评论</i>
-        <div style="width:88%; margin:0 auto; padding:8px 18px; border-top:2px solid #22e8ff;">
-            <div>
-                <img src="images/common/touxiang.jpg" style="width:40px; height:40px; margin:38px 3px; border-radius:4px;">
-                <div style="width:93%; display:inline-block;">
-                    <textarea id="replyTest" placeholder="请填写评论" style="width:88%; height:58px; margin:0 25px; resize:none; display:block; font:normal normal normal 14px/1.3em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:3px; padding:8px 10px; border:none; border-radius:5px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);"></textarea>
-                    <i class="MyIF exciting emojiButton" style="margin:0 28px 0 58px;"></i><span>限制 <i>110</i> 字</span>
-                    <button id="replyTestButton" style="width:76px; height:28px; margin:18px 88px 0; float:right; border:none; border-radius:4px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);">发表评论</button>
+        <i>评论</i>
+        <div id="song-reply">
+            <div id="song-replyPer">
+                <img src="images/common/touxiang.jpg">
+                <div>
+                    <textarea id="replyPerText" class="s1c-Bg box-show3" placeholder="请填写评论"></textarea>
+                    <i id="replyPerEmoji" class="MyIF exciting"></i>限制<i style="margin:0 8px;">150</i>字
+                    <span><a id="replyTextButton" class='superBtn reply'>回复评论</a></span>
                 </div>
             </div>
 
-
-            <style>
-                .replyButton:hover {
-                    color:#70ff92;
-                }
-                .replyList{
-                    width:95%;
-                    margin:0 auto 18px;
-                    padding:18px;
-                    border-top:0.5px solid #848484;
-                    border-bottom:0.5px solid #2E2E2E;
-                }
-                .replyList:hover{
-                    border:0.5px solid;
-                    border-image:-webkit-linear-gradient(left, #dd7e90, #F7B889, #ebe86c, #60E099, #26c7ff, #3972ff, #B373F7)25; /* Safari 5.1 - 6.0 */
-                    border-image:-o-linear-gradient(right, #dd7e90, #F7B889, #ebe86c, #60E099, #26c7ff, #3972ff, #B373F7)25; /* Opera 11.1 - 12.0 */
-                    border-image:-moz-linear-gradient(right, #dd7e90, #F7B889, #ebe86c, #60E099, #26c7ff, #3972ff, #B373F7)25; /* Firefox 3.6 - 15 */
-                    border-image:linear-gradient(to right, #dd7e90, #F7B889, #ebe86c, #60E099, #26c7ff, #3972ff, #B373F7)25; /* 标准的语法 */
-                }
-            </style>
-
-
-            <!-- 精彩评论部分 -->
-            <div style="font-size:13px; color:#D6D6D6;">
-                <h4 style="margin:38px 28px 3px; font-size:17px; color:#70FF92;">精彩评论</h4>
+            <!-- 精彩评论部分[ less 0  more 4 ] -->
+            <div id="song-wellReply">
+                <h4>精彩评论</h4>
                 <div class="replyList">
-                    <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
-                    <a href="user.html" style="color:#00BFE8;">User Name</a>
-                    <span>： 我是邪恶吃的旅途法规及目录哦怕卡恶臭的效率饭通提供一边和途法规及目录哦怕卡恶臭的效率饭通过i健康美丽破而产生咸蛋超人需方提供一边和你见面的人想法v塘沽海那几款买了哦怕</span>
-                    <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
+                    <img src="images/common/touxiang.jpg">
+                    <a href="user.html">User Name</a>：
+                    <span>我是邪恶吃的旅途法规及目录哦怕卡恶臭的效率饭通提供一边和途法规及目录哦怕卡恶臭的效率饭通过i健康美丽破而产生咸蛋超人需方提供一边和你见面的人想法v塘沽海那几款买了哦怕</span>
+                    <p class="replybar"><span class="replyTime">2017 - 06 - 15</span><a class="replyOtherButton">回复</a><i class="replyStar MyIF add-collection">[666]</i></p>
                 </div>
                 <div class="replyList">
-                    <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
-                    <a href="user.html" style="color:#00BFE8;">User Name</a>
-                    <span>： 666</span>
-                    <div style="width:89%; padding:13px; margin:8px 0 3px 52px; border-radius:4px; background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); color:#929292; word-break:break-all; word-wrap:break-word;">
-                        <a href="user.html" style="color:#00BFE8;">JesBrian</a>：
+                    <img src="images/common/touxiang.jpg">
+                    <a href="user.html">User Name</a>：
+                    <span>666</span>
+                    <div class="replySource s1c-Bg box-show3">
+                        <a href="user.html">JesBrian</a>：
                         8883才搬家啊来考察p,xr就立刻才搬家啊来omkxrtcfinjmk啊来考察p,xr就立刻才啊来考察p,xr就立刻才njmk啊来考察p,xr
                     </div>
-                    <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
+                    <p class="replybar"><span class="replyTime">2017 - 06 - 15</span><a class="replyOtherButton">回复</a><i class="replyStar MyIF add-collection">[666]</i></p>
                 </div>
                 <div class="replyList">
-                    <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
-                    <a href="user.html" style="color:#00BFE8;">User Name</a>
-                    <span>： hscnjklsackl;sam;cjsagchsacjksavcnlksajvmlksajmvlksamvsalk;vmbvska</span>
-                    <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
+                    <img src="images/common/touxiang.jpg">
+                    <a href="user.html">User Name</a>：
+                    <span>hscnjklsackl;sam;cjsagchsacjksavcnlksajvmlksajmvlksamvsalk;vmbvska</span>
+                    <p class="replybar"><span class="replyTime">2017 - 06 - 15</span><a class="replyOtherButton">回复</a><i class="replyStar MyIF add-collection">[666]</i></p>
                 </div>
                 <div class="replyList">
-                    <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
-                    <a href="user.html" style="color:#00BFE8;">User Name</a>
-                    <span>： cshncuisa才能杀就开车v你没v擦拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就没v和vNSA尽快充满啊焦虑层面来说卡VMLCHNSAljnclsanjmv吃撒KJCNHKJSA才能杀骷髅你</span>
-                    <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
+                    <img src="images/common/touxiang.jpg">
+                    <a href="user.html">User Name</a>：
+                    <span>cshncuisa才能杀就开车v你没v擦拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就没v和vNSA尽快充满啊焦虑层面来说卡VMLCHNSAljnclsanjmv吃撒KJCNHKJSA才能杀骷髅你</span>
+                    <p class="replybar"><span class="replyTime">2017 - 06 - 15</span><a class="replyOtherButton">回复</a><i class="replyStar MyIF add-collection">[666]</i></p>
                 </div>
             </div>
 
             <!-- 最新评论部分 -->
-            <div style="font-size:13px; color:#D6D6D6;">
-                <h4 style="margin:38px 28px 3px; font-size:17px; color:#70FF92;">最新评论</h4>
+            <div id="song-newReply">
+                <h4>最新评论</h4>
                 <div class="replyList">
-                    <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
-                    <a href="user.html" style="color:#00BFE8;">User Name</a>
-                    <span>： 我是邪恶吃的旅途法规及目录哦怕卡恶臭的效率饭通提供一边和途法规及目录哦怕卡恶臭的效率饭通过i健康美丽破而产生咸蛋超人需方提供一边和你见面的人想法v塘沽海那几款买了哦怕</span>
-                    <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
+                    <img src="images/common/touxiang.jpg">
+                    <a href="user.html">User Name</a>：
+                    <span>我是邪恶吃的旅途法规及目录哦怕卡恶臭的效率饭通提供一边和途法规及目录哦怕卡恶臭的效率饭通过i健康美丽破而产生咸蛋超人需方提供一边和你见面的人想法v塘沽海那几款买了哦怕</span>
+                    <p class="replybar"><span class="replyTime">2017 - 06 - 15</span><a class="replyOtherButton">回复</a><i class="replyStar MyIF add-collection">[666]</i></p>
                 </div>
                 <div class="replyList">
-                    <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
-                    <a href="user.html" style="color:#00BFE8;">User Name</a>：
+                    <img src="images/common/touxiang.jpg">
+                    <a href="user.html">User Name</a>：
                     <span>666</span>
-                    <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
+                    <p class="replybar"><span class="replyTime">2017 - 06 - 15</span><a class="replyOtherButton">回复</a><i class="replyStar MyIF add-collection">[666]</i></p>
                 </div>
                 <div class="replyList">
-                    <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
-                    <a href="user.html" style="color:#00BFE8;">User Name</a>
-                    <span>： hscnjklsackl;sam;cjsagchsacjksavcnlksajvmlksajmvlksamvsalk;vmbvska</span>
-                    <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
+                    <img src="images/common/touxiang.jpg">
+                    <a href="user.html">User Name</a>：
+                    <span>hscnjklsackl;sam;cjsagchsacjksavcnlksajvmlksajmvlksamvsalk;vmbvska</span>
+                    <p class="replybar"><span class="replyTime">2017 - 06 - 15</span><a class="replyOtherButton">回复</a><i class="replyStar MyIF add-collection">[666]</i></p>
                 </div>
                 <div class="replyList">
-                    <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
-                    <a href="user.html" style="color:#00BFE8;">User Name</a>
-                    <span>： cshncuisa才能杀就开车v你没v擦拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就没v和vNSA尽快充满啊焦虑层面来说卡VMLCHNSAljnclsanjmv吃撒KJCNHKJSA才能杀骷髅你</span>
-                    <div style="width:89%; padding:13px; margin:8px 0 3px 52px; border-radius:4px; background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); color:#929292; word-break:break-all; word-wrap:break-word;">
-                        <a href="user.html" style="color:#00BFE8;">JesBrian</a>：
+                    <img src="images/common/touxiang.jpg">
+                    <a href="user.html">User Name</a>：
+                    <span>cshncuisa才能杀就开车v你没v擦拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就没v和vNSA尽快充满啊焦虑层面来说卡VMLCHNSAljnclsanjmv吃撒KJCNHKJSA才能杀骷髅你</span>
+                    <div class="replySource s1c-Bg box-show3">
+                        <a href="user.html">JesBrian</a>：
                         8883才搬家啊来考察p,xr就立刻才搬家啊来omkxrtcfinjmk
                     </div>
-                    <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
+                    <p class="replybar"><span class="replyTime">2017 - 06 - 15</span><a class="replyOtherButton">回复</a><i class="replyStar MyIF add-collection">[666]</i></p>
                 </div>
                 <div class="replyList">
-                    <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
-                    <a href="user.html" style="color:#00BFE8;">User Name</a>
-                    <span>： 和你见面的csav超市上班呢急啊看xaxma从今年赛哦</span>
-                    <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
+                    <img src="images/common/touxiang.jpg">
+                    <a href="user.html">User Name</a>：
+                    <span>和你见面的csav超市上班呢急啊看xaxma从今年赛哦</span>
+                    <p class="replybar"><span class="replyTime">2017 - 06 - 15</span><a class="replyOtherButton">回复</a><i class="replyStar MyIF add-collection">[666]</i></p>
                 </div>
                 <div class="replyList">
-                    <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
-                    <a href="user.html" style="color:#00BFE8;">User Name</a>
-                    <span>： 我是邪恶吃的旅途<img class="emojiIcon" src="plugins/emoji/icon/25.png">法规及目录哦怕卡恶臭的效率饭通提供一边和途法规及目录哦怕卡恶臭的效率饭通过i健康美丽破而产生咸蛋超人需方提供一边和你见面的人想法v塘沽海那几款买了哦怕</span>
-                    <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
+                    <img src="images/common/touxiang.jpg">
+                    <a href="user.html">User Name</a>：
+                    <span>我是邪恶吃的旅途<img class="emojiIcon" src="plugins/emoji/icon/25.png">法规及目录哦怕卡恶臭的效率饭通提供一边和途法规及目录哦怕卡恶臭的效率饭通过i健康美丽破而产生咸蛋超人需方提供一边和你见面的人想法v塘沽海那几款买了哦怕</span>
+                    <p class="replybar"><span class="replyTime">2017 - 06 - 15</span><a class="replyOtherButton">回复</a><i class="replyStar MyIF add-collection">[666]</i></p>
                 </div>
                 <div class="replyList">
-                    <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
-                    <a href="user.html" style="color:#00BFE8;">User Name</a>
-                    <span>： 666</span>
-                    <div style="width:89%; padding:13px; margin:8px 0 3px 52px; border-radius:4px; background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); color:#929292; word-break:break-all; word-wrap:break-word;">
-                        <a href="user.html" style="color:#00BFE8;">JesBrian</a>：
+                    <img src="images/common/touxiang.jpg">
+                    <a href="user.html">User Name</a>：
+                    <span>666</span>
+                    <div class="replySource s1c-Bg box-show3">
+                        <a href="user.html">JesBrian</a>：
                         888321xrdctfvygb<img class="emojiIcon" src="plugins/emoji/icon/25.png">uhnijmok,l.xrdctfvygbuc肠胃不好金山词霸很可能就立刻才搬家啊来考察p,xr就立刻才搬家啊来考察p,xr就立刻才搬家啊来考察p,xr就立刻才搬家啊来考察p,xrtcyvubinomkxrtcfyvgbuhinjmk888321xrdctfvygbuhnijmok,l.xrdctfvygbuc肠胃不好金山词霸很可能就立刻才搬家啊来考察p,xrtcyvubinomkxrtcfyvgbuhinjmk
                     </div>
-                    <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
+                    <p class="replybar"><span class="replyTime">2017 - 06 - 15</span><a class="replyOtherButton">回复</a><i class="replyStar MyIF add-collection">[666]</i></p>
                 </div>
                 <div class="replyList">
-                    <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
-                    <a href="user.html" style="color:#00BFE8;">User Name</a>
-                    <span>： hscnjklsackl;sam;cjsagchsacjksavcnlksajvmlksajmvlksamvsalk;vmbvska</span>
-                    <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
+                    <img src="images/common/touxiang.jpg">
+                    <a href="user.html">User Name</a>：
+                    <span>hscnjklsackl;sam;cjsagchsacjksavcnlksajvmlksajmvlksamvsalk;vmbvska</span>
+                    <p class="replybar"><span class="replyTime">2017 - 06 - 15</span><a class="replyOtherButton">回复</a><i class="replyStar MyIF add-collection">[666]</i></p>
                 </div>
                 <div class="replyList">
-                    <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
-                    <a href="user.html" style="color:#00BFE8;">User Name</a>
-                    <span>： cshncuisa才能杀就开车v你没v擦拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就没v和vNSA尽快充满啊焦虑层面来说卡VMLCHNSAljnclsanjmv吃撒KJCNHKJSA才能杀骷髅你</span>
-                    <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
+                    <img src="images/common/touxiang.jpg">
+                    <a href="user.html">User Name</a>：
+                    <span>cshncuisa才能杀就开车v你没v擦拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就拭的女警考虑门撒开cuisa才能杀就开车v你没扫描v踩刹车介绍i吗v看出没扫程序撒谎价格吃撒尽可能插卡就没v和vNSA尽快充满啊焦虑层面来说卡VMLCHNSAljnclsanjmv吃撒KJCNHKJSA才能杀骷髅你</span>
+                    <p class="replybar"><span class="replyTime">2017 - 06 - 15</span><a class="replyOtherButton">回复</a><i class="replyStar MyIF add-collection">[666]</i></p>
                 </div>
                 <div class="replyList">
-                    <img src="images/common/touxiang.jpg" style="width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;">
-                    <a href="user.html" style="color:#00BFE8;">User Name</a>
-                    <span>： 和你见面的csav超市上班呢急啊看xaxma从今年赛哦</span>
-                    <p style="margin:13px 88px 0; color:#929292;"><span>2017 - 06 - 15</span><span class="replyButton" style="margin-left:28px; float:right; cursor:pointer;">回复</span><i class="MyIF add-collection" style="margin-top:-5px; float:right;">[666]</i></p>
+                    <img src="images/common/touxiang.jpg">
+                    <a href="user.html">User Name</a>：
+                    <span>和你见面的csav超市上班呢急啊看xaxma从今年赛哦</span>
+                    <p class="replybar"><span class="replyTime">2017 - 06 - 15</span><a class="replyOtherButton">回复</a><i class="replyStar MyIF add-collection">[666]</i></p>
                 </div>
-
             </div>
         </div>
 
-
-        <style>
-            .paging
-            {
-                margin:20px;
-                float: right;
-            }
-            .paging>button
-            {
-                width:40px;
-                height:40px;
-                border: none;
-                margin-right:8px;
-                color: #3F3F3F;
-                font-size:18px;
-                font-weight:700;
-                background: url(./images/common/button-square-normal.png);
-                background-size:100% 100%;
-                box-shadow:0 5px 20px #161616;
-            }
-            .paging>.pageOperation
-            {
-                height:30px;
-                padding-top:1px;
-                line-height:30px;
-            }
-
-            .paging>button:active
-            {
-                color: #809cdf;
-                background: url(./images/common/button-square-active.png);
-                background-size:100% 100%;
-                background-color: #2e2e2e;
-                -webkit-transition: all .3s ease-out;
-                transition: all .3s ease-out;
-            }
-            .paging>button.active
-            {
-                -webkit-box-shadow:0 0 4px 4px #5bc2d4;
-                -moz-box-shadow:0 0 4px 4px #5bc2d4;
-                box-shadow:0 0 4px 4px #5bc2d4;
-            }
-        </style>
-
-        <div>
-            <nav class="paging">
-                <button class="pageOperation  MyIF ahead" ></button>
-                <button class="pageOperation MyIF double-arrow-left"></button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button class="active">4</button>
-                <button>5</button>
-                <button class="pageOperation MyIF double-arrow-right"></button>
-                <button class="pageOperation MyIF back"></button>
-            </nav>
-        </div>
+        <nav class="paging">
+            <button class="pageOperation  MyIF ahead" ></button>
+            <button class="pageOperation MyIF double-arrow-left"></button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="active">4</button>
+            <button>5</button>
+            <button class="pageOperation MyIF double-arrow-right"></button>
+            <button class="pageOperation MyIF back"></button>
+        </nav>
     </div>
-
 
     <div style="height:70px;"></div>
 
-        <!-- Jsc部分 -->
+
+    <!-- Jsc部分 -->
 
     <!--jQuery框架-->
     <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
@@ -403,13 +254,12 @@
 
     <!--外挂插件-->
     <link rel="stylesheet" href="plugins/emoji/jquery.emoji.css"/>
-
     <script src="plugins/emoji/jquery.emoji.min.js"></script>
 
 
     <script language="JavaScript">
 
-        $("span.replyButton").click(function () {
+        $("a.replyOtherButton").click(function () {
             /*如果前面已经按了一个回复则删除前面的，然后重新新建一个回复区域*/
             if($("#replyTextArea")) {
                 $("#replyTextArea").remove();
@@ -417,10 +267,10 @@
             }
             /*新建一个回复区域*/
             $(this).parent().parent().append(
-                "<div id='replyTextArea' style=\"width:100%; display:inline-block;  border:none; border-radius:5px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);\">\n" +
-                "   <textarea id='replyDiv' style=\"width:91%; height:56px; margin:16px 25px 0; padding:3px 8px; border:0.8px solid #2b2a2a; resize:none; display:block; font:normal normal normal 13px/1.4em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:2px; background-color:#6A6A6A; overflow:auto;\">User Name：</textarea>\n" +
-                "   <i class='MyIF exciting emoji' style=\"margin:0 28px 0 58px;\"></i><span>限制 <i>110</i> 字</span>\n" +
-                "   <button id='sureReply' style=\"width:70px; height:23px; margin:6px 88px 6px; float:right; border:none; border-radius:4px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738)); background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);\">发表评论</button>\n" +
+                "<div id='replyTextArea' style='width:100%; height:130px; display:inline-block; border:none; border-radius:5px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);'>" +
+                "   <textarea id='replyDiv' style=\"width:91%; height:62px; margin:16px 25px 0; padding:3px 8px; border:2px solid #2b2a2a; resize:none; display:block; font:normal normal normal 13px/1.4em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:2px; background-color:#6A6A6A; overflow:auto;\">User Name：</textarea>\n" +
+                "   <i class='MyIF exciting emoji' style=\"margin:0 28px 0 58px;\"></i><span>限制 <i>150</i> 字</span>\n" +
+                "   <span style='top:53px; left:48%; position:relative; z-index:9;'><a id='sureReply' class='superBtn reply' style='display:inline-block; text-align:center; font-size:13px; cursor:pointer'>回复评论</a></span>" +
                 "</div>"
             );
 
@@ -492,8 +342,6 @@
             });
         })(jQuery);
     </script>
-
-
 
 </body>
 </html>

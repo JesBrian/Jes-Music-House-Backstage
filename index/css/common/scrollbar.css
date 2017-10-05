@@ -1,4 +1,7 @@
-/* 滚动条 */
+/*
+ * 滚动条[Chrome/IE/Edge] CSS
+ */
+
 ::-webkit-scrollbar
 {
     width:10px;
