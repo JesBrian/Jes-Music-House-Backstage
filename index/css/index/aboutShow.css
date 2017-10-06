@@ -1,26 +1,28 @@
+
 /*
- * 前端主页 CSS
+ * 前端主页、客户端页、新碟上架页、热门歌曲页、播放排行页、申请入驻歌手入口页 CSS [也就是导航栏的几个功能]
  */
 
-    /* 每一部分的标题 */
+#download-main, #newdisc-main, #popalbum-main, #songlist-main, #musician-main {  width:900px; margin:25px 115px 0 auto; padding-bottom:70px;  }
+
+
+    /* 主页 */
+        /* 每一部分的标题 */
 .partTitle>span {  margin:-10px 30px 0 7px; float:left; font-size:40px;  }
 .partTitle>h3 {  margin:auto 15px auto 58px; border-bottom:5px groove #54ffa3; box-shadow:0 18px 20px #161616; font-size:23px; color: #1b86ff; line-height:40px;  }
 .partTitle>a {  margin:-32px 25px 0 0; float:right; color: white; font-family:"新宋体";  }
-
-    /* 热门新消息部分 */
+        /* 热门新消息部分 */
 #new-hot {  height:400px; margin:25px auto 0; background:url(../../images/index/main/new-hot-bg.jpg) no-repeat; background-size:100% 100%;  }
 #new-hot>iframe {  margin-left:290px; margin-top:22px; height:380px; width:710px; border:none;  }
-
-    /* 个性推荐部分 */
+        /* 个性推荐部分 */
 #personalRecommend {  height:260px; margin:80px auto 0; position:relative;  }
 #today {  width:300px; height:150px; left:50px; margin:28px 0; position:absolute; border-radius:15px; box-shadow:0 18px 20px #161616; background:url(../../images/common/calendar.png) no-repeat; background-size:100% 100%;  }
 .personalRecommendAlbum {  width:158px; height:175px; left:288px; margin:18px; position:relative; display:inline-block; text-align:center;  }
 .personalRecommendAlbum img {  width:120px; height:120px; margin:15px auto 5px; border-radius:8px;  }
 .personalRecommendAlbum p {  width:138px; height:26px; margin:0 auto; font:normal normal normal 12px/13px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;  }
-
-    /* 热门推荐 & 排行榜部分 */
+        /* 热门推荐 & 排行榜部分 */
 #hot-rank {  height:520px;  }
-        /* 热门推荐 */
+            /* 热门推荐 */
 #hot-album {  width:700px; height:440px; margin:80px 25px 0 88px; float:left  }
 #wrapper {  display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; -webkit-box-align:center; -webkit-align-items:center; -ms-flex-align:center; align-items:center;  }
 #left-side {  height:70%; width:13%; display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; -webkit-box-align:center; -webkit-align-items:center; -ms-flex-align:center; align-items:center; -webkit-box-pack:center; -webkit-justify-content:center; -ms-flex-pack:center; justify-content:center;  }
@@ -33,10 +35,9 @@
 .hot-album-part {  width:110px; height:152px; margin:9px 0 0 12px; display:inline-block;  }
 .hot-album-part>img {  width:100px; height:100px; margin:5px; border-radius:4px;  }
 .hot-album-part>p {  width:98px; height:32px; padding:0 5px; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;  }
-		/* 排行榜 */
+            /* 排行榜 */
 .specialTable {  width:90%; height:80%; margin:25px auto;  }
-
-    /* 新碟上架部分 */
+        /* 新碟上架部分 */
 #new-disc {  height:255px; margin:80px auto 0; position:relative; background: url(../../images/index/main/new-disc-bg.jpg) no-repeat bottom; background-color: #2E2E2E;  }
 #new-disc-left {  top: 140px; left:10px; position: absolute;  }
 #new-disc-right {  top: 140px; right:10px; position: absolute;  }
@@ -49,15 +50,41 @@
 .new-disc-singer {  width:120px; height:28px; text-align:center; overflow:hidden; font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;  }
 
 
+    /* 客户端下载页 */
 
 
+    /* 新碟上架 */
+#newdisc-main>div {  width:92%; padding:28px 0 0 0; margin:auto;  }
+#newdisc-main .newdisc-part {  width:100%; height:200px; margin:18px auto 66px; position:relative;  }
+#newdisc-main .newdisc-part>.specialTable {  width:78%; height:200px; margin:18px auto; float:right;  }
+#newdisc-main .newdisc-info {  width:18%; margin-top:38px; display:inline-block;  }
+#newdisc-main .newdisc-info div {  width:150px; height:129px; background:url(../../images/common/disc.png); background-size:100% 100%;  }
+#newdisc-main .newdisc-info img {  width:109px; height:109px; margin:10px; float:left;  }
+#newdisc-main .newdisc-info p {  height:24px; margin-top:2px; font:normal normal normal 14px/25px Arial,'Microsoft YaHei','微软雅黑'; color:#00CDFF;  }
+#newdisc-main .newdisc-part>.glassButton {  top:-18px; right:88px; position:absolute;  }
+#newdisc-main .newdisc-part>.specialTable a:hover {  color:#70ff92; text-decoration:underline;  }
 
+    /* 热门歌曲页 */
+#popalbum-main>div {  width:92%; height:100%; padding:40px 0 0 0; margin:auto;  }
+#popalbum-kindstContent {  width:80%; margin:0 auto; padding:15px; position:relative;  }
+#songTypeName {  margin:auto 18px; color:white; font-size:26px;  }
+#popalbum-kindstContent > span:last-child {  top:66px; right:88px; position:absolute; z-index:9;  }
+#popalbum-content {  width:100%; margin:38px 0 -28px;  }
+#popalbum-content>div {  width:138px; height:175px; margin:8px 0 18px 18px; display:inline-block; text-align:center;  }
+#popalbum-content>div img {  width:110px; height:110px; margin:15px auto 2px; border-radius:8px;  }
+#popalbum-content .popalbum-song, .popalbum-singer {  width:138px; height:23px;  font:normal normal normal 14px/23px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; overflow:hidden;  }
+#popalbum-content .popalbum-song {  margin:0 auto; text-align:center;  }
+#popalbum-content .popalbum-singer {  margin:-3px 8px; font-size:12px; text-align:left;  }
 
+    /* 播放排行页 */
+#songlist-main {  width:900px; margin:25px 115px 0 auto; padding-bottom:70px;  }
+#songlist-main > span {  top:98px; left:50%; position:relative; z-index:9;  }
+#songlist-main > span > a {  margin-right:28px;  }
+#songlist-main > div {  width:85%; height:90%; padding:20px; margin: auto;  }
+#songlist-main .specialTable .songist-songlist a:hover {  color:#70ff92; text-decoration:underline;  }
 
-
-
-
-
-
-
-
+    /* 申请入驻歌手入口页 */
+#musician-main > div {  width:100%; height:440px; position:relative; background:url(../../images/index/musician-bg.png) no-repeat; background-size:100% 88%;  }
+#musician-main span {  top:68%; left:35%; position:absolute; z-index:9;  }
+#musician-info {  left:18%; bottom:28px; position:absolute;  }
+#musician-info > a {  margin:0 25px;  }
