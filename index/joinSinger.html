@@ -212,34 +212,37 @@
         /*上/下步按钮，根据现在是第几步，以及能走到第几步来显示内容和按钮状态。先将下/上一步的内容滚上去，再将上/下一步的内容滚下来，并且按钮必须是可以点击的也就是class != banClick*/
         $("#prevStep, #nextStep").click(function () {//先修改step步数再修改按钮点击状态
             if(!$(this).hasClass("banClick")) {
-                $("#step-" + nowStepNum + "-content").fadeOut();
+                $("#step-" + nowStepNum + "-content").fadeOut();    //将当前步的div内容隐藏
                 if(this.id == "prevStep") --nowStepNum;
                 if(this.id == "nextStep") ++nowStepNum;
-                $("#step-" + nowStepNum + "-content").fadeIn();
+                $("#step-" + nowStepNum + "-content").fadeIn();     //将点击前进/后退步按钮后的当前步div内容显示
                 changeClickStatus();    //根据能够走到的步数和现在的步数做对比对DOM元素调效果，进而控制能否点击
             }
         });
 
         /*第零步不允许条例的话无法进入第一步*/
         $("#isAgree").change(function () {
-            if($("#isAgree").is(':checked')) allowStepNum = 1;
+            if($("#isAgree").is(':checked')) allowStepNum = 1;  //如果复选框勾选同意条例了则允许进入第一步
             else allowStepNum = 0;
             changeClickStatus();    //根据能够走到的步数和现在的步数做对比对DOM元素调效果，进而控制能否点击
         });
 
         /*第一步不填完所有的表单信息无法进入第二步*/
         $("#step-1-content").change(function () {
-            var i = 0;
-            $("input.step1-bg").each(function () {  //遍历含有 step1-bg class 的input标签，判断是否有内容未填写[因为selected里会用js生成输入框，但不是必定输入]
+            var i = 0;       //用i来记录表单以及文本域是否填写完毕 [ i=1 => 没写完， i=0 => 填写完 ]
+            $("input.step1-bg").each(function () {  //遍历含有 step1-bg class 的input标签，判断是否有内容未填写 [ 因为selected里会用js生成输入框，但不是必定输入 ]
                 if ($(this).val() == "") i = 1;
             });
             if ($('textarea').val() == '') {  //判断textarea标签是否填写
                 i = 1;
             }
-            if (i == 1) {  //如果有未填写的，则return false阻止 [ Ajax -- 以后保证填这坑 -_-| ] 提交
-                allowStepNum = 1;
+            if (i == 1) {  //如果有未填写的[ i = 1 ]，则阻止表单数据 [ Ajax -- 以后保证填这坑 -_-| ] 提交
+                allowStepNum = 1;   //如果这里不写 allowStepNum = 1 的话会有BUG [ 填写完了再删除某一表单数据BUG ]
             } else {
-                allowStepNum = 2;
+                /*$.post($url,$data,function ($result) {
+                    以后保证填这坑 -_-|
+                });*/
+                allowStepNum = 2;   //允许进入第二步
             }
             changeClickStatus();    //根据能够走到的步数和现在的步数做对比对DOM元素调效果，进而控制能否点击
         });
