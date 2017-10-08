@@ -47,7 +47,7 @@ dd {  margin:0;  float:left;  }
     position:relative;
 }
 .specialTable tbody td:first-child{
-    width:80px;
+    width:80px; font-size:18px; font-weight:600;
 }
 .specialTable tbody td:last-child{
     width:80px;
@@ -119,6 +119,15 @@ dd {  margin:0;  float:left;  }
 textarea {  border:2px solid #2E2E2E!important;  }
 input[type="text"], input[type="password"], textarea {  border:2px solid #2E2E2E; -webkit-transition: all 0.4s 0.1s; -moz-transition: all 0.4s 0.1s; -ms-transition: all 0.4s 0.1s; transition: all 0.4s 0.1s;  }
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus {  border:2px solid #30cdff !important; -webkit-transition: all 0.4s 0.1s; -moz-transition: all 0.4s 0.1s; -ms-transition: all 0.4s 0.1s; transition: all 0.4s 0.1s;  }
+
+
+    /* 音乐列表操作按钮组 */
+.songlistOper {  top:-6px; right:8px; position:absolute; display:none;  }
+.songlistOper>.MyIF {  margin:0 5px; font-size:23px;  }
+
+
+
+
 
 
     /* 单选复习选按钮质感效果 */
@@ -292,5 +301,5 @@ a.superBtn:active {
 }
 
 
-.glassButton {  width:118px; height:38px; padding-right:3px; display:inline-block; border-radius:8px; background:url(../../images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color: #585858; font-size:16px; font-weight:700; line-height:38px;  }
-.glassButton>i {  float:right; font-size:22px; color:white  }
+.glassButton {  width:118px; height:38px; padding-right:3px; display:inline-block; border-radius:8px; background:url(../../images/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color:#585858!important; font-size:16px; font-weight:700; line-height:38px;  }
+.glassButton>i {  float:right; font-size:22px; color:white!important;  }

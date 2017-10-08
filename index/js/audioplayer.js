@@ -142,7 +142,7 @@
                             playmodeText.text("单曲循环");
                             break;
                     }
-                    setTimeout('$("#audioplayer-playmodeText").fadeOut()', 5000);
+                    setTimeout('$("#audioplayer-playmodeText").fadeOut()', 1888);
                 });
                 /* 一首歌曲播放完毕 [依据播放模式选择下一首] */
                 theAudio.addEventListener('ended', function () {
@@ -218,7 +218,7 @@
             });
             $this.replaceWith(thePlayer);
 
-            /* 控制前一首 --错误做法OTZ */
+            /* 控制前一首 -- 错误做法 OTZ */
             $("#audioplayer-PREV").click(function () {
                 $("audio").attr('src', 'audio/东京不太热.mp3');
                 audioFile = $this.attr('src');
@@ -273,14 +273,13 @@
 $(function () {
     $('audio').audioPlayer();
 
-
     /**
      * 音乐播放器播放列表鼠标移动到那一首歌曲上出现各种操作
      */
     $("#songlistContent li").mousemove(function () {
-        $(this).find($("span.songlistOper")).fadeIn();
+        $(this).find($("span.songlistOper")).fadeIn(38);
     }).mouseleave(function () {
-        $(this).find($("span.songlistOper")).fadeOut();
+        $(this).find($("span.songlistOper")).fadeOut(38);
     });
     addPlayIcon();
 
@@ -294,7 +293,6 @@ $(function () {
         addPlayIcon();
     })
 });
-
 
 /**
  * 音乐播放器播放列表播放哪一首歌，加播放的图标[ 逻辑--有class active的添加图标 ]

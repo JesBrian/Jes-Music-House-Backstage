@@ -24,7 +24,6 @@
         <a href="#" style="top:0; left:225px; z-index:97;"><div class="MyIF alter-information"> 歌曲</div></a>
     </nav>
 
-
     <div class="box-show2" id="song-main">
         <!-- 歌曲信息及操作 -->
         <div id="song-info">
@@ -34,6 +33,7 @@
                     <a class="superBtn joinSinger MyIF play"> 播放该曲</a>
                     <a class="superBtn joinSinger MyIF menu"> 播放列表</a>
                     <a class="superBtn joinSinger MyIF feedback"> 查看评论</a>
+                    <a class="superBtn joinSinger MyIF download"> 下载歌曲</a>
                 </span>
             </div>
 
@@ -249,7 +249,7 @@
     <!-- Jsc部分 -->
 
     <!--jQuery框架-->
-    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="js/common/jquery-3.1.1.min.js" type="text/javascript"></script>
 
 
     <!--外挂插件-->
@@ -267,8 +267,8 @@
             }
             /*新建一个回复区域*/
             $(this).parent().parent().append(
-                "<div id='replyTextArea' style='width:100%; height:130px; display:inline-block; border:none; border-radius:5px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #373738));background-image: -moz-linear-gradient(#444444, #373738); background-image: -webkit-linear-gradient(#444444, #373738); background-image: linear-gradient(#444444, #373738); -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);-webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);'>" +
-                "   <textarea id='replyDiv' style=\"width:91%; height:62px; margin:16px 25px 0; padding:3px 8px; border:2px solid #2b2a2a; resize:none; display:block; font:normal normal normal 13px/1.4em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:2px; background-color:#6A6A6A; overflow:auto;\">User Name：</textarea>\n" +
+                "<div id='replyTextArea' class='s1c-Bg box-show3' style='width:100%; height:130px; display:inline-block; border:none; border-radius:5px;'>" +
+                "   <textarea id='replyDiv' style=\"width:91%; height:62px; margin:16px 25px 0; padding:3px 8px; border:2px solid #2b2a2a; resize:none; display:block; font:normal normal normal 13px/1.4em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:2px; background-color:#6A6A6A; overflow:auto;\">User Name：</textarea>" +
                 "   <i class='MyIF exciting emoji' style=\"margin:0 28px 0 58px;\"></i><span>限制 <i>150</i> 字</span>\n" +
                 "   <span style='top:53px; left:48%; position:relative; z-index:9;'><a id='sureReply' class='superBtn reply' style='display:inline-block; text-align:center; font-size:13px; cursor:pointer'>回复评论</a></span>" +
                 "</div>"
@@ -335,8 +335,8 @@
         (function($){
             $(window).on("load",function(){
 
-                $.mCustomScrollbar.defaults.scrollButtons.enable=false; //enable scrolling buttons by default
-                $.mCustomScrollbar.defaults.axis="y"; //enable 2 axis scrollbars by default
+                $.mCustomScrollbar.defaults.scrollButtons.enable=false;
+                $.mCustomScrollbar.defaults.axis="y";
 
                 $("#lyricContent").mCustomScrollbar({theme:"minimal"});
             });
