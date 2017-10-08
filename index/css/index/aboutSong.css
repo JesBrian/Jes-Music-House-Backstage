@@ -9,7 +9,7 @@
     /* 歌曲页面部分 */
         /* 歌曲页面 -- 歌曲信息及操作 */
 #song-info {  width:92%; height:auto; padding:78px 38px 28px; position:relative; display:inline-block;  }
-#song-info>div:first-child {  width:180px; height:180px; margin-top:38px; float:left; background:url(../../images/common/disk.png); background-size:100% 100%;  }
+#song-info>div:first-child {  width:180px; height:180px; float:left; background:url(../../images/common/disk.png); background-size:100% 100%;  }
 #song-info>div:first-child>img {  width:108px; height:108px; margin:36px 38px; border-radius:50%;  }
 #song-info>div:first-child>span {  top:48px; left:-18px; position:relative; z-index:9;  }
 #song-info>div:first-child>span>a {  margin-top:28px;  }
@@ -55,7 +55,7 @@
 #album-info>div:last-child>dl {  margin:18px;  }
 #album-info>div:last-child>dl>dt:first-child {  font-size:14px; color:#FFF;  }
 #album-tag>dd {  margin:8px 8px 8px 50px; padding:3.5px 18px 3.5px 35px; position:relative;  }
-#album-tag a {  color:#00CDFF;  }
+#album-info a {  color:#00CDFF;  }
 #album-tag img {  width:38px; top:-8px; left:-12px; position:absolute;  }
 #album-intro {  margin:3px 18px; text-indent:25px;  }
         /* 歌单页面 -- 歌曲列表 */

@@ -2,148 +2,20 @@
  * 拟态框 CSS
  */
 
-.md-container {
-    position:fixed;
-    top:50%;
-    left:50%;
-    width:666px;
-    z-index:999999999999999999999;
-    visibility:hidden;
-    -webkit-backface-visibility:hidden;
-    -moz-backface-visibility:hidden;
-    backface-visibility:hidden;
-    -webkit-transform:translateX(-50%) translateY(-50%);
-    -moz-transform:translateX(-50%) translateY(-50%);
-    -ms-transform:translateX(-50%) translateY(-50%);
-    transform:translateX(-50%) translateY(-50%);
-}
-.md-show {
-    visibility:visible;
-}
-.md-overlay {
-    position:fixed;
-    width:100%;
-    height:100%;
-    visibility:hidden;
-    top:0;
-    left:0;
-    z-index:99999999;
-    opacity:0;
-    background:rgba(0,0,0,0.8);
-    -webkit-transition:all 0.3s;
-    -moz-transition:all 0.3s;
-    transition:all 0.3s;
-}
-.md-show ~ .md-overlay {
-    opacity:1;
-    visibility:visible;
-}
-.md-content {
-    margin:0 auto;
-    padding:12px;
-    color:#fff;
-    background:#67D6CE;
-    position:relative;
-    border-radius:8px;
-    box-shadow:0 0.5em 1em rgba(0, 0, 0, 0.6);
-}
-.md-content>h3 {
-    margin:18px auto 0;
-    padding:0.1em;
-    width:95%;
-    text-align:center;
-    font-size:1.8em;
-    font-weight:600;
-    opacity:0.8;
-    background:rgba(150, 61, 255, 0.2);
-    border:3px solid rgba(0, 0, 0, 0.4);
-    border-radius:3px;
-    box-shadow:0 0.5em 1em rgba(0, 0, 0, 0.6);
-}
+.md-container {  position:fixed; top:50%; left:50%; width:666px; z-index:999999999999999999999; visibility:hidden; -webkit-backface-visibility:hidden; -moz-backface-visibility:hidden; backface-visibility:hidden; -webkit-transform:translateX(-50%) translateY(-50%); -moz-transform:translateX(-50%) translateY(-50%); -ms-transform:translateX(-50%) translateY(-50%); transform:translateX(-50%) translateY(-50%);  }
+.md-show {  visibility:visible;  }
+.md-overlay {  position:fixed; width:100%; height:100%; visibility:hidden; top:0; left:0; z-index:99999999; opacity:0; background:rgba(0,0,0,0.8); -webkit-transition:all 0.3s; -moz-transition:all 0.3s; transition:all 0.3s;  }
+.md-show ~ .md-overlay {  opacity:1; visibility:visible;  }
+.md-content {  margin:0 auto; padding:12px; color:#fff; background:#67D6CE; position:relative; border-radius:8px; box-shadow:0 0.5em 1em rgba(0, 0, 0, 0.6);}
+.md-content>h3 {  margin:18px auto 0; padding:0.1em; width:95%; text-align:center; font-size:1.8em; font-weight:600; opacity:0.8; background:rgba(150, 61, 255, 0.2); border:3px solid rgba(0, 0, 0, 0.4); border-radius:3px; box-shadow:0 0.5em 1em rgba(0, 0, 0, 0.6);  }
 .md-content>h3>img {  width:35px; margin:0 8px -7px 0;  }
-
-.md-content>div{
-    padding:20px 0 0 38px;
-}
-.md-content>div button
-{
-    width:100px;
-    height:32px;
-    margin-right:25px;
-    border:none;
-    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.6);
-    color:#5A5A5A;
-    line-height:35px;
-    font-weight:600;
-    font-family:宋体;
-}
-
-
-.close-all {
-    width: 26px;
-    height: 25px;
-    top:0;
-    right:0;
-    color: #AEAEAE;
-    font-weight: bold;
-    line-height:1.6em;
-    position: absolute;
-    border-radius:2px;
-    background-size: 100%;
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2e3537), color-stop(100%, #424748));
-    background-image: -moz-linear-gradient(#2e3537, #424748);
-    background-image: -webkit-linear-gradient(#2e3537, #424748);
-    background-image: linear-gradient(#2e3537, #424748);
-    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);
-}
-.close-all:after {
-    width: 37px;
-    height: 36px;
-    top: -5.5px;
-    left:-18.5px;
-    margin-left: 50%;
-    content: '';
-    display: block;
-    border-radius:3px;
-    background-size: 100%;
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2af1fc), color-stop(100%, #17b2e6));
-    background-image: -moz-linear-gradient(#2af1fc, #17b2e6);
-    background-image: -webkit-linear-gradient(#2af1fc, #17b2e6);
-    background-image: linear-gradient(#2af1fc, #17b2e6);
-    -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6);
-    -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6);
-    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6);
-    position: absolute;
-    z-index: -1;
-}
-
-/* -------------------
-    SuperBtn Hover
--------------------- */
-.close-all:hover {
-    color: #70ff92;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
-    background-size: 100%;
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #545454), color-stop(100%, #373738));
-    background-image: -moz-linear-gradient(#545454, #373738);
-    background-image: -webkit-linear-gradient(#545454, #373738);
-    background-image: linear-gradient(#545454, #373738);
-}
-.close-all:hover:after {
-    -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2);
-    -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2);
-    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2);
-}
-.close-all:active {
-    color: #00ccff;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 255, 255, 0.7);
-    background: #333;
-    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
-    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
-}
+.md-content>div{  padding:20px 0 0 38px;  }
+.md-content>div button {  width:100px; height:32px; margin-right:25px; border:none; box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.6); color:#5A5A5A; line-height:35px; font-weight:600; font-family:宋体;  }
+.close-all {  width:26px; height:25px; top:0; right:0; color: #AEAEAE; font-weight:bold; line-height:1.6em; position:absolute; border-radius:2px; background-size:100%; background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2e3537), color-stop(100%, #424748)); background-image:-moz-linear-gradient(#2e3537, #424748); background-image:-webkit-linear-gradient(#2e3537, #424748); background-image:linear-gradient(#2e3537, #424748); -moz-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4); -webkit-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4); box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.4);  }
+.close-all:after {  width:37px; height:36px; top:-5.5px; left:-18.5px; margin-left:50%; content:''; display:block; border-radius:3px; background-size:100%; background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2af1fc), color-stop(100%, #17b2e6)); background-image:-moz-linear-gradient(#2af1fc, #17b2e6); background-image:-webkit-linear-gradient(#2af1fc, #17b2e6); background-image:linear-gradient(#2af1fc, #17b2e6); -moz-box-shadow:0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6); -webkit-box-shadow:0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6); box-shadow:0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6); position:absolute; z-index:-1;  }
+.close-all:hover {  color:#70ff92; text-shadow:0 -1px 0 rgba(0, 0, 0, 0.8); background-size:100%; background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #545454), color-stop(100%, #373738)); background-image:-moz-linear-gradient(#545454, #373738); background-image:-webkit-linear-gradient(#545454, #373738); background-image:linear-gradient(#545454, #373738);  }
+.close-all:hover:after {  -moz-box-shadow:0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0px 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2); -webkit-box-shadow:0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2); box-shadow:0 -1px 1px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0 3px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 15px 5px rgba(0, 255, 255, 0.2);  }
+.close-all:active {  color:#00ccff; text-shadow:0 -1px 0 rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 255, 255, 0.7); background:#333; -moz-box-shadow:0 1px 0 rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black; -webkit-box-shadow:0 1px 0 rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black; box-shadow:0 1px 0 rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;  }
 
 
 /*显示与取消拟态框效果*/
@@ -188,8 +60,13 @@
 #modal-questionnaire table td {  padding:0 8px 8px;  }
 #modal-questionnaire form>textarea {  width:75%; height:58px; margin:0 0 0 -30px; resize:none; font:normal normal normal 14px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:3px; padding:8px 10px;  }
 #modal-questionnaire form>input[type="text"] {  width:72%; margin:0 0 0 -30px; padding:8px 18px; font:normal normal normal 14px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:3px;  }
-
-
+        /* 入驻歌手 */
+#modal-joinSinger form {  width:80%; margin:18px auto; border:none; text-align:center;  }
+#modal-joinSinger .webdesigntuts-workshop {  margin-right:60px;  }
+#modal-joinSinger .webdesigntuts-workshop>input {  width:350px;  }
+#modal-joinSinger #singerAvatar {  width:80px; height:80px; margin:20px 0 18px -20px; border-radius:5px;  }
+#modal-joinSinger form>span {  position:relative; z-index:9;  }
+#modal-joinSinger form>p {  margin-bottom:8px; text-align:center;  }
         /* 歌手登陆 */
 #modal-singerLogin>.md-content>img {  width:80px; height:80px; margin:38px; position:absolute; border-radius:5px;  }
 #modal-singerLogin form {  width:88%; height:130px; margin:28px 18px 68px 158px;  }
