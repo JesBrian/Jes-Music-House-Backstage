@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music House 手机端主页</title>
+
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+
+    <link type="text/css" rel="stylesheet" href="plugins/myfonticon/iconfont.css">
+
+
+</head>
+<body style="width:100%; height:100%; border:none;">
+
+    <style>
+        #showMenu, #searchButton {
+            height:60%;
+            top:16%;
+            margin:0 6%;
+            position:absolute;
+            border:0.5px solid #333;
+            border-radius:10%;
+            color:#AAA;
+            text-align: center;
+            line-height:100%;
+            background:url(img/square-a.jpg);
+            background-size:100% 100%;
+        }
+        #showMenu:hover, #searchButton:hover {
+            color: #30cdff;
+            background:url(img/square-b.jpg);
+            background-size:100% 100%;
+            -moz-box-shadow: 0 0 20px rgba(0, 193, 255, 0.33), 0 0 30px rgba(0, 193, 255, 0.1);
+            -webkit-box-shadow: 0 0 20px rgba(0, 193, 255, 0.33), 0 0 30px rgba(0, 193, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 193, 255, 0.33), 0 0 30px rgba(0, 193, 255, 0.1);
+        }
+    </style>
+    <!-- 上 -->
+    <div id="topNav" class="s1c-Bg box-show3" style="width:100%; height:10%; border:none; border-radius:0; position:relative; z-index:9999;">
+
+        <a id="showMenu" class="MyIF menu"></a>
+
+        <style>
+            button.s1c-Bg>i {
+                color:#999;
+            }
+            button.s1c-Bg.active {
+                background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #262627), color-stop(100%, #2d2d2e));
+                background-image: -moz-linear-gradient(#262627, #2d2d2e);
+                background-image: -webkit-linear-gradient(#262627, #2d2d2e);
+                background-image: linear-gradient(#262627, #2d2d2e);
+                text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 255, 255, 0.7);
+                -moz-box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black, 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
+                -webkit-box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black, 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
+                box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black, 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
+            }
+            button.s1c-Bg.active>i {
+                color:#00ccff;
+            }
+        </style>
+
+        <div id="topNavButton" style="width:50%; height:100%;  top:58%; left:50%; display:inline-block; text-align:center; position:absolute; transform:translate(-50%, -50%);">
+            <button class="s1c-Bg box-show3 active" show="usrAlbum" style="height:80%; margin:0 1%; padding:0;"><i class="MyIF music-albu-2"></i></button>
+            <button class="s1c-Bg box-show3" show="homeRecommon" style="height:80%; margin:0 1%; padding:0;"><i class="MyIF music-box"></i></button>
+            <button class="s1c-Bg box-show3" show="musicRank" style="height:80%; margin:0 1%; padding:0;"><i class="MyIF exponential"></i></button>
+        </div>
+
+        <a id="searchButton" class="MyIF search" style="right:0;" href="search.html"></a>
+    </div>
+
+    <div id="usrAlbum" class="showContent" style="width:100%; height:90%; top:10%; position:absolute; z-index:10; ">
+        <div id="userAlbum-leftNav" class="s1c-Bg box-show3 " style="width:18%; height:100%; border:none; border-radius:0; float:left;">
+            <ul style="text-align:center;">
+                <li style="padding-top:38%;">
+                    <button class="s1c-Bg box-show3 active" style="width:80%; padding:0;"><i class="MyIF cubes-3"></i></button>
+                </li>
+                <li style="padding-top:38%;">
+                    <button class="s1c-Bg box-show3" style="width:80%; padding:0;"><i class="MyIF disk"></i></button>
+                </li>
+                <li style="padding-top:38%;">
+                    <button class="s1c-Bg box-show3" style="width:80%; padding:0;"><i class="MyIF download"></i></button>
+                </li>
+                <li style="padding-top:38%; text-align:center;">
+                    <button class="s1c-Bg box-show3" style="width:80%; padding:0;"><i class="MyIF check"></i></button>
+                </li>
+            </ul>
+        </div>
+
+        <div style="width:82%; height:100%; float: right; position:relative;">
+            内容展示
+        </div>
+    </div>
+
+    <div id="homeRecommon" class="showContent" style="width:100%; height:90%; top:10%; position:absolute; opacity:0; z-index:5; overflow:scroll;">
+        <div style="height:4%;"><!-- 位置显示BUG --></div>
+        <div id="homeRecommon-hotNew" class="box-show3" style="width:86%; margin:0 auto; position:relative;">
+            <div style="width:95%; height:88%; top:50%; left:50%; background:lightblue; position:absolute; transform:translate(-50%, -50%);">
+
+            </div>
+            <a class="s1c-Bg box-show3" style="width:11%; height:38%; top:50%; left:-6.8%; position:absolute; transform:translate(0, -50%);"></a>
+            <a class="s1c-Bg box-show3" style="width:11%; height:38%; top:50%; right:-6.8%; position:absolute; transform:translate(0, -50%);"></a>
+        </div>
+
+        <div id="homeRecommon-newDisc" style="width:90%; margin:8% auto; background-color: snow; height:300px;">
+            新碟上架
+        </div>
+
+        <div id="homeRecommon-hotAlbum" style="width:90%; margin:3% auto; background-color: snow; height:300px;">
+            热门歌单
+        </div>
+
+    </div>
+
+    <div id="musicRank" class="showContent" style="width:100%; height:90%; top:10%; position:absolute; opacity:0; z-index:5; overflow:auto;">
+        <div style="height:4%;"><!-- 位置显示BUG --></div>
+        <ul>
+            <li style="width:100%; height:38px; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                <a></a>
+            </li>
+
+            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
+                <a></a>
+            </li>
+
+            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
+                <a></a>
+            </li>
+
+            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
+                <a></a>
+            </li>
+
+            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
+                <a></a>
+            </li>
+
+            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
+                <a></a>
+            </li>
+
+            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
+                <a></a>
+            </li>
+
+            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
+                <a></a>
+            </li>
+
+            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
+                <a></a>
+            </li>
+
+            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
+                <a></a>
+            </li>
+
+            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
+                <a></a>
+            </li>
+
+            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
+                <a></a>
+            </li>
+
+            <li style="width:100%; height:38px;">
+                <a></a>
+            </li>
+
+        </ul>
+    </div>
+
+
+    <!--jQuery框架-->
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+
+    <script>
+
+        /* 调整div、按钮、字体大小，高度、行高等 */
+        $("#topNav button").width($("#topNav button").height());
+        $("#showMenu, #searchButton").css("width",$("#showMenu").height() + "px");
+        $("#showMenu, #searchButton").css("line-height",$("#showMenu").outerHeight() + "px");
+        $("#showMenu, #searchButton").css("font-size",$("#showMenu").height()/1.8 + "px");
+        $("#topNavButton i").css("font-size",$("#topNavButton>button").height()*0.8 + "px");
+        $("#topNavButton>button").css("line-height",$("#topNavButton>button").outerHeight() + "px");
+
+        $("#userAlbum-leftNav").find("button").css("height",$("#userAlbum-leftNav").find("button").outerWidth()+"px");
+        $("#userAlbum-leftNav").find("i").css("font-size",$("#userAlbum-leftNav").find("button").outerWidth()*0.75 + "px");
+        $("#userAlbum-leftNav").find("button").css("line-height",$("#userAlbum-leftNav").find("button").outerWidth()*0.95 + "px");
+
+
+        $("#homeRecommon-hotNew").css("height",$("#homeRecommon-hotNew").outerWidth()*0.52+"px");
+
+
+
+
+
+
+
+
+
+        /* 在主体部分展现对应的内容 */
+        /*
+        $("#topNavButton>button").on("touchend", function () {
+            var showContent = $(this).attr("show");
+            $("div.showContent").fadeOut(28);
+            $("#" + showContent).fadeIn();
+            $()
+        });*/
+
+        $("#topNavButton>button").on("touchend", function () {
+            $("div.showContent").css("opacity",0);
+
+            $("div.showContent").css("z-index",5);
+
+            //alert($(this).attr("show"));
+
+            $("#" + $(this).attr("show")).css("opacity",1);
+            $("#" + $(this).attr("show")).css("z-index",10);
+            //alert("#" + $(this).attr("show"))
+        });
+
+
+
+        $("button").on("touchend", function () {
+            $("button").removeClass("active");
+            $(this).addClass("active");
+        });
+
+        $("#showMenu").on("touchend", function () {
+            $('#leftNav', window.parent.document).animate({left:'0'});
+            $('#userOperList', window.parent.document).animate({scrollTop:0},0);
+        });
+
+
+
+
+        var startx, starty;
+        //获得角度
+        function getAngle(angx, angy) {
+            return Math.atan2(angy, angx) * 180 / Math.PI;
+        };
+
+        //根据起点终点返回方向 1向上 2向下 3向左 4向右 0未滑动
+        function getDirection(startx, starty, endx, endy) {
+            var angx = endx - startx;
+            var angy = endy - starty;
+            var result = 0;
+
+            //如果滑动距离太短
+            if (Math.abs(angx) < 2 && Math.abs(angy) < 2) {
+                return result;
+            }
+
+            var angle = getAngle(angx, angy);
+            if (angle >= -135 && angle <= -45) {
+                result = 1;
+            } else if (angle > 45 && angle < 135) {
+                result = 2;
+            } else if ((angle >= 135 && angle <= 180) || (angle >= -180 && angle < -135)) {
+                result = 3;
+            } else if (angle >= -45 && angle <= 45) {
+                result = 4;
+            }
+
+            return result;
+        }
+        //手指接触屏幕
+        document.addEventListener("touchstart", function(e) {
+            startx = e.touches[0].pageX;
+            starty = e.touches[0].pageY;
+        }, false);
+        //手指离开屏幕
+        document.addEventListener("touchend", function(e) {
+            var endx, endy;
+            endx = e.changedTouches[0].pageX;
+            endy = e.changedTouches[0].pageY;
+            var direction = getDirection(startx, starty, endx, endy);
+            switch (direction) {
+                case 0:
+                    //alert("未滑动！");
+                    break;
+                case 1:
+                    //alert("向上！")
+                    break;
+                case 2:
+                    //alert("向下！")
+                    break;
+                case 3:
+                    //alert("向左！")
+                    break;
+                case 4:
+                    //alert("向右！")
+                    $('#leftNav', window.parent.document).animate({left:'0'});
+                    $('#userOperList', window.parent.document).animate({scrollTop:0},0);
+                    break;
+                default:
+            }
+        }, false);
+
+    </script>
+</body>
+</html>
