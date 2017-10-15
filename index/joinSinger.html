@@ -71,9 +71,6 @@
 
             <!--第1步 填写资料-->
             <div id="step-1-content">
-                <form>
-
-                </form>
                 <p class="step-1-title">1. 艺人信息</p>
                 <dl>
                     <dd>艺人名</dd><input type="text" class="step1-bg s1c-Bg box-show3"/>
@@ -217,6 +214,8 @@
                 if(this.id == "nextStep") ++nowStepNum;
                 $("#step-" + nowStepNum + "-content").fadeIn();     //将点击前进/后退步按钮后的当前步div内容显示
                 changeClickStatus();    //根据能够走到的步数和现在的步数做对比对DOM元素调效果，进而控制能否点击
+                window.top.gotoTop(8);    //将窗口滚至顶部
+                $("#mCSB_1_container").css("top",0);    //切换div时将此div内容滚至顶部
             }
         });
 
@@ -233,14 +232,14 @@
             $("input.step1-bg").each(function () {  //遍历含有 step1-bg class 的input标签，判断是否有内容未填写 [ 因为selected里会用js生成输入框，但不是必定输入 ]
                 if ($(this).val() == "") i = 1;
             });
-            if ($('textarea').val() == '') {  //判断textarea标签是否填写
+            if ($('textarea.step1-bg').val() == '') {  //判断textarea标签是否填写
                 i = 1;
             }
             if (i == 1) {  //如果有未填写的[ i = 1 ]，则阻止表单数据 [ Ajax -- 以后保证填这坑 -_-| ] 提交
                 allowStepNum = 1;   //如果这里不写 allowStepNum = 1 的话会有BUG [ 填写完了再删除某一表单数据BUG ]
             } else {
                 /*$.post($url,$data,function ($result) {
-                    以后保证填这坑 -_-|
+                    //以后保证填这坑 -_-|
                 });*/
                 allowStepNum = 2;   //允许进入第二步
             }
@@ -251,53 +250,60 @@
          * 改变上/下步按钮的点击状态
          */
         function changeClickStatus() {
-            $("#step-button-group a").removeClass("nowActive");     //显示填写资料的进度步数
+            var sbgObj = $("#step-button-group");
+            var sbgaObj = sbgObj.find("a");
+            var sbgpiObj = sbgObj.find("p").children("i");
+
+            sbgaObj.removeClass("nowActive");     //显示填写资料的进度步数
             for (var i = 0; i <= nowStepNum; i++) {
-                $("#step-button-group a").eq(i).addClass("nowActive");
+                sbgaObj.eq(i).addClass("nowActive");
             }
 
-            $("#step-title>span").text($("#step-button-group a").eq(nowStepNum).text());  //修改每一步的标题内容
-            $("#step-title>i").removeClass().addClass($("#step-button-group a>i").eq(nowStepNum).attr("class"));
+            $("#step-title>span").text(sbgaObj.eq(nowStepNum).text());  //修改每一步的标题内容
+            $("#step-title>i").removeClass().addClass(sbgaObj.children("i").eq(nowStepNum).attr("class"));
 
-            $("#step-button-group p>i").css("color", "#9B9B9B");     //修改填写资料的进度步图标[颜色]
+            sbgpiObj.css("color", "#9B9B9B");     //修改填写资料的进度步图标[颜色]
             for (var i = 0; i < nowStepNum; i++) {
-                $("#step-button-group p>i").eq(i).css("color", "#22e8ff");
+                sbgpiObj.eq(i).css("color", "#22e8ff");
             }
 
+            var prevStepObj = $("#prevStep");
+            var nextStepObj = $("#nextStep");
+            
             /*改变按钮状态*/
             if (nowStepNum == 0) {
-                $("#prevStep").removeClass("allowClick");
-                if (!$("#prevStep").hasClass("banClick")) {
-                    $("#prevStep").addClass("banClick");
+                prevStepObj.removeClass("allowClick");
+                if (!prevStepObj.hasClass("banClick")) {
+                    prevStepObj.addClass("banClick");
                 }
             }
             if (nowStepNum == 1) {
-                $("#prevStep").removeClass("banClick");
-                if (!$("#prevStep").hasClass("allowClick")) {
-                    $("#prevStep").addClass("allowClick");
+                prevStepObj.removeClass("banClick");
+                if (!prevStepObj.hasClass("allowClick")) {
+                    prevStepObj.addClass("allowClick");
                 }
             }
             if (nowStepNum == 2) {
-                $("#prevStep").removeClass("banClick");
-                if (!$("#prevStep").hasClass("allowClick")) {
-                    $("#prevStep").addClass("allowClick");
+                prevStepObj.removeClass("banClick");
+                if (!prevStepObj.hasClass("allowClick")) {
+                    prevStepObj.addClass("allowClick");
                 }
-                $("#nextStep").removeClass("allowClick");
-                if (!$("#nextStep").hasClass("banClick")) {
-                    $("#nextStep").addClass("banClick");
+                nextStepObj.removeClass("allowClick");
+                if (!nextStepObj.hasClass("banClick")) {
+                    nextStepObj.addClass("banClick");
                 }
             }
 
             /*判断现在所处步数与能走的步数，然后改变按钮状态*/
             if(nowStepNum < allowStepNum) {
-                $("#nextStep").removeClass("banClick");
-                if(!$("#nextStep").hasClass("allowClick")) {
-                    $("#nextStep").addClass("allowClick");
+                nextStepObj.removeClass("banClick");
+                if(!nextStepObj.hasClass("allowClick")) {
+                    nextStepObj.addClass("allowClick");
                 }
             } else {
-                $("#nextStep").removeClass("allowClick");
-                if(!$("#nextStep").hasClass("banClick")) {
-                    $("#nextStep").addClass("banClick");
+                nextStepObj.removeClass("allowClick");
+                if(!nextStepObj.hasClass("banClick")) {
+                    nextStepObj.addClass("banClick");
                 }
             }
         }

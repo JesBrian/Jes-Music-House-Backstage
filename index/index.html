@@ -22,8 +22,8 @@
     <link href="css/common/scrollbar.css" rel="stylesheet"/>
 
     <!-- 网页图标 -->
-    <link rel="shortcut icon" href="images/common/MH-Logo.ico">
-    <link rel="Bookmark" href="images/common/MH-Logo.ico">
+    <link rel="shortcut icon" href="img/common/MH-Logo.ico">
+    <link rel="Bookmark" href="img/common/MH-Logo.ico">
 
 </head>
 
@@ -33,7 +33,7 @@
         <div id="navbar-content-index">
             <!-- MH-Logo -->
             <div id="logo">
-                <a href="index.html"><img src="images/common/MH-Logo.png"/></a>
+                <a href="index.html"><img src="img/common/MH-Logo.png"/></a>
             </div>
             <!-- 导航菜单 -->
             <ul id="navbar-menu-index">
@@ -46,7 +46,7 @@
             </ul>
             <!-- 用户登陆 -->
             <span id="navbar-user-index">
-                <a onclick="window.top.niftymodalsByModelName('modal-userLogin','');" class="userLogin superBtn MyIF administrators-1" style="font-size:41px; display:inline-block;"></a>
+                <a onclick="window.top.niftymodalsByModelName('modal-userLogin','');" class="userLogin superBtn MyIF administrators-1"></a>
                 <div id="userCON">
                     <i></i><!--向上箭头-->
                     <p class="MyIF home"><a href="account.html" target="indexIframe">我的主页</a></p>
@@ -70,7 +70,7 @@
     <!--主体内容 [各种不同功能]-->
     <div id="main-body">
         <div class="box-show1">
-            <iframe src="main.html" name="indexIframe" id="indexIframe" scrolling="no" frameborder="0" height="100%" width="100%" onload='IFrameReSize("indexIframe");'></iframe>
+            <iframe src="main.html" name="indexIframe" id="indexIframe" scrolling="no" frameborder="0" height="100%" width="100%" onload='IFrameReSize1("indexIframe"); gotoTop(8);'></iframe>
         </div>
     </div>
 
@@ -105,7 +105,7 @@
                 <li onclick="gotoTop(800)"><a><span class="MyIF convenient"></span>回到顶部</a></li>
             </ul>
             <!--音乐播放器-->
-            <a href="song.html" target="indexIframe"><img id="audioplayer-songimg" src="images/common/touxiang.jpg"></a>
+            <a href="song.html" target="indexIframe"><img id="audioplayer-songimg" src="img/common/touxiang.jpg"></a>
             <p>
                 <a id="songName" href="song.html" target="indexIframe" class="hover-undeline">The name of the song 歌名</a> -- <a id="singerName" href="singer.html" target="indexIframe" class="hover-undeline">The name of the singer 歌手名</a>
             </p>
@@ -515,7 +515,7 @@
     <!-- 拟态框 -->
     <div class="md-container md-effect-1" id="modal-userLogin">
         <div class="md-content">
-            <h3><img src="images/icon/login.png">账户登录</h3>
+            <h3><img src="img/icon/login.png">账户登录</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
             <div>
                 <form action="account.html" target="indexIframe" method="post">
@@ -553,7 +553,7 @@
 
     <div class="md-container md-effect-1" id="modal-register">
         <div class="md-content">
-            <h3><img src="images/icon/addUser.png">账户注册</h3>
+            <h3><img src="img/icon/addUser.png">账户注册</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
             <form action="account.html" target="indexIframe" method="post">
                 <table>
@@ -585,7 +585,7 @@
 
     <div class="md-container md-effect-1" id="modal-uploadAvatar">
         <div class="md-content">
-            <h3><img src="images/icon/avatar.png">修改头像</h3>
+            <h3><img src="img/icon/avatar.png">修改头像</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
             <iframe name="uploadAvatar" src="function/updateUploadAvatar.html"></iframe>
         </div>
@@ -593,7 +593,7 @@
 
     <div class="md-container md-effect-1" id="modal-collection">
         <div class="md-content">
-            <h3><img src="images/icon/musicBox.png">歌曲收藏</h3>
+            <h3><img src="img/icon/musicBox.png">歌曲收藏</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
             <div>添加到歌单</div>
             <span>
@@ -601,46 +601,46 @@
             </span>
             <div id="collectionContent">
                 <a class="s1c-Bg box-show3">
-                    <img src="images/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                    <img src="img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
                 </a>
                 <a class="s1c-Bg box-show3">
-                    <img src="images/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                    <img src="img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
                 </a>
                 <a class="s1c-Bg box-show3">
-                    <img src="images/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                    <img src="img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
                 </a>
                 <a class="s1c-Bg box-show3">
-                    <img src="images/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                    <img src="img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
                 </a>
                 <a class="s1c-Bg box-show3">
-                    <img src="images/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                    <img src="img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
                 </a>
                 <a class="s1c-Bg box-show3">
-                    <img src="images/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                    <img src="img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
                 </a>
                 <a class="s1c-Bg box-show3">
-                    <img src="images/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                    <img src="img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
                 </a>
                 <a class="s1c-Bg box-show3">
-                    <img src="images/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                    <img src="img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
                 </a>
                 <a class="s1c-Bg box-show3">
-                    <img src="images/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                    <img src="img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
                 </a>
                 <a class="s1c-Bg box-show3">
-                    <img src="images/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                    <img src="img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
                 </a>
                 <a class="s1c-Bg box-show3">
-                    <img src="images/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                    <img src="img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
                 </a>
                 <a class="s1c-Bg box-show3">
-                    <img src="images/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                    <img src="img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
                 </a>
                 <a class="s1c-Bg box-show3">
-                    <img src="images/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                    <img src="img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
                 </a>
                 <a class="s1c-Bg box-show3">
-                    <img src="images/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                    <img src="img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
                 </a>
             </div>
         </div>
@@ -648,7 +648,7 @@
 
     <div class="md-container md-effect-1" id="modal-questionnaire">
         <div class="md-content">
-            <h3><img src="images/icon/menu.png">调查问卷</h3>
+            <h3><img src="img/icon/menu.png">调查问卷</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
             <form>
                 <p>1、您认为我们网站的服务质量如何：</p>
@@ -686,7 +686,7 @@
 
     <div class="md-container md-effect-1" id="modal-warning">
         <div class="md-content">
-            <h3><img src="images/icon/warning.png">操作提示</h3>
+            <h3><img src="img/icon/warning.png">操作提示</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
             <p id="warning-text">操作警告！！！</p>
             <span>
@@ -699,14 +699,14 @@
 
     <div id="modal-joinSinger" class="md-container md-effect-1">
         <div class="md-content">
-            <h3><img src="images/icon/singer.png">入驻歌手</h3>
+            <h3><img src="img/icon/singer.png">入驻歌手</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
             <form>
                 <section class="webdesigntuts-workshop">
                     <input type="search" placeholder=" 输入您想要申请的歌手名称，查看是否已被使用 " required>
                     <button type="submit"><i class="MyIF search"></i></button>
                 </section>
-                <img id="singerAvatar" class="box-show3" src="images/common/touxiang.jpg">
+                <img id="singerAvatar" class="box-show3" src="img/common/touxiang.jpg">
                 <span>
                     <a class="joinSinger superBtn md-close" href="joinSinger.html" target="indexIframe">立即入驻 <i class="MyIF double-arrow-right"></i></a>
                 </span>
@@ -718,9 +718,9 @@
 
     <div class="md-container md-effect-1" id="modal-singerLogin">
         <div class="md-content">
-            <h3><img src="images/icon/singer.png">歌手登录</h3>
+            <h3><img src="img/icon/singer.png">歌手登录</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
-            <img src="images/common/touxiang.jpg" class="box-show3">
+            <img src="img/common/touxiang.jpg" class="box-show3">
             <form action="#" method="post">
                 <ul>
                     <li>
@@ -744,7 +744,7 @@
         <!-- 这个估计以后要大改 -->
     <div class="md-container md-effect-1" id="modal-category">
         <div class="md-content">
-            <h3><img src="images/icon/cube-3.png">选择分类</h3>
+            <h3><img src="img/icon/cube-3.png">选择分类</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
             <div style="padding-right:36px;">
                 <a href="#" style=" padding:0 0 8px 52px; display:block; border-bottom:1px solid black;">全部风格</a>
@@ -759,6 +759,15 @@
                             cursor:pointer;
                         }
                     </style>
+                    <script language="JavaScript">
+
+                        /**
+                         * 改变歌单分类名称
+                         */
+                        function changeSongTypeName(ongTypeObj) {
+                            $(window.frames["indexIframe"].document).find("#songTypeName").html($(ongTypeObj).html());
+                        }
+                    </script>
                     <tr>
                         <td style="width:18%; text-align: center; border-right:1px solid black; border-bottom:1px solid black;">
                             <span class="MyIF earth" style="font-size:24px;"></span> 语种
@@ -875,6 +884,7 @@
     <div class="md-overlay"></div>
 
 
+
     <!-- Jsc部分 -->
 
     <!-- jQuery框架 -->
@@ -900,14 +910,12 @@
     <script>
         (function($){
             $(window).on("load",function(){
-
                 $.mCustomScrollbar.defaults.scrollButtons.enable=false;
                 $.mCustomScrollbar.defaults.axis="y";
 
                 $("#songlistContent").mCustomScrollbar({theme:"inset-2"});
                 $("#songLyrics").mCustomScrollbar({theme:"minimal"});
                 $("#collectionContent").mCustomScrollbar({theme:"inset"});
-
             });
         })(jQuery);
     </script>
@@ -920,24 +928,7 @@
          * 回到顶部
          */
         function gotoTop(speed) {
-            $("html,body").animate({scrollTop:0},speed);//点击go to top按钮时，以800的速度回到顶部，这里的800可以根据你的需求修改
-        }
-
-        /**
-         * iframe高度自适应 -- 并且自动回到顶部
-         */
-        function IFrameReSize(iframename) {
-            var pTar = document.getElementById("indexIframe");
-            if (pTar) {
-                if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight) {   //ff
-                    pTar.height = pTar.contentDocument.body.offsetHeight;
-                    gotoTop(8);
-                }
-                else if (pTar.Document && pTar.Document.body.scrollHeight) {    //ie
-                    pTar.height = pTar.Document.body.scrollHeight;
-                    gotoTop(8);
-                }
-            }
+            $("html,body").animate({scrollTop:0},speed);//以 speed 的速度回到顶部
         }
 
         /**
@@ -964,12 +955,7 @@
             $("#userCON").fadeOut();
         });
 
-        /**
-         * 改变歌单分类名称
-         */
-        function changeSongTypeName(ongTypeObj) {
-            $(window.frames["indexIframe"].document).find("#songTypeName").html($(ongTypeObj).html());
-        }
+
 
         /**
          * 根据传入的model名字来弹出相应的模拟框
@@ -1008,22 +994,16 @@
          * 页脚的公众号二维码和支付宝二维码
          */
         $("#officialAccounts,#sponsorMoney").each(function () {
-            var thisObj = $(this);
-            var id = thisObj.attr("id");
-            var str;
-
+            var thisObj = $(this), id = thisObj.attr("id"), str;
             if(id == "officialAccounts"){
                 str = "欢迎关注";
             } else {
                 str = "谢谢支持";
             }
-
             thisObj.append("<div class='s1c-Bg box-show3' style='width:160px; height:185px; top:-190px; left:-60px; position:absolute; display:none; font-size:15px;'>" + str + "<img src='#' style='width:80%; margin:0 auto; border:none; border-radius:5px;'></div>")
-
-
             var thisObjDiv = thisObj.find("div");
-
             thisObj.mousemove(function(){
+                thisObjDiv.find("img").attr("src","img/common/" + id + ".jpg");
                 thisObjDiv.fadeIn();
             }).mouseleave(function(){
                 thisObjDiv.fadeOut();
@@ -1032,9 +1012,9 @@
 
 
 
-        $("#navbar-menu-index>li").click(function () {
+        $("#navbar-menu-index").find($("li")).click(function () {
             iframeLocation($(this).attr("from"), $(this).attr("to"));
-            $("#navbar-menu-index>li").removeClass("activeThis");
+            $("#navbar-menu-index").find("li").removeClass("activeThis");
             $(this).addClass("activeThis");
         });
 
@@ -1044,12 +1024,12 @@
 
 
         $("#navbar-menu-index").each(function () {
-            $(this).find($("li")).mousemove(function () {
+            $(this).find("li").mousemove(function () {
                 $(this).addClass("s1c-Bg box-show3");
             }).mouseleave(function () {
                 $(this).removeClass("s1c-Bg box-show3");
-            })
-        })
+            });
+        });
 
     </script>
 
