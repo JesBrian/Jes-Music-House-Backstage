@@ -1,5 +1,5 @@
 ;(function ($, window, document, undefined) {
-    var isTouch = 'ontouchstart' in window,
+    var isTouch = false,
         eStart = isTouch ? 'touchstart' : 'mousedown',
         eMove = isTouch ? 'touchmove' : 'mousemove',
         eEnd = isTouch ? 'touchend' : 'mouseup',
