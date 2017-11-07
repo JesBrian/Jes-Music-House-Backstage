@@ -1,5 +1,5 @@
 ;(function ($, window, document, undefined) {
-    var isTouch = 'ontouchstart' in window,
+    var isTouch = false,
         eStart = isTouch ? 'touchstart' : 'mousedown',
         eMove = isTouch ? 'touchmove' : 'mousemove',
         eEnd = isTouch ? 'touchend' : 'mouseup',
@@ -148,13 +148,13 @@
                 theAudio.addEventListener('ended', function () {
                     thePlayer.removeClass(cssClass.playing);
                     if (playmodeClickTemp == 0) {
-                        $("audio").attr('src', 'audio/月半小夜曲.mp3');
+                        $("audio").attr('src', 'audio/我ら来たれり.mp3');
                         audioFile = $this.attr('src');
                         thePlayer.addClass(cssClass.playing);
                         theAudio.play();
                     }
                     else if (playmodeClickTemp == 1) {
-                        $("audio").attr('src', 'audio/东京不太热.mp3');
+                        $("audio").attr('src', 'audio/ゼロFINAL FANTASY零式オープニングver.mp3');
                         audioFile = $this.attr('src');
                         thePlayer.addClass(cssClass.playing);
                         theAudio.play();
@@ -220,7 +220,7 @@
 
             /* 控制前一首 -- 错误做法 OTZ */
             $("#audioplayer-PREV").click(function () {
-                $("audio").attr('src', 'audio/东京不太热.mp3');
+                $("audio").attr('src', 'audio/ゼロFINAL FANTASY零式オープニングver.mp3');
                 audioFile = $this.attr('src');
                 thePlayer.addClass(cssClass.playing);
                 theAudio.play();
@@ -228,7 +228,7 @@
 
             /* 控制后一首 */
             $("#audioplayer-NEXT").click(function () {
-                $("audio").attr('src', 'audio/月半小夜曲.mp3');
+                $("audio").attr('src', 'audio/我ら来たれり.mp3');
                 audioFile = $this.attr('src');
                 thePlayer.addClass(cssClass.playing);
                 theAudio.play();

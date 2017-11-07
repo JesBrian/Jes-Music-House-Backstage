@@ -9,7 +9,7 @@
     /* 歌曲页面部分 */
         /* 歌曲页面 -- 歌曲信息及操作 */
 #song-info {  width:92%; height:auto; padding:78px 38px 28px; position:relative; display:inline-block;  }
-#song-info>div:first-child {  width:180px; height:180px; float:left; background:url(../../images/common/disk.png); background-size:100% 100%;  }
+#song-info>div:first-child {  width:180px; height:180px; float:left; background:url(../../img/common/disk.png); background-size:100% 100%;  }
 #song-info>div:first-child>img {  width:108px; height:108px; margin:36px 38px; border-radius:50%;  }
 #song-info>div:first-child>span {  top:48px; left:-18px; position:relative; z-index:9;  }
 #song-info>div:first-child>span>a {  margin-top:28px;  }
@@ -18,7 +18,7 @@
 #song-info>div:last-child>.glassButton {  margin-right:72px; float:right;  }
 #song-info .singerName {  margin:0 0 0 35px; font-size:14px;  }
 #song-info .singerName>a {  margin-left:8px; color:#5DDDFF;  }
-#song-lyric {  width:76%; height:330px; margin:8px 0; padding:48px 38px 68px 108px;  background:url(../../images/common/music-bg.jpg) no-repeat; background-size:100% 100%;  }
+#song-lyric {  width:76%; height:330px; margin:8px 0; padding:48px 38px 68px 108px;  background:url(../../img/common/music-bg.jpg) no-repeat; background-size:100% 100%;  }
 #lyricContent {  width:95%; height:100%; overflow-y:scroll; color:#888;  }
         /* 歌曲页面 -- 评论 */
 #song-main>i {  margin:0 88px 2px; font-size:30px; font-weight:500;  }
@@ -45,7 +45,7 @@
     /* 歌单专辑页面部分 */
         /* 歌单页面 -- 歌单信息 */
 #album-info {  height:auto; padding:68px 38px 28px 58px; position:relative; float:left; font:normal normal normal 12.5px/16px Arial, 'Microsoft YaHei', '微软雅黑'; color:#BDBDBD;  }
-#album-info>div:first-child {  width:180px; height:155px; float:left; background:url(../../images/common/disc.png); background-size:100% 100%;  }
+#album-info>div:first-child {  width:180px; height:155px; float:left; background:url(../../img/common/disc.png); background-size:100% 100%;  }
 #album-info>div:first-child>img {  width:131px; height:131px; margin:12px; float:left;  }
 #album-info>div:last-child {  width:75%; float:right; position:relative;  }
 #album-info>div:last-child>h3 {  margin:-28px 0 18px; font-size:28px; color:#DDD;  }

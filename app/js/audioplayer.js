@@ -72,7 +72,7 @@
 			if( isSupport )
 			{
 				thePlayer.find( 'audio' ).css( { 'width': 0, 'height': 0, 'visibility': 'hidden' } );
-				thePlayer.append( '<div class="audioplayer-songImg"><a href="song.html" target="mainIframe"><img src="../../index/img/common/touxiang.jpg"></a></div>' +
+				thePlayer.append( '<div class="audioplayer-songImg"><a href="song.html" target="mainIframe"><img src="img/touxiang.jpg"/></a></div>' +
 					'<div class="' + cssClass.bar + '"><div class="' + cssClass.barLoaded + '"></div><div class="' + cssClass.barPlayed + '"></div></div>' +
 					'<div class="audioplayer-songlist"><a class="MyIF kinds"></a></div>' +
 					'<div class="' + cssClass.volume + '"><div class="' + cssClass.volumeButton + '" title="' + params.strVolume + '"><a href="#">' + params.strVolume + '</a></div><div class="' + cssClass.volumeAdjust + '"><div><div></div></div></div></div>' );

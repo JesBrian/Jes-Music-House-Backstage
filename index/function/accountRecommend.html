@@ -1,7 +1,7 @@
 
     <div style="width:95%; height:90%; margin:0 auto; padding:0 20px 20px;">
-        <div style="width:88%; height:160px; margin:auto auto 20px; border-radius:10px;background: url(../images/index/recmd-daily.jpg) no-repeat; background-size: 100% 100%;">
-            <div style="width:280px; height:140px; margin:8px 0 0 20px; background:url(../images/common/calendar.png) no-repeat; background-size:100% 100%; float: left;"></div>
+        <div style="width:88%; height:160px; margin:auto auto 20px; border-radius:10px;background: url(../img/index/recmd-daily.jpg) no-repeat; background-size: 100% 100%;">
+            <div style="width:280px; height:140px; margin:8px 0 0 20px; background:url(../img/common/calendar.png) no-repeat; background-size:100% 100%; float: left;"></div>
         </div>
 
         <div style="margin-bottom:-25px; float:right;">
@@ -25,7 +25,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr class="songlist">
                     <td>Tanmay</td>
                     <td>
                         Bangalore
@@ -38,7 +38,7 @@
                     </td>
                     <td>560001</td>
                 </tr>
-                <tr>
+                <tr class="songlist">
                     <td>Sachin</td>
                     <td>
                         Mumbai
@@ -51,7 +51,7 @@
                     </td>
                     <td>400003</td>
                 </tr>
-                <tr>
+                <tr class="songlist">
                     <td>Uma</td>
                     <td>
                         Pune
@@ -64,7 +64,7 @@
                     </td>
                     <td>411027</td>
                 </tr>
-                <tr>
+                <tr class="songlist">
                     <td>Tanmay</td>
                     <td>
                         Bangalore
@@ -77,7 +77,7 @@
                     </td>
                     <td>560001</td>
                 </tr>
-                <tr>
+                <tr class="songlist">
                     <td>Sachin</td>
                     <td>
                         Mumbai
@@ -90,7 +90,7 @@
                     </td>
                     <td>400003</td>
                 </tr>
-                <tr>
+                <tr class="songlist">
                     <td>Uma</td>
                     <td>
                         Pune
@@ -103,7 +103,7 @@
                     </td>
                     <td>411027</td>
                 </tr>
-                <tr>
+                <tr class="songlist">
                     <td>Tanmay</td>
                     <td>
                         Bangalore
@@ -116,7 +116,7 @@
                     </td>
                     <td>560001</td>
                 </tr>
-                <tr>
+                <tr class="songlist">
                     <td>Sachin</td>
                     <td>
                         Mumbai
@@ -129,7 +129,7 @@
                     </td>
                     <td>400003</td>
                 </tr>
-                <tr>
+                <tr class="songlist">
                     <td>Uma</td>
                     <td>
                         Pune
@@ -142,7 +142,7 @@
                     </td>
                     <td>411027</td>
                 </tr>
-                <tr>
+                <tr class="songlist">
                     <td>Tanmay</td>
                     <td>
                         Bangalore
@@ -155,7 +155,7 @@
                     </td>
                     <td>560001</td>
                 </tr>
-                <tr>
+                <tr class="songlist">
                     <td>Sachin</td>
                     <td>
                         Mumbai
@@ -168,7 +168,7 @@
                     </td>
                     <td>400003</td>
                 </tr>
-                <tr>
+                <tr class="songlist">
                     <td>Uma</td>
                     <td>
                         Pune
@@ -181,7 +181,7 @@
                     </td>
                     <td>411027</td>
                 </tr>
-                <tr>
+                <tr class="songlist">
                     <td>Tanmay</td>
                     <td>
                         Bangalore
@@ -194,7 +194,7 @@
                     </td>
                     <td>560001</td>
                 </tr>
-                <tr>
+                <tr class="songlist">
                     <td>Sachin</td>
                     <td>
                         Mumbai
@@ -207,7 +207,7 @@
                     </td>
                     <td>400003</td>
                 </tr>
-                <tr>
+                <tr class="songlist">
                     <td>Uma</td>
                     <td>
                         Pune
@@ -235,15 +235,3 @@
 
 
     <!-- Jsc部分 -->
-
-    <!--jQuery框架-->
-    <script src="../js/common/jquery-3.1.1.min.js" type="text/javascript"></script>
-
-    <script language="JavaScript">
-        $("table.specialTable tr").mousemove(function () {
-            $(this).find($("span.songlistOper")).fadeIn(38);
-        }).mouseleave(function () {
-            $(this).find($("span.songlistOper")).fadeOut(38);
-        });
-
-    </script>
