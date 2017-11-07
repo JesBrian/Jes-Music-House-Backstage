@@ -18,7 +18,24 @@
     </div>
 
 
-    每日推荐
+    <div style="width:100%; height:90%; overflow:scroll;">
+        <div style="height:4%;"><!-- 位置显示BUG --></div>
+        <div style="width:100%; margin-bottom:6%; text-align:center;">
+            <a id="recommendCalendar" style="width:80%; margin-top:2%;  display:inline-block; background:url(img/calendar.png) no-repeat; background-size:100% 100%;"></a>
+        </div>
+        <table style="width:100%; height:50%;">
+            <tr style="width:100%; text-align:center;">
+                <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">这是中文这是中文这是中文</p></a></td>
+                <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">cvsavcasvbksanvbsavnsc</p></a></td>
+                <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">Sava是v啊是v吃撒v不是东北师大请问v</p></a></td>
+            </tr>
+            <tr style="width:100%; text-align:center;">
+                <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">cvsavcasvbksanvbsavnsc</p></a></td>
+                <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">这是中文这是中文这是中文</p></a></td>
+                <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">cvsavcasvbksanvbsavnsc</p></a></td>
+            </tr>
+        </table>
+    </div>
 
 
     <!--jQuery框架-->
@@ -42,6 +59,12 @@
         $("#showMenu, #searchButton").css("width",$("#showMenu").height() + "px");
         $("#showMenu, #searchButton").css("line-height",$("#showMenu").outerHeight() + "px");
         $("#showMenu, #searchButton").css("font-size",$("#showMenu").height()/1.8 + "px");
+
+
+        $("#recommendCalendar").height($(this).innerWidth() * 0.42 + "px");
+
+        $("a.albumList").css("height",$("a.albumList").width() * 1.3 + "px");
+        $("a.albumList").css("font-size",$("a.albumList").width()*0.13 + "px");
 
     </script>
 

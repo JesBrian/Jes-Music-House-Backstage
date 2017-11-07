@@ -6,10 +6,10 @@
 		eEnd		  = isTouch ? 'touchend'	: 'mouseup',
 		eCancel		  = isTouch ? 'touchcancel'	: 'mouseup',
 		secondsToTime = function( secs )
-		{
-			var hours = Math.floor( secs / 3600 ), minutes = Math.floor( secs % 3600 / 60 ), seconds = Math.ceil( secs % 3600 % 60 );
-			return ( hours == 0 ? '' : hours > 0 && hours.toString().length < 2 ? '0'+hours+':' : hours+':' ) + ( minutes.toString().length < 2 ? '0'+minutes : minutes ) + ':' + ( seconds.toString().length < 2 ? '0'+seconds : seconds );
-		},
+        {
+            var hours = Math.floor( secs / 3600 ), minutes = Math.floor( secs % 3600 / 60 ), seconds = Math.ceil( secs % 3600 % 60 );
+            return ( hours == 0 ? '' : hours > 0 && hours.toString().length < 2 ? '0'+hours+':' : hours+':' ) + ( minutes.toString().length < 2 ? '0'+minutes : minutes ) + ':' + ( seconds.toString().length < 2 ? '0'+seconds : seconds );
+        },
 		canPlayType	  = function( file )
 		{
 			var audioElement = document.createElement( 'audio' );
@@ -72,7 +72,10 @@
 			if( isSupport )
 			{
 				thePlayer.find( 'audio' ).css( { 'width': 0, 'height': 0, 'visibility': 'hidden' } );
-				thePlayer.append( '<div class="' + cssClass.time + ' ' + cssClass.timeCurrent + '"></div><div class="' + cssClass.bar + '"><div class="' + cssClass.barLoaded + '"></div><div class="' + cssClass.barPlayed + '"></div></div><div class="' + cssClass.time + ' ' + cssClass.timeDuration + '"></div><div class="' + cssClass.volume + '"><div class="' + cssClass.volumeButton + '" title="' + params.strVolume + '"><a href="#">' + params.strVolume + '</a></div><div class="' + cssClass.volumeAdjust + '"><div><div></div></div></div></div>' );
+				thePlayer.append( '<div class="audioplayer-songImg"><a href="song.html" target="mainIframe"><img src="img/touxiang.jpg"/></a></div>' +
+					'<div class="' + cssClass.bar + '"><div class="' + cssClass.barLoaded + '"></div><div class="' + cssClass.barPlayed + '"></div></div>' +
+					'<div class="audioplayer-songlist"><a class="MyIF kinds"></a></div>' +
+					'<div class="' + cssClass.volume + '"><div class="' + cssClass.volumeButton + '" title="' + params.strVolume + '"><a href="#">' + params.strVolume + '</a></div><div class="' + cssClass.volumeAdjust + '"><div><div></div></div></div></div>' );
 
 				var theBar			  = thePlayer.find( '.' + cssClass.bar ),
 					barPlayed	 	  = thePlayer.find( '.' + cssClass.barPlayed ),
