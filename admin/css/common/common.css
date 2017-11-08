@@ -161,6 +161,7 @@ a.userLogin {
     color: #AEAEAE;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
     font-weight: bold;
+    font-size:32px;
     letter-spacing: .08em;
     top:1px;
     line-height: 42px;

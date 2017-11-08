@@ -17,16 +17,37 @@
 <body style="width:100%; height:100%; margin:0; padding:0; position:relative; background:#333;">
     
     <!-- 头部 -->
-    <nav class="glass-Bg box-show3" style="width:100%; height:72px; margin:0; box-sizing:border-box; z-index:99;">
-        <a></a>
-    </nav>
+    <nav class="glass-Bg box-show3" style="width:100%; height:72px; margin:0; box-sizing:border-box; position:relative; z-index:99; line-height:68px;">
+        <!-- 后台系统Logo - 左侧 -->
+        <div style="width:280px; height:100%;">
+            <a>
+                <img src="">
+            </a>
 
-    <!-- 身体 -->
-    <div style="width:100%; height:640px; margin-top:18px;">
-        <div style="width:188px; height:100%; float:left; background:lightgreen; margin:0; padding:0;">
         </div>
 
-        <iframe class="glass-Bg" src="" style="width:86%; height:100%; "></iframe>
+        <!-- 用户登录 - 右侧 -->
+        <span style="top:5px; right:208px; position:absolute; z-index:9;">
+            <a class="userLogin superBtn MyIF administrators-1">
+                <!-- 如果登陆了显示头像 -- 开发阶段先屏蔽了
+                <img src="img/Holy_Dragon,_Sanctuary_Guard_Regalie_(Full_Art).png" style="width:40px; height:37px; top:2px; left:1px; position:absolute;">
+                -->
+            </a>
+        </span>
+        <div style="width:168px; height:43px; top:15px; right:28px; position:absolute; z-index:9; line-height:1.35em;">
+            <p style="font-size:15px;">JesBrian UserName</p>
+            <a href="" style="margin-left:18px; font-size:14px; color:#888;">退出登录</a>
+        </div>
+    </nav>
+
+    <!-- 主体 -->
+    <div style="width:100%; height:680px; position:relative;">
+        <!-- 主体左侧菜单导航栏 -->
+        <div class="glass-Bg box-show3" style="width:208px; height:100%; top:-2px; left:0; position:absolute; margin:0; padding:0;">
+
+        </div>
+
+        <iframe class="glass-Bg" src="" style="width:84.5%; height:95%; margin:12px 12px 0 0; float:right;"></iframe>
     </div>
 
     <!-- 底部 -->
