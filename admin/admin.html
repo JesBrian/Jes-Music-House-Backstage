@@ -7,6 +7,8 @@
 
     <!-- CSS部分 -->
     <link rel="stylesheet" type="text/css" href="css/common/common.css">
+    <link rel="stylesheet" type="text/css" href="css/admin/admin.css">
+
 
     <!-- 自用字体图标 -->
     <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
@@ -45,34 +47,49 @@
         <!-- 用户登录 - 右侧 -->
         <span style="top:5px; right:208px; position:absolute; z-index:9;">
             <a class="userLogin superBtn MyIF administrators-1">
-                <!-- 如果登陆了显示头像 -- 开发阶段先屏蔽了
+                <!-- 如果登陆了显示头像 - 开发阶段先屏蔽了
                 <img src="img/Holy_Dragon,_Sanctuary_Guard_Regalie_(Full_Art).png" style="width:40px; height:37px; top:2px; left:1px; position:absolute;">
                 -->
             </a>
         </span>
-        <div style="width:168px; height:43px; top:15px; right:28px; position:absolute; z-index:9; line-height:1.35em;">
-            <p style="font-size:15px;">JesBrian UserName</p>
+        <div style="width:168px; height:43px; top:15px; right:28px; position:absolute; z-index:9; line-height:1.35em; background-color:#00CDFF">
+            <p style="font-size:15px;">JesBrian2UserName叫z</p>
             <a href="" style="margin-left:18px; font-size:14px; color:#888;">退出登录</a>
         </div>
     </nav>
 
     <!-- 主体 -->
-    <div style="width:100%; height:680px; position:relative;">
+    <div id="adminMainBody" style="width:100%; position:relative;">
         <!-- 主体左侧菜单导航栏 -->
-        <div id="mainMenu" class="glass-Bg box-show3" style="width:208px; height:100%; top:-4px; left:0; position:absolute; margin:0; padding:0;">
+        <div id="mainMenu" class="glass-Bg box-show3">
+
+            <!-- 详细一级、二级菜单 -->
+            <div style="width:95%; height:100%; padding-left:5px; position:absolute;">
+                <div style="height:20px;"></div>
+                <ul style="width:100%; height:28px; margin:3px 0; background-color:#9d7cff; position:relative; z-index:5;">
+                    <li style="width:100%; height:28px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
+                    <li style="width:100%; height:28px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
+                    <li style="width:100%; height:28px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
+                </ul>
+                <ul style="width:100%; height:28px; margin:3px 0; background-color:#9d7cff; position:relative; z-index:5;">
+                    <li style="width:100%; height:28px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
+                    <li style="width:100%; height:28px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
+                    <li style="width:100%; height:28px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
+                </ul>
+            </div>
 
             <!-- 收起/展开左侧菜单导航栏 -->
-            <a id="mainMenuSwitch" class="s1c-Bg box-show3" style="width:38px; height:68px; top:50%; right:-22px; margin-top:-38px; display:inline-block; position:absolute; line-height:68px; opacity:0.8;">
+            <a id="mainMenuSwitch" class="s1c-Bg box-show3">
                 <p class="MyIF double-arrow-left"></p>
             </a>
         </div>
 
-        <iframe class="glass-Bg" src="" style="width:84.8%; height:95%; margin:12px 10px 0 0; float:right;"></iframe>
+        <iframe id="operaBody" class="glass-Bg" src="" style="margin:8px 8px 0 0; float:right;"></iframe>
     </div>
 
     <!-- 底部 -->
-    <footer class="glass-Bg box-show3" style="width:100%; height:28px; bottom:0; margin:0; padding:0 38px; box-sizing:border-box; position:fixed; z-index:99;">
-        <p style="font-size:15px; color:#30CDFF; text-shadow:1px 1px 2px; line-height:28px; text-align:right;">版权归 JesBrian 个人所有</p>
+    <footer class="glass-Bg box-show3">
+        <p style="font-size:15px; color:#30CDFF; text-shadow:1px 1px 1px; line-height:28px; text-align:right;">©2015 - 2020  &nbsp;&nbsp;&nbsp;Music House 所有版权归 JesBrian 个人所有</p>
     </footer>
 
 
@@ -96,8 +113,19 @@
                 $(this).children('p').addClass('active');
                 mainMenuStatus = true;
             }
-            setTimeout("$('#mainMenuSwitch').children(\"p\").toggleClass('MyIF double-arrow-left'); $('#mainMenuSwitch').children(\"p\").toggleClass('MyIF double-arrow-right'); $('#mainMenuSwitch').children('p').removeClass('active');", 800);
+            setTimeout("$('#mainMenuSwitch').children('p').toggleClass('MyIF double-arrow-left'); $('#mainMenuSwitch').children('p').toggleClass('MyIF double-arrow-right'); $('#mainMenuSwitch').children('p').removeClass('active');", 800);
         });
+
+        $(window).resize(function () {
+            layoutSize();
+        });
+
+        function layoutSize() {
+            $("#adminMainBody").height($(window).height() - $('nav').height() - $('footer').height());
+            $("#operaBody").height($("#adminMainBody").height() - 16);
+            $("#operaBody").width($("#adminMainBody").width() - 254);
+        }
+        layoutSize();
 
     </script>
 
