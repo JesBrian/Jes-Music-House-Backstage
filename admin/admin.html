@@ -37,34 +37,35 @@
     </style>
 
 </head>
-<body style="width:100%; height:100%; margin:0; padding:0; position:relative; background:#333;">
+<body style="width:100%; height:100%; margin:0; padding:0; position:relative; background:#333; overflow:hidden;">
     
     <!-- 头部 -->
-    <nav class="glass-Bg box-show3" style="width:100%; height:72px; margin:0; box-sizing:border-box; position:relative; z-index:99; line-height:68px; overflow:hidden;">
+    <nav class="glass-Bg box-show3" style="width:100%; height:72px; margin:0; box-sizing:border-box; position:relative; z-index:99; line-height:68px;">
         <!-- 后台系统Logo - 左侧 -->
         <img src="img/common/MH-Logo.png" style="width:208px; height: auto; margin:8px 28px;">
 
-        <!-- 管理员 or 歌手登录 - 右侧 -->
-        <p class="adminAccountMenuSwitch" style="top:5px; right:208px; position:absolute; z-index:9;">
+        <!-- 账户管理 - 右侧 -->
+        <p class="accountMenuSwitch" style="top:5px; right:208px; position:absolute; z-index:9;">
             <a class="userLogin superBtn MyIF administrators-1">
                 <!-- 如果登陆了显示头像 - 开发阶段先屏蔽了
                 <img src="img/Holy_Dragon,_Sanctuary_Guard_Regalie_(Full_Art).png" style="width:40px; height:37px; top:2px; left:1px; position:absolute;">
                 -->
             </a>
         </p>
-        <div style="width:168px; height:43px; top:15px; right:28px; position:absolute; z-index:9; line-height:1.35em; background-color:#00CDFF">
-            <p class="adminAccountMenuSwitch" style="font-size:15px;">JesBrian2UserName叫z</p>
-            <a href="" style="margin-left:18px; font-size:14px; color:#888;">退出登录</a>
+        <div style="width:168px; height:43px; top:15px; right:28px; position:absolute; z-index:9; line-height:1.35em;">
+            <p class="accountMenuSwitch" style="font-size:15px; color:#30cdff; text-shadow:0.5px 0.5px 1px #67f2ff; cursor:pointer; ">JesBrian2UserName叫z</p>
+            <a href="" style="margin-left:18px; font-size:14px; color:#999; text-shadow:1px 1px 2px;">退出登录</a>
         </div>
 
-        <!-- 管理员 or 歌手账户操作菜单栏 -->
-        <div id="adminAccountMenu" style="width:268px; top:68px; right:2px; position:absolute; z-index:50; background:lightgreen;">
-
-        </div>
     </nav>
 
+    <!-- 账户操作菜单栏 -->
+    <div id="accountMenu" class="glass-Bg box-show3" style="width:268px; top:68px; right:-270px; position:absolute; z-index:55;">
+
+    </div>
+
     <!-- 主体 -->
-    <div id="adminMainBody" style="width:100%; position:relative; z-index:25;">
+    <div id="adminMainBody" style="width:100%; position:relative;">
         <!-- 主体左侧菜单导航栏 -->
         <div id="mainMenu" class="glass-Bg box-show3">
 
@@ -111,15 +112,16 @@
         /**
          * 设置整体框架布局
          */
-        $(window).resize(function () {
-            layoutSize();
-        });
         function layoutSize() {
             $("#adminMainBody").height($(window).height() - $('nav').height() - $('footer').height());
             $("#operaBody").height($("#adminMainBody").height() - 16);
             $("#operaBody").width($("#adminMainBody").width() - 254);
+            $('#accountMenu').height($("#adminMainBody").height() + 8);
         }
         layoutSize();
+        $(window).resize(function () {
+            layoutSize();
+        });
 
 
         /**
@@ -128,11 +130,13 @@
         var mainMenuStatus = true;
         $("#mainMenuSwitch").click(function () {
             if (mainMenuStatus) {
-                $('#mainMenu').animate({left:-183},800);
+                $('#mainMenu').animate({left: - 218}, 800);
+                $("#operaBody").animate({width:$("#adminMainBody").width() - 38},800);
                 $(this).children("p").addClass('active');
                 mainMenuStatus = false;
             } else {
-                $('#mainMenu').animate({left:0},800);
+                $('#mainMenu').animate({left: 0}, 800);
+                $("#operaBody").animate({width:$("#adminMainBody").width() - 254},800);
                 $(this).children('p').addClass('active');
                 mainMenuStatus = true;
             }
@@ -143,9 +147,14 @@
         /**
          * 管理员 or 歌手菜单导航栏
          */
-        $('#adminAccountMenu').height($("#adminMainBody").height());
-        $("p.adminAccountMenuSwitch").click(function () {
-            $('#adminAccountMenu').animate({right:2},888);
+        $("p.accountMenuSwitch").click(function () {
+            if ($('#accountMenu').hasClass('active')) {
+                $('#accountMenu').removeClass('active');
+                $('#accountMenu').animate({right: -270}, 888);
+            } else {
+                $('#accountMenu').addClass('active');
+                $('#accountMenu').animate({right: 2}, 888);
+            }
         });
 
 
