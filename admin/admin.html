@@ -67,7 +67,7 @@
     <!-- 主体 -->
     <div id="adminMainBody" style="width:100%; position:relative;">
         <!-- 主体左侧菜单导航栏 -->
-        <div id="mainMenu" class="glass-Bg box-show3">
+        <div id="mainMenu" class="glass-Bg box-show3 active">
 
             <!-- 详细一级、二级菜单 -->
             <div style="width:95%; height:100%; padding-left:5px; position:absolute;">
@@ -115,7 +115,11 @@
         function layoutSize() {
             $("#adminMainBody").height($(window).height() - $('nav').height() - $('footer').height());
             $("#operaBody").height($("#adminMainBody").height() - 16);
-            $("#operaBody").width($("#adminMainBody").width() - 254);
+            if ($('#mainMenu').hasClass('active')) {
+                $("#operaBody").width($("#adminMainBody").width() - 254);
+            } else {
+                $("#operaBody").width($("#adminMainBody").width() - 38);
+            }
             $('#accountMenu').height($("#adminMainBody").height() + 8);
         }
         layoutSize();
@@ -127,18 +131,17 @@
         /**
          * 左侧主菜单导航栏
          */
-        var mainMenuStatus = true;
         $("#mainMenuSwitch").click(function () {
-            if (mainMenuStatus) {
+            if ($('#mainMenu').hasClass('active')) {
+                $('#mainMenu').removeClass('active');
                 $('#mainMenu').animate({left: - 218}, 800);
                 $("#operaBody").animate({width:$("#adminMainBody").width() - 38},800);
                 $(this).children("p").addClass('active');
-                mainMenuStatus = false;
             } else {
+                $('#mainMenu').addClass('active');
                 $('#mainMenu').animate({left: 0}, 800);
                 $("#operaBody").animate({width:$("#adminMainBody").width() - 254},800);
                 $(this).children('p').addClass('active');
-                mainMenuStatus = true;
             }
             setTimeout("$('#mainMenuSwitch').children('p').toggleClass('MyIF double-arrow-left'); $('#mainMenuSwitch').children('p').toggleClass('MyIF double-arrow-right'); $('#mainMenuSwitch').children('p').removeClass('active');", 800);
         });
