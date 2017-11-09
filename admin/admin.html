@@ -72,16 +72,46 @@
             <!-- 详细一级、二级菜单 -->
             <div style="width:95%; height:100%; padding-left:5px; position:absolute;">
                 <div style="height:20px;"></div>
-                <ul style="width:100%; height:28px; margin:3px 0; background-color:#9d7cff; position:relative; z-index:5;">
-                    <li style="width:100%; height:28px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
-                    <li style="width:100%; height:28px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
-                    <li style="width:100%; height:28px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
+                <ul class="firstMenu" style="width:100%; height:42px; margin:3px 0; background-color:#9d7cff; position:relative;">
+                    <span class="glass-Bg box-show3 firstMenuSwitch" style="width:100%; height:42px; top:0; left:0; position:absolute; display:block; z-index:5;">
+                        <p class="showFirstMenuSwitch MyIF double-arrow-up"></p>
+                    </span>
+                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
+                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
+                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
                 </ul>
-                <ul style="width:100%; height:28px; margin:3px 0; background-color:#9d7cff; position:relative; z-index:5;">
-                    <li style="width:100%; height:28px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
-                    <li style="width:100%; height:28px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
-                    <li style="width:100%; height:28px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
+
+                <ul class="firstMenu" style="width:100%; height:42px; margin:3px 0; background-color:#9d7cff; position:relative;">
+                    <span class="glass-Bg box-show3 firstMenuSwitch" style="width:100%; height:42px; top:0; left:0; position:absolute; display:block; z-index:5;">
+                        <p class="showFirstMenuSwitch MyIF double-arrow-up"></p>
+                    </span>
+                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">4</li>
+                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">5</li>
+                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">6</li>
+                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">7</li>
+                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">8</li>
                 </ul>
+
+                <ul class="firstMenu" style="width:100%; height:42px; margin:3px 0; background-color:#9d7cff; position:relative;">
+                    <span class="glass-Bg box-show3 firstMenuSwitch" style="width:100%; height:42px; top:0; left:0; position:absolute; display:block; z-index:5;">
+                        <p class="showFirstMenuSwitch MyIF double-arrow-up"></p>
+                    </span>
+                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
+                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
+                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
+                </ul>
+
+                <ul class="firstMenu" style="width:100%; height:42px; margin:3px 0; background-color:#9d7cff; position:relative;">
+                    <span class="glass-Bg box-show3 firstMenuSwitch" style="width:100%; height:42px; top:0; left:0; position:absolute; display:block; z-index:5;">
+                        <p class="showFirstMenuSwitch MyIF double-arrow-up"></p>
+                    </span>
+                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">4</li>
+                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">5</li>
+                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">6</li>
+                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">7</li>
+                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">8</li>
+                </ul>
+
             </div>
 
             <!-- 收起/展开左侧菜单导航栏 -->
@@ -134,13 +164,13 @@
         $("#mainMenuSwitch").click(function () {
             if ($('#mainMenu').hasClass('active')) {
                 $('#mainMenu').removeClass('active');
-                $('#mainMenu').animate({left: - 218}, 800);
-                $("#operaBody").animate({width:$("#adminMainBody").width() - 38},800);
+                $('#mainMenu').animate({left: -218}, 800);
+                $("#operaBody").animate({width: $("#adminMainBody").width() - 38}, 800);
                 $(this).children("p").addClass('active');
             } else {
                 $('#mainMenu').addClass('active');
                 $('#mainMenu').animate({left: 0}, 800);
-                $("#operaBody").animate({width:$("#adminMainBody").width() - 254},800);
+                $("#operaBody").animate({width: $("#adminMainBody").width() - 254}, 800);
                 $(this).children('p').addClass('active');
             }
             setTimeout("$('#mainMenuSwitch').children('p').toggleClass('MyIF double-arrow-left'); $('#mainMenuSwitch').children('p').toggleClass('MyIF double-arrow-right'); $('#mainMenuSwitch').children('p').removeClass('active');", 800);
@@ -148,7 +178,7 @@
 
 
         /**
-         * 管理员 or 歌手菜单导航栏
+         * 管理员 or 歌手账户菜单导航栏
          */
         $("p.accountMenuSwitch").click(function () {
             if ($('#accountMenu').hasClass('active')) {
@@ -160,6 +190,28 @@
             }
         });
 
+
+        /**
+         * 手风琴主菜单效果
+         */
+        $('span.firstMenuSwitch').click(function () {
+            //console.log($(this).parent().children('li'));
+
+
+            var length = $(this).parent().children('li').length;
+
+            $(this).parent().animate({height: 52 + length * 36},500);
+            //alert(length);
+            /*
+            $(this).parent().children('li').each(function () {
+                $(this).top()
+            });*/
+            for (var i = 0; i < length; i++) {
+                //console.log($(this).parent().children('li').eq(i));
+                $(this).parent().children('li').eq(i).animate({top: 48 + i * 36},566);
+            }
+
+        });
 
 
     </script>
