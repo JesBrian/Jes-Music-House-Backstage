@@ -1,12 +1,51 @@
 /*
  * 后端主页 CSS
  */
+body {
+    width:100%; height:100%; margin:0; padding:0; position:relative; background:#333; overflow:hidden;
+}
+
+/* 顶部 */
+nav {
+    width:100%; height:72px; margin:0; box-sizing:border-box; position:relative; z-index:99; line-height:68px;
+}
+#navLogo {
+    width:208px; height: auto; margin:8px 28px;
+}
+
+nav > .accountMenuSwitch {
+    top:5px; right:208px; position:absolute; z-index:9;
+}
+
+#navBaseOper {
+    width:168px; height:43px; top:15px; right:28px; position:absolute; z-index:9; line-height:1.35em;
+}
+
+#navBaseOper > .accountMenuSwitch {
+    width:100%; font-size:15px; color:#30cdff; text-shadow:0.5px 0.5px 1px #67f2ff; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; cursor:pointer;
+}
+#navBaseOper > a {
+    margin-left:18px; font-size:14px; color:#999; text-shadow:1px 1px 2px;
+}
+
+
+/**
+ * 主体部分
+ */
+#accountMainBody {
+    width:100%; position:relative;
+}
 
 #mainMenu {
 	width:238px; height:102%; top:-1%; left:0; margin:0; padding:0; position:absolute;
 }
 #mainMenuSwitch, a.accountMenuSwitch {
-	width:38px; height:68px; top:50%; margin-top:-38px; display:inline-block; position:absolute; line-height:68px; z-index:50; opacity:0.8;
+	width:38px; height:33px; top:50%; margin-top:-38px; display:inline-block; position:absolute; line-height:34px; z-index:50; opacity:0.8;
+    transform:scale(1,2);
+    -ms-transform:scale(1,2);
+    -webkit-transform:scale(1,2);
+    -moz-transform:scale(1,2);
+    -o-transform:scale(1,2);
 }
 #mainMenuSwitch:hover > .MyIF, a.accountMenuSwitch:hover > .MyIF {
 	color:#42d4ff;
@@ -14,18 +53,34 @@
 	opacity:1;
 }
 
-.showFirstMenuSwitch {
+#mainMenuContent {
+    width:95%; height:93%; padding-left:5px; position:absolute;
+}
+
+.firstMenu {
+    width:99%; height:42px; margin:3px 0; position:relative;
+}
+.firstMenuSwitch {
+    width:100%; height:42px; top:0; left:0; position:absolute; display:block; z-index:5;
+}
+
+.firstMenuSwitch > p {
     width:24px; height:24px; margin:8.5px; float:right;
     border: 0.5px solid transparent;
     text-align:center; line-height:23px; opacity:0.6;
 }
-.showFirstMenuSwitch:hover {
+.firstMenuSwitch > p:hover {
     background: #111;
     border: 0.5px solid #000;
     border-radius:2px;
     box-shadow: inset 0 0 0 1px #272727;
     color:#42d4ff; text-shadow:0 0 1px; opacity:1;
 }
+
+#accountMenu {
+    width:268px; top:68px; right:-247px; position:absolute; z-index:55;
+}
+
 
 
 
@@ -34,4 +89,5 @@
 
 footer {
 	width:100%; height:28px; bottom:0; margin:0; padding:0 38px; box-sizing:border-box; position:fixed; z-index:99;
+    font-size:15px; color:#30CDFF; text-shadow:1px 1px 1px; line-height:28px; text-align:right;
 }
