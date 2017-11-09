@@ -15,24 +15,47 @@
 
     <!-- 临时CSS -->
     <style type="text/css">
-        #mainMenuSwitch > .MyIF.active {
+        #mainMenuSwitch > .MyIF {
             animation:menuSwitch 0.8s forwards;
             -webkit-animation:menuSwitch 0.8s forwards; /* Safari 和 Chrome */
         }
-        @keyframes menuSwitch
-        {
-            to {
-                transform:rotate(180deg);
-                -ms-transform:rotate(180deg); 	/* IE 9 */
-                -moz-transform:rotate(180deg); 	/* Firefox */
-                -o-transform:rotate(180deg); 	/* Opera */
-            }
+        #mainMenuSwitch > .MyIF.active {
+            animation:menuSwitchActive 0.8s forwards;
+            -webkit-animation:menuSwitchActive 0.8s forwards; /* Safari 和 Chrome */
         }
-        @-webkit-keyframes menuSwitch /*Safari and Chrome*/
+
+
+        .showFirstMenuSwitchICO {
+            display:inline-block;
+            animation:menuSwitch 0.5s forwards;
+            -webkit-animation:menuSwitch 0.5s forwards; /* Safari 和 Chrome */
+        }
+        .showFirstMenuSwitchICO.active {
+            animation:menuSwitchActive 0.5s forwards;
+            -webkit-animation:menuSwitchActive 0.5s forwards; /* Safari 和 Chrome */
+        }
+
+
+        /**
+         * 将元素倒转 108度 动画 [ 开关 -- 可以转一圈 ]
+         */
+        @keyframes menuSwitch /*IE 9 & Firefox & Opera*/
         {
-            to {
-                -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
-            }
+            from {  transform:rotate(-180deg);  -ms-transform:rotate(-180deg);  -moz-transform:rotate(-180deg);  -o-transform:rotate(-180deg);  }
+            to {  transform:rotate(0deg);  -ms-transform:rotate(0deg);  -moz-transform:rotate(0deg);  -o-transform:rotate(0deg);  }
+        }
+        @-webkit-keyframes menuSwitch /*Safari & Chrome*/
+        {
+            from {  -webkit-transform:rotate(-180deg);  }
+            to {  -webkit-transform:rotate(-0deg);  }
+        }
+        @keyframes menuSwitchActive /*IE 9 & Firefox & Opera*/
+        {
+            to {  transform:rotate(180deg);  -ms-transform:rotate(180deg);  -moz-transform:rotate(180deg);  -o-transform:rotate(180deg);  }
+        }
+        @-webkit-keyframes menuSwitchActive /*Safari & Chrome*/
+        {
+            to {  -webkit-transform:rotate(180deg);  }
         }
     </style>
 
@@ -74,16 +97,21 @@
                 <div style="height:20px;"></div>
                 <ul class="firstMenu" style="width:100%; height:42px; margin:3px 0; background-color:#9d7cff; position:relative;">
                     <span class="glass-Bg box-show3 firstMenuSwitch" style="width:100%; height:42px; top:0; left:0; position:absolute; display:block; z-index:5;">
-                        <p class="showFirstMenuSwitch MyIF double-arrow-up"></p>
+                        <p class="showFirstMenuSwitch">
+                            <a class="showFirstMenuSwitchICO MyIF double-arrow-up"></a>
+                        </p>
                     </span>
                     <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
                     <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
                     <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
                 </ul>
 
+
                 <ul class="firstMenu" style="width:100%; height:42px; margin:3px 0; background-color:#9d7cff; position:relative;">
                     <span class="glass-Bg box-show3 firstMenuSwitch" style="width:100%; height:42px; top:0; left:0; position:absolute; display:block; z-index:5;">
-                        <p class="showFirstMenuSwitch MyIF double-arrow-up"></p>
+                        <p class="showFirstMenuSwitch">
+                            <a class="showFirstMenuSwitchICO MyIF double-arrow-up"></a>
+                        </p>
                     </span>
                     <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">4</li>
                     <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">5</li>
@@ -94,7 +122,9 @@
 
                 <ul class="firstMenu" style="width:100%; height:42px; margin:3px 0; background-color:#9d7cff; position:relative;">
                     <span class="glass-Bg box-show3 firstMenuSwitch" style="width:100%; height:42px; top:0; left:0; position:absolute; display:block; z-index:5;">
-                        <p class="showFirstMenuSwitch MyIF double-arrow-up"></p>
+                        <p class="showFirstMenuSwitch">
+                            <a class="showFirstMenuSwitchICO MyIF double-arrow-up"></a>
+                        </p>
                     </span>
                     <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
                     <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
@@ -103,7 +133,9 @@
 
                 <ul class="firstMenu" style="width:100%; height:42px; margin:3px 0; background-color:#9d7cff; position:relative;">
                     <span class="glass-Bg box-show3 firstMenuSwitch" style="width:100%; height:42px; top:0; left:0; position:absolute; display:block; z-index:5;">
-                        <p class="showFirstMenuSwitch MyIF double-arrow-up"></p>
+                        <p class="showFirstMenuSwitch">
+                            <a class="showFirstMenuSwitchICO MyIF double-arrow-up"></a>
+                        </p>
                     </span>
                     <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">4</li>
                     <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">5</li>
@@ -111,7 +143,6 @@
                     <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">7</li>
                     <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">8</li>
                 </ul>
-
             </div>
 
             <!-- 收起/展开左侧菜单导航栏 -->
@@ -166,14 +197,13 @@
                 $('#mainMenu').removeClass('active');
                 $('#mainMenu').animate({left: -218}, 800);
                 $("#operaBody").animate({width: $("#adminMainBody").width() - 38}, 800);
-                $(this).children("p").addClass('active');
             } else {
                 $('#mainMenu').addClass('active');
                 $('#mainMenu').animate({left: 0}, 800);
                 $("#operaBody").animate({width: $("#adminMainBody").width() - 254}, 800);
-                $(this).children('p').addClass('active');
             }
-            setTimeout("$('#mainMenuSwitch').children('p').toggleClass('MyIF double-arrow-left'); $('#mainMenuSwitch').children('p').toggleClass('MyIF double-arrow-right'); $('#mainMenuSwitch').children('p').removeClass('active');", 800);
+
+            $(this).children("p").toggleClass('active');
         });
 
 
@@ -195,21 +225,31 @@
          * 手风琴主菜单效果
          */
         $('span.firstMenuSwitch').click(function () {
-            //console.log($(this).parent().children('li'));
 
+            var thisObj = $(this);
 
-            var length = $(this).parent().children('li').length;
+            $(this).find('a.showFirstMenuSwitchICO').toggleClass('active');
 
-            $(this).parent().animate({height: 52 + length * 36},500);
-            //alert(length);
-            /*
-            $(this).parent().children('li').each(function () {
-                $(this).top()
-            });*/
-            for (var i = 0; i < length; i++) {
-                //console.log($(this).parent().children('li').eq(i));
-                $(this).parent().children('li').eq(i).animate({top: 48 + i * 36},566);
+            if ($(this).hasClass('active')) {
+
+                $(this).removeClass('active');
+
+                $(this).parent().animate({height: 42},566);
+                $(this).parent().children('li').animate({top: 0},500);
+
+            } else {
+                $(this).addClass('active');
+
+                var length = $(this).parent().children('li').length;
+
+                $(this).parent().animate({height: 52 + length * 36},500);
+
+                /* jQuery 的 each 方法怎样获取下标 */
+                for (var i = 0; i < length; i++) {
+                    $(this).parent().children('li').eq(i).animate({top: 48 + i * 36},566);
+                }
             }
+
 
         });
 
