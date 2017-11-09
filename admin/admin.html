@@ -71,7 +71,7 @@
     <nav class="glass-Bg box-show3">
 
         <!-- 后台系统Logo - 左侧 -->
-        <img id="navLogo" src="img/common/MH-Logo.png">
+        <img id="navLogo" src=""img/common/MH-Logo.png>
 
         <!-- 账户管理 - 右侧 -->
         <p class="accountMenuSwitch">
@@ -85,7 +85,7 @@
         <!-- 信息 & 退出登录 -->
         <div id="navBaseOper">
             <div class="accountMenuSwitch">JesBrian2UserName叫zvdsbvds</div>
-            <a href="">退出登录</a>
+            超级管理员<a href="" class="accountLogout">退出登录</a>
         </div>
 
     </nav>
@@ -93,12 +93,23 @@
 
     <!-- 账户操作菜单栏 -->
     <div id="accountMenu" class="glass-Bg box-show3">
+
         <!-- 收起/展开右侧账户操作菜单导航栏 -->
         <a class="accountMenuSwitch s1c-Bg box-show3" style="left:-22px;">
             <p class="MyIF double-arrow-left"></p>
         </a>
+
+        <!-- 账户操作菜单内容 -->
+        <ul>
+            <li>系统信息</li>
+            <li>登陆信息</li>
+            <li>修改密码</li>
+        </ul>
+
+        <a href="" class="accountLogout" style="right:23px; bottom:18px; position:absolute; font-size:18px;">退出登录</a>
+
     </div>
-    <div id="accountMenuMask" style="width:100%; height:100%; top:0; left:100%; position:absolute; z-index:150;"></div>
+    <div id="accountMenuMask" class="accountMenuSwitch" style="width:100%; height:100%; top:0; left:100%; position:absolute; z-index:150;"></div>
 
 
     <!-- 主体 -->
@@ -361,7 +372,17 @@
 
         </div>
 
+        <!--  -->
+        <div class="glass-Bg box-show3" style="width:143px; height:30px; top:38px; right:98px; display:inline-block; position:absolute;">
+            刷新页面
+            <p class="glass-Bg" style="display:inline-block;">
+                <a class="MyIF double-arrow-up" style="display:inline-block"></a>
+            </p>
+        </div>
+
+        <!-- 框架页面 -->
         <iframe id="operaBody" class="glass-Bg" src="" style="margin:8px 30px 0 0; float:right;"></iframe>
+
     </div>
 
 
@@ -448,13 +469,6 @@
             }
             $('.accountMenuSwitch').children('p').toggleClass('active');
         });
-        $('#accountMenuMask').click(function () {
-            $('#accountMenu').removeClass('active');
-            $('#accountMenuMask').css({left:$(window).width()});
-            $('#accountMenu').animate({right: -247}, 800);
-            $('.accountMenuSwitch').children('p').toggleClass('active');
-        });
-
 
         /**
          * 手风琴左侧主菜单导航栏效果

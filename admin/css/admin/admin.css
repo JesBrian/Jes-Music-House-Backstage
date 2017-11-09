@@ -18,14 +18,17 @@ nav > .accountMenuSwitch {
 }
 
 #navBaseOper {
-    width:168px; height:43px; top:15px; right:28px; position:absolute; z-index:9; line-height:1.35em;
+    width:168px; height:43px; top:15px; right:28px; position:absolute; z-index:9; color:#888; line-height:1.35em;
 }
 
 #navBaseOper > .accountMenuSwitch {
     width:100%; font-size:15px; color:#30cdff; text-shadow:0.5px 0.5px 1px #67f2ff; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; cursor:pointer;
 }
-#navBaseOper > a {
+.accountLogout {
     margin-left:18px; font-size:14px; color:#999; text-shadow:1px 1px 2px;
+}
+.accountLogout:hover {
+    color:#DDD;
 }
 
 
