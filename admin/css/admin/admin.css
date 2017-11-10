@@ -88,6 +88,13 @@ nav > .accountMenuSwitch {
 
 
 
+#refreshIframe {
+    width:110px; height:36px; position:relative; z-index:9; font-weight:600; color:#BBB; cursor:pointer;
+}
+#refreshIframe:hover {
+    color:#EEE;
+}
+
 
 
 footer {

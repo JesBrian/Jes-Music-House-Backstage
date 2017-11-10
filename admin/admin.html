@@ -17,6 +17,7 @@
     <style type="text/css">
         #mainMenuSwitch > .MyIF, a.accountMenuSwitch > .MyIF {
             font-size:24px;
+            font-weight:600;
             animation:menuSwitch 0.8s forwards;
             -webkit-animation:menuSwitch 0.8s forwards; /* Safari 和 Chrome */
         }
@@ -26,16 +27,16 @@
         }
 
 
-        .firstMenuSwitch .MyIF {
+        .firstMenuSwitch .MyIF, #timeSwitch .MyIF {
             display:inline-block;
             animation:menuSwitch 0.6s forwards;
             -webkit-animation:menuSwitch 0.6s forwards; /* Safari 和 Chrome */
         }
-        .firstMenuSwitch .MyIF:hover {
+        .firstMenuSwitch .MyIF:hover, #timeSwitch .MyIF:hover {
             color:#42d4ff;
             text-shadow:0 0 1px;
         }
-        .firstMenuSwitch .MyIF.active {
+        .firstMenuSwitch .MyIF.active, #timeSwitch .MyIF.active {
             animation:menuSwitchActive 0.6s forwards;
             -webkit-animation:menuSwitchActive 0.6s forwards; /* Safari 和 Chrome */
         }
@@ -100,10 +101,16 @@
         </a>
 
         <!-- 账户操作菜单内容 -->
-        <ul>
-            <li>系统信息</li>
-            <li>登陆信息</li>
-            <li>修改密码</li>
+        <ul style="margin:28px auto;">
+            <li class="glass-Bg box-show3" style="width:83%; height:38px; margin:10px auto;">
+                <a>系统通知</a>
+            </li>
+            <li class="glass-Bg box-show3" style="width:83%; height:38px; margin:10px auto;">
+                <a>登陆信息</a>
+            </li>
+            <li class="glass-Bg box-show3" style="width:83%; height:38px; margin:10px auto;">
+                <a>修改密码</a>
+            </li>
         </ul>
 
         <a href="" class="accountLogout" style="right:23px; bottom:18px; position:absolute; font-size:18px;">退出登录</a>
@@ -147,237 +154,32 @@
                     <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">8</li>
                 </ul>
 
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">4</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">5</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">6</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">7</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">8</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">4</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">5</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">6</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">7</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">8</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">4</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">5</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">6</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">7</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">8</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">4</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">5</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">6</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">7</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">8</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">4</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">5</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">6</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">7</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">8</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">4</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">5</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">6</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">7</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">8</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">4</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">5</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">6</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">7</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">8</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">4</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">5</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">6</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">7</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">8</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">4</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">5</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">6</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">7</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">8</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">4</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">5</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">6</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">7</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">8</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">1</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">2</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">3</li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">4</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">5</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">6</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">7</li>
-                    <li class="secondMenu" style="width:100%; height:36px; top:0; left:0; position:absolute; z-index:2; background-color: #0ec228">8</li>
-                </ul>
-
 
             </div>
 
         </div>
 
-        <!--  -->
-        <div class="glass-Bg box-show3" style="width:143px; height:30px; top:38px; right:98px; display:inline-block; position:absolute;">
-            刷新页面
-            <p class="glass-Bg" style="display:inline-block;">
-                <a class="MyIF double-arrow-up" style="display:inline-block"></a>
+        <!-- 悬浮时间和刷新块 -->
+        <div class="glass-Bg box-show3" style="width:148px; height:36px; top:35px; right:98px; display:inline-block; position:absolute; line-height:36px;">
+
+            <!-- 刷新页面 -->
+            <div id="refreshIframe">
+                <i class="MyIF refresh-1" style="margin:0 8px 0 12px;"></i>刷新页面
+            </div>
+
+            <!-- 下拉 OR 折叠显示时间模块 -->
+            <p id="timeSwitch" class="glass-Bg" style="width:26px; height:26px; top:4px; right:4px; line-height:26px; text-align:center; position:absolute;">
+                <a class="MyIF double-arrow-up" style="display:inline-block; opacity:0.8;"></a>
             </p>
+
+            <!-- 显示当前时间[实时更新] -->
+            <div id="showNowTime" style="width:100%; height:30px; bottom:2px; position:absolute; display:none; line-height: 1em;">
+                <img src="img/icon/时间 分钟.png" style="width:25px; height:30px; margin:-2px 8px;">
+                <div style="margin:-2px 23px 0 0; float:right; font-size:13px; font-weight:600; color:#CCC;">
+                    <p id="showNowTimeDate"></p><p id="showNowTimeTime"></p>
+                </div>
+            </div>
+
         </div>
 
         <!-- 框架页面 -->
@@ -470,6 +272,7 @@
             $('.accountMenuSwitch').children('p').toggleClass('active');
         });
 
+
         /**
          * 手风琴左侧主菜单导航栏效果
          */
@@ -500,6 +303,62 @@
             }
 
         });
+
+
+        /**
+         * 刷新和时间悬浮块
+         */
+        var showNowTimeStep;// = setInterval(showTime,1000);
+        var showTimeSwitch;
+        $('#timeSwitch').click(function () {
+
+
+            $(this).children('a').toggleClass('active');
+
+            if ($(this).children('a').hasClass('active')) {
+
+                showNowTimeStep = setInterval(showTime,1000);
+
+                $(this).parent().animate({height:68},588);
+                $('#showNowTime').fadeIn(1280);
+
+                clearTimeout(showTimeSwitch);
+                showTimeSwitch = setTimeout("$('#timeSwitch').parent().animate({height:38},588); $('#timeSwitch').children('a').toggleClass('active');$('#showNowTime').fadeOut(200);clearInterval(showNowTimeStep);",6888);
+
+            } else {
+
+                clearInterval(showNowTimeStep);
+
+                $('#showNowTime').fadeOut(100);
+                clearTimeout(showTimeSwitch);
+                $(this).parent().animate({height:36},588);
+            }
+        });
+
+
+        /**
+         * 获取当前时间函数 [格式化 -- XXXX-XX-XX XX:XX:XX]
+         */
+        function showTime() {
+        
+            var date = new Date();
+
+            var y = date.getFullYear();  
+            var m = date.getMonth() + 1;  
+            m = m < 10 ? ('0' + m) : m;  
+            var d = date.getDate();  
+            d = d < 10 ? ('0' + d) : d;  
+            var h = date.getHours();  
+            h=h < 10 ? ('0' + h) : h;  
+            var minute = date.getMinutes();  
+            minute = minute < 10 ? ('0' + minute) : minute;  
+            var second=date.getSeconds();  
+            second=second < 10 ? ('0' + second) : second;
+
+            $("#showNowTimeDate").html(y + '-' + m + '-' + d);
+            $("#showNowTimeTime").html(h + ' : '+ minute + ' : ' + second);
+        }
+        showTime();
 
     </script>
 
