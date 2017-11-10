@@ -64,7 +64,7 @@ nav > .accountMenuSwitch {
     width:99%; height:42px; margin:3px 0; position:relative;
 }
 .firstMenuSwitch {
-    width:100%; height:42px; top:0; left:0; position:absolute; display:block; z-index:5;
+    width:100%; height:42px; top:0; left:0; position:absolute; z-index:5; cursor:pointer;
 }
 
 .firstMenuSwitch > p {
