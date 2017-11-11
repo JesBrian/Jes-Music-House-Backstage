@@ -30,7 +30,7 @@ var nowUrl = 'adminIframe/index.html';                   //nowUrl -- 记录当�
     /**
      * 调整后台页面布局 -- 调用home.js里的 layoutSize 方法
      */
-    layoutSize();   //后台页面第一次打开时
+    layoutSize();   //后台页面第一次打开时设置布局
     $(window).resize(function () {  //改变浏览器窗口时
         layoutSize();
     });
@@ -40,35 +40,37 @@ var nowUrl = 'adminIframe/index.html';                   //nowUrl -- 记录当�
      */
     $("#mainMenuSwitch").click(function () {
 
-        var mainMenuObj = $('#mainMenu');
+        var mainMenuObj = $('#mainMenu');   //获取左侧主菜单jq对象
 
-        if (mainMenuObj.hasClass('active')) {
+        if (mainMenuObj.hasClass('active')) {   //若是打开状态 -- 有 active 类，则折叠主菜单
             mainMenuObj.animate({left: -218}, 800);
-        } else {
+        } else {    //若是折叠状态 -- 没 active 类，则展开主菜单
             mainMenuObj.animate({left: 0}, 800);
         }
 
+        /* 添加 OR 删除主菜单及其主菜单开关的 active 类 */
         mainMenuObj.toggleClass('active');
         $(this).children("p").toggleClass('active');
 
-        setTimeout(layoutSize, 600);
+        setTimeout(layoutSize, 600);    //调整后台布局
     });
 
     /**
-     * 账户操作菜单导航栏 [ 折叠 OR 展开 ]
+     * 右侧账户操作菜单导航栏 [ 折叠 OR 展开 ]
      */
     $(".accountMenuSwitch").click(function () {
 
-        var accountMenuObj = $('#accountMenu');
+        var accountMenuObj = $('#accountMenu'); //获取右侧账户操作菜单导航栏jq对象
 
-        if (accountMenuObj.hasClass('active')) {
-            $('#accountMenuMask').css({left: $(window).width()});
+        if (accountMenuObj.hasClass('active')) {    //若是打开状态 -- 有 active 类，则折叠账户操作菜单
+            $('#accountMenuMask').css({left: $(window).width()});   //折叠遮幕
             accountMenuObj.animate({right: -247}, 800);
-        } else {
-            $('#accountMenuMask').css({left: 0});
+        } else {    //若是折叠状态 -- 没 active 类，则展开账户操作菜单
+            $('#accountMenuMask').css({left: 0});   //展开遮幕
             accountMenuObj.animate({right: 2}, 800);
         }
 
+        /* 添加 OR 删除账户操作菜单及其账户操作菜单开关的 active 类 */
         accountMenuObj.toggleClass('active');
         $('a.accountMenuSwitch').children('p').toggleClass('active');
     });
@@ -110,41 +112,45 @@ var nowUrl = 'adminIframe/index.html';                   //nowUrl -- 记录当�
         }
         nowSecondMenuObj.addClass('active');
 
-        nowUrl = nowSecondMenuObj.attr('dataUrl');
-
+        nowUrl = nowSecondMenuObj.attr('dataUrl');   //修改记录当前URL的变量并在iframe显示
         accountOperIframeObj.attr('src', nowUrl);
 
         preSecondMenuObj = nowSecondMenuObj;  //不能随便调换位置！！需在判断一级菜单是否为空 && 打开新的二级菜单之后之后才能改变其指向
     });
 
     /**
-     * 刷新和时间悬浮块
+     * 显示 OR 隐藏当前时间
      */
     $('#timeSwitch').click(function () {
 
-        var showTimeSwitchObj = $(this).children('a').toggleClass('active');
+        var showTimeSwitchObj = $(this).children('a').toggleClass('active');    //获取显示当前时间开关且添加 active 类
 
-        if (showTimeSwitchObj.hasClass('active')) {
+        if (showTimeSwitchObj.hasClass('active')) { //如果开关为开 -- 即有 active 类，则显示当前时间
 
-            showNowTimeStep = setInterval("getNowTime($('#showNowTimeDate'),$('#showNowTimeTime'))", 1000);
+            showNowTimeStep = setInterval("getNowTime($('#showNowTimeDate'),$('#showNowTimeTime'))", 1000); //设置每秒刷新当前时间setInterval
 
-            $(this).parent().animate({height: 68}, 588);
+            $(this).parent().animate({height: 68}, 588);    //显示当前时间悬浮块
             $('#showNowTime').fadeIn(1280);
 
-            clearTimeout(showTimeSwitch);
+            //设置6888毫秒自动隐藏
             showTimeSwitch = setTimeout("$('#timeSwitch').parent().animate({height:38},588); $('#timeSwitch').children('a').toggleClass('active');$('#showNowTime').fadeOut(200);clearInterval(showNowTimeStep);", 6888);
 
-        } else {
+        } else {    //如果开关为关 -- 即没 active 类，则显示当前时间
 
-            clearInterval(showNowTimeStep);
+            clearInterval(showNowTimeStep); //取消每秒刷新当前时间的setInterval
 
+            $(this).parent().animate({height: 36}, 588); //隐藏显示当前时间悬浮块
             $('#showNowTime').fadeOut(100);
-            clearTimeout(showTimeSwitch);
-            $(this).parent().animate({height: 36}, 588);
+
+            clearTimeout(showTimeSwitch);   //取消6888毫秒自动隐藏
         }
     });
-    $('#refreshIframe').click(function () {     //点击刷新页面按钮刷新iframe当前页面
-        accountOperIframeObj.attr('src', nowUrl);
+
+    /**
+     * 点击刷新页面按钮刷新iframe当前页面
+     */
+    $('#refreshIframe').click(function () {
+        accountOperIframeObj.attr('src', nowUrl);   //刷新 nowUrl 所记录的网页地址
     });
 
     /**
@@ -156,7 +162,7 @@ var nowUrl = 'adminIframe/index.html';                   //nowUrl -- 记录当�
      * 账户操作菜单iframe内容页面跳转
      */
     $('li.accountOperIframeUrl').click(function () {
-        nowUrl = $(this).attr('dataUrl');
+        nowUrl = $(this).attr('dataUrl');   //修改记录当前URL的变量并在iframe显示
         accountOperIframeObj.attr('src', nowUrl);
     });
 
