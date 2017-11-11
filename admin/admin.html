@@ -139,14 +139,14 @@
                         <span style="margin-left:44px; line-height:42px;">一级菜单111</span>
                         <p><a class="MyIF double-arrow-up"></a></p>
                     </div>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        <a href="#" style="margin-left:10px; color:#888;"><i class="MyIF menu" style="margin-right:10px;"></i>二级菜单AAA</a>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text1.html">
+                        <i class="MyIF menu"></i>二级菜单AAA
                     </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        <a href="#" style="margin-left:10px; color:#888;"><i class="MyIF shijianfenzhong" style="margin-right:10px;"></i>二级菜单BBB</a>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text2.html">
+                        <i class="MyIF shijianfenzhong"></i>二级菜单BBB
                     </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        <a href="#" style="margin-left:10px; color:#888;"><i class="MyIF music-box" style="margin-right:10px;"></i>二级菜单CCC</a>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text3.html">
+                        <i class="MyIF music-box"></i>二级菜单CCCCC撒看见
                     </li>
                 </ul>
 
@@ -156,20 +156,20 @@
                         <span style="margin-left:44px; line-height:42px;">一级菜单222</span>
                         <p><a class="MyIF double-arrow-up"></a></p>
                     </div>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        <a href="#" style="margin-left:10px; color:#888;"><i class="MyIF menu" style="margin-right:10px;"></i>二级菜单AAA</a>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text1.html">
+                        <i class="MyIF menu"></i>二级菜单AAA
                     </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        <a href="#" style="margin-left:10px; color:#888;"><i class="MyIF shijianfenzhong" style="margin-right:10px;"></i>二级菜单BBB</a>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text2.html">
+                        <i class="MyIF shijianfenzhong"></i>二级菜单BBB
                     </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        <a href="#" style="margin-left:10px; color:#888;"><i class="MyIF music-box" style="margin-right:10px;"></i>二级菜单CCC</a>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text3.html">
+                        <i class="MyIF music-box"></i>二级菜单CCCCC撒看见
                     </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        <a href="#" style="margin-left:10px; color:#888;"><i class="MyIF code-2" style="margin-right:10px;"></i>二级菜单DDD</a>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text1.html">
+                        <i class="MyIF code-2"></i>二级菜单DDD
                     </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        <a href="#" style="margin-left:10px; color:#888;"><i class="MyIF instrument" style="margin-right:10px;"></i>二级菜单EEE</a>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text2.html">
+                        <i class="MyIF instrument"></i>二级菜单EEE
                     </li>
                 </ul>
 
@@ -201,7 +201,7 @@
         </div>
 
         <!-- 框架页面 -->
-        <iframe id="operaBody" class="glass-Bg" src="" style="margin:8px 30px 0 0; float:right;"></iframe>
+        <iframe id="accountOperIframe" class="glass-Bg" src="" style="margin:8px 30px 0 0; float:right;"></iframe>
 
     </div>
 
@@ -242,12 +242,12 @@
          */
         function layoutSize() {
             $("#accountMainBody").height($(window).height() - $('nav').height() - $('footer').height());
-            $("#operaBody").height($("#accountMainBody").height() - 18);
+            $("#accountOperIframe").height($("#accountMainBody").height() - 18);
             $("#accountMenuMask").width($(window).width() - $('#accountMenu').width() - 8);
             if ($('#mainMenu').hasClass('active')) {
-                $("#operaBody").width($("#accountMainBody").width() - 279);
+                $("#accountOperIframe").width($("#accountMainBody").width() - 279);
             } else {
-                $("#operaBody").width($("#accountMainBody").width() - 60);
+                $("#accountOperIframe").width($("#accountMainBody").width() - 60);
             }
             $('#accountMenu').height($("#accountMainBody").height() + 8);
         }
@@ -293,31 +293,47 @@
 
         /**
          * 左侧主菜单导航栏手风琴效果 -- [ 每次只能展开一个一级菜单 ]
-         *
          */
-        var preFirstMenuObj = null, nowFirstMenuObj;    //preFirstMenuObj -- 指向之前已经打开了的一级菜单jq对象，nowFirstMenuObj -- 指向现在点击要打开的
+        var preFirstMenuObj = null, nowFirstMenuObj = null;    //preFirstMenuObj -- 指向之前已经打开了的一级菜单jq对象，nowFirstMenuObj -- 指向现在点击要打开的
 
         /* 赋予一级菜单点击事件 */
         $('div.firstMenuSwitch').click(function () {
-            nowFirstMenuObj = $(this);  //获取现在要打开的一级菜单jq对象
+            nowFirstMenuObj = $(this);  //获取现在要打开的一级菜单jq对象, 并将 nowFirstMenuObj 指向其
 
             if (preFirstMenuObj !== null) { //判断之前的一级菜单jq对象是否为空 -- 不为空则关闭已经打开的一级菜单
                 preFirstMenuObj.removeClass('active').parent().animate({height: 42}, 566);  //动画折叠起菜单面板以及将箭头旋转180度变成Up状态
                 preFirstMenuObj.nextAll('li').animate({top: 0}, 500);
             }
-
             if (!nowFirstMenuObj.is(preFirstMenuObj)) {  //如果新点击的一级菜单和之前的一级菜单不相同，则打开新的一级菜单 -- [ 判断的两个变量不能互换位置，preFirstMenuObj maybe null ]
                 var length = nowFirstMenuObj.nextAll('li').length;
-                nowFirstMenuObj.addClass('active').parent().animate({height: 58 + length * 40}, 500);  //动画展开菜单面板以及将箭头旋转180度变成Down状态
+                nowFirstMenuObj.addClass('active').parent().animate({height: 58 + length * 38}, 500);  //动画展开菜单面板以及将箭头旋转180度变成Down状态
                 for (var i = 0; i < length; i++) {  // 忘了 jQuery 的 each 方法怎样获取下标，先用古老方法 -_-
-                    nowFirstMenuObj.nextAll('li').eq(i).animate({top: 48 + i * 40}, 566);
+                    nowFirstMenuObj.nextAll('li').eq(i).animate({top: 48 + i * 38}, 566);
                 }
 
                 preFirstMenuObj = nowFirstMenuObj;  //不能随便调换位置！！需在判断一级菜单是否为空 && 打开新的一级菜单之后之后才能改变其指向
             } else {
                 preFirstMenuObj = null; //不将其重新指向 null 的话有BUG -- 连续点击同一个三次情况BUG[ 打开/关闭/不打开BUG ] -- 也就是没执行打开新一级菜单的情况
             }
+        });
 
+
+        /**
+         * 左侧主菜单导航栏二级菜单点击跳转 & 视觉效果
+         */
+        var preSecondMenuObj = null, nowSecondMenuObj = null;    //preSecondMenuObj -- 指向之前已经打开了的二级菜单jq对象，nowSecondMenuObj -- 指向现在点击要打开的
+
+        $('li.secondMenu').click(function () {
+            nowSecondMenuObj = $(this);
+
+            if ((preSecondMenuObj !== null) && (!nowSecondMenuObj.is(preSecondMenuObj))) { //判断之前的二级菜单jq对象是否为空且新点击的二级菜单和之前的二级菜单不相同 -- 不为空则
+                preSecondMenuObj.removeClass('active');
+            }
+            nowSecondMenuObj.addClass('active');
+
+            $('#accountOperIframe').attr('src',nowSecondMenuObj.attr('dataUrl'));
+
+            preSecondMenuObj = nowSecondMenuObj;  //不能随便调换位置！！需在判断一级菜单是否为空 && 打开新的二级菜单之后之后才能改变其指向
         });
 
 

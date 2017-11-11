@@ -79,6 +79,26 @@ nav > .accountMenuSwitch {
     box-shadow: inset 0 0 0 1px #272727;
     color:#42d4ff; text-shadow:0 0 1px; opacity:1;
 }
+.secondMenu {
+    width:88%; height:30px; top:0; left:50%; padding:2px 4px; position:absolute; transform:translate(-50%,0); z-index:2; color:#888; font-size:13.5px; font-weight:500; line-height:30px; cursor:pointer;
+}
+.secondMenu:hover {
+    color:lightgreen;
+}
+.secondMenu.active {
+    transform:translate(-47%,0);
+    color:#DDD;
+    text-shadow:1px 1px 1px #666;
+}
+.secondMenu > .MyIF {
+    padding:0 8px; border-left:3px solid transparent;
+}
+.secondMenu.active > .MyIF {
+    color:lightgreen; border-color:#22E8FF;
+}
+
+
+
 
 #accountMenu {
     width:268px; top:68px; right:-247px; position:absolute; z-index:55;
