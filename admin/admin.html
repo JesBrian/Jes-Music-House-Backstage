@@ -18,77 +18,6 @@
     <!-- 自用字体图标 -->
     <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
 
-    <!-- 临时CSS -->
-    <style type="text/css">
-        #mainMenuSwitch > .MyIF, a.accountMenuSwitch > .MyIF {
-            font-size:24px;
-            animation:menuSwitch 0.8s forwards;
-            -webkit-animation:menuSwitch 0.8s forwards; /* Safari 和 Chrome */
-        }
-        #mainMenuSwitch > .MyIF.active, a.accountMenuSwitch > .MyIF.active {
-            animation:menuSwitchActive 0.8s forwards;
-            -webkit-animation:menuSwitchActive 0.8s forwards; /* Safari 和 Chrome */
-        }
-
-
-        .firstMenuSwitch a.MyIF, #timeSwitch .MyIF {
-            display:inline-block;
-            opacity:0.6;
-            animation:menuSwitch 0.6s forwards;
-            -webkit-animation:menuSwitch 0.6s forwards; /* Safari 和 Chrome */
-        }
-        .firstMenuSwitch a.MyIF:hover, #timeSwitch .MyIF:hover {
-            color:#42d4ff; text-shadow:0 0 1px; opacity:1;
-        }
-        .firstMenuSwitch.active a.MyIF, #timeSwitch .MyIF.active {
-            animation:menuSwitchActive 0.6s forwards;
-            -webkit-animation:menuSwitchActive 0.6s forwards; /* Safari 和 Chrome */
-        }
-
-
-        /**
-         * 将元素倒转 180度 动画 [ 开关 -- 可以转一圈 ]
-         */
-        @keyframes menuSwitch /*IE 9 & Firefox & Opera*/
-        {
-            from {  transform:rotate(-180deg);  -ms-transform:rotate(-180deg);  -moz-transform:rotate(-180deg);  -o-transform:rotate(-180deg);  }
-            to {  transform:rotate(0deg);  -ms-transform:rotate(0deg);  -moz-transform:rotate(0deg);  -o-transform:rotate(0deg);  }
-        }
-        @-webkit-keyframes menuSwitch /*Safari & Chrome*/
-        {
-            from {  -webkit-transform:rotate(-180deg);  }
-            to {  -webkit-transform:rotate(-0deg);  }
-        }
-        @keyframes menuSwitchActive /*IE 9 & Firefox & Opera*/
-        {
-            to {  transform:rotate(180deg);  -ms-transform:rotate(180deg);  -moz-transform:rotate(180deg);  -o-transform:rotate(180deg);  }
-        }
-        @-webkit-keyframes menuSwitchActive /*Safari & Chrome*/
-        {
-            to {  -webkit-transform:rotate(180deg);  }
-        }
-        
-        /**
-         * 二级菜单专属动画
-         */
-        @keyframes secondMenuActiveMove /*IE 9 & Firefox & Opera*/
-        {
-            to {
-                transform: translate(-46%, 0);
-                -ms-transform: translate(-48%, 0);
-                -moz-transform: translate(-48%, 0);
-                -o-transform: translate(-48%, 0);
-            }
-        }
-
-        @-webkit-keyframes secondMenuActiveMove /*Safari & Chrome*/
-        {
-            to {
-                -webkit-transform: translate(-46%, 0);
-            }
-        }
-    </style>
-
 </head>
 <body>
 
@@ -98,19 +27,18 @@
         <!-- 后台系统Logo - 左侧 -->
         <img id="navLogo" src="img/common/MH-Logo.png">
 
-        <!-- 账户管理 - 右侧 -->
+        <!-- 账户管理 - 右侧 [ 登陆了显示头像 ] -->
         <p class="accountMenuSwitch">
             <a class="userLogin superBtn MyIF administrators-1">
-                <!-- 如果登陆了显示头像 - 开发阶段先屏蔽了-->
                 <img src="img/Holy_Dragon,_Sanctuary_Guard_Regalie_(Full_Art).png" style="width:40px; height:36.5px; top:2px; left:1px; position:absolute;">
-                <!-->
             </a>
         </p>
 
         <!-- 信息 & 退出登录 -->
         <div id="navBaseOper">
             <div class="accountMenuSwitch">JesBrian2UserName叫zvdsbvds</div>
-            超级管理员<a href="" class="accountLogout">退出登录</a>
+            超级管理员
+            <a href="" class="accountLogout">退出登录</a>
         </div>
 
     </nav>
@@ -125,19 +53,19 @@
         </a>
 
         <!-- 账户操作菜单内容 -->
-        <ul style="margin:28px auto;">
-            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3" dataUrl="adminIframe/systemInfo.html" style="width:83%; height:38px; margin:10px auto; line-height:38px; text-align:center; cursor:pointer;">
-                <i class="MyIF horn" style="margin-right:8px;"></i>系统通知
+        <ul>
+            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3" dataUrl="adminIframe/systemInfo.html">
+                <i class="MyIF horn"></i>系统通知
             </li>
-            <li class="accountMenuSwitch accountOperIframeUrl accountMenuUrl glass-Bg box-show3" dataUrl="adminIframe/loginInfo.html" style="width:83%; height:38px; margin:10px auto; line-height:38px; text-align:center; cursor:pointer;">
-                <i class="MyIF information" style="margin-right:8px;"></i>登陆信息
+            <li class="accountMenuSwitch accountOperIframeUrl accountMenuUrl glass-Bg box-show3" dataUrl="adminIframe/loginInfo.html">
+                <i class="MyIF information"></i>登陆信息
             </li>
-            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3" dataUrl="adminIframe/updateInfo.html" style="width:83%; height:38px; margin:10px auto; line-height:38px; text-align:center; cursor:pointer;">
-                <i class="MyIF tool" style="margin-right:8px;"></i>修改资料
+            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3" dataUrl="adminIframe/updateInfo.html">
+                <i class="MyIF tool"></i>修改资料
             </li>
         </ul>
 
-        <a href="" class="accountLogout" style="right:23px; bottom:18px; position:absolute; font-size:18px;">退出登录</a>
+        <a href="" class="accountLogout">退出登录</a>
 
     </div>
     <div id="accountMenuMask" class="accountMenuSwitch" style="width:100%; height:100%; top:0; left:100%; position:absolute; z-index:150;"></div>
@@ -160,8 +88,8 @@
             <!-- 详细一级、二级菜单 -->
             <div id="mainMenuContent">
                 <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <i class="MyIF menu-terminal" style="top:-5px; left:8px; font-size:28px; position:absolute;"></i>
+                    <div class="firstMenuSwitch glass-Bg box-show3">
+                        <i class="MyIF menu-terminal"></i>
                         <span>一级菜单111</span>
                         <p><a class="MyIF double-arrow-up"></a></p>
                     </div>
@@ -177,8 +105,8 @@
                 </ul>
 
                 <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <i class="MyIF menu-code" style="top:-5px; left:8px; font-size:28px; position:absolute;"></i>
+                    <div class="firstMenuSwitch glass-Bg box-show3">
+                        <i class="MyIF menu-code"></i>
                         <span>一级菜单222</span>
                         <p><a class="MyIF double-arrow-up"></a></p>
                     </div>
@@ -199,11 +127,104 @@
                     </li>
                 </ul>
 
+                <ul class="firstMenu">
+                    <div class="firstMenuSwitch glass-Bg box-show3">
+                        <i class="MyIF menu-database"></i>
+                        <span>一级菜单333</span>
+                        <p><a class="MyIF double-arrow-up"></a></p>
+                    </div>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text1.html">
+                        <i class="MyIF menu"></i>二级菜单AAA
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text2.html">
+                        <i class="MyIF shijianfenzhong"></i>二级菜单BBB
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text3.html">
+                        <i class="MyIF music-box"></i>二级菜单CCCCC撒看见
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text1.html">
+                        <i class="MyIF menu"></i>二级菜单AAA
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text2.html">
+                        <i class="MyIF shijianfenzhong"></i>二级菜单BBB
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text3.html">
+                        <i class="MyIF music-box"></i>二级菜单CCCCC撒看见
+                    </li>
+                </ul>
+
+                <ul class="firstMenu">
+                    <div class="firstMenuSwitch glass-Bg box-show3">
+                        <i class="MyIF menu-port"></i>
+                        <span>一级菜单444</span>
+                        <p><a class="MyIF double-arrow-up"></a></p>
+                    </div>
+                </ul>
+
+                <ul class="firstMenu">
+                    <div class="firstMenuSwitch glass-Bg box-show3">
+                        <i class="MyIF menu-ITOM"></i>
+                        <span>一级菜单555</span>
+                        <p><a class="MyIF double-arrow-up"></a></p>
+                    </div>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text1.html">
+                        <i class="MyIF menu"></i>二级菜单AAA
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text2.html">
+                        <i class="MyIF shijianfenzhong"></i>二级菜单BBB
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text3.html">
+                        <i class="MyIF music-box"></i>二级菜单CCCCC撒看见
+                    </li>
+                </ul>
+
+                <ul class="firstMenu">
+                    <div class="firstMenuSwitch glass-Bg box-show3">
+                        <i class="MyIF menu-message"></i>
+                        <span>一级菜单666</span>
+                        <p><a class="MyIF double-arrow-up"></a></p>
+                    </div>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text1.html">
+                        <i class="MyIF menu"></i>二级菜单AAA
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text2.html">
+                        <i class="MyIF shijianfenzhong"></i>二级菜单BBB
+                    </li>
+                </ul>
+
+                <ul class="firstMenu">
+                    <div class="firstMenuSwitch glass-Bg box-show3">
+                        <i class="MyIF menu-ITOM"></i>
+                        <span>一级菜单777</span>
+                        <p><a class="MyIF double-arrow-up"></a></p>
+                    </div>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text1.html">
+                        <i class="MyIF menu"></i>二级菜单AAA
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text2.html">
+                        <i class="MyIF shijianfenzhong"></i>二级菜单BBB
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text3.html">
+                        <i class="MyIF music-box"></i>二级菜单CCCCC撒看见
+                    </li>
+                </ul>
+
+                <ul class="firstMenu">
+                    <div class="firstMenuSwitch glass-Bg box-show3">
+                        <i class="MyIF menu-music"></i>
+                        <span>一级菜单888</span>
+                        <p><a class="MyIF double-arrow-up"></a></p>
+                    </div>
+                    <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text1.html">
+                        <i class="MyIF menu"></i>二级菜单AAA
+                    </li>
+                </ul>
+
             </div>
 
         </div>
 
-        <!-- 悬浮时间和刷新块 -->
+        <!-- 悬浮显示时间和刷新iframe页面块 -->
         <div id="floatTimeRefresh" class="glass-Bg box-show3">
 
             <!-- 刷新页面 -->
@@ -217,17 +238,15 @@
             </p>
 
             <!-- 显示当前时间[实时更新] -->
-            <div id="showNowTime" style="width:100%; height:30px; bottom:2px; position:absolute; display:none; line-height: 1em;">
-                <img src="img/icon/时间 分钟.png" style="width:25px; height:30px; margin:-2px 8px;">
-                <div style="margin:-2px 8px 0 0; float:right; font-size:13px; font-weight:600; color:#CCC;">
-                    <p id="showNowTimeDate"></p><p id="showNowTimeTime"></p>
-                </div>
+            <div id="showNowTime">
+                <img src="img/icon/时间 分钟.png">
+                <div><p id="showNowTimeDate"></p><p id="showNowTimeTime"></p></div>
             </div>
 
         </div>
 
         <!-- 框架页面 -->
-        <iframe id="accountOperIframe" class="glass-Bg" src="" style="margin:8px 30px 0 0; float:right;"></iframe>
+        <iframe id="accountOperIframe" class="glass-Bg" src="adminIframe/index.html"></iframe>
 
     </div>
 

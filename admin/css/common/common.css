@@ -1,4 +1,4 @@
-/*
+/**
  * 前端通用 CSS
  */
 
@@ -322,3 +322,34 @@ a.superBtn:active {
 
 .glassButton {  width:118px; height:38px; padding-right:3px; display:inline-block; border-radius:8px; background:url(../../img/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color:#585858!important; font-size:16px; font-weight:700; line-height:38px;  }
 .glassButton>i {  float:right; font-size:22px; color:white!important;  }
+
+
+
+
+
+
+
+
+
+
+/**
+ * CSS3 动画
+ */
+
+    /* 将元素倒转 180度 动画 [ 开关 -- 可以转一圈 ] */
+@keyframes menuSwitch /*IE 9 & Firefox & Opera*/  {
+    from { transform:rotate(-180deg); -ms-transform:rotate(-180deg); -moz-transform:rotate(-180deg); -o-transform:rotate(-180deg); }
+    to { transform:rotate(0deg); -ms-transform:rotate(0deg); -moz-transform:rotate(0deg); -o-transform:rotate(0deg); }
+}
+@-webkit-keyframes menuSwitch /*Safari & Chrome*/  {
+    from { -webkit-transform:rotate(-180deg); }
+    to { -webkit-transform:rotate(-0deg); }
+}
+@keyframes menuSwitchActive /*IE 9 & Firefox & Opera*/  {
+    to { transform:rotate(180deg); -ms-transform:rotate(180deg); -moz-transform:rotate(180deg); -o-transform:rotate(180deg); }
+}
+@-webkit-keyframes menuSwitchActive /*Safari & Chrome*/
+{
+    to { -webkit-transform:rotate(180deg); }
+}
+
