@@ -126,7 +126,7 @@ nav > .accountMenuSwitch {
  * 后台用户操作菜单内容
  */
 #accountMenu {
-    width:268px; top:68px; right:-247px; position:absolute; z-index:55;
+    width:268px; height:100%; top:68px; right:-247px; position:absolute; z-index:55;
 }
 #accountMenu > ul {
     margin:28px auto;
