@@ -28,14 +28,14 @@
 
         .firstMenuSwitch a.MyIF, #timeSwitch .MyIF {
             display:inline-block;
+            opacity:0.6;
             animation:menuSwitch 0.6s forwards;
             -webkit-animation:menuSwitch 0.6s forwards; /* Safari 和 Chrome */
         }
         .firstMenuSwitch a.MyIF:hover, #timeSwitch .MyIF:hover {
-            color:#42d4ff;
-            text-shadow:0 0 1px;
+            color:#42d4ff; text-shadow:0 0 1px; opacity:1;
         }
-        .firstMenuSwitch a.MyIF.active, #timeSwitch .MyIF.active {
+        .firstMenuSwitch.active a.MyIF, #timeSwitch .MyIF.active {
             animation:menuSwitchActive 0.6s forwards;
             -webkit-animation:menuSwitchActive 0.6s forwards; /* Safari 和 Chrome */
         }
@@ -140,13 +140,13 @@
                         <p><a class="MyIF double-arrow-up"></a></p>
                     </div>
                     <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单AAA
+                        <a href="#" style="margin-left:10px; color:#888;"><i class="MyIF menu" style="margin-right:10px;"></i>二级菜单AAA</a>
                     </li>
                     <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单BBB
+                        <a href="#" style="margin-left:10px; color:#888;"><i class="MyIF shijianfenzhong" style="margin-right:10px;"></i>二级菜单BBB</a>
                     </li>
                     <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单CCC
+                        <a href="#" style="margin-left:10px; color:#888;"><i class="MyIF music-box" style="margin-right:10px;"></i>二级菜单CCC</a>
                     </li>
                 </ul>
 
@@ -157,149 +157,28 @@
                         <p><a class="MyIF double-arrow-up"></a></p>
                     </div>
                     <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单AAA
+                        <a href="#" style="margin-left:10px; color:#888;"><i class="MyIF menu" style="margin-right:10px;"></i>二级菜单AAA</a>
                     </li>
                     <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单BBB
+                        <a href="#" style="margin-left:10px; color:#888;"><i class="MyIF shijianfenzhong" style="margin-right:10px;"></i>二级菜单BBB</a>
                     </li>
                     <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单CCC
+                        <a href="#" style="margin-left:10px; color:#888;"><i class="MyIF music-box" style="margin-right:10px;"></i>二级菜单CCC</a>
                     </li>
                     <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单DDD
+                        <a href="#" style="margin-left:10px; color:#888;"><i class="MyIF code-2" style="margin-right:10px;"></i>二级菜单DDD</a>
                     </li>
                     <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单EEE
+                        <a href="#" style="margin-left:10px; color:#888;"><i class="MyIF instrument" style="margin-right:10px;"></i>二级菜单EEE</a>
                     </li>
                 </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <i class="MyIF menu-terminal" style="top:-5px; left:8px; font-size:28px; position:absolute;"></i>
-                        <span style="margin-left:44px; line-height:42px;">一级菜单111</span>
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单AAA
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单BBB
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单CCC
-                    </li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <i class="MyIF menu-code" style="top:-5px; left:8px; font-size:28px; position:absolute;"></i>
-                        <span style="margin-left:44px; line-height:42px;">一级菜单222</span>
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单AAA
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单BBB
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单CCC
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单DDD
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单EEE
-                    </li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <i class="MyIF menu-terminal" style="top:-5px; left:8px; font-size:28px; position:absolute;"></i>
-                        <span style="margin-left:44px; line-height:42px;">一级菜单111</span>
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单AAA
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单BBB
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单CCC
-                    </li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <i class="MyIF menu-code" style="top:-5px; left:8px; font-size:28px; position:absolute;"></i>
-                        <span style="margin-left:44px; line-height:42px;">一级菜单222</span>
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单AAA
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单BBB
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单CCC
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单DDD
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单EEE
-                    </li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <i class="MyIF menu-terminal" style="top:-5px; left:8px; font-size:28px; position:absolute;"></i>
-                        <span style="margin-left:44px; line-height:42px;">一级菜单111</span>
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单AAA
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单BBB
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单CCC
-                    </li>
-                </ul>
-
-                <ul class="firstMenu">
-                    <div class="glass-Bg box-show3 firstMenuSwitch">
-                        <i class="MyIF menu-code" style="top:-5px; left:8px; font-size:28px; position:absolute;"></i>
-                        <span style="margin-left:44px; line-height:42px;">一级菜单222</span>
-                        <p><a class="MyIF double-arrow-up"></a></p>
-                    </div>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单AAA
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单BBB
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单CCC
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单DDD
-                    </li>
-                    <li class="secondMenu glass-Bg box-show3" style="width:88%; height:36px; top:0; left:50%; position:absolute; transform:translate(-50%,0); z-index:2; line-height:36px;">
-                        二级菜单EEE
-                    </li>
-                </ul>
-
 
             </div>
 
         </div>
 
         <!-- 悬浮时间和刷新块 -->
-        <div class="glass-Bg box-show3" style="width:148px; height:36px; top:35px; right:98px; display:inline-block; position:absolute; line-height:36px;">
+        <div id="floatTimeRefresh" class="glass-Bg box-show3">
 
             <!-- 刷新页面 -->
             <div id="refreshIframe">
@@ -307,14 +186,14 @@
             </div>
 
             <!-- 下拉 OR 折叠显示时间模块 -->
-            <p id="timeSwitch" class="glass-Bg" style="width:26px; height:26px; top:4px; right:4px; line-height:26px; text-align:center; position:absolute;">
-                <a class="MyIF double-arrow-up" style="display:inline-block; opacity:0.8;"></a>
+            <p id="timeSwitch" class="glass-Bg">
+                <a class="MyIF double-arrow-up"></a>
             </p>
 
             <!-- 显示当前时间[实时更新] -->
             <div id="showNowTime" style="width:100%; height:30px; bottom:2px; position:absolute; display:none; line-height: 1em;">
                 <img src="img/icon/时间 分钟.png" style="width:25px; height:30px; margin:-2px 8px;">
-                <div style="margin:-2px 23px 0 0; float:right; font-size:13px; font-weight:600; color:#CCC;">
+                <div style="margin:-2px 8px 0 0; float:right; font-size:13px; font-weight:600; color:#CCC;">
                     <p id="showNowTimeDate"></p><p id="showNowTimeTime"></p>
                 </div>
             </div>
@@ -329,7 +208,7 @@
 
     <!-- 底部 -->
     <footer class="glass-Bg box-show3">
-        ©2015 - 2020  &nbsp;&nbsp;&nbsp;Music House 所有版权归 JesBrian 个人所有
+        © 2015 - 2020  &nbsp;&nbsp;&nbsp;Music House 所有版权归 JesBrian 个人所有
     </footer>
 
 
@@ -414,39 +293,31 @@
 
         /**
          * 左侧主菜单导航栏手风琴效果 -- [ 每次只能展开一个一级菜单 ]
+         *
          */
-        var preFirstMenuObj = null, nowFirstMenuObj;    //preFirstMenuObj -- 指向之前已经打开了的一级菜单jq对象，nowFirstMenuObj --指向 现在点击要打开的
+        var preFirstMenuObj = null, nowFirstMenuObj;    //preFirstMenuObj -- 指向之前已经打开了的一级菜单jq对象，nowFirstMenuObj -- 指向现在点击要打开的
 
         /* 赋予一级菜单点击事件 */
         $('div.firstMenuSwitch').click(function () {
             nowFirstMenuObj = $(this);  //获取现在要打开的一级菜单jq对象
 
-            if ((preFirstMenuObj !== null) && (!preFirstMenuObj.is(nowFirstMenuObj))) { //判断之前的一级菜单jq对象是否为空以及之前的是否与现在点击的是同一个jq对象
-                preFirstMenuObj.removeClass('active').parent().animate({height: 42}, 566).find('a.MyIF').toggleClass('active');
+            if (preFirstMenuObj !== null) { //判断之前的一级菜单jq对象是否为空 -- 不为空则关闭已经打开的一级菜单
+                preFirstMenuObj.removeClass('active').parent().animate({height: 42}, 566);  //动画折叠起菜单面板以及将箭头旋转180度变成Up状态
                 preFirstMenuObj.nextAll('li').animate({top: 0}, 500);
             }
 
-            if (nowFirstMenuObj.hasClass('active')) {   //如果此时点击的一级菜单已经打开了则关闭该一级菜单
-
-                nowFirstMenuObj.parent().animate({height: 42}, 566);    //动画折叠菜单面板
-                nowFirstMenuObj.nextAll('li').animate({top: 0}, 500);
-
-                preFirstMenuObj = null; //如果此时点击的是之前打开的一级菜单则将其指向 null [ 等待 GC 工作？？？ ]
-
-            } else {    //点击的另一个一级菜单则打开新点击的一级菜单 -- 旧的那个以及在上面关闭了
-
-                var length = $(this).parent().children('li').length;
-
-                nowFirstMenuObj.parent().animate({height: 58 + length * 40}, 500);  //动画展开菜单面板
+            if (!nowFirstMenuObj.is(preFirstMenuObj)) {  //如果新点击的一级菜单和之前的一级菜单不相同，则打开新的一级菜单 -- [ 判断的两个变量不能互换位置，preFirstMenuObj maybe null ]
+                var length = nowFirstMenuObj.nextAll('li').length;
+                nowFirstMenuObj.addClass('active').parent().animate({height: 58 + length * 40}, 500);  //动画展开菜单面板以及将箭头旋转180度变成Down状态
                 for (var i = 0; i < length; i++) {  // 忘了 jQuery 的 each 方法怎样获取下标，先用古老方法 -_-
                     nowFirstMenuObj.nextAll('li').eq(i).animate({top: 48 + i * 40}, 566);
                 }
 
-                preFirstMenuObj = nowFirstMenuObj;  //若打开的一级菜单不是之前的那个一级菜单，则将指向之前打开的一级菜单jq对象其指向此时打开的一级菜单jq对象
+                preFirstMenuObj = nowFirstMenuObj;  //不能随便调换位置！！需在判断一级菜单是否为空 && 打开新的一级菜单之后之后才能改变其指向
+            } else {
+                preFirstMenuObj = null; //不将其重新指向 null 的话有BUG -- 连续点击同一个三次情况BUG[ 打开/关闭/不打开BUG ] -- 也就是没执行打开新一级菜单的情况
             }
 
-            nowFirstMenuObj.toggleClass('active');
-            nowFirstMenuObj.find('a.MyIF').toggleClass('active');   //判断是否要给指示箭头添加active类 -- 旋转180度CSS3动画
         });
 
 

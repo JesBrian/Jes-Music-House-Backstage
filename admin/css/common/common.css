@@ -3,7 +3,7 @@
  */
 
     /* 重置标签样式 */
-body {  color:white;  }
+body {  color:white; font-family:"宋体","Microsoft YaHei","黑体",sans-serif;  }
 li, ul {  list-style-type:none;  }
 a {  text-decoration:none;  cursor:pointer;  text-align:center;  }
 p, h1, h2, h3, h4, h5, h6, li, ul {  margin:0;  padding:0;  }
