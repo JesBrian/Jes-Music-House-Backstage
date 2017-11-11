@@ -5,6 +5,11 @@
     <title> ♪ JesBrian - 后台管理系统 ♪ </title>
 
 
+    <!-- 网页图标 -->
+    <link rel="shortcut icon" href="img/common/MH-Logo.ico">
+    <link rel="Bookmark" href="img/common/MH-Logo.ico">
+
+
     <!-- CSS部分 -->
     <link rel="stylesheet" type="text/css" href="css/common/common.css">
     <link rel="stylesheet" type="text/css" href="css/admin/admin.css">
@@ -62,6 +67,26 @@
         {
             to {  -webkit-transform:rotate(180deg);  }
         }
+        
+        /**
+         * 二级菜单专属动画
+         */
+        @keyframes secondMenuActiveMove /*IE 9 & Firefox & Opera*/
+        {
+            to {
+                transform: translate(-46%, 0);
+                -ms-transform: translate(-48%, 0);
+                -moz-transform: translate(-48%, 0);
+                -o-transform: translate(-48%, 0);
+            }
+        }
+
+        @-webkit-keyframes secondMenuActiveMove /*Safari & Chrome*/
+        {
+            to {
+                -webkit-transform: translate(-46%, 0);
+            }
+        }
     </style>
 
 </head>
@@ -101,14 +126,14 @@
 
         <!-- 账户操作菜单内容 -->
         <ul style="margin:28px auto;">
-            <li class="accountMenuSwitch glass-Bg box-show3" style="width:83%; height:38px; margin:10px auto; line-height:38px; text-align:center;">
-                <a><i class="MyIF horn" style="margin-right:8px;"></i>系统通知</a>
+            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3" dataUrl="adminIframe/systemInfo.html" style="width:83%; height:38px; margin:10px auto; line-height:38px; text-align:center; cursor:pointer;">
+                <i class="MyIF horn" style="margin-right:8px;"></i>系统通知
             </li>
-            <li class="accountMenuSwitch glass-Bg box-show3" style="width:83%; height:38px; margin:10px auto; line-height:38px; text-align:center;">
-                <a><i class="MyIF information" style="margin-right:8px;"></i>登陆信息</a>
+            <li class="accountMenuSwitch accountOperIframeUrl accountMenuUrl glass-Bg box-show3" dataUrl="adminIframe/loginInfo.html" style="width:83%; height:38px; margin:10px auto; line-height:38px; text-align:center; cursor:pointer;">
+                <i class="MyIF information" style="margin-right:8px;"></i>登陆信息
             </li>
-            <li class="accountMenuSwitch glass-Bg box-show3" style="width:83%; height:38px; margin:10px auto; line-height:38px; text-align:center;">
-                <a><i class="MyIF tool" style="margin-right:8px;"></i>修改资料</a>
+            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3" dataUrl="adminIframe/updateInfo.html" style="width:83%; height:38px; margin:10px auto; line-height:38px; text-align:center; cursor:pointer;">
+                <i class="MyIF tool" style="margin-right:8px;"></i>修改资料
             </li>
         </ul>
 
@@ -120,8 +145,9 @@
 
     <!-- 主体 -->
     <div id="accountMainBody">
+
         <!-- 主体左侧菜单导航栏 -->
-        <div id="mainMenu" class="glass-Bg box-show3 active">
+        <div id="mainMenu" class="glass-Bg box-show3 cancelSelectText active">
 
             <!-- 收起/展开左侧菜单导航栏 -->
             <a id="mainMenuSwitch" class="s1c-Bg box-show3" style="right:-22px;">
@@ -136,7 +162,7 @@
                 <ul class="firstMenu">
                     <div class="glass-Bg box-show3 firstMenuSwitch">
                         <i class="MyIF menu-terminal" style="top:-5px; left:8px; font-size:28px; position:absolute;"></i>
-                        <span style="margin-left:44px; line-height:42px;">一级菜单111</span>
+                        <span>一级菜单111</span>
                         <p><a class="MyIF double-arrow-up"></a></p>
                     </div>
                     <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text1.html">
@@ -153,7 +179,7 @@
                 <ul class="firstMenu">
                     <div class="glass-Bg box-show3 firstMenuSwitch">
                         <i class="MyIF menu-code" style="top:-5px; left:8px; font-size:28px; position:absolute;"></i>
-                        <span style="margin-left:44px; line-height:42px;">一级菜单222</span>
+                        <span>一级菜单222</span>
                         <p><a class="MyIF double-arrow-up"></a></p>
                     </div>
                     <li class="secondMenu glass-Bg box-show3" dataUrl="adminIframe/text1.html">
@@ -181,12 +207,12 @@
         <div id="floatTimeRefresh" class="glass-Bg box-show3">
 
             <!-- 刷新页面 -->
-            <div id="refreshIframe">
+            <div id="refreshIframe" class="cancelSelectText">
                 <i class="MyIF refresh-1" style="margin:0 8px 0 12px;"></i>刷新页面
             </div>
 
             <!-- 下拉 OR 折叠显示时间模块 -->
-            <p id="timeSwitch" class="glass-Bg">
+            <p id="timeSwitch" class="glass-Bg" title="显示当前时间">
                 <a class="MyIF double-arrow-up"></a>
             </p>
 
@@ -366,6 +392,9 @@
                 $(this).parent().animate({height:36},588);
             }
         });
+        $('#refreshIframe').click(function () {
+            $('#accountOperIframe').attr('src',nowSecondMenuObj.attr('dataUrl'));
+        });
 
 
         /**
@@ -391,6 +420,15 @@
             $("#showNowTimeTime").html(h + ' : ' + minute + ' : ' + second);
         }
         showTime();
+
+
+        /**
+         * accountOperIframe 内容页面跳转
+         */
+        $('li.accountOperIframeUrl').click(function () {
+            $('#accountOperIframe').attr('src',$(this).attr('dataUrl'));
+        });
+
 
     </script>
 

@@ -28,7 +28,7 @@ nav > .accountMenuSwitch {
     margin-left:18px; font-size:14px; color:#999; text-shadow:1px 1px 2px;
 }
 .accountLogout:hover {
-    color:#DDD;
+    color:#EEE;
 }
 
 
@@ -66,6 +66,15 @@ nav > .accountMenuSwitch {
 .firstMenuSwitch {
     width:100%; height:42px; top:0; left:0; position:absolute; z-index:5; cursor:pointer;
 }
+.firstMenuSwitch > span {
+    margin-left:44px; line-height:42px;
+    font-weight:600;
+    opacity:0.68;
+}
+.firstMenuSwitch.active > span {
+    text-shadow:1px 1px 3px #22E8FF;
+    opacity:0.8;
+}
 
 .firstMenuSwitch > p {
     width:24px; height:24px; margin:8.5px; float:right;
@@ -86,9 +95,10 @@ nav > .accountMenuSwitch {
     color:lightgreen;
 }
 .secondMenu.active {
-    transform:translate(-47%,0);
     color:#DDD;
-    text-shadow:1px 1px 1px #666;
+    text-shadow:1px 1px 4px #888;
+    animation:secondMenuActiveMove 0.6s forwards;
+    -webkit-animation:secondMenuActiveMove 0.6s forwards; /* Safari 和 Chrome */
 }
 .secondMenu > .MyIF {
     padding:0 8px; border-left:3px solid transparent;

@@ -75,6 +75,15 @@ dd {  margin:0;  float:left;  }
 .hover-undeline:hover {  text-decoration:underline;  }
 
 
+.cancelSelectText {
+    -moz-user-select:none;/*火狐*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -ms-user-select:none;/*IE10*/
+    -khtml-user-select:none;/*早期浏览器*/
+    user-select:none;
+}
+
+
     /* 字体图标效果 */
 .MyIF {  color:#42d4ff;  }
 .MyIF:hover {  color: #33ff71;  }
