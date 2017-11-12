@@ -1,6 +1,6 @@
 /**
  * 获取当前时间函数 [格式化 -- XXXX-XX-XX XX:XX:XX]
- * param dateObj要显示 年-月-日 的jq对象，timeObj要显示 时:分:秒 的对象
+ * param [dateObj 要显示 年-月-日 的jq对象], [timeObj 要显示 时:分:秒 的对象]
  */
 function getNowTime(dateObj, timeObj) {
 
@@ -22,4 +22,25 @@ function getNowTime(dateObj, timeObj) {
     /* 将格式化的时间信息输出到指定的位置 */
     dateObj.text(y + '-' + m + '-' + d);
     timeObj.text(h + ' : ' + minute + ' : ' + second);
+}
+
+
+/**
+ * 检查该对象是否可以触发某事件 -- 是否有 unable 类
+ * param [checkObj 要检查的jq对象], [checkTime 禁止触发时间]
+ * return [false 禁止触发事件], [true 可以触发事件]
+ */
+function checkEnable(checkObj, checkTime) {
+    if (checkObj.hasClass('enable')) {  //可以触发事件状态
+
+        checkObj.removeClass('enable');    //设置点击后禁止状态
+        setTimeout(function () {
+            checkObj.addClass('enable');
+        }, checkTime);
+
+        return true;
+
+    } else {  //禁止状态
+        return false;
+    }
 }
