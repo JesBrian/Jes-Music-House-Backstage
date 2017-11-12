@@ -1,0 +1,19 @@
+/**
+ * 后台公共 CSS
+ */
+
+#htmlBody {
+    min-width:1000px;
+}
+
+
+#navTitle {
+    width:88%; height:58px; margin:28px auto; line-height:58px;
+}
+#navTitle > h4 {
+    text-align:center; font-size:28px;
+}
+
+#mainBody {
+    width:96%; margin:0 auto 28px;
+}

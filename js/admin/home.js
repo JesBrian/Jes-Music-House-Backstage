@@ -14,6 +14,8 @@ function layoutSize() {
         accountOperIframeObj.width(accountMainBodyObj.width() - 60);
     }
 
+    $('#accountMenu').height(accountMainBodyObj.height());  //调整 账户操作菜单 高度
+
     $("#accountMenuMask").width(windowObj.width() - 276);   //调整 遮盖层 宽度，减去用户操作菜单的宽度
 }
 
