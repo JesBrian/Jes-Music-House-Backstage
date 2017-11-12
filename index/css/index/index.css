@@ -1,6 +1,7 @@
 /*
- * 前端主框架index CSS
+ * 前端主框架 index CSS
  */
+
 
     /* 导航栏部分 */
 #navbar-index {  width:102%; height:65px; top:-5px; left:-3px; position:fixed; z-index:999; background-image:-webkit-linear-gradient(#3C3C3C, #303030, #232323); background-image:-moz-linear-gradient(#3C3C3C,#303030,#232323); background-image:linear-gradient(#3C3C3C,#303030,#232323);  }
