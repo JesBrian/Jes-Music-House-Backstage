@@ -6,16 +6,16 @@
 
 
     <!-- CSS部分 -->
-    <link rel="stylesheet" type="text/css" href="css/index/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/common.css">
 
-    <link rel="stylesheet" type="text/css" href="css/index/aboutUser.css">
+    <link rel="stylesheet" type="text/css" href="../css/index/aboutUser.css">
 
 
     <!-- 自用字体图标 -->
-    <link rel="stylesheet" type="text/css" href="plugins/myfonticon/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../plugins/myfonticon/iconfont.css">
 
     <!-- 带搜索框的下拉列表 -->
-    <link href="css/common/searchableSelect.css" rel="stylesheet" type="text/css">
+    <link href="../css/common/searchableSelect.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
@@ -70,11 +70,11 @@
                 <tr>
                     <td>性别：</td>
                     <td>
-                        <input type='radio' id='boy' name='radio'>
+                        <input type='radio' id='boy' name='radio' class="superInput">
                         <label for='boy' class="MyIF boy-2"><span> 可爱的男孩</span></label>
-                        <input type='radio' id='girl' name='radio'>
+                        <input type='radio' id='girl' name='radio' class="superInput">
                         <label for='girl' class="MyIF girl-2"><span> 性感的女孩</span></label>
-                        <input type='radio' id='secrecy' name='radio' checked='checked'>
+                        <input type='radio' id='secrecy' name='radio' checked='checked' class="superInput">
                         <label for='secrecy' class="MyIF mysteryman"><span> 神秘的秀吉</span></label>
                     </td>
                 </tr>
@@ -106,7 +106,7 @@
             </table>
 
             <div id="updateAvatar" onclick="window.top.niftymodalsByModelName('modal-uploadAvatar','','')">
-                <img src="img/common/touxiang.jpg" class="box-show3" title="点击修改头像">
+                <img src="../img/common/touxiang.jpg" class="box-show3" title="点击修改头像">
                 <a class="glassButton">
                     修改头像<i class="MyIF avatar"></i>
                 </a>
@@ -123,16 +123,16 @@
     <!-- Jsc部分 -->
 
     <!--jQuery框架-->
-    <script src="js/common/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="../js/common/jquery-3.1.1.min.js" type="text/javascript"></script>
 
     <!-- 带搜索框的下拉列表 -->
-    <script type="text/javascript" src="js/searchableSelect.js"></script>
+    <script type="text/javascript" src="../js/searchableSelect.js"></script>
 
     <!--plugins日期插件-->
-    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />
-    <script src="plugins/daterangepicker/moment.min.js"></script>
-    <script src="plugins/daterangepicker/daterangepicker.js"></script>
-    <script src="plugins/daterangepicker/demo.js"></script>
+    <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css" />
+    <script src="../plugins/daterangepicker/moment.min.js"></script>
+    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../plugins/daterangepicker/demo.js"></script>
 
 
 </body>

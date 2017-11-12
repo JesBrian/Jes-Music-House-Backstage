@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> ♪ JesBrian - 后台管理系统 ♪ </title>
+
+
+    <!-- 网页图标 -->
+    <link rel="shortcut icon" href="../img/common/MH-Logo.ico">
+    <link rel="Bookmark" href="../img/common/MH-Logo.ico">
+
+
+    <!-- CSS部分 -->
+
+    <!-- 自用字体图标 -->
+    <link rel="stylesheet" type="text/css" href="../plugins/myfonticon/iconfont.css">
+
+    <!-- 滚动条CSS样式 -->
+    <link rel="stylesheet" type="text/css" href="../plugins/scrollbar/jquery.mCustomScrollbar.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/common/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/admin/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/admin/home.css">
+
+</head>
+<body style=" background:#333;">
+
+    <!-- 顶部 -->
+    <nav class="glass-Bg box-show3">
+
+        <!-- 后台系统Logo - 左侧 -->
+        <img id="navLogo" src="../img/common/MH-Logo.png" title="Music House" alt="Music House">
+
+        <!-- 账户管理 - 右侧 [ 登录了显示头像 ] -->
+        <p class="accountMenuSwitch enable">
+            <a class="userLogin superBtn MyIF administrators-1">
+                <img src="../img/Holy_Dragon,_Sanctuary_Guard_Regalie_(Full_Art).png">
+            </a>
+        </p>
+
+        <!-- 信息 & 退出登录 -->
+        <div id="navBaseOper">
+            <div class="accountMenuSwitch enable cancelSelectText">JesBrian2UserName叫zvdsbvds</div>
+            超级管理员
+            <a href="" class="accountLogout">退出登录</a>
+        </div>
+
+    </nav>
+
+
+    <!-- 账户操作菜单栏 -->
+    <div id="accountMenu" class="glass-Bg box-show3">
+
+        <!-- 收起/展开右侧账户操作菜单导航栏 -->
+        <a class="accountMenuSwitch s1c-Bg box-show3 enable" style="left:-22px;">
+            <p class="MyIF double-arrow-left"></p>
+        </a>
+
+        <!-- 账户操作菜单内容 -->
+        <ul class="cancelSelectText">
+            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3 enable" dataUrl="adminIframe/index.html">
+                <i class="MyIF home"></i>后台主页
+            </li>
+            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3 enable" dataUrl="adminIframe/systemInfo.html">
+                <i class="MyIF horn"></i>系统通知
+            </li>
+            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3 enable" dataUrl="adminIframe/loginInfo.html">
+                <i class="MyIF information"></i>登录信息
+            </li>
+            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3 enable" dataUrl="adminIframe/updateInfo.html">
+                <i class="MyIF tool"></i>修改资料
+            </li>
+        </ul>
+
+        <a href="" class="accountLogout">退出登录</a>
+
+    </div>
+    <!-- 遮盖层 - 配合账户操作菜单栏食用 -->
+    <div id="accountMenuMask" class="accountMenuSwitch enable" style="width:100%; height:100%; top:0; left:100%; position:absolute; z-index:150;"></div>
+
+
+    <!-- 主体 -->
+    <div id="accountMainBody">
+
+        <!-- 主体左侧菜单导航栏 -->
+        <div id="mainMenu" class="glass-Bg box-show3 cancelSelectText active">
+
+            <!-- 收起/展开左侧菜单导航栏 -->
+            <a id="mainMenuSwitch" class="enable s1c-Bg box-show3" style="right:-22px;">
+                <p class="MyIF double-arrow-left"></p>
+            </a>
+
+            <!-- 占位置[为了美观] -->
+            <div style="height:20px;"></div>
+
+            <!-- 详细一级、二级菜单 -->
+            <div id="mainMenuContent">
+                <ul class="firstMenu">
+                    <div class="firstMenuSwitch glass-Bg box-show3 enable">
+                        <i class="MyIF menu-terminal"></i>
+                        <span>一级菜单111</span>
+                        <p><a class="MyIF double-arrow-up"></a></p>
+                    </div>
+                    <li class="secondMenu glass-Bg box-show3 enable"  dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF menu"></i>二级菜单AAA
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3 enable"  dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF shijianfenzhong"></i>二级菜单BBB
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3 enable"  dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF music-box"></i>二级菜单CCCCC撒看见
+                    </li>
+                </ul>
+
+                <ul class="firstMenu">
+                    <div class="firstMenuSwitch glass-Bg box-show3 enable">
+                        <i class="MyIF menu-code"></i>
+                        <span>一级菜单222</span>
+                        <p><a class="MyIF double-arrow-up"></a></p>
+                    </div>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF menu"></i>二级菜单AAA
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF shijianfenzhong"></i>二级菜单BBB
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF music-box"></i>二级菜单CCCCC撒看见
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF code-2"></i>二级菜单DDD
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF instrument"></i>二级菜单EEE
+                    </li>
+                </ul>
+
+                <ul class="firstMenu">
+                    <div class="firstMenuSwitch glass-Bg box-show3 enable">
+                        <i class="MyIF menu-database"></i>
+                        <span>一级菜单333</span>
+                        <p><a class="MyIF double-arrow-up"></a></p>
+                    </div>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF menu"></i>二级菜单AAA
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF shijianfenzhong"></i>二级菜单BBB
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF music-box"></i>二级菜单CCCCC撒看见
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF menu"></i>二级菜单AAA
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF shijianfenzhong"></i>二级菜单BBB
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF music-box"></i>二级菜单CCCCC撒看见
+                    </li>
+                </ul>
+
+                <ul class="firstMenu">
+                    <div class="firstMenuSwitch glass-Bg box-show3 enable">
+                        <i class="MyIF menu-port"></i>
+                        <span>一级菜单444</span>
+                        <p><a class="MyIF double-arrow-up"></a></p>
+                    </div>
+                </ul>
+
+                <ul class="firstMenu">
+                    <div class="firstMenuSwitch glass-Bg box-show3 enable">
+                        <i class="MyIF menu-ITOM"></i>
+                        <span>一级菜单555</span>
+                        <p><a class="MyIF double-arrow-up"></a></p>
+                    </div>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF menu"></i>二级菜单AAA
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF shijianfenzhong"></i>二级菜单BBB
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF music-box"></i>二级菜单CCCCC撒看见
+                    </li>
+                </ul>
+
+                <ul class="firstMenu">
+                    <div class="firstMenuSwitch glass-Bg box-show3 enable">
+                        <i class="MyIF menu-message"></i>
+                        <span>一级菜单666</span>
+                        <p><a class="MyIF double-arrow-up"></a></p>
+                    </div>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF menu"></i>二级菜单AAA
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF shijianfenzhong"></i>二级菜单BBB
+                    </li>
+                </ul>
+
+                <ul class="firstMenu">
+                    <div class="firstMenuSwitch glass-Bg box-show3 enable">
+                        <i class="MyIF menu-ITOM"></i>
+                        <span>一级菜单777</span>
+                        <p><a class="MyIF double-arrow-up"></a></p>
+                    </div>
+                    <li class="secondMenu glass-Bg box-show3 enable"  dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF menu"></i>二级菜单AAA
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF shijianfenzhong"></i>二级菜单BBB
+                    </li>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF music-box"></i>二级菜单CCCCC撒看见
+                    </li>
+                </ul>
+
+                <ul class="firstMenu">
+                    <div class="firstMenuSwitch glass-Bg box-show3 enable">
+                        <i class="MyIF menu-music"></i>
+                        <span>一级菜单888</span>
+                        <p><a class="MyIF double-arrow-up"></a></p>
+                    </div>
+                    <li class="secondMenu glass-Bg box-show3 enable" dataUrl="adminIframe/dataList.html">
+                        <i class="MyIF menu"></i>二级菜单AAA
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- 悬浮显示时间和刷新iframe页面块 -->
+        <div id="floatTimeRefresh" class="glass-Bg box-show3">
+
+            <!-- 刷新页面 -->
+            <div id="refreshIframe" class="cancelSelectText enable">
+                <i class="MyIF refresh-1" style="margin:0 8px 0 12px;"></i>刷新页面
+            </div>
+
+            <!-- 下拉 OR 折叠显示时间模块 -->
+            <p id="timeSwitch" class="enable glass-Bg" title="显示当前时间">
+                <a class="MyIF double-arrow-up"></a>
+            </p>
+
+            <!-- 显示当前时间[实时更新] -->
+            <div id="showNowTime">
+                <img src="../img/icon/时间 分钟.png">
+                <div><p id="showNowTimeDate"></p><p id="showNowTimeTime"></p></div>
+            </div>
+
+        </div>
+
+        <!-- 框架页面 -->
+        <iframe id="accountOperIframe" class="glass-Bg" src="adminIframe/index.html"></iframe>
+
+    </div>
+
+
+    <!-- 底部 -->
+    <footer class="glass-Bg box-show3">
+        © 2015 - 2020  &nbsp;&nbsp;&nbsp;Music House 所有版权归 JesBrian 个人所有
+    </footer>
+
+
+    <!-- Jsc部分[ 引入顺序最好不要改变 ] -->
+
+    <!--jQuery框架-->
+    <script src="../js/common/jquery-3.1.1.min.js" type="text/javascript"></script>
+
+
+    <!--plugins滚动条插件-->
+    <script src="../plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript" src="../js/common/common.js"></script>
+    <script type="text/javascript" src="../js/admin/home.js"></script>
+
+
+
+
+</body>
+</html>

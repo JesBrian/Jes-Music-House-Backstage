@@ -31,7 +31,7 @@
                 box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black, 0 -1px 0 rgba(0, 193, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 193, 255, 0.1), 0 0 30px rgba(0, 193, 255, 0.1);
             }
             button.s1c-Bg.active>i {
-                color:#00ccff;
+                color:#22e8ff;
             }
         </style>
 
@@ -62,27 +62,148 @@
             </ul>
         </div>
 
-        <div style="width:82%; height:100%; float: right; position:relative;">
-            内容展示
+        <div id="userAlbumList" style="width:82%; height:100%; float: right; position:relative; overflow:scroll;">
+            <div style="height:4%;"><!-- 位置显示BUG --></div>
+            <h3 style="margin:0 8% 2%; font-weight:600; color:#999;">我的歌单</h3>
+            <ul>
+                <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                    <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                        <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                    </a>
+                </li>
+
+                <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                    <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                        <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                    </a>
+                </li>
+
+                <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                    <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                        <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                    </a>
+                </li>
+
+                <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                    <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                        <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                    </a>
+                </li>
+
+                <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                    <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                        <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                    </a>
+                </li>
+
+                <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                    <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                        <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                    </a>
+                </li>
+
+                <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                    <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                        <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                    </a>
+                </li>
+
+                <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                    <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                        <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                    </a>
+                </li>
+
+                <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                    <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                        <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                    </a>
+                </li>
+
+                <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                    <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                        <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                    </a>
+                </li>
+
+                <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                    <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                        <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                    </a>
+                </li>
+
+                <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                    <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                        <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 
     <div id="homeRecommon" class="showContent" style="width:100%; height:90%; top:10%; position:absolute; opacity:0; z-index:5; overflow:scroll;">
         <div style="height:4%;"><!-- 位置显示BUG --></div>
-        <div id="homeRecommon-hotNew" class="box-show3" style="width:86%; margin:0 auto; position:relative;">
-            <div style="width:95%; height:88%; top:50%; left:50%; background:lightblue; position:absolute; transform:translate(-50%, -50%);">
 
+        <!-- 大图幻灯片部分 -->
+        <div id="homeRecommon-hotNew" class="box-show3" style="width:85%; margin:0 auto 12%; position:relative;">
+            <div style="width:91%; height:85%; top:50%; left:50%; position:absolute; transform:translate(-50%, -50%);">
+                <img id="showHotNewImg" src="../index/img/index/main/new-hot/1.jpg" style="top:0; left:0; width:100%; height:100%; border:none; position:absolute;">
             </div>
-            <a id="changeHotNew-left" class="s1c-Bg box-show3" style="width:11%; height:30%; top:50%; left:-6.8%; position:absolute; transform:translate(0, -50%);"></a>
-            <a id="changeHotNew-right" class="s1c-Bg box-show3" style="width:11%; height:30%; top:50%; right:-6.8%; position:absolute; transform:translate(0, -50%);"></a>
+            <a id="changeHotNew-left" class="s1c-Bg box-show3 MyIF double-arrow-left" style="width:12%; height:25%; top:50%; left:-5%; position:absolute; transform:translate(0, -50%); text-align: center; display: flex; justify-content:center; align-items:Center; opacity:0.8;"></a>
+            <a id="changeHotNew-right" class="s1c-Bg box-show3 MyIF double-arrow-right" style="width:12%; height:25%; top:50%; right:-5%; position:absolute; transform:translate(0, -50%); text-align: center; display: flex; justify-content:center; align-items:Center; opacity:0.88;"></a>
+
+            <style>
+                #hotNew-step a.active {
+                    background-color:#67F2FF!important;
+                }
+            </style>
+            <div id="hotNew-step" class="s1c-Bg box-show3" style="width:60%; height:8%; min-height:16px; left:50%; bottom:3%; position:absolute; transform:translate(-50%, 0); opacity:0.68;">
+                <table style="width:100%; height:100%;">
+                    <tr style="width:100%; height:100%; text-align:center;">
+                        <td style="height:100%; position:relative;"><a class="active" style="height:80%; top:50%; background-color:#9d7cff; display:inline-block; position:absolute;  transform:translate(-50%, -50%);"></a></td>
+                        <td style="height:100%; position:relative;"><a style="height:80%; top:50%; background-color:#9d7cff; display:inline-block; position:absolute; transform:translate(-50%, -50%);"></a></td>
+                        <td style="height:100%; position:relative;"><a style="height:80%; top:50%; background-color:#9d7cff; display:inline-block; position:absolute; transform:translate(-50%, -50%);"></a></td>
+                        <td style="height:100%; position:relative;"><a style="height:80%; top:50%; background-color:#9d7cff; display:inline-block; position:absolute; transform:translate(-50%, -50%);"></a></td>
+                        <td style="height:100%; position:relative;"><a style="height:80%; top:50%; background-color:#9d7cff; display:inline-block; position:absolute; transform:translate(-50%, -50%);"></a></td>
+                    </tr>
+                </table>
+            </div>
         </div>
 
-        <div id="homeRecommon-newDisc" style="width:90%; margin:8% auto; background-color: snow; height:300px;">
-            新碟上架
+
+        <!-- 新碟上架部分 -->
+        <div id="homeRecommon-newDisc" style="width:100%; margin:8% auto;">
+            <h3 style="margin:0 8% 2%; font-weight:600; color:#999;">新碟上架</h3>
+            <table style="width:100%; height:100%;">
+                <tr style="width:100%; text-align:center;">
+                    <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">6666668888889999999</p></a></td>
+                    <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">这是中文这是中文这是中文</p></a></td>
+                    <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">ThisIsEnglishThisIsEnglishThisIsEnglish</p></a></td>
+                </tr>
+                <tr style="width:100%; text-align:center;">
+                    <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">这是中文这是中文这是中文</p></a></td>
+                    <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">这是中文这是中文这是中文</p></a></td>
+                    <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">cnowqcmxzlcknmwqjpocfp</p></a></td>
+                </tr>
+            </table>
         </div>
 
-        <div id="homeRecommon-hotAlbum" style="width:90%; margin:3% auto; background-color: snow; height:300px;">
-            热门歌单
+
+        <!-- 热门歌单部分 -->
+        <div id="homeRecommon-hotAlbum" style="width:100%; margin:3% auto;">
+            <h3 style="margin:0 8% 2%; font-weight:600; color:#999;">热门歌单</h3>
+            <table style="width:100%; height:100%;">
+                <tr style="width:100%; text-align:center;">
+                    <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">这是中文这是中文这是中文</p></a></td>
+                    <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">cvsavcasvbksanvbsavnsc</p></a></td>
+                    <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">Sava是v啊是v吃撒v不是东北师大请问v</p></a></td>
+                </tr>
+                <tr style="width:100%; text-align:center;">
+                    <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">cvsavcasvbksanvbsavnsc</p></a></td>
+                    <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">这是中文这是中文这是中文</p></a></td>
+                    <td style=""><a class="s1c-Bg box-show3 albumList" style="width:85%; margin-bottom:18px; position:relative; display:inline-block;" href="album.html"><img src="../index/img/common/touxiang.jpg" style="top:5%; left:5%; width:90%; position:absolute; border-radius:5%;"><p style="width:96%; height:19%; top:76%; padding:2%; position:absolute; color:#BBB; word-wrap:break-word; word-break:break-all; overflow:hidden; text-overflow:ellipsis;">cvsavcasvbksanvbsavnsc</p></a></td>
+                </tr>
+            </table>
         </div>
 
     </div>
@@ -90,56 +211,76 @@
     <div id="musicRank" class="showContent" style="width:100%; height:90%; top:10%; position:absolute; opacity:0; z-index:5; overflow:auto;">
         <div style="height:4%;"><!-- 位置显示BUG --></div>
         <ul>
-            <li style="width:100%; height:38px; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
-                <a></a>
+            <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                    <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                </a>
             </li>
 
-            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
-                <a></a>
+            <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                    <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                </a>
             </li>
 
-            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
-                <a></a>
+            <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                    <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                </a>
             </li>
 
-            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
-                <a></a>
+            <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                    <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                </a>
             </li>
 
-            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
-                <a></a>
+            <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                    <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                </a>
             </li>
 
-            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
-                <a></a>
+            <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                    <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                </a>
             </li>
 
-            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
-                <a></a>
+            <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                    <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                </a>
             </li>
 
-            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
-                <a></a>
+            <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                    <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                </a>
             </li>
 
-            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
-                <a></a>
+            <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                    <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                </a>
             </li>
 
-            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
-                <a></a>
+            <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                    <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                </a>
             </li>
 
-            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
-                <a></a>
+            <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                    <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                </a>
             </li>
 
-            <li style="width:100%; height:38px; border-bottom:0.5px solid #666;">
-                <a></a>
-            </li>
-
-            <li style="width:100%; height:38px;">
-                <a></a>
+            <li style="width:100%; border-top:0.5px solid #666; border-bottom:0.5px solid #666;">
+                <a href="song.html" style="width:100%; height:100%; display:inline-block; position:relative;">
+                    <img src="../index/img/common/touxiang.jpg" style="top:8%; left:2%; height:84%; position:absolute;">
+                </a>
             </li>
 
         </ul>
@@ -153,6 +294,8 @@
     <script>
 
         /* 调整div、按钮、字体大小，高度、行高等 */
+        $("h3").css("font-size",$("body").width() * 0.06 + "px");
+
         $("#topNav button").width($("#topNav button").height());
         $("#showMenu, #searchButton").css("width",$("#showMenu").height() + "px");
         $("#showMenu, #searchButton").css("line-height",$("#showMenu").outerHeight() + "px");
@@ -165,7 +308,30 @@
         $("#userAlbum-leftNav").find("button").css("line-height",$("#userAlbum-leftNav").find("button").outerWidth()*0.95 + "px");
 
 
-        $("#homeRecommon-hotNew").css("height",$("#homeRecommon-hotNew").outerWidth()*0.52+"px");
+
+
+        $("#homeRecommon-hotNew").css("height",$("#homeRecommon-hotNew").outerWidth()*0.6+"px");
+        $("#changeHotNew-left, #changeHotNew-right").css("font-size",$(this).height()/20 + "px");
+        $("#hotNew-step a").width($("#hotNew-step").height() * 0.8 + "px");
+
+
+        $("a.albumList").css("height",$("a.albumList").width() * 1.3 + "px");
+        $("a.albumList").css("font-size",$("a.albumList").width()*0.13 + "px");
+
+
+
+        $("#musicRank").find("li").height($("body").width() * 0.15 + "px");
+        $("#userAlbumList").find("li").height($("body").width() * 0.15 + "px");
+
+
+
+
+
+
+        $("#bottomAudio",window.top.document).fadeIn();
+
+
+
 
 
         /* 在主体部分展现对应的内容 */
@@ -185,29 +351,61 @@
 
 
 
-
-
+        var showImgNum = 1;
+        var showImgNumTimeout = setTimeout(showImgNumTime,5000);  //开发阶段先屏蔽
+        function showImgNumTime()   //设置定时器每三秒自动切换大图推荐
+        {
+            changeHotNew(2);    //调用向右切换大图方法
+            showImgNumTimeout = setTimeout(showImgNumTime,3000);
+        }
 
         $("#changeHotNew-left, #changeHotNew-right").on("touchend",function () {
             if ($(this).attr("id") == "changeHotNew-left") {
+                clearTimeout(showImgNumTimeout);
                 changeHotNew(1);
+                showImgNumTimeout = setTimeout(showImgNumTime,3000);
             } else {
+                clearTimeout(showImgNumTimeout);
                 changeHotNew(2);
+                showImgNumTimeout = setTimeout(showImgNumTime,3000);
             }
+
         });
         /**
          * 改变推荐大图位的超链接以及图片
          */
         function changeHotNew(flag) {
-            var obj = $("#homeRecommon-hotNew").find($("div"));
+            var imgObj = $("#showHotNewImg");
+            changeShowImgNum(flag); //改变计数器
+            imgObj.fadeOut(0);
             if (flag == 1) {
-                obj.css("background-color","lightgreen");
+                imgObj.attr("src","../index/img/index/main/new-hot/" + showImgNum + ".jpg");
             } else if (flag == 2) {
-                obj.css("background-color","#DDD");
+                imgObj.attr("src","../index/img/index/main/new-hot/" + showImgNum + ".jpg");
             } else {
 
             }
+            imgObj.fadeIn("slow");
+            console.log(showImgNum);
         }
+        function changeShowImgNum(flag) {
+            $("#hotNew-step").find("a").eq(showImgNum - 1).toggleClass("active");
+            if (flag == 1) {
+                showImgNum--;
+                if (showImgNum == 0) {
+                    showImgNum = 5; //如果展示大图幻灯片的计数器低过0将重新从5开始计数
+                }
+            } else if (flag == 2) {
+                showImgNum++;
+                if (showImgNum == 6) {
+                    showImgNum = 1; //如果展示大图幻灯片的计数器超过6将重新从1开始计数
+                }
+            }
+            $("#hotNew-step").find("a").eq(showImgNum - 1).toggleClass("active");
+        }
+
+
+
 
         var startx, starty;
 
@@ -265,10 +463,10 @@
                 case 2:
                     break;
                 case 3:
-                    changeHotNew(1);
+                    changeHotNew(2);
                     break;
                 case 4:
-                    changeHotNew(2);
+                    changeHotNew(1);
                     break;
                 case 5:
                     break;
