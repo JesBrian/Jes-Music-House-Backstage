@@ -1003,7 +1003,7 @@
             thisObj.append("<div class='s1c-Bg box-show3' style='width:160px; height:185px; top:-190px; left:-60px; position:absolute; display:none; font-size:15px;'>" + str + "<img src='#' style='width:80%; margin:0 auto; border:none; border-radius:5px;'></div>")
             var thisObjDiv = thisObj.find("div");
             thisObj.mousemove(function(){
-                thisObjDiv.find("img").attr("src","img/common/" + id + ".jpg");
+                thisObjDiv.find("img").attr("src","../img/common/" + id + ".jpg");
                 thisObjDiv.fadeIn();
             }).mouseleave(function(){
                 thisObjDiv.fadeOut();
