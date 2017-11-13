@@ -72,7 +72,7 @@
 
     /* 热门歌曲页 */
 #popalbum-main>div {  width:92%; height:100%; padding:40px 0 0 0; margin:auto;  }
-#popalbum-kindstContent {  width:80%; margin:0 auto; padding:15px; position:relative;  }
+#popalbum-kindstContent {  width:80%; height:38px; margin:0 auto; padding:15px; position:relative; line-height:38px;  }
 #songTypeName {  margin:auto 18px; color:white; font-size:26px;  }
 #popalbum-kindstContent > span:last-child {  top:66px; right:88px; position:absolute; z-index:9;  }
 #popalbum-content {  width:100%; margin:38px 0 -28px;  }
