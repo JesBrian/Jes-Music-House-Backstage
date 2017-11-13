@@ -37,7 +37,7 @@
 #song-wellReply>.replyList .replyUser:hover, #song-newReply>.replyList .replyUser:hover {  color:#4AFFF6; text-decoration:underline;  }
 #song-wellReply>.replyList>.replySource, #song-newReply>.replyList>.replySource {  width:89%; padding:13px; margin:8px 0 3px 52px; color:#929292; word-break:break-all; word-wrap:break-word;  }
 #song-reply .replybar {  margin:13px 88px 0; color:#929292;  }
-#song-reply .replybar>.replyStar {  margin-top:-5px; float:right;  }
+#song-reply .replybar>.replyStar {  margin-top:-9px; float:right; cursor:pointer;  }
 #song-reply .replyOtherButton {  margin-left:28px; float:right; color:#929292!important;  }
 #song-reply .replyOtherButton:hover {  color:#70ff92!important;  }
 

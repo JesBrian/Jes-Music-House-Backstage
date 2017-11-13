@@ -466,8 +466,8 @@ a.superBtn:active {
 }
 
 
-.glassButton {  width:118px; height:38px; padding-right:3px; display:inline-block; border-radius:8px; background:url(../../img/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color:#585858!important; font-size:16px; font-weight:700; line-height:38px;  }
-.glassButton>i {  float:right; font-size:22px; color:white!important;  }
+.glassButton {  width:122px; height:38px; padding-right:3px; display:inline-block; border-radius:8px; background:url(../../img/common/button-glass.png) no-repeat; background-size:100% 100%; box-shadow:0 18px 20px #161616; color:#585858!important; font:normal small-caps bold 16px/38px arial,verdana;  }
+.glassButton>i {  float:right; padding-right:2px; font-size:22px; color:white!important;  }
 
 
 
