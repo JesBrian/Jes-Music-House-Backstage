@@ -15,8 +15,53 @@
     <link rel="stylesheet" type="text/css" href="../../css/common/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/admin/common.css">
 
+    <!-- 临时CSS -->
+    <style type="text/css">
+        .accountTable {
+            margin:1px 0;
+        }
+        .accountTable th {
+            height:40px;
+            border:1px solid #222;
+            background:#333;
+            font-size:23px;
+        }
+        .accountTable > tbody td {
+            border:1px solid #333;
+        }
+        .accountTable > tbody > tr:nth-of-type(even) {
+            background:#666;
+        }
+        .accountTable > tbody > tr:nth-of-type(odd) {
+            background:#555;
+        }
+        .accountTable > tbody > tr:hover {
+            background:#444;
+        }
+
+
+
+        .accountTableOper {
+            width:50px;
+            text-align:center;
+        }
+        .accountTableOper > i {
+            width:50px;
+            height:48px;
+            font-size:25px;
+            display:inline-block;
+        }
+
+    </style>
+
+
 </head>
 <body id="htmlBody">
+
+    <!-- 回到后台主页浮动按钮 -->
+    <div id="comeBackHomeNav" class="glass-Bg box-show3">
+        <a class="MyIF home" href="index.html"></a>
+    </div>
 
     <!-- 后台操作页面顶部标题 -->
     <div id="navTitle" class="s1c-Bg box-show3">
@@ -25,32 +70,155 @@
         </h4>
     </div>
 
-    <div id="mainBody" class="s1c-Bg box-show3" style="height:388px;">
-        <table style="width:100%;" border="1">
+    <!-- 后台显示数据 -->
+    <div id="mainBody" class="s1c-Bg box-show3">
+        <table class="accountTable" style="width:100%;">
+
             <thead>
             <tr>
-                <th><input type="checkbox" id='1verybad' name="quality"></th>
-                <th colspan="4">操作</th>
+                <th style="width:38px;"><input type="checkbox" id='1verybad' name="quality"></th>
+                <th colspan="3">操作</th>
                 <th>名字</th>
                 <th>图片</th>
-                <th>状态</th>
+                <th>详细信息</th>
             </tr>
             </thead>
+
             <tbody>
             <tr>
+                <td style="text-align:center;"><input type="checkbox" id='1verybad' name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF tool"></i></td>
+                <td class="accountTableOper"><i class="MyIF status-on"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2"></i></td>
                 <td>January</td>
                 <td>$100</td>
                 <td>January</td>
-                <td>$100</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" id='1verybad' name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF tool"></i></td>
+                <td class="accountTableOper"><i class="MyIF status-on"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2"></i></td>
                 <td>January</td>
                 <td>$100</td>
                 <td>January</td>
+            </tr>
+
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" id='1verybad' name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF tool"></i></td>
+                <td class="accountTableOper"><i class="MyIF status-on"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2"></i></td>
+                <td>January</td>
                 <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" id='1verybad' name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF tool"></i></td>
+                <td class="accountTableOper"><i class="MyIF status-on"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" id='1verybad' name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF tool"></i></td>
+                <td class="accountTableOper"><i class="MyIF status-on"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" id='1verybad' name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF tool"></i></td>
+                <td class="accountTableOper"><i class="MyIF status-on"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" id='1verybad' name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF tool"></i></td>
+                <td class="accountTableOper"><i class="MyIF status-on"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" id='1verybad' name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF tool"></i></td>
+                <td class="accountTableOper"><i class="MyIF status-on"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" id='1verybad' name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF tool"></i></td>
+                <td class="accountTableOper"><i class="MyIF status-on"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" id='1verybad' name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF tool"></i></td>
+                <td class="accountTableOper"><i class="MyIF status-on"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" id='1verybad' name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF tool"></i></td>
+                <td class="accountTableOper"><i class="MyIF status-on"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" id='1verybad' name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF tool"></i></td>
+                <td class="accountTableOper"><i class="MyIF status-on"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
             </tr>
             </tbody>
 
         </table>
     </div>
+
+        
+    <!-- 后台跳转分页 -->
+    <nav style="width:100%; text-align:center;">
+        <div class="glass-Bg box-show3" style="width:800px; height:48px; margin:18px auto 38px; display:inline-block;">
+
+            <div style="width:600px; height:48px; float:left;">
+            </div>
+
+            <div style="width:200px; height:48px; float:right; line-height:48px;">
+                跳至 <input type="text" name="" style="width:68px;"> 页 <i class="MyIF exit-1"></i>
+            </div>
+
+        </div>
+    </div>
+
+
 
 </body>
 </html>

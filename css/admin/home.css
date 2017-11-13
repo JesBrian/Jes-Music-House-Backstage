@@ -56,7 +56,7 @@ nav > .accountMenuSwitch img {  width:40px; height:36.5px; top:2px; left:1px; po
 
 
 /* 悬浮显示时间和刷新页面按钮 */
-#floatTimeRefresh {  width:148px; height:36px; top:2px; right:23px; display:inline-block; position:absolute; line-height:36px;  }
+#floatTimeRefresh {  width:148px; height:36px; top:2px; right:25px; display:inline-block; position:absolute; line-height:36px;  }
 #refreshIframe {  width:110px; height:36px; position:relative; z-index:9; font-weight:600; color:#BBB;  }
 #refreshIframe:hover {  color:#555; cursor: not-allowed;  }
 #refreshIframe.enable:hover {  color:#EEE; text-shadow:0 0 1px #888; cursor:pointer;  }

@@ -8,6 +8,8 @@ li, ul {  list-style-type:none;  }
 a {  text-decoration:none;  cursor:pointer;  text-align:center;  }
 p, h1, h2, h3, h4, h5, h6, li, ul {  margin:0;  padding:0;  }
 dd {  margin:0;  float:left;  }
+table {border-collapse:collapse;}
+
 
     /* 表格样式 */
 .specialTable{
