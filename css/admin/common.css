@@ -9,10 +9,20 @@
 
 
 #navTitle {
-    width:80%; height:58px; margin:28px auto; line-height:58px; position:relative;
+    width:80%; height:58px; margin:46px auto 58px; line-height:58px; position:relative;
 }
 #navTitle > h4 {
-    text-align:center; font-size:28px;
+    text-align:center; font-size:28px; font-weight:900; color:#FFF;
+}
+#navTitle > h4 > a {
+    margin:18px; color:#33CDFF;
+}
+#navTitle > h4 > a:hover {
+    text-shadow:0.1px 0.1px 0.5px #5CEBDC;
+}
+#navTitle > h4 > a.active {
+    color:#BBB;
+    text-shadow:none;
 }
 
 #mainBody {
@@ -24,7 +34,7 @@
 
 
 #comeBackHomeNav {
-	width:58px; height:58px; top:-10px; left:10px; display:inline-block; position:absolute; opacity:0.8;
+	width:58px; height:58px; top:-28px; left:10px; display:inline-block; position:absolute; opacity:0.8;
 }
 #comeBackHomeNav > a {
 	width:100%; height:100%; display:inline-block; font-size:35px; line-height:58px;
