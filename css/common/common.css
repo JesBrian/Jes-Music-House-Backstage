@@ -416,9 +416,9 @@ a.baseOper {
 }
 a.baseOper:after {
     width: 48px;
-    height: 43px;
-    top: -4.5px;
-    left:-25px;
+    height: 45px;
+    top: -6px;
+    left:-24px;
     margin-left: 50%;
     content: '';
     display: block;

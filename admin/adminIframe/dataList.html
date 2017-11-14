@@ -9,9 +9,6 @@
     <!-- 自用字体图标 -->
     <link rel="stylesheet" type="text/css" href="../../plugins/myfonticon/iconfont.css">
 
-    <!-- 滚动条CSS样式 -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/scrollbar/jquery.mCustomScrollbar.css">
-
     <link rel="stylesheet" type="text/css" href="../../css/common/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/admin/common.css">
 
@@ -75,6 +72,13 @@
             opacity: 0.88;
         }
 
+
+
+
+        #paginContent #goPageNum:hover > i.MyIF {
+            text-shadow:0 0 0.5px #22e8ff;
+        }
+
     </style>
 
 
@@ -88,21 +92,26 @@
 
     <!-- 后台操作页面顶部标题 -->
     <div id="navTitle" class="s1c-Bg box-show3">
+
+        <!-- 后台顶部标题[面包屑导航栏] -->
         <h4>
-            <a href="dataList.html">后台主页</a>/<a class="active">数据列表</a>
+            <a href="index.html">后台主页</a>/<a class="active">数据列表</a>
         </h4>
 
+        <!-- 后台顶部搜索框 -->
         <div style="width:232px; height:100%; top:0; left:8px; position:absolute; z-index:5;">
-            <input type="text" name="" value="" placeholder="综合搜索" style="width:168px; height:38px; margin:8px 0; padding:0 8px; float:left; background:#999; color:#333; font-size:18px;">
+            <input type="text" name="" value="" placeholder="简单综合搜索" style="width:168px; height:38px; margin:8px 0; padding:0 8px; float:left; background:#888; color:#292929; font-size:18px;">
             <a id="accountSearchButton" class="glass-Bg box-show3">
                 <i class="MyIF search" style="font-size:26px;"></i>
             </a>
         </div>
 
+        <!-- 后台顶部基本操作[添加/删除] -->
         <div style="width:140px; height:100%; top:0; right:28px; position:absolute; z-index:5; text-align:right;">
-            <a class="baseOper superBtn MyIF add-data" title="添加数据"></a>
+            <a class="baseOper superBtn MyIF add-data" href="addData.html" title="添加数据"></a>
             <a class="baseOper superBtn MyIF trash-1" title="删除数据"></a>
         </div>
+
     </div>
 
     <!-- 后台显示数据 -->
@@ -274,12 +283,6 @@
         </table>
     </div>
 
-    <style>
-        #paginContent #goPageNum:hover {
-            text-shadow:0 0 0.5px #22e8ff;
-        }
-    </style>
-
     <!-- 后台跳转分页 -->
     <nav id="paginContent" style="width:100%; text-align:center;">
         <div class="glass-Bg box-show3" style="width:720px; height:48px; margin:18px auto 38px; display:inline-block;">
@@ -287,15 +290,22 @@
             <div style="width:520px; height:48px; float:left;">
             </div>
 
-            <div style="width:200px; height:48px; float:right; line-height:50px; text-align:left; color:#999; font-weight:600;">
+            <div id="goPageNum" style="width:200px; height:48px; float:right; line-height:50px; text-align:left; color:#999; font-weight:600;">
                 跳转至 <input type="text" name="" class="s1c-Bg box-show3" style="width:48px; padding:5px 3px; text-align:center; color:#BBB; font-size:16px; font-weight:700;"> 页
-                <i id="goPageNum" class="MyIF exit-1" style="margin:0 12px; position:absolute; font-size:30px;"></i>
+                <i class="MyIF exit-1" style="margin:0 12px; position:absolute; font-size:30px;"></i>
             </div>
 
         </div>
     </nav>
 
 
+    <script type="text/javascript" src="../../js/common/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript">
+        $('i.tool').click(function () {
+            location='updateData.html';
+        });
+    </script>
 
 </body>
 </html>

@@ -9,7 +9,7 @@
 
 
 #navTitle {
-    width:80%; height:58px; margin:46px auto 58px; line-height:58px; position:relative;
+    width:80%; height:58px; margin:46px auto 58px; line-height:58px; position:relative; font-family:"Microsoft YaHei", "黑体", sans-serif;
 }
 #navTitle > h4 {
     text-align:center; font-size:28px; font-weight:900; color:#FFF;
