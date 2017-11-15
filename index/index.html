@@ -31,12 +31,14 @@
     <!--顶部导航栏 [包括Logo、搜索框、导航菜单]-->
     <nav id="navbar-index" class="box-show1">
         <div id="navbar-content-index">
+
             <!-- MH-Logo -->
             <div id="logo">
                 <a href="index.html"><img src="../img/common/MH-Logo.png"/></a>
             </div>
+
             <!-- 导航菜单 -->
-            <ul id="navbar-menu-index">
+            <ul id="navbar-menu-index" class="cancelSelectText">
                 <li class="activeThis" from="indexIframe" to="main.html"><span class="MyIF home"></span> 主页</li>
                 <li from="indexIframe" to="download.html"><span class="MyIF XCX"></span> 客户端</li>
                 <li from="indexIframe" to="newdisc.html"><span class="MyIF music-albu-1"></span> 新碟上架</li>
@@ -44,17 +46,19 @@
                 <li from="indexIframe" to="rank.html"><span class="MyIF data-analysis"></span> 播放排行</li>
                 <li from="indexIframe" to="musician.html"><span class="MyIF singer"></span> 音乐人</li>
             </ul>
+
             <!-- 用户登陆 -->
             <span id="navbar-user-index">
                 <a onclick="window.top.niftymodalsByModelName('modal-userLogin','');" class="userLogin superBtn MyIF administrators-1"></a>
                 <div id="userCON">
                     <i></i><!--向上箭头-->
-                    <p class="MyIF home"><a href="account.html" target="indexIframe">我的主页</a></p>
-                    <p class="MyIF feedback"><a href="message.html" target="indexIframe">我的消息</a></p>
-                    <p class="MyIF gears"><a href="update.html" target="indexIframe">个人设置</a></p>
-                    <p class="MyIF exit-2"><a href="index.html">安全退出</a></p>
+                    <a class="cancelSelectText" href="account.html" target="indexIframe"><i class="MyIF home"></i> 我的主页</a>
+                    <a class="cancelSelectText" href="message.html" target="indexIframe"><i class="MyIF feedback"></i> 我的消息</a>
+                    <a class="cancelSelectText" href="update.html" target="indexIframe"><i class="MyIF gears"></i> 个人设置</a>
+                    <a class="cancelSelectText" href="index.html"><i class="MyIF exit-2"></i> 安全退出</a>
                 </div>
             </span>
+
             <!-- 搜索框 -->
             <section class="webdesigntuts-workshop">
                 <form action="search.html" target="indexIframe" method="post">

@@ -76,7 +76,7 @@ table {border-collapse:collapse;}
     /**/
 .hover-undeline:hover {  text-decoration:underline;  }
 
-
+    /* 双击不选中文字 */
 .cancelSelectText {
     -moz-user-select:none;/*火狐*/
     -webkit-user-select:none;/*webkit浏览器*/
