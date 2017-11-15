@@ -12,17 +12,19 @@
     width:80%; height:58px; margin:46px auto 58px; line-height:58px; position:relative; font-family:"Microsoft YaHei", "黑体", sans-serif;
 }
 #navTitle > h4 {
-    text-align:center; font-size:28px; font-weight:900; color:#FFF;
+    text-align:center; font-size:28px; color:#FFF;
 }
 #navTitle > h4 > a {
     margin:18px; color:#33CDFF;
 }
 #navTitle > h4 > a:hover {
-    text-shadow:0.1px 0.1px 0.5px #5CEBDC;
+    color:#2F99FF;
+    text-shadow:0.3px 0.3px 0.2px #5CEBDC;
 }
 #navTitle > h4 > a.active {
     color:#BBB;
     text-shadow:none;
+    cursor: not-allowed;
 }
 
 #mainBody {
