@@ -1,0 +1,180 @@
+DROP DATABASE MusicHouse;
+
+#[为了系统运行，且学习用途，会收集一些关于个人隐私的资料，但由于涉及隐私，且该系统作为学习之用，并不会真的存储实际隐私数据，可以不需填写真实资料，只是作学习使用]
+CREATE DATABASE MusicHouse;
+USE MusicHouse;
+
+
+/* 权限表 -- 设置普通用户-5、会员-4、歌手-3、普通管理员-2、超级管理员权限-1 */
+CREATE TABLE mh_power
+(
+  id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT '权限类型[分为 1-超级管理员、2-普通管理员、3-歌手、4-会员、5-普通用户]',
+  #type VARCHAR(20) NOT NULL DEFAULT '' COMMENT '权限类型[分为 超级管理员、普通管理员、歌手、会员、普通用户]',
+  operIdList VARCHAR(100) NOT NULL DEFAULT '' COMMENT '该权限下可以操作的菜单列表[记录菜单id列表，用、连接]'
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+/* MH管理员表 -- 进入后台对整个系统调整 */
+CREATE TABLE mh_admin
+(
+  id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+  loginName VARCHAR(25) NOT NULL DEFAULT '' COMMENT '管理员登录名',
+  salt CHAR(4) NOT NULL DEFAULT '' COMMENT '密码加盐',
+  passwd CHAR(32) NOT NULL DEFAULT '' COMMENT '加密后的密码',
+  realName VARCHAR(25) NOT NULL DEFAULT '' COMMENT '管理员真名[为了确保系统的安全，加入我们都要进行信息确认]',
+  phone CHAR(11) NOT NULL DEFAULT '' COMMENT '管理员手机电话',
+  IDCardNo CHAR(18) NOT NULL DEFAULT '' COMMENT '管理员身份证号码',
+  IDCardImg VARCHAR(255) NOT NULL DEFAULT '' COMMENT '管理员身份证图片[正反两面，使用 ，分隔 - 长度有可能不足]',
+  bankName VARCHAR(30) NOT NULL DEFAULT '' COMMENT '管理员的银行名称',
+  bankNo VARCHAR(30) NOT NULL DEFAULT '' COMMENT '管理员的银行账号',
+  powerId TINYINT UNSIGNED NOT NULL DEFAULT '2' COMMENT '权限类型[默认是 2，为普通管理员，还有 1 是超级管理员 ]'
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+/* MH用户表 -- 普通注册用户 */
+CREATE TABLE mh_user
+(
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+  username VARCHAR(25) NOT NULL DEFAULT '' COMMENT '普通用户名',
+  salt CHAR(4) NOT NULL DEFAULT '' COMMENT '密码加盐',
+  passwd CHAR(32) NOT NULL DEFAULT '' COMMENT '加密后的密码',
+  avatar VARCHAR(255) NOT NULL DEFAULT '' COMMENT '用户头像图片',
+  powerId TINYINT UNSIGNED NOT NULL DEFAULT '5' COMMENT '权限类型[默认是 5，为普通用户，还有 6 是会员 ]',
+  status BIT NOT NULL DEFAULT 1 COMMENT '用户账户状态[默认是 1 正常，还有 0 非正常状态]',
+  createTime INT UNSIGNED NOT NULL COMMENT '用户账户创建时间[可以用于每天新用户 - 保存在 XX 表中]',
+  loginTime INT UNSIGNED NOT NULL COMMENT '用户上一次登录时间[可以用于计算活跃用户 - 保存在 XX 表中]',
+  INDEX user_power(powerId),
+  INDEX user_createTime(createTime),
+  INDEX user_loginTime(loginTime)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+/* MH用户听歌情况表 -- 注册用户之后就会自动产生一个用户听歌表记录所听过的歌曲以及对应听的次数 */
+CREATE TABLE mh_user_listen
+(
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+  songId INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '歌曲对应的ID',
+  listenNum INT UNSIGNED DEFAULT 0 COMMENT '歌曲对应聆听次数',
+  INDEX userlisten_listenNum(listenNum)
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
+
+
+/* MH会员表 -- 普通用户付钱后成为会员 */
+CREATE TABLE mh_member
+(
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+  userId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '保存对应的用户id',
+  timeSpan TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '用户开通会员的时间长度[1-一个月、2-两个月、3-三个月、4-半年、5-一年]',
+  timeOut INT UNSIGNED NOT NULL COMMENT '用户会员到期时间',
+  createTime INT UNSIGNED NOT NULL COMMENT '用户开通会员时间[可以用于每天新会员 - 保存在 XX 表中]',
+  INDEX user_userId(userId),
+  INDEX user_createTime(createTime)
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
+
+
+/* MH歌手表 -- 申请入驻后成为MH的入驻歌手 */
+CREATE TABLE mh_singer
+(
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+  userid INT UNSIGNED DEFAULT 0 COMMENT '对应的用户账号[0为没有]',
+  singername VARCHAR(25) NOT NULL DEFAULT '' COMMENT '歌手艺名',
+  singerImg VARCHAR(255) DEFAULT '' COMMENT '歌手图片',
+  sex TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '歌手性别[1-男、2-女、3-团队]',
+  styleId TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '歌手歌曲风格id',
+  brand VARCHAR(255) DEFAULT '' COMMENT '歌手所属公司/品牌',
+  introduction TEXT COMMENT '歌手简介',
+  realName VARCHAR(25) NOT NULL DEFAULT '' COMMENT '歌手真名[审核通过后不能更改]',
+  phone CHAR(13) NOT NULL DEFAULT '' COMMENT '歌手手机',
+  nationality TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '歌手所属国籍[默认 1-中国]',
+  IDCardNo CHAR(18) NOT NULL DEFAULT '' COMMENT '歌手身份证号码',
+  IDCardImg VARCHAR(255) NOT NULL DEFAULT '' COMMENT '歌手身份证图片[正反两面，使用 ，分隔 - 长度有可能不足]',
+  powerId TINYINT UNSIGNED NOT NULL DEFAULT '6' COMMENT '权限类型[默认是 6，为普通管理员, 不好意思也只能是6 ]',
+  status BIT NOT NULL DEFAULT 1 COMMENT '歌手账户状态[默认是 1 正常，还有 0 非正常状态]',
+  createTime INT UNSIGNED NOT NULL COMMENT '歌手开通会员时间[可以用于每天新会员 - 保存在 XX 表中]',
+  loginTime INT UNSIGNED NOT NULL COMMENT '歌手上一次登录时间',
+  INDEX singer_userid(userid),
+  INDEX singer_singername(singername),
+  INDEX singer_styleId(styleId),
+  INDEX user_createTime(createTime)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+/* MH音乐风格表 -- 用于搜索歌单 */
+CREATE TABLE mh_style
+(
+  id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+  styleName VARCHAR(15) NOT NULL DEFAULT '' COMMENT '风格名称',
+  parentId TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '风格父ID[目前只做二级分类]',
+  INDEX style_parentId(parentId)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+/* MH音乐歌单表 -- 歌单分为 1-管理员创建、2-歌手创建、3-用户创建 */
+CREATE TABLE mh_album
+(
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+  albumName VARCHAR(35) NOT NULL DEFAULT '' COMMENT '歌单名称',
+  songIdList TEXT COMMENT '歌单所收集的所有歌曲列表[记录歌曲ID使用 , 分隔]',
+  albumStyle VARCHAR(35) DEFAULT '' COMMENT '歌单所属风格列表[记录风格ID使用 , 分隔且限制只能有三个不同的风格]',
+  #createBy COMMENT '创建人是谁',
+  createTime INT UNSIGNED NOT NULL COMMENT '该歌单创建时间',
+  #INDEX album_createBy(createBy)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+/* MH音乐单曲表 -- 记录每一首歌的详细信息 */
+CREATE TABLE mh_song
+(
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+  songName VARCHAR(35) NOT NULL DEFAULT '' COMMENT '歌曲名称',
+  singerId VARCHAR(35) NOT NULL DEFAULT '' COMMENT '歌曲的创作人列表[记录歌手的ID使用 , 分隔]',
+  #songTime
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+/* MH音乐歌曲聆听次数表 -- 为了效率采用反范式方法创建一个专门记录歌曲聆听次数的表 */
+CREATE TABLE mh_song_listen
+(
+  songId INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '歌曲对应的ID',
+  listenNum INT UNSIGNED DEFAULT 0 COMMENT '歌曲对应聆听次数'
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
+
+
+/* MH音乐排行榜 -- 为了效率再次采用反范式方法创建一个专门记录前XX条高聆听的歌曲 */
+CREATE TABLE mh_listen_rank
+(
+  songId INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '歌曲对应的ID',
+  songName VARCHAR(35) NOT NULL UNIQUE DEFAULT '' COMMENT '歌曲对应名称',
+  listenNum INT UNSIGNED DEFAULT 0 COMMENT '歌曲对应聆听次数',
+  INDEX rank_listenNum(listenNum)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+/* MH歌曲评论表 -- 记录用户对歌曲的评论 */
+CREATE TABLE mh_comment
+(
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+  `comment` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '评论内容',
+  replayId BIGINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '如果是回复之前已有的回复则该字段记录所要回复的之前已有的回复的ID',
+  songId INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '歌曲对应的ID',
+  likeNum INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '歌曲对应的ID',
+  INDEX comment_songId(songId)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+/* MH评论点赞表 -- 记录哪个用户点赞了哪条评论 */
+CREATE TABLE mh_comment_like
+(
+  commentId BIGINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '对应的评论ID',
+  userId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '点赞该评论所对应的用户ID',
+  INDEX like_commentId(commentId),
+  INDEX like_userId(userId)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+/* MH问卷表 -- 用户反馈所填的问卷情况 */
+CREATE TABLE mh_questionnaire
+(
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+
+)
