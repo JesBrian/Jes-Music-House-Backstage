@@ -164,8 +164,6 @@ footer>.box-show1 {  width:1350px; height:98px; margin:0 auto; z-index:4; positi
 
 
 
-
-
     /* 浮动导航栏 */
 #float-nav {  width:38px;  position:absolute;  right:-8px;  bottom:123px; z-index:-1; }
 #float-nav li {  width:40px;  height:40px;  float:left;  position:relative;  margin-top:10px;  background: #222222;  }

@@ -42,7 +42,7 @@
         /* 收藏歌曲 */
 #modal-collection {  width:760px;  }
 #modal-collection>.md-content {  height:388px; position:relative;  }
-#modal-collection>.md-content>span {  top:148px; right:168px; position:absolute; z-index:9;  }
+#modal-collection>.md-content>span {  top:138px; right:168px; position:absolute; z-index:9;  }
 #collectionContent {  height:360px;  }
 #collectionContent a {  width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block;  }
 #collectionContent a>img {  width:28px; height:28px; border:none; border-radius:3px;  }
@@ -54,7 +54,7 @@
 #modal-warning span>a {  margin-right:68px; display:inline-block;  }
         /* 问卷调查 */
 #modal-questionnaire form {  height:400px; margin:18px 38px; text-align:center;  }
-#modal-questionnaire>div>span {  top:45px; left:66%; position:relative; z-index:9;  }
+#modal-questionnaire>div>span {  top:38px; left:66%; position:relative; z-index:9;  }
 #modal-questionnaire form>p {  margin:18px auto 3px; text-align:left;  }
 #modal-questionnaire form>table {  margin-left:28px;  }
 #modal-questionnaire table td {  padding:0 8px 8px;  }
