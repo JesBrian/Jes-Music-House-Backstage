@@ -11,7 +11,7 @@
 #logo img {  width: 200px;  }
         /*控制导航菜单的部分*/
 #navbar-menu-index .MyIF {  color:#49DFFF;  font-size:20px;  }
-#navbar-menu-index > li {  width:105px;  height:45px;  margin:12px 2px; border-radius:3px; border:0.5px solid transparent; float:left;  line-height:42px;  text-align:center; font-size:14px; color:#d2d2d2; cursor:pointer;  }
+#navbar-menu-index > li {  width:105px;  height:45px;  margin:12px 2px; border-radius:3px; border:0.5px solid transparent; float:left; line-height:42px;  text-align:center; font-size:14px; font-weight:600; font-family:'Microsoft YaHei',sans-serif; color:#d2d2d2; cursor:pointer;  }
 #navbar-menu-index > li:hover {  color:#8f7cff;  }
 #navbar-menu-index > li.activeThis {  color:white; background:url(../../img/common/button-frame.jpg);  background-size:100% 100%;  -webkit-box-shadow:0 0 2px 3px #49DFFF;  -moz-box-shadow:0 0 2px 3px #49DFFF;  box-shadow:0 0 2px 3px #49DFFF;  }
         /*控制搜索表单的部分*/
@@ -50,10 +50,9 @@
 #navbar-user-index>a {  font-size:41px; display:inline-block;  }
 #navbar-user-index>#userCON {  width:100px; top:50px; left:-31px; padding:3px 3px; position:absolute; border-radius:3px; background-color:#2E2E2E; -moz-box-shadow:inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);  display:none;  }
 #navbar-user-index>#userCON>i {  width: 0; height: 0; top:-8px; left:39%; position:absolute; border-style: solid; border-width: 0 12.5px 10px 12.5px; border-color: transparent transparent #494949 transparent;  }
-#navbar-user-index>#userCON>p {  padding:2px; font-size:14px; text-align:center;  }
-#navbar-user-index>#userCON>p>a {  margin-left:10px; color:#AAA;  }
-#navbar-user-index>#userCON>p:hover {  border-radius:2px; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4A4A4A), color-stop(100%, #535353)); background-image: -moz-linear-gradient(#4A4A4A, #535353); background-image: -webkit-linear-gradient(#4A4A4A, #535353); background-image: linear-gradient(#4A4A4A, #535353);  }
-#navbar-user-index>#userCON>p:hover>a {  color:#EEE;  }
+#navbar-user-index>#userCON>a { width:96%; padding:2px; display:inline-block; font-size:14px; text-align:center; color:#AAA;  }
+#navbar-user-index>#userCON>a:hover {  border-radius:2px; color:#DDD; text-shadow:1px 1px 2px #999; background-color:#2E2E2E; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4A4A4A), color-stop(100%, #535353)); background-image: -moz-linear-gradient(#4A4A4A, #535353); background-image: -webkit-linear-gradient(#4A4A4A, #535353); background-image: linear-gradient(#4A4A4A, #535353);  }
+
 
 
 	/* 主体内容部分 */
@@ -162,8 +161,6 @@ footer>.box-show1 {  width:1350px; height:98px; margin:0 auto; z-index:4; positi
     white-space:pre-wrap;
     word-wrap:break-word;
 }
-
-
 
 
 

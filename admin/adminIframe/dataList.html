@@ -15,42 +15,263 @@
     <link rel="stylesheet" type="text/css" href="../../css/common/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/admin/common.css">
 
+    <!-- 临时CSS -->
+    <style type="text/css">
+        .accountTable {
+            margin:1px 0;
+        }
+        .accountTable th {
+            height:36px;
+            border:1px solid #222;
+            background:#333;
+            font-size:20px;
+        }
+        .accountTable > tbody td {
+            border:1px solid #333;
+        }
+        .accountTable > tbody > tr:nth-of-type(even) {
+            background:#666;
+        }
+        .accountTable > tbody > tr:nth-of-type(odd) {
+            background:#555;
+        }
+        .accountTable > tbody > tr:hover {
+            background:#444;
+        }
+
+
+
+        .accountTableOper {
+            width:36px;
+            border-radius:4px;
+            text-align:center;
+        }
+        .accountTableOper:hover {
+            background:#222;
+        }
+        .accountTableOper > i {
+            width:37px;
+            height:36px;
+            display:inline-block;
+            line-height:35px;
+            font-size:22px;
+            cursor:pointer;
+        }
+        .accountTableOper > i:hover {
+            color:lightgreen;
+            text-shadow:0 0 1px;
+        }
+
+    </style>
+
+
 </head>
 <body id="htmlBody">
+
+    <!-- 回到后台主页浮动按钮 -->
+    <div id="comeBackHomeNav" class="glass-Bg box-show3" title="回到后台主页">
+        <a class="MyIF home" href="index.html"></a>
+    </div>
 
     <!-- 后台操作页面顶部标题 -->
     <div id="navTitle" class="s1c-Bg box-show3">
         <h4>
             <a style="margin:18px;">后台主页</a>/<a style="margin:18px;">数据列表</a>
         </h4>
+
+        <div style="width:140px; height:100%; top:0; right:28px; position:absolute; z-index:5; text-align:right;">
+            <a class="baseOper superBtn MyIF add-data" title="添加数据"></a>
+            <a class="baseOper superBtn MyIF trash-1" title="删除数据"></a>
+        </div>
     </div>
 
-    <div id="mainBody" class="s1c-Bg box-show3" style="height:388px;">
-        <table style="width:100%;" border="1">
+    <!-- 后台显示数据 -->
+    <div id="mainBody" class="s1c-Bg box-show3">
+        <table class="accountTable" style="width:100%;">
+
             <thead>
             <tr>
-                <th><input type="checkbox" id='1verybad' name="quality"></th>
+                <th style="width:38px;"><input type="checkbox" name="quality"></th>
                 <th colspan="4">操作</th>
                 <th>名字</th>
                 <th>图片</th>
-                <th>状态</th>
+                <th>详细信息</th>
             </tr>
             </thead>
+
             <tbody>
             <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF public" title="公开"></i></td>
+                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
                 <td>January</td>
                 <td>$100</td>
                 <td>January</td>
-                <td>$100</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF private" title="私有"></i></td>
+                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
                 <td>January</td>
                 <td>$100</td>
                 <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
+                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td>January</td>
                 <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF public" title="公开"></i></td>
+                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF private" title="私有"></i></td>
+                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
+                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF public" title="公开"></i></td>
+                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF private" title="私有"></i></td>
+                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
+                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF public" title="公开"></i></td>
+                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF private" title="私有"></i></td>
+                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
+                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF public" title="公开"></i></td>
+                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF private" title="私有"></i></td>
+                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
+                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
             </tr>
             </tbody>
 
         </table>
     </div>
+
+        
+    <!-- 后台跳转分页 -->
+    <nav style="width:100%; text-align:center;">
+        <div class="glass-Bg box-show3" style="width:720px; height:48px; margin:18px auto 38px; display:inline-block;">
+
+            <div style="width:532px; height:48px; float:left;">
+            </div>
+
+            <div style="width:188px; height:48px; float:right; line-height:48px; text-align:left;">
+                跳转至 <input type="text" name="" class="s1c-Bg box-show3" style="width:48px; padding:5px 3px; text-align:center; font-size:16px; font-weight:700;"> 页
+                <i class="MyIF exit-1" style="margin:2px 12px; position:absolute; font-size:30px; text-shadow:0.5px 0.5px 0.5px #22e8ff;"></i>
+            </div>
+
+        </div>
+    </nav>
+
+
 
 </body>
 </html>

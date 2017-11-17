@@ -50,13 +50,13 @@ nav > .accountMenuSwitch img {  width:40px; height:36.5px; top:2px; left:1px; po
 #accountMenu {  width:268px; top:68px; right:-247px; position:absolute; z-index:55;  }
 #accountMenu > ul {  margin:28px auto;  }
 #accountMenu > ul > li {  width:83%; height:38px; margin:10px auto; color:#AAA; font-size:18px; font-weight:600; line-height:38px; text-align:center; cursor:pointer;  }
-#accountMenu > ul > li:hover {  color:#EEE; text-shadow:1px 1px 2px #666;  }
+#accountMenu > ul > li:hover {  color:#EEE; background:#1F1F1F; text-shadow:1px 1px 2px #666;  }
 #accountMenu > ul > li > .MyIF {  margin-right:8px;  }
 #accountMenu > .accountLogout {  right:38px; bottom:18px; position:absolute; font-size:18px;  }
 
 
 /* 悬浮显示时间和刷新页面按钮 */
-#floatTimeRefresh {  width:148px; height:36px; top:2px; right:23px; display:inline-block; position:absolute; line-height:36px;  }
+#floatTimeRefresh {  width:148px; height:36px; top:2px; right:25px; display:inline-block; position:absolute; line-height:36px;  }
 #refreshIframe {  width:110px; height:36px; position:relative; z-index:9; font-weight:600; color:#BBB;  }
 #refreshIframe:hover {  color:#555; cursor: not-allowed;  }
 #refreshIframe.enable:hover {  color:#EEE; text-shadow:0 0 1px #888; cursor:pointer;  }
