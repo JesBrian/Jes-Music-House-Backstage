@@ -37,7 +37,8 @@
 #rank-list>.specialTable td:nth-child(2) {  padding:0 0 0 6px;  }
 #rank-list>.specialTable .songName {  width:128px; overflow:hidden; text-overflow:ellipsis;-o-text-overflow:ellipsis; white-space:nowrap;  }
 #rank-list>.specialTable .songName>a {  margin-left:-12px;  }
-#rank-list .songlistOper>i.MyIF {  margin:0; font-size:17px; line-height:2.6em;  }
+#rank-list .songlistOper {  width:96px;  }
+#rank-list .songlistOper>i.MyIF {  margin:0; font-size:17px; line-height:2.8em;  }
 
 
         /* 新碟上架部分 */
