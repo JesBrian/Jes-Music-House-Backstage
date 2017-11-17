@@ -9,9 +9,6 @@
     <!-- 自用字体图标 -->
     <link rel="stylesheet" type="text/css" href="../../plugins/myfonticon/iconfont.css">
 
-    <!-- 滚动条CSS样式 -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/scrollbar/jquery.mCustomScrollbar.css">
-
     <link rel="stylesheet" type="text/css" href="../../css/common/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/admin/common.css">
 
@@ -62,6 +59,54 @@
             text-shadow:0 0 1px;
         }
 
+
+
+        #accountSearchButton {
+            width:40px; height:40px; margin:8px 1px; float:right; line-height:40px; opacity:0.68;
+        }
+
+        #accountSearchButton:hover {
+            -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 2px 6px 12px rgba(0, 0, 0, 0.5), 2px 2px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 2px 6px 12px rgba(0, 0, 0, 0.5), 2px 2px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 2px 6px 12px rgba(0, 0, 0, 0.5), 2px 2px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            opacity: 0.88;
+        }
+
+
+
+
+        #goPageNum:hover > i.MyIF {
+            text-shadow:0 0 0.5px #22e8ff;
+        }
+        #dataListPaging a {
+            font-weight:600;
+            color:#AAA;
+        }
+        #dataListPaging a:hover {
+            color:#DDD;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+            -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 8px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 8px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 8px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+        }
+        #dataListPaging a.active {
+            border:none;
+            border-radius:2px;
+            background:#252525;
+            color:#22E8FF;
+            text-shadow:none!important;
+            -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+        }
+        #dataListPaging a > .MyIF {
+            text-shadow:none!important;
+        }
+        #dataListPaging a.ban > .MyIF {
+            color:#555;
+            cursor:not-allowed;
+        }
+
     </style>
 
 
@@ -75,20 +120,31 @@
 
     <!-- 后台操作页面顶部标题 -->
     <div id="navTitle" class="s1c-Bg box-show3">
+
+        <!-- 后台顶部标题[面包屑导航栏] -->
         <h4>
-            <a style="margin:18px;">后台主页</a>/<a style="margin:18px;">数据列表</a>
+            <a href="index.html">后台主页</a>/<a class="active">数据列表</a>
         </h4>
 
+        <!-- 后台顶部搜索框 -->
+        <div style="width:232px; height:100%; top:0; left:8px; position:absolute; z-index:5;">
+            <input type="text" name="" value="" placeholder="简单综合搜索" style="width:168px; height:38px; margin:8px 0; padding:0 8px; float:left; background:#888; color:#292929; font-size:18px;">
+            <a id="accountSearchButton" class="glass-Bg box-show3">
+                <i class="MyIF search" style="font-size:26px;"></i>
+            </a>
+        </div>
+
+        <!-- 后台顶部基本操作[添加/删除] -->
         <div style="width:140px; height:100%; top:0; right:28px; position:absolute; z-index:5; text-align:right;">
-            <a class="baseOper superBtn MyIF add-data" title="添加数据"></a>
+            <a class="baseOper superBtn MyIF add-data" href="addData.html" title="添加数据"></a>
             <a class="baseOper superBtn MyIF trash-1" title="删除数据"></a>
         </div>
+
     </div>
 
     <!-- 后台显示数据 -->
     <div id="mainBody" class="s1c-Bg box-show3">
         <table class="accountTable" style="width:100%;">
-
             <thead>
             <tr>
                 <th style="width:38px;"><input type="checkbox" name="quality"></th>
@@ -255,23 +311,84 @@
         </table>
     </div>
 
-        
     <!-- 后台跳转分页 -->
-    <nav style="width:100%; text-align:center;">
-        <div class="glass-Bg box-show3" style="width:720px; height:48px; margin:18px auto 38px; display:inline-block;">
+    <nav id="pagingContent" style="width:100%; text-align:center;">
+        <div class="glass-Bg box-show3" style="width:820px; height:48px; margin:18px auto 38px; display:inline-block; background:#181818;">
 
-            <div style="width:532px; height:48px; float:left;">
+            <div style="width:620px; height:48px; float:left;">
+                <table id="dataListPaging" style="width:88%; height:100%; margin:0 auto; text-align:center;">
+                    <tr style="margin:0; padding:0;">
+                        <td>
+                            <a class="glass-Bg box-show3 ban" style="width:28px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                <i class="MyIF ahead"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a class="glass-Bg box-show3 ban" style="width:28px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                <i class="MyIF double-arrow-left"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a class="glass-Bg box-show3" style="width:45px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                1
+                            </a>
+                        </td>
+                        <td>
+                            <a class="glass-Bg box-show3 active" style="width:45px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                2
+                            </a>
+                        </td>
+                        <td>
+                            <a class="glass-Bg box-show3" style="width:45px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                3
+                            </a>
+                        </td>
+                        <td>...</td>
+                        <td>
+                            <a class="glass-Bg box-show3" style="width:45px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                66
+                            </a>
+                        </td>
+                        <td>
+                            <a class="glass-Bg box-show3" style="width:45px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                888
+                            </a>
+                        </td>
+                        <td>
+                            <a class="glass-Bg box-show3" style="width:45px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                9999
+                            </a>
+                        </td>
+                        <td>
+                            <a class="glass-Bg box-show3" style="width:28px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                <i class="MyIF double-arrow-right"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a class="glass-Bg box-show3" style="width:28px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                <i class="MyIF back"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
             </div>
 
-            <div style="width:188px; height:48px; float:right; line-height:48px; text-align:left;">
-                跳转至 <input type="text" name="" class="s1c-Bg box-show3" style="width:48px; padding:5px 3px; text-align:center; font-size:16px; font-weight:700;"> 页
-                <i class="MyIF exit-1" style="margin:2px 12px; position:absolute; font-size:30px; text-shadow:0.5px 0.5px 0.5px #22e8ff;"></i>
+            <div id="goPageNum" style="width:200px; height:48px; float:right; line-height:50px; text-align:left; color:#999; font-weight:600;">
+                跳转至 <input type="text" name="" class="s1c-Bg box-show3" style="width:48px; padding:5px 3px; text-align:center; color:#BBB; font-size:16px; font-weight:700;"> 页
+                <i class="MyIF exit-1" style="margin:0 12px; position:absolute; font-size:30px;"></i>
             </div>
 
         </div>
     </nav>
 
 
+    <script type="text/javascript" src="../../js/common/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript">
+        $('i.tool').click(function () {
+            location='updateData.html';
+        });
+    </script>
 
 </body>
 </html>
