@@ -29,7 +29,9 @@
     <nav class="glass-Bg box-show3">
 
         <!-- 后台系统Logo - 左侧 -->
-        <img id="navLogo" src="../img/common/MH-Logo.png" title="Music House" alt="Music House">
+        <a id="navLogo" href="adminIframe/index.html" target="accountOperIframe">
+            <img src="../img/common/MH-Logo.png" title="Music House" alt="Music House">
+        </a>
 
         <!-- 账户管理 - 右侧 [ 登录了显示头像 ] -->
         <p class="accountMenuSwitch enable">
@@ -58,17 +60,17 @@
 
         <!-- 账户操作菜单内容 -->
         <ul class="cancelSelectText">
-            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3 enable" dataUrl="adminIframe/index.html">
-                <i class="MyIF home"></i>后台主页
+            <li class="accountMenuSwitch glass-Bg box-show3 enable">
+                <a class="accountOperIframeUrl" dataUrl="adminIframe/index.html" style="width:100%; height:100%; display:inline-block;"><i class="MyIF home"></i> 后台主页</a>
             </li>
-            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3 enable" dataUrl="adminIframe/systemInfo.html">
-                <i class="MyIF horn"></i>系统通知
+            <li class="accountMenuSwitch glass-Bg box-show3 enable">
+                <a class="accountOperIframeUrl" dataUrl="adminIframe/systemInfo.html" style="width:100%; height:100%; display:inline-block;"><i class="MyIF horn"></i> 系统通知</a>
             </li>
-            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3 enable" dataUrl="adminIframe/loginInfo.html">
-                <i class="MyIF information"></i>登录信息
+            <li class="accountMenuSwitch glass-Bg box-show3 enable">
+                <a class="accountOperIframeUrl" dataUrl="adminIframe/loginInfo.html" style="width:100%; height:100%; display:inline-block;"><i class="MyIF information"></i> 登录信息</a>
             </li>
-            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3 enable" dataUrl="adminIframe/updateInfo.html">
-                <i class="MyIF tool"></i>修改资料
+            <li class="accountMenuSwitch glass-Bg box-show3 enable">
+                <a class="accountOperIframeUrl" dataUrl="adminIframe/updateInfo.html" style="width:100%; height:100%; display:inline-block;"><i class="MyIF tool"></i> 修改资料</a>
             </li>
         </ul>
 
@@ -254,7 +256,7 @@
         </div>
 
         <!-- 框架页面 -->
-        <iframe id="accountOperIframe" class="glass-Bg" src="adminIframe/index.html"></iframe>
+        <iframe id="accountOperIframe" name="accountOperIframe" class="glass-Bg" src="adminIframe/index.html"></iframe>
 
     </div>
 
