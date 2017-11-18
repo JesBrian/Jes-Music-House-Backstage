@@ -43,8 +43,8 @@
     <script type="text/javascript">
 
         if (window.top.preFirstMenuObj !== null) { //判断之前的一级菜单jq对象是否为空 -- 不为空则关闭已经打开的一级菜单
-            window.top.preFirstMenuObj.removeClass('active').parent().animate({height: 42}, 566);  //动画折叠起菜单面板以及将箭头旋转180度变成Up状态
-            window.top.preFirstMenuObj.nextAll('li').animate({top: 0}, 500);
+            window.top.preFirstMenuObj.removeClass('active').parent().height(42);  //动画折叠起菜单面板以及将箭头旋转180度变成Up状态
+            window.top.preFirstMenuObj.nextAll('li').css({top: 0});
 
             window.top.preFirstMenuObj = null;
         }

@@ -104,17 +104,17 @@ $('div.firstMenuSwitch').click(function () {
         var nowFirstMenuObj = $(this);  //获取现在要打开的一级菜单jq对象, 并将 nowFirstMenuObj 指向其
 
         if (preFirstMenuObj !== null) { //判断之前的一级菜单jq对象是否为空 -- 不为空则关闭已经打开的一级菜单
-            preFirstMenuObj.removeClass('active').parent().animate({height: 42}, 566);  //动画折叠起菜单面板以及将箭头旋转180度变成Up状态
-            preFirstMenuObj.nextAll('li').animate({top: 0}, 500);
+            preFirstMenuObj.removeClass('active').parent().height(42);  //动画折叠起菜单面板以及将箭头旋转180度变成Up状态
+            preFirstMenuObj.nextAll('li').css({top: 0});
         }
 
         if (!nowFirstMenuObj.is(preFirstMenuObj)) {  //if 新点击的一级菜单和之前的一级菜单不相同，则打开新的一级菜单 -- [ 判断的两个变量不能互换位置，preFirstMenuObj maybe null ]
 
             var length = nowFirstMenuObj.nextAll('li').length;  //获取该一级菜单下有多少个二级菜单
 
-            nowFirstMenuObj.addClass('active').parent().animate({height: 58 + length * 38}, 500);  //动画展开菜单面板以及将箭头旋转180度变成Down状态
+            nowFirstMenuObj.addClass('active').parent().height(58 + length * 38);  //动画展开菜单面板以及将箭头旋转180度变成Down状态
             for (var i = 0; i < length; i++) {
-                nowFirstMenuObj.nextAll('li').eq(i).animate({top: 48 + i * 38}, 566);
+                nowFirstMenuObj.nextAll('li').eq(i).css({top: 48 + i * 38});
             }
 
             preFirstMenuObj = nowFirstMenuObj;  //不能随便调换位置！！需在判断一级菜单是否为空 && 打开新的一级菜单之后之后才能改变其指向
