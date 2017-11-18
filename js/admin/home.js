@@ -110,12 +110,14 @@ $('div.firstMenuSwitch').click(function () {
 
         if (!nowFirstMenuObj.is(preFirstMenuObj)) {  //if 新点击的一级菜单和之前的一级菜单不相同，则打开新的一级菜单 -- [ 判断的两个变量不能互换位置，preFirstMenuObj maybe null ]
 
-            var length = nowFirstMenuObj.nextAll('li').length;  //获取该一级菜单下有多少个二级菜单
+            var thisSecondMenuObj = nowFirstMenuObj.nextAll('li');  //获取该一级菜单下所有二级菜单
 
-            nowFirstMenuObj.addClass('active').parent().height(58 + length * 38);  //动画展开菜单面板以及将箭头旋转180度变成Down状态
-            for (var i = 0; i < length; i++) {
-                nowFirstMenuObj.nextAll('li').eq(i).css({top: 48 + i * 38});
-            }
+            nowFirstMenuObj.addClass('active').parent().height(58 + thisSecondMenuObj.length * 38);  //动画展开菜单面板以及将箭头旋转180度变成Down状态
+            var i = 0;
+            thisSecondMenuObj.each(function () {
+                $(this).animate({top: 48 + i++ * 38},260);
+            });
+            i = null;
 
             preFirstMenuObj = nowFirstMenuObj;  //不能随便调换位置！！需在判断一级菜单是否为空 && 打开新的一级菜单之后之后才能改变其指向
         } else {

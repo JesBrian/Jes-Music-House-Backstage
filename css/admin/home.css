@@ -73,7 +73,7 @@ footer {  width:100%; height:28px; bottom:0; margin:0; padding:0 38px; box-sizin
 
 /* 后台二级菜单专属动画 */
 @keyframes secondMenuActiveMove {
-    to { transform: translate(-46%, 0); -ms-transform: translate(-48%, 0); -moz-transform: translate(-48%, 0); -o-transform: translate(-48%, 0); }
+    to { transform: translate(-46%, 0); -ms-transform: translate(-46%, 0); -moz-transform: translate(-46%, 0); -o-transform: translate(-46%, 0); }
 }
 @-webkit-keyframes secondMenuActiveMove {
     to { -webkit-transform: translate(-46%, 0); }
