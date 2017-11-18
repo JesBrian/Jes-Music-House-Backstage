@@ -115,7 +115,7 @@ $('div.firstMenuSwitch').click(function () {
             nowFirstMenuObj.addClass('active').parent().height(58 + thisSecondMenuObj.length * 38);  //动画展开菜单面板以及将箭头旋转180度变成Down状态
             var i = 0;
             thisSecondMenuObj.each(function () {
-                $(this).animate({top: 48 + i++ * 38},260);
+                $(this).animate({top: 48 + i++ * 38}, 468);
             });
             i = null;
 

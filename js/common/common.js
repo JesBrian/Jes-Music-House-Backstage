@@ -44,3 +44,38 @@ function checkEnable(checkObj, checkTime) {
         return false;
     }
 }
+
+
+/**
+ * 根据传入的model名字来弹出相应的模拟框
+ */
+function niftymodalsByModelName(modal,url,text) {
+    $("#" + modal).niftyModal();
+    if(text != '') {
+        $("#warning-text").html(text);
+    }
+}
+
+
+/**
+ * 操作消息提示
+ */
+function alertTips(type,message) {
+    if(type) {
+        iziToast.info({
+            title: 'Success -- ',
+            message: message,
+            position: 'bottomLeft',
+            transitionIn: 'flipInX',
+            transitionOut: 'flipOutX'
+        });
+    } else {
+        iziToast.error({
+            title: 'Error -- ',
+            message: message,
+            position: 'bottomLeft',
+            transitionIn: 'flipInX',
+            transitionOut: 'flipOutX'
+        });
+    }
+}

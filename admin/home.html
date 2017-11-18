@@ -15,12 +15,19 @@
     <!-- 自用字体图标 -->
     <link rel="stylesheet" type="text/css" href="../plugins/myfonticon/iconfont.css">
 
-    <!-- 滚动条CSS样式 -->
-    <link rel="stylesheet" type="text/css" href="../plugins/scrollbar/jquery.mCustomScrollbar.css">
-
     <link rel="stylesheet" type="text/css" href="../css/common/common.css">
     <link rel="stylesheet" type="text/css" href="../css/admin/common.css">
     <link rel="stylesheet" type="text/css" href="../css/admin/home.css">
+
+    <!-- 滚动条CSS样式 -->
+    <link rel="stylesheet" type="text/css" href="../plugins/scrollbar/jquery.mCustomScrollbar.css">
+
+    <!-- 拟态框 -->
+    <link rel="stylesheet" type="text/css" href="../css/common/niftymodals.css"/>
+
+    <!-- 消息Tips -->
+    <link rel="stylesheet" href="../css/common/iziToast.min.css">
+
 
 </head>
 <body style=" background:#333;">
@@ -267,17 +274,44 @@
     </footer>
 
 
+
+
+    <!--  -->
+    <div class="md-container md-effect-1" id="modal-category">
+        <div class="md-content">
+            <h3><img src="../img/icon/cube-3.png">选择分类</h3>
+            <a class="md-close close-all MyIF all-arrow"></a>
+            <div style="padding-right:36px;">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 弹出拟态框后背景遮幕 -->
+    <div class="md-overlay"></div>
+
+
+
+
+
     <!-- Jsc部分[ 引入顺序最好不要改变 ] -->
 
     <!--jQuery框架-->
     <script src="../js/common/jquery-3.1.1.min.js" type="text/javascript"></script>
 
+    <script type="text/javascript" src="../js/common/common.js"></script>
+    <script type="text/javascript" src="../js/admin/home.js"></script>
+
+    <!-- 拟态框 -->
+    <script src="../js/niftymodals.js"></script>
+
+    <!-- 操作消息Tips -->
+    <script src="../js/iziToast.min.js" type="text/javascript"></script>
+
 
     <!--plugins滚动条插件-->
     <script src="../plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 
-    <script type="text/javascript" src="../js/common/common.js"></script>
-    <script type="text/javascript" src="../js/admin/home.js"></script>
 
 
 
