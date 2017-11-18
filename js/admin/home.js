@@ -108,23 +108,20 @@ $('div.firstMenuSwitch').click(function () {
             preFirstMenuObj.nextAll('li').animate({top: 0}, 500);
         }
 
-        if (!nowFirstMenuObj.is(preFirstMenuObj)) {  //if新点击的一级菜单和之前的一级菜单不相同，则打开新的一级菜单 -- [ 判断的两个变量不能互换位置，preFirstMenuObj maybe null ]
+        if (!nowFirstMenuObj.is(preFirstMenuObj)) {  //if 新点击的一级菜单和之前的一级菜单不相同，则打开新的一级菜单 -- [ 判断的两个变量不能互换位置，preFirstMenuObj maybe null ]
 
-            var nowSecondMenu = nowFirstMenuObj.nextAll('li');  //获取该一级菜单下的所有二级菜单
+            var length = nowFirstMenuObj.nextAll('li').length;  //获取该一级菜单下有多少个二级菜单
 
-            /*动画展开菜单面板以及将箭头旋转180度变成Down状态*/
-            nowFirstMenuObj.addClass('active').parent().animate({height: 58 + nowSecondMenu.length * 38}, 500);
-            var i = 0;
-            nowSecondMenu.each(function () {
-                $(this).animate({top: 48 + i++ * 38}, 566);
-            });
+            nowFirstMenuObj.addClass('active').parent().animate({height: 58 + length * 38}, 500);  //动画展开菜单面板以及将箭头旋转180度变成Down状态
+            for (var i = 0; i < length; i++) {
+                nowFirstMenuObj.nextAll('li').eq(i).animate({top: 48 + i * 38}, 566);
+            }
 
-            preFirstMenuObj = nowFirstMenuObj;  //不能随便调换该语句位置！！需在判断一级菜单是否为空 && 打开新的一级菜单之后之后才能改变其指向
+            preFirstMenuObj = nowFirstMenuObj;  //不能随便调换位置！！需在判断一级菜单是否为空 && 打开新的一级菜单之后之后才能改变其指向
         } else {
-            preFirstMenuObj = null; //不将其重新指向 null 的话有BUG -- 连续点击同一个三次情况BUG[ '打开/关闭/打不开' 的BUG ] -- 也就是没执行打开新一级菜单的情况
+            preFirstMenuObj = null; //不将其重新指向 null 的话有BUG -- 连续点击同一个三次情况BUG[ 打开/关闭/不打开BUG ] -- 也就是没执行打开新一级菜单的情况
         }
 
-        nowFirstMenuObj = null;     //将其重新指向null -- 不知道会不会被GC回收
     }
 });
 

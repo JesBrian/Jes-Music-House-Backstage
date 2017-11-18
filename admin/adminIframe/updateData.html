@@ -73,6 +73,10 @@
 
     <script type="text/javascript">
 
+        $('a.accountOperIframeUrl').click(function () {
+            window.top.accountOperIframeObj.attr('src', $(this).attr('dataUrl'));
+        });
+
     </script>
 
 </body>
