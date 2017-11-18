@@ -1,12 +1,30 @@
 
 
+
+/* 面包屑导航栏 */
+#breadcrumb {  top:0; left:130px; position:absolute;  }
+#breadcrumb>a {  position:absolute;  }
+#breadcrumb>a>div {  width:100px; height:40px; padding-left:32px; background:url(../../img/common/first.png); background-size:100% 100%; font:normal normal bold 16px/2.6em 宋体,verdana; text-align:left;  }
+#breadcrumb>a>div.MyIF:hover {  color:white;  }
+#breadcrumb>a:nth-of-type(2)>div {  width:95px; padding-left:40px; background:url(../../img/common/second.png); background-size:100% 100%;  }
+#breadcrumb>a:last-child>div {  width:100px; color:#585451; padding-left:55px; background:url(../../img/common/last.png); background-size:100% 100%;  }
+
+
 /* 左边伪导航栏 */
 #leftNavbar {  position:absolute; top:108px; left:25px; text-align:center; line-height:50px; font-family:sans-serif,'Microsoft YaHei','Arial'; -moz-user-select:none; -webkit-user-select:none; -ms-user-select:none; user-select:none;  }
 #leftNavbar>a {  width:120px; height:50px; display:block; margin-top:7px; border-radius:2px; font-weight:700; color:#30cdff; letter-spacing:2px; background:url(../../img/common/button-active.png) no-repeat; background-size:100% 100%; background-color:#222; -webkit-box-shadow:0 0 2px 2px #111; -moz-box-shadow:0 0 2px 2px #111; box-shadow:0 0 2px 2px #111; -webkit-transition:all .3s ease-out; transition:all .3s ease-out;  }
 #leftNavbar>a.active {  color:#585858; -webkit-text-stroke:0.2px #2b2a2a; background:url(../../img/common/button-normal.png) no-repeat; background-size:100% 100%; -webkit-box-shadow:0 0 2px 2px #32f6ff; -moz-box-shadow:0 0 2px 2px #32f6ff; box-shadow:0 0 2px 2px #32f6ff; -webkit-transition:all .3s ease-out; transition:all .3s ease-out;  }
 
 
-
 /* 表格音乐列表操作按钮组 */
 .songlistOper {  top:-6px; right:8px; position:absolute; display:none;  }
 .songlistOper>.MyIF {  margin:0 5px; font-size:23px;  }
+
+
+/* 分页按钮 */
+.paging {  height:40px; margin:20px; text-align:right; line-height:40px;  }
+.paging > a {  width:40px; height:40px; margin-right:8px; display:inline-block; color:#444; font:normal normal 900 18px/40px sans-serif,'Microsoft YaHei','Arial'; background: url(../../img/common/button-square-normal.png); background-size:100% 100%; box-shadow:0 5px 20px #161616;  }
+.paging > .pageOperation {  height:30px; margin-top:6px; line-height:31px;  }
+.paging > a:hover {  color:#666;  }
+.paging > a:active {  color:#809cdf; background:url(../../img/common/button-square-active.png); background-size:100% 100%; background-color:#2e2e2e;  }
+.paging > a.active {  -webkit-box-shadow:0 0 4px 4px #5bc2d4;  -moz-box-shadow:0 0 4px 4px #5bc2d4;  box-shadow:0 0 4px 4px #5bc2d4;  }
