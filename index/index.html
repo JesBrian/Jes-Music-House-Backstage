@@ -599,7 +599,7 @@
         <div class="md-content">
             <h3><img src="../img/icon/musicBox.png">歌曲收藏</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
-            <div>添加到歌单</div>
+            <div style="font-size:18px; font-weight:900;">添加到歌单</div>
             <span>
                 <a class="superBtn joinSinger MyIF cubes-1"> 新建歌单</a>
             </span>
@@ -745,141 +745,125 @@
         </div>
     </div>
 
-        <!-- 这个估计以后要大改 -->
+        <!-- 这个现在就要大改 -->
     <div class="md-container md-effect-1" id="modal-category">
         <div class="md-content">
             <h3><img src="../img/icon/cube-3.png">选择分类</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
             <div style="padding-right:36px;">
-                <a href="#" style=" padding:0 0 8px 52px; display:block; border-bottom:1px solid black;">全部风格</a>
-                <table cellpadding="0" cellspacing="0" style="width:100%; margin-bottom:18px;">
-                    <style>
-                        .songtype
-                        {
-                            margin:3px 16px;
-                            float: left;
-                            font-size:14px;
-                            color:#2E2E2E;
-                            cursor:pointer;
-                        }
-                    </style>
-                    <script language="JavaScript">
+                <div href="#" style="width:100%; height:48px; position:relative; z-index:5;">
+                    <span style="font-size:22px; font-weight:900;">选择风格</span>
+                    <a class="joinSinger superBtn md-close" style="top:0; margin:8px 188px 0 0; float:right;">全部风格</a>
+                </div>
 
-                        /**
-                         * 改变歌单分类名称
-                         */
-                        function changeSongTypeName(ongTypeObj) {
-                            $(window.frames["indexIframe"].document).find("#songTypeName").html($(ongTypeObj).html());
-                        }
-                    </script>
+                <table style="width:100%; margin:18px 0 32px;">
                     <tr>
-                        <td style="width:18%; text-align: center; border-right:1px solid black; border-bottom:1px solid black;">
-                            <span class="MyIF earth" style="font-size:24px;"></span> 语种
+                        <td style="width:14%; border-right:1px solid #1A9EE6; text-align:center; color:#7A77E6; font-size:18px; font-weight:900;">
+                            <i class="MyIF earth" style="color:#1A9EE6; font-size:25px;"></i> 语种
                         </td>
-                        <td style="border-bottom:1px solid black; padding:8px;">
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">华语</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">欧美</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">日语</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">韩语</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">粤语</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">小语种</dd><dd>|</dd>
+                        <td style="padding:8px 18px; line-height:1.5em; border-bottom:1px solid #1A9EE6;">
+                            <span style="display:inline-block;"><a style="margin-right:8px;">华语</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">欧美</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">日语</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">韩语</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">粤语</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">小语种</a>|</span>
                         </td>
                     </tr>
                     <tr>
-                        <td style="width:18%; text-align: center; border-right:1px solid black; border-bottom:1px solid black;">
-                            <span class="MyIF instrument" style="font-size:24px;"></span> 风格
+                        <td style="width:14%; border-right:1px solid #1A9EE6; text-align:center; color:#7A77E6; font-size:18px; font-weight:900;">
+                            <i class="MyIF instrument" style="color:#1A9EE6; font-size:25px;"></i> 风格
                         </td>
-                        <td style="border-bottom:1px solid black; padding:8px;">
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">流行</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">摇滚</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">民谣</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">电子</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">舞曲</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">说唱</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">轻音乐</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">爵士</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">乡村</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">R&B/Soul</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">古典</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">民族</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">英伦</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">金属</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">朋克</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">蓝调</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">雷鬼</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">世界音乐</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">拉丁</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">另类/独立</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">New Age</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">古风</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">后摇</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">Bossa Nova</dd><dd>|</dd>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width:18%; text-align: center; border-right:1px solid black; border-bottom:1px solid black;">
-                            <span class="MyIF cofee" style="font-size:24px;"></span> 场景
-                        </td>
-                        <td style="border-bottom:1px solid black;  padding:8px;">
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">清晨</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">夜晚</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">学习</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">工作</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">午休</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">下午茶</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">地铁</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">驾车</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">运动</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">旅行</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">散步</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">酒吧</dd><dd>|</dd>
+                        <td style="padding:8px 18px; line-height:1.5em; border-bottom:1px solid #1A9EE6;">
+                            <span style="display:inline-block;"><a style="margin-right:8px;">流行</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">摇滚</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">民谣</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">电子</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">舞曲</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">说唱</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">爵士</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">轻音乐</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">乡村</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">R&B/Soul</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">民族</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">英伦</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">金属</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">朋克</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">蓝调</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">雷鬼</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">世界音乐</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">拉丁</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">另类/独立</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">New Age</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">古风</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">后摇</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:8px;">Bossa Nova</a>|</span>
                         </td>
                     </tr>
                     <tr>
-                        <td style="width:18%; text-align: center; border-right:1px solid black; border-bottom:1px solid black;">
-                            <span class="MyIF exciting" style="font-size:24px;"></span> 情感
+                        <td style="width:14%; border-right:1px solid #1A9EE6; text-align:center; color:#7A77E6; font-size:18px; font-weight:900;">
+                            <i class="MyIF cofee" style="color:#1A9EE6; font-size:25px;"></i> 场景
                         </td>
-                        <td style="border-bottom:1px solid black; padding:8px;">
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">怀旧</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">清新</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">浪漫</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">性感</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">伤感</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">治愈</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">放松</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">孤独</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">感动</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">兴奋</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">快乐</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">安静</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">思念</dd><dd>|</dd>
+                        <td style="padding:8px 18px; line-height:1.5em; border-bottom:1px solid #1A9EE6;">
+                            <span style="display:inline-block;"><a style="margin-right:6px;">清晨</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">夜晚</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">学习</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">工作</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">午休</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">下午茶</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">地铁</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">驾车</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">运动</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">旅行</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">散步</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">酒吧</a>|</span>
                         </td>
                     </tr>
                     <tr>
-                        <td style="width:18%; text-align: center; border-right:1px solid black; border-bottom:1px solid black;">
-                            <span class="MyIF theme" style="font-size:24px;"></span> 主题
+                        <td style="width:14%; border-right:1px solid #1A9EE6; text-align:center; color:#7A77E6; font-size:18px; font-weight:900;">
+                            <i class="MyIF exciting" style="color:#1A9EE6; font-size:25px;"></i> 情感
                         </td>
-                        <td style="border-bottom:1px solid black; padding:8px;">
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">影视原声</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">ACG</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">校园</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">游戏</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">70后</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">80后</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">90后</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">网络歌曲</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">KTV</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">经典</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">翻唱</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">吉他</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">钢琴</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">器乐</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">儿童</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">榜单</dd><dd>|</dd>
-                            <dd class="songtype hover-undeline md-close" onclick="changeSongTypeName(this)">00后</dd><dd>|</dd>
+                        <td style="padding:8px 18px; line-height:1.5em; border-bottom:1px solid #1A9EE6;">
+                            <span style="display:inline-block;"><a style="margin-right:6px;">怀旧</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">清新</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">浪漫</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">性感</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">伤感</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">治愈</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">放松</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">孤独</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">感动</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">兴奋</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">快乐</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">安静</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">思念</a>|</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:14%; border-right:1px solid #1A9EE6; text-align:center; color:#7A77E6; font-size:18px; font-weight:900;">
+                            <i class="MyIF kinds" style="color:#1A9EE6; font-size:25px;"></i> 主题
+                        </td>
+                        <td style="padding:8px 18px; line-height:1.5em;">
+                            <span style="display:inline-block;"><a style="margin-right:6px;">影视原声</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">ACG</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">游戏</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">70后</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">80后</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">90后</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">00后</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">网络歌曲</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">KTV</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">经典</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">翻唱</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">吉他</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">钢琴</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">器乐</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">儿童</a>|</span>
+                            <span style="display:inline-block;"><a style="margin-right:6px;">榜单</a>|</span>
                         </td>
                     </tr>
                 </table>
+
             </div>
         </div>
     </div>
@@ -1034,6 +1018,14 @@
                 $(this).removeClass("s1c-Bg box-show3");
             });
         });
+
+
+        /**
+         * 热门歌曲页面改变歌单风格分类名称
+         */
+        function changeSongTypeName(ongTypeObj) {
+            $(window.frames["indexIframe"].document).find("#songTypeName").html($(ongTypeObj).html());
+        }
 
     </script>
 

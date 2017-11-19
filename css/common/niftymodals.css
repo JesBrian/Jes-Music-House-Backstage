@@ -42,7 +42,7 @@
         /* 收藏歌曲 */
 #modal-collection {  width:760px;  }
 #modal-collection>.md-content {  height:388px; position:relative;  }
-#modal-collection>.md-content>span {  top:138px; right:168px; position:absolute; z-index:9;  }
+#modal-collection>.md-content>span {  top:142px; right:168px; position:absolute; z-index:9;  }
 #collectionContent {  height:360px;  }
 #collectionContent a {  width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block;  }
 #collectionContent a>img {  width:28px; height:28px; border:none; border-radius:3px;  }
