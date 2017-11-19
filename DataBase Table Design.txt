@@ -112,7 +112,7 @@ CREATE TABLE mh_singer
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
-/* MH音乐风格表 -- 用于搜索歌单 */
+/* MH音乐风格分类表 -- 用于搜索歌单 */
 CREATE TABLE mh_style
 (
   id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
@@ -168,7 +168,7 @@ CREATE TABLE mh_song_buy
 
 
 /* MH音乐歌曲其他信息表 -- 为了效率采用反范式方法创建一个专门记录歌曲聆听次数 & 被购买次数的表 */
-CREATE TABLE mh_song_info
+CREATE TABLE mh_songinfo
 (
   songId INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '歌曲对应的ID',
   listenNum BIGINT UNSIGNED DEFAULT 0 COMMENT '歌曲对应聆听次数',
