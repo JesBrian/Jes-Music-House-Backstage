@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> ♪ JesBrian - 后台管理系统 ♪ </title>
+    <title> ♪ Music House - 后台管理系统 ♪ </title>
 
 
     <!-- 网页图标 -->
@@ -15,12 +15,19 @@
     <!-- 自用字体图标 -->
     <link rel="stylesheet" type="text/css" href="../plugins/myfonticon/iconfont.css">
 
-    <!-- 滚动条CSS样式 -->
-    <link rel="stylesheet" type="text/css" href="../plugins/scrollbar/jquery.mCustomScrollbar.css">
-
     <link rel="stylesheet" type="text/css" href="../css/common/common.css">
     <link rel="stylesheet" type="text/css" href="../css/admin/common.css">
     <link rel="stylesheet" type="text/css" href="../css/admin/home.css">
+
+    <!-- 滚动条CSS样式 -->
+    <link rel="stylesheet" type="text/css" href="../plugins/scrollbar/jquery.mCustomScrollbar.css">
+
+    <!-- 拟态框 -->
+    <link rel="stylesheet" type="text/css" href="../css/common/niftymodals.css"/>
+
+    <!-- 消息Tips -->
+    <link rel="stylesheet" href="../css/common/iziToast.min.css">
+
 
 </head>
 <body style=" background:#333;">
@@ -29,7 +36,9 @@
     <nav class="glass-Bg box-show3">
 
         <!-- 后台系统Logo - 左侧 -->
-        <img id="navLogo" src="../img/common/MH-Logo.png" title="Music House" alt="Music House">
+        <a id="navLogo" href="adminIframe/index.html" target="accountOperIframe">
+            <img src="../img/common/MH-Logo.png" title="Music House" alt="Music House">
+        </a>
 
         <!-- 账户管理 - 右侧 [ 登录了显示头像 ] -->
         <p class="accountMenuSwitch enable">
@@ -42,7 +51,7 @@
         <div id="navBaseOper">
             <div class="accountMenuSwitch enable cancelSelectText">JesBrian2UserName叫zvdsbvds</div>
             超级管理员
-            <a href="" class="accountLogout">退出登录</a>
+            <a class="accountLogout" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要安全退出后台管理系统？');">退出登录</a>
         </div>
 
     </nav>
@@ -58,21 +67,21 @@
 
         <!-- 账户操作菜单内容 -->
         <ul class="cancelSelectText">
-            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3 enable" dataUrl="adminIframe/index.html">
-                <i class="MyIF home"></i>后台主页
+            <li class="accountMenuSwitch glass-Bg box-show3 enable">
+                <a class="accountOperIframeUrl" dataUrl="adminIframe/index.html" style="width:100%; height:100%; display:inline-block;"><i class="MyIF home"></i> 后台主页</a>
             </li>
-            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3 enable" dataUrl="adminIframe/systemInfo.html">
-                <i class="MyIF horn"></i>系统通知
+            <li class="accountMenuSwitch glass-Bg box-show3 enable">
+                <a class="accountOperIframeUrl" dataUrl="adminIframe/systemInfo.html" style="width:100%; height:100%; display:inline-block;"><i class="MyIF horn"></i> 系统通知</a>
             </li>
-            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3 enable" dataUrl="adminIframe/loginInfo.html">
-                <i class="MyIF information"></i>登录信息
+            <li class="accountMenuSwitch glass-Bg box-show3 enable">
+                <a class="accountOperIframeUrl" dataUrl="adminIframe/loginInfo.html" style="width:100%; height:100%; display:inline-block;"><i class="MyIF information"></i> 登录信息</a>
             </li>
-            <li class="accountMenuSwitch accountOperIframeUrl glass-Bg box-show3 enable" dataUrl="adminIframe/updateInfo.html">
-                <i class="MyIF tool"></i>修改资料
+            <li class="accountMenuSwitch glass-Bg box-show3 enable">
+                <a class="accountOperIframeUrl" dataUrl="adminIframe/updateInfo.html" style="width:100%; height:100%; display:inline-block;"><i class="MyIF tool"></i> 修改资料</a>
             </li>
         </ul>
 
-        <a href="" class="accountLogout">退出登录</a>
+        <a class="accountLogout" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要安全退出后台管理系统？');">退出登录</a>
 
     </div>
     <!-- 遮盖层 - 配合账户操作菜单栏食用 -->
@@ -254,7 +263,7 @@
         </div>
 
         <!-- 框架页面 -->
-        <iframe id="accountOperIframe" class="glass-Bg" src="adminIframe/index.html"></iframe>
+        <iframe id="accountOperIframe" name="accountOperIframe" class="glass-Bg" src="adminIframe/index.html"></iframe>
 
     </div>
 
@@ -265,17 +274,44 @@
     </footer>
 
 
-    <!-- Jsc部分[ 引入顺序最好不要改变 ] -->
+
+
+    <div class="md-container md-effect-1" id="modal-warning">
+        <div class="md-content">
+            <h3><img src="../img/icon/warning.png">操作提示</h3>
+            <a class="md-close close-all MyIF all-arrow"></a>
+            <p id="warning-text">操作警告！！！</p>
+            <span>
+                <a class="joinSinger superBtn md-close MyIF makesure" onclick="alertTips(1,'删除成功！');"> 确定</a>
+                <a class="joinSinger superBtn md-close MyIF cancel"> 取消</a>
+            </span>
+        </div>
+    </div>
+
+    <!-- 弹出拟态框后背景遮幕 -->
+    <div class="md-overlay"></div>
+
+
+
+
+
 
     <!--jQuery框架-->
     <script src="../js/common/jquery-3.1.1.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="../js/common/common.js"></script>
+    <script type="text/javascript" src="../js/admin/home.js"></script>
+
+    <!-- 拟态框 -->
+    <script src="../js/niftymodals.js"></script>
+
+    <!-- 操作消息Tips -->
+    <script src="../js/iziToast.min.js" type="text/javascript"></script>
 
 
     <!--plugins滚动条插件-->
     <script src="../plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 
-    <script type="text/javascript" src="../js/common/common.js"></script>
-    <script type="text/javascript" src="../js/admin/home.js"></script>
 
 
 

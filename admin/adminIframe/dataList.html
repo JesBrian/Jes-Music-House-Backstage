@@ -46,7 +46,7 @@
         .accountTableOper:hover {
             background:#222;
         }
-        .accountTableOper > i {
+        .accountTableOper > .MyIF {
             width:37px;
             height:36px;
             display:inline-block;
@@ -54,7 +54,7 @@
             font-size:22px;
             cursor:pointer;
         }
-        .accountTableOper > i:hover {
+        .accountTableOper > .MyIF:hover {
             color:lightgreen;
             text-shadow:0 0 1px;
         }
@@ -115,7 +115,7 @@
 
     <!-- 回到后台主页浮动按钮 -->
     <div id="comeBackHomeNav" class="glass-Bg box-show3" title="回到后台主页">
-        <a class="MyIF home" href="index.html"></a>
+        <a class="accountOperIframeUrl MyIF home" dataUrl="adminIframe/index.html"></a>
     </div>
 
     <!-- 后台操作页面顶部标题 -->
@@ -123,7 +123,7 @@
 
         <!-- 后台顶部标题[面包屑导航栏] -->
         <h4>
-            <a href="index.html">后台主页</a>/<a class="active">数据列表</a>
+            <a class="accountOperIframeUrl" dataUrl="adminIframe/index.html">后台主页</a>/<a class="active">数据列表</a>
         </h4>
 
         <!-- 后台顶部搜索框 -->
@@ -136,8 +136,8 @@
 
         <!-- 后台顶部基本操作[添加/删除] -->
         <div style="width:140px; height:100%; top:0; right:28px; position:absolute; z-index:5; text-align:right;">
-            <a class="baseOper superBtn MyIF add-data" href="addData.html" title="添加数据"></a>
-            <a class="baseOper superBtn MyIF trash-1" title="删除数据"></a>
+            <a class="accountOperIframeUrl baseOper superBtn MyIF add-data" dataUrl="adminIframe/addData.html" title="添加数据"></a>
+            <a class="baseOper superBtn MyIF trash-1" title="删除数据" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除勾选的数据？');"></a>
         </div>
 
     </div>
@@ -158,50 +158,20 @@
             <tbody>
             <tr>
                 <td style="text-align:center;"><input type="checkbox" name="quality"></td>
-                <td class="accountTableOper"><i class="MyIF public" title="公开"></i></td>
-                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF public" title="公开" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据私有？ [其他用户无法访问]');"></i></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
-                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除该条数据？');"></i></td>
                 <td>January</td>
                 <td>$100</td>
                 <td>January</td>
             </tr>
             <tr>
                 <td style="text-align:center;"><input type="checkbox" name="quality"></td>
-                <td class="accountTableOper"><i class="MyIF private" title="私有"></i></td>
-                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF private" title="私有" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据公开？ [其他用户可以进行访问]');"></i></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
-                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
-                <td>January</td>
-                <td>$100</td>
-                <td>January</td>
-            </tr>
-            <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
-                <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
-                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
-                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
-                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
-                <td>January</td>
-                <td>$100</td>
-                <td>January</td>
-            </tr>
-            <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
-                <td class="accountTableOper"><i class="MyIF public" title="公开"></i></td>
-                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
-                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
-                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
-                <td>January</td>
-                <td>$100</td>
-                <td>January</td>
-            </tr>
-            <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
-                <td class="accountTableOper"><i class="MyIF private" title="私有"></i></td>
-                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
-                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
-                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除该条数据？');"></i></td>
                 <td>January</td>
                 <td>$100</td>
                 <td>January</td>
@@ -209,59 +179,29 @@
             <tr>
                 <td style="text-align:center;"><input type="checkbox" name="quality"></td>
                 <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
-                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
-                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除该条数据？');"></i></td>
                 <td>January</td>
                 <td>$100</td>
                 <td>January</td>
             </tr>
             <tr>
                 <td style="text-align:center;"><input type="checkbox" name="quality"></td>
-                <td class="accountTableOper"><i class="MyIF public" title="公开"></i></td>
-                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF public" title="公开" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据私有？ [其他用户无法访问]');"></i></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
-                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除该条数据？');"></i></td>
                 <td>January</td>
                 <td>$100</td>
                 <td>January</td>
             </tr>
             <tr>
                 <td style="text-align:center;"><input type="checkbox" name="quality"></td>
-                <td class="accountTableOper"><i class="MyIF private" title="私有"></i></td>
-                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF private" title="私有" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据公开？ [其他用户可以进行访问]');"></i></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
-                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
-                <td>January</td>
-                <td>$100</td>
-                <td>January</td>
-            </tr>
-            <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
-                <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
-                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
-                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
-                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
-                <td>January</td>
-                <td>$100</td>
-                <td>January</td>
-            </tr>
-            <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
-                <td class="accountTableOper"><i class="MyIF public" title="公开"></i></td>
-                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
-                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
-                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
-                <td>January</td>
-                <td>$100</td>
-                <td>January</td>
-            </tr>
-            <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
-                <td class="accountTableOper"><i class="MyIF private" title="私有"></i></td>
-                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
-                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
-                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除该条数据？');"></i></td>
                 <td>January</td>
                 <td>$100</td>
                 <td>January</td>
@@ -269,29 +209,29 @@
             <tr>
                 <td style="text-align:center;"><input type="checkbox" name="quality"></td>
                 <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
-                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
-                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除该条数据？');"></i></td>
                 <td>January</td>
                 <td>$100</td>
                 <td>January</td>
             </tr>
             <tr>
                 <td style="text-align:center;"><input type="checkbox" name="quality"></td>
-                <td class="accountTableOper"><i class="MyIF public" title="公开"></i></td>
-                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF public" title="公开" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据私有？ [其他用户无法访问]');"></i></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
-                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除该条数据？');"></i></td>
                 <td>January</td>
                 <td>$100</td>
                 <td>January</td>
             </tr>
             <tr>
                 <td style="text-align:center;"><input type="checkbox" name="quality"></td>
-                <td class="accountTableOper"><i class="MyIF private" title="私有"></i></td>
-                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><i class="MyIF private" title="私有" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据公开？ [其他用户可以进行访问]');"></i></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
-                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除该条数据？');"></i></td>
                 <td>January</td>
                 <td>$100</td>
                 <td>January</td>
@@ -299,9 +239,69 @@
             <tr>
                 <td style="text-align:center;"><input type="checkbox" name="quality"></td>
                 <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
-                <td class="accountTableOper"><i class="MyIF tool" title="修改"></i></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
-                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除该条数据？');"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF public" title="公开" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据私有？ [其他用户无法访问]');"></i></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除该条数据？');"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF private" title="私有" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据公开？ [其他用户可以进行访问]');"></i></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除该条数据？');"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除该条数据？');"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF public" title="公开" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据私有？ [其他用户无法访问]');"></i></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除该条数据？');"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF private" title="私有" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据公开？ [其他用户可以进行访问]');"></i></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除该条数据？');"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td class="accountTableOper"><i class="MyIF recycle-2" title="删除" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除该条数据？');"></i></td>
                 <td>January</td>
                 <td>$100</td>
                 <td>January</td>
@@ -343,7 +343,7 @@
                                 3
                             </a>
                         </td>
-                        <td>...</td>
+                        <td style="position:relative; width:20px;"><span style="left:0; top:12px; position:absolute; font-weight:900;">...</span></td>
                         <td>
                             <a class="glass-Bg box-show3" style="width:45px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
                                 66
@@ -385,9 +385,10 @@
     <script type="text/javascript" src="../../js/common/jquery-3.1.1.min.js"></script>
 
     <script type="text/javascript">
-        $('i.tool').click(function () {
-            location='updateData.html';
+        $('a.accountOperIframeUrl').click(function () {
+            window.top.accountOperIframeObj.attr('src', $(this).attr('dataUrl'));
         });
+
     </script>
 
 </body>

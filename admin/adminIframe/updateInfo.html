@@ -17,15 +17,17 @@
 
     <!-- 回到后台主页浮动按钮 -->
     <div id="comeBackHomeNav" class="glass-Bg box-show3" title="回到后台主页">
-        <a class="MyIF home" href="index.html"></a>
+        <a class="accountOperIframeUrl MyIF home" dataUrl="adminIframe/index.html"></a>
     </div>
 
-    
     <!-- 后台操作页面顶部标题 -->
     <div id="navTitle" class="s1c-Bg box-show3">
+
+        <!-- 后台顶部标题[面包屑导航栏] -->
         <h4>
-            <a href="index.html">后台主页</a>/<a class="active">修改资料</a>
+            <a class="accountOperIframeUrl" dataUrl="adminIframe/index.html">后台主页</a>/<a class="active">数据列表</a>
         </h4>
+
     </div>
 
     <div id="mainBody" class="s1c-Bg box-show3" style="height:388px;">
@@ -37,6 +39,18 @@
             修改密码：<input type="passwd" name="passwd">
         </form>
     </div>
+
+
+
+    <script type="text/javascript" src="../../js/common/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript">
+
+        $('a.accountOperIframeUrl').click(function () {
+            window.top.accountOperIframeObj.attr('src', $(this).attr('dataUrl'));
+        });
+
+    </script>
 
 </body>
 </html>

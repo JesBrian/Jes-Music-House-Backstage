@@ -878,6 +878,8 @@
     <!-- jQuery框架 -->
     <script src="../js/common/jquery-3.1.1.min.js" type="text/javascript"></script>
 
+    <script src="../js/common/common.js" type="text/javascript"></script>
+
     <!-- 音乐播放器 -->
     <script src="../js/audioplayer.js"></script>
 
@@ -944,39 +946,6 @@
         });
 
 
-
-        /**
-         * 根据传入的model名字来弹出相应的模拟框
-         */
-        function niftymodalsByModelName(modal,url,text) {
-            $("#" + modal).niftyModal();
-            if(text != '') {
-                $("#warning-text").html(text);
-            }
-        }
-
-        /**
-         * 操作消息提示
-         */
-        function alertTips(type,message) {
-            if(type) {
-                iziToast.info({
-                    title: 'Success -- ',
-                    message: message,
-                    position: 'bottomLeft',
-                    transitionIn: 'flipInX',
-                    transitionOut: 'flipOutX'
-                });
-            } else {
-                iziToast.error({
-                    title: 'Error -- ',
-                    message: message,
-                    position: 'bottomLeft',
-                    transitionIn: 'flipInX',
-                    transitionOut: 'flipOutX'
-                });
-            }
-        }
 
         /**
          * 页脚的公众号二维码和支付宝二维码

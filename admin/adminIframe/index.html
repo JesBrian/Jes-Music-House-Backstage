@@ -21,10 +21,42 @@
         </h4>
     </div>
 
-    <div id="mainBody" class="s1c-Bg box-show3" style="height:388px;">
-        sbcaijhkcn<br/>
-        xsaHUC<h3>bshacsa</h3>
+    <div id="mainBody" class="s1c-Bg box-show3">
+
+        <div style="width:100%; height:320px; margin:48px 0 38px;">
+            <div class="glass-Bg box-show3" style="width:66%; height:320px; margin:0 auto 0 3%; display:inline-block; box-sizing:border-box;">
+                每天的新用户 & 新会员
+            </div>
+            <div class="glass-Bg box-show3" style="width:22%; height:320px; margin:0 3% 0 auto; float:right; box-sizing:border-box;">
+                每天的新问卷 -- 还没批阅<br/>
+                [status == 0]
+            </div>
+        </div>
+
+        <div class="glass-Bg box-show3" style="width:94%; height:328px; margin:58px auto;">
+            每天的歌曲出售情况
+        </div>
     </div>
+
+
+
+    <script type="text/javascript">
+
+        if (window.top.preFirstMenuObj !== null) { //判断之前的一级菜单jq对象是否为空 -- 不为空则关闭已经打开的一级菜单
+            window.top.preFirstMenuObj.removeClass('active').parent().height(42);  //动画折叠起菜单面板以及将箭头旋转180度变成Up状态
+            window.top.preFirstMenuObj.nextAll('li').css({top: 0});
+
+            window.top.preFirstMenuObj = null;
+        }
+
+
+        if ((window.top.preSecondMenuObj !== null)) { //判断之前的二级菜单jq对象是否为空且新点击的二级菜单和之前的二级菜单不相同 -- 不为空则
+            window.top.preSecondMenuObj.removeClass('active');
+
+            window.top.preSecondMenuObj = null;
+        }
+    </script>
+
 
 </body>
 </html>
