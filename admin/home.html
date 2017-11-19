@@ -51,7 +51,7 @@
         <div id="navBaseOper">
             <div class="accountMenuSwitch enable cancelSelectText">JesBrian2UserName叫zvdsbvds</div>
             超级管理员
-            <a href="" class="accountLogout">退出登录</a>
+            <a class="accountLogout" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要安全退出后台管理系统？');">退出登录</a>
         </div>
 
     </nav>
@@ -81,7 +81,7 @@
             </li>
         </ul>
 
-        <a href="" class="accountLogout">退出登录</a>
+        <a class="accountLogout" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要安全退出后台管理系统？');">退出登录</a>
 
     </div>
     <!-- 遮盖层 - 配合账户操作菜单栏食用 -->
@@ -276,14 +276,15 @@
 
 
 
-    <!--  -->
-    <div class="md-container md-effect-1" id="modal-category">
+    <div class="md-container md-effect-1" id="modal-warning">
         <div class="md-content">
-            <h3><img src="../img/icon/cube-3.png">选择分类</h3>
+            <h3><img src="../img/icon/warning.png">操作提示</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
-            <div style="padding-right:36px;">
-
-            </div>
+            <p id="warning-text">操作警告！！！</p>
+            <span>
+                <a class="joinSinger superBtn md-close MyIF makesure" onclick="alertTips(1,'删除成功！');"> 确定</a>
+                <a class="joinSinger superBtn md-close MyIF cancel"> 取消</a>
+            </span>
         </div>
     </div>
 
