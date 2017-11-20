@@ -18,16 +18,20 @@
 
     <link rel="stylesheet" type="text/css" href="../css/common/common.css">
     <link rel="stylesheet" type="text/css" href="../css/admin/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/admin/login.css">
+
 
 </head>
 <body style="height:100%; box-sizing:border-box; background:#666;">
 
     <nav class="glass-Bg box-show3" style="width:100%; height:68px; top:0; left:0; position:fixed;">
 
-        <!-- 后台系统Logo - 左侧 -->
-        <a id="navLogo" style="width:208px; height:auto; margin:6px 28px; display:inline-block;">
+        <!-- 系统Logo - 左侧 -->
+        <a id="navLogo" href="../index/index.html" style="width:208px; height:auto; margin:6px 28px; position:absolute;">
             <img src="../img/common/MH-Logo.png" title="Music House" alt="Music House" style="width:100%; height:100%;">
         </a>
+
+        <h3 class="end-boder" style="width:100%; height:100%; display:inline-block; text-align:center; line-height:68px; font-size:38px;">Music House 后台管理登陆页面</h3>
 
         <!-- 账户管理 - 右侧 [ 登录了显示头像 ] -->
         <p style="top:11px; right:38px; position:absolute; z-index:5;">
@@ -37,18 +41,21 @@
     </nav>
 
 
-    <div class="glass-Bg box-show3" style="width:1280px; height:488px; margin:108px auto 48px; background:#131313;">
+    <div class="glass-Bg box-show3" style="width:1280px; height:488px; margin:108px auto 48px; position:relative; background:#131313;">
 
         <div style="width:700px; height:488px; display:inline-block; position:relative; z-index:999;">
-            <form action="" method="post" style="width:100%; height:60%; margin-top:10%;">
-                <table style="width:100%; height:100%;">
+
+            <div class="box-show3" style="width:600px; height:400px; top:40px; left:45px; position:absolute; z-index:1; background:rgba(255,255,255,0.05);"></div>
+
+            <form action="" method="post" style="width:100%; height:60%; margin-top:10%; position:relative; z-index:5;">
+                <table style="width:100%; height:100%; font-size:18px;">
                     <tr style="width:100%;">
                         <td style="width:30%; padding:0 8%; text-align:right;">
                             用户名
                         </td>
                         <td style="position:relative;">
-                            <span class="glass-Bg MyIF avatar" style="width:36px; height:36px; top:12.5px; left:335.5px; position:absolute; background:#333; font-size:28px; line-height:36px; text-align:center;"></span>
-                            <input type="text" name="username" placeholder="请输入用户名" style="width:300px; padding:9px 56px 9px 16px; background:transparent; box-shadow:0 0 6px #666; font-size:18px; color:#5CEBDC;">
+                            <span class="glass-Bg loginInputIcon MyIF avatar"></span>
+                            <input class="loginInput" type="text" name="username" placeholder="请输入用户名">
                         </td>
                     </tr>
                     <tr style="width:100%;">
@@ -56,8 +63,8 @@
                             密码
                         </td>
                         <td style="position:relative;">
-                            <span class="glass-Bg MyIF private" style="width:36px; height:36px; top:12.5px; left:335.5px; position:absolute; background:#333; font-size:28px; line-height:36px; text-align:center;"></span>
-                            <input type="password" name="passwd" placeholder="请输入密码" style="width:300px; padding:9px 56px 9px 16px; background:transparent; box-shadow:0 0 6px #666; font-size:18px; color:#5CEBDC;">
+                            <span class="glass-Bg loginInputIcon MyIF private"></span>
+                            <input class="loginInput" type="password" name="passwd" placeholder="请输入密码">
                         </td>
                     </tr>
                     <tr style="width:100%;">
@@ -65,13 +72,13 @@
                             验证码
                         </td>
                         <td style="position:relative;">
-                            <span class="glass-Bg MyIF code-2" style="width:36px; height:36px; top:12.5px; left:335.5px; position:absolute; background:#333; font-size:28px; line-height:36px; text-align:center;"></span>
-                            <input type="text" name="code" placeholder="请输入验证码" style="width:300px; padding:9px 56px 9px 16px; background:transparent; box-shadow:0 0 6px #666; font-size:18px; color:#5CEBDC;">
+                            <span class="glass-Bg loginInputIcon MyIF code-2"></span>
+                            <input class="loginInput" type="text" name="code" placeholder="请输入验证码">
                         </td>
                     </tr>
                     <tr style="width:100%;">
                         <td style="text-align:center;" colspan="2">
-                            <img src="XX" class="box-show3" style="width:70%; height:68px; background:lightblue;">
+                            <img src="" class="box-show3" style="width:70%; height:68px; border-radius:5px; border:none;">
                         </td>
                     </tr>
                     <tr style="width:100%;">
@@ -86,7 +93,9 @@
             </form>
         </div>
 
-
+        <img src="../img/login/type2/TB1vaRSdwoQMeJjy0FpXXcTxpXa-1600-880.png" style="width:980px; height:488px; top:0; right:0; position:absolute; border:none; z-index:15;">
+        <img src="../img/login/type2/TB1ozRRdwMPMeJjy1XbXXcwxVXa-1600-880.png" style="width:980px; height:488px; top:0; right:0; position:absolute; border:none; z-index:25;">
+        <img src="../img/login/type2/TB1njRRdwMPMeJjy1XbXXcwxVXa-1600-880.png" style="width:980px; height:488px; top:0; right:0; position:absolute; border:none; z-index:50;">
 
 
     </div>
