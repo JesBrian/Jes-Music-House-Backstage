@@ -1,4 +1,3 @@
-DROP DATABASE MusicHouse;
 
 #[为了系统运行，且学习用途，会收集一些关于个人隐私的资料，但由于涉及隐私，且该系统作为学习之用，并不会真的存储实际隐私数据，可以不需填写真实资料，只是作学习使用]
 CREATE DATABASE MusicHouse;
@@ -9,7 +8,6 @@ USE MusicHouse;
 CREATE TABLE mh_power
 (
   id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT '权限类型[分为 1-超级管理员、2-普通管理员、3-歌手、4-会员、5-普通用户]',
-  #type VARCHAR(20) NOT NULL DEFAULT '' COMMENT '权限类型[分为 超级管理员、普通管理员、歌手、会员、普通用户]',
   operIdList VARCHAR(100) NOT NULL DEFAULT '' COMMENT '该权限下可以操作的菜单列表[记录菜单id列表，用、连接]'
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -23,8 +21,8 @@ CREATE TABLE mh_admin
   passwd CHAR(32) NOT NULL DEFAULT '' COMMENT '加密后的密码',
   realName VARCHAR(25) NOT NULL DEFAULT '' COMMENT '管理员真名[为了确保系统的安全，加入我们都要进行信息确认]',
   phone CHAR(11) NOT NULL DEFAULT '' COMMENT '管理员手机电话',
-  IDCardNo CHAR(18) NOT NULL DEFAULT '' COMMENT '管理员身份证号码',
-  IDCardImg VARCHAR(255) NOT NULL DEFAULT '' COMMENT '管理员身份证图片[正反两面，使用 ，分隔 - 长度有可能不足]',
+  IDCardNo CHAR(18) NOT NULL DEFAULT '' COMMENT '管理员证件号码',
+  IDCardImg VARCHAR(255) NOT NULL DEFAULT '' COMMENT '管理员证件图片[正反两面，使用 ，分隔 - 长度有可能不足]',
   bankName VARCHAR(30) NOT NULL DEFAULT '' COMMENT '管理员的银行名称',
   bankNo VARCHAR(30) NOT NULL DEFAULT '' COMMENT '管理员的银行账号',
   powerId TINYINT UNSIGNED NOT NULL DEFAULT '2' COMMENT '权限类型[默认是 2，为普通管理员，还有 1 是超级管理员 ]'
@@ -39,10 +37,7 @@ CREATE TABLE mh_user
   salt CHAR(4) NOT NULL DEFAULT '' COMMENT '密码加盐',
   passwd CHAR(32) NOT NULL DEFAULT '' COMMENT '加密后的密码',
   avatar VARCHAR(255) NOT NULL DEFAULT '' COMMENT '用户头像图片',
-
-
-
-  powerId TINYINT UNSIGNED NOT NULL DEFAULT '5' COMMENT '权限类型[默认是 5，为普通用户，还有 6 是会员 ]',
+  powerId TINYINT UNSIGNED NOT NULL DEFAULT '5' COMMENT '权限类型[默认是 5，为普通用户，还有 4 是会员 ]',
   status BIT NOT NULL DEFAULT 1 COMMENT '用户账户状态[默认是 1 正常，还有 0 非正常状态]',
   createTime INT UNSIGNED NOT NULL COMMENT '用户账户创建时间[可以用于每天新用户 - 保存在 XX 表中]',
   loginTime INT UNSIGNED NOT NULL COMMENT '用户上一次登录时间[可以用于计算活跃用户 - 保存在 XX 表中]',
@@ -52,13 +47,15 @@ CREATE TABLE mh_user
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
-/* MH用户表其他信息表 -- 记录用户其他一些不常用的信息 */
-CREATE TABLE mh_userinfo
+/* MH用户表其他信息表 -- 注册用户之后就会自动产生, 记录用户其他一些不常用的信息 */
+CREATE TABLE mh_user_info
 (
   userId INT UNSIGNED PRIMARY KEY ,
-
+  sex TINYINT DEFAULT 0 COMMENT '用户性别[默认是 0 男，1 为女，3 为保密秀吉]',
+  date INT DEFAULT 0 COMMENT '用户出生日期',
+  address VARCHAR(10) DEFAULT '' COMMENT '用户地址',
   description VARCHAR(255) DEFAULT '' COMMENT '用户简介',
-
+  mail VARCHAR(60) DEFAULT '' COMMENT '用户邮箱'
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
@@ -79,6 +76,7 @@ CREATE TABLE mh_member
   userId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '保存对应的用户id',
   timeSpan TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '用户开通会员的时间长度[1-一个月、2-两个月、3-三个月、4-半年、5-一年]',
   timeOut INT UNSIGNED NOT NULL COMMENT '用户会员到期时间',
+  status BIT NOT NULL DEFAULT 1 COMMENT '用户会员账户状态[默认是 1 正常，还有 0 非正常状态]',
   createTime INT UNSIGNED NOT NULL COMMENT '用户开通会员时间[可以用于每天新会员 - 保存在 XX 表中]',
   INDEX user_userId(userId),
   INDEX user_createTime(createTime)
@@ -90,7 +88,7 @@ CREATE TABLE mh_singer
 (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
   userid INT UNSIGNED DEFAULT 0 COMMENT '对应的用户账号[0为没有]',
-  singername VARCHAR(25) NOT NULL DEFAULT '' COMMENT '歌手艺名',
+  singerName VARCHAR(25) NOT NULL DEFAULT '' COMMENT '歌手艺名',
   singerImg VARCHAR(255) DEFAULT '' COMMENT '歌手图片',
   sex TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '歌手性别[1-男、2-女、3-团队]',
   styleId TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '歌手歌曲风格id',
@@ -101,22 +99,22 @@ CREATE TABLE mh_singer
   nationality TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '歌手所属国籍[默认 1-中国]',
   IDCardNo CHAR(18) NOT NULL DEFAULT '' COMMENT '歌手身份证号码',
   IDCardImg VARCHAR(255) NOT NULL DEFAULT '' COMMENT '歌手身份证图片[正反两面，使用 ，分隔 - 长度有可能不足]',
-  powerId TINYINT UNSIGNED NOT NULL DEFAULT '6' COMMENT '权限类型[默认是 6，为普通管理员, 不好意思也只能是6 ]',
+  powerId TINYINT UNSIGNED NOT NULL DEFAULT '3' COMMENT '权限类型[默认是 3，为歌手, 不好意思也只能是3 ]',
   status BIT NOT NULL DEFAULT 1 COMMENT '歌手账户状态[默认是 1 正常，还有 0 非正常状态]',
-  createTime INT UNSIGNED NOT NULL COMMENT '歌手开通会员时间[可以用于每天新会员 - 保存在 XX 表中]',
+  createTime INT UNSIGNED NOT NULL COMMENT '成为入驻歌手时间[可以用于每天新会员 - 保存在 XX 表中]',
   loginTime INT UNSIGNED NOT NULL COMMENT '歌手上一次登录时间',
   INDEX singer_userid(userid),
-  INDEX singer_singername(singername),
+  INDEX singer_singername(singerName),
   INDEX singer_styleId(styleId),
-  INDEX user_createTime(createTime)
+  INDEX singer_createTime(createTime)
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
-/* MH音乐风格分类表 -- 用于搜索歌单 */
+/* MH音乐风格表 -- 用于搜索歌单 */
 CREATE TABLE mh_style
 (
   id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
-  styleName VARCHAR(15) NOT NULL DEFAULT '' COMMENT '风格名称',
+  styleName VARCHAR(15) NOT NULL UNIQUE DEFAULT '' COMMENT '风格名称',
   parentId TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '风格的一级父ID，如果有的话[目前只做二级分类]',
   INDEX style_parentId(parentId)
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -168,7 +166,7 @@ CREATE TABLE mh_song_buy
 
 
 /* MH音乐歌曲其他信息表 -- 为了效率采用反范式方法创建一个专门记录歌曲聆听次数 & 被购买次数的表 */
-CREATE TABLE mh_songinfo
+CREATE TABLE mh_song_info
 (
   songId INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '歌曲对应的ID',
   listenNum BIGINT UNSIGNED DEFAULT 0 COMMENT '歌曲对应聆听次数',
@@ -212,9 +210,11 @@ CREATE TABLE mh_comment_like
 CREATE TABLE mh_questionnaire
 (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+  quality TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '问卷调查之服务质量[1 很差 / 2 差 / 3 一般 / 4 好 / 5 很好]',
+  defect TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '问卷调查之网站缺点[1 加载速度慢 / 2 歌曲收录少 / 3 曲库更新迟 / 4 歌曲音质差 / 5 会员收费高 / 6 歌曲价格高 / 7 功能不齐全 / 8 推荐不合理]',
+  idea VARCHAR(500) DEFAULT '' COMMENT '问卷调查之意见收集',
   mail VARCHAR(160) DEFAULT '' COMMENT '填写问卷反馈的邮箱',
   ip VARCHAR(20) DEFAULT '' COMMENT '填写问卷的IP地址'
-
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
