@@ -607,7 +607,7 @@
             <a class="md-close close-all MyIF all-arrow"></a>
             <div style="font-size:18px; font-weight:900;">添加到歌单</div>
             <span>
-                <a class="superBtn joinSinger MyIF cubes-1"> 新建歌单</a>
+                <a class="superBtn joinSinger md-close MyIF cubes-1" onclick="niftymodalsByModelName('modal-newAlbum')"> 新建歌单</a>
             </span>
             <div id="collectionContent">
                 <a class="s1c-Bg box-show3">
@@ -659,8 +659,26 @@
         <!-- 新建歌单 -->
     <div class="md-container md-effect-1" id="modal-newAlbum">
         <div class="md-content">
-            <h3><img src="../img/icon/menu.png">调查问卷</h3>
+            <h3><img src="../img/icon/menu.png">新建歌单</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
+            <form style="width:100%; height:228px;">
+                <table style="width:100%; height:100%;">
+                    <tr style="height:108px;">
+                        <td style="width:38%; padding-right:28px; text-align:right; font-size:18px;"><i class="MyIF kinds" style="color:#1A9EE6; font-size:26px;"></i> 歌单名</td>
+                        <td style="text-align:left;"><input class="s1c-Bg box-show3" type="text" name="albumName" style="width:250px; height:25px; padding:5px 8px; font-size:15px; font-weight:600; letter-spacing:1.2px; color:#30CDFF;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:center; font-size:15px;">可通过各种 “ 收藏 ” 按钮将音乐添加到新歌单中</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="position:relative; text-align:center;">
+                            <a class="superBtn joinSinger md-close MyIF cancel" style="margin:58px 28px 0; position:relative;"> 取消返回</a>
+                            <a class="superBtn joinSinger md-close MyIF makesure" style="margin:58px 28px 0; position:relative;"> 确定新建</a>
+                        </td>
+                    </tr>
+                </table>
+
+            </form>
         </div>
     </div>
 
@@ -679,16 +697,16 @@
                 <p>2、您认为我们网站存在哪些缺点 [可多选] ：</p>
                 <table>
                     <tr>
-                        <td><input type="checkbox" class="superInput" id='1verybad' name="quality"><label for='1verybad' ><b>加速度载慢</b></label></td>
-                        <td><input type="checkbox" class="superInput" id='1bad' name="quality"><label for='1bad' ><b>歌曲收录少</b></label></td>
-                        <td><input type="checkbox" class="superInput" id='1normal' name="quality"><label for='1normal' ><b>曲库更新迟</b></label></td>
-                        <td><input type="checkbox" class="superInput" id='1good' name="quality"><label for='1good' ><b>歌曲音质差</b></label></td>
+                        <td><input type="checkbox" class="superInput" id='1verybad' name="defect"><label for='1verybad' ><b>加载速度慢</b></label></td>
+                        <td><input type="checkbox" class="superInput" id='1bad' name="defect"><label for='1bad' ><b>歌曲收录少</b></label></td>
+                        <td><input type="checkbox" class="superInput" id='1normal' name="defect"><label for='1normal' ><b>曲库更新迟</b></label></td>
+                        <td><input type="checkbox" class="superInput" id='1good' name="defect"><label for='1good' ><b>歌曲音质差</b></label></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="superInput" id='1verygood' name="quality"><label for='1verygood' ><b>会员收费高</b></label></td>
-                        <td><input type="checkbox" class="superInput" id='2verygood' name="quality"><label for='2verygood' ><b>歌曲价格高</b></label></td>
-                        <td><input type="checkbox" class="superInput" id='3verygood' name="quality"><label for='3verygood' ><b>功能不齐全</b></label></td>
-                        <td><input type="checkbox" class="superInput" id='4verygood' name="quality"><label for='4verygood' ><b>推荐不合理</b></label></td>
+                        <td><input type="checkbox" class="superInput" id='1verygood' name="defect"><label for='1verygood' ><b>会员收费高</b></label></td>
+                        <td><input type="checkbox" class="superInput" id='2verygood' name="defect"><label for='2verygood' ><b>歌曲价格高</b></label></td>
+                        <td><input type="checkbox" class="superInput" id='3verygood' name="defect"><label for='3verygood' ><b>功能不齐全</b></label></td>
+                        <td><input type="checkbox" class="superInput" id='4verygood' name="defect"><label for='4verygood' ><b>推荐不合理</b></label></td>
                     </tr>
                 </table>
                 <p>3、如还有任何问题、疑问或者不满或者改进意见请写下：</p>
