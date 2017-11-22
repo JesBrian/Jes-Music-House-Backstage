@@ -63,7 +63,7 @@ function niftymodalsByModelName(modal,url,text) {
 function alertTips(type,message) {
     if(type) {
         iziToast.info({
-            title: 'Success -- ',
+            title: 'Success - ',
             message: message,
             position: 'bottomLeft',
             transitionIn: 'flipInX',
@@ -71,7 +71,7 @@ function alertTips(type,message) {
         });
     } else {
         iziToast.error({
-            title: 'Error -- ',
+            title: 'Error - ',
             message: message,
             position: 'bottomLeft',
             transitionIn: 'flipInX',
