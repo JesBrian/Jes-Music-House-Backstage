@@ -107,6 +107,26 @@
             cursor:not-allowed;
         }
 
+
+
+        .superInput + label {
+            width:15px;
+            height:15px;
+            margin:0;
+            font-size:18px;
+            font-weight:900;
+            line-height:17px;
+        }
+        .superInput + label > i {
+            margin-left:-6px;
+        }
+
+        .superInput + label:after {
+            top:0;
+            left:-10.5px;
+            width:15px;
+            height:15px;
+        }
     </style>
 
 
@@ -147,7 +167,7 @@
         <table class="accountTable" style="width:100%;">
             <thead>
             <tr>
-                <th style="width:38px;"><input type="checkbox" name="quality"></th>
+                <th style="width:38px;"><input type="checkbox" class="superInput" id='checkAll'><label for='checkAll'><i>√</i></label></th>
                 <th colspan="4">操作</th>
                 <th>名字</th>
                 <th>图片</th>
@@ -157,7 +177,7 @@
 
             <tbody>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-1' name="dataList"><label for='data-1'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF public" title="公开" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据私有？ [其他用户无法访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -167,7 +187,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-2' name="dataList"><label for='data-2'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF private" title="私有" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据公开？ [其他用户可以进行访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -177,7 +197,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-3' name="dataList"><label for='data-3'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -187,7 +207,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-4' name="dataList"><label for='data-4'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF public" title="公开" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据私有？ [其他用户无法访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -197,7 +217,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-5' name="dataList"><label for='data-5'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF private" title="私有" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据公开？ [其他用户可以进行访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -207,7 +227,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-6' name="dataList"><label for='data-6'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -217,7 +237,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-7' name="dataList"><label for='data-7'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF public" title="公开" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据私有？ [其他用户无法访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -227,7 +247,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-8' name="dataList"><label for='data-8'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF private" title="私有" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据公开？ [其他用户可以进行访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -237,7 +257,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-9' name="dataList"><label for='data-9'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -247,7 +267,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-10' name="dataList"><label for='data-10'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF public" title="公开" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据私有？ [其他用户无法访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -257,7 +277,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-11' name="dataList"><label for='data-11'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF private" title="私有" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据公开？ [其他用户可以进行访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -267,7 +287,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-12' name="dataList"><label for='data-12'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -277,7 +297,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-13' name="dataList"><label for='data-13'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF public" title="公开" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据私有？ [其他用户无法访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -287,7 +307,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-14' name="dataList"><label for='data-14'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF private" title="私有" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据公开？ [其他用户可以进行访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -297,7 +317,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-15' name="dataList"><label for='data-15'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -388,6 +408,18 @@
         $('a.accountOperIframeUrl').click(function () {
             window.top.accountOperIframeObj.attr('src', $(this).attr('dataUrl'));
         });
+
+
+        $('#checkAll').change(function () {
+            $("input[name=dataList]").each(function(){
+                if($("#checkAll").prop("checked") == true){
+                    $(this).prop('checked', true);
+                }
+                else{
+                    $(this).prop('checked', false);
+                }
+            })
+        })
 
     </script>
 
