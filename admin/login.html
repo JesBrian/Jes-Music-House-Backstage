@@ -105,9 +105,9 @@
             <div id="imgContentBM" style="width:270px; height:160px; bottom:0; right:270px; position:absolute; z-index:25;"></div>
 
 
-            <img id="imgTop" src="../img/login/type4-ok/TB1I9LRXY_I8KJjy1XaXXbsxpXa-1600-880.png" style="width:980px; height:488px; top:0; right:-50px; position:absolute; border:none; z-index:5;">
-            <img id="imgMiddle" src="../img/login/type4-ok/TB1bRzRX4rI8KJjy0FpXXb5hVXa-1600-880.png" style="width:980px; height:488px; top:0; right:-50px; position:absolute; border:none; z-index:15;">
-            <img id="imgBottom" src="../img/login/type4-ok/TB1MCLRXY_I8KJjy1XaXXbsxpXa-1600-880.png" style="width:980px; height:488px; top:0; right:-50px; position:absolute; border:none; z-index:20;">
+            <img id="imgTop" src="../img/login/type3-ok/TB1P63fcRfH8KJjy1XbXXbLdXXa-1600-880.png" style="width:980px; height:488px; top:0; right:-50px; position:absolute; border:none; z-index:5;">
+            <img id="imgMiddle" src="../img/login/type3-ok/TB1uXczcLDH8KJjy1XcXXcpdXXa-1600-880.png" style="width:980px; height:488px; top:0; right:-50px; position:absolute; border:none; z-index:15;">
+            <img id="imgBottom" src="../img/login/type3-ok/TB16P3fcRfH8KJjy1XbXXbLdXXa-1600-880.png" style="width:980px; height:488px; top:0; right:-50px; position:absolute; border:none; z-index:20;">
         </div>
 
     </div>
@@ -124,61 +124,64 @@
 
     <script type="text/javascript">
 
-
-        $('#imgContentTL').mousemove(function () {
-            $('#imgTop').animate({top: '3', right: '-55'}, 500);
-            $('#imgMiddle').animate({top: '8', right: '-58'}, 500);
-            $('#imgBottom').animate({top: '13', right: '-63'}, 500);
+        $('#imgContent').mouseleave(function () {
+           imgComeBack();
         });
 
-        $('#imgContentTM').mousemove(function () {
-            $('#imgTop').animate({top: '5'}, 500);
-            $('#imgMiddle').animate({top: '10'}, 500);
-            $('#imgBottom').animate({top: '15'}, 500);
+        $('#imgContentTL').mouseover(function () {
+            $('#imgTop').animate({top: '3', right: '-55'}, 288);
+            $('#imgMiddle').animate({top: '8', right: '-58'}, 288);
+            $('#imgBottom').animate({top: '13', right: '-63'}, 288);
         });
 
-        $('#imgContentTR').mousemove(function () {
-            $('#imgTop').animate({top: '3', right: '-45'}, 500);
-            $('#imgMiddle').animate({top: '8', right: '-42'}, 500);
-            $('#imgBottom').animate({top: '13', right: '-38'}, 500);
+        $('#imgContentTM').mouseover(function () {
+            $('#imgTop').animate({top: '5'}, 288);
+            $('#imgMiddle').animate({top: '10'}, 288);
+            $('#imgBottom').animate({top: '15'}, 288);
         });
 
-        $('#imgContentBL').mousemove(function () {
-            $('#imgTop').animate({top: '-3', right: '-55'}, 500);
-            $('#imgMiddle').animate({top: '-8', right: '-58'}, 500);
-            $('#imgBottom').animate({top: '-13', right: '-63'}, 500);
+        $('#imgContentTR').mouseover(function () {
+            $('#imgTop').animate({top: '3', right: '-45'}, 288);
+            $('#imgMiddle').animate({top: '8', right: '-42'}, 288);
+            $('#imgBottom').animate({top: '13', right: '-38'}, 288);
         });
 
-        $('#imgContentBM').mousemove(function () {
-            $('#imgTop').animate({top: '-5'}, 500);
-            $('#imgMiddle').animate({top: '-10'}, 500);
-            $('#imgBottom').animate({top: '-15'}, 500);
+        $('#imgContentBL').mouseover(function () {
+            $('#imgTop').animate({top: '-3', right: '-55'}, 288);
+            $('#imgMiddle').animate({top: '-8', right: '-58'}, 288);
+            $('#imgBottom').animate({top: '-13', right: '-63'}, 288);
         });
 
-        $('#imgContentBR').mousemove(function () {
-            $('#imgTop').animate({top: '-3', right: '-45'}, 500);
-            $('#imgMiddle').animate({top: '-8', right: '-42'}, 500);
-            $('#imgBottom').animate({top: '-13', right: '-38'}, 500);
+        $('#imgContentBM').mouseover(function () {
+            $('#imgTop').animate({top: '-5'}, 288);
+            $('#imgMiddle').animate({top: '-10'}, 288);
+            $('#imgBottom').animate({top: '-15'}, 288);
         });
 
-        $('#imgContentLM').mousemove(function () {
-            $('#imgTop').animate({right: '-58'}, 500);
-            $('#imgMiddle').animate({right: '-58'}, 500);
-            $('#imgBottom').animate({right: '-63'}, 500);
+        $('#imgContentBR').mouseover(function () {
+            $('#imgTop').animate({top: '-3', right: '-45'}, 288);
+            $('#imgMiddle').animate({top: '-8', right: '-42'}, 288);
+            $('#imgBottom').animate({top: '-13', right: '-38'}, 288);
         });
 
-        $('#imgContentRM').mousemove(function () {
-            $('#imgTop').animate({right: '-35'}, 500);
-            $('#imgMiddle').animate({right: '-42'}, 500);
-            $('#imgBottom').animate({right: '-38'}, 500);
+        $('#imgContentLM').mouseover(function () {
+            $('#imgTop').animate({right: '-58'}, 288);
+            $('#imgMiddle').animate({right: '-58'}, 288);
+            $('#imgBottom').animate({right: '-63'}, 288);
+        });
+
+        $('#imgContentRM').mouseover(function () {
+            $('#imgTop').animate({right: '-35'}, 288);
+            $('#imgMiddle').animate({right: '-42'}, 288);
+            $('#imgBottom').animate({right: '-38'}, 288);
         });
 
 
 
         function imgComeBack() {
-            $('#imgTop').animate({top:'0',right:'-50'},500);
-            $('#imgMiddle').animate({top:'0',right:'-50'},500);
-            $('#imgBottom').animate({top:'0',right:'-50'},500);
+            $('#imgTop').animate({top:'0',right:'-50'},288);
+            $('#imgMiddle').animate({top:'0',right:'-50'},288);
+            $('#imgBottom').animate({top:'0',right:'-50'},288);
         }
 
 
