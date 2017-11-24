@@ -7,7 +7,7 @@ USE MusicHouse;
 /* 权限表 -- 设置普通用户-5、会员-4、歌手-3、普通管理员-2、超级管理员权限-1 */
 CREATE TABLE mh_power
 (
-  id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT '权限类型[分为 1-超级管理员、2-普通管理员、3-歌手、4-会员、5-普通用户]',
+  id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT '权限类型[ 1-超级管理员 / 2-普通管理员 / 3-歌手 / 4-会员 / 5-普通用户 ]',
   operIdList VARCHAR(100) NOT NULL DEFAULT '' COMMENT '该权限下可以操作的菜单列表[记录菜单id列表，用、连接]'
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -74,7 +74,7 @@ CREATE TABLE mh_member
 (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
   userId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '保存对应的用户id',
-  timeSpan TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '用户开通会员的时间长度[1-一个月、2-两个月、3-三个月、4-半年、5-一年]',
+  timeSpan TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '用户开通会员的时间长度[ 1-一个月 / 2-两个月 / 3-三个月 / 4-半年 / 5-一年]',
   timeOut INT UNSIGNED NOT NULL COMMENT '用户会员到期时间',
   status BIT NOT NULL DEFAULT 1 COMMENT '用户会员账户状态[默认是 1 正常，还有 0 非正常状态]',
   createTime INT UNSIGNED NOT NULL COMMENT '用户开通会员时间[可以用于每天新会员 - 保存在 XX 表中]',
@@ -90,7 +90,7 @@ CREATE TABLE mh_singer
   userid INT UNSIGNED DEFAULT 0 COMMENT '对应的用户账号[0为没有]',
   singerName VARCHAR(25) NOT NULL DEFAULT '' COMMENT '歌手艺名',
   singerImg VARCHAR(255) DEFAULT '' COMMENT '歌手图片',
-  sex TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '歌手性别[1-男、2-女、3-团队]',
+  sex TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '歌手性别[ 1-男 / 2-女 / 3-团队 ]',
   styleId TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '歌手歌曲风格id',
   brand VARCHAR(255) DEFAULT '' COMMENT '歌手所属公司/品牌',
   introduction TEXT COMMENT '歌手简介',
@@ -128,7 +128,7 @@ CREATE TABLE mh_album
   songIdList TEXT COMMENT '歌单所收集的所有歌曲列表[记录歌曲ID使用 , 分隔]',
   albumImg VARCHAR(255) DEFAULT '' COMMENT '歌单的封面图片所在路径',
   albumStyle VARCHAR(35) DEFAULT '' COMMENT '歌单所属风格列表[记录风格ID使用 , 分隔且限制只能有三个不同的风格]',
-  albumType BIT NOT NULL DEFAULT 0 COMMENT '歌单创建的类型[ 0-普通用户歌单，1-歌曲专辑]',
+  albumType BIT NOT NULL DEFAULT 0 COMMENT '歌单创建的类型[ 0-普通用户歌单 / 1-歌曲专辑]',
   createBy VARCHAR(25) NOT NULL DEFAULT '' COMMENT '创建人是谁',
   createTime INT UNSIGNED NOT NULL COMMENT '该歌单创建时间',
   INDEX album_albumType(albumType),
@@ -210,11 +210,13 @@ CREATE TABLE mh_comment_like
 CREATE TABLE mh_questionnaire
 (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
-  quality TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '问卷调查之服务质量[1 很差 / 2 差 / 3 一般 / 4 好 / 5 很好]',
-  defect TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '问卷调查之网站缺点[1 加载速度慢 / 2 歌曲收录少 / 3 曲库更新迟 / 4 歌曲音质差 / 5 会员收费高 / 6 歌曲价格高 / 7 功能不齐全 / 8 推荐不合理]',
+  quality TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '问卷调查之服务质量[ 1-很差 / 2-差 / 3-一般 / 4-好 / 5-很好 ]',
+  defect TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '问卷调查之网站缺点[ 1-加载速度慢 / 2-歌曲收录少 / 3-曲库更新迟 / 4-歌曲音质差 / 5-会员收费高 / 6-歌曲价格高 / 7-功能不齐全 / 8-推荐不合理 ]',
   idea VARCHAR(500) DEFAULT '' COMMENT '问卷调查之意见收集',
   mail VARCHAR(160) DEFAULT '' COMMENT '填写问卷反馈的邮箱',
-  ip VARCHAR(20) DEFAULT '' COMMENT '填写问卷的IP地址'
+  ip VARCHAR(20) DEFAULT '' COMMENT '填写问卷的IP地址',
+  status TINYINT DEFAULT 0 COMMENT '调查问卷状态[ 0-管理员未查看 / 1-管理员已查看未回邮件 / 2-管理员已回邮件 ]',
+  INDEX questionnaire_status(status)
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
@@ -223,11 +225,12 @@ CREATE TABLE mh_analysis
 (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
   newNum INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '每天新增人数',
-  type TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '区分不同的类型[ 1-新用户、2-新会员数量、3-歌曲交易量 ]',
+  type TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '区分不同的类型[ 1-新用户 / 2-新会员数量 / 3-歌曲交易量 ]',
   `date` INT UNSIGNED NOT NULL COMMENT '记录每天日期',
   INDEX analysis_type(type),
   INDEX analysis_date(`date`)
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
 
 
 
