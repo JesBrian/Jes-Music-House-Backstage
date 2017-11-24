@@ -111,6 +111,14 @@
 
     <script type="text/javascript">
 
+        (function($){   //设置滚动条样式
+            $(window).on("load",function(){
+                $.mCustomScrollbar.defaults.scrollButtons.enable=true;
+                $.mCustomScrollbar.defaults.axis="y";
+                $("#newQuestionnaireContent").mCustomScrollbar({theme:"minimal"});
+            });
+        })(jQuery);
+
         if (window.top.preFirstMenuObj !== null) { //判断之前的一级菜单jq对象是否为空 -- 不为空则关闭已经打开的一级菜单
             window.top.preFirstMenuObj.removeClass('active').parent().height(42);  //动画折叠起菜单面板以及将箭头旋转180度变成Up状态
             window.top.preFirstMenuObj.nextAll('li').css({top: 0});
@@ -230,14 +238,6 @@
             $('#newBuyCharts').highcharts(jsonNewBuy);
         });
 
-
-        (function($){   //设置滚动条样式
-            $(window).on("load",function(){
-                $.mCustomScrollbar.defaults.scrollButtons.enable=true;
-                $.mCustomScrollbar.defaults.axis="y";
-                $("#newQuestionnaireContent").mCustomScrollbar({theme:"minimal"});
-            });
-        })(jQuery);
     </script>
 
 
