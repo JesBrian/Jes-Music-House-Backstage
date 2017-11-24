@@ -125,17 +125,6 @@
             window.top.preSecondMenuObj = null;
         }
 
-
-        (function($){   //设置滚动条样式
-            $(window).on("load",function(){
-                $.mCustomScrollbar.defaults.scrollButtons.enable=true;
-                $.mCustomScrollbar.defaults.axis="y";
-
-                $("#newQuestionnaireContent").mCustomScrollbar({theme:"minimal"});
-            });
-        })(jQuery);
-
-
         $('a.accountOperIframeUrl').click(function () {
             window.top.accountOperIframeObj.attr('src', $(this).attr('dataUrl'));
         });
@@ -240,6 +229,15 @@
             });
             $('#newBuyCharts').highcharts(jsonNewBuy);
         });
+
+
+        (function($){   //设置滚动条样式
+            $(window).on("load",function(){
+                $.mCustomScrollbar.defaults.scrollButtons.enable=true;
+                $.mCustomScrollbar.defaults.axis="y";
+                $("#newQuestionnaireContent").mCustomScrollbar({theme:"minimal"});
+            });
+        })(jQuery);
     </script>
 
 
