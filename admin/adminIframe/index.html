@@ -12,6 +12,10 @@
     <link rel="stylesheet" type="text/css" href="../../css/common/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/admin/common.css">
 
+    <!-- 滚动条CSS样式 -->
+    <link rel="stylesheet" type="text/css" href="../../plugins/scrollbar/jquery.mCustomScrollbar.css">
+
+
 </head>
 <body id="htmlBody">
     <!-- 后台操作页面顶部标题 -->
@@ -28,9 +32,64 @@
             <!-- 每天的新用户 & 新会员 [折线图]  -->
             <div id="newUserCharts" class="glass-Bg box-show3" style="width:66%; height:320px; margin:0 auto 0 3%; display:inline-block; box-sizing:border-box;"></div>
 
-            <div class="glass-Bg box-show3" style="width:22%; height:320px; margin:0 3% 0 auto; float:right; box-sizing:border-box;">
-                每天的新问卷 -- 还没批阅<br/>
-                [status == 0]
+            <!-- 未处理的新调查问卷 -->
+            <div id="newQuestionnaireContent" class="glass-Bg box-show3" style="width:22%; height:320px; margin:0 3% 0 auto; padding:8px 0; float:right; box-sizing:border-box;">
+                <a class="accountOperIframeUrl s1c-Bg box-show3" dataUrl="adminIframe/questionnaire.html" style="width:88%; height:42px; margin:12px auto 12px; padding:0 8px; display:block; box-sizing:border-box; color:#DDD; text-align:left; font-size:14px; line-height:26px;">
+                    New - [ 255:255:255:255 ]
+                    <p style="text-align:right; color:#999; font-size:13.5px; line-height:10px;">1111/11/11 11-11</p>
+                </a>
+                <a class="accountOperIframeUrl s1c-Bg box-show3" dataUrl="adminIframe/questionnaire.html" style="width:88%; height:42px; margin:12px auto 12px; padding:0 8px; display:block; box-sizing:border-box; color:#DDD; text-align:left; font-size:14px; line-height:26px;">
+                    New - [ 255:255:255:255 ]
+                    <p style="text-align:right; color:#999; font-size:13.5px; line-height:10px;">1111/11/11 11-11</p>
+                </a>
+                <a class="accountOperIframeUrl s1c-Bg box-show3" dataUrl="adminIframe/questionnaire.html" style="width:88%; height:42px; margin:12px auto 12px; padding:0 8px; display:block; box-sizing:border-box; color:#DDD; text-align:left; font-size:14px; line-height:26px;">
+                    New - [ 255:255:255:255 ]
+                    <p style="text-align:right; color:#999; font-size:13.5px; line-height:10px;">1111/11/11 11-11</p>
+                </a>
+                <a class="accountOperIframeUrl s1c-Bg box-show3" dataUrl="adminIframe/questionnaire.html" style="width:88%; height:42px; margin:12px auto 12px; padding:0 8px; display:block; box-sizing:border-box; color:#DDD; text-align:left; font-size:14px; line-height:26px;">
+                    New - [ 255:255:255:255 ]
+                    <p style="text-align:right; color:#999; font-size:13.5px; line-height:10px;">1111/11/11 11-11</p>
+                </a>
+                <a class="accountOperIframeUrl s1c-Bg box-show3" dataUrl="adminIframe/questionnaire.html" style="width:88%; height:42px; margin:12px auto 12px; padding:0 8px; display:block; box-sizing:border-box; color:#DDD; text-align:left; font-size:14px; line-height:26px;">
+                    New - [ 255:255:255:255 ]
+                    <p style="text-align:right; color:#999; font-size:13.5px; line-height:10px;">1111/11/11 11-11</p>
+                </a>
+                <a class="accountOperIframeUrl s1c-Bg box-show3" dataUrl="adminIframe/questionnaire.html" style="width:88%; height:42px; margin:12px auto 12px; padding:0 8px; display:block; box-sizing:border-box; color:#DDD; text-align:left; font-size:14px; line-height:26px;">
+                    New - [ 255:255:255:255 ]
+                    <p style="text-align:right; color:#999; font-size:13.5px; line-height:10px;">1111/11/11 11-11</p>
+                </a>
+                <a class="accountOperIframeUrl s1c-Bg box-show3" dataUrl="adminIframe/questionnaire.html" style="width:88%; height:42px; margin:12px auto 12px; padding:0 8px; display:block; box-sizing:border-box; color:#DDD; text-align:left; font-size:14px; line-height:26px;">
+                    New - [ 255:255:255:255 ]
+                    <p style="text-align:right; color:#999; font-size:13.5px; line-height:10px;">1111/11/11 11-11</p>
+                </a>
+                <a class="accountOperIframeUrl s1c-Bg box-show3" dataUrl="adminIframe/questionnaire.html" style="width:88%; height:42px; margin:12px auto 12px; padding:0 8px; display:block; box-sizing:border-box; color:#DDD; text-align:left; font-size:14px; line-height:26px;">
+                    New - [ 255:255:255:255 ]
+                    <p style="text-align:right; color:#999; font-size:13.5px; line-height:10px;">1111/11/11 11-11</p>
+                </a>
+                <a class="accountOperIframeUrl s1c-Bg box-show3" dataUrl="adminIframe/questionnaire.html" style="width:88%; height:42px; margin:12px auto 12px; padding:0 8px; display:block; box-sizing:border-box; color:#DDD; text-align:left; font-size:14px; line-height:26px;">
+                    New - [ 255:255:255:255 ]
+                    <p style="text-align:right; color:#999; font-size:13.5px; line-height:10px;">1111/11/11 11-11</p>
+                </a>
+                <a class="accountOperIframeUrl s1c-Bg box-show3" dataUrl="adminIframe/questionnaire.html" style="width:88%; height:42px; margin:12px auto 12px; padding:0 8px; display:block; box-sizing:border-box; color:#DDD; text-align:left; font-size:14px; line-height:26px;">
+                    New - [ 255:255:255:255 ]
+                    <p style="text-align:right; color:#999; font-size:13.5px; line-height:10px;">1111/11/11 11-11</p>
+                </a>
+                <a class="accountOperIframeUrl s1c-Bg box-show3" dataUrl="adminIframe/questionnaire.html" style="width:88%; height:42px; margin:12px auto 12px; padding:0 8px; display:block; box-sizing:border-box; color:#DDD; text-align:left; font-size:14px; line-height:26px;">
+                    New - [ 255:255:255:255 ]
+                    <p style="text-align:right; color:#999; font-size:13.5px; line-height:10px;">1111/11/11 11-11</p>
+                </a>
+                <a class="accountOperIframeUrl s1c-Bg box-show3" dataUrl="adminIframe/questionnaire.html" style="width:88%; height:42px; margin:12px auto 12px; padding:0 8px; display:block; box-sizing:border-box; color:#DDD; text-align:left; font-size:14px; line-height:26px;">
+                    New - [ 255:255:255:255 ]
+                    <p style="text-align:right; color:#999; font-size:13.5px; line-height:10px;">1111/11/11 11-11</p>
+                </a>
+                <a class="accountOperIframeUrl s1c-Bg box-show3" dataUrl="adminIframe/questionnaire.html" style="width:88%; height:42px; margin:12px auto 12px; padding:0 8px; display:block; box-sizing:border-box; color:#DDD; text-align:left; font-size:14px; line-height:26px;">
+                    New - [ 255:255:255:255 ]
+                    <p style="text-align:right; color:#999; font-size:13.5px; line-height:10px;">1111/11/11 11-11</p>
+                </a>
+                <a class="accountOperIframeUrl s1c-Bg box-show3" dataUrl="adminIframe/questionnaire.html" style="width:88%; height:42px; margin:12px auto 12px; padding:0 8px; display:block; box-sizing:border-box; color:#DDD; text-align:left; font-size:14px; line-height:26px;">
+                    New - [ 255:255:255:255 ]
+                    <p style="text-align:right; color:#999; font-size:13.5px; line-height:10px;">1111/11/11 11-11</p>
+                </a>
             </div>
         </div>
 
@@ -42,6 +101,9 @@
 
     <!-- jQuery框架 -->
     <script src="../../js/common/jquery-3.1.1.min.js" type="text/javascript"></script>
+
+    <!--plugins滚动条插件-->
+    <script src="../../plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <!-- highcharts插件 -->
     <script type="text/javascript" src="../../plugins/highcharts/highcharts.js"></script>
@@ -63,6 +125,20 @@
             window.top.preSecondMenuObj = null;
         }
 
+
+        (function($){   //设置滚动条样式
+            $(window).on("load",function(){
+                $.mCustomScrollbar.defaults.scrollButtons.enable=true;
+                $.mCustomScrollbar.defaults.axis="y";
+
+                $("#newQuestionnaireContent").mCustomScrollbar({theme:"minimal"});
+            });
+        })(jQuery);
+
+
+        $('a.accountOperIframeUrl').click(function () {
+            window.top.accountOperIframeObj.attr('src', $(this).attr('dataUrl'));
+        });
 
         $(document).ready(function () {
             /*主要画图区域显示样式*/
@@ -129,7 +205,6 @@
                     data: [67, 48, 64, 38, 0]
                 }
             ];
-
             var newBuySeries = [
                 {
                     name: '歌曲出售',
@@ -137,19 +212,9 @@
                 }
             ];
 
-            var lang = {
-                downloadJPEG: "下载JPEG 图片",
-                downloadPDF: "下载PDF文档",
-                downloadPNG: "下载PNG 图片",
-                downloadSVG: "下载SVG 矢量图",
-                exportButtonTitle: "导出图片",
-            };
-
-
 
             var jsonNewUser = {
                 title: newUserTitle,
-                lang: lang,
                 xAxis: newUserXAxis,
                 yAxis: newUserYAxis,
                 tooltip: newUserTooltip,
@@ -157,15 +222,12 @@
             };
             var jsonNewBuy = {
                 title: newBuyTitle,
-                lang: lang,
                 xAxis: newBuyXAxis,
                 legend: legend,
                 yAxis: newBuyYAxis,
                 tooltip: newBuyTooltip,
                 series: newBuySeries,
             };
-
-
 
 
             Highcharts.setOptions({
