@@ -24,21 +24,27 @@
     <div id="mainBody" class="s1c-Bg box-show3">
 
         <div style="width:100%; height:320px; margin:48px 0 38px;">
-            <div class="glass-Bg box-show3" style="width:66%; height:320px; margin:0 auto 0 3%; display:inline-block; box-sizing:border-box;">
-                每天的新用户 & 新会员
-            </div>
+
+            <!-- 每天的新用户 & 新会员 [折线图]  -->
+            <div id="newUserCharts" class="glass-Bg box-show3" style="width:66%; height:320px; margin:0 auto 0 3%; display:inline-block; box-sizing:border-box;"></div>
+
             <div class="glass-Bg box-show3" style="width:22%; height:320px; margin:0 3% 0 auto; float:right; box-sizing:border-box;">
                 每天的新问卷 -- 还没批阅<br/>
                 [status == 0]
             </div>
         </div>
 
-        <div class="glass-Bg box-show3" style="width:94%; height:328px; margin:58px auto;">
-            每天的歌曲出售情况
-        </div>
+        <!-- 每天的全部歌曲出售情况 [折线图]  -->
+        <div id="newBuyCharts" class="glass-Bg box-show3" style="width:94%; height:328px; margin:58px auto;"></div>
     </div>
 
 
+
+    <!-- jQuery框架 -->
+    <script src="../../js/common/jquery-3.1.1.min.js" type="text/javascript"></script>
+
+    <!-- highcharts插件 -->
+    <script type="text/javascript" src="../../plugins/highcharts/highcharts.js"></script>
 
     <script type="text/javascript">
 
@@ -55,6 +61,103 @@
 
             window.top.preSecondMenuObj = null;
         }
+
+
+        $(document).ready(function () {
+            /*主要画图区域显示样式*/
+
+            /*标题*/
+            var newUserTitle = {
+                text: '新用户注册/新会员情况',
+            };
+            var newBuyTitle = {
+                text: '歌曲出售情况',
+            };
+
+            /*X轴*/
+            var newUserXAxis = {
+                categories: ['XX/XX', 'XX/XX', '昨天', '今天', '明天'],
+            };
+            var newBuyXAxis = {
+                categories: ['XX/XX', 'XX/XX', 'XX/XX', '昨天', '今天', '明天'],
+            };
+
+            /*Y轴*/
+            var newUserYAxis = {
+                title: {
+                    text: '人数 (人)'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                }]
+            };
+            var newBuyYAxis = {
+                title: {
+                    text: '歌曲数量 (首)'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                }]
+            };
+
+            /*单位*/
+            var newUserTooltip = {
+                valueSuffix: '人'
+            };
+            var newBuyTooltip = {
+                valueSuffix: '首'
+            };
+
+            /*每个分类对应的数据*/
+            var newUserSeries = [
+                {
+                    name: '新用户',
+                    data: [21, 78, 128, 69, 0]
+                },
+                {
+                    name: '新会员',
+                    data: [67, 48, 64, 38, 0]
+                }
+            ];
+
+            var newBuySeries = [
+                {
+                    name: '歌曲出售',
+                    data: [21, 67, 78, 128, 69, 0]
+                }
+            ];
+
+
+            var jsonNewUser = {
+                title: newUserTitle,
+                xAxis: newUserXAxis,
+                yAxis: newUserYAxis,
+                tooltip: newUserTooltip,
+                series: newUserSeries,
+            };
+            var jsonNewBuy = {
+                title: newBuyTitle,
+                xAxis: newBuyXAxis,
+                yAxis: newBuyYAxis,
+                tooltip: newBuyTooltip,
+                series: newBuySeries,
+            };
+
+
+
+
+            Highcharts.setOptions({
+                colors: ['#9D7FFF', '#22E8FF']
+            });
+            $('#newUserCharts').highcharts(jsonNewUser);
+
+            Highcharts.setOptions({
+                colors: ['#57E692']
+            });
+            $('#newBuyCharts').highcharts(jsonNewBuy);
+        });
     </script>
 
 
