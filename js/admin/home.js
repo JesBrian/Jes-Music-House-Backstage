@@ -36,7 +36,7 @@ layoutSize();   //后台页面第一次打开时设置布局
         $.mCustomScrollbar.defaults.scrollButtons.enable=true;
         $.mCustomScrollbar.defaults.axis="y";
 
-        $("#mainMenuContent").mCustomScrollbar({theme:"inset-2"});
+        $("#mainMenuContent").mCustomScrollbar({theme:"minimal"});
     });
 })(jQuery);
 $(window).resize(function () {  //改变浏览器窗口时
