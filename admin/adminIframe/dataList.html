@@ -83,7 +83,7 @@
             color:#AAA;
         }
         #dataListPaging a:hover {
-            color:#DDD;
+            color:#57E692;
             text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
             -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 8px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
             -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 8px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
@@ -107,6 +107,26 @@
             cursor:not-allowed;
         }
 
+
+
+        .superInput + label {
+            width:15px;
+            height:15px;
+            margin:0;
+            font-size:18px;
+            font-weight:900;
+            line-height:17px;
+        }
+        .superInput + label > i {
+            margin-left:-6px;
+        }
+
+        .superInput + label:after {
+            top:0;
+            left:-10.5px;
+            width:15px;
+            height:15px;
+        }
     </style>
 
 
@@ -148,7 +168,7 @@
         <table class="accountTable" style="width:100%;">
             <thead>
             <tr>
-                <th style="width:38px;"><input type="checkbox" name="quality"></th>
+                <th style="width:38px;"><input type="checkbox" class="superInput" id='checkAll'><label for='checkAll'><i>√</i></label></th>
                 <th colspan="4">操作</th>
                 <th>名字</th>
                 <th>图片</th>
@@ -158,7 +178,7 @@
 
             <tbody>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-1' name="dataList"><label for='data-1'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF public" title="公开" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据私有？ [其他用户无法访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -168,7 +188,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-2' name="dataList"><label for='data-2'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF private" title="私有" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据公开？ [其他用户可以进行访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -178,7 +198,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-3' name="dataList"><label for='data-3'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -188,7 +208,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-4' name="dataList"><label for='data-4'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF public" title="公开" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据私有？ [其他用户无法访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -198,7 +218,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-5' name="dataList"><label for='data-5'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF private" title="私有" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据公开？ [其他用户可以进行访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -208,7 +228,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-6' name="dataList"><label for='data-6'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -218,7 +238,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-7' name="dataList"><label for='data-7'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF public" title="公开" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据私有？ [其他用户无法访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -228,7 +248,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-8' name="dataList"><label for='data-8'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF private" title="私有" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据公开？ [其他用户可以进行访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -238,7 +258,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-9' name="dataList"><label for='data-9'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -248,7 +268,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-10' name="dataList"><label for='data-10'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF public" title="公开" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据私有？ [其他用户无法访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -258,7 +278,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-11' name="dataList"><label for='data-11'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF private" title="私有" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据公开？ [其他用户可以进行访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -268,7 +288,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-12' name="dataList"><label for='data-12'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -278,7 +298,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-13' name="dataList"><label for='data-13'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF public" title="公开" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据私有？ [其他用户无法访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -288,7 +308,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-14' name="dataList"><label for='data-14'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF private" title="私有" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要将该条数据公开？ [其他用户可以进行访问]');"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -298,7 +318,7 @@
                 <td>January</td>
             </tr>
             <tr>
-                <td style="text-align:center;"><input type="checkbox" name="quality"></td>
+                <td style="text-align:center;"><input type="checkbox" class="superInput" id='data-15' name="dataList"><label for='data-15'><i>√</i></label></td>
                 <td class="accountTableOper"><i class="MyIF check" title="审核中"></i></td>
                 <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
                 <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
@@ -314,10 +334,10 @@
 
     <!-- 后台跳转分页 -->
     <nav id="pagingContent" style="width:100%; text-align:center;">
-        <div class="glass-Bg box-show3" style="width:820px; height:48px; margin:18px auto 38px; display:inline-block; background:#181818;">
+        <div class="glass-Bg box-show3" style="width:900px; height:48px; margin:18px auto 38px; display:inline-block; background:#181818;">
 
-            <div style="width:620px; height:48px; float:left;">
-                <table id="dataListPaging" style="width:88%; height:100%; margin:0 auto; text-align:center;">
+            <div style="width:680px; height:48px; float:left;">
+                <table id="dataListPaging" style="width:90%; height:100%; margin:0 auto; text-align:center;">
                     <tr style="margin:0; padding:0;">
                         <td>
                             <a class="glass-Bg box-show3 ban" style="width:28px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
@@ -330,34 +350,34 @@
                             </a>
                         </td>
                         <td>
-                            <a class="glass-Bg box-show3" style="width:45px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                            <a class="glass-Bg box-show3" style="width:60px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
                                 1
                             </a>
                         </td>
                         <td>
-                            <a class="glass-Bg box-show3 active" style="width:45px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                            <a class="glass-Bg box-show3 active" style="width:60px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
                                 2
                             </a>
                         </td>
                         <td>
-                            <a class="glass-Bg box-show3" style="width:45px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                            <a class="glass-Bg box-show3" style="width:60px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
                                 3
                             </a>
                         </td>
                         <td style="position:relative; width:20px;"><span style="left:0; top:12px; position:absolute; font-weight:900;">...</span></td>
                         <td>
-                            <a class="glass-Bg box-show3" style="width:45px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
-                                66
+                            <a class="glass-Bg box-show3" style="width:60px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                6666
                             </a>
                         </td>
                         <td>
-                            <a class="glass-Bg box-show3" style="width:45px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
-                                888
+                            <a class="glass-Bg box-show3" style="width:60px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                88888
                             </a>
                         </td>
                         <td>
-                            <a class="glass-Bg box-show3" style="width:45px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
-                                9999
+                            <a class="glass-Bg box-show3" style="width:60px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                999999
                             </a>
                         </td>
                         <td>
@@ -374,8 +394,8 @@
                 </table>
             </div>
 
-            <div id="goPageNum" style="width:200px; height:48px; float:right; line-height:50px; text-align:left; color:#999; font-weight:600;">
-                跳转至 <input type="text" name="" class="s1c-Bg box-show3" style="width:48px; padding:5px 3px; text-align:center; color:#BBB; font-size:16px; font-weight:700;"> 页
+            <div id="goPageNum" style="width:220px; height:48px; float:right; line-height:50px; text-align:left; color:#999; font-weight:600;">
+                跳转至 <input type="text" name="" class="s1c-Bg box-show3" style="width:68px; padding:5px 3px; text-align:center; color:#BBB; font-size:16px; font-weight:700;"> 页
                 <i class="MyIF exit-1" style="margin:0 12px; position:absolute; font-size:30px;"></i>
             </div>
 
@@ -389,6 +409,18 @@
         $('a.accountOperIframeUrl').click(function () {
             window.top.accountOperIframeObj.attr('src', $(this).attr('dataUrl'));
         });
+
+
+        $('#checkAll').change(function () {
+            $("input[name=dataList]").each(function(){
+                if($("#checkAll").prop("checked") == true){
+                    $(this).prop('checked', true);
+                }
+                else{
+                    $(this).prop('checked', false);
+                }
+            })
+        })
 
     </script>
 
