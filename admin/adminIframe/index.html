@@ -35,7 +35,7 @@
         </div>
 
         <!-- 每天的全部歌曲出售情况 [折线图]  -->
-        <div id="newBuyCharts" class="glass-Bg box-show3" style="width:94%; height:328px; margin:58px auto;"></div>
+        <div id="newBuyCharts" class="glass-Bg box-show3" style="width:94%; height:388px; margin:58px auto;"></div>
     </div>
 
 
@@ -45,6 +45,7 @@
 
     <!-- highcharts插件 -->
     <script type="text/javascript" src="../../plugins/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="../../plugins/highcharts/exporting.js"></script>
 
     <script type="text/javascript">
 
@@ -68,7 +69,7 @@
 
             /*标题*/
             var newUserTitle = {
-                text: '新用户注册/新会员情况',
+                text: '新用户 / 新会员',
             };
             var newBuyTitle = {
                 text: '歌曲出售情况',
@@ -80,6 +81,13 @@
             };
             var newBuyXAxis = {
                 categories: ['XX/XX', 'XX/XX', 'XX/XX', '昨天', '今天', '明天'],
+            };
+
+            var legend = {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
             };
 
             /*Y轴*/
@@ -129,9 +137,19 @@
                 }
             ];
 
+            var lang = {
+                downloadJPEG: "下载JPEG 图片",
+                downloadPDF: "下载PDF文档",
+                downloadPNG: "下载PNG 图片",
+                downloadSVG: "下载SVG 矢量图",
+                exportButtonTitle: "导出图片",
+            };
+
+
 
             var jsonNewUser = {
                 title: newUserTitle,
+                lang: lang,
                 xAxis: newUserXAxis,
                 yAxis: newUserYAxis,
                 tooltip: newUserTooltip,
@@ -139,7 +157,9 @@
             };
             var jsonNewBuy = {
                 title: newBuyTitle,
+                lang: lang,
                 xAxis: newBuyXAxis,
+                legend: legend,
                 yAxis: newBuyYAxis,
                 tooltip: newBuyTooltip,
                 series: newBuySeries,
