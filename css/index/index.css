@@ -165,8 +165,61 @@ footer>.box-show1 {  width:1350px; height:98px; margin:0 auto; z-index:4; positi
 
 
     /* 浮动导航栏 */
-#float-nav {  width:38px;  position:absolute;  right:-8px;  bottom:123px; z-index:-1; }
-#float-nav li {  width:40px;  height:40px;  float:left;  position:relative;  margin-top:10px;  background: #222222;  }
-#float-nav li a {  cursor:default;  position:absolute;  width:40px;  height:40px;  top:0;  right:0;  overflow:hidden;  transition:all 0.3s;  opacity:0.6;  filter:Alpha(opacity=60);  color:#fff;  font:13px/40px "微软雅黑";  background:#222222;  -webkit-box-shadow:0 0 2px 2px #809cdf;  -moz-box-shadow:0 0 2px 2px #809cdf;  box-shadow:0 0 2px 2px #809cdf;  }
-#float-nav li a:hover {  width:100px;  opacity:1;  filter:Alpha(opacity=100);  -webkit-box-shadow:0 0 2px 2px #49DFFF;  -moz-box-shadow:0 0 2px 2px #49DFFF;  box-shadow:0 0 2px 2px #49DFFF;  }
-#float-nav span {  height:30px;  width:27px;  border:5px solid black;  background-color: #01c7de;  padding-left:3px;  margin-right:4px;  float:left;  color:white;  font-size:25px;  line-height:29px;  }
+#float-nav {
+    width: 38px;
+    position: absolute;
+    right: -8px;
+    bottom: 126px;
+    z-index: -1;
+}
+
+#float-nav li {
+    width: 40px;
+    height: 40px;
+    float: left;
+    position: relative;
+    margin-top: 10px;
+}
+
+#float-nav a {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    right: 0;
+    border-radius:2px;
+    overflow: hidden;
+    transition: all 0.3s;
+    opacity: 0.6;
+    filter: Alpha(opacity=60);
+    color: #fff;
+    font: 13px/40px "微软雅黑";
+    -webkit-box-shadow: 0 0 2px 2px #809cdf;
+    -moz-box-shadow: 0 0 2px 2px #809cdf;
+    box-shadow: 0 0 2px 2px #809cdf;
+}
+
+#float-nav a:hover {
+    width: 100px;
+    opacity: 1;
+    filter: Alpha(opacity=100);
+    -webkit-box-shadow: 0 0 2px 2px #49DFFF;
+    -moz-box-shadow: 0 0 2px 2px #49DFFF;
+    box-shadow: 0 0 2px 2px #49DFFF;
+}
+
+#float-nav a:hover > span {
+    color:lightgreen;
+}
+
+#float-nav span {
+    height: 30px;
+    width: 27px;
+    border: 5px solid transparent;
+    padding-left: 3px;
+    margin-right: 4px;
+    float: left;
+    color: #67F2FF;
+    font-size: 25px;
+    line-height: 29px;
+}

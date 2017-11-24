@@ -1,0 +1,11 @@
+.loginInput {
+    width:300px; padding:9px 56px 9px 16px; background:transparent; box-shadow:0 0 6px #666; font-size:18px; color:#888;
+}
+
+.loginInput:focus {
+    box-shadow:0 0 13px #9d7fff; color:#2fb8ff;
+}
+
+.loginInputIcon {
+    width:36px; height:36px; top:12.5px; left:335.5px; position:absolute; background:#333; font-size:28px; line-height:36px; text-align:center; color:#00ccff;
+}
