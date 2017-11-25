@@ -3,13 +3,53 @@
 CREATE DATABASE MusicHouse;
 USE MusicHouse;
 
+/* MH后台菜单表 -- 设置后台菜单，分一、二级菜单 */
+CREATE TABLE mh_menu
+(
+  id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(28) NOT NULL DEFAULT '' COMMENT '菜单名称',
+  parent_id TINYINT UNSIGNED DEFAULT 0 COMMENT '菜单的父ID [如果是二级菜单则该字段记录一级菜单的ID]',
+  level TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '菜单的优先级 [后台左侧菜单栏显示顺序]',
+  status BIT NOT NULL DEFAULT 1 COMMENT '菜单状态 [默认是 1 正常，还有 0 非正常状态]'
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-/* 权限表 -- 设置普通用户-5、会员-4、歌手-3、普通管理员-2、超级管理员权限-1 */
+INSERT mh_menu(name, parent_id, level)
+  VALUES ('系统管理',0,127);
+INSERT mh_menu(name, parent_id, level)
+  VALUES ('菜单管理',1,52);
+INSERT mh_menu(name, parent_id, level)
+  VALUES ('权限管理',1,48);
+INSERT mh_menu(name, parent_id, level)
+  VALUES ('角色管理',1,46);
+INSERT mh_menu(name, parent_id, level)
+  VALUES ('登陆日志',1,44);
+
+INSERT mh_menu(name, parent_id, level)
+  VALUES ('人员管理',0,125);
+INSERT mh_menu(name, parent_id, level)
+  VALUES ('歌手管理',6,52);
+INSERT mh_menu(name, parent_id, level)
+  VALUES ('会员管理',6,50);
+INSERT mh_menu(name, parent_id, level)
+  VALUES ('用户管理',6,48);
+
+
+
+
+/* MH权限表 -- 设置普通用户-5、会员-4、歌手-3、普通管理员-2、超级管理员权限-1 */
 CREATE TABLE mh_power
 (
-  id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY COMMENT '权限类型[ 1-超级管理员 / 2-普通管理员 / 3-歌手 / 4-会员 / 5-普通用户 ]',
-  operIdList VARCHAR(100) NOT NULL DEFAULT '' COMMENT '该权限下可以操作的菜单列表[记录菜单id列表，用、连接]'
+  id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  type VARCHAR(18) UNIQUE NOT NULL DEFAULT '' COMMENT '权限类型[ superadmin-超级管理员 / admin-普通管理员 / singer-歌手 / member-会员 / user-普通用户 ]',
+  operIdList VARCHAR(128) NOT NULL DEFAULT '' COMMENT '该权限下可以操作的菜单列表[记录菜单id列表，用、连接]'
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT mh_power(type,operIdList)
+  VALUES ('superadmin','1,2,3,4,5,6,7,8,9');
+INSERT mh_power(type,operIdList)
+  VALUES ('admin','6,7,8,9');
+
+
 
 
 /* MH管理员表 -- 进入后台对整个系统调整 */
@@ -27,6 +67,20 @@ CREATE TABLE mh_admin
   bankNo VARCHAR(30) NOT NULL DEFAULT '' COMMENT '管理员的银行账号',
   powerId TINYINT UNSIGNED NOT NULL DEFAULT '2' COMMENT '权限类型[默认是 2，为普通管理员，还有 1 是超级管理员 ]'
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT mh_admin(loginName, salt, passwd, realName, phone, IDCardNo, IDCardImg, bankName, bankNo, powerId)
+  VALUES ('JesBrian','5354','cdea1aa30d43748122c2e67a92089e12','苏敬雄','12345698745','123456789874563212','IDCardImg','XX银行','12345678987746513',1);
+
+
+
+
+/* MH管理员登陆日志 */
+CREATE TABLE mh_login_log
+(
+  adminId TINYINT UNSIGNED NOT NULL,
+  loginTime INT UNSIGNED NOT NULL COMMENT '管理员账户每次登陆时间',
+  INDEX login_log_adminId(adminId)
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH用户表 -- 普通注册用户 */
