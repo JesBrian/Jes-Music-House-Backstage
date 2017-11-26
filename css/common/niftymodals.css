@@ -39,6 +39,12 @@
 #ortherLogin>a {  margin:18px 0;  }
         /* 修改头像 -- 因为插件有冲突所以用的是iframe */
 #modal-uploadAvatar iframe {  width:100%; height:428px; border:none;  }
+        /* 新建歌单 */
+#modal-newAlbum form {  width:100%; height:200px;  }
+#modal-newAlbum table {  width:100%; height:100%;  }
+#modal-newAlbum table tr:first-child {  height:108px;  }
+#modal-newAlbum form input {  width:250px; height:25px; padding:5px 8px; font-size:15px; font-weight:600; letter-spacing:1.2px; color:#30CDFF;  }
+#modal-newAlbum a.superBtn {  margin:73px 28px 0; position:relative;  }
         /* 收藏歌曲 */
 #modal-collection {  width:760px;  }
 #modal-collection>.md-content {  height:388px; position:relative;  }
@@ -77,13 +83,18 @@
 #modal-singerLogin input[type="text"] {  width:56%; padding:3px 8px; font-size:25px; font-weight:600; color:#00CDFF; letter-spacing:1.5pt; line-height:1.2em; text-align:center;  }
 #modal-singerLogin > .md-content > p {  margin-bottom:8px; text-align:center;  }
 #modal-singerLogin > .md-content > span {  bottom:3px; right:338px; position:absolute; z-index:9;  }
-
-
-
-
-
-        /* 选择歌单分类 -- 等待施工 */
+        /* 选择歌单风格 */
 #modal-category {  width:920px;  }
+#modal-category>.md-content>div {  padding-right:36px;  }
+#allStyleButton {  width:100%; height:48px; position:relative; z-index:5;  }
+#allStyleButton>span {  font-size:22px; font-weight:900;  }
+#allStyleButton>a {  top:0; margin:8px 188px 0 0; float:right;  }
+#styleList {  width:100%; margin:18px 0 32px; color:#1A9EE6; font-weight:900;  }
+#styleList tr td:first-child {  width:14%; border-right:2px solid #1A9EE6; text-align:center; color:#7A77E6; font-size:20px; font-weight:900;  }
+#styleList tr td:first-child > i {  color:#1A9EE6; font-size:25px;  }
+#styleList tr td {  padding:8px 18px; line-height:1.5em; border-top:2px solid #1A9EE6; border-bottom:2px solid #1A9EE6;  }
+#styleList tr span {  display:inline-block;  }
+#styleList tr span > a {  margin-right:10px; color:#FFF; font-size:17px; font-weight:500; line-height:1.6em; text-shadow:0.1px 0.1px 1px #666;  }
 
 
 

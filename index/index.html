@@ -662,23 +662,22 @@
         <div class="md-content">
             <h3><img src="../img/icon/menu.png">新建歌单</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
-            <form style="width:100%; height:228px;">
-                <table style="width:100%; height:100%;">
-                    <tr style="height:108px;">
+            <form>
+                <table>
+                    <tr>
                         <td style="width:38%; padding-right:28px; text-align:right; font-size:18px;"><i class="MyIF kinds" style="color:#1A9EE6; font-size:26px;"></i> 歌单名</td>
-                        <td style="text-align:left;"><input class="s1c-Bg box-show3" type="text" name="albumName" style="width:250px; height:25px; padding:5px 8px; font-size:15px; font-weight:600; letter-spacing:1.2px; color:#30CDFF;"></td>
+                        <td style="text-align:left;"><input class="s1c-Bg box-show3" type="text" name="albumName"></td>
                     </tr>
                     <tr>
-                        <td colspan="2" style="text-align:center; font-size:15px;">可通过各种 “ 收藏 ” 按钮将音乐添加到新歌单中</td>
+                        <td colspan="2" style="position:relative; text-align:center; font-size:15px;">可通过各种 “ 收藏 ” 按钮将音乐添加到新歌单中</td>
                     </tr>
                     <tr>
                         <td colspan="2" style="position:relative; text-align:center;">
-                            <a class="superBtn joinSinger md-close MyIF cancel" style="margin:58px 28px 0; position:relative;"> 取消返回</a>
-                            <a class="superBtn joinSinger md-close MyIF makesure" style="margin:58px 28px 0; position:relative;"> 确定新建</a>
+                            <a class="superBtn joinSinger md-close MyIF cancel"> 取消返回</a>
+                            <a class="superBtn joinSinger md-close MyIF makesure" onclick="alertTips(1,'歌曲/歌单收藏成功！')"> 确定新建</a>
                         </td>
                     </tr>
                 </table>
-
             </form>
         </div>
     </div>
@@ -786,116 +785,116 @@
         <div class="md-content">
             <h3><img src="../img/icon/cube-3.png">选择分类</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
-            <div style="padding-right:36px;">
-                <div href="#" style="width:100%; height:48px; position:relative; z-index:5;">
-                    <span style="font-size:22px; font-weight:900;">选择风格</span>
-                    <a class="joinSinger superBtn md-close" style="top:0; margin:8px 188px 0 0; float:right;">全部风格</a>
+            <div>
+                <div id="allStyleButton">
+                    <span>选择风格</span>
+                    <a class="joinSinger superBtn md-close">全部风格</a>
                 </div>
 
-                <table style="width:100%; margin:18px 0 32px; color:#1A9EE6; font-weight:900;">
+                <table id="styleList">
                     <tr>
-                        <td style="width:14%; border-right:1px solid #1A9EE6; text-align:center; color:#7A77E6; font-size:18px; font-weight:900;">
-                            <i class="MyIF earth" style="color:#1A9EE6; font-size:25px;"></i> 语种
+                        <td>
+                            <i class="MyIF earth"></i> 语种
                         </td>
-                        <td style="padding:8px 18px; line-height:1.5em; border-bottom:1px solid #1A9EE6;">
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">华语</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">欧美</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">日语</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">韩语</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">粤语</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">小语种</a>|</span>
+                        <td>
+                            <span><a class="hover-undeline">华语</a>|</span>
+                            <span><a class="hover-undeline">欧美</a>|</span>
+                            <span><a class="hover-undeline">日语</a>|</span>
+                            <span><a class="hover-undeline">韩语</a>|</span>
+                            <span><a class="hover-undeline">粤语</a>|</span>
+                            <span><a class="hover-undeline">小语种</a>|</span>
                         </td>
                     </tr>
                     <tr>
-                        <td style="width:14%; border-right:1px solid #1A9EE6; text-align:center; color:#7A77E6; font-size:18px; font-weight:900;">
-                            <i class="MyIF instrument" style="color:#1A9EE6; font-size:25px;"></i> 风格
+                        <td>
+                            <i class="MyIF instrument"></i> 风格
                         </td>
-                        <td style="padding:8px 18px; line-height:1.5em; border-bottom:1px solid #1A9EE6;">
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">流行</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">摇滚</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">民谣</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">电子</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">舞曲</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">说唱</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">爵士</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">轻音乐</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">乡村</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">R&B/Soul</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">民族</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">英伦</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">金属</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">朋克</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">蓝调</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">雷鬼</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">世界音乐</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">拉丁</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">另类/独立</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">New Age</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">古风</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">后摇</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">Bossa Nova</a>|</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width:14%; border-right:1px solid #1A9EE6; text-align:center; color:#7A77E6; font-size:18px; font-weight:900;">
-                            <i class="MyIF cofee" style="color:#1A9EE6; font-size:25px;"></i> 场景
-                        </td>
-                        <td style="padding:8px 18px; line-height:1.5em; border-bottom:1px solid #1A9EE6;">
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">清晨</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">夜晚</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">学习</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">工作</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">午休</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">下午茶</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">地铁</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">驾车</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">运动</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">旅行</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">散步</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">酒吧</a>|</span>
+                        <td>
+                            <span><a class="hover-undeline">流行</a>|</span>
+                            <span><a class="hover-undeline">摇滚</a>|</span>
+                            <span><a class="hover-undeline">民谣</a>|</span>
+                            <span><a class="hover-undeline">电子</a>|</span>
+                            <span><a class="hover-undeline">舞曲</a>|</span>
+                            <span><a class="hover-undeline">说唱</a>|</span>
+                            <span><a class="hover-undeline">爵士</a>|</span>
+                            <span><a class="hover-undeline">轻音乐</a>|</span>
+                            <span><a class="hover-undeline">乡村</a>|</span>
+                            <span><a class="hover-undeline">R&B/Soul</a>|</span>
+                            <span><a class="hover-undeline">民族</a>|</span>
+                            <span><a class="hover-undeline">英伦</a>|</span>
+                            <span><a class="hover-undeline">金属</a>|</span>
+                            <span><a class="hover-undeline">朋克</a>|</span>
+                            <span><a class="hover-undeline">蓝调</a>|</span>
+                            <span><a class="hover-undeline">雷鬼</a>|</span>
+                            <span><a class="hover-undeline">世界音乐</a>|</span>
+                            <span><a class="hover-undeline">拉丁</a>|</span>
+                            <span><a class="hover-undeline">另类/独立</a>|</span>
+                            <span><a class="hover-undeline">New Age</a>|</span>
+                            <span><a class="hover-undeline">古风</a>|</span>
+                            <span><a class="hover-undeline">后摇</a>|</span>
+                            <span><a class="hover-undeline">Bossa Nova</a>|</span>
                         </td>
                     </tr>
                     <tr>
-                        <td style="width:14%; border-right:1px solid #1A9EE6; text-align:center; color:#7A77E6; font-size:18px; font-weight:900;">
-                            <i class="MyIF exciting" style="color:#1A9EE6; font-size:25px;"></i> 情感
+                        <td>
+                            <i class="MyIF cofee"></i> 场景
                         </td>
-                        <td style="padding:8px 18px; line-height:1.5em; border-bottom:1px solid #1A9EE6;">
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">怀旧</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">清新</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">浪漫</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">性感</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">伤感</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">治愈</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">放松</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">孤独</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">感动</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">兴奋</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">快乐</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">安静</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">思念</a>|</span>
+                        <td>
+                            <span><a class="hover-undeline">清晨</a>|</span>
+                            <span><a class="hover-undeline">夜晚</a>|</span>
+                            <span><a class="hover-undeline">学习</a>|</span>
+                            <span><a class="hover-undeline">工作</a>|</span>
+                            <span><a class="hover-undeline">午休</a>|</span>
+                            <span><a class="hover-undeline">下午茶</a>|</span>
+                            <span><a class="hover-undeline">地铁</a>|</span>
+                            <span><a class="hover-undeline">驾车</a>|</span>
+                            <span><a class="hover-undeline">运动</a>|</span>
+                            <span><a class="hover-undeline">旅行</a>|</span>
+                            <span><a class="hover-undeline">散步</a>|</span>
+                            <span><a class="hover-undeline">酒吧</a>|</span>
                         </td>
                     </tr>
                     <tr>
-                        <td style="width:14%; border-right:1px solid #1A9EE6; text-align:center; color:#7A77E6; font-size:18px; font-weight:900;">
-                            <i class="MyIF kinds" style="color:#1A9EE6; font-size:25px;"></i> 主题
+                        <td>
+                            <i class="MyIF exciting"></i> 情感
                         </td>
-                        <td style="padding:8px 18px; line-height:1.5em;">
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">影视原声</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">ACG</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">游戏</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">70后</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">80后</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">90后</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">00后</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">网络歌曲</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">KTV</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">经典</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">翻唱</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">吉他</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">钢琴</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">器乐</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">儿童</a>|</span>
-                            <span style="display:inline-block;"><a class="hover-undeline" style="margin-right:8px; color:#FFF; font-weight:300;">榜单</a>|</span>
+                        <td>
+                            <span><a class="hover-undeline">怀旧</a>|</span>
+                            <span><a class="hover-undeline">清新</a>|</span>
+                            <span><a class="hover-undeline">浪漫</a>|</span>
+                            <span><a class="hover-undeline">性感</a>|</span>
+                            <span><a class="hover-undeline">伤感</a>|</span>
+                            <span><a class="hover-undeline">治愈</a>|</span>
+                            <span><a class="hover-undeline">放松</a>|</span>
+                            <span><a class="hover-undeline">孤独</a>|</span>
+                            <span><a class="hover-undeline">感动</a>|</span>
+                            <span><a class="hover-undeline">兴奋</a>|</span>
+                            <span><a class="hover-undeline">快乐</a>|</span>
+                            <span><a class="hover-undeline">安静</a>|</span>
+                            <span><a class="hover-undeline">思念</a>|</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="MyIF kinds"></i> 主题
+                        </td>
+                        <td>
+                            <span><a class="hover-undeline">影视原声</a>|</span>
+                            <span><a class="hover-undeline">ACG</a>|</span>
+                            <span><a class="hover-undeline">游戏</a>|</span>
+                            <span><a class="hover-undeline">70后</a>|</span>
+                            <span><a class="hover-undeline">80后</a>|</span>
+                            <span><a class="hover-undeline">90后</a>|</span>
+                            <span><a class="hover-undeline">00后</a>|</span>
+                            <span><a class="hover-undeline">网络歌曲</a>|</span>
+                            <span><a class="hover-undeline">KTV</a>|</span>
+                            <span><a class="hover-undeline">经典</a>|</span>
+                            <span><a class="hover-undeline">翻唱</a>|</span>
+                            <span><a class="hover-undeline">吉他</a>|</span>
+                            <span><a class="hover-undeline">钢琴</a>|</span>
+                            <span><a class="hover-undeline">器乐</a>|</span>
+                            <span><a class="hover-undeline">儿童</a>|</span>
+                            <span><a class="hover-undeline">榜单</a>|</span>
                         </td>
                     </tr>
                 </table>
