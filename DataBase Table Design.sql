@@ -65,7 +65,8 @@ CREATE TABLE mh_admin
   IDCardImg VARCHAR(255) NOT NULL DEFAULT '' COMMENT '管理员证件图片[正反两面，使用 ，分隔 - 长度有可能不足]',
   bankName VARCHAR(30) NOT NULL DEFAULT '' COMMENT '管理员的银行名称',
   bankNo VARCHAR(30) NOT NULL DEFAULT '' COMMENT '管理员的银行账号',
-  powerId TINYINT UNSIGNED NOT NULL DEFAULT '2' COMMENT '权限类型[默认是 2，为普通管理员，还有 1 是超级管理员 ]'
+  powerId TINYINT UNSIGNED NOT NULL DEFAULT '2' COMMENT '权限类型[默认是 2，为普通管理员，还有 1 是超级管理员 ]',
+  status BIT NOT NULL DEFAULT 1 COMMENT '管理员账户状态 [默认是 1 正常，还有 0 非正常状态]'
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT mh_admin(loginName, salt, passwd, realName, phone, IDCardNo, IDCardImg, bankName, bankNo, powerId)
@@ -77,7 +78,7 @@ INSERT mh_admin(loginName, salt, passwd, realName, phone, IDCardNo, IDCardImg, b
 /* MH管理员登陆日志 */
 CREATE TABLE mh_login_log
 (
-  adminId TINYINT UNSIGNED NOT NULL,
+  adminId TINYINT UNSIGNED NOT NULL COMMENT '管理员账户ID',
   loginTime INT UNSIGNED NOT NULL COMMENT '管理员账户每次登陆时间',
   INDEX login_log_adminId(adminId)
 )ENGINE=Innodb DEFAULT CHARSET=utf8;
@@ -104,12 +105,12 @@ CREATE TABLE mh_user
 /* MH用户表其他信息表 -- 注册用户之后就会自动产生, 记录用户其他一些不常用的信息 */
 CREATE TABLE mh_user_info
 (
-  userId INT UNSIGNED PRIMARY KEY ,
-  sex TINYINT DEFAULT 0 COMMENT '用户性别[默认是 0 男，1 为女，3 为保密秀吉]',
-  date INT DEFAULT 0 COMMENT '用户出生日期',
+  userid INT UNSIGNED PRIMARY KEY ,
+  sex TINYINT UNSIGNED DEFAULT 0 COMMENT '用户性别[默认是 0 男，1 为女，3 为保密秀吉]',
+  `date` INT UNSIGNED DEFAULT 0 COMMENT '用户出生日期',
   address VARCHAR(10) DEFAULT '' COMMENT '用户地址',
   description VARCHAR(255) DEFAULT '' COMMENT '用户简介',
-  mail VARCHAR(60) DEFAULT '' COMMENT '用户邮箱'
+  mail VARCHAR(38) DEFAULT '' COMMENT '用户邮箱'
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
@@ -118,7 +119,7 @@ CREATE TABLE mh_userXX_listen
 (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
   songId INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '歌曲对应的ID',
-  listenNum INT UNSIGNED DEFAULT 0 COMMENT '歌曲对应聆听次数',
+  listenNum TINYINT UNSIGNED DEFAULT 0 COMMENT '歌曲对应聆听次数',
   INDEX userlisten_listenNum(listenNum)
 )ENGINE=Innodb DEFAULT CHARSET=utf8;
 
@@ -126,9 +127,7 @@ CREATE TABLE mh_userXX_listen
 /* MH会员表 -- 普通用户付钱后成为会员 */
 CREATE TABLE mh_member
 (
-  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
-  userId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '保存对应的用户id',
-  timeSpan TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '用户开通会员的时间长度[ 1-一个月 / 2-两个月 / 3-三个月 / 4-半年 / 5-一年]',
+  userId INT UNSIGNED UNIQUE NOT NULL DEFAULT 0 COMMENT '保存对应的用户id',
   timeOut INT UNSIGNED NOT NULL COMMENT '用户会员到期时间',
   status BIT NOT NULL DEFAULT 1 COMMENT '用户会员账户状态[默认是 1 正常，还有 0 非正常状态]',
   createTime INT UNSIGNED NOT NULL COMMENT '用户开通会员时间[可以用于每天新会员 - 保存在 XX 表中]',
@@ -179,10 +178,10 @@ CREATE TABLE mh_album
 (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
   albumName VARCHAR(35) NOT NULL DEFAULT '' COMMENT '歌单名称',
-  songIdList TEXT COMMENT '歌单所收集的所有歌曲列表[记录歌曲ID使用 , 分隔]',
   albumImg VARCHAR(255) DEFAULT '' COMMENT '歌单的封面图片所在路径',
   albumStyle VARCHAR(35) DEFAULT '' COMMENT '歌单所属风格列表[记录风格ID使用 , 分隔且限制只能有三个不同的风格]',
   albumType BIT NOT NULL DEFAULT 0 COMMENT '歌单创建的类型[ 0-普通用户歌单 / 1-歌曲专辑]',
+  songIdList TEXT COMMENT '歌单所收集的所有歌曲列表[记录歌曲ID使用 , 分隔]',
   createBy VARCHAR(25) NOT NULL DEFAULT '' COMMENT '创建人是谁',
   createTime INT UNSIGNED NOT NULL COMMENT '该歌单创建时间',
   INDEX album_albumType(albumType),
@@ -196,11 +195,11 @@ CREATE TABLE mh_song
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
   songName VARCHAR(35) NOT NULL DEFAULT '' COMMENT '歌曲名称',
   singerId VARCHAR(35) NOT NULL DEFAULT '' COMMENT '歌曲的创作人列表[记录歌手的ID使用 , 分隔]',
-  songLyric VARCHAR(255) DEFAULT '' COMMENT '歌曲的歌词文件所在路径',
+  lyric VARCHAR(255) DEFAULT '' COMMENT '歌曲的歌词文件所在路径',
   songImg VARCHAR(255) DEFAULT '' COMMENT '歌曲的封面图片所在路径',
   songMP3 VARCHAR(255) DEFAULT '' COMMENT '歌曲的MP3内容所在路径',
   songTime VARCHAR(10) DEFAULT '' COMMENT '歌曲的播放时间长度',
-  songPrice SMALLINT DEFAULT 0 COMMENT '歌曲的价格 -- 如果有设置的话',
+  songPrice SMALLINT UNSIGNED DEFAULT 0 COMMENT '歌曲的价格 -- 如果有设置的话',
   status BIT DEFAULT 1 COMMENT '歌曲的状态',
   createTime INT UNSIGNED NOT NULL COMMENT '该歌曲创建时间',
   INDEX song_songName(songName),
@@ -211,11 +210,14 @@ CREATE TABLE mh_song
 /* MH音乐歌曲交易表 -- 记录每一首歌的交易记录 */
 CREATE TABLE mh_song_buy
 (
-  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+  dealID BIGINT UNSIGNED AUTO_INCREMENT PRIMARY ,
   songId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '歌曲对应的ID',
   userId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '购买者对应的ID',
+  dealTime INT UNSIGNED NOT NULL COMMENT '交易时间',
+  INDEX songBuy_dealID(dealID),
   INDEX songBuy_songId(songId),
-  INDEX songBuy_userId(userId)
+  INDEX songBuy_userId(userId),
+  INDEX songBuy_createTime(createTime)
 )ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
@@ -242,10 +244,11 @@ CREATE TABLE mh_listen_rank
 CREATE TABLE mh_comment
 (
   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
-  `comment` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '评论内容',
-  replayId BIGINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '如果是回复之前已有的回复则该字段记录所要回复的之前已有的回复的ID',
   songId INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '歌曲对应的ID',
-  likeNum INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '歌曲对应的ID',
+  `comment` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '评论内容',
+  replyId BIGINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '如果是回复之前已有的回复则该字段记录所要回复的之前已有的回复的ID',
+  likeNum INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '评论点赞数量',
+  replyTime INT UNSIGNED NOT NULL COMMENT '评论时间',
   INDEX comment_songId(songId)
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -267,9 +270,10 @@ CREATE TABLE mh_questionnaire
   quality TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '问卷调查之服务质量[ 1-很差 / 2-差 / 3-一般 / 4-好 / 5-很好 ]',
   defect TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '问卷调查之网站缺点[ 1-加载速度慢 / 2-歌曲收录少 / 3-曲库更新迟 / 4-歌曲音质差 / 5-会员收费高 / 6-歌曲价格高 / 7-功能不齐全 / 8-推荐不合理 ]',
   idea VARCHAR(500) DEFAULT '' COMMENT '问卷调查之意见收集',
-  mail VARCHAR(160) DEFAULT '' COMMENT '填写问卷反馈的邮箱',
+  mail VARCHAR(38) DEFAULT '' COMMENT '填写问卷反馈的邮箱',
   ip VARCHAR(20) DEFAULT '' COMMENT '填写问卷的IP地址',
-  status TINYINT DEFAULT 0 COMMENT '调查问卷状态[ 0-管理员未查看 / 1-管理员已查看未回邮件 / 2-管理员已回邮件 ]',
+  status TINYINT UNSIGNED DEFAULT 0 COMMENT '调查问卷状态[ 0-管理员未查看 / 1-管理员已查看未回邮件 / 2-管理员已回邮件 ]',
+  sendTime INT UNSIGNED NOT NULL COMMENT '发送时间',
   INDEX questionnaire_status(status)
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
