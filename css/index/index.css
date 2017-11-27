@@ -144,7 +144,8 @@ footer>.box-show1 {  width:1350px; height:98px; margin:0 auto; z-index:4; positi
 #songlistContent li{  margin-right:-1px; padding:0 8px; position:relative; cursor:pointer;  }
 #songlistContent li:hover{  color:#DDD; background-color:#2E2E2E;  }
 #songlistContent li.active{  color:#00CDFF; background-color:#151515;  }
-#songlistContent li>i{  top:2.5px; position:absolute;  }
+#songlistContent li>i{  top:2.5px; position:absolute; display:none;  }
+#songlistContent li.active>i{  display:block;  }
 .songlist-songName {  width:260px; height:20px; margin-left:28px; display:inline-block; overflow:hidden; line-height:25px;  }
 .songlist-time {  margin:3px 5px 0; float:right;  }
 .songlist-singer {  width:108px; height:20px; margin:0 18px; float:right; overflow:hidden; color:#6A6A6A; line-height:27px;  }
