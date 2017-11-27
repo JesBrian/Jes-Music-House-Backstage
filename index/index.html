@@ -971,16 +971,6 @@
             }
         }
 
-        /**
-         * 鼠标移动到用户登陆按钮上显示用户操作框
-         */
-        $("#navbar-user-index").mousemove(function () {
-            $("#userCON").fadeIn();
-        }).mouseleave(function(){
-            $("#userCON").fadeOut();
-        });
-
-
 
         /**
          * 页脚的公众号二维码和支付宝二维码
@@ -1009,19 +999,16 @@
             $("#navbar-menu-index").find("li").removeClass("activeThis");
             $(this).addClass("activeThis");
         });
+        $('#navbar-menu-index').find("li").mouseenter(function () {
+            $(this).addClass("s1c-Bg box-show3");
+        }).mouseleave(function () {
+            $(this).removeClass("s1c-Bg box-show3");
+        });
+
 
         function iframeLocation(ifName, url) {
             $("#" + ifName).attr("src",url);
         }
-
-
-        $("#navbar-menu-index").each(function () {
-            $(this).find("li").mousemove(function () {
-                $(this).addClass("s1c-Bg box-show3");
-            }).mouseleave(function () {
-                $(this).removeClass("s1c-Bg box-show3");
-            });
-        });
 
 
         /**
