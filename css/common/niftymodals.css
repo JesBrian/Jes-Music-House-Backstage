@@ -97,6 +97,28 @@
 #styleList tr span > a {  margin-right:10px; color:#FFF; font-size:17px; font-weight:500; line-height:1.6em; text-shadow:0.1px 0.1px 1px #666;  }
 
 
+#styleTagList .styleTagType {
+    width:100px; height:28px; margin:8px; display:inline-block; line-height:28px; color:#22E8FF;
+}
+#styleTagList .styleTagType.active {
+    position:relative;
+    color:#886AFF;
+    text-shadow:0.1px 0.1px 0.1px #FFF;
+    background:#222;
+    -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+    -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+    box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+}
+#styleTagList .styleTagType.active:after {
+    top:-10px;
+    right:-8px;
+    content:'√';
+    position:absolute;
+    color:#1A9EE6;
+    font-size:28px;
+    font-weight:900;
+    text-shadow:0.5px 0.5px 0.1px #000;
+}
 
 
 
