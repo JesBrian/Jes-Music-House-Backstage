@@ -44,19 +44,19 @@
             text-align:center;
         }
         .accountTableOper:hover {
+            position:relative;
             background:#222;
+            box-shadow:inset 0 0 2px #FFF, 0 0 5px #000;
+            z-index:9999;
         }
         .accountTableOper > .MyIF {
-            width:37px;
-            height:36px;
-            display:inline-block;
             line-height:35px;
             font-size:22px;
             cursor:pointer;
         }
-        .accountTableOper > .MyIF:hover {
+        .accountTableOper:hover > .MyIF {
             color:lightgreen;
-            text-shadow:0 0 1px;
+            text-shadow:0.2px 0.2px 0.2px #000;
         }
 
 
@@ -120,7 +120,6 @@
         .superInput + label > i {
             margin-left:-6px;
         }
-
         .superInput + label:after {
             top:0;
             left:-10.5px;
