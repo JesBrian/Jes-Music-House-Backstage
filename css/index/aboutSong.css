@@ -30,12 +30,13 @@
 #song-replyPer>div>span {  top:55px; left:48%; position:relative; z-index:9; font-size:13px;  }
 #song-wellReply, #song-newReply {  font-size:13px; color:#D6D6D6;  }
 #song-wellReply>h4, #song-newReply>h4 {  margin:38px 28px 3px; font-size:17px; color:#70FF92;  }
-#song-wellReply>.replyList, #song-newReply>.replyList {  width:95%; margin:0 auto 18px; padding:18px; border-top:1px solid #848484; border-bottom:1px solid #2E2E2E;  }
-#song-wellReply>.replyList:hover, #song-newReply>.replyList:hover{  border:1px solid; border-image:-webkit-linear-gradient(#26c7ff, #3972ff)25; border-image:-o-linear-gradient(#26c7ff, #3972ff)25; border-image:-moz-linear-gradient(#26c7ff, #3972ff)25; border-image:linear-gradient(#26c7ff, #3972ff)25;  }
-#song-wellReply>.replyList>img, #song-newReply>.replyList>img {  width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;  }
-#song-wellReply>.replyList .replyUser, #song-newReply>.replyList .replyUser {  color:#00BFE8;  }
-#song-wellReply>.replyList .replyUser:hover, #song-newReply>.replyList .replyUser:hover {  color:#4AFFF6; text-decoration:underline;  }
-#song-wellReply>.replyList>.replySource, #song-newReply>.replyList>.replySource {  width:89%; padding:13px; margin:8px 0 3px 52px; color:#929292; word-break:break-all; word-wrap:break-word;  }
+.replyList {  width:95%; margin:0 auto 18px; padding:18px; border-top:1px solid #848484; border-bottom:1px solid #2E2E2E;  }
+.replyList:hover{  border:1px solid; border-image:-webkit-linear-gradient(#26c7ff, #3972ff)25; border-image:-o-linear-gradient(#26c7ff, #3972ff)25; border-image:-moz-linear-gradient(#26c7ff, #3972ff)25; border-image:linear-gradient(#26c7ff, #3972ff)25;  }
+.replyList>img {  width:35px; height:35px; margin:0 13px 0 0; display:inline-block; float:left; border-radius:4px;  }
+.replyList>P {  text-indent:1.8em; word-break:break-all;  }
+.replyList .replyUser {  color:#00BFE8;  }
+.replyList .replyUser:hover {  color:#4AFFF6; text-decoration:underline;  }
+.replyList>.replySource {  width:89%; padding:13px; margin:8px 0 3px 52px; color:#929292; word-break:break-all; word-wrap:break-word;  }
 #song-reply .replybar {  margin:13px 88px 0; color:#929292;  }
 #song-reply .replybar>.replyStar {  margin-top:-9px; float:right; cursor:pointer;  }
 #song-reply .replyOtherButton {  margin-left:28px; float:right; color:#929292!important;  }

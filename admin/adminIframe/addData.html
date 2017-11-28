@@ -33,7 +33,7 @@
 
     <!-- 后台添加/修改数据 -->
     <div id="mainBody" class="s1c-Bg box-show3">
-        <form style="width:100%; height:100%; padding:8px 0;">
+        <form style="width:100%; height:100%; padding:8px 0; position:relative;">
 
             <!-- 添加/修改的数据资料 -->
             <table style="width:90%; height:100%; margin-top:18px; margin-left:5%;">
@@ -55,9 +55,25 @@
                         <input type="text" name="" value="" style="width:288px; padding:5px 12px; font-size:17px; background:#888; color:#383838;">
                     </td>
                 </tr>
+                <tr>
+                    <td style="width:24%; padding:8px 22px 8px 0; text-align:right; font-size:18px; font-weight:900;">歌手名称</td>
+                    <td style="padding:8px 0 8px 22px; text-align:left;">
+                        <input type="text" name="" value="" style="width:288px; padding:5px 12px; font-size:17px; background:#888; color:#383838;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:24%; padding:8px 22px 8px 0; text-align:right; font-size:18px; font-weight:900;">歌手名称</td>
+                    <td style="padding:8px 0 8px 22px; text-align:left;">
+                        <input type="text" name="" value="" style="width:288px; padding:5px 12px; font-size:17px; background:#888; color:#383838;">
+                    </td>
+                </tr>
             </table>
 
-
+            <!-- 添加歌单/歌曲封面 -->
+            <div style="top:68px; right:24%; position:absolute; z-index:5;">
+                <img class="box-show3" src="../../img/common/touxiang.jpg" style="width:128px; height:128px; border-radius:5px;"><br>
+                <a class="superBtn joinSinger MyIF music-albu-2" style="margin:68px 0 0 -51px;" onclick="window.top.niftymodalsByModelName('modal-uploadAvatar');"> 修改封面</a>
+            </div>
 
             <!-- 提交信息 OR 返回按钮 -->
             <div style="width:100%; height:68px; margin-top:38px; position:relative; text-align:center; z-index:5;">
