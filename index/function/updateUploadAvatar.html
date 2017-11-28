@@ -1,4 +1,4 @@
-
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../../css/common/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/index/common.css">
 
@@ -65,7 +65,7 @@
             $('#btnCrop').on('click', function () {
                 var img = cropper.getDataURL();
                 $('.cropped').html('');
-                $('.cropped').append('<img src="' + img + '" align="absmiddle" style="width:128px; margin-top:28px; border-radius:5px; box-shadow:0 0 12px #7E7E7E;"><p>预览效果</p><span style="top:128px; right:60px; position:relative; z-index:9;"><a class="superBtn joinSinger">确认修改</a></span>');
+                $('.cropped').append('<img src="' + img + '" align="absmiddle" style="width:128px; margin-top:28px; border-radius:5px; box-shadow:0 0 12px #7E7E7E;"><p>预览效果</p><span style="top:128px; right:60px; position:relative; z-index:9;"><a class="superBtn joinSinger MyIF">确认修改</a></span>');
             });
             $('#btnZoomIn').on('click', function () {
                 cropper.zoomIn();

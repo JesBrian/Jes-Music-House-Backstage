@@ -12,6 +12,10 @@
     <link rel="stylesheet" type="text/css" href="../../css/common/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/admin/common.css">
 
+
+    <!-- 滚动条CSS样式 -->
+    <link rel="stylesheet" type="text/css" href="../../plugins/scrollbar/jquery.mCustomScrollbar.css">
+
 </head>
 <body id="htmlBody">
 
@@ -30,19 +34,44 @@
 
     </div>
 
-    <div id="mainBody" class="s1c-Bg box-show3" style="height:388px;">
-        sbcaijhkcn<br/>
-        xsaHUC<h3>bshacsa</h3>
+    <div id="mainBody" class="s1c-Bg box-show3" style="margin:0 auto;">
+
+        <div id="choseMessageType" class="glass-Bg box-show3" style="width:13%; margin:38px 18px; padding:18px 0; text-align:center; float:left;">
+            <input type="radio" class="superInput" id="systemMessage" name="messageType" checked><label for='systemMessage' class="MyIF feedback" style="margin:18px 0; border-radius:2px;"><span> 系统信息</span></label>
+            <input type="radio" class="superInput" id="noticeMessage" name="messageType"><label for='noticeMessage' class="MyIF horn" style="margin:18px 0; border-radius:2px;"><span> 通知信息</span></label>
+            <input type="radio" class="superInput" id="adminMessage" name="messageType"><label for='adminMessage' class="MyIF all-user" style="margin:18px 0; border-radius:2px;"><span> 管理信息</span></label>
+        </div>
+
+        <div id="messageListContent" class="glass-Bg box-show3" style="width:80%; height:92%; margin:12px 0 0 18%; overflow:hidden">
+            csfytguchnjsmakl<h2>ftguyhijokp</h2>csfytguchnjsmakl<h2>ftguyhijokp</h2>csfytguchnjsmakl<h2>ftguyhijokp</h2>csfytguchnjsmakl<h2>ftguyhijokp</h2>csfytguchnjsmakl<h2>ftguyhijokp</h2>csfytguchnjsmakl<h2>ftguyhijokp</h2>csfytguchnjsmakl<h2>ftguyhijokp</h2>csfytguchnjsmakl<h2>ftguyhijokp</h2>csfytguchnjsmakl<h2>ftguyhijokp</h2>csfytguchnjsmakl<h2>ftguyhijokp</h2>
+        </div>
+
     </div>
 
 
     <script type="text/javascript" src="../../js/common/jquery-3.1.1.min.js"></script>
+
+    <!--plugins滚动条插件-->
+    <script src="../../plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
 
     <script type="text/javascript">
 
         $('a.accountOperIframeUrl').click(function () {
             window.top.accountOperIframeObj.attr('src', $(this).attr('dataUrl'));
         });
+
+        $(window).resize(function () {
+            $('#mainBody').height($(this).height() - 180);
+        });
+
+        $.mCustomScrollbar.defaults.scrollButtons.enable=true;
+        $.mCustomScrollbar.defaults.axis="y";
+
+        $("#messageListContent").mCustomScrollbar({theme:"minimal"});
+
+
+
 
     </script>
 
