@@ -80,7 +80,7 @@ CREATE TABLE mh_login_log
 (
   adminId TINYINT UNSIGNED NOT NULL COMMENT '管理员账户ID',
   loginTime INT UNSIGNED NOT NULL COMMENT '管理员账户每次登陆时间',
-  INDEX login_log_adminId(adminId)
+  INDEX loginLog_adminId(adminId)
 )ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
@@ -102,10 +102,10 @@ CREATE TABLE mh_user
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
-/* MH用户表其他信息表 -- 注册用户之后就会自动产生, 记录用户其他一些不常用的信息 */
+/* MH用户表其他信息表 -- 记录用户其他一些不常用的信息 */
 CREATE TABLE mh_user_info
 (
-  userid INT UNSIGNED PRIMARY KEY ,
+  userId INT UNSIGNED PRIMARY KEY ,
   sex TINYINT UNSIGNED DEFAULT 0 COMMENT '用户性别[默认是 0 男，1 为女，3 为保密秀吉]',
   `date` INT UNSIGNED DEFAULT 0 COMMENT '用户出生日期',
   address VARCHAR(10) DEFAULT '' COMMENT '用户地址',
@@ -120,7 +120,7 @@ CREATE TABLE mh_userXX_listen
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
   songId INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '歌曲对应的ID',
   listenNum TINYINT UNSIGNED DEFAULT 0 COMMENT '歌曲对应聆听次数',
-  INDEX userlisten_listenNum(listenNum)
+  INDEX userListen_listenNum(listenNum)
 )ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
@@ -131,8 +131,8 @@ CREATE TABLE mh_member
   timeOut INT UNSIGNED NOT NULL COMMENT '用户会员到期时间',
   status BIT NOT NULL DEFAULT 1 COMMENT '用户会员账户状态[默认是 1 正常，还有 0 非正常状态]',
   createTime INT UNSIGNED NOT NULL COMMENT '用户开通会员时间[可以用于每天新会员 - 保存在 XX 表中]',
-  INDEX user_userId(userId),
-  INDEX user_createTime(createTime)
+  INDEX member_userId(userId),
+  INDEX member_createTime(createTime)
 )ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
@@ -140,7 +140,7 @@ CREATE TABLE mh_member
 CREATE TABLE mh_singer
 (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-  userid INT UNSIGNED DEFAULT 0 COMMENT '对应的用户账号[0为没有]',
+  userId INT UNSIGNED DEFAULT 0 COMMENT '对应的用户账号[0为没有]',
   singerName VARCHAR(25) NOT NULL DEFAULT '' COMMENT '歌手艺名',
   singerImg VARCHAR(255) DEFAULT '' COMMENT '歌手图片',
   sex TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '歌手性别[ 1-男 / 2-女 / 3-团队 ]',
@@ -156,8 +156,8 @@ CREATE TABLE mh_singer
   status BIT NOT NULL DEFAULT 1 COMMENT '歌手账户状态[默认是 1 正常，还有 0 非正常状态]',
   createTime INT UNSIGNED NOT NULL COMMENT '成为入驻歌手时间[可以用于每天新会员 - 保存在 XX 表中]',
   loginTime INT UNSIGNED NOT NULL COMMENT '歌手上一次登录时间',
-  INDEX singer_userid(userid),
-  INDEX singer_singername(singerName),
+  INDEX singer_userId(userId),
+  INDEX singer_singerName(singerName),
   INDEX singer_styleId(styleId),
   INDEX singer_createTime(createTime)
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -179,13 +179,23 @@ CREATE TABLE mh_album
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
   albumName VARCHAR(35) NOT NULL DEFAULT '' COMMENT '歌单名称',
   albumImg VARCHAR(255) DEFAULT '' COMMENT '歌单的封面图片所在路径',
-  albumStyle VARCHAR(35) DEFAULT '' COMMENT '歌单所属风格列表[记录风格ID使用 , 分隔且限制只能有三个不同的风格]',
+  #albumStyle VARCHAR(35) DEFAULT '' COMMENT '歌单所属风格列表[记录风格ID使用 , 分隔且限制只能有三个不同的风格]',
   albumType BIT NOT NULL DEFAULT 0 COMMENT '歌单创建的类型[ 0-普通用户歌单 / 1-歌曲专辑]',
   songIdList TEXT COMMENT '歌单所收集的所有歌曲列表[记录歌曲ID使用 , 分隔]',
   createBy VARCHAR(25) NOT NULL DEFAULT '' COMMENT '创建人是谁',
   createTime INT UNSIGNED NOT NULL COMMENT '该歌单创建时间',
   INDEX album_albumType(albumType),
   INDEX album_createBy(createBy)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+/* MH音乐歌单表对应风格 -- 反范式,为了优化搜索 */
+CREATE TABLE mh_album_style
+(
+  albumId INT UNSIGNED ,
+  styleId TINYINT UNSIGNED,
+  INDEX albumStyle_albumId(albumId),
+  INDEX albumStyle_styleId(styleId)
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
@@ -210,14 +220,14 @@ CREATE TABLE mh_song
 /* MH音乐歌曲交易表 -- 记录每一首歌的交易记录 */
 CREATE TABLE mh_song_buy
 (
-  dealID BIGINT UNSIGNED AUTO_INCREMENT PRIMARY ,
+  dealID BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
   songId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '歌曲对应的ID',
   userId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '购买者对应的ID',
   dealTime INT UNSIGNED NOT NULL COMMENT '交易时间',
   INDEX songBuy_dealID(dealID),
   INDEX songBuy_songId(songId),
   INDEX songBuy_userId(userId),
-  INDEX songBuy_createTime(createTime)
+  INDEX songBuy_dealTime(dealTime)
 )ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
@@ -278,11 +288,11 @@ CREATE TABLE mh_questionnaire
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
-/* MH分析表 -- 记录每天 1-新用户、2-新会员数量、3-歌曲交易量 */
+/* MH音乐分析表 -- 记录每天 1-新用户、2-新会员数量、3-歌曲交易量 */
 CREATE TABLE mh_analysis
 (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
-  newNum INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '每天新增人数',
+  newNum INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '每天新增数量',
   type TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '区分不同的类型[ 1-新用户 / 2-新会员数量 / 3-歌曲交易量 ]',
   `date` INT UNSIGNED NOT NULL COMMENT '记录每天日期',
   INDEX analysis_type(type),
