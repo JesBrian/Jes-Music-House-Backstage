@@ -15,7 +15,8 @@
 #new-hot>iframe {  margin-left:290px; margin-top:22px; height:380px; width:710px; border:none;  }
         /* 个性推荐部分 */
 #personalRecommend {  height:260px; margin:80px auto 0; position:relative;  }
-#today {  width:300px; height:150px; left:50px; margin:28px 0; position:absolute; border-radius:15px; box-shadow:0 18px 20px #161616; background:url(../../img/common/calendar.png) no-repeat; background-size:100% 100%;  }
+#today {  width:300px; height:150px; left:50px; margin:28px 0; position:absolute; border-radius:15px; box-shadow:0 18px 20px #161616; background:url(../../img/common/calendar.png) no-repeat; background-size:100% 100%; font:normal normal 900 78px/108px 'Microsoft YaHei', '微软雅黑'; color:#AAA; text-shadow:0.5px 0.5px 1px #111;  }
+#today>span {  width:108px; height:108px; display:inline-block; text-align:center;  }
 .personalRecommendAlbum {  width:158px; height:175px; left:288px; margin:18px; position:relative; display:inline-block; text-align:center;  }
 .personalRecommendAlbum img {  width:120px; height:120px; margin:15px auto 5px; border-radius:8px;  }
 .personalRecommendAlbum p {  width:138px; height:26px; margin:0 auto; font:normal normal normal 12px/13px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center; overflow:hidden;  }
