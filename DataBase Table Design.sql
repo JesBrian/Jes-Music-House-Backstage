@@ -88,11 +88,12 @@ CREATE TABLE mh_login_log
 CREATE TABLE mh_backstage_message
 (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
-  `from` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '信息来自那个用户/管理员/系统',
-  `fromType` TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '来自的类型 [1-superadmin-超级管理员 / 2-admin-普通管理员 / 3-singer-歌手 / 4-member-会员 / 5-user-普通用户]',
-  `to` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '信息要发送去哪里',
-  `toType` TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '来自的类型 [1-superadmin-超级管理员 / 2-admin-普通管理员 / 3-singer-歌手 / 4-member-会员 / 5-user-普通用户]',
+  `from` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '发送者',
+  `fromType` TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '发送类型 [1-superadmin-超级管理员 / 2-admin-普通管理员 / 3-singer-歌手 / 4-member-会员 / 5-user-普通用户]',
+  `to` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '接收者',
+  `toType` TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '接收类型 [1-superadmin-超级管理员 / 2-admin-普通管理员 / 3-singer-歌手 / 4-member-会员 / 5-user-普通用户]',
   content TEXT NOT NULL COMMENT '信息的内容',
+  status BIT NOT NULL DEFAULT 1 COMMENT '信息状态 [默认是 1 未读，还有 0 已读]'
   sendTime INT UNSIGNED NOT NULL COMMENT '信息发送时间',
   INDEX backstageMessage_fromType(`fromType`),
   INDEX backstageMessage_sendTime(sendTime),
@@ -185,6 +186,7 @@ CREATE TABLE mh_style
   id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
   styleName VARCHAR(15) NOT NULL UNIQUE DEFAULT '' COMMENT '风格名称',
   parentId TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '风格的一级父ID，如果有的话[目前只做二级分类]',
+  status BIT NOT NULL DEFAULT 1 COMMENT '风格状态[默认是 1 正常，还有 0 非正常状态]',
   INDEX style_parentId(parentId)
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -205,7 +207,7 @@ CREATE TABLE mh_album
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
-/* MH音乐歌单表对应风格 -- 反范式,为了优化搜索 */
+/* MH音乐歌单表对应风格 -- 反范式,为了优化搜索提高搜索相似风格的歌单 */
 CREATE TABLE mh_album_style
 (
   albumId INT UNSIGNED ,
@@ -226,7 +228,7 @@ CREATE TABLE mh_song
   songMP3 VARCHAR(255) DEFAULT '' COMMENT '歌曲的MP3内容所在路径',
   songTime VARCHAR(10) DEFAULT '' COMMENT '歌曲的播放时间长度',
   songPrice SMALLINT UNSIGNED DEFAULT 0 COMMENT '歌曲的价格 -- 如果有设置的话',
-  status BIT DEFAULT 1 COMMENT '歌曲的状态',
+  status BIT DEFAULT 1 COMMENT '歌曲的状态[默认是 1 正常，还有 0 非正常状态]',
   createTime INT UNSIGNED NOT NULL COMMENT '该歌曲创建时间',
   INDEX song_songName(songName),
   INDEX song_singerId(singerId)
@@ -270,13 +272,15 @@ CREATE TABLE mh_listen_rank
 CREATE TABLE mh_comment
 (
   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
-  songId INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '歌曲对应的ID',
+  songId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '歌曲对应的ID',
   `comment` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '评论内容',
   replyId BIGINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '如果是回复之前已有的回复则该字段记录所要回复的之前已有的回复的ID',
-  likeNum INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '评论点赞数量',
-  status INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '评论点赞数量',
+  replyUserId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '原评论者,为了优化用户新消息提示而反范式',
+  likeNum INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '评论点赞数量',
+  status TINYINT UNSIGNED NOT NULL DEFAULT 2 COMMENT '评论状态 [ 2-未读 / 1-已读 / 0-删除状态 ]',
   replyTime INT UNSIGNED NOT NULL COMMENT '评论时间',
-  INDEX comment_songId(songId)
+  INDEX comment_songId(songId),
+  INDEX comment_replyUserId(replyUserId)
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
