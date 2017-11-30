@@ -84,6 +84,22 @@ CREATE TABLE mh_login_log
 )ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
+/* MH后台系统信息表 */
+CREATE TABLE mh_backstage_message
+(
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+  `from` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '信息来自那个用户/管理员/系统',
+  `fromType` TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '来自的类型 [1-superadmin-超级管理员 / 2-admin-普通管理员 / 3-singer-歌手 / 4-member-会员 / 5-user-普通用户]',
+  `to` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '信息要发送去哪里',
+  `toType` TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '来自的类型 [1-superadmin-超级管理员 / 2-admin-普通管理员 / 3-singer-歌手 / 4-member-会员 / 5-user-普通用户]',
+  content TEXT NOT NULL COMMENT '信息的内容',
+  sendTime INT UNSIGNED NOT NULL COMMENT '信息发送时间',
+  INDEX backstageMessage_fromType(`fromType`),
+  INDEX backstageMessage_sendTime(sendTime),
+  INDEX backstageMessage_toOne(`to`,`toType`)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
 /* MH用户表 -- 普通注册用户 */
 CREATE TABLE mh_user
 (
@@ -258,6 +274,7 @@ CREATE TABLE mh_comment
   `comment` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '评论内容',
   replyId BIGINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '如果是回复之前已有的回复则该字段记录所要回复的之前已有的回复的ID',
   likeNum INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '评论点赞数量',
+  status INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '评论点赞数量',
   replyTime INT UNSIGNED NOT NULL COMMENT '评论时间',
   INDEX comment_songId(songId)
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
