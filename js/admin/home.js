@@ -28,19 +28,20 @@ var accountOperIframeObj = $('#accountOperIframe');      //accountOperIframeObj 
 
 
 /**
- * 调整后台页面布局 -- 调用home.js里的 layoutSize 方法
+ * 调整后台页面布局 -- 调用 layoutSize 方法
  */
-layoutSize();   //后台页面第一次打开时设置布局
-(function($){   //设置滚动条样式
-    $(window).on("load",function(){
-        $.mCustomScrollbar.defaults.scrollButtons.enable=true;
-        $.mCustomScrollbar.defaults.axis="y";
-
-        $("#mainMenuContent").mCustomScrollbar({theme:"minimal"});
-    });
-})(jQuery);
-$(window).resize(function () {  //改变浏览器窗口时
+$(window).on("load", function () { //页面初始化
+    /* 设置窗口各部分布局 */
     layoutSize();
+    /* 设置滚动条样式 */
+    $.mCustomScrollbar.defaults.scrollButtons.enable = true;
+    $.mCustomScrollbar.defaults.axis = "y";
+    $("#mainMenuContent").mCustomScrollbar({theme: "minimal"});
+});
+$(window).resize(function () {  //改变浏览器窗口时 -- 设置一个定时器并且在没有停止改变窗口大小时不会触发 layoutSize 函数 [ 节约CPU计算资源,提高性能 ]
+    var timeOutId = null;
+    clearTimeout(timeOutId);
+    timeOutId = setTimeout(layoutSize, 100);    //好像有点暴力
 });
 
 
