@@ -39,7 +39,7 @@
 
     <!-- 后台顶部标题[面包屑导航栏] -->
     <h4>
-        <a class="accountOperIframeUrl" dataUrl="adminIframe/index.html">后台主页</a>/<a class="active">系统信息</a>
+        <a class="accountOperIframeUrl" dataUrl="adminIframe/index.html">后台主页</a>/<a class="active">数据报表</a>
     </h4>
 
 </div>
@@ -78,7 +78,7 @@
 <script type="text/javascript">
 
     function resize() {
-        $('#messageListContent').height($('#mainBody').height($(window).height() - 180).height() - 28);
+        $('#analysisDataChar').height($('#mainBody').height($(window).height() - 180).height() - 28);
     }
 
     resize();
@@ -97,7 +97,7 @@
     $.mCustomScrollbar.defaults.scrollButtons.enable=true;
     $.mCustomScrollbar.defaults.axis="y";
 
-    $("#messageListContent").mCustomScrollbar({theme:"minimal"});
+    $("#analysisDataChar").mCustomScrollbar({theme:"minimal"});
 
 
 
