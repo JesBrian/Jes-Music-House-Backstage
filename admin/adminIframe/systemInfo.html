@@ -17,11 +17,12 @@
     <link rel="stylesheet" type="text/css" href="../../plugins/scrollbar/jquery.mCustomScrollbar.css">
 
     <style>
-        .messageList {  width:95%; padding:18px; border-top:1px solid #848484;  }
+        .messageList {  width:95%; margin:8px auto 3px; padding:8px 0 18px; position:relative; border-top:1px solid #848484;  }
         .messageList:first-child {  border:none;  }
-        .messageList>img {  width:50px; height:50px; margin:0 13px 0 0; display:inline-block; float:left; border-radius:4px; box-shadow:1px 2px 4px #AAA;  }
-        .messageList>a {  margin-left:12px;  }
-        .messageList>p {  text-indent:2em; word-break:break-all;  }
+        .messageList>img {  width:50px; height:50px; margin:0 13px 0 0; display:inline-block; float:left; border-radius:4px; box-shadow:1.5px 1.5px 4px #AAA;  }
+        .messageList>i.MyIF {  top:-10px; left:-10px; position:absolute; font-size:23px; font-weight:900; color:#FF95E0;  }
+        .messageList>a {  margin-left:12px; color:#57E692; font-weight:600;  }
+        .messageList>p {  font-size:13.5px; text-indent:2em; word-break:break-all;  }
 
     </style>
 
@@ -47,53 +48,57 @@
     <div id="mainBody" class="s1c-Bg box-show3" style="margin:0 auto;">
 
         <div id="choseMessageType" class="glass-Bg box-show3" style="width:13%; margin:38px 18px; padding:18px 0; text-align:center; float:left;">
-            <input type="radio" class="superInput" id="systemMessage" name="messageType" checked><label for='systemMessage' class="MyIF feedback" style="margin:18px 0; border-radius:2px;"><span> 系统信息</span></label>
-            <input type="radio" class="superInput" id="noticeMessage" name="messageType"><label for='noticeMessage' class="MyIF horn" style="margin:18px 0; border-radius:2px;"><span> 通知信息</span></label>
-            <input type="radio" class="superInput" id="adminMessage" name="messageType"><label for='adminMessage' class="MyIF all-user" style="margin:18px 0; border-radius:2px;"><span> 管理信息</span></label>
+            <input type="radio" class="superInput" id="systemMessage" name="messageType" checked>
+            <label for='systemMessage' class="MyIF feedback" style="margin:18px 0; border-radius:2px;"><span> 系统信息</span><i class="MyIF XCX" style="top:-10px; right:-10px; position:absolute; color:#886AFF; font-size:18px; font-weight:900;"></i></label>
+            <input type="radio" class="superInput" id="noticeMessage" name="messageType">
+            <label for='noticeMessage' class="MyIF horn" style="margin:18px 0; border-radius:2px;"><span> 通知信息</span></label>
+            <input type="radio" class="superInput" id="adminMessage" name="messageType">
+            <label for='adminMessage' class="MyIF all-user" style="margin:18px 0; border-radius:2px;"><span> 管理信息</span></label>
         </div>
 
-        <div id="messageListContent" class="glass-Bg box-show3" style="width:80%; margin:12px 0 0 18%; overflow:hidden">
-            <div class="messageList" style="width:95%; margin:8px auto 3px; padding:8px 0 18px;">
+        <div id="messageListContent" class="glass-Bg box-show3" style="width:80%; margin:12px 0 0 18%; color:#CCC; overflow:hidden;">
+            <div class="messageList">
+                <i class="MyIF XCX"></i>
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
                 <p>成熟不成熟可能将面临是测试v包含了几次没事，；了陈水扁黑龙江煤矿，了成熟并引进模块，了；曾参与u并将模块，了从然后一天股已经OK漂亮曾担任十月怀胎股吧引进哦满仓控盘，了的立方体一股hi就OK漂亮【。；1垄断行业太古hi就OK漂亮【1</p>
             </div>
-            <div class="messageList" style="width:95%; margin:8px auto 3px; padding:8px 0 18px;">
+            <div class="messageList">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
                 <p>成vsdfgtky大神傻逼也搞不好你家门口，了然后他一股hi叫偶老婆【】1合同一股hi就OK漂亮【1下次DVD是h漂亮【1</p>
             </div>
-            <div class="messageList" style="width:95%; margin:8px auto 3px; padding:8px 0 18px;">
+            <div class="messageList">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
                 <p>成熟不天股已经O太古hi就OK漂亮【1</p>
             </div>
-            <div class="messageList" style="width:95%; margin:8px auto 3px; padding:8px 0 18px;">
+            <div class="messageList">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
                 <p>成熟不成熟可能将面临是测试v包含了几次没事，；了陈水扁黑龙江煤矿，了成熟并引进模块，了；曾参与u并将模块，了从然后一天股已经OK漂亮曾担任十月怀胎股吧引进哦满仓控盘，了的立方体一股hi就OK漂亮【。；1垄断行业太古hi就OK漂亮【1</p>
             </div>
-            <div class="messageList" style="width:95%; margin:8px auto 3px; padding:8px 0 18px;">
+            <div class="messageList">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
                 <p>成熟不成熟可能将vdsbsdbsd吧引进哦满仓控盘，了的立方体一股hi就OK漂亮【。；1垄断行业太古hi就OK漂亮【1</p>
             </div>
-            <div class="messageList" style="width:95%; margin:8px auto 3px; padding:8px 0 18px;">
+            <div class="messageList">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
                 <p>成熟不成熟可能将面临是测试v包含了几次没事，；了陈水扁黑龙江煤矿，了成熟并引进模块，了；曾参与u并将模块，了从然后一天股已经OK漂亮曾担任十月怀胎股吧引进哦满仓控盘，了的立方体一股hi就OK漂亮【。；1垄断行业太古hi就OK漂亮【1</p>
             </div>
-            <div class="messageList" style="width:95%; margin:8px auto 3px; padding:8px 0 18px;">
+            <div class="messageList">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
                 <p>tfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmk</p>
             </div>
-            <div class="messageList" style="width:95%; margin:8px auto 3px; padding:8px 0 18px;">
+            <div class="messageList">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
                 <p>xrdctfvygbuhnjmk经Ocstfvygbuhnjmk经Ocstfvygbuhnjmk经Ocstfvygbuhnjmk经Ocstfvygbuhnjmk经Ocstfvygbuhnjmk经Ocstfvygbuhnjmk经Ocstfvygbuhnjmk经Ocscss</p>
             </div>
-            <div class="messageList" style="width:95%; margin:8px auto 3px; padding:8px 0 18px;">
+            <div class="messageList">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
                 <p>csvdsvdsbds然后一天股已经OK漂亮曾担任十月怀胎股吧引进哦满仓控盘，了的立方体一股hi就OK漂亮【。；1垄断行业太古hi就OK漂亮【1</p>
@@ -120,7 +125,9 @@
 
         resize();
         $(window).resize(function () {
-            resize();
+            var timtOutId = null;
+            clearTimeout(timtOutId);
+            timtOutId = setTimeout(resize, 100);
         });
 
 
