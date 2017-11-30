@@ -41,7 +41,7 @@ $(window).on("load", function () { //页面初始化
 $(window).resize(function () {  //改变浏览器窗口时 -- 设置一个定时器并且在没有停止改变窗口大小时不会触发 layoutSize 函数 [ 节约CPU计算资源,提高性能 ]
     var timeOutId = null;
     clearTimeout(timeOutId);
-    timeOutId = setTimeout(layoutSize, 100);    //好像有点暴力
+    timeOutId = setTimeout(layoutSize, 200);    //好像有点暴力
 });
 
 
