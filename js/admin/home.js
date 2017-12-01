@@ -21,10 +21,9 @@ function layoutSize() {
 
 
 /**--  全局变量  --**/
-var preFirstMenuObj = null, preSecondMenuObj = null;    //preSecondMenuObj -- 指向之前已经打开了的二级菜单jq对象，preFirstMenuObj -- 指向之前已经打开了的一级菜单jq对象
-var showNowTimeStep = null, showTimeSwitch = null;       //showNowTimeStep -- 用来设置 setInterval 名字[ 每秒刷新时间 ]，showTimeSwitch -- 记录“显示时间”是否开启
-var accountOperIframeObj = $('#accountOperIframe');      //accountOperIframeObj -- 后台各种操作页面主iframe jq对象
-//var nowUrl = 'adminIframe/index.html';                   //nowUrl -- 记录当前后台主iframe的URL[用于刷新页面按钮]
+var preFirstMenuObj = null, preSecondMenuObj = null, //preSecondMenuObj -- 指向之前已经打开了的二级菜单jq对象，preFirstMenuObj -- 指向之前已经打开了的一级菜单jq对象
+    showNowTimeStep = null, showTimeSwitch = null, //showNowTimeStep -- 用来设置 setInterval 名字[ 每秒刷新时间 ]，showTimeSwitch -- 记录“显示时间”是否开启
+    accountOperIframeObj = $('#accountOperIframe'); //accountOperIframeObj -- 后台各种操作页面主iframe jq对象
 
 
 /**

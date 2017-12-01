@@ -29,79 +29,79 @@
 </head>
 <body id="htmlBody">
 
-<!-- 回到后台主页浮动按钮 -->
-<div id="comeBackHomeNav" class="glass-Bg box-show3" title="回到后台主页">
-    <a class="accountOperIframeUrl MyIF home" dataUrl="adminIframe/index.html"></a>
-</div>
-
-<!-- 后台操作页面顶部标题 -->
-<div id="navTitle" class="s1c-Bg box-show3">
-
-    <!-- 后台顶部标题[面包屑导航栏] -->
-    <h4>
-        <a class="accountOperIframeUrl" dataUrl="adminIframe/index.html">后台主页</a>/<a class="active">数据报表</a>
-    </h4>
-
-</div>
-
-<div id="mainBody" class="s1c-Bg box-show3" style="margin:0 auto;">
-
-    <div id="choseMessageType" class="glass-Bg box-show3" style="width:88%; margin:8px auto; padding:10px 0; text-align:center;">
-        <input type="radio" class="superInput" id="everyDayAnalysis" name="messageType" checked>
-        <label for='everyDayAnalysis' class="MyIF exponential" style="margin:0 8px; border-radius:2px;"><span> 每日报表</span></label>
-        <input type="radio" class="superInput" id="questionnaireAnalysis" name="messageType">
-        <label for='questionnaireAnalysis' class="MyIF questionnaire-1" style="margin:0 8px; border-radius:2px;"><span> 问卷报表</span></label>
-        <input type="radio" class="superInput" id="userAnalysis" name="messageType">
-        <label for='userAnalysis' class="MyIF all-user" style="margin:0 8px; border-radius:2px;"><span> 用户报表</span></label>
-        <input type="radio" class="superInput" id="songAnalysis" name="messageType">
-        <label for='songAnalysis' class="MyIF music-albu-2" style="margin:0 8px; border-radius:2px;"><span> 歌曲报表</span></label>
-        <input type="radio" class="superInput" id="saleAnalysis" name="messageType">
-        <label for='saleAnalysis' class="MyIF coin" style="margin:0 8px; border-radius:2px;"><span> 销售报表</span></label>
+    <!-- 回到后台主页浮动按钮 -->
+    <div id="comeBackHomeNav" class="glass-Bg box-show3" title="回到后台主页">
+        <a class="accountOperIframeUrl MyIF home" dataUrl="adminIframe/index.html"></a>
     </div>
 
-    <iframe id="analysisDataChar" style="width:100%; margin:auto; background: #00ade0; border:none;">
+    <!-- 后台操作页面顶部标题 -->
+    <div id="navTitle" class="s1c-Bg box-show3">
 
-    </iframe>
+        <!-- 后台顶部标题[面包屑导航栏] -->
+        <h4>
+            <a class="accountOperIframeUrl" dataUrl="adminIframe/index.html">后台主页</a>/<a class="active">数据报表</a>
+        </h4>
 
-</div>
+    </div>
 
+    <div id="mainBody" class="s1c-Bg box-show3" style="margin:0 auto; text-align:center;">
 
+        <div id="choseMessageType" class="glass-Bg box-show3" style="margin:8px auto; padding:10px 16px; display:inline-block; text-align:center;">
+            <input type="radio" class="superInput" id="everyDayAnalysis" name="messageType" checked>
+            <label for='everyDayAnalysis' class="MyIF exponential" style="margin:0 8px; border-radius:2px;"><span> 每日报表</span></label>
+            <input type="radio" class="superInput" id="questionnaireAnalysis" name="messageType">
+            <label for='questionnaireAnalysis' class="MyIF questionnaire-1" style="margin:0 8px; border-radius:2px;"><span> 问卷报表</span></label>
+            <input type="radio" class="superInput" id="userAnalysis" name="messageType">
+            <label for='userAnalysis' class="MyIF all-user" style="margin:0 8px; border-radius:2px;"><span> 用户报表</span></label>
+            <input type="radio" class="superInput" id="songAnalysis" name="messageType">
+            <label for='songAnalysis' class="MyIF music-albu-2" style="margin:0 8px; border-radius:2px;"><span> 歌曲报表</span></label>
+            <input type="radio" class="superInput" id="saleAnalysis" name="messageType">
+            <label for='saleAnalysis' class="MyIF coin" style="margin:0 8px; border-radius:2px;"><span> 财政报表</span></label>
+        </div>
 
+        <iframe id="analysisDataCharts" src="dataCharts.html" style="width:100%; margin:auto; border:none;">
 
-<script type="text/javascript" src="../../js/common/jquery-3.1.1.min.js"></script>
+        </iframe>
 
-<!--plugins滚动条插件-->
-<script src="../../plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-
-
-<script type="text/javascript">
-
-    function resize() {
-        $('#analysisDataChar').height($('#mainBody').height($(window).height() - 180).height() - 75);
-    }
-
-    resize();
-    $(window).resize(function () {
-        var timtOutId = null;
-        clearTimeout(timtOutId);
-        timtOutId = setTimeout(resize, 200);
-    });
-
-
-
-
-    $('a.accountOperIframeUrl').click(function () {
-        window.top.accountOperIframeObj.attr('src', $(this).attr('dataUrl'));
-    });
-    $.mCustomScrollbar.defaults.scrollButtons.enable=true;
-    $.mCustomScrollbar.defaults.axis="y";
-
-    $("#analysisDataChar").mCustomScrollbar({theme:"minimal"});
+    </div>
 
 
 
 
-</script>
+    <script type="text/javascript" src="../../js/common/jquery-3.1.1.min.js"></script>
+
+    <!--plugins滚动条插件-->
+    <script src="../../plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        function resize() {
+            $('#analysisDataCharts').height($('#mainBody').height($(window).height() - 180).height() - 75);
+        }
+
+        resize();
+        $(window).resize(function () {
+            var timtOutId = null;
+            clearTimeout(timtOutId);
+            timtOutId = setTimeout(resize, 200);
+        });
+
+
+
+
+        $('a.accountOperIframeUrl').click(function () {
+            window.top.accountOperIframeObj.attr('src', $(this).attr('dataUrl'));
+        });
+        $.mCustomScrollbar.defaults.scrollButtons.enable=true;
+        $.mCustomScrollbar.defaults.axis="y";
+
+        $("#analysisDataCharts").mCustomScrollbar({theme:"minimal"});
+
+
+
+
+    </script>
 
 </body>
 </html>
