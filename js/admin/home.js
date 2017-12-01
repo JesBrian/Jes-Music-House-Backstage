@@ -21,26 +21,26 @@ function layoutSize() {
 
 
 /**--  全局变量  --**/
-var preFirstMenuObj = null, preSecondMenuObj = null;    //preSecondMenuObj -- 指向之前已经打开了的二级菜单jq对象，preFirstMenuObj -- 指向之前已经打开了的一级菜单jq对象
-var showNowTimeStep = null, showTimeSwitch = null;       //showNowTimeStep -- 用来设置 setInterval 名字[ 每秒刷新时间 ]，showTimeSwitch -- 记录“显示时间”是否开启
-var accountOperIframeObj = $('#accountOperIframe');      //accountOperIframeObj -- 后台各种操作页面主iframe jq对象
-//var nowUrl = 'adminIframe/index.html';                   //nowUrl -- 记录当前后台主iframe的URL[用于刷新页面按钮]
+var preFirstMenuObj = null, preSecondMenuObj = null, //preSecondMenuObj -- 指向之前已经打开了的二级菜单jq对象，preFirstMenuObj -- 指向之前已经打开了的一级菜单jq对象
+    showNowTimeStep = null, showTimeSwitch = null, //showNowTimeStep -- 用来设置 setInterval 名字[ 每秒刷新时间 ]，showTimeSwitch -- 记录“显示时间”是否开启
+    accountOperIframeObj = $('#accountOperIframe'); //accountOperIframeObj -- 后台各种操作页面主iframe jq对象
 
 
 /**
- * 调整后台页面布局 -- 调用home.js里的 layoutSize 方法
+ * 调整后台页面布局 -- 调用 layoutSize 方法
  */
-layoutSize();   //后台页面第一次打开时设置布局
-(function($){   //设置滚动条样式
-    $(window).on("load",function(){
-        $.mCustomScrollbar.defaults.scrollButtons.enable=true;
-        $.mCustomScrollbar.defaults.axis="y";
-
-        $("#mainMenuContent").mCustomScrollbar({theme:"minimal"});
-    });
-})(jQuery);
-$(window).resize(function () {  //改变浏览器窗口时
+$(window).on("load", function () { //页面初始化
+    /* 设置窗口各部分布局 */
     layoutSize();
+    /* 设置滚动条样式 */
+    $.mCustomScrollbar.defaults.scrollButtons.enable = true;
+    $.mCustomScrollbar.defaults.axis = "y";
+    $("#mainMenuContent").mCustomScrollbar({theme: "minimal"});
+});
+$(window).resize(function () {  //改变浏览器窗口时 -- 设置一个定时器并且在没有停止改变窗口大小时不会触发 layoutSize 函数 [ 节约CPU计算资源,提高性能 ]
+    var timeOutId = null;
+    clearTimeout(timeOutId);
+    timeOutId = setTimeout(layoutSize, 200);    //好像有点暴力
 });
 
 

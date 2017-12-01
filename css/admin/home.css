@@ -6,7 +6,7 @@ body {  width:100%; height:100%; margin:0; padding:0; position:relative; backgro
 
 /* 顶部 */
 nav {  width:100%; height:72px; margin:0; box-sizing:border-box; position:relative; z-index:99; line-height:68px;  }
-#navLogo {  width:208px; height:auto; margin:8px 28px; display:inline-block;  }
+#navLogo {  width:208px; height:80%; margin:6px 28px; display:inline-block;  }
 #navLogo > img {  width:100%; height:100%;  }
 nav > .accountMenuSwitch {  top:5px; right:208px; position:absolute; z-index:9;  }
 nav > .accountMenuSwitch img {  width:40px; height:36.5px; top:2px; left:1px; position:absolute;  }
@@ -26,6 +26,7 @@ nav > .accountMenuSwitch img {  width:40px; height:36.5px; top:2px; left:1px; po
 /*左侧主菜单一级菜单*/
 .firstMenu {  width:96%; height:42px; margin:3px 0; position:relative;  }
 .firstMenuSwitch {  width:100%; height:42px; top:0; left:0; position:absolute; z-index:5; cursor:pointer;  }
+.firstMenuSwitch.active {  background:#000;  }
 .firstMenuSwitch > span {  width:61%; margin-left:44px; padding:0; display:inline-block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; line-height:42px; font-weight:600; opacity:0.68;  }
 .firstMenuSwitch.active > span {  text-shadow:1px 1px 3px #22E8FF; opacity:0.8;  }
 .firstMenuSwitch > i.MyIF {  top:-5px; left:8px; font-size:28px; position:absolute;  }
@@ -34,7 +35,7 @@ nav > .accountMenuSwitch img {  width:40px; height:36.5px; top:2px; left:1px; po
 /*左侧主菜单二级菜单*/
 .secondMenu {  width:88%; height:30px; top:0; left:50%; padding:2px 4px; position:absolute; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; transform:translate(-50%,0); z-index:2; color:#888; font-size:13.5px; font-weight:500; line-height:30px; cursor:pointer;  }
 .secondMenu:hover {  color:lightgreen;  }
-.secondMenu.active {  color:#DDD; text-shadow:1px 1px 4px #888; animation:secondMenuActiveMove 0.6s forwards; -webkit-animation:secondMenuActiveMove 0.6s forwards;  }
+.secondMenu.active {  color:#DDD; background:#000; text-shadow:1px 1px 4px #888; animation:secondMenuActiveMove 0.6s forwards; -webkit-animation:secondMenuActiveMove 0.6s forwards;  }
 .secondMenu > .MyIF {  padding:0 8px; border-left:3px solid transparent;  }
 .secondMenu.active > .MyIF {  color:lightgreen; border-color:#22E8FF;  }
 /*菜单 CSS3 动画及少量美化*/
