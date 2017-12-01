@@ -73,7 +73,7 @@
 #singer-main>div>h2 {  margin-left:38px; font-weight:500;  }
 #singer-img {  width:78%; height:326px; margin-top:8px; float:left; position:relative; border-radius:3px;  }
 #singer-img>img {  width:95%; height:90%; top:5%; left:2.5%; position:absolute;  }
-#singer-img>span {  right:100px; bottom:0; position:absolute; z-index:9; opacity:0.88;  }
+#singer-img>span {  right:148px; bottom:20px; position:absolute; z-index:9; opacity:0.88;  }
 #otherSinger {  width:20%; margin:8px 0; float:right; border-radius:3px;  }
 #otherSinger>a {  width:88%; height:35px; margin:18px auto; display:block; border-radius:2px; font:normal normal normal 12.5px/34px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;  }
 #otherSinger img {  width:26px; height:25px; margin:5px 2px 6px -1px; border-radius:2px;  }

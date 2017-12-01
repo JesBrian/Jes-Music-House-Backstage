@@ -338,8 +338,8 @@ a.joinSinger {
 a.joinSinger:after {
     width: 123px;
     height: 45px;
-    top: -6px;
-    left: -61px;
+    top: -7px;
+    left: -61.5px;
     margin-left: 50%;
     content: '';
     display: block;
