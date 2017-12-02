@@ -29,8 +29,8 @@
 
     <!-- 功能页面 -->
     <div id="updateAlbum-main" class="box-show2" style="height:480px;">
-        <div id="albumList" class="s1c-Bg box-show3" style="width:208px; height:475px; margin:22px 8px 0; display:inline-block; float:left;">
-            <div class="glass-Bg" style="width:88%; height:38px; margin:12px auto 0; position:relative; cursor:pointer;">
+        <div id="albumList" class="s1c-Bg box-show3" style="width:238px; height:475px; margin:22px 8px 0; padding-top:12px; display:inline-block; float:left; box-sizing:border-box;">
+            <div class="glass-Bg" style="width:88%; height:38px; margin:0 auto; position:relative; cursor:pointer;">
                 <img src="../img/common/touxiang.jpg" style="width:30px; height:30px; margin:4px; position:absolute; border-radius:2px;">
                 <div style="width:72%; margin:2px 8px 0 0; float:right; display:inline-block; font-size:14px;">
                     <p style="display:block; color:#38E6AB; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;">The Name of Album</p>
@@ -116,7 +116,7 @@
             </div>
         </div>
 
-        <div style="width:638px; height:475px; margin:16px 16px 0 0 ; display:inline-block; float:right;">
+        <div style="width:628px; height:475px; margin:16px 16px 0 0 ; display:inline-block; float:right;">
             <form style="width:100%; height:475px;">
                 <table style="width:100%; height:475px;">
                     <tr>
@@ -139,15 +139,18 @@
                         </td>
                     </tr>
                     <tr style="height:38px;">
-                        <td colspan="2" style="text-align:center;">
+                        <td colspan="2" style="min-height:38px; text-align:center;">
                             <a class="glass-Bg box-show3" style="width:128px; height:28px; margin:8px 5px; position:relative; display:inline-block;">
-                                <p style="width:92%; margin:0 auto; color:#22E8FF; line-height:25px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;">csavsa</p><b style="top:-8px; right:-8px; position:absolute; color:#1A9EE6;">×</b>
+                                <p style="width:92%; margin:0 auto; color:#22E8FF; line-height:28px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;">csavsa</p>
+                                <b class="cancelStyleTag" style="top:-8px; right:-8px; position:absolute; color:#1A9EE6; font-weight:900;">×</b>
                             </a>
                             <a class="glass-Bg box-show3" style="width:128px; height:28px; margin:8px 5px; position:relative; display:inline-block;">
-                                <p style="width:92%; margin:0 auto; color:#22E8FF; line-height:25px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;">vdbxdcfvghjklfdnfdn</p><b style="top:-8px; right:-8px; position:absolute; color:#1A9EE6;">×</b>
+                                <p style="width:92%; margin:0 auto; color:#22E8FF; line-height:28px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;">vdbxdcfvghjklfdnfdn</p>
+                                <b class="cancelStyleTag" style="top:-8px; right:-8px; position:absolute; color:#1A9EE6; font-weight:900;">×</b>
                             </a>
                             <a class="glass-Bg box-show3" style="width:128px; height:28px; margin:8px 5px; position:relative; display:inline-block;">
-                                <p style="width:92%; margin:0 auto; color:#22E8FF; line-height:25px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;">bfdbfdbd</p><b style="top:-8px; right:-8px; position:absolute; color:#1A9EE6;">×</b>
+                                <p style="width:92%; margin:0 auto; color:#22E8FF; line-height:28px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;">bfdbfdbd</p>
+                                <b class="cancelStyleTag" style="top:-8px; right:-8px; position:absolute; color:#1A9EE6; font-weight:900;">×</b>
                             </a>
                         </td>
                     </tr>
@@ -183,6 +186,8 @@
     <!--plugins滚动条插件-->
     <link rel="stylesheet" href="../plugins/scrollbar/jquery.mCustomScrollbar.css">
     <script src="../plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
     <script>
         (function($){
             $(window).on("load",function(){
@@ -192,6 +197,12 @@
                 $("#albumList").mCustomScrollbar({theme:"minimal"});
             });
         })(jQuery);
+
+
+        $('b.cancelStyleTag').click(function () {
+            $(this).parent().remove();
+        });
+
     </script>
 
 
