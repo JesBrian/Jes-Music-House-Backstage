@@ -18,6 +18,19 @@
     <!-- 滚动条 -->
     <link href="../css/common/scrollbar.css" rel="stylesheet"/>
 
+    <style type="text/css">
+        #styleTagListShow > a.glass-Bg {
+            width:128px; height:28px; margin:8px 5px; position:relative; display:inline-block;
+        }
+        #styleTagListShow > a.glass-Bg > p {
+            width:92%; margin:0 auto; color:#22E8FF; line-height:28px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;
+        }
+        #styleTagListShow > a.glass-Bg > b {
+            top:-8px; right:-6px; position:absolute; font-size:16px; font-weight:900; color:#09C15F;
+        }
+    </style>
+
+
 </head>
 <body>
 
@@ -139,19 +152,7 @@
                         </td>
                     </tr>
                     <tr style="height:38px;">
-                        <td colspan="2" style="min-height:38px; text-align:center;">
-                            <a class="glass-Bg box-show3" style="width:128px; height:28px; margin:8px 5px; position:relative; display:inline-block;">
-                                <p style="width:92%; margin:0 auto; color:#22E8FF; line-height:28px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;">csavsa</p>
-                                <b class="cancelStyleTag" style="top:-8px; right:-8px; position:absolute; color:#1A9EE6; font-weight:900;">×</b>
-                            </a>
-                            <a class="glass-Bg box-show3" style="width:128px; height:28px; margin:8px 5px; position:relative; display:inline-block;">
-                                <p style="width:92%; margin:0 auto; color:#22E8FF; line-height:28px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;">vdbxdcfvghjklfdnfdn</p>
-                                <b class="cancelStyleTag" style="top:-8px; right:-8px; position:absolute; color:#1A9EE6; font-weight:900;">×</b>
-                            </a>
-                            <a class="glass-Bg box-show3" style="width:128px; height:28px; margin:8px 5px; position:relative; display:inline-block;">
-                                <p style="width:92%; margin:0 auto; color:#22E8FF; line-height:28px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;">bfdbfdbd</p>
-                                <b class="cancelStyleTag" style="top:-8px; right:-8px; position:absolute; color:#1A9EE6; font-weight:900;">×</b>
-                            </a>
+                        <td id="styleTagListShow" colspan="2" style="min-height:38px; text-align:center;">
                         </td>
                     </tr>
                     <tr>
@@ -163,10 +164,12 @@
                     <tr style="height:68px;">
                         <td colspan="3" style="position:relative; text-align:center; z-index:5;">
                             <a class="joinSinger superBtn MyIF check" style="top:-8px; margin:0 28px;"> 取消返回</a>
-                            <a class="joinSinger superBtn md-close MyIF questionnaire-3" style="top:-8px; margin:0 28px;"> 确认提交</a>
+                            <a class="joinSinger superBtn md-close MyIF questionnaire-3" style="top:-8px; margin:0 28px;" onclick="window.top.niftymodalsByModelName('modal-warning','','确定要保存新的歌单信息')"> 确认提交</a>
                         </td>
                     </tr>
                 </table>
+                <input type="hidden" id="styleTagStr" name="styleTagStr" value="">
+                <input type="hidden" id="styleTagList" name="styleTagList" value="">
             </form>
         </div>
 
@@ -199,9 +202,10 @@
         })(jQuery);
 
 
-        $('b.cancelStyleTag').click(function () {
-            $(this).parent().remove();
-        });
+        function delStyleTag(obj) {
+            $(obj).parent().remove();
+        }
+
 
     </script>
 

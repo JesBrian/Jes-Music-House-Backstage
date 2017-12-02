@@ -1043,9 +1043,10 @@
                     </tr>
                     <tr><td>&nbsp;</td></tr>
                 </table>
+                <input type="hidden" id="styleTagIdsTemp" name="styleTagIdsTemp" value="">
             </div>
             <div style="width:93%; height:38px; position:relative; text-align:center; z-index:5;">
-                <a style="margin:40px 128px 0 0;" class="superBtn joinSinger md-close MyIF makesure" onclick="clearStyleTagSelect();"> 确定保存</a>
+                <a style="margin:40px 128px 0 0;" id="styleTagListTemp" class="superBtn joinSinger md-close MyIF makesure" onclick="saveStyleTagTempData(); clearStyleTagSelect();"> 确定保存</a>
                 <a style="margin:40px 128px 0 0;" class="superBtn joinSinger md-close MyIF cancel" onclick="clearStyleTagSelect();"> 取消返回</a>
             </div>
         </div>
@@ -1171,30 +1172,54 @@
         /**
          * 选择歌单风格标签
          */
+            /* 拟态框内选择风格标签 */
         $("input[name='styleTag']").change(function () {
             var styleTagSelectObj = $("input[name='styleTag']:checked");
-            if (styleTagSelectObj.length > 3) {
+            if (styleTagSelectObj.length > 3) {  //超过三个左下角弹出提示块 & 取消选择第四个风格标签
                 alertTips(0, "风格标签最多不能超过三个！");
-                $(this).prop("checked", false); //这里有坑 -- 复选框不能单纯用 attr 方法来取消/选中，要通过 prop 方法来取消/选中
-            } else {
-                var strTemp = [];
-                styleTagSelectObj.each(function () {
+                $(this).prop("checked", false); //这里有坑 -- 复选框不能单纯用 attr() 方法来取消/选中，要通过 prop() 方法来取消/选中 [单选框待验证]
+            } else {    //没超过三个的话
+                var strTemp = [], styleTagIds = [];
+                styleTagSelectObj.each(function () {    //这里字符串并没有直接拼接，而是使用数组 join。 不知道现在浏览器字符串直接拼接和数组join哪个快了
                     strTemp.push($(this).next('label').text());
+                    styleTagIds.push($(this).val());
                 });
                 strTemp = strTemp.join(' 、 ');
-                //console.log(strTemp);
+                styleTagIds = styleTagIds.join(',');
                 $('#styleTagListTips').html(strTemp);
+                $("#styleTagIdsTemp").val(styleTagIds);
+                strTemp = null; //不知道这样是否还有什么赋值引用 -- 能不能被 GC 回收内存
+                styleTagIds = null;
             }
+            styleTagSelectObj = null;   //同上，GC 回收内存
         });
+            /* 拟态框保存风格标签按钮 - 短暂保存 value 至 iframe[updateAlbum]里 input[type=hidden] - 留待最后 post 提交数据库 */
+        function saveStyleTagTempData() {
+            //这里用到的 strTemp / styleTagIds 与上面 'change事件' 的是同样的值，不知道以后技术提高能否用闭包来解决这个问题，减少CPU计算 - 不存在的 tan90°
+            var strTemp = $('#styleTagListTips').text(), styleTagIds = $('#styleTagIdsTemp').val(); //选中的风格名称 / 选中的风格id列表
+            if ((strTemp !== '') && (styleTagIds !== '')) {
+                strTemp = strTemp.split(' 、 ');
+                styleTagIds = styleTagIds.split(',');
+                console.log(strTemp.length + "   " + styleTagIds.length);
+                var iframeObj = $(window.frames["indexIframe"].document), htmlTempStr = ''; //iframe页面jq对象 / 要新增的html节点字符串
+                iframeObj.find('#styleTagStr').val(strTemp);
+                $.each(strTemp, function (index, value) {   //最小化现场更新？？？   //这里有BUG -- .class 绑定不了click事件 -- 先用 onclick 绑定事件
+                    htmlTempStr += "<a class='glass-Bg box-show3' data-styleId='" + styleTagIds[index] + "'><p>" + value + "</p><b onclick='delStyleTag(this);'>×</b></a>";
+                });
+                iframeObj.find('#styleTagListShow').html(htmlTempStr);
+            }
+        }
             /* 这里有一个很严重的BUG - [ 第二次不生效/刷新页面又有效,如果没猜错可能是与拟态框关闭事件时间冲突,js事件冒泡还没懂 -_- ] */
         // $('#modal-selectStyleTag').find('a.md-close').click(function () {
         //     console.log(666);
         //     $("input[name='styleTag']:checked").prop("checked", false);
         // });
-        var clearStyleTagSelect = function () {    //初步解决问题方法,创建方法,直接元素 onclick 调用先,以后有能力再来解决 - 不存在的 tan90°
+        function clearStyleTagSelect() {    //初步解决问题方法,创建方法,直接元素 onclick 调用先,以后有能力再来解决 - 不存在的 tan90°
             $("input[name='styleTag']:checked").prop("checked", false);
+            $('#styleTagListTips').html('');
+            $('#styleTagIdsTemp').val('');
         }
-
+        /* 注意！！！！！ saveStyleTagTempData 与 clearStyleTagSelect 不能调换顺序执行！！！不然会出现undefind */
 
 
     </script>
