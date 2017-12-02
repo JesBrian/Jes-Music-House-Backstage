@@ -17,23 +17,12 @@
     <link rel="stylesheet" type="text/css" href="../../plugins/scrollbar/jquery.mCustomScrollbar.css">
 
     <style>
-        .messageList {  width:95%; min-height:48px; margin:8px auto 3px; padding:18px 0 18px; position:relative; border:none;  }
-        .messageList:after {
-            content:'';
-            width:100%;
-            height:1px;
-            left:0;
-            bottom:-1px;
-            position:absolute;
-            background: #444;
-            background: -webkit-linear-gradient(left, #111, #222, #444, #222, #111);
-            background: -moz-linear-gradient(left, #111, #222, #444, #222, #111);
-            background: -o-linear-gradient(left, #111, #222, #444, #222, #111);
-            background: -ms-linear-gradient(left, #111, #222, #444, #222, #111);
-            background: linear-gradient(left, #111, #222, #444, #222, #111);
-        }
+        .messageList {  width:99.5%; min-height:48px; margin:2px; padding:20px 12px 20px 22px; position:relative; border:none; box-sizing:border-box; cursor:pointer;  }
+        .messageList:hover {  background:#1A1A1A;  }
+        .messageList:after {  content:''; width:100%; height:1px; left:0; bottom:-1px; position:absolute; background:#444; background:-webkit-linear-gradient(left, #111, #222, #444, #222, #111); background:-moz-linear-gradient(left, #111, #222, #444, #222, #111); background:-o-linear-gradient(left, #111, #222, #444, #222, #111); background:-ms-linear-gradient(left, #111, #222, #444, #222, #111); background:linear-gradient(left, #111, #222, #444, #222, #111);  }
         .messageList>img {  width:50px; height:50px; margin:0 16px 8px 0; display:inline-block; float:left; border-radius:4px; box-shadow:1.5px 1.5px 4px #AAA;  }
-        .messageList>i.MyIF {  top:-2px; left:-10px; position:absolute; font-size:23px; font-weight:900; color:#FF7FBA; text-shadow:0.2px 0.2px 0.5px #FFF;  }
+        .messageList>i.MyIF {  top:-2px; left:8px; position:absolute; font-size:23px; font-weight:900; color:#FF7FBA; text-shadow:0.2px 0.2px 0.5px #FFF;  }
+        .messageList>i.readTag {  margin-right:88px; float:right; color:#FFB4D1; text-shadow:0.5px 0.5px 0.3px #555;  }
         .messageList>a {  margin-left:8px; color:#57E692; font-weight:600;  }
         .messageList>p.messageContent {  text-indent:2em; word-break:break-all;  }
         .messageList>p.messageTime {  margin-right:48px; text-align:right;  }
@@ -70,64 +59,97 @@
         </div>
 
         <div id="messageListContent" class="glass-Bg box-show3" style="width:83%; margin:12px 0 0 15.5%; color:#CCC; overflow:hidden;">
-            <div class="messageList">
-                <i class="MyIF bell"></i>
+            <div class="messageList" title="点击查看详情">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
+                <i class="readTag">未读</i>
+                <i class="MyIF bell"></i>
                 <p class="messageContent">成熟不成熟可能将面临是测试v包含了几次没事，；了陈水扁黑龙江煤矿，了成熟并引进模块，了；曾参与u并将模块，试v包含了几次没事，；了陈水扁黑龙江煤矿，了成熟并引进模块，了；曾参与u并将模块，了从然后一天股已经OK漂亮曾担任十月怀胎股吧引进哦满仓控盘，了的立方体一股hi就OK漂亮【。；1垄断行业太古hi就OK漂亮【1</p>
                 <p class="messageTime">1111-11-11 11:11</p>
             </div>
-            <div class="messageList">
-                <i class="MyIF bell"></i>
+            <div class="messageList" title="点击查看详情">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
+                <i class="readTag">未读</i>
+                <i class="MyIF bell"></i>
                 <p class="messageContent">成vsdfgtky大神傻逼也搞不好你家门口，了然后他一股hi叫偶老婆【】1合同一股hi就OK漂亮【1下次DVD是h漂亮【1</p>
                 <p class="messageTime">1111-11-11 11:11</p>
             </div>
-            <div class="messageList">
-                <i class="MyIF bell"></i>
+            <div class="messageList" title="点击查看详情">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
+                <i class="readTag">未读</i>
+                <i class="MyIF bell"></i>
                 <p class="messageContent">成熟不天股已经O太古hi就OK漂亮【1</p>
                 <p class="messageTime">1111-11-11 11:11</p>
             </div>
-            <div class="messageList">
+            <div class="messageList" title="点击查看详情">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
+                <i class="readTag">已读</i>
                 <p class="messageContent">成熟不成熟可能将面临是测试v包含了几次没事，；了陈水扁黑龙江煤矿，了成熟并引进模块，了；曾参与u并将模块，了从然后一天股已经OK漂亮曾担任十月怀胎股吧引进哦满仓控盘，了的立方体一股hi就OK漂亮【。；1垄断行业太古hi就OK漂亮【1</p>
                 <p class="messageTime">1111-11-11 11:11</p>
             </div>
-            <div class="messageList">
+            <div class="messageList" title="点击查看详情">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
+                <i class="readTag">已读</i>
                 <p class="messageContent">该不会你寂寞恐怕ctrv从市场部副经理看，l1非常高v和布局来看美女，；寞恐怕ctrv寞恐怕ctrvybunijmok从TV应该不会你寂寞恐怕ctrv从市场部副经理看，l1非常高v和布局来看美女，；寞恐怕ctrv寞恐怕ctrvybunijmok从TV应该不会你寂寞恐怕ctrv从市场部副经理看，l1非常高v和布局来看美女，；寞恐怕ctrv寞恐怕ctrvybunijmok从TV应该不会你寂寞恐怕ctrv从市场部副经理看，l1非常高v和布局来看美女，；寞恐怕ctrv寞恐怕ctrvybunijmok从TV应该不会你寂寞恐布局来看美女，；寞恐怕ctrv寞恐怕ctrvybunijmok从TV应该不会你寂寞恐布局来看美女，；寞恐怕ctrv寞恐怕ctrvybunijmok从TV应该不会你寂寞恐布局来看美女，；寞恐怕ctrv寞恐怕ctrvybunijmok从TV应该不会你寂寞恐怕怕ctrvybunijmok从TV应该不会你寂寞恐怕就OK漂亮【1</p>
                 <p class="messageTime">1111-11-11 11:11</p>
             </div>
-            <div class="messageList">
+            <div class="messageList" title="点击查看详情">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
+                <i class="readTag">已读</i>
                 <p class="messageContent">成熟不成熟可能将面临是测试v包含了几次没事，；了陈水扁黑龙江煤矿，了成熟并引进模块，了；曾参与u并将模块，了从然后一天股已经OK漂亮曾担任十月怀胎股吧引进哦满仓控盘，了的立方体一股hi就OK漂亮【。；1垄断行业太古hi就OK漂亮【1</p>
                 <p class="messageTime">1111-11-11 11:11</p>
             </div>
-            <div class="messageList">
+            <div class="messageList" title="点击查看详情">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
+                <i class="readTag">已读</i>
                 <p class="messageContent">tfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmktfvygbuhnjmk</p>
                 <p class="messageTime">1111-11-11 11:11</p>
             </div>
-            <div class="messageList">
+            <div class="messageList" title="点击查看详情">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
+                <i class="readTag">已读</i>
                 <p class="messageContent">xrdctfvygbuhnjmk经Ocstfvygbuhnjmk经Ocstfvygbuhnjmk经Ocstfvygbuhnjmk经Ocstfvygbuhnjmk经Ocstfvygbuhnjmk经Ocstfvygbuhnjmk经Ocstfvygbuhnjmk经Ocscss</p>
                 <p class="messageTime">1111-11-11 11:11</p>
             </div>
-            <div class="messageList">
+            <div class="messageList" title="点击查看详情">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
+                <i class="readTag">已读</i>
                 <p class="messageContent">csvdsvdsbds然后一天股已经OK漂亮曾担任十月怀胎股吧引进哦满仓控盘，了的立方体一股hi就OK漂亮【。；1垄断行业太古hi就OK漂亮【1</p>
                 <p class="messageTime">1111-11-11 11:11</p>
             </div>
 
+
+
+            <div id="messageDetail" style="width:100%; height:800px; padding:18px 8px 8px; position:relative; box-sizing:border-box; display:none;">
+                <p style="margin-left:28px; color:#2DDEE6; font-size:18px; border-left:5px solid #886AFF;">
+                    <a id="backMessageList" style="margin:0 18px 0 28px; font-size:20px; color:lightgreen;">系统信息</a>
+                    <span class="MyIF double-arrow-right" style="
+                        display:inline-block;
+                        transform: scale(1.8,1.5);
+                        -ms-transform: scale(1.8,1.5);
+                        -webkit-transform: scale(2,1.5);
+                        -moz-transform: scale(1.8,1.5);
+                        -o-transform: scale(1.8,1.5);
+                    "></span>
+                    <a style="margin:0 18px 0 28px; font-size:20px; color:lightgreen;">消息详情</a>
+                    <span class="MyIF double-arrow-right" style="
+                        display:inline-block;
+                        transform: scale(1.8,1.5);
+                        -ms-transform: scale(1.8,1.5);
+                        -webkit-transform: scale(1.8,1.5);
+                        -moz-transform: scale(1.8,1.5);
+                        -o-transform: scale(1.8,1.5);
+                    "></span>
+                </p>
+            </div>
         </div>
 
     </div>
@@ -144,7 +166,7 @@
     <script type="text/javascript">
 
         function resize() {
-            $('#messageListContent').height($('#mainBody').height($(window).height() - 180).height() - 28);
+            $('#messageListContent').height($('#mainBody').height($(window).height() - 158).height() - 28);
         }
 
         resize();
@@ -166,6 +188,22 @@
         $("#messageListContent").mCustomScrollbar({theme:"minimal"});
 
 
+
+        /**
+         * 显示/隐藏该种类全部信息 -- 隐藏/显示某条详细信息
+         */
+        $('div.messageList').click(function () {
+            $('div.messageList').fadeOut();
+            $('#messageDetail').fadeIn();
+        });
+        $('input[name="messageType"]').change(function () {
+            $('div.messageList').fadeIn();
+            $('#messageDetail').fadeOut();
+        });
+        $('#backMessageList').click(function () {
+            $('div.messageList').fadeIn();
+            $('#messageDetail').fadeOut();
+        });
 
 
     </script>
