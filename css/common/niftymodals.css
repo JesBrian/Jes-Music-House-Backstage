@@ -2,12 +2,12 @@
  * 拟态框 CSS
  */
 
-.md-container {  position:fixed; top:50%; left:50%; width:666px; z-index:999999999999999999999; visibility:hidden; -webkit-backface-visibility:hidden; -moz-backface-visibility:hidden; backface-visibility:hidden; -webkit-transform:translateX(-50%) translateY(-50%); -moz-transform:translateX(-50%) translateY(-50%); -ms-transform:translateX(-50%) translateY(-50%); transform:translateX(-50%) translateY(-50%);  }
+.md-container {  position:fixed; top:50%; left:50%; width:666px;  z-index:999999999999999999999; visibility:hidden; -webkit-backface-visibility:hidden; -moz-backface-visibility:hidden; backface-visibility:hidden; -webkit-transform:translateX(-50%) translateY(-50%); -moz-transform:translateX(-50%) translateY(-50%); -ms-transform:translateX(-50%) translateY(-50%); transform:translateX(-50%) translateY(-50%); }
 .md-show {  visibility:visible;  }
 .md-overlay {  position:fixed; width:100%; height:100%; visibility:hidden; top:0; left:0; z-index:999; opacity:0; background:rgba(0,0,0,0.8); -webkit-transition:all 0.3s; -moz-transition:all 0.3s; transition:all 0.3s;  }
 .md-show ~ .md-overlay {  opacity:1; visibility:visible;  }
-.md-content {  margin:0 auto; padding:12px; color:#fff; background:#67D6CE; position:relative; border-radius:8px; box-shadow:0 0.5em 1em rgba(0, 0, 0, 0.6);}
-.md-content>h3 {  margin:18px auto 0; padding:0.1em; width:95%; text-align:center; font-size:1.8em; font-weight:600; opacity:0.8; background:#8380D6; border:3px solid rgba(0, 0, 0, 0.4); border-radius:3px; box-shadow:0 0.5em 1em rgba(0, 0, 0, 0.6);  }
+.md-content {  margin:0 auto; padding:12px; color:#fff; background:#363636; position:relative; border:0.1px solid #05C4E6; border-radius:8px; box-shadow:0 0.5em 1em rgba(0, 0, 0, 0.6);}
+.md-content>h3 {  margin:18px auto 0; padding:0.1em; width:88%; text-align:center; font-size:1.8em; font-weight:600; opacity:0.8;  }
 .md-content>h3>img {  width:35px; margin:0 8px -7px 0;  }
 .md-content>div{  padding:20px 0 0 38px;  }
 .md-content>div button {  width:100px; height:32px; margin-right:25px; border:none; box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.6); color:#5A5A5A; line-height:35px; font-weight:600; font-family:'宋体';  }
