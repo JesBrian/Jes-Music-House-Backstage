@@ -42,7 +42,7 @@
 
     <!-- 功能页面 -->
     <div id="updateAlbum-main" class="box-show2" style="height:480px;">
-        <div id="albumList" class="s1c-Bg box-show3" style="width:238px; height:475px; margin:22px 8px 0; padding-top:12px; display:inline-block; float:left; box-sizing:border-box;">
+        <div id="albumList" class="s1c-Bg box-show3" style="width:238px; height:475px; margin:22px 8px 0; padding:12px 0; display:inline-block; float:left; box-sizing:border-box;">
             <div class="glass-Bg" style="width:88%; height:38px; margin:0 auto; position:relative; cursor:pointer;">
                 <img src="../img/common/touxiang.jpg" style="width:30px; height:30px; margin:4px; position:absolute; border-radius:2px;">
                 <div style="width:72%; margin:2px 8px 0 0; float:right; display:inline-block; font-size:14px;">
@@ -120,7 +120,7 @@
                     <p style="text-align:right; font-size:12px; color:#CCC;">XX 首歌</p>
                 </div>
             </div>
-            <div class="glass-Bg" style="width:88%; height:38px; margin:12px auto 12px; position:relative; cursor:pointer;">
+            <div class="glass-Bg" style="width:88%; height:38px; margin:12px auto 0; position:relative; cursor:pointer;">
                 <img src="../img/common/touxiang.jpg" style="width:30px; height:30px; margin:4px; position:absolute; border-radius:2px;">
                 <div style="width:72%; margin:2px 8px 0 0; float:right; display:inline-block; font-size:14px;">
                     <p style="display:block; color:#38E6AB; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;">这是一个很长的歌单名称</p>
@@ -147,7 +147,7 @@
                         <td style="position:relative; text-align:right; z-index:5;">
                             <div style="margin:12px 0 0; text-align:center;">
                                 <span style="font-size:14px;">选择适合的风格标签，最多选3个</span>
-                                <a class="glass-Bg MyIF cubes-3" style="width:108px; height:32px; display:inline-block;" onclick="window.top.niftymodalsByModelName('modal-selectStyleTag')"> 选择风格</a>
+                                <a id="chooseStyleTagButton" class="glass-Bg MyIF cubes-3" style="width:108px; height:32px; display:inline-block;"> 选择风格</a>
                             </div>
                         </td>
                     </tr>
@@ -168,7 +168,6 @@
                         </td>
                     </tr>
                 </table>
-                <input type="hidden" id="styleTagStr" name="styleTagStr" value="">
                 <input type="hidden" id="styleTagList" name="styleTagList" value="">
             </form>
         </div>
@@ -202,9 +201,26 @@
         })(jQuery);
 
 
+        /* 删除某一个风格标签 */
         function delStyleTag(obj) {
             $(obj).parent().remove();
         }
+
+        /* 点击选择风格标签按钮 */
+        $('#chooseStyleTagButton').click(function () {
+            if ($("a.checkedStyleTag").length != 0) {
+                var styleTagStr = [];
+                $("a.checkedStyleTag").each(function () {
+                    $("input[name='styleTag'][value=" + $(this).attr("data-styleId") + "]", window.top.document).prop('checked',true);
+                    styleTagStr.push($(this).children('p').text());
+                });
+                styleTagStr = styleTagStr.join(' 、 ');
+                $("#styleTagListTips", window.top.document).html(styleTagStr);
+                styleTagStr = null;
+            }
+            window.top.niftymodalsByModelName('modal-selectStyleTag');
+        });
+
 
 
     </script>

@@ -930,124 +930,124 @@
     </div>
 
         <!-- 歌单风格分类 -->
-    <div class="md-container md-effect-1" id="modal-selectStyleTag" style="width:868px;">
+    <div class="md-container md-effect-1" id="modal-selectStyleTag">
         <div class="md-content">
             <h3><img src="../img/icon/cube-3.png">选择风格标签</h3>
             <a class="md-close close-all MyIF all-arrow" onclick="clearStyleTagSelect();"></a>
-            <span style="margin:0 0 0 38px; line-height:3em; font-size:18px;">选择合适的风格标签，最多可选3个:</span>
-            <span id="styleTagListTips" style="margin:0; line-height:3em; font-size:17px;"></span>
-            <div id="styleTagList" style="width:90%; height:308px; margin:0 auto 8px; padding:0; box-sizing:border-box;">
-                <table style="width:100%; height:100%;">
+            <span>选择合适的风格标签，最多可选3个:</span>
+            <span id="styleTagListTips"></span>
+            <div id="styleTagList">
+                <table>
                     <tr>
-                        <td style="width:68px; text-align:center; font-size:22px; font-weight:700;">语种</td>
+                        <td>语种</td>
                         <td>
-                            <input type="checkbox" class="styleTag superInput" id='verygood0' name="styleTag" value="1"><label style="margin:3px 16px 8px 8px;" for='verygood0'><span>华语</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood1' name="styleTag" value="2"><label style="margin:3px 16px 8px 8px;" for='verygood1'><span>欧美</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood2' name="styleTag" value="3"><label style="margin:3px 16px 8px 8px;" for='verygood2'><span>日语</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood3' name="styleTag" value="4"><label style="margin:3px 16px 8px 8px;" for='verygood3'><span>韩语</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood4' name="styleTag" value="5"><label style="margin:3px 16px 8px 8px;" for='verygood4'><span>粤语</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood5' name="styleTag" value="6"><label style="margin:3px 16px 8px 8px;" for='verygood5'><span>小语种</span></label>
+                            <input type="checkbox" class="superInput" id='verygood0' name="styleTag" value="1"><label for='verygood0'><span>华语</span></label>
+                            <input type="checkbox" class="superInput" id='verygood1' name="styleTag" value="2"><label for='verygood1'><span>欧美</span></label>
+                            <input type="checkbox" class="superInput" id='verygood2' name="styleTag" value="3"><label for='verygood2'><span>日语</span></label>
+                            <input type="checkbox" class="superInput" id='verygood3' name="styleTag" value="4"><label for='verygood3'><span>韩语</span></label>
+                            <input type="checkbox" class="superInput" id='verygood4' name="styleTag" value="5"><label for='verygood4'><span>粤语</span></label>
+                            <input type="checkbox" class="superInput" id='verygood5' name="styleTag" value="6"><label for='verygood5'><span>小语种</span></label>
                         </td>
                     </tr>
                     <tr><td>&nbsp;</td></tr>
 
                     <tr>
-                        <td style="width:68px; text-align:center; font-size:22px; font-weight:700;">风格</td>
+                        <td>风格</td>
                         <td>
-                            <input type="checkbox" class="styleTag superInput" id='verygood6' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood6'><span>流行</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood7' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood7'><span>摇滚</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood8' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood8'><span>民谣</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood9' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood9'><span>电子</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood10' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood10'><span>舞曲</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood11' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood11'><span>说唱</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood12' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood12'><span>爵士</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood13' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood13'><span>轻音乐</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood14' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood14'><span>乡村</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood15' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood15'><span>R&B/Soul</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood16' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood16'><span>英伦</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood17' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood17'><span>金属</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood18' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood18'><span>朋克</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood19' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood19'><span>蓝调</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood20' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood20'><span>雷鬼</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood21' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood21'><span>世界音乐</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood22' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood22'><span>拉丁</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood23' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood23'><span>另类/独立</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood24' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood24'><span>New Age</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood25' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood25'><span>古风</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood26' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood26'><span>后摇</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood27' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood27'><span>Bossa Nova</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood28' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood28'><span>电音</span></label>
+                            <input type="checkbox" class="superInput" id='verygood6' name="styleTag"><label for='verygood6'><span>流行</span></label>
+                            <input type="checkbox" class="superInput" id='verygood7' name="styleTag"><label for='verygood7'><span>摇滚</span></label>
+                            <input type="checkbox" class="superInput" id='verygood8' name="styleTag"><label for='verygood8'><span>民谣</span></label>
+                            <input type="checkbox" class="superInput" id='verygood9' name="styleTag"><label for='verygood9'><span>电子</span></label>
+                            <input type="checkbox" class="superInput" id='verygood10' name="styleTag"><label for='verygood10'><span>舞曲</span></label>
+                            <input type="checkbox" class="superInput" id='verygood11' name="styleTag"><label for='verygood11'><span>说唱</span></label>
+                            <input type="checkbox" class="superInput" id='verygood12' name="styleTag"><label for='verygood12'><span>爵士</span></label>
+                            <input type="checkbox" class="superInput" id='verygood13' name="styleTag"><label for='verygood13'><span>轻音乐</span></label>
+                            <input type="checkbox" class="superInput" id='verygood14' name="styleTag"><label for='verygood14'><span>乡村</span></label>
+                            <input type="checkbox" class="superInput" id='verygood15' name="styleTag"><label for='verygood15'><span>R&B/Soul</span></label>
+                            <input type="checkbox" class="superInput" id='verygood16' name="styleTag"><label for='verygood16'><span>英伦</span></label>
+                            <input type="checkbox" class="superInput" id='verygood17' name="styleTag"><label for='verygood17'><span>金属</span></label>
+                            <input type="checkbox" class="superInput" id='verygood18' name="styleTag"><label for='verygood18'><span>朋克</span></label>
+                            <input type="checkbox" class="superInput" id='verygood19' name="styleTag"><label for='verygood19'><span>蓝调</span></label>
+                            <input type="checkbox" class="superInput" id='verygood20' name="styleTag"><label for='verygood20'><span>雷鬼</span></label>
+                            <input type="checkbox" class="superInput" id='verygood21' name="styleTag"><label for='verygood21'><span>世界音乐</span></label>
+                            <input type="checkbox" class="superInput" id='verygood22' name="styleTag"><label for='verygood22'><span>拉丁</span></label>
+                            <input type="checkbox" class="superInput" id='verygood23' name="styleTag"><label for='verygood23'><span>另类/独立</span></label>
+                            <input type="checkbox" class="superInput" id='verygood24' name="styleTag"><label for='verygood24'><span>New Age</span></label>
+                            <input type="checkbox" class="superInput" id='verygood25' name="styleTag"><label for='verygood25'><span>古风</span></label>
+                            <input type="checkbox" class="superInput" id='verygood26' name="styleTag"><label for='verygood26'><span>后摇</span></label>
+                            <input type="checkbox" class="superInput" id='verygood27' name="styleTag"><label for='verygood27'><span>Bossa Nova</span></label>
+                            <input type="checkbox" class="superInput" id='verygood28' name="styleTag"><label for='verygood28'><span>电音</span></label>
                         </td>
                     </tr>
                     <tr><td>&nbsp;</td></tr>
 
                     <tr>
-                        <td style="width:68px; text-align:center; font-size:22px; font-weight:700;">场景</td>
+                        <td>场景</td>
                         <td>
-                            <input type="checkbox" class="styleTag superInput" id='verygood29' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood29'><span>清晨</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood30' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood30'><span>夜晚</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood31' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood31'><span>学习</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood32' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood32'><span>工作</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood33' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood33'><span>午休</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood34' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood34'><span>下午茶</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood35' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood35'><span>地铁</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood36' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood36'><span>驾车</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood37' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood37'><span>运动</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood38' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood38'><span>旅行</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood39' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood39'><span>散步</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood40' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood40'><span>酒吧</span></label>
+                            <input type="checkbox" class="superInput" id='verygood29' name="styleTag"><label for='verygood29'><span>清晨</span></label>
+                            <input type="checkbox" class="superInput" id='verygood30' name="styleTag"><label for='verygood30'><span>夜晚</span></label>
+                            <input type="checkbox" class="superInput" id='verygood31' name="styleTag"><label for='verygood31'><span>学习</span></label>
+                            <input type="checkbox" class="superInput" id='verygood32' name="styleTag"><label for='verygood32'><span>工作</span></label>
+                            <input type="checkbox" class="superInput" id='verygood33' name="styleTag"><label for='verygood33'><span>午休</span></label>
+                            <input type="checkbox" class="superInput" id='verygood34' name="styleTag"><label for='verygood34'><span>下午茶</span></label>
+                            <input type="checkbox" class="superInput" id='verygood35' name="styleTag"><label for='verygood35'><span>地铁</span></label>
+                            <input type="checkbox" class="superInput" id='verygood36' name="styleTag"><label for='verygood36'><span>驾车</span></label>
+                            <input type="checkbox" class="superInput" id='verygood37' name="styleTag"><label for='verygood37'><span>运动</span></label>
+                            <input type="checkbox" class="superInput" id='verygood38' name="styleTag"><label for='verygood38'><span>旅行</span></label>
+                            <input type="checkbox" class="superInput" id='verygood39' name="styleTag"><label for='verygood39'><span>散步</span></label>
+                            <input type="checkbox" class="superInput" id='verygood40' name="styleTag"><label for='verygood40'><span>酒吧</span></label>
                         </td>
                     </tr>
                     <tr><td>&nbsp;</td></tr>
 
                     <tr>
-                        <td style="width:68px; text-align:center; font-size:22px; font-weight:700;">情感</td>
+                        <td>情感</td>
                         <td>
-                            <input type="checkbox" class="styleTag superInput" id='verygood41' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood41'><span>怀旧</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood42' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood42'><span>清新</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood43' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood43'><span>浪漫</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood44' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood44'><span>性感</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood45' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood45'><span>伤感</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood46' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood46'><span>治愈</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood47' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood47'><span>放松</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood48' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood48'><span>孤独</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood49' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood49'><span>感动</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood50' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood50'><span>兴奋</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood51' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood51'><span>快乐</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood52' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood52'><span>安静</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood53' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood53'><span>思念</span></label>
+                            <input type="checkbox" class="superInput" id='verygood41' name="styleTag"><label for='verygood41'><span>怀旧</span></label>
+                            <input type="checkbox" class="superInput" id='verygood42' name="styleTag"><label for='verygood42'><span>清新</span></label>
+                            <input type="checkbox" class="superInput" id='verygood43' name="styleTag"><label for='verygood43'><span>浪漫</span></label>
+                            <input type="checkbox" class="superInput" id='verygood44' name="styleTag"><label for='verygood44'><span>性感</span></label>
+                            <input type="checkbox" class="superInput" id='verygood45' name="styleTag"><label for='verygood45'><span>伤感</span></label>
+                            <input type="checkbox" class="superInput" id='verygood46' name="styleTag"><label for='verygood46'><span>治愈</span></label>
+                            <input type="checkbox" class="superInput" id='verygood47' name="styleTag"><label for='verygood47'><span>放松</span></label>
+                            <input type="checkbox" class="superInput" id='verygood48' name="styleTag"><label for='verygood48'><span>孤独</span></label>
+                            <input type="checkbox" class="superInput" id='verygood49' name="styleTag"><label for='verygood49'><span>感动</span></label>
+                            <input type="checkbox" class="superInput" id='verygood50' name="styleTag"><label for='verygood50'><span>兴奋</span></label>
+                            <input type="checkbox" class="superInput" id='verygood51' name="styleTag"><label for='verygood51'><span>快乐</span></label>
+                            <input type="checkbox" class="superInput" id='verygood52' name="styleTag"><label for='verygood52'><span>安静</span></label>
+                            <input type="checkbox" class="superInput" id='verygood53' name="styleTag"><label for='verygood53'><span>思念</span></label>
                         </td>
                     </tr>
                     <tr><td>&nbsp;</td></tr>
 
                     <tr>
-                        <td style="width:68px; text-align:center; font-size:22px; font-weight:700;">主题</td>
+                        <td>主题</td>
                         <td>
-                            <input type="checkbox" class="styleTag superInput" id='verygood54' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood54'><span>影视原声</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood55' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood55'><span>ACG</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood56' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood56'><span>游戏</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood57' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood57'><span>70后</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood58' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood58'><span>80后</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood59' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood59'><span>90后</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood60' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood60'><span>00后</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood61' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood61'><span>网络歌曲</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood62' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood62'><span>KTV</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood63' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood63'><span>经典</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood64' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood64'><span>翻唱</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood65' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood65'><span>吉他</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood66' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood66'><span>钢琴</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood67' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood67'><span>器乐</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood68' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood68'><span>儿童</span></label>
-                            <input type="checkbox" class="styleTag superInput" id='verygood69' name="styleTag"><label style="margin:3px 16px 8px 8px;" for='verygood69'><span>榜单</span></label>
+                            <input type="checkbox" class="superInput" id='verygood54' name="styleTag"><label for='verygood54'><span>影视原声</span></label>
+                            <input type="checkbox" class="superInput" id='verygood55' name="styleTag"><label for='verygood55'><span>ACG</span></label>
+                            <input type="checkbox" class="superInput" id='verygood56' name="styleTag"><label for='verygood56'><span>游戏</span></label>
+                            <input type="checkbox" class="superInput" id='verygood57' name="styleTag"><label for='verygood57'><span>70后</span></label>
+                            <input type="checkbox" class="superInput" id='verygood58' name="styleTag"><label for='verygood58'><span>80后</span></label>
+                            <input type="checkbox" class="superInput" id='verygood59' name="styleTag"><label for='verygood59'><span>90后</span></label>
+                            <input type="checkbox" class="superInput" id='verygood60' name="styleTag"><label for='verygood60'><span>00后</span></label>
+                            <input type="checkbox" class="superInput" id='verygood61' name="styleTag"><label for='verygood61'><span>网络歌曲</span></label>
+                            <input type="checkbox" class="superInput" id='verygood62' name="styleTag"><label for='verygood62'><span>KTV</span></label>
+                            <input type="checkbox" class="superInput" id='verygood63' name="styleTag"><label for='verygood63'><span>经典</span></label>
+                            <input type="checkbox" class="superInput" id='verygood64' name="styleTag"><label for='verygood64'><span>翻唱</span></label>
+                            <input type="checkbox" class="superInput" id='verygood65' name="styleTag"><label for='verygood65'><span>吉他</span></label>
+                            <input type="checkbox" class="superInput" id='verygood66' name="styleTag"><label for='verygood66'><span>钢琴</span></label>
+                            <input type="checkbox" class="superInput" id='verygood67' name="styleTag"><label for='verygood67'><span>器乐</span></label>
+                            <input type="checkbox" class="superInput" id='verygood68' name="styleTag"><label for='verygood68'><span>儿童</span></label>
+                            <input type="checkbox" class="superInput" id='verygood69' name="styleTag"><label for='verygood69'><span>榜单</span></label>
                         </td>
                     </tr>
                     <tr><td>&nbsp;</td></tr>
                 </table>
                 <input type="hidden" id="styleTagIdsTemp" name="styleTagIdsTemp" value="">
             </div>
-            <div style="width:93%; height:38px; position:relative; text-align:center; z-index:5;">
-                <a style="margin:40px 128px 0 0;" id="styleTagListTemp" class="superBtn joinSinger md-close MyIF makesure" onclick="saveStyleTagTempData(); clearStyleTagSelect();"> 确定保存</a>
-                <a style="margin:40px 128px 0 0;" class="superBtn joinSinger md-close MyIF cancel" onclick="clearStyleTagSelect();"> 取消返回</a>
+            <div id="buttonGroup">
+                <a id="styleTagListTemp" class="superBtn joinSinger md-close MyIF makesure" onclick="saveStyleTagTempData(); clearStyleTagSelect();"> 确定保存</a>
+                <a class="superBtn joinSinger md-close MyIF cancel" onclick="clearStyleTagSelect();"> 取消返回</a>
             </div>
         </div>
     </div>
@@ -1200,11 +1200,9 @@
             if ((strTemp !== '') && (styleTagIds !== '')) {
                 strTemp = strTemp.split(' 、 ');
                 styleTagIds = styleTagIds.split(',');
-                console.log(strTemp.length + "   " + styleTagIds.length);
                 var iframeObj = $(window.frames["indexIframe"].document), htmlTempStr = ''; //iframe页面jq对象 / 要新增的html节点字符串
-                iframeObj.find('#styleTagStr').val(strTemp);
                 $.each(strTemp, function (index, value) {   //最小化现场更新？？？   //这里有BUG -- .class 绑定不了click事件 -- 先用 onclick 绑定事件
-                    htmlTempStr += "<a class='glass-Bg box-show3' data-styleId='" + styleTagIds[index] + "'><p>" + value + "</p><b onclick='delStyleTag(this);'>×</b></a>";
+                    htmlTempStr += "<a class='checkedStyleTag glass-Bg box-show3' data-styleId='" + styleTagIds[index] + "'><p>" + value + "</p><b onclick='delStyleTag(this);'>×</b></a>";
                 });
                 iframeObj.find('#styleTagListShow').html(htmlTempStr);
             }
