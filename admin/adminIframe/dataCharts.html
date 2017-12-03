@@ -17,16 +17,24 @@
     <!-- 带搜索框的下拉列表 -->
     <link href="../../css/common/searchableSelect.css" rel="stylesheet" type="text/css">
 
-</head>
-<body style="background: #00adee; position:relative;">
+    <style type="text/css">
+        .searchable-select {
+            top:0;
+            right:0;
+            position:absolute;
+        }
 
-    <select style="top:-8px; right:28px; position:absolute;">
-        <option selected>华语</option>
-        <option>日本</option>
-        <option>韩国</option>
-        <option>欧美</option>
-        <option>日韩</option>
-        <option>其他</option>
+    </style>
+
+</head>
+<body style="position:relative;">
+
+    <select>
+        <option selected>折线图</option>
+        <option>饼图</option>
+        <option>柱状图</option>
+        <option>区域图</option>
+        <option>散点图</option>
     </select>
 
 
