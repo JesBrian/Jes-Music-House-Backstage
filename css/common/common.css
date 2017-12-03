@@ -272,14 +272,14 @@ a.userLogin:after {
 
 a.reply {
     width: 68px;
-    height: 23px;
-    top: -50px;
+    height: 20px;
+    top: -52px;
     left: 60px;
     color: #AEAEAE;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
     font-weight: bold;
     letter-spacing: .08em;
-    line-height: 25px;
+    line-height: 21px;
     position: relative;
     display:inline-block;
     border-radius:2px;
@@ -296,7 +296,7 @@ a.reply {
 a.reply:after {
     width: 78px;
     height: 30px;
-    top: -3px;
+    top: -5px;
     left: -39.5px;
     margin-left: 50%;
     content: '';

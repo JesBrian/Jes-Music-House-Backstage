@@ -28,10 +28,11 @@
 #mesaage-main {  width:900px; margin:25px 115px 0 auto; padding:18px 0 38px;  }
 #mesaage-main>#messageTitle {  width:160px; height:40px; top:38px; left:45%; position:absolute; z-index:50; border-radius:4px; font:normal normal normal 20px/35px Arial, 'Microsoft YaHei', '微软雅黑'; color:#70ff92; text-align:center;  }
 #mesaage-main>#mesaageContent {  width:98%; height:480px; padding:56px 8px 0; color:#AAA; font-size:14px;  }
-#mesaage-main>#mesaageContent .messageList {  width:88%; margin:0 auto 8px; padding:0 0 18px 18px; border-bottom:1px solid #666;  }
+#mesaage-main .messageList {  width:95%; margin:0 auto; padding:12px 0 18px 12px; border-bottom:1px solid #666;  }
+#mesaage-main .messageList:hover {  background:#1D1D1D;  }
 #mesaageContent .messageList>a {  color:#00BFE8;  }
 #mesaageContent .messageList>a>img {  width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;  }
-#mesaageContent .messageList>.replyContent {  margin-top:3px; margin-left:2px; font-size:13px; word-wrap:break-word; word-break:break-all;  }
+#mesaageContent .messageList>.replyContent {  margin-top:3px; margin-left:2px; font-size:13px; letter-spacing:0.8px; word-wrap:break-word; word-break:break-all;  }
 #mesaageContent .messageList>.replyBar {  margin:13px 88px 5px; color:#DDD;  }
 #mesaageContent .messageList .replyButton {  margin-left:28px; float:right; cursor:pointer;  }
 #mesaage-main .noMessage {  margin-top:58px; text-align:center; font-size:28px;  }
