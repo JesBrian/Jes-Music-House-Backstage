@@ -2,12 +2,12 @@
  * 拟态框 CSS
  */
 
-.md-container {  position:fixed; top:50%; left:50%; width:666px; z-index:999999999999999999999; visibility:hidden; -webkit-backface-visibility:hidden; -moz-backface-visibility:hidden; backface-visibility:hidden; -webkit-transform:translateX(-50%) translateY(-50%); -moz-transform:translateX(-50%) translateY(-50%); -ms-transform:translateX(-50%) translateY(-50%); transform:translateX(-50%) translateY(-50%);  }
+.md-container {  position:fixed; top:50%; left:50%; width:666px;  z-index:999999999999999999999; visibility:hidden; -webkit-backface-visibility:hidden; -moz-backface-visibility:hidden; backface-visibility:hidden; -webkit-transform:translateX(-50%) translateY(-50%); -moz-transform:translateX(-50%) translateY(-50%); -ms-transform:translateX(-50%) translateY(-50%); transform:translateX(-50%) translateY(-50%); }
 .md-show {  visibility:visible;  }
-.md-overlay {  position:fixed; width:100%; height:100%; visibility:hidden; top:0; left:0; z-index:99999999; opacity:0; background:rgba(0,0,0,0.8); -webkit-transition:all 0.3s; -moz-transition:all 0.3s; transition:all 0.3s;  }
+.md-overlay {  position:fixed; width:100%; height:100%; visibility:hidden; top:0; left:0; z-index:999; opacity:0; background:rgba(0,0,0,0.8); -webkit-transition:all 0.3s; -moz-transition:all 0.3s; transition:all 0.3s;  }
 .md-show ~ .md-overlay {  opacity:1; visibility:visible;  }
-.md-content {  margin:0 auto; padding:12px; color:#fff; background:#67D6CE; position:relative; border-radius:8px; box-shadow:0 0.5em 1em rgba(0, 0, 0, 0.6);}
-.md-content>h3 {  margin:18px auto 0; padding:0.1em; width:95%; text-align:center; font-size:1.8em; font-weight:600; opacity:0.8; background:#8380D6; border:3px solid rgba(0, 0, 0, 0.4); border-radius:3px; box-shadow:0 0.5em 1em rgba(0, 0, 0, 0.6);  }
+.md-content {  margin:0 auto; padding:12px; color:#fff; background:#363636; position:relative; border:0.1px solid #05C4E6; border-radius:8px; box-shadow:0 0.5em 1em rgba(0, 0, 0, 0.6);}
+.md-content>h3 {  margin:18px auto 0; padding:0.1em; width:88%; text-align:center; font-size:1.8em; font-weight:600; opacity:0.8;  }
 .md-content>h3>img {  width:35px; margin:0 8px -7px 0;  }
 .md-content>div{  padding:20px 0 0 38px;  }
 .md-content>div button {  width:100px; height:32px; margin-right:25px; border:none; box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.6); color:#5A5A5A; line-height:35px; font-weight:600; font-family:'宋体';  }
@@ -95,32 +95,15 @@
 #styleList tr td {  padding:8px 18px; line-height:1.5em; border-top:2px solid #1A9EE6; border-bottom:2px solid #1A9EE6;  }
 #styleList tr span {  display:inline-block;  }
 #styleList tr span > a {  margin-right:10px; color:#FFF; font-size:17px; font-weight:500; line-height:1.6em; text-shadow:0.1px 0.1px 1px #666;  }
-
-
-#styleTagList .styleTagType {
-    width:100px; height:28px; margin:8px; display:inline-block; line-height:28px; color:#22E8FF;
-}
-#styleTagList .styleTagType.active {
-    position:relative;
-    color:#886AFF;
-    text-shadow:0.1px 0.1px 0.1px #FFF;
-    background:#222;
-    -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
-    -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
-    box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
-}
-#styleTagList .styleTagType.active:after {
-    top:-10px;
-    right:-8px;
-    content:'√';
-    position:absolute;
-    color:#1A9EE6;
-    font-size:28px;
-    font-weight:900;
-    text-shadow:0.5px 0.5px 0.1px #000;
-}
-
-
+        /* 选择歌单风格标签 */
+#modal-selectStyleTag {  width:868px;  }
+#modal-selectStyleTag > .md-content > span {  margin:0 0 0 38px; line-height:3em; font-size:18px;  }
+#modal-selectStyleTag > .md-content > #styleTagListTips {  margin:0; line-height:3em; font-size:17px;  }
+#styleTagList {  width:90%; height:308px; margin:0 auto 8px; padding:0; box-sizing:border-box;  }
+#styleTagList td:first-child {  width:68px; text-align:center; font-size:22px; font-weight:700;  }
+#styleTagList label {  margin:3px 16px 8px 8px;  }
+#modal-selectStyleTag #buttonGroup {  width:93%; height:42px; text-align:center;  }
+#modal-selectStyleTag #buttonGroup > a {  margin:48px 128px 0 0;  }
 
 
 
