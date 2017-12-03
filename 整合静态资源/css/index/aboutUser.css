@@ -27,14 +27,16 @@
     /* 账户消息页 */
 #mesaage-main {  width:900px; margin:25px 115px 0 auto; padding:18px 0 38px;  }
 #mesaage-main>#messageTitle {  width:160px; height:40px; top:38px; left:45%; position:absolute; z-index:50; border-radius:4px; font:normal normal normal 20px/35px Arial, 'Microsoft YaHei', '微软雅黑'; color:#70ff92; text-align:center;  }
-#mesaage-main>#mesaageContent {  width:98%; height:480px; padding:56px 8px 0; color:#AAA; font-size:14px;  }
+#mesaage-main>#mesaageContent {  width:98%; height:480px; padding:56px 8px 0; color:#CCC; font-size:14px;  }
 #mesaage-main .messageList {  width:95%; margin:0 auto; padding:12px 0 18px 12px; border-bottom:1px solid #666;  }
 #mesaage-main .messageList:hover {  background:#1D1D1D;  }
+#mesaage-main .messageList > .readTag {  margin-right:38px; float:right; color:#ff98f0;  }
 #mesaageContent .messageList>a {  color:#00BFE8;  }
-#mesaageContent .messageList>a>img {  width:35px; height:35px; margin:0 13px 0 0; float:left; border-radius:4px;  }
+#mesaageContent .messageList>a>img {  width:35px; height:35px; margin:8px 13px 2px 8px; float:left; border-radius:4px;  }
 #mesaageContent .messageList>.replyContent {  margin-top:3px; margin-left:2px; font-size:13px; letter-spacing:0.8px; word-wrap:break-word; word-break:break-all;  }
-#mesaageContent .messageList>.replyBar {  margin:13px 88px 5px; color:#DDD;  }
-#mesaageContent .messageList .replyButton {  margin-left:28px; float:right; cursor:pointer;  }
+#mesaageContent .messageList>.replyBar {  margin:13px 88px 5px 58px; color:#EEE;  }
+#mesaageContent .messageList .replyButton {  margin-left:28px; float:right; cursor:pointer; color:#9D7FFF;  }
+#mesaageContent .messageList .replyButton:hover {  color:#00FFB6  }
 #mesaage-main .noMessage {  margin-top:58px; text-align:center; font-size:28px;  }
 #mesaage-main .noMessage>i {  margin:12px; font-size:66px;  }
 
