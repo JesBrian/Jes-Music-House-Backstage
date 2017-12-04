@@ -47,7 +47,7 @@
                 <li from="indexIframe" to="musician.html"><span class="MyIF singer"></span> 音乐人</li>
             </ul>
 
-            <!-- 用户登陆 -->
+            <!-- 用户登录 -->
             <span id="navbar-user-index">
                 <a onclick="window.top.niftymodalsByModelName('modal-userLogin','');" class="userLogin superBtn MyIF administrators-1"></a>
                 <div id="userCON">
@@ -546,7 +546,7 @@
 
 
     <!-- 拟态框 -->
-        <!-- 用户登陆 -->
+        <!-- 用户登录 -->
     <div class="md-container md-effect-1" id="modal-userLogin">
         <div class="md-content">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/login.png">账户登录</h3>
@@ -578,8 +578,8 @@
                 </form>
                 <span id="ortherLogin">
                     <a class="superBtn joinSinger MyIF wechat"> 微信登录</a>
-                    <a class="superBtn joinSinger MyIF qq"> QQ登陆</a>
-                    <a class="superBtn joinSinger MyIF weibo"> 微博登陆</a>
+                    <a class="superBtn joinSinger MyIF qq"> QQ登录</a>
+                    <a class="superBtn joinSinger MyIF weibo"> 微博登录</a>
                 </span>
             </div>
         </div>
@@ -613,7 +613,7 @@
                         </td>
                     </tr>
                 </table>
-                <p>已有账号？<a class="md-close" onclick="niftymodalsByModelName('modal-userLogin','','')">点此立刻登陆</a></p>
+                <p>已有账号？<a class="md-close" onclick="niftymodalsByModelName('modal-userLogin','','')">点此立刻登录</a></p>
             </form>
         </div>
     </div>
@@ -754,8 +754,8 @@
             <a class="md-close close-all MyIF all-arrow"></a>
             <p id="warning-text">操作警告！！！</p>
             <span>
-                <a class="joinSinger superBtn md-close" onclick="alertTips(0,'资料更新失败！');">确定</a>
-                <a class="joinSinger superBtn md-close">取消</a>
+                <a class="joinSinger superBtn MyIF makesure md-close" onclick="alertTips(0,'资料更新失败！');"> 确定保存</a>
+                <a class="joinSinger superBtn MyIF cancel md-close"> 取消返回</a>
             </span>
         </div>
     </div>
@@ -780,7 +780,7 @@
         </div>
     </div>
 
-        <!-- 歌手登陆 -->
+        <!-- 歌手登录 -->
     <div class="md-container md-effect-1" id="modal-singerLogin">
         <div class="md-content">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/singer.png">歌手登录</h3>
@@ -792,17 +792,13 @@
                         请输入验证码：<input type="text" class="s1c-Bg box-show3">
                     </li>
                     <li>
-                        <img src="">
-                        <span>
-                            <a class="joinSinger superBtn md-close" href="../admin/home.html">验证登陆 <i class="MyIF double-arrow-right"></i></a>
-                        </span>
+                        <img class="box-show3" src="../img/common/touxiang.jpg">
+                        <span><a class="joinSinger superBtn md-close" href="../admin/home.html">验证登录 <i class="MyIF double-arrow-right"></i></a></span>
                     </li>
                 </ul>
             </form>
             <p>还没入驻音乐人？立即入驻我们分享你的作品吧！</p>
-            <span>
-                <a class="joinSinger superBtn md-close" onclick="niftymodalsByModelName('modal-joinSinger','','')">立即入驻 <i class="MyIF double-arrow-right"></i></a>
-            </span>
+            <span><a class="joinSinger superBtn md-close" onclick="niftymodalsByModelName('modal-joinSinger','','')">立即入驻 <i class="MyIF double-arrow-right"></i></a></span>
         </div>
     </div>
 
@@ -814,7 +810,7 @@
             <div>
                 <div id="allStyleButton">
                     <span>选择风格</span>
-                    <a class="joinSinger superBtn md-close">全部风格</a>
+                    <a class="joinSinger superBtn md-close MyIF">全部风格</a>
                 </div>
 
                 <table id="styleList">
@@ -939,7 +935,7 @@
             <div id="styleTagList">
                 <table>
                     <tr>
-                        <td>语种</td>
+                        <td><i class="MyIF earth"></i> 语种</td>
                         <td>
                             <input type="checkbox" class="superInput" id='verygood0' name="styleTag" value="1"><label for='verygood0'><span>华语</span></label>
                             <input type="checkbox" class="superInput" id='verygood1' name="styleTag" value="2"><label for='verygood1'><span>欧美</span></label>
@@ -952,7 +948,7 @@
                     <tr><td>&nbsp;</td></tr>
 
                     <tr>
-                        <td>风格</td>
+                        <td><i class="MyIF instrument"></i> 风格</td>
                         <td>
                             <input type="checkbox" class="superInput" id='verygood6' name="styleTag"><label for='verygood6'><span>流行</span></label>
                             <input type="checkbox" class="superInput" id='verygood7' name="styleTag"><label for='verygood7'><span>摇滚</span></label>
@@ -982,7 +978,7 @@
                     <tr><td>&nbsp;</td></tr>
 
                     <tr>
-                        <td>场景</td>
+                        <td><i class="MyIF cofee"></i> 场景</td>
                         <td>
                             <input type="checkbox" class="superInput" id='verygood29' name="styleTag"><label for='verygood29'><span>清晨</span></label>
                             <input type="checkbox" class="superInput" id='verygood30' name="styleTag"><label for='verygood30'><span>夜晚</span></label>
@@ -1001,7 +997,7 @@
                     <tr><td>&nbsp;</td></tr>
 
                     <tr>
-                        <td>情感</td>
+                        <td><i class="MyIF exciting"></i> 情感</td>
                         <td>
                             <input type="checkbox" class="superInput" id='verygood41' name="styleTag"><label for='verygood41'><span>怀旧</span></label>
                             <input type="checkbox" class="superInput" id='verygood42' name="styleTag"><label for='verygood42'><span>清新</span></label>
@@ -1021,7 +1017,7 @@
                     <tr><td>&nbsp;</td></tr>
 
                     <tr>
-                        <td>主题</td>
+                        <td><i class="MyIF kinds"></i> 主题</td>
                         <td>
                             <input type="checkbox" class="superInput" id='verygood54' name="styleTag"><label for='verygood54'><span>影视原声</span></label>
                             <input type="checkbox" class="superInput" id='verygood55' name="styleTag"><label for='verygood55'><span>ACG</span></label>
@@ -1089,7 +1085,7 @@
 
                 $("#songlistContent").mCustomScrollbar({theme:"inset-2"});
                 $("#songLyrics").mCustomScrollbar({theme:"minimal"});
-                $("#collectionContent").mCustomScrollbar({theme:"inset"});
+                $("#collectionContent").mCustomScrollbar({theme:"inset-2"});
                 $("#styleTagList").mCustomScrollbar({theme:"inset"});
             });
         })(jQuery);

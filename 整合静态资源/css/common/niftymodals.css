@@ -7,7 +7,7 @@
 .md-overlay {  position:fixed; width:100%; height:100%; visibility:hidden; top:0; left:0; z-index:999; opacity:0; background:rgba(0,0,0,0.8); -webkit-transition:all 0.3s; -moz-transition:all 0.3s; transition:all 0.3s;  }
 .md-show ~ .md-overlay {  opacity:1; visibility:visible;  }
 .md-content {  margin:0 auto; padding:12px; color:#fff; background:#363636; position:relative; border:0.1px solid #05C4E6; border-radius:8px; box-shadow:0 0.5em 1em rgba(0, 0, 0, 0.6);}
-.md-content>h3 {  margin:18px auto 0; padding:0.1em; width:88%; text-align:center; font-size:1.8em; font-weight:600; opacity:0.8;  }
+.md-content>h3 {  margin:8px auto 0; padding:8px 0.1em; width:88%; text-align:center; font-size:1.8em; font-weight:600; opacity:0.8;  }
 .md-content>h3>img {  width:35px; margin:0 8px -7px 0;  }
 .md-content>div{  padding:20px 0 0 38px;  }
 .md-content>div button {  width:100px; height:32px; margin-right:25px; border:none; box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.6); color:#5A5A5A; line-height:35px; font-weight:600; font-family:'宋体';  }
@@ -47,9 +47,9 @@
 #modal-newAlbum a.superBtn {  margin:73px 28px 0; position:relative;  }
         /* 收藏歌曲 */
 #modal-collection {  width:760px;  }
-#modal-collection>.md-content {  height:388px; position:relative;  }
+#modal-collection>.md-content {  height:380px; position:relative;  }
 #modal-collection>.md-content>span {  top:142px; right:168px; position:absolute; z-index:9;  }
-#collectionContent {  height:360px;  }
+#collectionContent {  height:238px; margin-top:28px; padding:0 0 0 25px;  }
 #collectionContent a {  width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block;  }
 #collectionContent a>img {  width:28px; height:28px; border:none; border-radius:3px;  }
 #collectionContent a>span {  width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center;  }
@@ -74,15 +74,16 @@
 #modal-joinSinger form>span {  position:relative; z-index:9;  }
 #modal-joinSinger form>p {  margin-bottom:8px; text-align:center;  }
         /* 歌手登陆 */
+#modal-singerLogin {  width:688px;  }
 #modal-singerLogin>.md-content>img {  width:80px; height:80px; margin:38px; position:absolute; border-radius:5px;  }
-#modal-singerLogin form {  width:88%; height:130px; margin:28px 18px 68px 158px;  }
+#modal-singerLogin form {  width:88%; height:88px; margin:28px 18px 68px 158px;  }
 #modal-singerLogin form>ul {  margin:12px 0; text-align:left;  }
 #modal-singerLogin form>ul>li {  margin:12px 0; position:relative;  }
-#modal-singerLogin form>ul>li>img {  width:288px; height:68px; border:none;  }
-#modal-singerLogin form>ul>li>span {  left:255px; top:68px; position:absolute; z-index:9;  }
+#modal-singerLogin form>ul>li>img {  width:308px; height:68px; border:none; background:lightblue; box-sizing:border-box;  }
+#modal-singerLogin form>ul>li>span {  left:280px; top:68px; position:absolute; z-index:9;  }
 #modal-singerLogin input[type="text"] {  width:56%; padding:3px 8px; font-size:25px; font-weight:600; color:#00CDFF; letter-spacing:1.5pt; line-height:1.2em; text-align:center;  }
-#modal-singerLogin > .md-content > p {  margin-bottom:8px; text-align:center;  }
-#modal-singerLogin > .md-content > span {  bottom:3px; right:338px; position:absolute; z-index:9;  }
+#modal-singerLogin > .md-content > p {  margin:8px 108px; text-align:left; line-height:3em;  }
+#modal-singerLogin > .md-content > span {  bottom:-22px; right:128px; position:absolute; z-index:9;  }
         /* 选择歌单风格 */
 #modal-category {  width:920px;  }
 #modal-category>.md-content>div {  padding-right:36px;  }
@@ -100,8 +101,9 @@
 #modal-selectStyleTag > .md-content > span {  margin:0 0 0 38px; line-height:3em; font-size:18px;  }
 #modal-selectStyleTag > .md-content > #styleTagListTips {  margin:0; line-height:3em; font-size:17px;  }
 #styleTagList {  width:90%; height:308px; margin:0 auto 8px; padding:0; box-sizing:border-box;  }
-#styleTagList td:first-child {  width:68px; text-align:center; font-size:22px; font-weight:700;  }
-#styleTagList label {  margin:3px 16px 8px 8px;  }
+#styleTagList td:first-child {  width:108px; text-align:center; font-size:22px; font-weight:700; color:#00FFB6;  }
+#styleTagList td:first-child > i.MyIF {  color:#29B8E6; font-size:28px;  }
+#styleTagList label {  margin:3px 8px 8px;  }
 #modal-selectStyleTag #buttonGroup {  width:93%; height:42px; text-align:center;  }
 #modal-selectStyleTag #buttonGroup > a {  margin:48px 128px 0 0;  }
 
