@@ -96,6 +96,7 @@
 #styleList tr td {  padding:8px 18px; line-height:1.5em; border-top:2px solid #1A9EE6; border-bottom:2px solid #1A9EE6;  }
 #styleList tr span {  display:inline-block;  }
 #styleList tr span > a {  margin-right:10px; color:#FFF; font-size:17px; font-weight:500; line-height:1.6em; text-shadow:0.1px 0.1px 1px #666;  }
+#styleList tr span > a.active {  color:#00FFB6; text-shadow:0 0 0.5px #5CEBDC; text-decoration:underline;  }
         /* 选择歌单风格标签 */
 #modal-selectStyleTag {  width:868px;  }
 #modal-selectStyleTag > .md-content > span {  margin:0 0 0 38px; line-height:3em; font-size:18px;  }
