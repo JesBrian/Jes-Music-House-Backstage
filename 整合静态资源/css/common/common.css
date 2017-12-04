@@ -107,7 +107,7 @@ table {border-collapse:collapse;}
 
 
     /* 文本框边框 */
-textarea {  border:2px solid #2E2E2E!important;  }
+textarea {  border:2px solid #2E2E2E!important; word-break:break-all;  }
 input[type="text"], input[type="password"], textarea {  border:2px solid #2E2E2E; -webkit-transition: all 0.4s 0.1s; -moz-transition: all 0.4s 0.1s; -ms-transition: all 0.4s 0.1s; transition: all 0.4s 0.1s;  }
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus {  border:2px solid #30cdff !important; -webkit-transition: all 0.4s 0.1s; -moz-transition: all 0.4s 0.1s; -ms-transition: all 0.4s 0.1s; transition: all 0.4s 0.1s;  }
 

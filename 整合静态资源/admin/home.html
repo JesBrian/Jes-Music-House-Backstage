@@ -283,12 +283,12 @@
         <!-- 操作提示拟态框 -->
     <div class="md-container md-effect-1" id="modal-warning">
         <div class="md-content">
-            <h3><img src="../img/icon/warning.png">操作提示</h3>
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/warning.png">操作提示</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
             <p id="warning-text">操作警告！！！</p>
             <span>
-                <a class="joinSinger superBtn md-close MyIF makesure" onclick="alertTips(1,'删除成功！');"> 确定</a>
-                <a class="joinSinger superBtn md-close MyIF cancel"> 取消</a>
+                <a class="joinSinger superBtn md-close MyIF makesure" onclick="alertTips(1,'删除成功！');"> 确定保存</a>
+                <a class="joinSinger superBtn md-close MyIF cancel"> 取消返回</a>
             </span>
         </div>
     </div>
@@ -296,7 +296,7 @@
         <!-- 详细搜索拟态框 -->
     <div class="md-container md-effect-1" id="modal-detailSearch">
         <div class="md-content">
-            <h3><img src="../img/icon/warning.png">详细搜索</h3>
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/warning.png">详细搜索</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
             <form style="width:100%; height:300px; background-color: #9d7cff">
 
@@ -307,9 +307,23 @@
         <!-- 上传图片 -->
     <div class="md-container md-effect-1" id="modal-uploadAvatar">
         <div class="md-content">
-            <h3><img src="../img/icon/musicAlbum.png">上传图片</h3>
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/musicAlbum.png">上传图片</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
             <iframe name="uploadAvatar" src="../index/function/updateUploadAvatar.html"></iframe>
+        </div>
+    </div>
+
+        <!-- 审核拒绝框 -->
+    <div class="md-container md-effect-1" id="modal-refuseAudit">
+        <div class="md-content" style="text-align:center;">
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/musicAlbum.png">审核拒绝</h3>
+            <a class="md-close close-all MyIF all-arrow"></a>
+            <p style="text-align:left; text-indent:4em; font-size:18px; line-height:3em;">拒绝通过原因：</p>
+            <textarea class="s1c-Bg box-show3" placeholder="请填写拒绝审核通过的原因：" style="width:92%; height:208px; margin:0 auto 38px; padding:8px; box-sizing:border-box; resize:none; text-indent:2em; font-size:17px; line-height:1.2em; font-weight:700; font-family:'Microsoft YaHei', '黑体', sans-serif; color:#2DDEE6;"></textarea>
+            <span style="top:-8px; position:relative;">
+                <a style="top:0; margin:0 38px;" class="joinSinger superBtn md-close MyIF makesure" onclick="alertTips(1,'信息发送成功！');"> 确定发送</a>
+                <a style="top:0; margin:0 38px;" class="joinSinger superBtn md-close MyIF cancel"> 取消返回</a>
+            </span>
         </div>
     </div>
 

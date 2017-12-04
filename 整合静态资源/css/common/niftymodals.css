@@ -57,8 +57,8 @@
         /* 操作提示 */
 #modal-warning>.md-content {  height:188px;  }
 #warning-text {  margin:22px 0 0 38px; font-size:18px; font-weight:700; word-spacing:1.3px;  }
-#modal-warning span {  top:85px; left:208px; position:relative; z-index:9;  }
-#modal-warning span>a {  margin-right:68px; display:inline-block;  }
+#modal-warning span {  top:38px; left:208px; position:relative; z-index:9;  }
+#modal-warning span>a {  top:0; margin-right:68px; display:inline-block;  }
         /* 问卷调查 */
 #modal-questionnaire form {  height:400px; margin:18px 38px; text-align:center;  }
 #modal-questionnaire>div>span {  top:38px; left:66%; position:relative; z-index:9;  }
