@@ -713,8 +713,8 @@
     <div class="md-container md-effect-1" id="modal-questionnaire">
         <div class="md-content">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/menu.png">调查问卷</h3>
-            <a class="md-close close-all MyIF all-arrow"></a>
-            <form>
+            <a class="md-close close-all MyIF all-arrow" onclick="cancelQuestionnaire();"></a>
+            <form action="#" method="post">
                 <p>1、您认为我们网站的服务质量如何：</p>
                 <input type="radio" class="superInput" id='verybad' name="quality"><label for='verybad' class="MyIF cry"><span> 很差</span></label>
                 <input type="radio" class="superInput" id='bad' name="quality"><label for='bad' class="MyIF unhappy"><span> 差</span></label>
@@ -739,11 +739,11 @@
                 <p>3、如还有任何问题、疑问或者不满或者改进意见请写下：</p>
                 <textarea class="s1c-Bg box-show3" placeholder="请填写您的不满或改进意见！"></textarea>
                 <p> 请填写正确的邮箱，以便我们对您的问题以邮箱方式回应，谢谢您的支持！</p>
-                <input type="text" class="s1c-Bg box-show3">
+                <input type="text" class="s1c-Bg box-show3" placeholder="请填写您的邮箱地址！">
 
             </form>
             <span>
-                <a class="superBtn joinSinger md-close MyIF questionnaire-3" onclick="alertTips(1,'问卷提交成功！感谢您对我们的支持！')"> 提交问卷</a>
+                <a class="superBtn joinSinger md-close MyIF questionnaire-3" onclick="alertTips(1,'问卷提交成功！感谢您对我们的支持！'); cancelQuestionnaire();"> 提交问卷</a>
             </span>
         </div>
     </div>
@@ -1050,7 +1050,7 @@
     </div>
 
     <!-- 弹出拟态框后背景遮幕 -->
-    <div class="md-overlay" onclick="clearStyleTagSelect();"></div>
+    <div class="md-overlay" onclick="clearStyleTagSelect(); cancelQuestionnaire();"></div>
 
 
 
@@ -1160,7 +1160,7 @@
 
         /**
          * 热门歌曲页面改变歌单风格分类名称
-         * 同下面选择歌单风格一样 [ 事件会和关闭拟态框冲突，所以先 onclick 来触发这个事件 ]
+         * 同下面选择歌单风格标签一样 [ 事件会和关闭拟态框冲突，所以先 onclick 来触发这个事件 ]
          */
         function changeAlbumStyle(obj) {
             $(window.frames["indexIframe"].document).find("#styleTypeName").html($(obj).text());
@@ -1218,6 +1218,18 @@
             $('#styleTagIdsTemp').val('');
         }
         /* 注意！！！！！ saveStyleTagTempData 与 clearStyleTagSelect 不能调换顺序执行！！！不然会出现undefind */
+
+
+        /**
+         * 取消调查问卷填写情况
+         * 同上选择歌单风格标签一样 [ 事件会和关闭拟态框冲突，所以先 onclick 来触发这个事件 ]
+         */
+        function cancelQuestionnaire() {
+            $('#modal-questionnaire').find('input[type=text]').val('');
+            $('#modal-questionnaire').find('input').prop('checked', false);
+            $('#modal-questionnaire').find('textarea').val('');
+        }
+
 
 
     </script>
