@@ -47,7 +47,7 @@
                 <li from="indexIframe" to="musician.html"><span class="MyIF singer"></span> 音乐人</li>
             </ul>
 
-            <!-- 用户登陆 -->
+            <!-- 用户登录 -->
             <span id="navbar-user-index">
                 <a onclick="window.top.niftymodalsByModelName('modal-userLogin','');" class="userLogin superBtn MyIF administrators-1"></a>
                 <div id="userCON">
@@ -546,7 +546,7 @@
 
 
     <!-- 拟态框 -->
-        <!-- 用户登陆 -->
+        <!-- 用户登录 -->
     <div class="md-container md-effect-1" id="modal-userLogin">
         <div class="md-content">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/login.png">账户登录</h3>
@@ -571,15 +571,16 @@
                             </td>
                         </tr>
                     </table>
-                    <p style="">
-                        <a href="#" target="_blank">忘记密码</a>&nbsp;/
-                        <a class="md-close" onclick="niftymodalsByModelName('modal-register','','')">新用户注册</a>
+                    <p style="z-index:9; position:relative;">
+                        <a href="#" target="_blank" class="hover-undeline">忘记密码</a>
+                        /
+                        <a class="hover-undeline md-close" onclick="niftymodalsByModelName('modal-register','','')">新用户注册</a>
                     </p>
                 </form>
                 <span id="ortherLogin">
                     <a class="superBtn joinSinger MyIF wechat"> 微信登录</a>
-                    <a class="superBtn joinSinger MyIF qq"> QQ登陆</a>
-                    <a class="superBtn joinSinger MyIF weibo"> 微博登陆</a>
+                    <a class="superBtn joinSinger MyIF qq"> QQ登录</a>
+                    <a class="superBtn joinSinger MyIF weibo"> 微博登录</a>
                 </span>
             </div>
         </div>
@@ -613,7 +614,7 @@
                         </td>
                     </tr>
                 </table>
-                <p>已有账号？<a class="md-close" onclick="niftymodalsByModelName('modal-userLogin','','')">点此立刻登陆</a></p>
+                <p>已有账号？<a class="hover-undeline md-close" onclick="niftymodalsByModelName('modal-userLogin','','')">点此立刻登录</a></p>
             </form>
         </div>
     </div>
@@ -712,8 +713,8 @@
     <div class="md-container md-effect-1" id="modal-questionnaire">
         <div class="md-content">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/menu.png">调查问卷</h3>
-            <a class="md-close close-all MyIF all-arrow"></a>
-            <form>
+            <a class="md-close close-all MyIF all-arrow" onclick="cancelQuestionnaire();"></a>
+            <form action="#" method="post">
                 <p>1、您认为我们网站的服务质量如何：</p>
                 <input type="radio" class="superInput" id='verybad' name="quality"><label for='verybad' class="MyIF cry"><span> 很差</span></label>
                 <input type="radio" class="superInput" id='bad' name="quality"><label for='bad' class="MyIF unhappy"><span> 差</span></label>
@@ -738,11 +739,11 @@
                 <p>3、如还有任何问题、疑问或者不满或者改进意见请写下：</p>
                 <textarea class="s1c-Bg box-show3" placeholder="请填写您的不满或改进意见！"></textarea>
                 <p> 请填写正确的邮箱，以便我们对您的问题以邮箱方式回应，谢谢您的支持！</p>
-                <input type="text" class="s1c-Bg box-show3">
+                <input type="text" class="s1c-Bg box-show3" placeholder="请填写您的邮箱地址！">
 
             </form>
             <span>
-                <a class="superBtn joinSinger md-close MyIF questionnaire-3" onclick="alertTips(1,'问卷提交成功！感谢您对我们的支持！')"> 提交问卷</a>
+                <a class="superBtn joinSinger md-close MyIF questionnaire-3" onclick="alertTips(1,'问卷提交成功！感谢您对我们的支持！'); cancelQuestionnaire();"> 提交问卷</a>
             </span>
         </div>
     </div>
@@ -754,8 +755,8 @@
             <a class="md-close close-all MyIF all-arrow"></a>
             <p id="warning-text">操作警告！！！</p>
             <span>
-                <a class="joinSinger superBtn md-close" onclick="alertTips(0,'资料更新失败！');">确定</a>
-                <a class="joinSinger superBtn md-close">取消</a>
+                <a class="joinSinger superBtn MyIF makesure md-close" onclick="alertTips(0,'资料更新失败！');"> 确定保存</a>
+                <a class="joinSinger superBtn MyIF cancel md-close"> 取消返回</a>
             </span>
         </div>
     </div>
@@ -780,7 +781,7 @@
         </div>
     </div>
 
-        <!-- 歌手登陆 -->
+        <!-- 歌手登录 -->
     <div class="md-container md-effect-1" id="modal-singerLogin">
         <div class="md-content">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/singer.png">歌手登录</h3>
@@ -792,17 +793,13 @@
                         请输入验证码：<input type="text" class="s1c-Bg box-show3">
                     </li>
                     <li>
-                        <img src="">
-                        <span>
-                            <a class="joinSinger superBtn md-close" href="../admin/home.html">验证登陆 <i class="MyIF double-arrow-right"></i></a>
-                        </span>
+                        <img class="box-show3" src="../img/common/touxiang.jpg">
+                        <span><a class="joinSinger superBtn md-close" href="../admin/home.html">验证登录 <i class="MyIF double-arrow-right"></i></a></span>
                     </li>
                 </ul>
             </form>
             <p>还没入驻音乐人？立即入驻我们分享你的作品吧！</p>
-            <span>
-                <a class="joinSinger superBtn md-close" onclick="niftymodalsByModelName('modal-joinSinger','','')">立即入驻 <i class="MyIF double-arrow-right"></i></a>
-            </span>
+            <span><a class="joinSinger superBtn md-close" onclick="niftymodalsByModelName('modal-joinSinger','','')">立即入驻 <i class="MyIF double-arrow-right"></i></a></span>
         </div>
     </div>
 
@@ -814,7 +811,7 @@
             <div>
                 <div id="allStyleButton">
                     <span>选择风格</span>
-                    <a class="joinSinger superBtn md-close">全部风格</a>
+                    <a class="joinSinger superBtn md-close MyIF" onclick="changeAlbumStyle(this);">全部风格</a>
                 </div>
 
                 <table id="styleList">
@@ -823,12 +820,12 @@
                             <i class="MyIF earth"></i> 语种
                         </td>
                         <td>
-                            <span><a class="hover-undeline md-close styleType">华语</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">欧美</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">日语</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">韩语</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">粤语</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">小语种</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="0" onclick="changeAlbumStyle(this);">华语</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="1" onclick="changeAlbumStyle(this);">欧美</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="2" onclick="changeAlbumStyle(this);">日语</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="3" onclick="changeAlbumStyle(this);">韩语</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="4" onclick="changeAlbumStyle(this);">粤语</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="5" onclick="changeAlbumStyle(this);">小语种</a>|</span>
                         </td>
                     </tr>
                     <tr>
@@ -836,29 +833,29 @@
                             <i class="MyIF instrument"></i> 风格
                         </td>
                         <td>
-                            <span><a class="hover-undeline md-close styleType">流行</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">摇滚</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">民谣</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">电子</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">舞曲</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">说唱</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">爵士</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">轻音乐</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">乡村</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">R&B/Soul</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">民族</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">英伦</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">金属</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">朋克</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">蓝调</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">雷鬼</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">世界音乐</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">拉丁</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">另类/独立</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">New Age</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">古风</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">后摇</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">Bossa Nova</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="6" onclick="changeAlbumStyle(this);">流行</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="7" onclick="changeAlbumStyle(this);">摇滚</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="8" onclick="changeAlbumStyle(this);">民谣</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="9" onclick="changeAlbumStyle(this);">电子</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="10" onclick="changeAlbumStyle(this);">舞曲</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="11" onclick="changeAlbumStyle(this);">说唱</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="12" onclick="changeAlbumStyle(this);">爵士</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="13" onclick="changeAlbumStyle(this);">轻音乐</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="14" onclick="changeAlbumStyle(this);">乡村</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="15" onclick="changeAlbumStyle(this);">R&B/Soul</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="16" onclick="changeAlbumStyle(this);">民族</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="17" onclick="changeAlbumStyle(this);">英伦</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="18" onclick="changeAlbumStyle(this);">金属</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="19" onclick="changeAlbumStyle(this);">朋克</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="20" onclick="changeAlbumStyle(this);">蓝调</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="21" onclick="changeAlbumStyle(this);">雷鬼</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="22" onclick="changeAlbumStyle(this);">世界音乐</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="23" onclick="changeAlbumStyle(this);">拉丁</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="24" onclick="changeAlbumStyle(this);">另类/独立</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="25" onclick="changeAlbumStyle(this);">New Age</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="26" onclick="changeAlbumStyle(this);">古风</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="27" onclick="changeAlbumStyle(this);">后摇</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="28" onclick="changeAlbumStyle(this);">Bossa Nova</a>|</span>
                         </td>
                     </tr>
                     <tr>
@@ -866,18 +863,18 @@
                             <i class="MyIF cofee"></i> 场景
                         </td>
                         <td>
-                            <span><a class="hover-undeline md-close styleType">清晨</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">夜晚</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">学习</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">工作</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">午休</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">下午茶</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">地铁</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">驾车</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">运动</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">旅行</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">散步</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">酒吧</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="29" onclick="changeAlbumStyle(this);">清晨</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="30" onclick="changeAlbumStyle(this);">夜晚</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="31" onclick="changeAlbumStyle(this);">学习</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="32" onclick="changeAlbumStyle(this);">工作</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="33" onclick="changeAlbumStyle(this);">午休</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="34" onclick="changeAlbumStyle(this);">下午茶</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="35" onclick="changeAlbumStyle(this);">地铁</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="36" onclick="changeAlbumStyle(this);">驾车</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="37" onclick="changeAlbumStyle(this);">运动</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="38" onclick="changeAlbumStyle(this);">旅行</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="39" onclick="changeAlbumStyle(this);">散步</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="40" onclick="changeAlbumStyle(this);">酒吧</a>|</span>
                         </td>
                     </tr>
                     <tr>
@@ -885,19 +882,19 @@
                             <i class="MyIF exciting"></i> 情感
                         </td>
                         <td>
-                            <span><a class="hover-undeline md-close styleType">怀旧</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">清新</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">浪漫</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">性感</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">伤感</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">治愈</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">放松</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">孤独</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">感动</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">兴奋</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">快乐</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">安静</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">思念</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="41" onclick="changeAlbumStyle(this);">怀旧</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="42" onclick="changeAlbumStyle(this);">清新</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="43" onclick="changeAlbumStyle(this);">浪漫</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="44" onclick="changeAlbumStyle(this);">性感</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="45" onclick="changeAlbumStyle(this);">伤感</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="46" onclick="changeAlbumStyle(this);">治愈</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="47" onclick="changeAlbumStyle(this);">放松</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="48" onclick="changeAlbumStyle(this);">孤独</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="49" onclick="changeAlbumStyle(this);">感动</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="50" onclick="changeAlbumStyle(this);">兴奋</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="51" onclick="changeAlbumStyle(this);">快乐</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="52" onclick="changeAlbumStyle(this);">安静</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="53" onclick="changeAlbumStyle(this);">思念</a>|</span>
                         </td>
                     </tr>
                     <tr>
@@ -905,22 +902,22 @@
                             <i class="MyIF kinds"></i> 主题
                         </td>
                         <td>
-                            <span><a class="hover-undeline md-close styleType">影视原声</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">ACG</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">游戏</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">70后</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">80后</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">90后</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">00后</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">网络歌曲</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">KTV</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">经典</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">翻唱</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">吉他</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">钢琴</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">器乐</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">儿童</a>|</span>
-                            <span><a class="hover-undeline md-close styleType">榜单</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="54" onclick="changeAlbumStyle(this);">影视原声</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="55" onclick="changeAlbumStyle(this);">ACG</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="56" onclick="changeAlbumStyle(this);">游戏</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="57" onclick="changeAlbumStyle(this);">70后</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="58" onclick="changeAlbumStyle(this);">80后</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="59" onclick="changeAlbumStyle(this);">90后</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="60" onclick="changeAlbumStyle(this);">00后</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="61" onclick="changeAlbumStyle(this);">网络歌曲</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="62" onclick="changeAlbumStyle(this);">KTV</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="63" onclick="changeAlbumStyle(this);">经典</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="64" onclick="changeAlbumStyle(this);">翻唱</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="65" onclick="changeAlbumStyle(this);">吉他</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="66" onclick="changeAlbumStyle(this);">钢琴</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="67" onclick="changeAlbumStyle(this);">器乐</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="68" onclick="changeAlbumStyle(this);">儿童</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="69" onclick="changeAlbumStyle(this);">榜单</a>|</span>
                         </td>
                     </tr>
                 </table>
@@ -939,7 +936,7 @@
             <div id="styleTagList">
                 <table>
                     <tr>
-                        <td>语种</td>
+                        <td><i class="MyIF earth"></i> 语种</td>
                         <td>
                             <input type="checkbox" class="superInput" id='verygood0' name="styleTag" value="1"><label for='verygood0'><span>华语</span></label>
                             <input type="checkbox" class="superInput" id='verygood1' name="styleTag" value="2"><label for='verygood1'><span>欧美</span></label>
@@ -952,7 +949,7 @@
                     <tr><td>&nbsp;</td></tr>
 
                     <tr>
-                        <td>风格</td>
+                        <td><i class="MyIF instrument"></i> 风格</td>
                         <td>
                             <input type="checkbox" class="superInput" id='verygood6' name="styleTag"><label for='verygood6'><span>流行</span></label>
                             <input type="checkbox" class="superInput" id='verygood7' name="styleTag"><label for='verygood7'><span>摇滚</span></label>
@@ -982,7 +979,7 @@
                     <tr><td>&nbsp;</td></tr>
 
                     <tr>
-                        <td>场景</td>
+                        <td><i class="MyIF cofee"></i> 场景</td>
                         <td>
                             <input type="checkbox" class="superInput" id='verygood29' name="styleTag"><label for='verygood29'><span>清晨</span></label>
                             <input type="checkbox" class="superInput" id='verygood30' name="styleTag"><label for='verygood30'><span>夜晚</span></label>
@@ -1001,7 +998,7 @@
                     <tr><td>&nbsp;</td></tr>
 
                     <tr>
-                        <td>情感</td>
+                        <td><i class="MyIF exciting"></i> 情感</td>
                         <td>
                             <input type="checkbox" class="superInput" id='verygood41' name="styleTag"><label for='verygood41'><span>怀旧</span></label>
                             <input type="checkbox" class="superInput" id='verygood42' name="styleTag"><label for='verygood42'><span>清新</span></label>
@@ -1021,7 +1018,7 @@
                     <tr><td>&nbsp;</td></tr>
 
                     <tr>
-                        <td>主题</td>
+                        <td><i class="MyIF kinds"></i> 主题</td>
                         <td>
                             <input type="checkbox" class="superInput" id='verygood54' name="styleTag"><label for='verygood54'><span>影视原声</span></label>
                             <input type="checkbox" class="superInput" id='verygood55' name="styleTag"><label for='verygood55'><span>ACG</span></label>
@@ -1053,7 +1050,7 @@
     </div>
 
     <!-- 弹出拟态框后背景遮幕 -->
-    <div class="md-overlay" onclick="clearStyleTagSelect();"></div>
+    <div class="md-overlay" onclick="clearStyleTagSelect(); cancelQuestionnaire();"></div>
 
 
 
@@ -1089,7 +1086,7 @@
 
                 $("#songlistContent").mCustomScrollbar({theme:"inset-2"});
                 $("#songLyrics").mCustomScrollbar({theme:"minimal"});
-                $("#collectionContent").mCustomScrollbar({theme:"inset"});
+                $("#collectionContent").mCustomScrollbar({theme:"inset-2"});
                 $("#styleTagList").mCustomScrollbar({theme:"inset"});
             });
         })(jQuery);
@@ -1163,10 +1160,13 @@
 
         /**
          * 热门歌曲页面改变歌单风格分类名称
+         * 同下面选择歌单风格标签一样 [ 事件会和关闭拟态框冲突，所以先 onclick 来触发这个事件 ]
          */
-        $('a.styleType').click(function () {
-            $(window.frames["indexIframe"].document).find("#songTypeName").html($(this).html());
-        });
+        function changeAlbumStyle(obj) {
+            $(window.frames["indexIframe"].document).find("#styleTypeName").html($(obj).text());
+            $(window.frames["indexIframe"].document).find("#styleTypeId").val($(obj).attr('data-styleId'));
+            $("a[data-styleId]").removeClass('active');
+        }
 
 
         /**
@@ -1218,6 +1218,18 @@
             $('#styleTagIdsTemp').val('');
         }
         /* 注意！！！！！ saveStyleTagTempData 与 clearStyleTagSelect 不能调换顺序执行！！！不然会出现undefind */
+
+
+        /**
+         * 取消调查问卷填写情况
+         * 同上选择歌单风格标签一样 [ 事件会和关闭拟态框冲突，所以先 onclick 来触发这个事件 ]
+         */
+        function cancelQuestionnaire() {
+            $('#modal-questionnaire').find('input[type=text]').val('');
+            $('#modal-questionnaire').find('input').prop('checked', false);
+            $('#modal-questionnaire').find('textarea').val('');
+        }
+
 
 
     </script>

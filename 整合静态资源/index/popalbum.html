@@ -33,11 +33,13 @@
     <div id="popalbum-main" class="box-show2">
         <div>
             <div id="popalbum-kindstContent" class="glass-Bg box-show3">
-                <span id="songTypeName">全部</span>
+                <input type="hidden" id="styleTypeId" name="styleTypeId" value="">
+                <span id="styleTypeName">全部</span>
                 <span>
-                    <a class='superBtn joinSinger MyIF kinds' onclick="window.top.niftymodalsByModelName('modal-category','');">选择分类</a>
+                    <a class='superBtn joinSinger MyIF kinds' onclick="window.top.niftymodalsByModelName('modal-category',''); chooseAlbumStyle();">选择分类</a>
                 </span>
             </div>
+
 
             <div id="popalbum-content">
 
@@ -207,6 +209,16 @@
     <!--jQuery框架-->
     <script src="../js/common/jquery-3.1.1.min.js" type="text/javascript"></script>
     <script src="../js/index/common.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+
+        function chooseAlbumStyle() {
+            if ($('#styleTypeId').val() !== '') {
+                $("a[data-styleId|=" + $('#styleTypeId').val() + "]", window.top.document).addClass('active');
+            }
+        }
+    </script>
 
 
 </body>
