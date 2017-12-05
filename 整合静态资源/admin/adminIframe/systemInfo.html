@@ -58,7 +58,8 @@
     </div>
 
     <div id="messageListContent" class="glass-Bg box-show3" style="width:83%; margin:12px 0 0 15.5%; padding:8px 5px 8px 0; box-sizing:border-box; color:#CCC; overflow:hidden;">
-        <div style="width:100%; height:100%;">
+
+        <div id="overflowMessageListContent" style="width:100%; height:100%;">
             <div class="messageList" title="点击查看详情">
                 <img src="../../img/common/touxiang.jpg">
                 <a>JesBrian官方超级管理员:</a>
@@ -125,10 +126,9 @@
                 <p class="messageContent">csvdsvdsbds然后一天股已经OK漂亮曾担任十月怀胎股吧引进哦满仓控盘，了的立方体一股hi就OK漂亮【。；1垄断行业太古hi就OK漂亮【1</p>
                 <p class="messageTime">1111-11-11 11:11</p>
             </div>
+        </div>
 
-
-
-            <div id="messageDetail" style="width:100%; height:800px; padding:18px 8px 8px; position:relative; box-sizing:border-box; display:none;">
+        <div id="messageDetail" style="width:100%; height:100%; padding:18px 8px 8px; position:relative; box-sizing:border-box; display:none; overflow:hidden;">
                 <p style="margin-left:28px; color:#2DDEE6; font-size:18px; border-left:5px solid #886AFF;">
                     <a id="backMessageList" style="margin:0 18px 0 28px; font-size:20px; color:lightgreen;">系统信息</a>
                     <span class="MyIF double-arrow-right" style="
@@ -149,9 +149,24 @@
                         -o-transform: scale(1.8,1.5);
                     "></span>
                 </p>
-            </div>
-
+                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
         </div>
+
     </div>
 
 </div>
@@ -188,7 +203,8 @@
 
     $.mCustomScrollbar.defaults.scrollButtons.enable=true;
     $.mCustomScrollbar.defaults.axis="y";
-    $("#messageListContent").children('div').mCustomScrollbar({theme:"minimal"});
+    $("#overflowMessageListContent").mCustomScrollbar({theme:"minimal"});
+    $("#messageDetail").mCustomScrollbar({theme:"minimal"});
 
 
 
@@ -196,16 +212,19 @@
      * 显示/隐藏该种类全部信息 -- 隐藏/显示某条详细信息
      */
     $('div.messageList').click(function () {
-        $('div.messageList').fadeOut();
+        $('#overflowMessageListContent').fadeOut();
         $('#messageDetail').fadeIn();
     });
 
 
+    /**
+     * 点击单选框切换不同的信息类型
+     */
     $('input[name="messageType"]').click(function () {
-        $('#messageListContent').children('div').remove();
+        $('#overflowMessageListContent').remove();
 
-
-        $('#messageListContent').append("            <div style=\"width:100%; height:100%;\">\n" +
+        $('#messageListContent').append(
+            "              <div id='overflowMessageListContent' style=\"width:100%; height:100%;\">\n" +
             "                <div class=\"messageList\" title=\"点击查看详情\">\n" +
             "                    <img src=\"../../img/common/touxiang.jpg\">\n" +
             "                    <a>JesBrian官方超级管理员:</a>\n" +
@@ -272,28 +291,27 @@
             "                    <p class=\"messageContent\">csvdsvdsbds然后一天股已经OK漂亮曾担任十月怀胎股吧引进哦满仓控盘，了的立方体一股hi就OK漂亮【。；1垄断行业太古hi就OK漂亮【1</p>\n" +
             "                    <p class=\"messageTime\">1111-11-11 11:11</p>\n" +
             "                </div>\n" +
-            "\n" +
             "            </div>");
 
 
         $('div.messageList').click(function () {
-            $('div.messageList').fadeOut();
+            $('#overflowMessageListContent').fadeOut();
             $('#messageDetail').fadeIn();
         });
 
 
         $.mCustomScrollbar.defaults.scrollButtons.enable=true;
         $.mCustomScrollbar.defaults.axis="y";
-        $("#messageListContent").children('div').mCustomScrollbar({theme:"minimal"});
+        $("#overflowMessageListContent").mCustomScrollbar({theme:"minimal"});
 
-        $('div.messageList').fadeIn();
+        $('#overflowMessageListContent').fadeIn();
         $('#messageDetail').fadeOut();
     });
 
 
 
     $('#backMessageList').click(function () {
-        $('div.messageList').fadeIn();
+        $('#overflowMessageListContent').fadeIn();
         $('#messageDetail').fadeOut();
     });
 
