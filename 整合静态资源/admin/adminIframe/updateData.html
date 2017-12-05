@@ -50,9 +50,12 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="width:24%; padding:8px 22px 8px 0; text-align:right; font-size:18px; font-weight:900;">歌手名称</td>
+                    <td style="width:24%; padding:8px 22px 8px 0; text-align:right; font-size:18px; font-weight:900;">歌曲单价</td>
                     <td style="padding:8px 0 8px 22px; text-align:left;">
-                        <input type="text" name="" value="" style="width:288px; padding:5px 12px; font-size:17px; background:#888; color:#383838;">
+                        <span style="font-size:38px; font-weight:900; color:#2EE7FF;">&yen;</span>
+                        <a class="numMinus glass-Bg box-show3 cancelSelectText" style="width:38px; height:38px; display:inline-block; font-size:38px; font-weight:900; line-height:39px;">-</a>
+                        <input id="songPrice" type="text" name="songPrice" value="0.00" style="width:88px; padding:5px 12px; transform:translate(0, -6px); font-size:17px; font-weight:800; color:#2EE7FF; background:#888; text-align:center;">
+                        <a class="numAdd glass-Bg box-show3 cancelSelectText" style="width:38px; height:38px; display:inline-block; font-size:38px; font-weight:900; line-height:39px;">+</a>
                     </td>
                 </tr>
                 <tr>
@@ -94,6 +97,41 @@
         $('a.accountOperIframeUrl').click(function () {
             window.top.accountOperIframeObj.attr('src', $(this).attr('dataUrl'));
         });
+
+
+
+
+
+        /**
+         * 判断输入的价格是否正确（网上找的正则表达式），可以为小数[ 123 / 1.23 / 123.00 / 0.00  √][ 012 / 1.000 ×]
+         */
+        $("#songPrice").blur(function () {
+            let reg = /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/;
+            if (!reg.test(this.value)) {
+                setTimeout(function () {
+                    $("#songPrice").focus().addClass('warning');
+                }, 0);
+            } else {
+                $("#songPrice").removeClass('warning');
+            }
+        });
+
+        /**
+         * 将添加数字按钮绑定 click 事件
+         */
+        $("a.numMinus").on("click", function () {
+            let songPriceTemp = Number($("#songPrice").val());
+            if (songPriceTemp > 0 && (!Number.isNaN(songPriceTemp))) {
+                $("#songPrice").val(songPriceTemp - 1);
+            }
+        });
+        $("a.numAdd").on("click", function () {
+            let songPriceTemp = Number($("#songPrice").val());
+            if (!Number.isNaN(songPriceTemp)) {
+                $("#songPrice").val(songPriceTemp + 1);
+            }
+        });
+
 
     </script>
 
