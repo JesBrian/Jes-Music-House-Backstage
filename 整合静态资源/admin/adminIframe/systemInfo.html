@@ -16,15 +16,15 @@
     <link rel="stylesheet" type="text/css" href="../../plugins/scrollbar/jquery.mCustomScrollbar.css">
 
     <style>
-        .messageList {  width:99.5%; min-height:48px; margin:2px; padding:20px 12px 20px 22px; position:relative; border:none; box-sizing:border-box; cursor:pointer;  }
+        .messageList {  width:99.5%; min-height:48px; max-height:128px; margin:2px; padding:20px 12px 20px 22px; position:relative; border:none; box-sizing:border-box; cursor:pointer;  }
         .messageList:hover {  background:#1A1A1A;  }
         .messageList:after {  content:''; width:100%; height:1px; left:0; bottom:-1px; position:absolute; background:#444; background:-webkit-linear-gradient(left, #111, #222, #444, #222, #111); background:-moz-linear-gradient(left, #111, #222, #444, #222, #111); background:-o-linear-gradient(left, #111, #222, #444, #222, #111); background:-ms-linear-gradient(left, #111, #222, #444, #222, #111); background:linear-gradient(left, #111, #222, #444, #222, #111);  }
         .messageList>img {  width:50px; height:50px; margin:3px 16px 8px 3px; display:inline-block; float:left; border-radius:4px; box-shadow:1.5px 1.5px 4px #AAA;  }
         .messageList>i.MyIF {  top:3px; left:16px; position:absolute; font-size:23px; font-weight:900; color:#FF7FBA; text-shadow:0.2px 0.2px 0.5px #FFF;  }
         .messageList>i.readTag {  margin-right:88px; float:right; color:#FFB4D1; text-shadow:0.5px 0.5px 0.3px #555;  }
         .messageList>a {  margin-left:8px; color:#57E692; font-weight:600;  }
-        .messageList>p.messageContent {  text-indent:2em; word-break:break-all; font-size:14px;  }
-        .messageList>p.messageTime {  margin-right:48px; text-align:right;  }
+        .messageList>p.messageContent {  max-height:52px; text-indent:2em; word-break:break-all; font-size:14px; overflow:hidden; text-overflow:ellipsis; -o-text-overflow: ellipsis; -webkit-text-overflow: ellipsis; -moz-text-overflow: ellipsis;  }
+        .messageList>p.messageTime {  margin-right:68px; text-align:right; line-height:1.5em;  }
     </style>
 
 
@@ -128,43 +128,29 @@
             </div>
         </div>
 
-        <div id="messageDetail" style="width:100%; height:100%; padding:18px 8px 8px; position:relative; box-sizing:border-box; display:none; overflow:hidden;">
-                <p style="margin-left:28px; color:#2DDEE6; font-size:18px; border-left:5px solid #886AFF;">
-                    <a id="backMessageList" style="margin:0 18px 0 28px; font-size:20px; color:lightgreen;">系统信息</a>
-                    <span class="MyIF double-arrow-right" style="
-                        display:inline-block;
-                        transform: scale(1.8,1.5);
-                        -ms-transform: scale(1.8,1.5);
-                        -webkit-transform: scale(2,1.5);
-                        -moz-transform: scale(1.8,1.5);
-                        -o-transform: scale(1.8,1.5);
-                    "></span>
-                    <a style="margin:0 18px 0 28px; font-size:20px; color:lightgreen;">消息详情</a>
-                    <span class="MyIF double-arrow-right" style="
-                        display:inline-block;
-                        transform: scale(1.8,1.5);
-                        -ms-transform: scale(1.8,1.5);
-                        -webkit-transform: scale(1.8,1.5);
-                        -moz-transform: scale(1.8,1.5);
-                        -o-transform: scale(1.8,1.5);
-                    "></span>
-                </p>
-                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
-                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
-                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
-                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
-                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
-                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
-                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
-                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
-                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
-                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
-                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
-                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
-                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
-                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
-                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
-                <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+        <div id="messageDetail" style="width:100%; height:100%; padding:48px 8px 3px; position:relative; box-sizing:border-box; display:none; overflow:hidden;">
+            <p style="top:160px; margin-left:38px; color:#2DDEE6; font-size:18px; border-left:5px solid #886AFF; position:fixed;">
+                <a id="backMessageList" style="margin:0 18px 0 28px; font-size:20px; color:lightgreen;">系统信息</a>
+                <span class="MyIF double-arrow-right" style=" display:inline-block; transform: scale(1.8,1.5); -ms-transform: scale(1.8,1.5); -webkit-transform: scale(2,1.5); -moz-transform: scale(1.8,1.5); -o-transform: scale(1.8,1.5);  "></span>
+                <a style="margin:0 18px 0 28px; font-size:20px; color:lightgreen;">消息详情</a>
+                <span class="MyIF double-arrow-right" style=" display:inline-block; transform: scale(1.8,1.5); -ms-transform: scale(1.8,1.5); -webkit-transform: scale(1.8,1.5); -moz-transform: scale(1.8,1.5); -o-transform: scale(1.8,1.5);  "></span>
+            </p>
+            <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+            <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+            <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+            <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+            <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+            <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+            <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+            <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+            <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+            <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+            <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+            <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+            <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+            <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+            <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
+            <h3>rxdfcgvhbnmk,l.;'/</h3>exrdctfvygbuhnijokpl[<hr/>cfvgbhnjmkl;
         </div>
 
     </div>
