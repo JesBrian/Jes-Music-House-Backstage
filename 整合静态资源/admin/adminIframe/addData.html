@@ -12,6 +12,23 @@
     <link rel="stylesheet" type="text/css" href="../../css/common/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/admin/common.css">
 
+    <style type="text/css">
+        a.numMinus, a.numAdd {
+            width:40px; height:38px; display:inline-block; font-size:38px; font-weight:900; line-height:39px;
+        }
+
+        a.numMinus:active, a.numAdd:active {
+            transform: translate(0.5px, 0.5px);
+            background: #181818;
+            color: #00CDFF;
+            text-shadow: 0.5px 0.5px 1px #000;
+            -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 2px 4px 6px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 2px 4px 6px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 2px 4px 6px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+        }
+    </style>
+
+
 </head>
 <body id="htmlBody">
 
@@ -59,9 +76,9 @@
                     <td style="width:24%; padding:8px 22px 8px 0; text-align:right; font-size:18px; font-weight:900;">歌曲单价</td>
                     <td style="padding:8px 0 8px 22px; text-align:left;">
                         <span style="font-size:38px; font-weight:900; color:#2EE7FF;">&yen;</span>
-                        <a class="numMinus glass-Bg box-show3 cancelSelectText" style="width:38px; height:38px; display:inline-block; font-size:38px; font-weight:900; line-height:39px;">-</a>
+                        <a class="glass-Bg box-show3 cancelSelectText numMinus">-</a>
                         <input id="songPrice" type="text" name="songPrice" value="0.00" style="width:88px; padding:5px 12px; transform:translate(0, -6px); font-size:17px; font-weight:800; color:#2EE7FF; background:#888; text-align:center;">
-                        <a class="numAdd glass-Bg box-show3 cancelSelectText" style="width:38px; height:38px; display:inline-block; font-size:38px; font-weight:900; line-height:39px;">+</a>
+                        <a class="glass-Bg box-show3 cancelSelectText numAdd">+</a>
                     </td>
                 </tr>
                 <tr>
