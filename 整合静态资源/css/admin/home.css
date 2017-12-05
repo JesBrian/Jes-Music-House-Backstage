@@ -45,7 +45,7 @@ nav > .accountMenuSwitch img {  width:40px; height:36.5px; top:2px; left:1px; po
 .firstMenuSwitch a.MyIF:hover, #timeSwitch .MyIF:hover { color:#42d4ff; text-shadow:0 0 1px; opacity:1; }
 .firstMenuSwitch.active a.MyIF, #timeSwitch .MyIF.active { animation:menuSwitchActive 0.6s forwards; -webkit-animation:menuSwitchActive 0.6s forwards; }
 /*各种操作页面的iframe*/
-#accountOperIframe {  margin:8px 30px 0 0; padding-bottom:3px; float:right; background:#181818;  }
+#accountOperIframe {  margin:8px 30px 0 0; padding:3px 0; float:right; background:#181818;  }
 
 
 /* 后台用户操作菜单内容 */

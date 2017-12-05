@@ -1,12 +1,11 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../../css/common/common.css">
-    <link rel="stylesheet" type="text/css" href="../../css/index/common.css">
 
     <style>
         #uploadAvatarContainer {  width:400px; margin:18px 8px 8px; position:relative; font-family:微软雅黑; font-size:12px;  }
         #uploadAvatarContainer p {  line-height:18px; height:0; margin:10px; font-size:18px; font-weight:700; color:#555;  }
         .action {  width:350px; height:30px; margin:10px 0;  }
-        .cropped {  position:absolute; right:-200px; top:60px; width:200px; height:200px; box-shadow:0 0 12px #ddd; text-align:center;  }
+        .cropped {  position:absolute; right:-200px; top:60px; width:200px; height:200px; text-align:center;  }
         .imageBox {  position:relative; height:350px; width:350px; margin-left:12px; background:#fff; overflow:hidden; background-repeat:no-repeat; cursor:move; box-shadow:4px 4px 12px #B0B0B0;  }
         .imageBox .thumbBox {  position:absolute; top:50%; left:50%; width:200px; height:200px; margin-top:-100px; margin-left:-100px; box-sizing:border-box; box-shadow:0 0 0 1000px rgba(0, 0, 0, 0.5); background:none repeat scroll 0 0 transparent;  }
         .imageBox .spinner {  position:absolute; top:0; left:0; bottom:0; right:0; text-align:center; line-height:400px; background:rgba(0, 0, 0, 0.7);  }
@@ -27,14 +26,14 @@
         </div>
         <div class="action">
             <!-- <input type="file" id="file" style=" width: 200px">-->
-            <div class="new-contentarea tc"><a class="upload-img s1c-Bg box-show3">
+            <div class="new-contentarea tc"><a class="upload-img glass-Bg box-show3" >
                 <label for="upload-file">上传图像</label>
             </a>
                 <input type="file" class="" name="upload-file" id="upload-file"/>
             </div>
-            <input type="button" id="btnCrop" class="Btnsty_peyton s1c-Bg box-show3" value="预览">
-            <input type="button" id="btnZoomIn" class="Btnsty_peyton s1c-Bg box-show3" value="十">
-            <input type="button" id="btnZoomOut" class="Btnsty_peyton s1c-Bg box-show3" value="一">
+            <a id="btnCrop" class="Btnsty_peyton glass-Bg box-show3">预览</a>
+            <a id="btnZoomIn" class="Btnsty_peyton glass-Bg box-show3">十</a>
+            <a id="btnZoomOut" class="Btnsty_peyton glass-Bg box-show3">一</a>
         </div>
         <div class="cropped"></div>
     </div>

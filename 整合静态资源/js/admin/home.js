@@ -7,7 +7,7 @@ function layoutSize() {
 
     accountMainBodyObj.height(windowObj.height() - 100);    //调整 后台页面主体 高度，减去nav和footer高度
 
-    accountOperIframeObj.height(accountMainBodyObj.height() - 20); //调整 后台页面iframe页面 宽高，根据主菜单是否折叠来计算宽度
+    accountOperIframeObj.height(accountMainBodyObj.height() - 23); //调整 后台页面iframe页面 宽高，根据主菜单是否折叠来计算宽度
     if ($('#mainMenu').hasClass('active')) {
         accountOperIframeObj.width(accountMainBodyObj.width() - 282);
     } else {
