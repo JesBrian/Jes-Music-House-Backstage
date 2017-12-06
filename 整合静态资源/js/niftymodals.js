@@ -1,5 +1,3 @@
-var niftymodalCloseEvent;   //暴力添加拟态框关闭函数
-
 ;(function ($) {
 
     var defaults = {

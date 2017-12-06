@@ -49,6 +49,7 @@ function checkEnable(checkObj, checkTime) {
 /**
  * 根据传入的model名字来弹出相应的模拟框
  */
+var niftymodalCloseEvent;   //暴力添加拟态框关闭函数
 function niftymodalsByModelName(modal,url,text) {
     $("#" + modal).niftyModal();
     if(text != '') {
