@@ -1,3 +1,5 @@
+var niftymodalCloseEvent;   //暴力添加拟态框关闭函数
+
 ;(function ($) {
 
     var defaults = {
@@ -66,7 +68,7 @@
                 }, 500);
 
                 //Close Event
-                close.on('click', function (ev) {
+                close.on('click', niftymodalCloseEvent = function (ev) {
                     var btn = $(this);
                     modal.closeEl = close.get(0);
                     //Before close event

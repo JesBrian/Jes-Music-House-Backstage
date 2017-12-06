@@ -64,7 +64,16 @@
             $('#btnCrop').on('click', function () {
                 var img = cropper.getDataURL();
                 $('.cropped').html('');
-                $('.cropped').append('<img src="' + img + '" align="absmiddle" style="width:128px; margin-top:28px; border-radius:5px; box-shadow:0 0 12px #7E7E7E;"><p>预览效果</p><span style="top:128px; right:60px; position:relative; z-index:9;"><a class="superBtn joinSinger MyIF">确认修改</a></span>');
+                $('.cropped').append('<img id="changeImgTemp" src="' + img + '" align="absmiddle" style="width:128px; margin-top:28px; border-radius:5px; box-shadow:0 0 12px #7E7E7E;"><p>预览效果</p><span style="top:128px; right:60px; position:relative; z-index:9;"><a id="sureChangeImg" class="md-close superBtn joinSinger MyIF">确认修改</a></span>');
+
+                $('#sureChangeImg').click(function(){
+                    //console.log($(window.top.frames["accountOperIframe"].document).find("img.changeImg").attr("src"));
+                    //console.log($("#changeImgTemp").attr("src"));
+                    $(window.top.frames["accountOperIframe"].document).find("img.changeImg").attr("src", $("#changeImgTemp").attr("src"));
+
+                    window.top.niftymodalCloseEvent();  //使用 niftymodal.js 里暴力添加的拟态框关闭事件
+                });
+
             });
             $('#btnZoomIn').on('click', function () {
                 cropper.zoomIn();
