@@ -1,7 +1,3 @@
-/**
- * Created by ezgoing on 14/9/2014.
- */
-
 "use strict";
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
@@ -39,19 +35,23 @@
                     canvas.height = height;
                     var context = canvas.getContext("2d");
                     context.drawImage(this.image, 0, 0, sw, sh, dx, dy, dw, dh);
-                    var imageData = canvas.toDataURL('image/png');
+                    var imageData = canvas.toDataURL('image/jpeg');
+
+                    // console.log(sw, sh, dx, dy, dw, dh);  //dx[距离图片左侧距离]，dy[距离图片顶部距离]
+                    // $("input[name=imgDx]").val(dx);
+                    // $("input[name=imgDy]").val(dy);
                     return imageData;
                 },
                 getBlob: function()
                 {
                     var imageData = this.getDataURL();
-                    var b64 = imageData.replace('data:image/png;base64,','');
+                    var b64 = imageData.replace('data:image/jpeg;base64,','');
                     var binary = atob(b64);
                     var array = [];
                     for (var i = 0; i < binary.length; i++) {
                         array.push(binary.charCodeAt(i));
                     }
-                    return  new Blob([new Uint8Array(array)], {type: 'image/png'});
+                    return  new Blob([new Uint8Array(array)], {type: 'image/jpeg'});
                 },
                 zoomIn: function ()
                 {

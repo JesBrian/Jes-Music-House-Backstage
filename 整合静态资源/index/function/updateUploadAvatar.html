@@ -25,7 +25,6 @@
             <div class="spinner" style="display:none">Loading...</div>
         </div>
         <div class="action">
-            <!-- <input type="file" id="file" style=" width: 200px">-->
             <div class="new-contentarea tc"><a class="upload-img glass-Bg box-show3" >
                 <label for="upload-file">上传图像</label>
             </a>
@@ -34,6 +33,10 @@
             <a id="btnCrop" class="Btnsty_peyton glass-Bg box-show3">预览</a>
             <a id="btnZoomIn" class="Btnsty_peyton glass-Bg box-show3">十</a>
             <a id="btnZoomOut" class="Btnsty_peyton glass-Bg box-show3">一</a>
+
+
+            <input type="hidden" name="imgDx" value="">
+            <input type="hidden" name="imgDy" value="">
         </div>
         <div class="cropped"></div>
     </div>
@@ -63,23 +66,25 @@
             });
             $('#btnCrop').on('click', function () {
                 var img = cropper.getDataURL();
-                $('.cropped').html('');
-                $('.cropped').append('<img id="changeImgTemp" src="' + img + '" align="absmiddle" style="width:128px; margin-top:28px; border-radius:5px; box-shadow:0 0 12px #7E7E7E;"><p>预览效果</p><span style="top:128px; right:60px; position:relative; z-index:9;"><a id="sureChangeImg" class="md-close superBtn joinSinger MyIF">确认修改</a></span>');
+                $('.cropped').html('<img id="changeImgTemp" src="' + img + '" align="absmiddle" style="width:128px; height:128px; margin-top:28px; border-radius:5px; box-shadow:0 0 12px #7E7E7E;"><p>预览效果</p><span style="top:128px; right:60px; position:relative; z-index:9;"><a id="sureChangeImg" class="md-close superBtn joinSinger MyIF">确认修改</a></span>');
 
                 $('#sureChangeImg').click(function(){
-                    //console.log($(window.top.frames["accountOperIframe"].document).find("img.changeImg").attr("src"));
-                    //console.log($("#changeImgTemp").attr("src"));
+
+                    console.log(cropper.getBlob());  //获取预览后想要修改的图片的 blob 数据，准备利用 ajax 上传图片
+
                     $(window.top.frames["accountOperIframe"].document).find("img.changeImg").attr("src", $("#changeImgTemp").attr("src"));
 
+
+                    $('.cropped').empty();
+                    //$('.imageBox').css({'background-image':''});
                     window.top.niftymodalCloseEvent();  //使用 niftymodal.js 里暴力添加的拟态框关闭事件
                 });
-
             });
             $('#btnZoomIn').on('click', function () {
                 cropper.zoomIn();
             });
             $('#btnZoomOut').on('click', function () {
                 cropper.zoomOut();
-            })
+            });
         });
     </script>
