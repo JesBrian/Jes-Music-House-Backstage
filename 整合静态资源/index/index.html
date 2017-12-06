@@ -768,12 +768,12 @@
             <a class="md-close close-all MyIF all-arrow"></a>
             <form>
                 <section class="webdesigntuts-workshop">
-                    <input type="search" placeholder=" 输入您想要申请的歌手名称，查看是否已被使用 " required>
+                    <input type="text" class="niftyModalForm" placeholder=" 输入您想要申请的歌手名称，查看是否已被使用 " required>
                     <button type="submit"><i class="MyIF search"></i></button>
                 </section>
                 <img id="singerAvatar" class="box-show3" src="../img/common/touxiang.jpg">
                 <span>
-                    <a class="joinSinger superBtn md-close" href="joinSinger.html" target="indexIframe">立即入驻 <i class="MyIF double-arrow-right"></i></a>
+                    <a class="joinSinger superBtn md-close" href="joinSinger.html" target="indexIframe" onclick="cancelNiftyModalsForm();">立即入驻 <i class="MyIF double-arrow-right"></i></a>
                 </span>
                 <p>暂无搜索到相关歌手，立即创建分享你的作品吧！</p>
             </form>
@@ -785,21 +785,21 @@
     <div class="md-container md-effect-1" id="modal-singerLogin">
         <div class="md-content">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/singer.png">歌手登录</h3>
-            <a class="md-close close-all MyIF all-arrow"></a>
+            <a class="md-close close-all MyIF all-arrow" onclick="cancelNiftyModalsForm();"></a>
             <img src="../img/common/touxiang.jpg" class="box-show3">
             <form action="#" method="post">
                 <ul>
                     <li>
-                        请输入验证码：<input type="text" class="s1c-Bg box-show3">
+                        请输入验证码：<input type="text" class="niftyModalForm s1c-Bg box-show3">
                     </li>
                     <li>
-                        <img class="box-show3" src="../img/common/touxiang.jpg">
-                        <span><a class="joinSinger superBtn md-close" href="../admin/home.html">验证登录 <i class="MyIF double-arrow-right"></i></a></span>
+                        <img class="box-show3" src="../img/common/touxiang.jpg" onclick="cancelNiftyModalsForm();">
+                        <span><a class="joinSinger superBtn md-close" href="../admin/home.html" onclick="cancelNiftyModalsForm();">验证登录 <i class="MyIF double-arrow-right"></i></a></span>
                     </li>
                 </ul>
             </form>
             <p>还没入驻音乐人？立即入驻我们分享你的作品吧！</p>
-            <span><a class="joinSinger superBtn md-close" onclick="niftymodalsByModelName('modal-joinSinger','','')">立即入驻 <i class="MyIF double-arrow-right"></i></a></span>
+            <span><a class="joinSinger superBtn md-close" onclick="niftymodalsByModelName('modal-joinSinger','',''); cancelNiftyModalsForm();">立即入驻 <i class="MyIF double-arrow-right"></i></a></span>
         </div>
     </div>
 
