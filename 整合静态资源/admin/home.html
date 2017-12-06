@@ -36,14 +36,11 @@
     <nav class="glass-Bg box-show3">
 
         <!-- 系统Logo - 左侧 -->
-        <a id="navLogo" href="adminIframe/index.html" target="accountOperIframe">
+        <a id="navLogo" href="home.html">
             <img src="../img/common/MH-Logo.png" title="Music House" alt="Music House">
         </a>
 
-        <div class="end-boder" style="height:70px; top:50%; left:50%; position:absolute; transform:translate(-50%, -50%); font-size:38px; line-height:72px;     -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;">Music House 后台管理系统</div>
+        <div class="end-boder">Music House 后台管理系统</div>
 
 
         <!-- 账户管理 - 右侧 [ 登录了显示头像 ] -->
@@ -321,6 +318,20 @@
     <div class="md-container md-effect-1" id="modal-refuseAudit">
         <div class="md-content" style="text-align:center;">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/musicAlbum.png">审核拒绝</h3>
+            <a class="md-close close-all MyIF all-arrow"></a>
+            <p style="text-align:left; text-indent:4em; font-size:18px; line-height:3em;">拒绝通过原因：</p>
+            <textarea class="s1c-Bg box-show3" placeholder="请填写拒绝审核通过的原因：" style="width:92%; height:208px; margin:0 auto 38px; padding:8px; box-sizing:border-box; resize:none; text-indent:2em; font-size:17px; line-height:1.2em; font-weight:700; font-family:'Microsoft YaHei', '黑体', sans-serif; color:#2DDEE6;"></textarea>
+            <span style="top:-8px; position:relative;">
+                <a style="top:0; margin:0 38px;" class="joinSinger superBtn md-close MyIF makesure" onclick="alertTips(1,'信息发送成功！');"> 确定发送</a>
+                <a style="top:0; margin:0 38px;" class="joinSinger superBtn md-close MyIF cancel"> 取消返回</a>
+            </span>
+        </div>
+    </div>
+
+        <!-- 帐号盗用报告框 -->
+    <div class="md-container md-effect-1" id="modal-re">
+        <div class="md-content" style="text-align:center;">
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/musicAlbum.png">盗用报告</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
             <p style="text-align:left; text-indent:4em; font-size:18px; line-height:3em;">拒绝通过原因：</p>
             <textarea class="s1c-Bg box-show3" placeholder="请填写拒绝审核通过的原因：" style="width:92%; height:208px; margin:0 auto 38px; padding:8px; box-sizing:border-box; resize:none; text-indent:2em; font-size:17px; line-height:1.2em; font-weight:700; font-family:'Microsoft YaHei', '黑体', sans-serif; color:#2DDEE6;"></textarea>
