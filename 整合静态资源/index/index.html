@@ -556,17 +556,17 @@
                     <table>
                         <tr>
                             <td><i class="MyIF IDcard-1"></i>用户名</td>
-                            <td><input class="s1c-Bg box-show3" type="text"></td>
+                            <td><input class="niftyModalForm s1c-Bg box-show3" type="text"></td>
                         </tr>
                         <tr>
                             <td><i class="MyIF yuechi"></i>密码</td>
-                            <td><input class="s1c-Bg box-show3" type="password"></td>
+                            <td><input class="niftyModalForm s1c-Bg box-show3" type="password"></td>
                         </tr>
                         <tr>
                             <td colspan="2">
                                 <span>
-                                    <a type="reset" class="joinSinger superBtn MyIF check"> 重新填写</a>
-                                    <a class="joinSinger superBtn md-close MyIF questionnaire-3" href="account.html" target="indexIframe"> 确认提交</a>
+                                    <a class="joinSinger superBtn MyIF check" onclick="cancelNiftyModalsForm();"> 重新填写</a>
+                                    <a class="joinSinger superBtn md-close MyIF questionnaire-3" href="account.html" target="indexIframe" onclick="cancelNiftyModalsForm();"> 确认提交</a>
                                 </span>
                             </td>
                         </tr>
@@ -574,7 +574,7 @@
                     <p style="z-index:9; position:relative;">
                         <a href="#" target="_blank" class="hover-undeline">忘记密码</a>
                         /
-                        <a class="hover-undeline md-close" onclick="niftymodalsByModelName('modal-register','','')">新用户注册</a>
+                        <a class="hover-undeline md-close" onclick="niftymodalsByModelName('modal-register','',''); cancelNiftyModalsForm();">新用户注册</a>
                     </p>
                 </form>
                 <span id="ortherLogin">
@@ -595,26 +595,26 @@
                 <table>
                     <tr>
                         <td><i class="MyIF IDcard-1"></i>用户名</td>
-                        <td><input class="s1c-Bg box-show3" type="text"></td>
+                        <td><input class="niftyModalForm s1c-Bg box-show3" type="text"></td>
                     </tr>
                     <tr>
                         <td><i class="MyIF mail"></i>邮箱</td>
-                        <td><input class="s1c-Bg box-show3" type="text"></td>
+                        <td><input class="niftyModalForm s1c-Bg box-show3" type="text"></td>
                     </tr>
                     <tr>
                         <td><i class="MyIF yuechi"></i>密码</td>
-                        <td><input class="s1c-Bg box-show3" type="password"></td>
+                        <td><input class="niftyModalForm s1c-Bg box-show3" type="password"></td>
                     </tr>
                     <tr>
                         <td colspan="2">
                             <span>
-                                <a type="reset" class="joinSinger superBtn MyIF check"> 重新填写</a>
-                                <a class="joinSinger superBtn md-close MyIF questionnaire-3" href="account.html" target="indexIframe" onclick="alertTips('1','注册成功！完善资料有助于系统提供更精确的个性推荐。')"> 确认注册</a>
+                                <a class="joinSinger superBtn MyIF check" onclick="cancelNiftyModalsForm();"> 重新填写</a>
+                                <a class="joinSinger superBtn md-close MyIF questionnaire-3" href="account.html" target="indexIframe" onclick="alertTips('1','注册成功！完善资料有助于系统提供更精确的个性推荐。'); cancelNiftyModalsForm();"> 确认注册</a>
                             </span>
                         </td>
                     </tr>
                 </table>
-                <p>已有账号？<a class="hover-undeline md-close" onclick="niftymodalsByModelName('modal-userLogin','','')">点此立刻登录</a></p>
+                <p>已有账号？<a class="hover-undeline md-close" onclick="niftymodalsByModelName('modal-userLogin','',''); cancelNiftyModalsForm();">点此立刻登录</a></p>
             </form>
         </div>
     </div>
@@ -693,7 +693,7 @@
                 <table>
                     <tr>
                         <td style="width:38%; padding-right:28px; text-align:right; font-size:18px;"><i class="MyIF kinds" style="color:#1A9EE6; font-size:26px;"></i> 歌单名</td>
-                        <td style="text-align:left;"><input class="s1c-Bg box-show3" type="text" name="albumName"></td>
+                        <td style="text-align:left;"><input class="niftyModalForm s1c-Bg box-show3" type="text" name="albumName"></td>
                     </tr>
                     <tr>
                         <td colspan="2" style="position:relative; text-align:center; font-size:15px;">可通过各种 “ 收藏 ” 按钮将音乐添加到新歌单中</td>
@@ -713,37 +713,37 @@
     <div class="md-container md-effect-1" id="modal-questionnaire">
         <div class="md-content">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/menu.png">调查问卷</h3>
-            <a class="md-close close-all MyIF all-arrow" onclick="cancelQuestionnaire();"></a>
+            <a class="md-close close-all MyIF all-arrow" onclick="cancelNiftyModalsForm();"></a>
             <form action="#" method="post">
                 <p>1、您认为我们网站的服务质量如何：</p>
-                <input type="radio" class="superInput" id='verybad' name="quality"><label for='verybad' class="MyIF cry"><span> 很差</span></label>
-                <input type="radio" class="superInput" id='bad' name="quality"><label for='bad' class="MyIF unhappy"><span> 差</span></label>
-                <input type="radio" class="superInput" id='normal' name="quality"><label for='normal' class="MyIF expressionless"><span> 一般</span></label>
-                <input type="radio" class="superInput" id='good' name="quality"><label for='good' class="MyIF happy"><span> 好</span></label>
-                <input type="radio" class="superInput" id='verygood' name="quality"><label for='verygood' class="MyIF exciting"><span> 很好</span></label>
+                <input type="radio" class="niftyModalForm superInput" id='verybad' name="quality"><label for='verybad' class="MyIF cry"><span> 很差</span></label>
+                <input type="radio" class="niftyModalForm superInput" id='bad' name="quality"><label for='bad' class="MyIF unhappy"><span> 差</span></label>
+                <input type="radio" class="niftyModalForm superInput" id='normal' name="quality"><label for='normal' class="MyIF expressionless"><span> 一般</span></label>
+                <input type="radio" class="niftyModalForm superInput" id='good' name="quality"><label for='good' class="MyIF happy"><span> 好</span></label>
+                <input type="radio" class="niftyModalForm superInput" id='verygood' name="quality"><label for='verygood' class="MyIF exciting"><span> 很好</span></label>
                 <p>2、您认为我们网站存在哪些缺点 [可多选] ：</p>
                 <table>
                     <tr>
-                        <td><input type="checkbox" class="superInput" id='1verybad' name="defect"><label for='1verybad' ><b>加载速度慢</b></label></td>
-                        <td><input type="checkbox" class="superInput" id='1bad' name="defect"><label for='1bad' ><b>歌曲收录少</b></label></td>
-                        <td><input type="checkbox" class="superInput" id='1normal' name="defect"><label for='1normal' ><b>曲库更新迟</b></label></td>
-                        <td><input type="checkbox" class="superInput" id='1good' name="defect"><label for='1good' ><b>歌曲音质差</b></label></td>
+                        <td><input type="checkbox" class="niftyModalForm superInput" id='1verybad' name="defect"><label for='1verybad' ><b>加载速度慢</b></label></td>
+                        <td><input type="checkbox" class="niftyModalForm superInput" id='1bad' name="defect"><label for='1bad' ><b>歌曲收录少</b></label></td>
+                        <td><input type="checkbox" class="niftyModalForm superInput" id='1normal' name="defect"><label for='1normal' ><b>曲库更新迟</b></label></td>
+                        <td><input type="checkbox" class="niftyModalForm superInput" id='1good' name="defect"><label for='1good' ><b>歌曲音质差</b></label></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="superInput" id='1verygood' name="defect"><label for='1verygood' ><b>会员收费高</b></label></td>
-                        <td><input type="checkbox" class="superInput" id='2verygood' name="defect"><label for='2verygood' ><b>歌曲价格高</b></label></td>
-                        <td><input type="checkbox" class="superInput" id='3verygood' name="defect"><label for='3verygood' ><b>功能不齐全</b></label></td>
-                        <td><input type="checkbox" class="superInput" id='4verygood' name="defect"><label for='4verygood' ><b>推荐不合理</b></label></td>
+                        <td><input type="checkbox" class="niftyModalForm superInput" id='1verygood' name="defect"><label for='1verygood' ><b>会员收费高</b></label></td>
+                        <td><input type="checkbox" class="niftyModalForm superInput" id='2verygood' name="defect"><label for='2verygood' ><b>歌曲价格高</b></label></td>
+                        <td><input type="checkbox" class="niftyModalForm superInput" id='3verygood' name="defect"><label for='3verygood' ><b>功能不齐全</b></label></td>
+                        <td><input type="checkbox" class="niftyModalForm superInput" id='4verygood' name="defect"><label for='4verygood' ><b>推荐不合理</b></label></td>
                     </tr>
                 </table>
                 <p>3、如还有任何问题、疑问或者不满或者改进意见请写下：</p>
-                <textarea class="s1c-Bg box-show3" placeholder="请填写您的不满或改进意见！"></textarea>
+                <textarea class="niftyModalForm s1c-Bg box-show3" placeholder="请填写您的不满或改进意见！"></textarea>
                 <p> 请填写正确的邮箱，以便我们对您的问题以邮箱方式回应，谢谢您的支持！</p>
-                <input type="text" class="s1c-Bg box-show3" placeholder="请填写您的邮箱地址！">
+                <input type="text" class="niftyModalForm s1c-Bg box-show3" placeholder="请填写您的邮箱地址！">
 
             </form>
             <span>
-                <a class="superBtn joinSinger md-close MyIF questionnaire-3" onclick="alertTips(1,'问卷提交成功！感谢您对我们的支持！'); cancelQuestionnaire();"> 提交问卷</a>
+                <a class="superBtn joinSinger md-close MyIF questionnaire-3" onclick="alertTips(1,'问卷提交成功！感谢您对我们的支持！'); cancelNiftyModalsForm();"> 提交问卷</a>
             </span>
         </div>
     </div>
@@ -1050,7 +1050,7 @@
     </div>
 
     <!-- 弹出拟态框后背景遮幕 -->
-    <div class="md-overlay" onclick="clearStyleTagSelect(); cancelQuestionnaire();"></div>
+    <div class="md-overlay" onclick="clearStyleTagSelect(); cancelNiftyModalsForm();"></div>
 
 
 
@@ -1158,6 +1158,9 @@
         }
 
 
+
+
+
         /**
          * 热门歌曲页面改变歌单风格分类名称
          * 同下面选择歌单风格标签一样 [ 事件会和关闭拟态框冲突，所以先 onclick 来触发这个事件 ]
@@ -1219,15 +1222,14 @@
         }
         /* 注意！！！！！ saveStyleTagTempData 与 clearStyleTagSelect 不能调换顺序执行！！！不然会出现undefind */
 
-
         /**
-         * 取消调查问卷填写情况
-         * 同上选择歌单风格标签一样 [ 事件会和关闭拟态框冲突，所以先 onclick 来触发这个事件 ]
+         * 清空拟态框表单函数
          */
-        function cancelQuestionnaire() {
-            $('#modal-questionnaire').find('input[type=text]').val('');
-            $('#modal-questionnaire').find('input').prop('checked', false);
-            $('#modal-questionnaire').find('textarea').val('');
+        function cancelNiftyModalsForm() {
+            $("input[type=text].niftyModalForm").val('');
+            $("textarea.niftyModalForm").val('');
+            $("input.niftyModalForm").prop('checked', false);
+            $("input[type=password].niftyModalForm").val('');
         }
 
 
