@@ -130,6 +130,17 @@
                 }, 0);
             } else {
                 $("#songPrice").removeClass('warning');
+                let f = Math.round($(this).val()*100)/100;
+                let s = f.toString();
+                let rs = s.indexOf('.');
+                if (rs < 0) {
+                    rs = s.length;
+                    s += '.';
+                }
+                while (s.length <= rs + 2) {
+                    s += '0';
+                }
+                $(this).val(s);
             }
         });
 
