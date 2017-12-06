@@ -139,13 +139,13 @@
         $("a.numMinus").on("click", function () {
             let songPriceTemp = Number($("#songPrice").val());
             if (songPriceTemp > 0 && (!Number.isNaN(songPriceTemp))) {
-                $("#songPrice").val(songPriceTemp - 1);
+                $("#songPrice").val(songPriceTemp - 1).focus().blur();
             }
         });
         $("a.numAdd").on("click", function () {
             let songPriceTemp = Number($("#songPrice").val());
             if (!Number.isNaN(songPriceTemp)) {
-                $("#songPrice").val(songPriceTemp + 1);
+                $("#songPrice").val(songPriceTemp + 1).focus().blur();
             }
         });
 

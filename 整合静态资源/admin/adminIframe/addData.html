@@ -128,6 +128,17 @@
                 }, 0);
             } else {
                 $("#songPrice").removeClass('warning');
+                let f = Math.round($(this).val()*100)/100;
+                let s = f.toString();
+                let rs = s.indexOf('.');
+                if (rs < 0) {
+                    rs = s.length;
+                    s += '.';
+                }
+                while (s.length <= rs + 2) {
+                    s += '0';
+                }
+                $(this).val(s);
             }
         });
 
@@ -137,13 +148,13 @@
         $("a.numMinus").on("click", function () {
             let songPriceTemp = Number($("#songPrice").val());
             if (songPriceTemp > 0 && (!Number.isNaN(songPriceTemp))) {
-                $("#songPrice").val(songPriceTemp - 1);
+                $("#songPrice").val(songPriceTemp - 1).focus().blur();
             }
         });
         $("a.numAdd").on("click", function () {
             let songPriceTemp = Number($("#songPrice").val());
             if (!Number.isNaN(songPriceTemp)) {
-                $("#songPrice").val(songPriceTemp + 1);
+                $("#songPrice").val(songPriceTemp + 1).focus().blur();
             }
         });
 
