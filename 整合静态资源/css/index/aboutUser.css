@@ -26,8 +26,9 @@
 
     /* 账户消息页 */
 #mesaage-main {  width:900px; margin:25px 115px 0 auto; padding:18px 0 38px;  }
-#mesaage-main>#messageTitle {  width:160px; height:40px; top:38px; left:45%; position:absolute; z-index:50; border-radius:4px; font:normal normal normal 20px/35px Arial, 'Microsoft YaHei', '微软雅黑'; color:#70ff92; text-align:center;  }
-#mesaage-main>#mesaageContent {  width:98%; height:480px; padding:56px 8px 0; color:#CCC; font-size:14px;  }
+#messageTitle {  width:160px; height:40px; top:38px; left:45%; position:absolute; z-index:50; border-radius:4px; font:normal normal normal 20px/35px Arial, 'Microsoft YaHei', '微软雅黑'; color:#70ff92; text-align:center;  }
+#messageTitle>i {  font-size:24px;  }
+#mesaageContent {  width:98%; height:480px; padding:56px 0 0 8px; color:#CCC; font-size:14px;  }
 #mesaage-main .messageList {  width:95%; margin:0 auto; padding:12px 0 18px 12px; border-bottom:1px solid #666;  }
 #mesaage-main .messageList:hover {  background:#1D1D1D;  }
 #mesaage-main .messageList > .readTag {  margin-right:38px; float:right; color:#ff98f0;  }
@@ -56,5 +57,25 @@
 
 
     /* 修改歌单信息页面 */
+#updateAlbum-main {  height:480px;  }
+#myAlbumListContent {  width:238px; display:inline-block; float:left;  }
+#createNewAlbum {  width:100%; height:65px; text-align:center;  }
+#createNewAlbum>span {  position:relative; z-index:5;  }
+#createNewAlbum>span>a {  top:43px; left:0;  }
+#albumList {  width:100%; height:380px; margin:38px 8px 0; padding:12px 0; box-sizing:border-box;  }
+#albumList div.glass-Bg:first-child {  width:88%; height:38px; margin:0 auto; position:relative; cursor:pointer;  }
+#albumList div.glass-Bg {  width:88%; height:38px; margin:12px auto; position:relative; cursor:pointer;  }
+#albumList div.glass-Bg:last-child {  width:88%; height:38px; margin:0 auto; position:relative; cursor:pointer;  }
+#albumList div.glass-Bg>img {  width:30px; height:30px; margin:4px; position:absolute; border-radius:2px;  }
+#albumList div.glass-Bg>div {  width:72%; margin:2px 8px 0 0; float:right; display:inline-block; font-size:14px;  }
+#albumList p:first-child {  display:block; color:#38E6AB; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;  }
+#albumList p:last-child {  text-align:right; font-size:12px; color:#CCC;  }
+#albumDetail {  width:628px; height:475px; margin:16px 16px 0 0 ; display:inline-block; float:right;  }
+#albumDetail>form {  width:100%; height:475px;  }
+#albumDetail>form>table {  width:100%; height:100%;  }
 
 
+#styleTagListShow > a.glass-Bg {  width:128px; height:28px; margin:8px 5px; position:relative; display:inline-block;  }
+#styleTagListShow > a.glass-Bg>p {  width:92%; margin:0 auto; color:#22E8FF; line-height:28px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;  }
+#styleTagListShow>a.glass-Bg>b {  top:-18px; right:-9px; position:absolute; font-size:25px; font-weight:900; font-family: "Microsoft YaHei"; color:#09C15F;  }
+#styleTagListShow>a.glass-Bg>b:hover {  color:#FF88A7;  }

@@ -30,3 +30,23 @@
 .paging > a:hover {  color:#666;  }
 .paging > a:active {  color:#809cdf; background:url(../../img/common/button-square-active.png); background-size:100% 100%; background-color:#2e2e2e;  }
 .paging > a.active {  -webkit-box-shadow:0 0 4px 4px #5bc2d4;  -moz-box-shadow:0 0 4px 4px #5bc2d4;  box-shadow:0 0 4px 4px #5bc2d4;  }
+
+
+
+/* 回复区域 */
+#replyTextArea {
+    width:98.5%; height:130px; display:inline-block; border:none; border-radius:5px;
+}
+#replyDiv {
+    width:91%; height:62px; margin:16px 25px 0; padding:3px 8px; border:2px solid #2b2a2a; resize:none; display:block; font:normal normal normal 13px/1.4em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:2px; background-color:#6A6A6A; overflow:auto;
+}
+#replyTextArea > .emoji {
+    margin:0 28px 0 58px;
+}
+#replyTextArea > span:last-child {
+    top:55px; left:48%; position:relative; z-index:9;
+}
+#sureReplyButton {
+    display:inline-block; text-align:center; font-size:13px; cursor:pointer
+}
+

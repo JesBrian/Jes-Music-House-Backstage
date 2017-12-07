@@ -96,7 +96,8 @@
     /* 新碟上架 */
 #newdisc-main>div {  width:92%; padding:28px 0 0 0; margin:auto;  }
 #newdisc-main .newdisc-part {  width:100%; height:200px; margin:18px auto 66px; position:relative;  }
-#newdisc-main .newdisc-part>.specialTable {  width:78%; height:200px; margin:18px auto; float:right;  }
+#newdisc-main .specialTable {  width:78%; height:200px; margin:18px auto; float:right;  }
+#newdisc-main .specialTable tr:first-child {  height:28px;  }
 #newdisc-main .newdisc-info {  width:18%; margin-top:38px; display:inline-block;  }
 #newdisc-main .newdisc-info div {  width:150px; height:129px; background:url(../../img/common/disc.png); background-size:100% 100%;  }
 #newdisc-main .newdisc-info img {  width:109px; height:109px; margin:10px; float:left;  }

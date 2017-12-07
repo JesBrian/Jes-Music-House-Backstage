@@ -39,7 +39,7 @@
 #ortherLogin {  top:50px; left:-18px; position:relative; z-index:9;  }
 #ortherLogin>a {  margin:18px 0;  }
         /* 上传图片 */
-#modal-uploadAvatar #uploadAvatarContainer {  width:400px; margin:18px 8px 8px; position:relative; font-family:微软雅黑; font-size:12px;  }
+#modal-uploadAvatar #uploadAvatarContainer {  width:400px; margin:18px 8px 8px; position:relative; font-size:12px;  }
 #modal-uploadAvatar #uploadAvatarContainer p {  line-height:18px; height:0; margin:10px; font-size:18px; font-weight:700; color:#555;  }
 #modal-uploadAvatar .action {  width:350px; height:30px; margin:10px 0;  }
 #modal-uploadAvatar .cropped {  position:absolute; right:-200px; top:60px; width:200px; height:200px; text-align:center;  }
@@ -56,7 +56,10 @@
         /* 新建歌单 */
 #modal-newAlbum form {  width:100%; height:200px;  }
 #modal-newAlbum table {  width:100%; height:100%;  }
-#modal-newAlbum table tr:first-child {  height:108px;  }
+#modal-newAlbum tr:first-child {  height:108px;  }
+#modal-newAlbum tr:first-child > td:first-child {  width:38%; padding-right:28px; text-align:right; font-size:18px;  }
+#modal-newAlbum tr > td:first-child {  position:relative; text-align:center; font-size:15px;  }
+#modal-newAlbum tr > td:first-child > i.MyIF {  color:#1A9EE6; font-size:26px;  }
 #modal-newAlbum form input {  width:250px; height:25px; padding:5px 8px; font-size:15px; font-weight:600; letter-spacing:1.2px; color:#30CDFF;  }
 #modal-newAlbum a.superBtn {  margin:73px 28px 0; position:relative;  }
         /* 收藏歌曲 */
