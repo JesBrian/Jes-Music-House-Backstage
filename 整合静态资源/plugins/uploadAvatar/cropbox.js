@@ -159,7 +159,7 @@ $('#upload-file').on('change', function () {
 });
 $('#btnCrop').on('click', function () {
     var img = cropper.getDataURL();
-    $('.cropped').html('<img id="changeImgTemp" src="' + img + '" align="absmiddle" style="width:128px; height:128px; margin-top:28px; border-radius:5px; box-shadow:0 0 12px #7E7E7E;"><p>预览效果</p><span style="top:128px; right:60px; position:relative; z-index:9;"><a id="sureChangeImg" class="md-close superBtn joinSinger MyIF">确认修改</a></span>');
+    $('.cropped').html('<img id="changeImgTemp" src="' + img + '" align="absmiddle" style="width:128px; height:128px; margin-top:28px; border-radius:5px; box-shadow:0 0 12px #7E7E7E;"><p>预览效果</p><span style="top:128px; right:60px; position:relative; z-index:9;"><a id="sureChangeImg" class="md-close superBtn joinSinger MyIF cubes-3"> 确认修改</a></span>');
 
     $('#sureChangeImg').click(function(){
 
@@ -169,7 +169,7 @@ $('#btnCrop').on('click', function () {
 
 
         $('.cropped').empty();
-        //$('.imageBox').css({'background-image':''});
+
         window.top.niftymodalCloseEvent();  //使用 niftymodal.js 里暴力添加的拟态框关闭事件
     });
 });
