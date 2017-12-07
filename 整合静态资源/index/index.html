@@ -619,12 +619,31 @@
         </div>
     </div>
 
-        <!-- 修改头像 -->
+        <!-- 上传图片 -->
     <div class="md-container md-effect-1" id="modal-uploadAvatar">
         <div class="md-content">
-            <h3 class="glass-Bg box-show3"><img src="../img/icon/uploadImg.png">上传图片</h3>
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/musicAlbum.png">上传图片</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
-            <iframe name="uploadAvatar" src="function/updateUploadAvatar.html"></iframe>
+
+            <div id="uploadAvatarContainer">
+                <div class="imageBox">
+                    <div class="thumbBox"></div>
+                    <div class="spinner" style="display:none">Loading...</div>
+                </div>
+                <div class="action">
+                    <div class="new-contentarea tc">
+                        <a class="upload-img glass-Bg box-show3"><label for="upload-file">上传图像</label></a>
+                        <input type="file" class="" name="upload-file" id="upload-file"/>
+                    </div>
+                    <a id="btnCrop" class="Btnsty_peyton cancelSelectText glass-Bg box-show3">预览</a>
+                    <a id="btnZoomIn" class="Btnsty_peyton cancelSelectText glass-Bg box-show3">十</a>
+                    <a id="btnZoomOut" class="Btnsty_peyton cancelSelectText glass-Bg box-show3">一</a>
+
+                    <input type="hidden" name="imgDx" value="">
+                    <input type="hidden" name="imgDy" value="">
+                </div>
+                <div class="cropped"></div>
+            </div>
         </div>
     </div>
 
@@ -1075,6 +1094,10 @@
 
 
     <!--外挂插件-->
+
+        <!-- 上传图片插件 -->
+    <script type="text/javascript" src="../plugins/uploadAvatar/cropbox.js"></script>
+
         <!--plugins滚动条插件-->
     <link rel="stylesheet" href="../plugins/scrollbar/jquery.mCustomScrollbar.css">
     <script src="../plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>

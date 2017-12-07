@@ -1,7 +1,3 @@
-/**
- * Created by ezgoing on 14/9/2014.
- */
-
 "use strict";
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
@@ -39,19 +35,23 @@
                     canvas.height = height;
                     var context = canvas.getContext("2d");
                     context.drawImage(this.image, 0, 0, sw, sh, dx, dy, dw, dh);
-                    var imageData = canvas.toDataURL('image/png');
+                    var imageData = canvas.toDataURL('image/jpeg');
+
+                    // console.log(sw, sh, dx, dy, dw, dh);  //dx[距离图片左侧距离]，dy[距离图片顶部距离]
+                    // $("input[name=imgDx]").val(dx);
+                    // $("input[name=imgDy]").val(dy);
                     return imageData;
                 },
                 getBlob: function()
                 {
                     var imageData = this.getDataURL();
-                    var b64 = imageData.replace('data:image/png;base64,','');
+                    var b64 = imageData.replace('data:image/jpeg;base64,','');
                     var binary = atob(b64);
-                    var array = [];
+                    var array = new Array();
                     for (var i = 0; i < binary.length; i++) {
                         array.push(binary.charCodeAt(i));
                     }
-                    return  new Blob([new Uint8Array(array)], {type: 'image/png'});
+                    return  new Blob([new Uint8Array(array)], {type: 'image/jpeg'});
                 },
                 zoomIn: function ()
                 {
@@ -137,3 +137,45 @@
         return new cropbox(options, this);
     };
 }));
+
+
+
+
+var options =
+    {
+        thumbBox: '.thumbBox',
+        spinner: '.spinner',
+        imgSrc: ''
+    };
+var cropper = $('.imageBox').cropbox(options);
+$('#upload-file').on('change', function () {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        options.imgSrc = e.target.result;
+        cropper = $('.imageBox').cropbox(options);
+    };
+    reader.readAsDataURL(this.files[0]);
+    this.files = [];
+});
+$('#btnCrop').on('click', function () {
+    var img = cropper.getDataURL();
+    $('.cropped').html('<img id="changeImgTemp" src="' + img + '" align="absmiddle" style="width:128px; height:128px; margin-top:28px; border-radius:5px; box-shadow:0 0 12px #7E7E7E;"><p>预览效果</p><span style="top:128px; right:60px; position:relative; z-index:9;"><a id="sureChangeImg" class="md-close superBtn joinSinger MyIF">确认修改</a></span>');
+
+    $('#sureChangeImg').click(function(){
+
+        console.log(cropper.getBlob());  //获取预览后想要修改的图片的 blob 数据，准备利用 ajax 上传图片
+
+        $(window.top.frames["accountOperIframe"].document).find("img.changeImg").attr("src", $("#changeImgTemp").attr("src"));
+
+
+        $('.cropped').empty();
+        //$('.imageBox').css({'background-image':''});
+        window.top.niftymodalCloseEvent();  //使用 niftymodal.js 里暴力添加的拟态框关闭事件
+    });
+});
+$('#btnZoomIn').on('click', function () {
+    cropper.zoomIn();
+});
+$('#btnZoomOut').on('click', function () {
+    cropper.zoomOut();
+});
