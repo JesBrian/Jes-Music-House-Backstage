@@ -116,8 +116,8 @@
 #styleList tr span > a.active {  color:#00FFB6; text-shadow:0 0 0.5px #5CEBDC; text-decoration:underline;  }
         /* 选择歌单风格标签 */
 #modal-selectStyleTag {  width:868px;  }
-#modal-selectStyleTag > .md-content > span {  margin:0 0 0 38px; line-height:3em; font-size:18px;  }
-#modal-selectStyleTag > .md-content > #styleTagListTips {  margin:0; line-height:3em; font-size:17px;  }
+#modal-selectStyleTag > .md-content > span {  margin:0 0 0 38px; line-height:2.3em; font-size:18px;  }
+#modal-selectStyleTag > .md-content > #styleTagListTips {  margin:0; line-height:2.3em; font-size:17px;  }
 #styleTagList {  width:90%; height:308px; margin:0 auto 8px; padding:0; box-sizing:border-box;  }
 #styleTagList td:first-child {  width:108px; text-align:center; font-size:22px; font-weight:700; color:#00FFB6;  }
 #styleTagList td:first-child > i.MyIF {  color:#29B8E6; font-size:28px;  }
