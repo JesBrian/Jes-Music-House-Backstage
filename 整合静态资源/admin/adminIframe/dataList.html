@@ -40,6 +40,7 @@
 
         .accountTableOper {
             width:36px;
+            height:36px;
             border-radius:4px;
             text-align:center;
         }
@@ -50,8 +51,11 @@
             z-index:9999;
         }
         .accountTableOper > .MyIF {
+            width:36px;
+            height:36px;
+            display:inline-block;
             line-height:35px;
-            font-size:22px;
+            font-size:25px;
             cursor:pointer;
         }
         .accountTableOper:hover > .MyIF {
@@ -147,7 +151,7 @@
 
         <!-- 后台顶部搜索框 -->
         <div style="width:232px; height:100%; top:0; left:8px; position:absolute; z-index:5;">
-            <input type="text" name="" value="" placeholder="简单综合搜索" style="width:168px; height:38px; margin:8px 0; padding:0 8px; float:left; background:#888; color:#292929; font-size:18px;">
+            <input type="text" name="" value="" placeholder="简单综合搜索" style="width:168px; height:38px; margin:8px 0; padding:0 8px; float:left; font-size:18px; color:#1AFD9C; text-shadow:0 0 0;">
             <a id="accountSearchButton" class="glass-Bg box-show3">
                 <i class="MyIF search" style="font-size:26px;"></i>
             </a>
@@ -157,7 +161,7 @@
         <div style="width:175px; height:100%; top:0; right:28px; position:absolute; z-index:5; text-align:right;">
             <a class="accountOperIframeUrl baseOper superBtn MyIF check" title="详细查询" onclick="window.top.niftymodalsByModelName('modal-detailSearch')"></a>
             <a class="accountOperIframeUrl baseOper superBtn MyIF add-data" dataUrl="adminIframe/addData.html" title="添加数据"></a>
-            <a class="baseOper superBtn MyIF trash-1" title="删除数据" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定要删除勾选的数据？');"></a>
+            <a class="baseOper superBtn MyIF trash-1" title="删除数据" onclick="delDataList();"></a>
         </div>
 
     </div>
@@ -421,6 +425,14 @@
             })
         })
 
+
+        function delDataList() {
+            if ($('input[name="dataList"]:checked').length) {
+                window.top.niftymodalsByModelName('modal-warning','666','确定要删除勾选的数据？');
+            } else {
+                window.top.alertTips(0, "请先勾选要删除的数据！");
+            }
+        }
     </script>
 
 </body>

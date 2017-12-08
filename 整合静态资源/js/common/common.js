@@ -32,7 +32,6 @@ function getNowTime(dateObj, timeObj) {
  */
 function checkEnable(checkObj, checkTime) {
     if (checkObj.hasClass('enable')) {  //可以触发事件状态
-
         checkObj.removeClass('enable');    //设置点击后禁止状态
         setTimeout(function () {
             checkObj.addClass('enable');

@@ -116,17 +116,17 @@ input[type="text"].warning:focus, input[type="password"].warning:focus, textarea
 
 
 
-    /* 单选复习选按钮质感效果 */
+    /* 单选复选按钮质感效果 */
 .superInput{
-    display: none;
+    display:none;
 }
 
 .superInput + label {
-    z-index: 1;
-    margin: 0 10px 10px 0;
-    width: 115.5px;
-    height: 37.29px;
-    line-height: 36.3px;
+    z-index:1;
+    margin:0 10px 10px 0;
+    width:115.5px;
+    height:37.29px;
+    line-height:36.3px;
     position: relative;
     letter-spacing: .1em;
     color: #0e0e0e;
@@ -147,6 +147,10 @@ input[type="text"].warning:focus, input[type="password"].warning:focus, textarea
     -moz-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
     -webkit-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 3px rgba(255, 255, 255, 0.2);
+    -moz-user-select:none;/*火狐*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -ms-user-select:none;/*IE10*/
+    user-select:none;
 }
 
 .superInput + label:after {
