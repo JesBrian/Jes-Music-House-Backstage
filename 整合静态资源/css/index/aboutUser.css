@@ -6,8 +6,31 @@
 #account-main>iframe, #outherUser-main>iframe {  width:98%; height:100%; padding:20px 12px; border:none;  }
 
     /* 个人账户页面部分 */
+#accountInfo-mian {  width:95%; height:90%; margin:0 auto; padding:0 20px 20px;  }
+#accountInfo-mian>div {  padding:25px 0 0 25px; display:inline-block; color:#DDD;  }
+.myAccountInfo>img {  width:80px; height:80px; margin:25px 25px 18px 0; float:left; border-radius:4px;  }
+.myAccountInfo>h3 {  width:600px; padding:0 30px 10px; margin:0 auto; float:left; font-size:30px;  }
+.myAccountInfo>h3>span {  color:#DDD; text-shadow:1px 1px 0.6px #000;  }
+.myAccountInfo>p {  width:72.5%; padding:18px 28px; float:left; font-size:15px; line-height:168%;  }
+
+
+
+
 
     /* 他人用户页 */
+#userInfo-main {  width:100%; height:100%;  }
+.userAccount {  display:inline-block; padding:8px 0 33px 25px;  }
+.userAccount>img {  width:80px; height:80px; margin:25px 25px 18px 0; float:left; border-radius:4px;  }
+.userAccount>h3 {  width:600px; padding:0 30px 10px; margin:0 auto; float:left; font-size:30px;  }
+.userAccount>h3>span {  color:#DDD; text-shadow:1px 1px 0.6px #000;  }
+.userAccount>p {  width:72.5%; padding:18px 28px; float:left; font-size:15px; line-height:168%;  }
+
+
+    /* 账户听歌排行页 */
+#accountRank-main {  width:95%; height:90%; margin:0 auto; padding:0 20px 20px;  }
+#accountRank-main>span {  top:68px; left:55%; position:relative; z-index:9;  }
+#accountRank-main>span>a {  margin-right:28px;  }
+
 
     /* 账户信息修改页 */
 #update-main>div {  padding:28px 0 5px 50px; position:relative;  }
