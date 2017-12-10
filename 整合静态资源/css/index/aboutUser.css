@@ -13,8 +13,14 @@
 .myAccountInfo>h3>span {  color:#DDD; text-shadow:1px 1px 0.6px #000;  }
 .myAccountInfo>p {  width:72.5%; padding:18px 28px; float:left; font-size:15px; line-height:168%;  }
 
-
-
+    /* 个人推荐歌单页面 */
+#recommendDate {  width:88%; height:160px; margin:auto auto 20px; border-radius:10px;background:url(../../img/index/recmd-daily.jpg) no-repeat; background-size:100% 100%;  }
+#recommendDate>div {  width:280px; height:140px; margin:8px 0 0 20px; background:url(../../img/common/calendar.png) no-repeat; background-size:100% 100%; float:left; font:normal normal 900 78px/108px 'Microsoft YaHei', '微软雅黑'; color:#AAA; text-shadow:0.5px 0.5px 1px #111;  }
+#recommendDate>div>span {  width:108px; height:108px; display:inline-block; text-align:center;  }
+#recommendButtonGroup {  margin-bottom:-8px; float:right;  }
+#recommendButtonGroup>span {  top:68px; left:-15%; position:relative; z-index:9;  }
+#recommendButtonGroup>span>a {  margin-right:28px;  }
+#recommendButtonGroup>a {  margin-right:20px; float:right;  }
 
 
     /* 他人用户页 */

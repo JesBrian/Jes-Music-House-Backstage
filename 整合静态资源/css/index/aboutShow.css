@@ -9,7 +9,7 @@
         /* 每一部分的标题 */
 .partTitle>span {  margin:-10px 30px 0 7px; float:left; font-size:40px;  }
 .partTitle>h3 {  margin:auto 15px auto 58px; border-bottom:5px groove #54ffa3; box-shadow:0 18px 20px #161616; font-size:23px; color: #1b86ff; line-height:40px;  }
-.partTitle>a {  margin:-32px 25px 0 0; float:right; color: white; font-family:"新宋体";  }
+.partTitle>a {  margin:-32px 25px 0 0; float:right; color: white;  }
         /* 热门新消息部分 */
 #new-hot {  height:400px; margin:25px auto 0; position:relative; background:url(../../img/index/main/new-hot-bg.jpg) no-repeat; background-size:100% 100%;  }
             /*整体布局*/

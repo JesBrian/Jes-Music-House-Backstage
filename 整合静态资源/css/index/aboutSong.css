@@ -72,22 +72,27 @@
 #singer-main>div {  width:95%; padding:28px 23px; position:relative;  }
 #singer-main>div>h2 {  margin-left:38px; font-weight:500;  }
 #singer-img {  width:78%; height:326px; margin-top:8px; float:left; position:relative; border-radius:3px;  }
-#singer-img>img {  width:95%; height:90%; top:5%; left:2.5%; position:absolute;  }
+#singer-img>img {  width:95%; height:90%; top:5%; left:2.5%; position:absolute; border-radius:3px; border:1px solid #DDD;  }
 #singer-img>span {  right:148px; bottom:20px; position:absolute; z-index:9; opacity:0.88;  }
-#otherSinger {  width:20%; margin:8px 0; float:right; border-radius:3px;  }
-#otherSinger>a {  width:88%; height:35px; margin:18px auto; display:block; border-radius:2px; font:normal normal normal 12.5px/34px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;  }
+#otherSinger {  width:20%; height:326px; margin:8px 0; float:right; border-radius:3px;  }
+#otherSinger>a {  width:88%; height:35px; margin:20px auto; display:block; border-radius:2px; background:#2E2E2E; font:normal normal normal 12.5px/34px '宋体', 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;  }
 #otherSinger img {  width:26px; height:25px; margin:5px 2px 6px -1px; border-radius:2px;  }
 #otherSinger p {  width:70%; height:35px; display:inline-block; overflow:hidden;  }
 #otherSinger .otherSinger-title {  margin:0 10px 8px; padding:8px 15px; font-weight:500; border-bottom:1px solid #666;  }
 #singer-main iframe {  width:100%; height:750px; margin-top:18px; padding:0; border:none;  }
 
+    /* 歌手页面通用 */
+#singerInfo-main, #singerSong-mian, #singerAlbum-main {  width:95%; height:700px; padding:10px 20px 20px;  }
 
+
+    /* 歌手歌曲页面 */
+#singerSong-mian>span {  top:88px; right:108px; position:absolute; z-index:9;  }
+#singerSong-mian>span>a {  margin-right:18px;  }
 
 
 
 
     /* 申请入驻歌手详情页部分 */
-
 #step-title {  width:160px; height:40px; top:6px; left:40%; position:absolute; z-index:50; font:normal bold normal 20px/38px Arial, 'Microsoft YaHei', '微软雅黑'; color:#70ff92; text-align:center;  }
 #joinSingerContent {  width:93%; height:480px; padding:56px 18px 8px 38px; color:#AAA;  }
 .musichouse {  margin:18px 28px; font-size:16px; color:#CCC; text-align:right;  }
