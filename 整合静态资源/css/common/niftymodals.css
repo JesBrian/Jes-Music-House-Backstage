@@ -54,14 +54,14 @@
 #modal-uploadAvatar a.upload-img:hover {  background-color:#ec7e70;  }
 #modal-uploadAvatar .tc {  text-align:center;  }
         /* 新建歌单 */
-#modal-newAlbum form {  width:100%; height:200px;  }
-#modal-newAlbum table {  width:100%; height:100%;  }
-#modal-newAlbum tr:first-child {  height:108px;  }
-#modal-newAlbum tr:first-child > td:first-child {  width:38%; padding-right:28px; text-align:right; font-size:18px;  }
-#modal-newAlbum tr > td:first-child {  position:relative; text-align:center; font-size:15px;  }
-#modal-newAlbum tr > td:first-child > i.MyIF {  color:#1A9EE6; font-size:26px;  }
-#modal-newAlbum form input {  width:250px; height:25px; padding:5px 8px; font-size:15px; font-weight:600; letter-spacing:1.2px; color:#30CDFF;  }
-#modal-newAlbum a.superBtn {  margin:73px 28px 0; position:relative;  }
+#modal-newAlbum form, #modal-forgetPasswd form {  width:100%; height:200px;  }
+#modal-newAlbum table, #modal-forgetPasswd table {  width:100%; height:100%;  }
+#modal-newAlbum tr:first-child, #modal-forgetPasswd tr:first-child {  height:108px;  }
+#modal-newAlbum tr:first-child > td:first-child, #modal-forgetPasswd tr:first-child > td:first-child {  width:38%; padding-right:28px; text-align:right; font-size:18px;  }
+#modal-newAlbum tr > td:first-child, #modal-forgetPasswd tr > td:first-child {  position:relative; text-align:center; font-size:15px;  }
+#modal-newAlbum tr > td:first-child > i.MyIF, #modal-forgetPasswd tr > td:first-child > i.MyIF {  color:#1A9EE6; font-size:26px;  }
+#modal-newAlbum form input, #modal-forgetPasswd form input {  width:250px; height:25px; padding:5px 8px; font-size:15px; font-weight:600; letter-spacing:1.2px; color:#30CDFF;  }
+#modal-newAlbum a.superBtn, #modal-forgetPasswd a.superBtn {  margin:73px 28px 0; position:relative;  }
         /* 收藏歌曲 */
 #modal-collection {  width:760px;  }
 #modal-collection>.md-content {  height:380px; position:relative;  }

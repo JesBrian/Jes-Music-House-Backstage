@@ -572,7 +572,7 @@
                         </tr>
                     </table>
                     <p style="z-index:9; position:relative;">
-                        <a href="#" target="_blank" class="hover-undeline">忘记密码</a>
+                        <a href="#" class="hover-undeline md-close" onclick="niftymodalsByModelName('modal-forgetPasswd')">忘记密码</a>
                         /
                         <a class="hover-undeline md-close" onclick="niftymodalsByModelName('modal-register','',''); cancelNiftyModalsForm();">新用户注册</a>
                     </p>
@@ -583,6 +583,29 @@
                     <a class="superBtn joinSinger MyIF weibo"> 微博登录</a>
                 </span>
             </div>
+        </div>
+    </div>
+
+        <!-- 找回密码 -->
+    <div class="md-container md-effect-1" id="modal-forgetPasswd">
+        <div class="md-content">
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/power.png">重设密码</h3>
+            <a class="md-close close-all MyIF all-arrow"></a>
+            <form>
+                <table>
+                    <tr>
+                        <td><i class="MyIF mail"></i> 注册邮箱</td>
+                        <td><input class="niftyModalForm s1c-Bg box-show3" type="text" name="mail"></td>
+                    </tr>
+                    <tr><td colspan="2">邮件发送后，两小时有效！请注意时间</td></tr>
+                    <tr>
+                        <td colspan="2">
+                            <a class="superBtn joinSinger md-close MyIF makesure" onclick="alertTips(1,'邮件发送成功，请注意查收！'); cancelNiftyModalsForm();"> 确定新建</a>
+                            <a class="superBtn joinSinger md-close MyIF cancel" onclick="cancelNiftyModalsForm();"> 取消返回</a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
         </div>
     </div>
 
