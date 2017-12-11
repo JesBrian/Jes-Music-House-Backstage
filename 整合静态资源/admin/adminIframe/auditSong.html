@@ -12,6 +12,20 @@
     <link rel="stylesheet" type="text/css" href="../../css/common/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/admin/common.css">
 
+    
+    <style type="text/css">
+        #prepSong, #playSong, #nextSong {
+            position:relative;
+        }
+
+        #prepSong:hover, #playSong:hover, #nextSong:hover {
+            background:#151515;
+            text-shadow:0 0.3px 0.1px #DDD;
+        }
+    </style>
+
+
+
 </head>
 <body id="htmlBody">
 
@@ -71,15 +85,21 @@
             </tr>
             <tr>
                 <td colspan="4" style="width:100%; height:88px; text-align:center;">
-                    <div class="playSong glass-Bg box-show3" style="width:68%; height:48px; margin:0 auto; display:inline-block; text-align:left; line-height:48px;">
-                        <div style="width:108px; height:38px; margin:5px; float:left; line-height:38px;">
-                            <a style="height:38px; display:inline-block;" class="MyIF ahead"></a>
-                            <a style="height:38px; display:inline-block;" class="MyIF play"></a>
-                            <a style="height:38px; display:inline-block;" class="MyIF back"></a>
+                    <div class="playSongContent glass-Bg box-show3" style="width:68%; height:48px; margin:0 auto; display:inline-block; text-align:left; line-height:48px;">
+                        <div id="songOper" style="height:38px; margin:7px 3px; padding:0 4px; float:left; line-height:35px;">
+                            <a id="prepSong" style="height:35px; width:35px; margin:0; float:left; text-align:center; font-size:20px;" class="MyIF ahead"></a>
+                            <a id="playSong" style="height:35px; width:45px; margin:0; float:left; text-align:center; border:1px solid #181818; border-top:none; border-bottom:none; font-size:20px;" class="MyIF play"></a>
+                            <a id="nextSong" style="height:35px; width:35px; margin:0; float:left; text-align:center; font-size:20px;" class="MyIF back"></a>
                         </div>
-                        <img class="box-show3" src="../../img/common/touxiang.jpg" style="width:30px; height:30px; margin:9px 0; border-radius:3px;">
-                        <div style="width:38px; height:38px; margin:5px; float:right; line-height:38px;">
-                            <a class="MyIF volume-yes"></a>
+
+                        <div id="songContent" style="height:100%; display:inline-block; background:lightgreen; line-height:1em;">                        
+                            <img class="box-show3" src="../../img/common/touxiang.jpg" style="width:30px; height:30px; margin:9px 8px; border-radius:3px; float:left;">
+                            <p>歌名 - 歌手</p>
+                            <div style="width:80%; height:5px; float:right; background:lightblue;"></div>
+                        </div>
+
+                        <div id="volumeOper" style="height:100%; margin:0; float:right; line-height:53px; text-align:center;">
+                            <a class="MyIF volume-yes" style=" height:35px; width:45px; margin:0; display:inline-block; border-left:1px solid #181818; line-height:35px; font-size:20px;"></a>
                         </div>
                     </div>
                     <audio src="../../audio/ゼロFINAL%20FANTASY零式オープニングver.mp3"></audio>
@@ -106,6 +126,11 @@
         $('a.accountOperIframeUrl').click(function () {
             window.top.accountOperIframeObj.attr('src', $(this).attr('dataUrl'));
         });
+
+
+        $('#songContent').width($(".playSongContent").width() - 180);
+
+        
 
     </script>
 
