@@ -15,13 +15,43 @@
     
     <style type="text/css">
         #prepSong, #playSong, #nextSong {
+            color:#555;
             position:relative;
         }
-
         #prepSong:hover, #playSong:hover, #nextSong:hover {
+            color:#AAA;
             background:#151515;
-            text-shadow:0 0.3px 0.1px #DDD;
         }
+        #prepSong:active, #playSong:active, #nextSong:active {
+            color:#2ED8FF;
+            text-shadow:0 0 2px #AAA;
+        }
+
+
+
+        #nowPoint {
+            box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 0 12px rgba(0, 0, 0, 0.5), 0 0 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+        }
+        #nowPoint:hover {
+            box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 0 12px rgba(66, 66, 66, 0.5), 0 0 6px rgba(66, 66, 66, 0.3), inset 0 0 0 1.8px #272727;
+        }
+
+
+
+
+
+        #volumeOper > a {
+            color:#555;
+        }
+        #volumeOper:hover > a {
+            color:#AAA;
+        }
+        #volumeOper:active > a {
+            color:#2ED8FF;
+            text-shadow:0 0 2px #AAA;
+        }
+
+
     </style>
 
 
@@ -97,21 +127,24 @@
                             <p style="top:3px; left:58px; position:absolute; line-height:32px; font-size:14px;">
                                 歌名 - 歌手
                                 <p style="margin-right:8px; float:right; line-height:32px; font-size:13.5px;">
-                                    <span style="margin:0 8px;">00:11:11</span>
-                                    <span style="margin:0 8px;">00:22:22</span>
+                                    <span style="margin:0 8px;">00:11:11</span>-<span style="margin:0 8px;">00:22:22</span>
                                 </p>
                             </p>
-                            <div class="box-show3" style="bottom:8px; right:8px; width:88%; height:10px; position:absolute; border-radius:5px; background:#000;">
-                                <div style="width:66%; height:6.5px; margin:2px; background:#111; border-radius:4px;">
-                                    <div style="width:66%; height:100%; background:lightgreen; border-radius:4px; position:relative;">
-                                        <a class="glass-Bg box-show3" style="width:16px; height:16px; top:-5px; right:-8px; position:absolute; border-radius:50%;"></a>
+                            <div class="box-show3" style="bottom:8px; right:15px; width:86%; height:10px; position:absolute; border-radius:5px; background:#000;">
+                                <div style="width:68%; height:6.5px; margin:2px; background:#111; border-radius:4px;">
+                                    <div style="width:68%; height:100%; border-radius:4px; position:relative; cursor:pointer; background-image:-webkit-linear-gradient(left, #2DDEE6, #0D9DE6);">
+                                        <a id="nowPoint" class="glass-Bg box-show3" style="width:16px; height:16px; top:-5px; right:-8px; position:absolute; border-radius:50%;"></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div id="volumeOper" style="height:100%; margin:0; float:right; line-height:53px; text-align:center;">
-                            <a class="MyIF volume-yes" style=" height:35px; width:45px; margin:0; display:inline-block; border-left:1px solid #181818; line-height:35px; font-size:20px;"></a>
+                        <div id="volumeOper" style="height:100%; margin:0; float:right; position:relative; line-height:53px; text-align:center;">
+                            <a class="MyIF volume-yes" style=" height:35px; width:45px; margin:0; position:relative; display:inline-block; border-left:1px solid #181818; line-height:35px; font-size:20px; z-index:5;"></a>
+                            <div id="volumeBar" style="width:43px; height:88px; top:-20px; right:-66px; position:absolute; z-index:1; border-radius:0 168px 168px 0; background-image:-webkit-linear-gradient(top, #2DDEE6, #0D9DE6);">
+                                <div style="width:35px; height:75px; top:6px; left:0; position:absolute; z-index:3; border-radius:0 165px 165px 0; background:#3b3b3b;">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <audio src="../../audio/ゼロFINAL%20FANTASY零式オープニングver.mp3"></audio>
