@@ -24,7 +24,7 @@
 
 
 /* 分页按钮 */
-.paging {  height:40px; margin:20px; text-align:right; line-height:40px;  }
+.paging {  height:40px; margin:20px; text-align:right; line-height:40px; -moz-user-select:none; -webkit-user-select:none; -ms-user-select:none; user-select:none;  }
 .paging > a {  width:40px; height:40px; margin-right:8px; display:inline-block; color:#444; font:normal normal 900 18px/40px sans-serif,'Microsoft YaHei','Arial'; background: url(../../img/common/button-square-normal.png); background-size:100% 100%; box-shadow:0 5px 20px #161616;  }
 .paging > .pageOperation {  height:30px; margin-top:6px; line-height:31px;  }
 .paging > a:hover {  color:#666;  }
