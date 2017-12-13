@@ -31,50 +31,71 @@
     </div>
 
 
-    <div id="searchContent" class="box-show2" style="width:900px; min-height:388px; margin-left:auto; margin-right:115px; margin-top:25px; padding-bottom:70px; position: relative">
+    <div id="searchContent" class="box-show2" style="width:900px; min-height:388px; margin-left:auto; margin-right:115px; margin-top:25px; position:relative">
         <style>
-            .webdesigntuts-workshop:before, .webdesigntuts-workshop:after {
+
+            input[type="search"] {
+                -webkit-appearance: textfield;
+                -moz-box-sizing: content-box;
+                box-sizing: content-box
+            }
+
+            input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+                -webkit-appearance: none
+            }
+
+
+
+            .webdesigntuts-workshop {
+                height:180px;
+                text-align: center;
+                width: 100%;
+                position:relative;
+            }
+
+            .webdesigntuts-workshop:before,
+            .webdesigntuts-workshop:after {
                 content: '';
                 display: block;
                 height: 1px;
-                left: 13%;
+                left: 52%;
+                margin: 0 0 0 -45%;
                 position: absolute;
-                width:666px;
+                width:88%;
             }
+
             .webdesigntuts-workshop:before {
                 background: #444;
-                background: -webkit-linear-gradient(left, #151515, #444, #151515);
-                background: -moz-linear-gradient(left, #151515, #444, #151515);
-                background: -o-linear-gradient(left, #151515, #444, #151515);
-                background: -ms-linear-gradient(left, #151515, #444, #151515);
-                background: linear-gradient(left, #151515, #444, #151515);
-                top: 118px;
+                background: -webkit-linear-gradient(left, #222, #444, #222);
+                background: -moz-linear-gradient(left, #222, #444, #222);
+                background: -o-linear-gradient(left, #222, #444, #222);
+                background: -ms-linear-gradient(left, #222, #444, #222);
+                background: linear-gradient(left, #222, #444, #222);
+                top: 141px;
             }
+
             .webdesigntuts-workshop:after {
                 background: #000;
-                background: -webkit-linear-gradient(left, #151515, #000, #151515);
-                background: -moz-linear-gradient(left, #151515, #000, #151515);
-                background: -o-linear-gradient(left, #151515, #000, #151515);
-                background: -ms-linear-gradient(left, #151515, #000, #151515);
-                background: linear-gradient(left, #151515, #000, #151515);
-                top: 117px;
+                background: -webkit-linear-gradient(left, #222, #000, #222);
+                background: -moz-linear-gradient(left, #222, #000, #222);
+                background: -o-linear-gradient(left, #222, #000, #222);
+                background: -ms-linear-gradient(left, #222, #000, #222);
+                background: linear-gradient(left, #222, #000, #222);
+                top: 140px;
             }
-            .webdesigntuts-workshop form {
-                background: #111;
-                background: -webkit-linear-gradient(#1b1b1b, #111);
-                background: -moz-linear-gradient(#1b1b1b, #111);
-                background: -o-linear-gradient(#1b1b1b, #111);
-                background: -ms-linear-gradient(#1b1b1b, #111);
-                background: linear-gradient(#1b1b1b, #111);
-                border: 1px solid #000;
-                border-radius: 5px;
-                box-shadow: inset 0 0 0 1px #272727;
+
+            .webdesigntuts-workshop > form {
                 display: inline-block;
-                margin:16px 280px;
-                padding: 20px;
+                font-size: 0;
+                margin:38px auto 0;
+                padding:15px;
                 position: relative;
-                z-index: 1;
+                background: #111;
+                border: 1px solid #000;
+                border-radius: 4px;
+                box-shadow: inset 0 0 0 1px #272727;
             }
+
             .webdesigntuts-workshop input {
                 background: #222;
                 background: -webkit-linear-gradient(#333, #222);
@@ -83,52 +104,47 @@
                 background: -ms-linear-gradient(#333, #222);
                 background: linear-gradient(#333, #222);
                 border: 1px solid #444;
-                border-radius: 5px 0 0 5px;
+                border-radius: 3px 0 0 3px;
                 box-shadow: 0 2px 0 #000;
                 color: #888;
                 display: block;
                 float: left;
                 font-family: 'Cabin', helvetica, arial, sans-serif;
-                font-size: 13px;
+                font-size: 16px;
                 font-weight: 400;
-                height: 42px;
+                height: 36px;
                 margin: 0;
                 padding: 0 10px;
                 text-shadow: 0 -1px 0 #000;
-                width: 200px;
+                width: 348px;
+                letter-spacing:1px;
             }
-            .ie .webdesigntuts-workshop input {
-                line-height: 40px;
-            }
-            .webdesigntuts-workshop input::-webkit-input-placeholder {
-                color: #888;
-            }
-            .webdesigntuts-workshop input:-moz-placeholder {
-                color: #888;
-            }
+
             .webdesigntuts-workshop input:focus {
                 -webkit-animation: glow 800ms ease-out infinite alternate;
                 -moz-animation: glow 800ms ease-out infinite alternate;
                 -o-animation: glow 800ms ease-out infinite alternate;
-                -ms-animation: glow 800ms ease-out infinite alternate;
                 animation: glow 800ms ease-out infinite alternate;
                 background: #222922;
-                background: -webkit-linear-gradient(#333933, #222922);
-                background: -moz-linear-gradient(#333933, #222922);
-                background: -o-linear-gradient(#333933, #222922);
-                background: -ms-linear-gradient(#333933, #222922);
-                background: linear-gradient(#333933, #222922);
-                border-color: #00bfe8;
-                box-shadow: 0 0 5px rgba(8, 255, 196, 0.2), inset 0 0 5px rgba(8, 255, 196, 0.1), 0 2px 0 #000;
-                color: #efe;
+                background: -webkit-linear-gradient(#333, #222);
+                background: -moz-linear-gradient(#333, #222);
+                background: -o-linear-gradient(#333, #222);
+                background: -ms-linear-gradient(#333, #222);
+                background: linear-gradient(#333, #222);
+                border-color: #22E8FF;
+                box-shadow: 0 0 5px rgba(87, 228, 255, 0.2), inset 0 0 5px rgba(0, 255, 0, .1), 0 2px 0 #000;
+                color: #DCD;
                 outline: none;
             }
+
             .webdesigntuts-workshop input:focus::-webkit-input-placeholder {
-                color: #efe;
+                color: #DCD;
             }
+
             .webdesigntuts-workshop input:focus:-moz-placeholder {
-                color: #efe;
+                color: #DCD;
             }
+
             .webdesigntuts-workshop button {
                 background: #222;
                 background: -webkit-linear-gradient(#333, #222);
@@ -138,77 +154,108 @@
                 background: linear-gradient(#333, #222);
                 -webkit-box-sizing: content-box;
                 -moz-box-sizing: content-box;
-                -o-box-sizing: content-box;
-                -ms-box-sizing: content-box;
                 box-sizing: content-box;
                 border: 1px solid #444;
                 border-left-color: #000;
-                border-radius: 0 5px 5px 0;
-                box-shadow: 0 3px 0 #000;
-                color: #fff;
+                border-radius: 0 3px 3px 0;
+                box-shadow: 0 2px 0 #000;
+                color: #AAA;
                 display: block;
                 float: left;
                 font-family: 'Cabin', helvetica, arial, sans-serif;
-                font-size: 13px;
+                font-size: 25px;
                 font-weight: 400;
-                height: 40px;
-                line-height: 40px;
+                height: 36px;
+                line-height: 36px;
                 margin: 0;
                 padding: 0;
                 position: relative;
-                text-shadow: 0 -1px 0 #000;
-                width: 80px;
+                text-shadow:1px 1px 5px #AAA;
+                width: 40px;
+
             }
+
             .webdesigntuts-workshop button:hover, .webdesigntuts-workshop button:focus {
-                background: #292929;
-                background: -webkit-linear-gradient(#393939, #292929);
-                background: -moz-linear-gradient(#393939, #292929);
-                background: -o-linear-gradient(#393939, #292929);
-                background: -ms-linear-gradient(#393939, #292929);
-                background: linear-gradient(#393939, #292929);
-                color: #00bfe8;
+                background: #222;
+                color: #22E8FF;
                 outline: none;
+                text-shadow:1px 1px 5px #22E8FF;
             }
+
             .webdesigntuts-workshop button:active {
-                background: #292929;
-                background: -webkit-linear-gradient(#393939, #292929);
-                background: -moz-linear-gradient(#393939, #292929);
-                background: -o-linear-gradient(#393939, #292929);
-                background: -ms-linear-gradient(#393939, #292929);
-                background: linear-gradient(#393939, #292929);
+                background: #222;
                 box-shadow: 0 1px 0 #000, inset 1px 0 1px #222;
+                text-shadow:1px 1px 2px #22E8FF !important;
                 top: 1px;
             }
+
             @-webkit-keyframes glow {
-                0% {  border-color: #00bfe8;  box-shadow: 0 0 5px rgba(8, 255, 196, 0.2), inset 0 0 5px rgba(8, 255, 196, 0.1), 0 2px 0 #000;  }
-                100% {  border-color: #22e8ff;  box-shadow: 0 0 20px rgba(34, 232, 255, 0.6), inset 0 0 10px rgba(8, 255, 196, 0.4), 0 2px 0 #000;  }
+                0% {
+                    border-color: #22E8FF;
+                    box-shadow: 0 0 5px rgba(87, 228, 255, 0.2), inset 0 0 5px rgba(46, 231, 255, 0.1), 0 2px 0 #000;
+                }
+                100% {
+                    border-color: #30CDFF;
+                    box-shadow: 0 0 20px rgba(46, 231, 255, 0.6), inset 0 0 10px rgba(46, 231, 255, 0.4), 0 2px 0 #000;
+                }
             }
+
             @-moz-keyframes glow {
-                0% {  border-color: #00bfe8;  box-shadow: 0 0 5px rgba(8, 255, 196, 0.2), inset 0 0 5px rgba(8, 255, 196, 0.1), 0 2px 0 #000;  }
-                100% {  border-color: #22e8ff;  box-shadow: 0 0 20px rgba(34, 232, 255, 0.6), inset 0 0 10px rgba(8, 255, 196, 0.4), 0 2px 0 #000;  }
+                0% {
+                    border-color: #22E8FF;
+                    box-shadow: 0 0 5px rgba(87, 228, 255, 0.2), inset 0 0 5px rgba(46, 231, 255, 0.1), 0 2px 0 #000;
+                }
+                100% {
+                    border-color: #30CDFF;
+                    box-shadow: 0 0 20px rgba(46, 231, 255, 0.6), inset 0 0 10px rgba(46, 231, 255, 0.4), 0 2px 0 #000;
+                }
             }
+
             @-o-keyframes glow {
-                0% {  border-color: #00bfe8;  box-shadow: 0 0 5px rgba(8, 255, 196, 0.2), inset 0 0 5px rgba(8, 255, 196, 0.1), 0 2px 0 #000;  }
-                100% {  border-color: #22e8ff;  box-shadow: 0 0 20px rgba(34, 232, 255, 0.6), inset 0 0 10px rgba(8, 255, 196, 0.4), 0 2px 0 #000;  }
+                0% {
+                    border-color: #22E8FF;
+                    box-shadow: 0 0 5px rgba(87, 228, 255, 0.2), inset 0 0 5px rgba(46, 231, 255, 0.1), 0 2px 0 #000;
+                }
+                100% {
+                    border-color: #30CDFF;
+                    box-shadow: 0 0 20px rgba(46, 231, 255, 0.6), inset 0 0 10px rgba(46, 231, 255, 0.4), 0 2px 0 #000;
+                }
             }
+
             @-ms-keyframes glow {
-                0% {  border-color: #00bfe8;  box-shadow: 0 0 5px rgba(8, 255, 196, 0.2), inset 0 0 5px rgba(8, 255, 196, 0.1), 0 2px 0 #000;  }
-                100% {  border-color: #22e8ff;  box-shadow: 0 0 20px rgba(34, 232, 255, 0.6), inset 0 0 10px rgba(8, 255, 196, 0.4), 0 2px 0 #000;  }
+                0% {
+                    border-color: #22E8FF;
+                    box-shadow: 0 0 5px rgba(87, 228, 255, 0.2), inset 0 0 5px rgba(46, 231, 255, 0.1), 0 2px 0 #000;
+                }
+                100% {
+                    border-color: #30CDFF;
+                    box-shadow: 0 0 20px rgba(46, 231, 255, 0.6), inset 0 0 10px rgba(46, 231, 255, 0.4), 0 2px 0 #000;
+                }
             }
+
             @keyframes glow {
-                0% {  border-color: #00bfe8;  box-shadow: 0 0 5px rgba(8, 255, 196, 0.2), inset 0 0 5px rgba(8, 255, 196, 0.1), 0 2px 0 #000;  }
-                100% {  border-color: #22e8ff;  box-shadow: 0 0 20px rgba(34, 232, 255, 0.6), inset 0 0 10px rgba(8, 255, 196, 0.4), 0 2px 0 #000;  }
+                0% {
+                    border-color: #22E8FF;
+                    box-shadow: 0 0 5px rgba(87, 228, 255, 0.2), inset 0 0 5px rgba(46, 231, 255, 0.1), 0 2px 0 #000;
+                }
+                100% {
+                    border-color: #30CDFF;
+                    box-shadow: 0 0 20px rgba(46, 231, 255, 0.6), inset 0 0 10px rgba(46, 231, 255, 0.4), 0 2px 0 #000;
+                }
             }
         </style>
         <section class="webdesigntuts-workshop">
             <form action="" method="post">
                 <input type="search" placeholder="Search..." required>
-                <button>Search</button>
+                <button class="MyIF search"></button>
             </form>
+
+
+            <span style="bottom:0; position:absolute;">搜索共 XX 条记录</span>
         </section>
 
         <!-- 功能页面 -->
-        <iframe name="function" id="function" style="width:88%; margin:20px auto; border:1px solid black;" src="function/searchSong.html" onload="IFrameReSize1();"></iframe>
+        <iframe name="function" id="function" scrolling="no" frameborder="0" style="width:100%; height:680px; margin:20px auto;" src="function/searchSong.html" onload="IFrameReSize1();"></iframe>
 
     </div>
 
