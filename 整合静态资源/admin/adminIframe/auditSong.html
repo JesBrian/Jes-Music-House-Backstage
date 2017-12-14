@@ -49,14 +49,8 @@
         #volumeOper:active > a {
             color:#2ED8FF;
             text-shadow:0 0 2px #AAA;
+            background:#151515;
         }
-        #volumeBar {
-            display:none;
-        }
-        #volumeOper:hover #volumeBar {
-            display:block;
-        }
-
     </style>
 
 
@@ -122,9 +116,9 @@
                 <td colspan="4" style="width:100%; height:88px; text-align:center;">
                     <div class="playSongContent glass-Bg box-show3" style="width:68%; height:48px; margin:0 auto; display:inline-block; text-align:left; line-height:48px;">
                         <div id="songOper" style="height:38px; margin:7px 3px; padding:0 4px; float:left; line-height:35px;">
-                            <a id="prepSong" style="height:35px; width:35px; margin:0; float:left; text-align:center; font-size:20px;" class="MyIF ahead"></a>
-                            <a id="playSong" style="height:35px; width:45px; margin:0; float:left; text-align:center; border:1px solid #181818; border-top:none; border-bottom:none; font-size:20px;" class="MyIF play"></a>
-                            <a id="nextSong" style="height:35px; width:35px; margin:0; float:left; text-align:center; font-size:20px;" class="MyIF back"></a>
+                            <a id="prepSong" style="height:35px; width:35px; margin:0; float:left; text-align:center; font-size:18px;" class="MyIF ahead"></a>
+                            <a id="playSong" style="height:35px; width:45px; margin:0; float:left; text-align:center; border:1px solid #181818; border-top:none; border-bottom:none; font-size:26px;" class="MyIF play"></a>
+                            <a id="nextSong" style="height:35px; width:35px; margin:0; float:left; text-align:center; font-size:18px;" class="MyIF back"></a>
                         </div>
 
                         <div id="songContent" style="height:100%; display:inline-block; position:relative;">                        
@@ -136,7 +130,7 @@
                                 </p>
                             </p>
                             <div class="box-show3" style="bottom:8px; right:15px; width:86%; height:10px; position:absolute; border-radius:5px; background:#000;">
-                                <div style="width:68%; height:6.5px; margin:2px; background:#111; border-radius:4px;">
+                                <div style="width:68%; height:6.3px; margin:2px; background:#111; border-radius:4px;">
                                     <div style="width:68%; height:100%; border-radius:4px; position:relative; cursor:pointer; background-image:-webkit-linear-gradient(left, #2DDEE6, #0D9DE6);">
                                         <a id="nowPoint" class="glass-Bg box-show3" style="width:16px; height:16px; top:-5px; right:-8px; position:absolute; border-radius:50%;"></a>
                                     </div>
@@ -144,15 +138,8 @@
                             </div>
                         </div>
 
-                        <div id="volumeOper" style="height:100%; margin:0; float:right; position:relative; line-height:53px; text-align:center;">
-                            <a class="MyIF volume-yes" style=" height:35px; width:45px; margin:0; position:relative; display:inline-block; border-left:1px solid #181818; line-height:35px; font-size:20px; z-index:5;"></a>
-                            <div style="width:38px; height:200%; top:-50%; right:-8px; position:absolute; display:inline-block;">
-                                <div id="volumeBar" style="width:43px; height:88px; top:8px; right:-46px; position:absolute; z-index:1; border-radius:0 168px 168px 0; background-image:-webkit-linear-gradient(top, #2DDEE6, #0D9DE6);">
-                                    <div style="width:35px; height:75px; top:6px; left:0; position:absolute; z-index:3; border-radius:0 165px 165px 0; background:#3b3b3b;">
-                                        <a class="glass-Bg box-show3" style="width:16px; height:16px; top:2px; right:0; position:absolute; border-radius:50%;"></a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div id="volumeOper" style="height:100%; margin:0; padding:0 5px; float:right; position:relative; line-height:53px; text-align:center;">
+                            <a class="MyIF volume-yes" style="width:35px; height:35px; margin:0; position:relative; display:inline-block; border-left:1px solid #181818; line-height:35px; font-size:20px; z-index:5;"></a>
                         </div>
                     </div>
                     <audio src="../../audio/ゼロFINAL%20FANTASY零式オープニングver.mp3"></audio>
@@ -183,6 +170,16 @@
 
         $('#songContent').width($(".playSongContent").width() - 180);
 
+
+
+
+
+        $("#playSong").click(function () {
+            $(this).toggleClass('paly').toggleClass('stop');
+        });
+        $("#volumeOper").click(function () {
+            $(this).children('a').toggleClass('volume-yes').toggleClass('volume-no');
+        })
         
 
     </script>
