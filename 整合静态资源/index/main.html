@@ -27,6 +27,23 @@
     <div id="new-hot" class="box-show2">
         <div class="slider-wrapper theme-orman">
             <div class="ribbon"></div>
+
+            <div id="sliderTimeBar" class="glass-Bg box-show3" style="width:168px; height:12px; top:40px; right:40px; display:inline-block; position:absolute; z-index:999; border-radius:10px; opacity:0.8;">
+                <div style="width:96%; height:56%; top:48%; left:50%; transform:translate(-50%, -50%); position:absolute; background:#666; border-radius:4px;">
+                    <div id="sliderTimeBarNow" style="width:60%; height:100%; background:#33CDFF; border-radius:4px; box-shadow:0 0 1px #EEE;"></div>
+                </div>
+            </div>
+
+            <style type="text/css">
+                #changeSliderLeft, #changeSliderRight {
+                    width:38px; height:38px; top:45%; display:inline-block; position:absolute; font-size:28px; line-height:38px; z-index:999; opacity:0.8;
+                }
+                #changeSliderLeft:hover, #changeSliderRight:hover {
+                    opacity:1;
+                }
+            </style>
+
+            <a id="changeSliderLeft" class="glass-Bg box-show3 MyIF double-arrow-left" style="left:15px;"></a>
             <div id="slider" class="nivoSlider">
                 <a href="http://www.baidu.com">
                     <img src="../img/index/main/new-hot/1.jpg" title=" < 热门新曲 >">
@@ -44,6 +61,8 @@
                     <img src="../img/index/main/new-hot/5.jpg" title=" < 关于我们 >">
                 </a>
             </div>
+            <a id="changeSliderRight" class="glass-Bg box-show3 MyIF double-arrow-right" style="right:-12px;"></a>
+
         </div>
     </div>
 
