@@ -51,6 +51,91 @@
             text-shadow:0 0 2px #AAA;
             background:#151515;
         }
+
+        #volumeBar{
+            height: 212px;
+            margin: 0 auto;
+            width: 228px;
+        }
+
+        #volumeControl{
+            width:90px;
+            height:90px;
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin:-45px 0 0 -45px;
+        }
+
+        .colorBar{
+            width:20px;
+            height:3px;
+            position:absolute;
+            opacity:0;
+            -moz-transition:0.3s;
+            -webkit-transition:0.3s;
+            -o-transition:0.3s;
+            transition:0.3s;
+        }
+
+        .colorBar.active{
+            opacity:1;
+        }
+
+        /*----------------------------
+            knobKnob Styles
+        -----------------------------*/
+
+
+        .knob{
+            width:83px;
+            height:83px;
+            position:relative;
+        }
+
+        .knob .top{
+            position:absolute;
+            top:0;
+            left:0;
+            width:83px;
+            height:83px;
+            background:url('../../img/admin/knob.png') no-repeat center;
+            z-index:10;
+            cursor:default !important;
+        }
+
+        .knob .base{
+            width:38px;
+            height:38px;
+            border-radius:50%;
+            box-shadow:0 3px 0 #4a5056,5px 5px 5px #000;
+            position:absolute;
+            top:21px;
+            left:22px;
+            z-index:1;
+        }
+
+        .knob .top:after{
+            content:'';
+            width: 0; height: 0;
+            position:absolute;
+            top:50%;
+            left:9px;
+            margin-top:-5px;
+            cursor:default !important;
+            border-style:solid; border-width:0 6px 16px 6px; border-color: transparent transparent #666 transparent;
+            transform:rotate(-98deg);
+        }
+
+        .knob [draggable] {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+
+
+
     </style>
 
 
@@ -114,7 +199,7 @@
             </tr>
             <tr>
                 <td colspan="4" style="width:100%; height:88px; text-align:center;">
-                    <div class="playSongContent glass-Bg box-show3" style="width:68%; height:48px; margin:0 auto; display:inline-block; text-align:left; line-height:48px;">
+                    <div class="playSongContent glass-Bg box-show3" style="width:68%; height:48px; margin:0 auto; position:relative; display:inline-block; text-align:left; line-height:48px;">
                         <div id="songOper" style="height:38px; margin:7px 3px; padding:0 4px; float:left; line-height:35px;">
                             <a id="prepSong" style="height:35px; width:35px; margin:0; float:left; text-align:center; font-size:18px;" class="MyIF ahead"></a>
                             <a id="playSong" style="height:35px; width:45px; margin:0; float:left; text-align:center; border:1px solid #181818; border-top:none; border-bottom:none; font-size:26px;" class="MyIF play"></a>
@@ -141,7 +226,15 @@
                         <div id="volumeOper" style="height:100%; margin:0; padding:0 5px; float:right; position:relative; line-height:53px; text-align:center;">
                             <a class="MyIF volume-yes" style="width:35px; height:35px; margin:0; position:relative; display:inline-block; border-left:1px solid #181818; line-height:35px; font-size:20px; z-index:5;"></a>
                         </div>
+
+
+
+                        <div id="volumeBar" style="top:-78px; right:-180px; position:absolute;">
+                            <div id="volumeControl"></div>
+                        </div>
                     </div>
+
+
                     <audio src="../../audio/ゼロFINAL%20FANTASY零式オープニングver.mp3"></audio>
                 </td>
             </tr>
@@ -179,8 +272,177 @@
         });
         $("#volumeOper").click(function () {
             $(this).children('a').toggleClass('volume-yes').toggleClass('volume-no');
-        })
-        
+
+            if ($(this).children('a').hasClass('volume-no')) {
+
+            }
+
+
+        });
+
+
+
+
+            $.fn.knobKnob = function(props){
+
+                var options = $.extend({
+                    snap: 0,
+                    value: 0,
+                    turn: function(){}
+                }, props || {});
+
+                var tpl = '<div class="knob">\
+				<div class="top"></div>\
+				<div class="base"></div>\
+			</div>';
+
+                return this.each(function(){
+
+                    var el = $(this);
+                    el.append(tpl);
+
+                    var knob = $('.knob',el),
+                        knobTop = knob.find('.top'),
+                        startDeg = -1,
+                        currentDeg = 0,
+                        rotation = 0,
+                        lastDeg = 0,
+                        doc = $(document);
+
+                    if(options.value > 0 && options.value <= 359){
+                        rotation = currentDeg = options.value;
+                        knobTop.css('transform','rotate('+(currentDeg)+'deg)');
+                        options.turn(currentDeg/359);
+                    }
+
+                    knob.on('mousedown touchstart', function(e){
+
+                        e.preventDefault();
+
+                        var offset = knob.offset();
+                        var center = {
+                            y : offset.top + knob.height()/2,
+                            x: offset.left + knob.width()/2
+                        };
+
+                        var a, b, deg, tmp,
+                            rad2deg = 180/Math.PI;
+
+                        knob.on('mousemove.rem touchmove.rem',function(e){
+
+                            e = (e.originalEvent.touches) ? e.originalEvent.touches[0] : e;
+
+                            a = center.y - e.pageY;
+                            b = center.x - e.pageX;
+                            deg = Math.atan2(a,b)*rad2deg;
+
+                            // we have to make sure that negative
+                            // angles are turned into positive:
+                            if(deg<0){
+                                deg = 360 + deg;
+                            }
+
+                            // Save the starting position of the drag
+                            if(startDeg == -1){
+                                startDeg = deg;
+                            }
+
+                            // Calculating the current rotation
+                            tmp = Math.floor((deg-startDeg) + rotation);
+
+                            // Making sure the current rotation
+                            // stays between 0 and 359
+                            if(tmp < 0){
+                                tmp = 360 + tmp;
+                            }
+                            else if(tmp > 359){
+                                tmp = tmp % 360;
+                            }
+
+                            // Snapping in the off position:
+                            if(options.snap && tmp < options.snap){
+                                tmp = 0;
+                            }
+
+                            // This would suggest we are at an end position;
+                            // we need to block further rotation.
+                            if(Math.abs(tmp - lastDeg) > 180){
+                                return false;
+                            }
+
+                            currentDeg = tmp;
+                            lastDeg = tmp;
+
+                            knobTop.css('transform','rotate('+(currentDeg)+'deg)');
+                            options.turn(currentDeg/359);
+                        });
+
+                        doc.on('mouseup.rem  touchend.rem',function(){
+                            knob.off('.rem');
+                            doc.off('.rem');
+
+                            // Saving the current rotation
+                            rotation = currentDeg;
+
+                            // Marking the starting degree as invalid
+                            startDeg = -1;
+                        });
+
+                    });
+                });
+            };
+
+
+
+            var colors = [
+                '0BFF42','0DFF51','13FF5F','11FF73','16FF86',
+                '16FF98','21FFBE','36FFD0','34FFE0','28FFEF',
+                '34FFFB','29EFFF','32E1FF','22D3FF','2BC9FF',
+                '21BBFF','1D9DFF','1382FF','137AFF','1172FF',
+                '492AFF','552DFF','622EFF','6D2EFF','7729FF',
+                '8328FF','9138FF','A14AFF','B05CFF','B362FF',
+            ];
+
+            var rad2deg = 180/Math.PI;
+            var deg = 0;
+            var bars = $('#volumeBar');
+
+            for(let i=0;i<colors.length;i++){
+
+                deg = i*12;
+
+                // Create the colorbars
+
+                $('<div class="colorBar">').css({
+                    backgroundColor: '#'+colors[i],
+                    transform:'rotate('+deg+'deg)',
+                    top: -Math.sin(deg/rad2deg)*40+100,
+                    left: Math.cos((180 - deg)/rad2deg)*40+100,
+                }).appendTo(bars);
+            }
+
+            var colorBars = bars.find('.colorBar');
+            var numBars = 0, lastNum = -1;
+
+            $('#volumeControl').knobKnob({
+                snap : 10,
+                value: 180,
+                turn : function(ratio){
+                    numBars = Math.round(colorBars.length*ratio);
+
+                    // Update the dom only when the number of active bars
+                    // changes, instead of on every move
+
+                    if(numBars == lastNum){
+                        return false;
+                    }
+                    lastNum = numBars;
+
+                    colorBars.removeClass('active').slice(0, numBars).addClass('active');
+                }
+            });
+
+
 
     </script>
 
