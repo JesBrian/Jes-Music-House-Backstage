@@ -25,6 +25,7 @@
         #prepSong:active, #playSong:active, #nextSong:active {
             color:#2ED8FF;
             text-shadow:0 0 2px #AAA;
+            background:#0A0A0A;
         }
 
 
@@ -42,20 +43,23 @@
 
         #volumeOper > a {
             color:#555;
+            text-indent:3px;
         }
         #volumeOper:hover > a {
             color:#AAA;
+            background:#151515;
         }
         #volumeOper:active > a {
             color:#2ED8FF;
             text-shadow:0 0 2px #AAA;
-            background:#151515;
+            background:#0A0A0A;
         }
 
         #volumeBar{
-            height: 212px;
-            margin: 0 auto;
             width: 228px;
+            height: 212px;
+            top:-78px; right:-180px; position:absolute;
+            margin: 0 auto;
         }
 
         #volumeControl{
@@ -214,7 +218,7 @@
                                     <span style="margin:0 8px;">00:11:11</span>-<span style="margin:0 8px;">00:22:22</span>
                                 </p>
                             </p>
-                            <div class="box-show3" style="bottom:8px; right:15px; width:86%; height:10px; position:absolute; border-radius:5px; background:#000;">
+                            <div class="box-show3" style="bottom:8px; right:15px; width:86%; height:10px; position:absolute; border-radius:5px; background:#000; cursor:pointer;">
                                 <div style="width:68%; height:6.3px; margin:2px; background:#111; border-radius:4px;">
                                     <div style="width:68%; height:100%; border-radius:4px; position:relative; cursor:pointer; background-image:-webkit-linear-gradient(left, #2DDEE6, #0D9DE6);">
                                         <a id="nowPoint" class="glass-Bg box-show3" style="width:16px; height:16px; top:-5px; right:-8px; position:absolute; border-radius:50%;"></a>
@@ -227,9 +231,7 @@
                             <a class="MyIF volume-yes" style="width:35px; height:35px; margin:0; position:relative; display:inline-block; border-left:1px solid #181818; line-height:35px; font-size:20px; z-index:5;"></a>
                         </div>
 
-
-
-                        <div id="volumeBar" style="top:-78px; right:-180px; position:absolute;">
+                        <div id="volumeBar">
                             <div id="volumeControl"></div>
                         </div>
                     </div>
@@ -274,9 +276,12 @@
             $(this).children('a').toggleClass('volume-yes').toggleClass('volume-no');
 
             if ($(this).children('a').hasClass('volume-no')) {
-
+                $('#volumeControl').fadeOut();
+                $('div.colorBar').fadeOut();
+            } else {
+                $('#volumeControl').fadeIn();
+                $('div.colorBar').fadeIn();
             }
-
 
         });
 
@@ -291,10 +296,7 @@
                     turn: function(){}
                 }, props || {});
 
-                var tpl = '<div class="knob">\
-				<div class="top"></div>\
-				<div class="base"></div>\
-			</div>';
+                var tpl = '<div class="knob">\<div class="top"></div>\<div class="base"></div>\</div>';
 
                 return this.each(function(){
 
