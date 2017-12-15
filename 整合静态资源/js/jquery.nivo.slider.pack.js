@@ -539,14 +539,17 @@ $.fn.nivoSlider.defaults = {
     prevText: 'Prev',
     nextText: 'Next',
     beforeChange: function () {
+        $("#sliderTimeBarNow").stop(true).width(0);
     },
     afterChange: function () {
+        $("#sliderTimeBarNow").animate({'width':'100%'}, 2500);
     },
     slideshowEnd: function () {
     },
     lastSlide: function () {
     },
     afterLoad: function () {
+        $("#sliderTimeBarNow").animate({'width':'100%'}, 3200);
     }
 };
 $.fn._reverse = [].reverse;
@@ -557,14 +560,3 @@ $.fn._reverse = [].reverse;
 $('#slider').nivoSlider({
     directionNav: false
 });
-
-var chargeSliderTime;
-function chargeSliderTimeBar() {
-    var tempSliderTimeBarNowObj = $("#sliderTimeBarNow");
-    if (tempSliderTimeBarNowObj.width() == '160') {
-        tempSliderTimeBarNowObj.width(0);
-    } else {
-        tempSliderTimeBarNowObj.width(tempSliderTimeBarNowObj.width()++);
-    }
-
-}
