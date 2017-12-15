@@ -557,34 +557,14 @@ $.fn._reverse = [].reverse;
 $('#slider').nivoSlider({
     directionNav: false
 });
-$(".leftlist").slideToggle();
-$(".leftlist .lefthide").fadeToggle();
-$(".leftlist .lefthide").click(function () {
-    $(".leftlist").slideToggle();
-    $(".leftlist .lefthide").fadeToggle();
-});
-$(".leftlist_hide .lefthide").click(function () {
-    $(".leftlist").slideToggle();
-    $(".leftlist .lefthide").fadeToggle();
-});
-re_window_size();
-$(window).resize(function () {
-    re_window_size()
-});
 
-
-
-
-function re_window_size() {
-    let meunli_width = $(window).width() / 10 + "px";
-    $(".menu ul li a").css("width", meunli_width);
-    if ($(window).width() > 1234) {
-        $(".news").css("width", "850px");
-        $(".authentication").css("left", "915px");
-        $(".authentication").css("right", "1.5%");
+var chargeSliderTime;
+function chargeSliderTimeBar() {
+    var tempSliderTimeBarNowObj = $("#sliderTimeBarNow");
+    if (tempSliderTimeBarNowObj.width() == '160') {
+        tempSliderTimeBarNowObj.width(0);
     } else {
-        $(".news").css("width", "640px");
-        $(".authentication").css("left", "675px");
-        $(".authentication").css("right", "3%");
+        tempSliderTimeBarNowObj.width(tempSliderTimeBarNowObj.width()++);
     }
-};
+
+}
