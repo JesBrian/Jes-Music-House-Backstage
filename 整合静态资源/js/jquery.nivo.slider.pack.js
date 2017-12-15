@@ -83,23 +83,14 @@ let NivoSlider = function (element, options) {
         }, settings.pauseTime);
     }
     if (settings.directionNav) {
-        slider.append('<div class="nivo-directionNav"><a class="nivo-prevNav">' + settings.prevText + '</a><a class="nivo-nextNav">' + settings.nextText + '</a></div>');
-        if (settings.directionNavHide) {
-            $('.nivo-directionNav', slider).hide();
-            slider.hover(function () {
-                $('.nivo-directionNav', slider).show();
-            }, function () {
-                $('.nivo-directionNav', slider).hide();
-            });
-        }
-        $('a.nivo-prevNav', slider).on('click', function () {
+        $('#changeSliderLeft').on('click', function () {
             if (lets.running) return false;
             clearInterval(timer);
             timer = '';
             lets.currentSlide -= 2;
             nivoRun(slider, kids, settings, 'prev');
         });
-        $('a.nivo-nextNav', slider).on('click', function () {
+        $('#changeSliderRight').on('click', function () {
             if (lets.running) return false;
             clearInterval(timer);
             timer = '';
@@ -155,6 +146,7 @@ let NivoSlider = function (element, options) {
     if (settings.pauseOnHover) {
         slider.hover(function () {
             lets.paused = true;
+            $("#sliderTimeBarNow").stop(true);
             clearInterval(timer);
             timer = '';
         }, function () {
@@ -163,6 +155,7 @@ let NivoSlider = function (element, options) {
                 timer = setInterval(function () {
                     nivoRun(slider, kids, settings, false);
                 }, settings.pauseTime);
+                $("#sliderTimeBarNow").animate({'width':'100%'}, 3200);
             }
         });
     }
@@ -485,12 +478,11 @@ let NivoSlider = function (element, options) {
             }
         }
     };
-    let shuffle = function (arr) {
-        for (let j, x,
-                 i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x) ;
+    function shuffle(arr) {
+        for (let j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x) ;
         return arr;
     };
-    let trace = function (msg) {
+    function trace(msg) {
         if (this.console && typeof console.log != "undefined")
             console.log(msg);
     };
@@ -558,5 +550,5 @@ $.fn._reverse = [].reverse;
 
 
 $('#slider').nivoSlider({
-    directionNav: false
+    directionNav: true
 });
