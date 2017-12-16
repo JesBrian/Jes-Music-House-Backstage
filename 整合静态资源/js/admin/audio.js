@@ -1,16 +1,31 @@
 var song = document.getElementById("songSource");
 
+
+
+/**
+ * 控制歌曲的播放 or 暂停部分
+ */
 $("#playSong").click(function () {
     $(this).toggleClass('play').toggleClass('stop');
 
     if ($(this).hasClass("stop")) {
+        if (!song.src) {
+            song.src = "../../audio/ゼロFINAL%20FANTASY零式オープニングver.mp3";
+        }
         song.play();
     } else {
         song.pause();
     }
 });
 
+/************************** ---- 控制歌曲的播放 or 暂停部分结束 ---- **************************/
 
+
+
+
+/**
+ * 控制音量的部分
+ */
 $("#volumeOper").click(function () {
     $(this).children('a').toggleClass('volume-yes').toggleClass('volume-no');
 
@@ -173,3 +188,27 @@ $('#volumeControl').knobKnob({
         colorBars.removeClass('active').slice(0, numBars).addClass('active');
     }
 });
+
+/************************** ---- 控制音量部分结束 ---- **************************/
+
+
+
+
+/**
+ * 控制上一首 or 下一首部分
+ */
+$("#prepSong").click(function () {
+    song.src = "../../audio/我ら来たれり.mp3";
+    song.play();
+    $("#playSong").removeClass('play').addClass('stop');
+});
+$("#nextSong").click(function () {
+    song.src = "../../audio/月半小夜曲.mp3";
+    song.play();
+    $("#playSong").removeClass('play').addClass('stop');
+});
+
+/************************** ---- 控制上一首 or 下一首部分结束 ---- **************************/
+
+
+
