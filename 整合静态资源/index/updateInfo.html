@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <title> ♪ JesBrian - MH ♪ </title>
 
 
@@ -93,7 +94,7 @@
                 </tr>
                 <tr>
                     <td>生日：</td>
-                    <td><input id="date-range13" class="s1c-Bg box-show3" type="text" value="1999-01-01"></td>
+                    <td><input id="date" class="s1c-Bg box-show3" type="text" value="1999-01-01"></td>
                 </tr>
                 <tr>
                     <td>邮箱：</td>
@@ -143,14 +144,16 @@
     <script type="text/javascript" src="../js/searchableSelect.js"></script>
 
     <!--plugins日期插件-->
-    <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css" />
-    <script src="../plugins/daterangepicker/moment.min.js"></script>
-    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
-    <script src="../plugins/daterangepicker/demo.js"></script>
+    <link rel="stylesheet" href="../plugins/date/laydate.css" />
+    <script src="../plugins/date/laydate.js"></script>
 
 
     <script type="text/javascript">
-
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#date', //指定元素
+            theme: 'grid'
+        });
     </script>
 
 </body>
