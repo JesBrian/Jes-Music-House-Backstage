@@ -10,16 +10,13 @@ $("#playSong").click(function () {
 
     if ($(this).hasClass("stop")) {
         if (!song.src) {
-            song.src = "../../audio/ゼロFINAL%20FANTASY零式オープニングver.mp3";
+            song.src = "../../audio/test.mp3";
         }
+
         song.play();
 
-        setTimeout(function () {
-            $("#totalPlayTime").html(getTotalPlayTime())
-        }, 1500);
-
+        currentPlayTime = Number.parseInt(song.currentTime);
         addCurrentPlayTime = setInterval(function () {
-            currentPlayTime++;
             let house = Number.parseInt(currentPlayTime / 3600);
             let minute = Number.parseInt((currentPlayTime - house * 3600) / 60);
             let second = Number.parseInt(currentPlayTime % 60);
@@ -32,9 +29,14 @@ $("#playSong").click(function () {
             if (second <= 9) {
                 second = "0" + second;
             }
-
-            $("#currentPlsyTime").html(house + ":" + minute + ":" + second);
+            $("#currentPlayTime").html(house + ":" + minute + ":" + second);
+            currentPlayTime++;
         }, 1000);
+        setTimeout(function () {
+            $("#totalPlayTime").html(getTotalPlayTime());
+            changePlayBar();
+        }, 500);
+
     } else {
         song.pause();
         clearInterval(addCurrentPlayTime);
@@ -222,16 +224,11 @@ $('#volumeControl').knobKnob({
  */
 $("#prepSong").click(function () {
     song.src = "../../audio/我ら来たれり.mp3";
-    song.play();
     $("#playSong").removeClass('play').addClass('stop');
-    setTimeout(function () {
-        $("#totalPlayTime").html(getTotalPlayTime())
-    }, 1500);
 
     clearInterval(addCurrentPlayTime);
     currentPlayTime = 0;
     addCurrentPlayTime = setInterval(function () {
-        currentPlayTime++;
         let house = Number.parseInt(currentPlayTime / 3600);
         let minute = Number.parseInt((currentPlayTime - house * 3600) / 60);
         let second = Number.parseInt(currentPlayTime % 60);
@@ -245,22 +242,23 @@ $("#prepSong").click(function () {
             second = "0" + second;
         }
 
-        $("#currentPlsyTime").html(house + ":" + minute + ":" + second);
-    }, 1000);
+        $("#currentPlayTime").html(house + ":" + minute + ":" + second);
 
+        currentPlayTime++;
+    }, 1000);
+    setTimeout(function () {
+        $("#totalPlayTime").html(getTotalPlayTime())
+    }, 500);
+
+    song.play();
 });
 $("#nextSong").click(function () {
     song.src = "../../audio/月半小夜曲.mp3";
-    song.play();
     $("#playSong").removeClass('play').addClass('stop');
-    setTimeout(function () {
-        $("#totalPlayTime").html(getTotalPlayTime())
-    }, 1500);
 
     clearInterval(addCurrentPlayTime);
     currentPlayTime = 0;
     addCurrentPlayTime = setInterval(function () {
-        currentPlayTime++;
         let house = Number.parseInt(currentPlayTime / 3600);
         let minute = Number.parseInt((currentPlayTime - house * 3600) / 60);
         let second = Number.parseInt(currentPlayTime % 60);
@@ -274,8 +272,15 @@ $("#nextSong").click(function () {
             second = "0" + second;
         }
 
-        $("#currentPlsyTime").html(house + ":" + minute + ":" + second);
+        $("#currentPlayTime").html(house + ":" + minute + ":" + second);
+
+        currentPlayTime++;
     }, 1000);
+    setTimeout(function () {
+        $("#totalPlayTime").html(getTotalPlayTime())
+    }, 500);
+    
+    song.play();
 });
 
 /************************** ---- 控制上一首 or 下一首部分结束 ---- **************************/
@@ -308,5 +313,11 @@ function getCurrentPlayTime() {
 
 }
 // setTimeout(getCurrentPlayTime, 3000);
+
+
+    /* 改变播放器进度条 */
+function changePlayBar() {
+    $("#nowPlayBar").animate({'width':"100%"}, ((song.duration - 1) * 1000));
+}
 
 /************************** ---- 播放器复用函数部分结束 ---- **************************/
