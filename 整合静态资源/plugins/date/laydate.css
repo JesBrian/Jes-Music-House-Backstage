@@ -8,6 +8,11 @@
     width: 1989px
 }
 
+.layui-laydate * {
+    margin: 0;
+    padding: 0
+}
+
 .layui-laydate {
     position: absolute;
     z-index: 66666666;
@@ -459,14 +464,7 @@
     line-height: 71px;
 }
 
-@font-face {
-    font-family: laydate-icon;
-    src: url(font/iconfont.eot);
-    src: url(font/iconfont.eot#iefix) format('embedded-opentype'), url(font/iconfont.svg#iconfont) format('svg'), url(font/iconfont.woff) format('woff'), url(font/iconfont.ttf) format('truetype')
-}
-
 .laydate-icon {
-    font-family: laydate-icon!important;
     font-size: 16px;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
