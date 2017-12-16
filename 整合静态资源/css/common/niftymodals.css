@@ -86,7 +86,7 @@
         /* 入驻歌手 */
 #modal-joinSinger form {  width:80%; margin:18px auto; border:none; text-align:center;  }
 #modal-joinSinger .webdesigntuts-workshop {  margin-right:60px;  }
-#modal-joinSinger .webdesigntuts-workshop>input {  width:350px;  }
+#modal-joinSinger .webdesigntuts-workshop>input {  width:350px; border:none!important;  }
 #modal-joinSinger #singerAvatar {  width:80px; height:80px; margin:20px 0 18px -20px; border-radius:5px;  }
 #modal-joinSinger form>span {  position:relative; z-index:9;  }
 #modal-joinSinger form>p {  margin-bottom:8px; text-align:center;  }
