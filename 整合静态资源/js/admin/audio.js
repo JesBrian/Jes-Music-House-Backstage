@@ -16,22 +16,7 @@ $("#playSong").click(function () {
         song.play();
 
         currentPlayTime = Number.parseInt(song.currentTime);
-        addCurrentPlayTime = setInterval(function () {
-            let house = Number.parseInt(currentPlayTime / 3600);
-            let minute = Number.parseInt((currentPlayTime - house * 3600) / 60);
-            let second = Number.parseInt(currentPlayTime % 60);
-            if (house <= 9) {
-                house = "0" + house;
-            }
-            if (minute <= 9) {
-                minute = "0" + minute;
-            }
-            if (second <= 9) {
-                second = "0" + second;
-            }
-            $("#currentPlayTime").html(house + ":" + minute + ":" + second);
-            currentPlayTime++;
-        }, 1000);
+        addCurrentPlayTime = setInterval(getCurrentPlayTime, 10);
         setTimeout(function () {
             $("#totalPlayTime").html(getTotalPlayTime());
             changePlayBar();
@@ -40,6 +25,7 @@ $("#playSong").click(function () {
     } else {
         song.pause();
         clearInterval(addCurrentPlayTime);
+        $("#nowPlayBar").stop();
     }
 });
 
@@ -227,27 +213,11 @@ $("#prepSong").click(function () {
     $("#playSong").removeClass('play').addClass('stop');
 
     clearInterval(addCurrentPlayTime);
-    currentPlayTime = 0;
-    addCurrentPlayTime = setInterval(function () {
-        let house = Number.parseInt(currentPlayTime / 3600);
-        let minute = Number.parseInt((currentPlayTime - house * 3600) / 60);
-        let second = Number.parseInt(currentPlayTime % 60);
-        if (house <= 9) {
-            house = "0" + house;
-        }
-        if (minute <= 9) {
-            minute = "0" + minute;
-        }
-        if (second <= 9) {
-            second = "0" + second;
-        }
-
-        $("#currentPlayTime").html(house + ":" + minute + ":" + second);
-
-        currentPlayTime++;
-    }, 1000);
+    $("#nowPlayBar").stop().width(0);
+    addCurrentPlayTime = setInterval(getCurrentPlayTime, 10);
     setTimeout(function () {
-        $("#totalPlayTime").html(getTotalPlayTime())
+        $("#totalPlayTime").html(getTotalPlayTime());
+        changePlayBar();
     }, 500);
 
     song.play();
@@ -257,27 +227,11 @@ $("#nextSong").click(function () {
     $("#playSong").removeClass('play').addClass('stop');
 
     clearInterval(addCurrentPlayTime);
-    currentPlayTime = 0;
-    addCurrentPlayTime = setInterval(function () {
-        let house = Number.parseInt(currentPlayTime / 3600);
-        let minute = Number.parseInt((currentPlayTime - house * 3600) / 60);
-        let second = Number.parseInt(currentPlayTime % 60);
-        if (house <= 9) {
-            house = "0" + house;
-        }
-        if (minute <= 9) {
-            minute = "0" + minute;
-        }
-        if (second <= 9) {
-            second = "0" + second;
-        }
-
-        $("#currentPlayTime").html(house + ":" + minute + ":" + second);
-
-        currentPlayTime++;
-    }, 1000);
+    $("#nowPlayBar").stop().width(0);
+    addCurrentPlayTime = setInterval(getCurrentPlayTime, 10);
     setTimeout(function () {
-        $("#totalPlayTime").html(getTotalPlayTime())
+        $("#totalPlayTime").html(getTotalPlayTime());
+        changePlayBar();
     }, 500);
     
     song.play();
@@ -310,14 +264,25 @@ function getTotalPlayTime() {
 
     /* 获取当前歌曲播放的进度时间 */
 function getCurrentPlayTime() {
-
+    currentPlayTime = song.currentTime;
+    let house = Number.parseInt(currentPlayTime / 3600);
+    let minute = Number.parseInt((currentPlayTime - house * 3600) / 60);
+    let second = Number.parseInt(currentPlayTime % 60);
+    if (house <= 9) {
+        house = "0" + house;
+    }
+    if (minute <= 9) {
+        minute = "0" + minute;
+    }
+    if (second <= 9) {
+        second = "0" + second;
+    }
+    $("#currentPlayTime").html(house + ":" + minute + ":" + second);
 }
-// setTimeout(getCurrentPlayTime, 3000);
-
 
     /* 改变播放器进度条 */
 function changePlayBar() {
-    $("#nowPlayBar").animate({'width':"100%"}, ((song.duration - 1) * 1000));
+    $("#nowPlayBar").animate({'width':"100%"}, ((song.duration - song.currentTime) * 1000));
 }
 
 /************************** ---- 播放器复用函数部分结束 ---- **************************/
