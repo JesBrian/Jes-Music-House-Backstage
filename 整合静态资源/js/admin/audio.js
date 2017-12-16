@@ -16,7 +16,7 @@ $("#playSong").click(function () {
         song.play();
 
         currentPlayTime = Number.parseInt(song.currentTime);
-        addCurrentPlayTime = setInterval(getCurrentPlayTime, 10);
+        addCurrentPlayTime = setInterval(getCurrentPlayTime, 200);
         setTimeout(function () {
             $("#totalPlayTime").html(getTotalPlayTime());
             changePlayBar();
@@ -26,6 +26,7 @@ $("#playSong").click(function () {
         song.pause();
         clearInterval(addCurrentPlayTime);
         $("#nowPlayBar").stop();
+        $("#nowPoint").stop();
     }
 });
 
@@ -214,7 +215,8 @@ $("#prepSong").click(function () {
 
     clearInterval(addCurrentPlayTime);
     $("#nowPlayBar").stop().width(0);
-    addCurrentPlayTime = setInterval(getCurrentPlayTime, 10);
+    $("#nowPoint").stop().css({'margin-left':0});
+    addCurrentPlayTime = setInterval(getCurrentPlayTime, 200);
     setTimeout(function () {
         $("#totalPlayTime").html(getTotalPlayTime());
         changePlayBar();
@@ -228,7 +230,8 @@ $("#nextSong").click(function () {
 
     clearInterval(addCurrentPlayTime);
     $("#nowPlayBar").stop().width(0);
-    addCurrentPlayTime = setInterval(getCurrentPlayTime, 10);
+    $("#nowPoint").stop().css({'margin-left':0});
+    addCurrentPlayTime = setInterval(getCurrentPlayTime, 200);
     setTimeout(function () {
         $("#totalPlayTime").html(getTotalPlayTime());
         changePlayBar();
@@ -283,6 +286,7 @@ function getCurrentPlayTime() {
     /* 改变播放器进度条 */
 function changePlayBar() {
     $("#nowPlayBar").animate({'width':"100%"}, ((song.duration - song.currentTime) * 1000));
+    $("#nowPoint").animate({'margin-left':"100%"}, ((song.duration - song.currentTime) * 1000));
 }
 
 /************************** ---- 播放器复用函数部分结束 ---- **************************/
