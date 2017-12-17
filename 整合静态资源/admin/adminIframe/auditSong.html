@@ -203,6 +203,8 @@
             </tr>
             <tr>
                 <td colspan="4" style="width:100%; height:88px; text-align:center;">
+
+                    <!-- 音乐播放器 -->
                     <div class="playSongContent glass-Bg box-show3" style="width:68%; height:48px; margin:0 auto; position:relative; display:inline-block; text-align:left; line-height:48px;">
                         <div id="songOper" style="height:38px; margin:7px 3px; padding:0 4px; float:left; line-height:35px;">
                             <a id="prepSong" style="height:35px; width:35px; margin:0; float:left; text-align:center; font-size:18px;" class="MyIF ahead"></a>
@@ -212,22 +214,22 @@
 
                         <div id="songContent" style="height:100%; display:inline-block; position:relative;">                        
                             <img class="box-show3" src="../../img/common/touxiang.jpg" style="width:30px; height:30px; margin:9px 8px; border-radius:3px; float:left;">
-                            <p style="top:3px; left:58px; position:absolute; line-height:32px; font-size:14px;">
+                            <p style="top:3px; left:68px; position:absolute; line-height:32px; font-size:14px;">
                                 歌名 - 歌手
                                 <p style="margin-right:8px; float:right; line-height:32px; font-size:13.5px;">
                                     <span id="currentPlayTime" style="margin:0 8px;">00:00:00</span>-<span id="totalPlayTime" style="margin:0 8px;">00:00:00</span>
                                 </p>
                             </p>
-                            <div class="box-show3" style="bottom:8px; right:15px; width:86%; height:10px; position:absolute; border-radius:5px; background:#000; cursor:pointer;">
+                            <div class="box-show3" style="bottom:8px; right:2px; width:88%; height:10px; position:absolute; border-radius:5px; background:#000; cursor:pointer;">
                                 <div style="width:99%; height:100%; position:relative;">
-                                	<div id="" style="width:88%; height:5.6px; top:51%; left:2px; transform:translate(0,-50%); box-sizing:border-box; position:absolute; background:#111; border-radius:4px;"></div>
-                                    <div id="nowPlayBar" style="width:0; height:5.6px; top:51%; left:2px; transform:translate(0,-50%); box-sizing:border-box; position:absolute; border-radius:4px; cursor:pointer; background-image:-webkit-linear-gradient(left, #2DDEE6, #0D9DE6);"></div>
+                                	<div id="nowBufferBar" style="width:0; height:5.6px; top:51%; left:2.5px; transform:translate(0,-50%); box-sizing:border-box; position:absolute; background:#111; border-radius:4px;"></div>
+                                    <div id="nowPlayBar" style="width:0; height:5.6px; top:51%; left:2.5px; transform:translate(0,-50%); box-sizing:border-box; position:absolute; border-radius:4px; cursor:pointer; background-image:-webkit-linear-gradient(left, #2DDEE6, #0D9DE6);"></div>
                                     <a id="nowPoint" class="glass-Bg box-show3" style="width:16px; height:16px; top:-3px; left:-8px; margin-left:0; position:absolute; border-radius:50%;"></a>
                                 </div>
                             </div>
                         </div>
 
-                        <div id="volumeOper" style="height:100%; margin:0; padding:0 5px; float:right; position:relative; line-height:53px; text-align:center;">
+                        <div id="volumeOper" style="height:100%;  margin:0; padding:0 5px; float:right; position:relative; line-height:53px; text-align:center;">
                             <a class="MyIF volume-yes" style="width:35px; height:35px; margin:0; position:relative; display:inline-block; border-left:1px solid #181818; line-height:35px; font-size:20px; z-index:5;"></a>
                         </div>
 
@@ -235,9 +237,7 @@
                             <div id="volumeControl"></div>
                         </div>
 
-                        <audio id="songSource">
-                            <!--<source type="audio/mpeg">-->
-                        </audio>
+                        <audio id="songSource"></audio>
                     </div>
 
                 </td>
@@ -267,8 +267,18 @@
         });
 
 
-        $('#songContent').width($(".playSongContent").width() - 180);
 
+        function audioPlaySize() {
+            $('#songContent').width($(".playSongContent").width() - 180);
+        }
+
+
+        audioPlaySize();
+        $(window).resize(function () {  //改变浏览器窗口时 -- 设置一个定时器并且在没有停止改变窗口大小时不会触发 layoutSize 函数 [ 节约CPU计算资源,提高性能 ]
+            var timeOutId = null;
+            clearTimeout(timeOutId);
+            timeOutId = setTimeout(audioPlaySize, 200);    //好像有点暴力
+        });
 
 
     </script>

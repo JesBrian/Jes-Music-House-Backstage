@@ -10,17 +10,21 @@ $("#playSong").click(function () {
 
     if ($(this).hasClass("stop")) {
         if (!song.src) {
-            song.src = "../../audio/test.mp3";
+            song.src = "../../audio/我ら来たれり.mp3";
         }
 
         song.play();
 
-        currentPlayTime = Number.parseInt(song.currentTime);
-        addCurrentPlayTime = setInterval(getCurrentPlayTime, 200);
-        setTimeout(function () {
+        song.oncanplay = function() {
+            currentPlayTime = Number.parseInt(song.currentTime);
+            addCurrentPlayTime = setInterval(getCurrentPlayTime, 200);
             $("#totalPlayTime").html(getTotalPlayTime());
             changePlayBar();
-        }, 500);
+
+            setInterval(changeBufferBar, 888);
+        }
+
+
 
     } else {
         song.pause();
@@ -215,14 +219,16 @@ $("#prepSong").click(function () {
 
     clearInterval(addCurrentPlayTime);
     $("#nowPlayBar").stop().width(0);
+    $("#nowBufferBar").stop().width(0);
     $("#nowPoint").stop().css({'margin-left':0});
-    addCurrentPlayTime = setInterval(getCurrentPlayTime, 200);
-    setTimeout(function () {
-        $("#totalPlayTime").html(getTotalPlayTime());
-        changePlayBar();
-    }, 500);
 
     song.play();
+
+    song.oncanplay = function() {
+        addCurrentPlayTime = setInterval(getCurrentPlayTime, 200);
+        $("#totalPlayTime").html(getTotalPlayTime());
+        changePlayBar();
+    }
 });
 $("#nextSong").click(function () {
     song.src = "../../audio/月半小夜曲.mp3";
@@ -230,14 +236,16 @@ $("#nextSong").click(function () {
 
     clearInterval(addCurrentPlayTime);
     $("#nowPlayBar").stop().width(0);
+    $("#nowBufferBar").stop().width(0);
     $("#nowPoint").stop().css({'margin-left':0});
-    addCurrentPlayTime = setInterval(getCurrentPlayTime, 200);
-    setTimeout(function () {
-        $("#totalPlayTime").html(getTotalPlayTime());
-        changePlayBar();
-    }, 500);
     
     song.play();
+
+    song.oncanplay = function() {
+        addCurrentPlayTime = setInterval(getCurrentPlayTime, 200);
+        $("#totalPlayTime").html(getTotalPlayTime());
+        changePlayBar();
+    }
 });
 
 /************************** ---- 控制上一首 or 下一首部分结束 ---- **************************/
@@ -283,7 +291,12 @@ function getCurrentPlayTime() {
     $("#currentPlayTime").html(house + ":" + minute + ":" + second);
 }
 
-    /* 改变播放器进度条 */
+    /* 获取歌曲缓冲进度/改变播放器缓冲条进度 */
+function changeBufferBar() {
+    $("#nowBufferBar").stop(true).animate({'width': song.buffered.end(song.buffered.length - 1)/song.duration * 100 + "%"}, 888);
+}
+
+    /* 改变播放器播放进度条 */
 function changePlayBar() {
     $("#nowPlayBar").animate({'width':"100%"}, ((song.duration - song.currentTime) * 1000));
     $("#nowPoint").animate({'margin-left':"100%"}, ((song.duration - song.currentTime) * 1000));
