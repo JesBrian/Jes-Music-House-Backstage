@@ -1,5 +1,8 @@
 ;(function ($) {
 
+    $("body").append('<!-- 弹出拟态框后背景遮幕 -->\n' +
+        '    <div class="md-overlay" onclick="cancelNiftyModalsForm();"></div>');
+
     var defaults = {
         overlaySelector: '.md-overlay',
         closeSelector: '.md-close',
@@ -155,3 +158,27 @@
     };
 
 })(jQuery);
+
+
+
+/**
+ * 根据传入的model名字来弹出相应的模拟框
+ */
+var niftymodalCloseEvent;   //暴力添加拟态框关闭函数
+function niftymodalsByModelName(modal,url,text) {
+    $("#" + modal).niftyModal();
+    if(text != '') {
+        $("#warning-text").html(text);
+    }
+}
+
+
+/**
+ * 清空拟态框表单值函数
+ */
+function cancelNiftyModalsForm() {
+    $("input[type=text].niftyModalForm").val('');
+    $("textarea.niftyModalForm").val('');
+    $("input.niftyModalForm").prop('checked', false);
+    $("input[type=password].niftyModalForm").val('');
+}
