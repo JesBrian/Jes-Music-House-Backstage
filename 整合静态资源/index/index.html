@@ -543,6 +543,556 @@
         </div>
     </div>
 
+    <!-- 拟态框 -->
+    <!-- 用户登录 -->
+    <div class="md-container md-effect-1" id="modal-userLogin">
+        <div class="md-content">
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/login.png">账户登录</h3>
+            <a class="md-close close-all MyIF all-arrow"></a>
+            <div>
+                <form action="account.html" target="indexIframe" method="post">
+                    <table>
+                        <tr>
+                            <td><i class="MyIF IDcard-1"></i>用户名</td>
+                            <td><input class="niftyModalForm s1c-Bg box-show3" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><i class="MyIF yuechi"></i>密码</td>
+                            <td><input class="niftyModalForm s1c-Bg box-show3" type="password"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <span>
+                                    <a class="joinSinger superBtn MyIF check" onclick="cancelNiftyModalsForm();"> 重新填写</a>
+                                    <a class="joinSinger superBtn md-close MyIF questionnaire-3" href="account.html" target="indexIframe" onclick="cancelNiftyModalsForm();"> 确认提交</a>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                    <p style="z-index:9; position:relative;">
+                        <a href="#" class="hover-undeline md-close" onclick="niftymodalsByModelName('modal-forgetPasswd')">忘记密码</a>
+                        /
+                        <a class="hover-undeline md-close" onclick="niftymodalsByModelName('modal-register','',''); cancelNiftyModalsForm();">新用户注册</a>
+                    </p>
+                </form>
+                <span id="ortherLogin">
+                    <a class="superBtn joinSinger MyIF wechat"> 微信登录</a>
+                    <a class="superBtn joinSinger MyIF qq"> QQ登录</a>
+                    <a class="superBtn joinSinger MyIF weibo"> 微博登录</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 找回密码 -->
+    <div class="md-container md-effect-1" id="modal-forgetPasswd">
+        <div class="md-content">
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/power.png">重设密码</h3>
+            <a class="md-close close-all MyIF all-arrow"></a>
+            <form>
+                <table>
+                    <tr>
+                        <td><i class="MyIF mail"></i> 注册邮箱</td>
+                        <td><input class="niftyModalForm s1c-Bg box-show3" type="text" name="mail"></td>
+                    </tr>
+                    <tr><td colspan="2">邮件发送后，两小时有效！请注意时间</td></tr>
+                    <tr>
+                        <td colspan="2">
+                            <a class="superBtn joinSinger md-close MyIF makesure" onclick="alertTips(1,'邮件发送成功，请注意查收！'); cancelNiftyModalsForm();"> 确定新建</a>
+                            <a class="superBtn joinSinger md-close MyIF cancel" onclick="cancelNiftyModalsForm();"> 取消返回</a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <!-- 用户注册 -->
+    <div class="md-container md-effect-1" id="modal-register">
+        <div class="md-content">
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/addUser.png">账户注册</h3>
+            <a class="md-close close-all MyIF all-arrow"></a>
+            <form action="account.html" target="indexIframe" method="post">
+                <table>
+                    <tr>
+                        <td><i class="MyIF IDcard-1"></i>用户名</td>
+                        <td><input class="niftyModalForm s1c-Bg box-show3" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><i class="MyIF mail"></i>邮箱</td>
+                        <td><input class="niftyModalForm s1c-Bg box-show3" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><i class="MyIF yuechi"></i>密码</td>
+                        <td><input class="niftyModalForm s1c-Bg box-show3" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>
+                                <a class="joinSinger superBtn MyIF check" onclick="cancelNiftyModalsForm();"> 重新填写</a>
+                                <a class="joinSinger superBtn md-close MyIF questionnaire-3" href="account.html" target="indexIframe" onclick="alertTips('1','注册成功！完善资料有助于系统提供更精确的个性推荐。'); cancelNiftyModalsForm();"> 确认注册</a>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+                <p>已有账号？<a class="hover-undeline md-close" onclick="niftymodalsByModelName('modal-userLogin','',''); cancelNiftyModalsForm();">点此立刻登录</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 上传图片 -->
+    <div class="md-container md-effect-1" id="modal-uploadAvatar">
+        <div class="md-content">
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/musicAlbum.png">上传图片</h3>
+            <a class="md-close close-all MyIF all-arrow"></a>
+
+            <div id="uploadAvatarContainer">
+                <div class="imageBox">
+                    <div class="thumbBox"></div>
+                    <div class="spinner" style="display:none">Loading...</div>
+                </div>
+                <div class="action">
+                    <div class="new-contentarea tc">
+                        <a class="upload-img glass-Bg box-show3"><label for="upload-file">上传图像</label></a>
+                        <input type="file" class="" name="upload-file" id="upload-file"/>
+                    </div>
+                    <a id="btnCrop" class="Btnsty_peyton cancelSelectText glass-Bg box-show3">预览</a>
+                    <a id="btnZoomIn" class="Btnsty_peyton cancelSelectText glass-Bg box-show3">十</a>
+                    <a id="btnZoomOut" class="Btnsty_peyton cancelSelectText glass-Bg box-show3">一</a>
+
+                    <input type="hidden" name="imgDx" value="">
+                    <input type="hidden" name="imgDy" value="">
+                </div>
+                <div class="cropped"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 歌曲收藏 -->
+    <div class="md-container md-effect-1" id="modal-collection">
+        <div class="md-content">
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/musicBox.png">歌曲收藏</h3>
+            <a class="md-close close-all MyIF all-arrow"></a>
+            <div style="font-size:18px; font-weight:900;">添加到歌单</div>
+            <span>
+                <a class="superBtn joinSinger md-close MyIF cubes-1" onclick="niftymodalsByModelName('modal-newAlbum')"> 新建歌单</a>
+            </span>
+            <div id="collectionContent">
+                <a class="s1c-Bg box-show3">
+                    <img src="../img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                </a>
+                <a class="s1c-Bg box-show3">
+                    <img src="../img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                </a>
+                <a class="s1c-Bg box-show3">
+                    <img src="../img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                </a>
+                <a class="s1c-Bg box-show3">
+                    <img src="../img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                </a>
+                <a class="s1c-Bg box-show3">
+                    <img src="../img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                </a>
+                <a class="s1c-Bg box-show3">
+                    <img src="../img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                </a>
+                <a class="s1c-Bg box-show3">
+                    <img src="../img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                </a>
+                <a class="s1c-Bg box-show3">
+                    <img src="../img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                </a>
+                <a class="s1c-Bg box-show3">
+                    <img src="../img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                </a>
+                <a class="s1c-Bg box-show3">
+                    <img src="../img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                </a>
+                <a class="s1c-Bg box-show3">
+                    <img src="../img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                </a>
+                <a class="s1c-Bg box-show3">
+                    <img src="../img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                </a>
+                <a class="s1c-Bg box-show3">
+                    <img src="../img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                </a>
+                <a class="s1c-Bg box-show3">
+                    <img src="../img/common/touxiang.jpg"><span>casccasnjlkvcnmasl</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新建歌单 -->
+    <div class="md-container md-effect-1" id="modal-newAlbum">
+        <div class="md-content">
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/menu.png">新建歌单</h3>
+            <a class="md-close close-all MyIF all-arrow"></a>
+            <form>
+                <table>
+                    <tr>
+                        <td><i class="MyIF kinds"></i> 歌单名</td>
+                        <td><input class="niftyModalForm s1c-Bg box-show3" type="text" name="albumName"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">可通过各种 “ 收藏 ” 按钮将音乐添加到新歌单中</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a class="superBtn joinSinger md-close MyIF makesure" onclick="alertTips(1,'歌曲/歌单收藏成功！'); cancelNiftyModalsForm();"> 确定新建</a>
+                            <a class="superBtn joinSinger md-close MyIF cancel" onclick="cancelNiftyModalsForm();"> 取消返回</a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <!-- 问卷调查 -->
+    <div class="md-container md-effect-1" id="modal-questionnaire">
+        <div class="md-content">
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/menu.png">调查问卷</h3>
+            <a class="md-close close-all MyIF all-arrow" onclick="cancelNiftyModalsForm();"></a>
+            <form action="#" method="post">
+                <p>1、您认为我们网站的服务质量如何：</p>
+                <input type="radio" class="niftyModalForm superInput" id='verybad' name="quality"><label for='verybad' class="MyIF cry"><span> 很差</span></label>
+                <input type="radio" class="niftyModalForm superInput" id='bad' name="quality"><label for='bad' class="MyIF unhappy"><span> 差</span></label>
+                <input type="radio" class="niftyModalForm superInput" id='normal' name="quality"><label for='normal' class="MyIF expressionless"><span> 一般</span></label>
+                <input type="radio" class="niftyModalForm superInput" id='good' name="quality"><label for='good' class="MyIF happy"><span> 好</span></label>
+                <input type="radio" class="niftyModalForm superInput" id='verygood' name="quality"><label for='verygood' class="MyIF exciting"><span> 很好</span></label>
+                <p>2、您认为我们网站存在哪些缺点 [可多选] ：</p>
+                <table>
+                    <tr>
+                        <td><input type="checkbox" class="niftyModalForm superInput" id='1verybad' name="defect"><label for='1verybad' ><b>加载速度慢</b></label></td>
+                        <td><input type="checkbox" class="niftyModalForm superInput" id='1bad' name="defect"><label for='1bad' ><b>歌曲收录少</b></label></td>
+                        <td><input type="checkbox" class="niftyModalForm superInput" id='1normal' name="defect"><label for='1normal' ><b>曲库更新迟</b></label></td>
+                        <td><input type="checkbox" class="niftyModalForm superInput" id='1good' name="defect"><label for='1good' ><b>歌曲音质差</b></label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="niftyModalForm superInput" id='1verygood' name="defect"><label for='1verygood' ><b>会员收费高</b></label></td>
+                        <td><input type="checkbox" class="niftyModalForm superInput" id='2verygood' name="defect"><label for='2verygood' ><b>歌曲价格高</b></label></td>
+                        <td><input type="checkbox" class="niftyModalForm superInput" id='3verygood' name="defect"><label for='3verygood' ><b>功能不齐全</b></label></td>
+                        <td><input type="checkbox" class="niftyModalForm superInput" id='4verygood' name="defect"><label for='4verygood' ><b>推荐不合理</b></label></td>
+                    </tr>
+                </table>
+                <p>3、如还有任何问题、疑问或者不满或者改进意见请写下：</p>
+                <textarea class="niftyModalForm s1c-Bg box-show3" placeholder="请填写您的不满或改进意见！"></textarea>
+                <p> 请填写正确的邮箱，以便我们对您的问题以邮箱方式回应，谢谢您的支持！</p>
+                <input type="text" class="niftyModalForm s1c-Bg box-show3" placeholder="请填写您的邮箱地址！">
+
+            </form>
+            <span>
+                <a class="superBtn joinSinger md-close MyIF questionnaire-3" onclick="alertTips(1,'问卷提交成功！感谢您对我们的支持！'); cancelNiftyModalsForm();"> 提交问卷</a>
+            </span>
+        </div>
+    </div>
+
+    <!-- 操作提示 -->
+    <div class="md-container md-effect-1" id="modal-warning">
+        <div class="md-content">
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/warning.png">操作提示</h3>
+            <a class="md-close close-all MyIF all-arrow"></a>
+            <p id="warning-text">操作警告！！！</p>
+            <span>
+                <a class="joinSinger superBtn MyIF makesure md-close" onclick="alertTips(0,'资料更新失败！');"> 确定保存</a>
+                <a class="joinSinger superBtn MyIF cancel md-close"> 取消返回</a>
+            </span>
+        </div>
+    </div>
+
+    <!-- 入驻歌手 -->
+    <div id="modal-joinSinger" class="md-container md-effect-1">
+        <div class="md-content">
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/singer.png">入驻歌手</h3>
+            <a class="md-close close-all MyIF all-arrow"></a>
+            <form>
+                <section class="webdesigntuts-workshop">
+                    <input type="text" class="niftyModalForm" placeholder=" 输入您想要申请的歌手名称，查看是否已被使用 " required>
+                    <button type="submit"><i class="MyIF search"></i></button>
+                </section>
+                <img id="singerAvatar" class="box-show3" src="../img/common/touxiang.jpg">
+                <span>
+                    <a class="joinSinger superBtn md-close" href="joinSinger.html" target="indexIframe" onclick="cancelNiftyModalsForm();">立即入驻 <i class="MyIF double-arrow-right"></i></a>
+                </span>
+                <p>暂无搜索到相关歌手，立即创建分享你的作品吧！</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 歌手登录 -->
+    <div class="md-container md-effect-1" id="modal-singerLogin">
+        <div class="md-content">
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/singer.png">歌手登录</h3>
+            <a class="md-close close-all MyIF all-arrow" onclick="cancelNiftyModalsForm();"></a>
+            <img src="../img/common/touxiang.jpg" class="box-show3">
+            <form action="#" method="post">
+                <ul>
+                    <li>
+                        请输入验证码：<input type="text" class="niftyModalForm s1c-Bg box-show3">
+                    </li>
+                    <li>
+                        <img class="box-show3" src="../img/common/touxiang.jpg" onclick="cancelNiftyModalsForm();">
+                        <span><a class="joinSinger superBtn md-close" href="../admin/home.html" onclick="cancelNiftyModalsForm();">验证登录 <i class="MyIF double-arrow-right"></i></a></span>
+                    </li>
+                </ul>
+            </form>
+            <p>还没入驻音乐人？立即入驻我们分享你的作品吧！</p>
+            <span><a class="joinSinger superBtn md-close" onclick="niftymodalsByModelName('modal-joinSinger','',''); cancelNiftyModalsForm();">立即入驻 <i class="MyIF double-arrow-right"></i></a></span>
+        </div>
+    </div>
+
+    <!-- 歌单风格分类 -->
+    <div class="md-container md-effect-1" id="modal-category">
+        <div class="md-content">
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/cube.png">选择分类</h3>
+            <a class="md-close close-all MyIF all-arrow"></a>
+            <div>
+                <div id="allStyleButton">
+                    <span>选择风格</span>
+                    <a class="joinSinger superBtn md-close MyIF" onclick="changeAlbumStyle(this);">全部风格</a>
+                </div>
+
+                <table id="styleList">
+                    <tr>
+                        <td>
+                            <i class="MyIF earth"></i> 语种
+                        </td>
+                        <td>
+                            <span><a class="hover-undeline md-close" data-styleId="0" onclick="changeAlbumStyle(this);">华语</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="1" onclick="changeAlbumStyle(this);">欧美</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="2" onclick="changeAlbumStyle(this);">日语</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="3" onclick="changeAlbumStyle(this);">韩语</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="4" onclick="changeAlbumStyle(this);">粤语</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="5" onclick="changeAlbumStyle(this);">小语种</a>|</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="MyIF instrument"></i> 风格
+                        </td>
+                        <td>
+                            <span><a class="hover-undeline md-close" data-styleId="6" onclick="changeAlbumStyle(this);">流行</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="7" onclick="changeAlbumStyle(this);">摇滚</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="8" onclick="changeAlbumStyle(this);">民谣</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="9" onclick="changeAlbumStyle(this);">电子</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="10" onclick="changeAlbumStyle(this);">舞曲</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="11" onclick="changeAlbumStyle(this);">说唱</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="12" onclick="changeAlbumStyle(this);">爵士</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="13" onclick="changeAlbumStyle(this);">轻音乐</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="14" onclick="changeAlbumStyle(this);">乡村</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="15" onclick="changeAlbumStyle(this);">R&B/Soul</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="16" onclick="changeAlbumStyle(this);">民族</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="17" onclick="changeAlbumStyle(this);">英伦</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="18" onclick="changeAlbumStyle(this);">金属</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="19" onclick="changeAlbumStyle(this);">朋克</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="20" onclick="changeAlbumStyle(this);">蓝调</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="21" onclick="changeAlbumStyle(this);">雷鬼</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="22" onclick="changeAlbumStyle(this);">世界音乐</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="23" onclick="changeAlbumStyle(this);">拉丁</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="24" onclick="changeAlbumStyle(this);">另类/独立</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="25" onclick="changeAlbumStyle(this);">New Age</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="26" onclick="changeAlbumStyle(this);">古风</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="27" onclick="changeAlbumStyle(this);">后摇</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="28" onclick="changeAlbumStyle(this);">Bossa Nova</a>|</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="MyIF cofee"></i> 场景
+                        </td>
+                        <td>
+                            <span><a class="hover-undeline md-close" data-styleId="29" onclick="changeAlbumStyle(this);">清晨</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="30" onclick="changeAlbumStyle(this);">夜晚</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="31" onclick="changeAlbumStyle(this);">学习</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="32" onclick="changeAlbumStyle(this);">工作</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="33" onclick="changeAlbumStyle(this);">午休</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="34" onclick="changeAlbumStyle(this);">下午茶</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="35" onclick="changeAlbumStyle(this);">地铁</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="36" onclick="changeAlbumStyle(this);">驾车</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="37" onclick="changeAlbumStyle(this);">运动</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="38" onclick="changeAlbumStyle(this);">旅行</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="39" onclick="changeAlbumStyle(this);">散步</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="40" onclick="changeAlbumStyle(this);">酒吧</a>|</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="MyIF exciting"></i> 情感
+                        </td>
+                        <td>
+                            <span><a class="hover-undeline md-close" data-styleId="41" onclick="changeAlbumStyle(this);">怀旧</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="42" onclick="changeAlbumStyle(this);">清新</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="43" onclick="changeAlbumStyle(this);">浪漫</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="44" onclick="changeAlbumStyle(this);">性感</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="45" onclick="changeAlbumStyle(this);">伤感</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="46" onclick="changeAlbumStyle(this);">治愈</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="47" onclick="changeAlbumStyle(this);">放松</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="48" onclick="changeAlbumStyle(this);">孤独</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="49" onclick="changeAlbumStyle(this);">感动</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="50" onclick="changeAlbumStyle(this);">兴奋</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="51" onclick="changeAlbumStyle(this);">快乐</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="52" onclick="changeAlbumStyle(this);">安静</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="53" onclick="changeAlbumStyle(this);">思念</a>|</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="MyIF kinds"></i> 主题
+                        </td>
+                        <td>
+                            <span><a class="hover-undeline md-close" data-styleId="54" onclick="changeAlbumStyle(this);">影视原声</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="55" onclick="changeAlbumStyle(this);">ACG</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="56" onclick="changeAlbumStyle(this);">游戏</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="57" onclick="changeAlbumStyle(this);">70后</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="58" onclick="changeAlbumStyle(this);">80后</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="59" onclick="changeAlbumStyle(this);">90后</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="60" onclick="changeAlbumStyle(this);">00后</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="61" onclick="changeAlbumStyle(this);">网络歌曲</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="62" onclick="changeAlbumStyle(this);">KTV</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="63" onclick="changeAlbumStyle(this);">经典</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="64" onclick="changeAlbumStyle(this);">翻唱</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="65" onclick="changeAlbumStyle(this);">吉他</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="66" onclick="changeAlbumStyle(this);">钢琴</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="67" onclick="changeAlbumStyle(this);">器乐</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="68" onclick="changeAlbumStyle(this);">儿童</a>|</span>
+                            <span><a class="hover-undeline md-close" data-styleId="69" onclick="changeAlbumStyle(this);">榜单</a>|</span>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 歌单风格分类 -->
+    <div class="md-container md-effect-1" id="modal-selectStyleTag">
+        <div class="md-content">
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/cube.png">选择风格标签</h3>
+            <a class="md-close close-all MyIF all-arrow" onclick="clearStyleTagSelect();"></a>
+            <span>选择合适的风格标签，最多可选3个:</span>
+            <span id="styleTagListTips"></span>
+            <div id="styleTagList">
+                <table style="margin-top:12px;">
+                    <tr>
+                        <td><i class="MyIF earth"></i> 语种</td>
+                        <td>
+                            <input type="checkbox" class="superInput" id='verygood0' name="styleTag" value="1"><label for='verygood0'><span>华语</span></label>
+                            <input type="checkbox" class="superInput" id='verygood1' name="styleTag" value="2"><label for='verygood1'><span>欧美</span></label>
+                            <input type="checkbox" class="superInput" id='verygood2' name="styleTag" value="3"><label for='verygood2'><span>日语</span></label>
+                            <input type="checkbox" class="superInput" id='verygood3' name="styleTag" value="4"><label for='verygood3'><span>韩语</span></label>
+                            <input type="checkbox" class="superInput" id='verygood4' name="styleTag" value="5"><label for='verygood4'><span>粤语</span></label>
+                            <input type="checkbox" class="superInput" id='verygood5' name="styleTag" value="6"><label for='verygood5'><span>小语种</span></label>
+                        </td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+
+                    <tr>
+                        <td><i class="MyIF instrument"></i> 风格</td>
+                        <td>
+                            <input type="checkbox" class="superInput" id='verygood6' name="styleTag"><label for='verygood6'><span>流行</span></label>
+                            <input type="checkbox" class="superInput" id='verygood7' name="styleTag"><label for='verygood7'><span>摇滚</span></label>
+                            <input type="checkbox" class="superInput" id='verygood8' name="styleTag"><label for='verygood8'><span>民谣</span></label>
+                            <input type="checkbox" class="superInput" id='verygood9' name="styleTag"><label for='verygood9'><span>电子</span></label>
+                            <input type="checkbox" class="superInput" id='verygood10' name="styleTag"><label for='verygood10'><span>舞曲</span></label>
+                            <input type="checkbox" class="superInput" id='verygood11' name="styleTag"><label for='verygood11'><span>说唱</span></label>
+                            <input type="checkbox" class="superInput" id='verygood12' name="styleTag"><label for='verygood12'><span>爵士</span></label>
+                            <input type="checkbox" class="superInput" id='verygood13' name="styleTag"><label for='verygood13'><span>轻音乐</span></label>
+                            <input type="checkbox" class="superInput" id='verygood14' name="styleTag"><label for='verygood14'><span>乡村</span></label>
+                            <input type="checkbox" class="superInput" id='verygood15' name="styleTag"><label for='verygood15'><span>R&B/Soul</span></label>
+                            <input type="checkbox" class="superInput" id='verygood16' name="styleTag"><label for='verygood16'><span>英伦</span></label>
+                            <input type="checkbox" class="superInput" id='verygood17' name="styleTag"><label for='verygood17'><span>金属</span></label>
+                            <input type="checkbox" class="superInput" id='verygood18' name="styleTag"><label for='verygood18'><span>朋克</span></label>
+                            <input type="checkbox" class="superInput" id='verygood19' name="styleTag"><label for='verygood19'><span>蓝调</span></label>
+                            <input type="checkbox" class="superInput" id='verygood20' name="styleTag"><label for='verygood20'><span>雷鬼</span></label>
+                            <input type="checkbox" class="superInput" id='verygood21' name="styleTag"><label for='verygood21'><span>世界音乐</span></label>
+                            <input type="checkbox" class="superInput" id='verygood22' name="styleTag"><label for='verygood22'><span>拉丁</span></label>
+                            <input type="checkbox" class="superInput" id='verygood23' name="styleTag"><label for='verygood23'><span>另类/独立</span></label>
+                            <input type="checkbox" class="superInput" id='verygood24' name="styleTag"><label for='verygood24'><span>New Age</span></label>
+                            <input type="checkbox" class="superInput" id='verygood25' name="styleTag"><label for='verygood25'><span>古风</span></label>
+                            <input type="checkbox" class="superInput" id='verygood26' name="styleTag"><label for='verygood26'><span>后摇</span></label>
+                            <input type="checkbox" class="superInput" id='verygood27' name="styleTag"><label for='verygood27'><span>Bossa Nova</span></label>
+                            <input type="checkbox" class="superInput" id='verygood28' name="styleTag"><label for='verygood28'><span>电音</span></label>
+                        </td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+
+                    <tr>
+                        <td><i class="MyIF cofee"></i> 场景</td>
+                        <td>
+                            <input type="checkbox" class="superInput" id='verygood29' name="styleTag"><label for='verygood29'><span>清晨</span></label>
+                            <input type="checkbox" class="superInput" id='verygood30' name="styleTag"><label for='verygood30'><span>夜晚</span></label>
+                            <input type="checkbox" class="superInput" id='verygood31' name="styleTag"><label for='verygood31'><span>学习</span></label>
+                            <input type="checkbox" class="superInput" id='verygood32' name="styleTag"><label for='verygood32'><span>工作</span></label>
+                            <input type="checkbox" class="superInput" id='verygood33' name="styleTag"><label for='verygood33'><span>午休</span></label>
+                            <input type="checkbox" class="superInput" id='verygood34' name="styleTag"><label for='verygood34'><span>下午茶</span></label>
+                            <input type="checkbox" class="superInput" id='verygood35' name="styleTag"><label for='verygood35'><span>地铁</span></label>
+                            <input type="checkbox" class="superInput" id='verygood36' name="styleTag"><label for='verygood36'><span>驾车</span></label>
+                            <input type="checkbox" class="superInput" id='verygood37' name="styleTag"><label for='verygood37'><span>运动</span></label>
+                            <input type="checkbox" class="superInput" id='verygood38' name="styleTag"><label for='verygood38'><span>旅行</span></label>
+                            <input type="checkbox" class="superInput" id='verygood39' name="styleTag"><label for='verygood39'><span>散步</span></label>
+                            <input type="checkbox" class="superInput" id='verygood40' name="styleTag"><label for='verygood40'><span>酒吧</span></label>
+                        </td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+
+                    <tr>
+                        <td><i class="MyIF exciting"></i> 情感</td>
+                        <td>
+                            <input type="checkbox" class="superInput" id='verygood41' name="styleTag"><label for='verygood41'><span>怀旧</span></label>
+                            <input type="checkbox" class="superInput" id='verygood42' name="styleTag"><label for='verygood42'><span>清新</span></label>
+                            <input type="checkbox" class="superInput" id='verygood43' name="styleTag"><label for='verygood43'><span>浪漫</span></label>
+                            <input type="checkbox" class="superInput" id='verygood44' name="styleTag"><label for='verygood44'><span>性感</span></label>
+                            <input type="checkbox" class="superInput" id='verygood45' name="styleTag"><label for='verygood45'><span>伤感</span></label>
+                            <input type="checkbox" class="superInput" id='verygood46' name="styleTag"><label for='verygood46'><span>治愈</span></label>
+                            <input type="checkbox" class="superInput" id='verygood47' name="styleTag"><label for='verygood47'><span>放松</span></label>
+                            <input type="checkbox" class="superInput" id='verygood48' name="styleTag"><label for='verygood48'><span>孤独</span></label>
+                            <input type="checkbox" class="superInput" id='verygood49' name="styleTag"><label for='verygood49'><span>感动</span></label>
+                            <input type="checkbox" class="superInput" id='verygood50' name="styleTag"><label for='verygood50'><span>兴奋</span></label>
+                            <input type="checkbox" class="superInput" id='verygood51' name="styleTag"><label for='verygood51'><span>快乐</span></label>
+                            <input type="checkbox" class="superInput" id='verygood52' name="styleTag"><label for='verygood52'><span>安静</span></label>
+                            <input type="checkbox" class="superInput" id='verygood53' name="styleTag"><label for='verygood53'><span>思念</span></label>
+                        </td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+
+                    <tr>
+                        <td><i class="MyIF kinds"></i> 主题</td>
+                        <td>
+                            <input type="checkbox" class="superInput" id='verygood54' name="styleTag"><label for='verygood54'><span>影视原声</span></label>
+                            <input type="checkbox" class="superInput" id='verygood55' name="styleTag"><label for='verygood55'><span>ACG</span></label>
+                            <input type="checkbox" class="superInput" id='verygood56' name="styleTag"><label for='verygood56'><span>游戏</span></label>
+                            <input type="checkbox" class="superInput" id='verygood57' name="styleTag"><label for='verygood57'><span>70后</span></label>
+                            <input type="checkbox" class="superInput" id='verygood58' name="styleTag"><label for='verygood58'><span>80后</span></label>
+                            <input type="checkbox" class="superInput" id='verygood59' name="styleTag"><label for='verygood59'><span>90后</span></label>
+                            <input type="checkbox" class="superInput" id='verygood60' name="styleTag"><label for='verygood60'><span>00后</span></label>
+                            <input type="checkbox" class="superInput" id='verygood61' name="styleTag"><label for='verygood61'><span>网络歌曲</span></label>
+                            <input type="checkbox" class="superInput" id='verygood62' name="styleTag"><label for='verygood62'><span>KTV</span></label>
+                            <input type="checkbox" class="superInput" id='verygood63' name="styleTag"><label for='verygood63'><span>经典</span></label>
+                            <input type="checkbox" class="superInput" id='verygood64' name="styleTag"><label for='verygood64'><span>翻唱</span></label>
+                            <input type="checkbox" class="superInput" id='verygood65' name="styleTag"><label for='verygood65'><span>吉他</span></label>
+                            <input type="checkbox" class="superInput" id='verygood66' name="styleTag"><label for='verygood66'><span>钢琴</span></label>
+                            <input type="checkbox" class="superInput" id='verygood67' name="styleTag"><label for='verygood67'><span>器乐</span></label>
+                            <input type="checkbox" class="superInput" id='verygood68' name="styleTag"><label for='verygood68'><span>儿童</span></label>
+                            <input type="checkbox" class="superInput" id='verygood69' name="styleTag"><label for='verygood69'><span>榜单</span></label>
+                        </td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                </table>
+                <input type="hidden" id="styleTagIdsTemp" name="styleTagIdsTemp" value="">
+            </div>
+            <div id="buttonGroup">
+                <a id="styleTagListTemp" class="superBtn joinSinger md-close MyIF makesure" onclick="saveStyleTagTempData(); clearStyleTagSelect();"> 确定保存</a>
+                <a class="superBtn joinSinger md-close MyIF cancel" onclick="clearStyleTagSelect();"> 取消返回</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 弹出拟态框后背景遮幕 -->
+    <div class="md-overlay" onclick="clearStyleTagSelect(); cancelNiftyModalsForm();"></div>
+
+
+
 
     <!-- Jsc部分 -->
 
@@ -558,8 +1108,7 @@
     <script type="text/javascript" src="../js/searchableSelect.js"></script>
 
     <!-- 拟态框 -->
-    <script src="../plugins/modal/userModal.js"></script>
-    <script src="../plugins/modal/niftymodals.js"></script>
+    <script src="../js/common/niftymodals.js"></script>
 
     <!-- 操作消息Tips -->
     <script src="../js/iziToast.min.js" type="text/javascript"></script>
