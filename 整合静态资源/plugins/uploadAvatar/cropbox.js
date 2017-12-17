@@ -163,9 +163,9 @@ $('#btnCrop').on('click', function () {
 
     $('#sureChangeImg').click(function(){
 
-        console.log(cropper.getBlob());  //获取预览后想要修改的图片的 blob 数据，准备利用 ajax 上传图片
+        // console.log(cropper.getBlob());  //获取预览后想要修改的图片的 blob 数据，准备利用 ajax 上传图片
 
-        $(window.top.frames["accountOperIframe"].document).find("img.changeImg").attr("src", $("#changeImgTemp").attr("src"));
+        changeShowImg();    //根据后台 & 前台不同情况更改展示的图片 -- 以后有机会优化[寒假一定要改了]
 
 
         $('.cropped').empty();
