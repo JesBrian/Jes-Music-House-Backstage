@@ -155,3 +155,28 @@
     };
 
 })(jQuery);
+
+
+/**
+ * 清空拟态框表单值函数
+ */
+function cancelNiftyModalsForm() {
+    $("input[type=text].niftyModalForm").val('');
+    $("textarea.niftyModalForm").val('');
+    $("input.niftyModalForm").prop('checked', false);
+    $("input[type=password].niftyModalForm").val('');
+}
+
+
+
+
+/**
+ * 根据传入的model名字来弹出相应的模拟框
+ */
+var niftymodalCloseEvent;   //暴力添加拟态框关闭函数
+function niftymodalsByModelName(modal,url,text) {
+    $("#" + modal).niftyModal();
+    if(text != '') {
+        $("#warning-text").html(text);
+    }
+}

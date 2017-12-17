@@ -44,7 +44,7 @@
 #update-main table td {  padding:25px 0;  }
 #update-main textarea {  width:100%; height:68px; padding:8px 15px; border:2px solid #2E2E2E; resize:none; font:normal normal normal 16px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:3px;  }
 #update-main .mail {  width:60%; height:18px; padding:8px 18px; float:left; font:normal normal normal 16px/1em Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; letter-spacing:3px;  }
-#date-range13 {  width:227px; padding:8px 0; font-size:16px; color:#00CDFF; text-align:center; letter-spacing:3px;  }
+#update-main #date {  width:268px; padding:8px 1px; font-size:16px; color:#00CDFF; text-align:center; letter-spacing:3px;  }
 #updateAvatar {  width:128px; top:248px; right:95px; position:absolute;  }
 #updateAvatar>img {  width:120px; height:120px; display:inline-block; border-radius:4px;  }
 #commitInfo {  bottom:3px; right:120px; position:absolute;  }
