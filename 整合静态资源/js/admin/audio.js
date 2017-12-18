@@ -1,5 +1,5 @@
 var song = document.getElementById("songSource");
-var currentPlayTime = 0, currentPlayTimeInterval;
+var currentPlayTimeInterval;    //当前播放时间定时器
 var bufferBarInterval;  //缓冲条进度定时器
 
 /**
@@ -18,7 +18,6 @@ $("#playSong").click(function () {
                 $("#nowPoint").stop(true).css({'margin-left':0});
             }
 
-
             currentPlayTimeInterval = setInterval(getCurrentPlayTime, 1000);
             changePlayBar();
         }
@@ -26,10 +25,7 @@ $("#playSong").click(function () {
         song.play();
 
         song.oncanplay = function () {
-            bufferBarInterval = setInterval(changeBufferBar, 1000);
-            currentPlayTimeInterval = setInterval(getCurrentPlayTime, 1000);
-            getTotalPlayTime();
-            changePlayBar();
+            startPlaySong();
         }
 
 
@@ -60,10 +56,7 @@ $("#prepSong").click(function () {
     song.play();
 
     song.oncanplay = function () {
-        bufferBarInterval = setInterval(changeBufferBar, 1000);
-        currentPlayTimeInterval = setInterval(getCurrentPlayTime, 1000);
-        getTotalPlayTime();
-        changePlayBar();
+        startPlaySong();
     }
 });
 $("#nextSong").click(function () {
@@ -78,10 +71,7 @@ $("#nextSong").click(function () {
     song.play();
 
     song.oncanplay = function () {
-        bufferBarInterval = setInterval(changeBufferBar, 1000);
-        currentPlayTimeInterval = setInterval(getCurrentPlayTime, 1000);
-        getTotalPlayTime();
-        changePlayBar();
+        startPlaySong();
     }
 });
 
@@ -281,40 +271,14 @@ $('#volumeControl').knobKnob({
  */
     /* 获取歌曲的总时间长度 */
 function getTotalPlayTime() {
-    let tempTimeStamp = Number.parseInt(song.duration);
-    let house = Number.parseInt(tempTimeStamp / 3600);
-    let minute = Number.parseInt((tempTimeStamp - house * 3600) / 60);
-    let second = Number.parseInt(tempTimeStamp % 60);
-    if (house <= 9) {
-        house = "0" + house;
-    }
-    if (minute <= 9) {
-        minute = "0" + minute;
-    }
-    if (second <= 9) {
-        second = "0" + second;
-    }
-    $("#totalPlayTime").html(house + ":" + minute + ":" + second);
+    $("#totalPlayTime").html(completeTime(song.duration));
 }
 
     /* 获取当前歌曲播放的进度时间 */
 function getCurrentPlayTime() {
-    currentPlayTime = song.currentTime;
-    let house = Number.parseInt(currentPlayTime / 3600);
-    let minute = Number.parseInt((currentPlayTime - house * 3600) / 60);
-    let second = Number.parseInt(currentPlayTime % 60);
-    if (house <= 9) {
-        house = "0" + house;
-    }
-    if (minute <= 9) {
-        minute = "0" + minute;
-    }
-    if (second <= 9) {
-        second = "0" + second;
-    }
-    $("#currentPlayTime").html(house + ":" + minute + ":" + second);
+    $("#currentPlayTime").html(completeTime(song.currentTime));
 
-    if (currentPlayTime == song.duration) {
+    if (song.currentTime == song.duration) {
         clearInterval(currentPlayTimeInterval);
         $("#playSong").addClass('play').removeClass('stop');
     }
@@ -333,6 +297,24 @@ function changeBufferBar() {
 function changePlayBar() {
     $("#nowPlayBar").animate({'width': "100%"}, ((song.duration - song.currentTime + 0.8) * 1000));
     $("#nowPoint").animate({'margin-left': "100%"}, ((song.duration - song.currentTime + 0.8) * 1000));
+}
+
+    /* 计算时间 */
+function completeTime(time) {
+    time = Number.parseInt(time);
+    let house = Number.parseInt(time / 3600), minute = Number.parseInt((time - house * 3600) / 60), second = Number.parseInt(time % 60);
+    if (house <= 9) house = "0" + house;
+    if (minute <= 9) minute = "0" + minute;
+    if (second <= 9) second = "0" + second;
+    return house + ":" + minute + ":" + second;
+}
+
+    /* 开始播放歌曲 */
+function startPlaySong() {
+    bufferBarInterval = setInterval(changeBufferBar, 1000);
+    currentPlayTimeInterval = setInterval(getCurrentPlayTime, 1000);
+    getTotalPlayTime();
+    changePlayBar();
 }
 
 /************************** ---- 播放器复用函数部分结束 ---- **************************/
