@@ -12,6 +12,13 @@ $("#playSong").click(function () {
         if (!song.src) {
             song.src = "../../audio/test.mp3";
         } else {
+            if (song.currentTime == song.duration) { //如果一首歌曲已经播放完毕就重新开始
+                song.currentTime = 0;
+                $("#nowPlayBar").stop(true).width(0);
+                $("#nowPoint").stop(true).css({'margin-left':0});
+            }
+
+
             currentPlayTimeInterval = setInterval(getCurrentPlayTime, 1000);
             changePlayBar();
         }
@@ -19,18 +26,18 @@ $("#playSong").click(function () {
         song.play();
 
         song.oncanplay = function () {
+            bufferBarInterval = setInterval(changeBufferBar, 1000);
             currentPlayTimeInterval = setInterval(getCurrentPlayTime, 1000);
             getTotalPlayTime();
             changePlayBar();
-            bufferBarInterval = setInterval(changeBufferBar, 1000);
         }
 
 
     } else {
         song.pause();
         clearInterval(currentPlayTimeInterval);
-        $("#nowPlayBar").stop();
-        $("#nowPoint").stop();
+        $("#nowPlayBar").stop(true);
+        $("#nowPoint").stop(true);
     }
 });
 
@@ -46,17 +53,17 @@ $("#prepSong").click(function () {
     $("#playSong").removeClass('play').addClass('stop');
 
     clearInterval(currentPlayTimeInterval);
-    $("#nowPlayBar").stop().width(0);
-    $("#nowBufferBar").stop().width(0);
-    $("#nowPoint").stop().css({'margin-left': 0});
+    $("#nowPlayBar").stop(true).width(0);
+    $("#nowBufferBar").stop(true).width(0);
+    $("#nowPoint").stop(true).css({'margin-left': 0});
 
     song.play();
 
     song.oncanplay = function () {
+        bufferBarInterval = setInterval(changeBufferBar, 1000);
         currentPlayTimeInterval = setInterval(getCurrentPlayTime, 1000);
         getTotalPlayTime();
         changePlayBar();
-        bufferBarInterval = setInterval(changeBufferBar, 1000);
     }
 });
 $("#nextSong").click(function () {
@@ -64,21 +71,33 @@ $("#nextSong").click(function () {
     $("#playSong").removeClass('play').addClass('stop');
 
     clearInterval(currentPlayTimeInterval);
-    $("#nowPlayBar").stop().width(0);
-    $("#nowBufferBar").stop().width(0);
-    $("#nowPoint").stop().css({'margin-left': 0});
+    $("#nowPlayBar").stop(true).width(0);
+    $("#nowBufferBar").stop(true).width(0);
+    $("#nowPoint").stop(true).css({'margin-left': 0});
 
     song.play();
 
     song.oncanplay = function () {
+        bufferBarInterval = setInterval(changeBufferBar, 1000);
         currentPlayTimeInterval = setInterval(getCurrentPlayTime, 1000);
         getTotalPlayTime();
         changePlayBar();
-        bufferBarInterval = setInterval(changeBufferBar, 1000);
     }
 });
 
 /************************** ---- 控制上一首 or 下一首部分结束 ---- **************************/
+
+
+
+/**
+ * 点击进度条播放的部分 -- 未完待续
+ */
+$("#barTag").click(function () {
+    console.log($(this).offset());
+    console.log($(this).width());
+});
+
+/************************** ---- 点击进度条播放的部分结束 ---- **************************/
 
 
 
@@ -297,6 +316,7 @@ function getCurrentPlayTime() {
 
     if (currentPlayTime == song.duration) {
         clearInterval(currentPlayTimeInterval);
+        $("#playSong").addClass('play').removeClass('stop');
     }
 }
 
@@ -311,8 +331,8 @@ function changeBufferBar() {
 
     /* 改变播放器播放进度条 */
 function changePlayBar() {
-    $("#nowPlayBar").animate({'width': "100%"}, ((song.duration - song.currentTime + 1) * 1000));
-    $("#nowPoint").animate({'margin-left': "100%"}, ((song.duration - song.currentTime + 1) * 1000));
+    $("#nowPlayBar").animate({'width': "100%"}, ((song.duration - song.currentTime + 0.8) * 1000));
+    $("#nowPoint").animate({'margin-left': "100%"}, ((song.duration - song.currentTime + 0.8) * 1000));
 }
 
 /************************** ---- 播放器复用函数部分结束 ---- **************************/
