@@ -1,6 +1,6 @@
 var song = document.getElementById("songSource");
-var currentPlayTime = 0, addCurrentPlayTime;
-
+var currentPlayTime = 0, currentPlayTimeInterval;
+var bufferBarInterval;  //缓冲条进度定时器
 
 /**
  * 控制歌曲的播放 or 暂停部分
@@ -10,25 +10,25 @@ $("#playSong").click(function () {
 
     if ($(this).hasClass("stop")) {
         if (!song.src) {
-            song.src = "../../audio/我ら来たれり.mp3";
+            song.src = "../../audio/test.mp3";
+        } else {
+            currentPlayTimeInterval = setInterval(getCurrentPlayTime, 1000);
+            changePlayBar();
         }
 
         song.play();
 
-        song.oncanplay = function() {
-            currentPlayTime = Number.parseInt(song.currentTime);
-            addCurrentPlayTime = setInterval(getCurrentPlayTime, 200);
-            $("#totalPlayTime").html(getTotalPlayTime());
+        song.oncanplay = function () {
+            currentPlayTimeInterval = setInterval(getCurrentPlayTime, 1000);
+            getTotalPlayTime();
             changePlayBar();
-
-            setInterval(changeBufferBar, 888);
+            bufferBarInterval = setInterval(changeBufferBar, 1000);
         }
-
 
 
     } else {
         song.pause();
-        clearInterval(addCurrentPlayTime);
+        clearInterval(currentPlayTimeInterval);
         $("#nowPlayBar").stop();
         $("#nowPoint").stop();
     }
@@ -36,6 +36,49 @@ $("#playSong").click(function () {
 
 /************************** ---- 控制歌曲的播放 or 暂停部分结束 ---- **************************/
 
+
+
+/**
+ * 控制上一首 or 下一首部分
+ */
+$("#prepSong").click(function () {
+    song.src = "../../audio/我ら来たれり.mp3";
+    $("#playSong").removeClass('play').addClass('stop');
+
+    clearInterval(currentPlayTimeInterval);
+    $("#nowPlayBar").stop().width(0);
+    $("#nowBufferBar").stop().width(0);
+    $("#nowPoint").stop().css({'margin-left': 0});
+
+    song.play();
+
+    song.oncanplay = function () {
+        currentPlayTimeInterval = setInterval(getCurrentPlayTime, 1000);
+        getTotalPlayTime();
+        changePlayBar();
+        bufferBarInterval = setInterval(changeBufferBar, 1000);
+    }
+});
+$("#nextSong").click(function () {
+    song.src = "../../audio/月半小夜曲.mp3";
+    $("#playSong").removeClass('play').addClass('stop');
+
+    clearInterval(currentPlayTimeInterval);
+    $("#nowPlayBar").stop().width(0);
+    $("#nowBufferBar").stop().width(0);
+    $("#nowPoint").stop().css({'margin-left': 0});
+
+    song.play();
+
+    song.oncanplay = function () {
+        currentPlayTimeInterval = setInterval(getCurrentPlayTime, 1000);
+        getTotalPlayTime();
+        changePlayBar();
+        bufferBarInterval = setInterval(changeBufferBar, 1000);
+    }
+});
+
+/************************** ---- 控制上一首 or 下一首部分结束 ---- **************************/
 
 
 
@@ -179,7 +222,12 @@ for (let i = 0; i < colors.length; i++) {
     deg = i * 12;
 
     // Create the colorbars
-    $('<div class="colorBar">').css({backgroundColor: '#' + colors[i], transform: 'rotate(' + deg + 'deg)', top: -Math.sin(deg / rad2deg) * 40 + 100, left: Math.cos((180 - deg) / rad2deg) * 40 + 100,}).appendTo(bars);
+    $('<div class="colorBar">').css({
+        backgroundColor: '#' + colors[i],
+        transform: 'rotate(' + deg + 'deg)',
+        top: -Math.sin(deg / rad2deg) * 40 + 100,
+        left: Math.cos((180 - deg) / rad2deg) * 40 + 100,
+    }).appendTo(bars);
 }
 
 var colorBars = bars.find('.colorBar');
@@ -209,49 +257,6 @@ $('#volumeControl').knobKnob({
 
 
 
-
-/**
- * 控制上一首 or 下一首部分
- */
-$("#prepSong").click(function () {
-    song.src = "../../audio/我ら来たれり.mp3";
-    $("#playSong").removeClass('play').addClass('stop');
-
-    clearInterval(addCurrentPlayTime);
-    $("#nowPlayBar").stop().width(0);
-    $("#nowBufferBar").stop().width(0);
-    $("#nowPoint").stop().css({'margin-left':0});
-
-    song.play();
-
-    song.oncanplay = function() {
-        addCurrentPlayTime = setInterval(getCurrentPlayTime, 200);
-        $("#totalPlayTime").html(getTotalPlayTime());
-        changePlayBar();
-    }
-});
-$("#nextSong").click(function () {
-    song.src = "../../audio/月半小夜曲.mp3";
-    $("#playSong").removeClass('play').addClass('stop');
-
-    clearInterval(addCurrentPlayTime);
-    $("#nowPlayBar").stop().width(0);
-    $("#nowBufferBar").stop().width(0);
-    $("#nowPoint").stop().css({'margin-left':0});
-    
-    song.play();
-
-    song.oncanplay = function() {
-        addCurrentPlayTime = setInterval(getCurrentPlayTime, 200);
-        $("#totalPlayTime").html(getTotalPlayTime());
-        changePlayBar();
-    }
-});
-
-/************************** ---- 控制上一首 or 下一首部分结束 ---- **************************/
-
-
-
 /**
  * 播放器复用函数部分
  */
@@ -270,7 +275,7 @@ function getTotalPlayTime() {
     if (second <= 9) {
         second = "0" + second;
     }
-    return house + ":" + minute + ":" + second;
+    $("#totalPlayTime").html(house + ":" + minute + ":" + second);
 }
 
     /* 获取当前歌曲播放的进度时间 */
@@ -289,17 +294,25 @@ function getCurrentPlayTime() {
         second = "0" + second;
     }
     $("#currentPlayTime").html(house + ":" + minute + ":" + second);
+
+    if (currentPlayTime == song.duration) {
+        clearInterval(currentPlayTimeInterval);
+    }
 }
 
     /* 获取歌曲缓冲进度/改变播放器缓冲条进度 */
 function changeBufferBar() {
-    $("#nowBufferBar").stop(true).animate({'width': song.buffered.end(song.buffered.length - 1)/song.duration * 100 + "%"}, 888);
+    $("#nowBufferBar").stop(true).animate({'width': song.buffered.end(song.buffered.length - 1) / song.duration * 100 + "%"}, 1000);
+    if ($("#nowBufferBar").width() == $("#barTag").width()) {
+        $("#nowBufferBar").stop(true);
+        clearInterval(bufferBarInterval);
+    }
 }
 
     /* 改变播放器播放进度条 */
 function changePlayBar() {
-    $("#nowPlayBar").animate({'width':"100%"}, ((song.duration - song.currentTime) * 1000));
-    $("#nowPoint").animate({'margin-left':"100%"}, ((song.duration - song.currentTime) * 1000));
+    $("#nowPlayBar").animate({'width': "100%"}, ((song.duration - song.currentTime + 1) * 1000));
+    $("#nowPoint").animate({'margin-left': "100%"}, ((song.duration - song.currentTime + 1) * 1000));
 }
 
 /************************** ---- 播放器复用函数部分结束 ---- **************************/
