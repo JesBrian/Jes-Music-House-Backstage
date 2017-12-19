@@ -80,12 +80,19 @@ $("#nextSong").click(function () {
 
 
 /**
- * 点击进度条播放的部分 -- 未完待续
+ * 点击进度条播放的部分
  */
-$("#barTag").click(function () {
-    console.log($(this).offset());
-    console.log($(this).width());
-});
+function changeCurrentTime(event) {
+    if (song.src) {
+        song.pause();
+        let clickTime = (getMousePosX(event) - $("#barTag").offset().left) / $("#barTag").width() + 0.01;
+        song.currentTime = song.duration * clickTime;
+        let clickTimePrecent = Number.parseInt(clickTime * 100) + "%";
+        $("#nowPlayBar").stop(true).width(clickTimePrecent);
+        $("#nowPoint").stop(true).css({"margin-left": clickTimePrecent});
+        song.play();
+    }
+}
 
 /************************** ---- 点击进度条播放的部分结束 ---- **************************/
 
@@ -318,3 +325,15 @@ function startPlaySong() {
 }
 
 /************************** ---- 播放器复用函数部分结束 ---- **************************/
+
+
+function getMousePosX(e = window.event) {
+    let scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+    let x = e.pageX || e.clientX + scrollX;
+    return x;
+}
+function getMousePosY(e = window.event) {
+    let scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+    let x = e.pageX || e.clientX + scrollX;
+    return x;
+}
