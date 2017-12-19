@@ -12,6 +12,10 @@ $("#playSong").click(function () {
     if ($(this).hasClass("stop")) {
         if (!song.src) {
             song.src = "../../audio/test.mp3";
+            song.oncanplay = function () {
+                startPlaySong();
+            };
+
         } else {
             if (tempCurrentTime !== 0) {
                 song.currentTime = tempCurrentTime;
@@ -28,11 +32,6 @@ $("#playSong").click(function () {
         }
 
         song.play();
-
-        song.oncanplay = function () {
-            startPlaySong();
-        }
-
 
     } else {
         song.pause();
@@ -89,22 +88,26 @@ $("#nextSong").click(function () {
  */
 $("#barTag").on('click', function (event) {
     if (song.src) {
-
-
+        if (song.oncanplay !== null) {
+            song.oncanplay = null;  //必须将其设为null，不然会有一大堆BUG现象
+        }
+        song.pause();
+        clearInterval(currentPlayTimeInterval);
         let clickTime = (getMousePosX(event) - $("#barTag").offset().left) / $("#barTag").width() + 0.01;
         let clickTimePrecent = Number.parseInt(clickTime * 100) + "%";
 
-        clearInterval(currentPlayTimeInterval);
         $("#nowPlayBar").stop(true).width(clickTimePrecent);
         $("#nowPoint").stop(true).css({"margin-left": clickTimePrecent});
 
 
         if ($("#playSong").hasClass("stop")) {
             song.currentTime = song.duration * clickTime;
+            currentPlayTimeInterval = setInterval(getCurrentPlayTime, 1000);
+            song.play();
+            changePlayBar();
         } else {
-            // song.currentTime = song.duration * clickTime;    //[ BUG - 如果直接赋值给歌曲对象的当前播放时间会自动播放动画还停不下来 ]
-            tempCurrentTime = song.duration * clickTime;
-            $("#currentPlayTime").html(completeTime(song.duration * clickTime));  //修改当前跳转的时间显示 [ BUG - 修改后还是会重新显示原来的时间 ]
+            song.currentTime = song.duration * clickTime;
+            $("#currentPlayTime").html(completeTime(song.currentTime));
         }
     }
 });
@@ -302,6 +305,7 @@ function getCurrentPlayTime() {
     $("#currentPlayTime").html(completeTime(song.currentTime));
 
     if (song.currentTime == song.duration) {
+        song.oncanplay = null;
         clearInterval(currentPlayTimeInterval);
         $("#playSong").addClass('play').removeClass('stop');
     }
