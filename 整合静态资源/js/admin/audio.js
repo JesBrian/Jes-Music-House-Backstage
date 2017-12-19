@@ -1,4 +1,5 @@
 var song = document.getElementById("songSource");
+var tempCurrentTime = 0;
 var currentPlayTimeInterval;    //当前播放时间定时器
 var bufferBarInterval;  //缓冲条进度定时器
 
@@ -12,6 +13,10 @@ $("#playSong").click(function () {
         if (!song.src) {
             song.src = "../../audio/test.mp3";
         } else {
+            if (tempCurrentTime !== 0) {
+                song.currentTime = tempCurrentTime;
+                tempCurrentTime = 0;
+            }
             if (song.currentTime == song.duration) { //如果一首歌曲已经播放完毕就重新开始
                 song.currentTime = 0;
                 $("#nowPlayBar").stop(true).width(0);
@@ -50,8 +55,8 @@ $("#prepSong").click(function () {
 
     clearInterval(currentPlayTimeInterval);
     $("#nowPlayBar").stop(true).width(0);
-    $("#nowBufferBar").stop(true).width(0);
     $("#nowPoint").stop(true).css({'margin-left': 0});
+    $("#nowBufferBar").stop(true).width(0);
 
     song.play();
 
@@ -65,8 +70,8 @@ $("#nextSong").click(function () {
 
     clearInterval(currentPlayTimeInterval);
     $("#nowPlayBar").stop(true).width(0);
-    $("#nowBufferBar").stop(true).width(0);
     $("#nowPoint").stop(true).css({'margin-left': 0});
+    $("#nowBufferBar").stop(true).width(0);
 
     song.play();
 
@@ -80,19 +85,30 @@ $("#nextSong").click(function () {
 
 
 /**
- * 点击进度条播放的部分
+ * 点击进度条播放跳转进度的部分
  */
-function changeCurrentTime(event) {
+$("#barTag").on('click', function (event) {
     if (song.src) {
-        song.pause();
+
+
         let clickTime = (getMousePosX(event) - $("#barTag").offset().left) / $("#barTag").width() + 0.01;
-        song.currentTime = song.duration * clickTime;
         let clickTimePrecent = Number.parseInt(clickTime * 100) + "%";
+
+        clearInterval(currentPlayTimeInterval);
         $("#nowPlayBar").stop(true).width(clickTimePrecent);
         $("#nowPoint").stop(true).css({"margin-left": clickTimePrecent});
-        song.play();
+
+
+        if ($("#playSong").hasClass("stop")) {
+            song.currentTime = song.duration * clickTime;
+        } else {
+            // song.currentTime = song.duration * clickTime;    //[ BUG - 如果直接赋值给歌曲对象的当前播放时间会自动播放动画还停不下来 ]
+            tempCurrentTime = song.duration * clickTime;
+            $("#currentPlayTime").html(completeTime(song.duration * clickTime));  //修改当前跳转的时间显示 [ BUG - 修改后还是会重新显示原来的时间 ]
+        }
     }
-}
+});
+
 
 /************************** ---- 点击进度条播放的部分结束 ---- **************************/
 
@@ -302,8 +318,8 @@ function changeBufferBar() {
 
     /* 改变播放器播放进度条 */
 function changePlayBar() {
-    $("#nowPlayBar").animate({'width': "100%"}, ((song.duration - song.currentTime + 0.8) * 1000));
-    $("#nowPoint").animate({'margin-left': "100%"}, ((song.duration - song.currentTime + 0.8) * 1000));
+    $("#nowPlayBar").stop(true).animate({'width': "100%"}, ((song.duration - song.currentTime + 0.8) * 1000));
+    $("#nowPoint").stop(true).animate({'margin-left': "100%"}, ((song.duration - song.currentTime + 0.8) * 1000));
 }
 
     /* 计算时间 */
