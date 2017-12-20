@@ -118,6 +118,33 @@ $("#barTag").on('click', function (event) {
 
 
 /**
+ * 拖拽播放进度指针跳转进度的部分
+ */
+$("#nowPoint").on("drag",function () {
+    console.log("拖拽事件 - 整个拖拽都会发生");
+});
+$("#nowPoint").on("dragleave",function () {
+    console.log("拖拽离开事件 - 拖拽离开原来位置事件");
+});
+$("#nowPoint").on("dragstart",function () {
+    console.log("拖拽开始事件 - 拖拽开始事件");
+});
+$("#nowPoint").on("dragend",function (ev) {
+    console.log("拖拽结束事件 - 拖拽中放开鼠标左键事件");
+    console.log(ev);
+});
+
+
+
+
+
+
+/************************** ---- 拖拽播放进度指针的部分结束 ---- **************************/
+
+
+
+
+/**
  * 控制音量的部分
  */
 $("#volumeOper").click(function () {
