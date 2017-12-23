@@ -2,6 +2,7 @@ var song = document.getElementById("songSource");
 var tempCurrentTime = 0;
 var currentPlayTimeInterval;    //当前播放时间定时器
 var bufferBarInterval;  //缓冲条进度定时器
+var nowPointX = $("#nowPoint").offset().left;
 
 /**
  * 控制歌曲的播放 or 暂停部分
@@ -118,23 +119,23 @@ $("#barTag").on('click', function (event) {
 
 
 /**
- * 拖拽播放进度指针跳转进度的部分
+ * 拖拽播放进度指针跳转进度的部分[使用鼠标按下、拖动、弹开几个来实现]
  */
-$("#nowPoint").on("drag",function () {
-    console.log("拖拽事件 - 整个拖拽都会发生");
-});
-$("#nowPoint").on("dragleave",function () {
-    console.log("拖拽离开事件 - 拖拽离开原来位置事件");
-});
-$("#nowPoint").on("dragstart",function () {
-    console.log("拖拽开始事件 - 拖拽开始事件");
-});
-$("#nowPoint").on("dragend",function (ev) {
-    console.log("拖拽结束事件 - 拖拽中放开鼠标左键事件");
-    console.log(ev);
-});
+$("#nowPoint").mousedown(function () {
+    // 绑定鼠标的移动事件，因为光标在DIV元素外面也要有效果，所以要用doucment的事件，而不用DIV元素的事件
+    $(document).on("mousemove", function (ev) {
+        // 当前鼠标的位置（移动后，鼠标弹起）
+        sx = ev.pageX;
 
-
+        // 设定元素位置
+        $("#nowPoint").css({"margin-left": sx - nowPointX - 50, 'cursor': 'crosshair'});
+    });
+    // 当鼠标按键弹起时，解除元素移动，让元素停留在当前位置
+    $(document).mouseup(function () {
+        $(this).off("mousemove");
+        $("#nowPoint").css({'cursor': 'pointer'});
+    });
+});
 
 
 
