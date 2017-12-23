@@ -26,16 +26,22 @@
     <div id="sendMesaage-main" class="box-show2" style="height:438px;">
 
         <div style="margin:0 0 0 108px; padding-top:38px; font-size:24px; line-height:2em; font-weight:700;">
-            To 私信用户：<input class="s1c-Bg box-show3" type="text" value="" style="width:288px; margin-left:18px; padding:8px; font-size:18px; ">
+            To 私信用户：<input class="s1c-Bg box-show3" type="text" value="" placeholder="私信接收用户" style="width:288px; margin-left:18px; padding:8px; font-size:18px; color:#19EFFF;">
             <span style="top:51px; position:relative; z-index:5;">
                 <a class="superBtn joinSinger MyIF user"> 查找用户</a>
             </span>
         </div>
 
-        <textarea id="replyDiv" class="niftyModalForm s1c-Bg box-show3" placeholder="请填写要发送的私信内容！" style="width:80%; height:228px; margin:28px 10% 0; resize:none;"></textarea>
+
+        <style type="text/css">
+            .emoji_content {
+                top:4px; /*表情选择显示BUG*/
+            }
+        </style>
+        <textarea id="replyDiv" class="niftyModalForm s1c-Bg box-show3" placeholder="请填写要发送的私信内容！" style="width:80%; height:188px; margin:28px 10% 0; text-indent:2em; font-size:17px; color:#19EFFF; resize:none;"></textarea>
         <i class="emoji MyIF exciting" style="margin:0 28px 0 15%; line-height:3em;"></i>限制<i style="margin:0 10px;">250</i>字
 
-        <span style="margin:68px 208px; float:right; position:relative; z-index:1;">
+        <span style="margin:88px 208px; float:right; position:relative; z-index:1;">
             <a class="superBtn joinSinger MyIF mail"> 发送私信</a>
         </span>
     </div>
