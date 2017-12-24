@@ -122,13 +122,26 @@ $("#barTag").on('click', function (event) {
  * 拖拽播放进度指针跳转进度的部分[使用鼠标按下、拖动、弹开几个来实现]
  */
 $("#nowPoint").mousedown(function () {
+
+    song.pause();
+    clearInterval(currentPlayTimeInterval);
+    $("#nowPlayBar").stop(true);
+    $("#nowPoint").stop(true);
+
     // 绑定鼠标的移动事件，因为光标在DIV元素外面也要有效果，所以要用doucment的事件，而不用DIV元素的事件
     $(document).on("mousemove", function (ev) {
         // 当前鼠标的位置（移动后，鼠标弹起）
         sx = ev.pageX;
-
+        moveX = sx - nowPointX - 50;
+        //当鼠标移出播放条时强行解绑鼠标移动事件,并结束该函数
+        if (moveX <= 0 || moveX >= $("#barTag").width() - 8) {
+            $(this).off("mousemove");
+            $("#nowPoint").css({'cursor': 'pointer'});
+            return;
+        }
         // 设定元素位置
-        $("#nowPoint").css({"margin-left": sx - nowPointX - 50, 'cursor': 'crosshair'});
+        $("#nowPlayBar").css({"width": moveX});
+        $("#nowPoint").css({"margin-left": moveX});
     });
     // 当鼠标按键弹起时，解除元素移动，让元素停留在当前位置
     $(document).mouseup(function () {
@@ -136,9 +149,6 @@ $("#nowPoint").mousedown(function () {
         $("#nowPoint").css({'cursor': 'pointer'});
     });
 });
-
-
-
 
 /************************** ---- 拖拽播放进度指针的部分结束 ---- **************************/
 
