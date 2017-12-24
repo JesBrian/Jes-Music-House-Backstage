@@ -1,12 +1,10 @@
 .emoji_container * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 .emoji_container {
     display: none;
-    width: 572px;
+    width: 605px;
     position: absolute;
     border-radius: 4px;
     border: 0.5px solid #464646;
@@ -15,9 +13,8 @@
     background-image: -moz-linear-gradient(#444444, #373738);
     background-image: -webkit-linear-gradient(#444444, #373738);
     background-image: linear-gradient(#444444, #373738);
-    -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index:9999;
 }
 
 .emoji_container ul {

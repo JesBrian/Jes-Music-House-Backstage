@@ -2,7 +2,7 @@
  * 前端个人账号页、他人用户页、账户信息修改页、消息页 CSS
  */
 
-#account-main, #outherUser-main, #update-main, #updateAlbum-main {  width:900px; height:800px; margin:25px 115px 0 auto; padding-bottom:28px;  }
+#account-main, #outherUser-main, #update-main, #updateAlbum-main, #sendMesaage-main {  width:900px; height:800px; margin:25px 115px 0 auto; padding-bottom:28px;  }
 #account-main>iframe, #outherUser-main>iframe {  width:98%; height:100%; padding:20px 12px; border:none;  }
 
     /* 个人账户页面部分 */
@@ -69,7 +69,7 @@
 #mesaageContent .messageList .replyButton:hover {  color:#00FFB6  }
 #mesaage-main .noMessage {  margin-top:58px; text-align:center; font-size:28px;  }
 #mesaage-main .noMessage>i {  margin:12px; font-size:66px;  }
-
+#mesaage-main a.reply:after {  left: -39.5px;  }
 
 
     /* 子页面通用 */
