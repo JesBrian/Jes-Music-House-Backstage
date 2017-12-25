@@ -93,7 +93,7 @@ CREATE TABLE mh_backstage_message
   `to` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '接收者',
   `toType` TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '接收类型 [1-superadmin-超级管理员 / 2-admin-普通管理员 / 3-singer-歌手 / 4-member-会员 / 5-user-普通用户]',
   content TEXT NOT NULL COMMENT '信息的内容',
-  status BIT NOT NULL DEFAULT 1 COMMENT '信息状态 [默认是 1 未读，还有 0 已读]'
+  status BIT NOT NULL DEFAULT 1 COMMENT '信息状态 [默认是 1 未读，还有 0 已读]',
   sendTime INT UNSIGNED NOT NULL COMMENT '信息发送时间',
   INDEX backstageMessage_fromType(`fromType`),
   INDEX backstageMessage_sendTime(sendTime),
@@ -141,6 +141,23 @@ CREATE TABLE mh_userXX_listen
 )ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
+/* MH私信表 -- 发送私信内容表 */
+CREATE TABLE mh_message
+(
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+  fromId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '用户ID',
+  fromType TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '接收类型 [1-superadmin-超级管理员 / 2-admin-普通管理员 / 3-singer-歌手 / 4-member-会员 / 5-user-普通用户]',
+  toId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '接受者ID',
+  toType TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '接收类型 [1-superadmin-超级管理员 / 2-admin-普通管理员 / 3-singer-歌手 / 4-member-会员 / 5-user-普通用户]',
+  content TEXT NOT NULL COMMENT '私信的内容',
+  status BIT NOT NULL DEFAULT 1 COMMENT '私信状态 [默认是 1 未读，还有 0 已读]',
+  sendTime INT UNSIGNED NOT NULL COMMENT '私信发送时间',
+  INDEX message_fromType(`fromType`),
+  INDEX message_toOne(`toId`,`toType`),
+  INDEX message_sendTime(sendTime)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
 /* MH会员表 -- 普通用户付钱后成为会员 */
 CREATE TABLE mh_member
 (
@@ -157,13 +174,14 @@ CREATE TABLE mh_member
 CREATE TABLE mh_singer
 (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-  userId INT UNSIGNED DEFAULT 0 COMMENT '对应的用户账号[0为没有]',
+  userId INT UNSIGNED DEFAULT 0 COMMENT '对应的用户账号[0为没有, 有的话则为对应的用户账户ID]',
   singerName VARCHAR(25) NOT NULL DEFAULT '' COMMENT '歌手艺名',
   singerImg VARCHAR(255) DEFAULT '' COMMENT '歌手图片',
   sex TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '歌手性别[ 1-男 / 2-女 / 3-团队 ]',
   styleId TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '歌手歌曲风格id',
   brand VARCHAR(255) DEFAULT '' COMMENT '歌手所属公司/品牌',
   introduction TEXT COMMENT '歌手简介',
+  fansNum INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '歌手粉丝数量',
   realName VARCHAR(25) NOT NULL DEFAULT '' COMMENT '歌手真名[审核通过后不能更改]',
   phone CHAR(13) NOT NULL DEFAULT '' COMMENT '歌手手机',
   nationality TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '歌手所属国籍[默认 1-中国]',
@@ -177,6 +195,31 @@ CREATE TABLE mh_singer
   INDEX singer_singerName(singerName),
   INDEX singer_styleId(styleId),
   INDEX singer_createTime(createTime)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+/* MH音乐歌手粉丝表 */
+#如果用户关注了某位歌手，即作为某歌手粉丝，则该歌手有 新曲/新专辑 会有系统消息提示
+CREATE TABLE mh_fans
+(
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+  singerId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '歌手ID',
+  userId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '用户ID',
+  INDEX fans_singerId(singerId),
+  INDEX fans_userId(userId)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+/* MH音乐歌手的粉丝黑名单 */
+#如果歌手设置了某用户为黑名单，则不再收到该用户的 私信/关注 消息
+CREATE TABLE mh_fans_blacklist
+(
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+  singerId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '歌手ID',
+  userId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '用户ID',
+  tips VARCHAR(255) NOT NULL DEFAULT '' COMMENT '拉黑进黑名单原因备注',
+  INDEX fans_blacklist_singerId(singerId),
+  INDEX fans_blacklist_userId(userId)
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
