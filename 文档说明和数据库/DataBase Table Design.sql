@@ -4,39 +4,42 @@ CREATE DATABASE MusicHouse;
 USE MusicHouse;
 
 /* MH后台菜单表 -- 设置后台菜单，分一、二级菜单 */
+#后台菜单表记录后台的各种操作[名称/跳转URL地址等]
 CREATE TABLE mh_menu
 (
   id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(28) NOT NULL DEFAULT '' COMMENT '菜单名称',
   parent_id TINYINT UNSIGNED DEFAULT 0 COMMENT '菜单的父ID [如果是二级菜单则该字段记录一级菜单的ID]',
+  url VARCHAR(255) NOT NULL DEFAULT '' COMMENT '菜单对应的URL跳转地址',
   level TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '菜单的优先级 [后台左侧菜单栏显示顺序]',
   status BIT NOT NULL DEFAULT 1 COMMENT '菜单状态 [默认是 1 正常，还有 0 非正常状态]'
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT mh_menu(name, parent_id, level)
-  VALUES ('系统管理',0,127);
-INSERT mh_menu(name, parent_id, level)
-  VALUES ('菜单管理',1,52);
-INSERT mh_menu(name, parent_id, level)
-  VALUES ('权限管理',1,48);
-INSERT mh_menu(name, parent_id, level)
-  VALUES ('角色管理',1,46);
-INSERT mh_menu(name, parent_id, level)
-  VALUES ('登陆日志',1,44);
+INSERT mh_menu(name, parent_id, url, level)
+  VALUES ('系统管理',0,'',127);
+INSERT mh_menu(name, parent_id, url, level)
+  VALUES ('菜单管理',1,'',52);
+INSERT mh_menu(name, parent_id, url, level)
+  VALUES ('权限管理',1,'',48);
+INSERT mh_menu(name, parent_id, url, level)
+  VALUES ('角色管理',1,'',46);
+INSERT mh_menu(name, parent_id, url, level)
+  VALUES ('登陆日志',1,'',44);
 
-INSERT mh_menu(name, parent_id, level)
-  VALUES ('人员管理',0,125);
-INSERT mh_menu(name, parent_id, level)
-  VALUES ('歌手管理',6,52);
-INSERT mh_menu(name, parent_id, level)
-  VALUES ('会员管理',6,50);
-INSERT mh_menu(name, parent_id, level)
-  VALUES ('用户管理',6,48);
+INSERT mh_menu(name, parent_id, url, level)
+  VALUES ('人员管理',0,'',125);
+INSERT mh_menu(name, parent_id, url, level)
+  VALUES ('歌手管理',6,'',52);
+INSERT mh_menu(name, parent_id, url, level)
+  VALUES ('会员管理',6,'',50);
+INSERT mh_menu(name, parent_id, url, level)
+  VALUES ('用户管理',6,'',48);
 
 
 
 
 /* MH权限表 -- 设置普通用户-5、会员-4、歌手-3、普通管理员-2、超级管理员权限-1 */
+#管理权限表设置不同身份的人的不同权限，可以进行什么操作，后台有什么菜单等
 CREATE TABLE mh_power
 (
   id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -53,6 +56,7 @@ INSERT mh_power(type,operIdList)
 
 
 /* MH管理员表 -- 进入后台对整个系统调整 */
+#管理员表记录 Music House 后台的所有管理员合作伙伴的管理角色
 CREATE TABLE mh_admin
 (
   id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
@@ -75,33 +79,38 @@ INSERT mh_admin(loginName, salt, passwd, realName, phone, IDCardNo, IDCardImg, b
 
 
 
-/* MH管理员登陆日志 */
+/* MH后台管理系统登陆日志 */
+#登陆日志表记录所有登陆过后台的记录，防止盗号或者其他什么突发意外事情的发生
 CREATE TABLE mh_login_log
 (
-  adminId TINYINT UNSIGNED NOT NULL COMMENT '管理员账户ID',
-  loginTime INT UNSIGNED NOT NULL COMMENT '管理员账户每次登陆时间',
-  INDEX loginLog_adminId(adminId)
+  accountId TINYINT UNSIGNED NOT NULL COMMENT '账户ID',
+  accountType TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '账户类型 [1-superadmin-超级管理员 / 2-admin-普通管理员 / 3-singer-歌手 / 4-member-会员 / 5-user-普通用户]',
+  loginIp VARCHAR(20) NOT NULL DEFAULT '' COMMENT '账户每次登陆的IP地址',
+  loginTime INT UNSIGNED NOT NULL COMMENT '账户每次登陆的时间',
+  INDEX loginLog_accountId(accountId)
 )ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH后台系统信息表 */
+#后台信息表是记录只有能登陆进后台管理系统的账号才能接收/发送信息的表，为了反范式[私信表]
 CREATE TABLE mh_backstage_message
 (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
-  `from` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '发送者',
+  `fromId` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '发送者ID',
   `fromType` TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '发送类型 [1-superadmin-超级管理员 / 2-admin-普通管理员 / 3-singer-歌手 / 4-member-会员 / 5-user-普通用户]',
-  `to` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '接收者',
+  `toId` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '接收者ID',
   `toType` TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '接收类型 [1-superadmin-超级管理员 / 2-admin-普通管理员 / 3-singer-歌手 / 4-member-会员 / 5-user-普通用户]',
   content TEXT NOT NULL COMMENT '信息的内容',
   status BIT NOT NULL DEFAULT 1 COMMENT '信息状态 [默认是 1 未读，还有 0 已读]',
   sendTime INT UNSIGNED NOT NULL COMMENT '信息发送时间',
   INDEX backstageMessage_fromType(`fromType`),
   INDEX backstageMessage_sendTime(sendTime),
-  INDEX backstageMessage_toOne(`to`,`toType`)
+  INDEX backstageMessage_toOne(`toId`,`toType`)
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
 /* MH用户表 -- 普通注册用户 */
+#记录注册用户的常用信息
 CREATE TABLE mh_user
 (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
@@ -120,6 +129,7 @@ CREATE TABLE mh_user
 
 
 /* MH用户表其他信息表 -- 记录用户其他一些不常用的信息 */
+#反范式设计[不常用的用户信息]
 CREATE TABLE mh_user_info
 (
   userId INT UNSIGNED PRIMARY KEY ,
@@ -132,6 +142,7 @@ CREATE TABLE mh_user_info
 
 
 /* MH用户听歌情况表 -- 注册用户之后就会自动产生一个用户听歌表记录所听过的歌曲以及对应听的次数 */
+#听歌表记录用户从注册之后所有的听歌记录，听过什么歌曲，每一首歌曲分别听了多少次
 CREATE TABLE mh_userXX_listen
 (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
@@ -142,10 +153,11 @@ CREATE TABLE mh_userXX_listen
 
 
 /* MH私信表 -- 发送私信内容表 */
+#私信表记录各个账户[用户/会员/歌手/管理员/超级管理员]之间所发送的私信内容
 CREATE TABLE mh_message
 (
   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
-  fromId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '用户ID',
+  fromId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '发送者ID',
   fromType TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '接收类型 [1-superadmin-超级管理员 / 2-admin-普通管理员 / 3-singer-歌手 / 4-member-会员 / 5-user-普通用户]',
   toId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '接受者ID',
   toType TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '接收类型 [1-superadmin-超级管理员 / 2-admin-普通管理员 / 3-singer-歌手 / 4-member-会员 / 5-user-普通用户]',
@@ -159,6 +171,7 @@ CREATE TABLE mh_message
 
 
 /* MH会员表 -- 普通用户付钱后成为会员 */
+#会员表记录充了钱你就能变强的会员表会员信息
 CREATE TABLE mh_member
 (
   userId INT UNSIGNED UNIQUE NOT NULL DEFAULT 0 COMMENT '保存对应的用户id',
@@ -171,6 +184,7 @@ CREATE TABLE mh_member
 
 
 /* MH歌手表 -- 申请入驻后成为MH的入驻歌手 */
+#歌手表记录了提交了入驻歌手申请后的准歌手信息
 CREATE TABLE mh_singer
 (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
@@ -218,12 +232,13 @@ CREATE TABLE mh_fans_blacklist
   singerId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '歌手ID',
   userId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '用户ID',
   tips VARCHAR(255) NOT NULL DEFAULT '' COMMENT '拉黑进黑名单原因备注',
-  INDEX fans_blacklist_singerId(singerId),
-  INDEX fans_blacklist_userId(userId)
+  INDEX fansBlacklist_singerId(singerId),
+  INDEX fansBlacklist_userId(userId)
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
 /* MH音乐风格表 -- 用于搜索歌单 */
+#音乐风格表，提供给歌单/专辑/音乐人选择音乐风格使用，也为了推荐功能使用
 CREATE TABLE mh_style
 (
   id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
@@ -235,6 +250,7 @@ CREATE TABLE mh_style
 
 
 /* MH音乐歌单表 -- 歌单分为 1-普通用户歌单，2-歌曲专辑 */
+#记录所有歌单/专辑的信息
 CREATE TABLE mh_album
 (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
@@ -251,6 +267,7 @@ CREATE TABLE mh_album
 
 
 /* MH音乐歌单表对应风格 -- 反范式,为了优化搜索提高搜索相似风格的歌单 */
+#反范式设计，为了查询效率，一个歌单的一个风格即为一条记录[一个歌单限制最多只有3种风格]
 CREATE TABLE mh_album_style
 (
   albumId INT UNSIGNED ,
@@ -261,17 +278,19 @@ CREATE TABLE mh_album_style
 
 
 /* MH音乐单曲表 -- 记录每一首歌的详细信息 */
+#记录曲库里每一首歌曲的重要基本信息
 CREATE TABLE mh_song
 (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
   songName VARCHAR(35) NOT NULL DEFAULT '' COMMENT '歌曲名称',
   singerId VARCHAR(35) NOT NULL DEFAULT '' COMMENT '歌曲的创作人列表[记录歌手的ID使用 , 分隔]',
-  lyric VARCHAR(255) DEFAULT '' COMMENT '歌曲的歌词文件所在路径',
-  songImg VARCHAR(255) DEFAULT '' COMMENT '歌曲的封面图片所在路径',
-  songMP3 VARCHAR(255) DEFAULT '' COMMENT '歌曲的MP3内容所在路径',
-  songTime VARCHAR(10) DEFAULT '' COMMENT '歌曲的播放时间长度',
+#   lyric VARCHAR(255) DEFAULT '' COMMENT '歌曲的歌词文件所在路径',
+#   songImg VARCHAR(255) DEFAULT '' COMMENT '歌曲的封面图片所在路径',
+#   songMP3 VARCHAR(255) DEFAULT '' COMMENT '歌曲的MP3内容所在路径',
+#   songTime VARCHAR(10) DEFAULT '' COMMENT '歌曲的播放时间长度',
   songPrice SMALLINT UNSIGNED DEFAULT 0 COMMENT '歌曲的价格 -- 如果有设置的话',
   status BIT DEFAULT 1 COMMENT '歌曲的状态[默认是 1 正常，还有 0 非正常状态]',
+  publicTime INT UNSIGNED NOT NULL COMMENT '该歌曲发行时间',
   createTime INT UNSIGNED NOT NULL COMMENT '该歌曲创建时间',
   INDEX song_songName(songName),
   INDEX song_singerId(singerId)
@@ -279,6 +298,7 @@ CREATE TABLE mh_song
 
 
 /* MH音乐歌曲交易表 -- 记录每一首歌的交易记录 */
+#歌曲交易表，如果某歌曲需要付钱下载或者聆听则记录该首歌曲的销售记录
 CREATE TABLE mh_song_buy
 (
   dealID BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
@@ -293,6 +313,7 @@ CREATE TABLE mh_song_buy
 
 
 /* MH音乐歌曲其他信息表 -- 为了效率采用反范式方法创建一个专门记录歌曲聆听次数 & 被购买次数的表 */
+#反范式设计提高效率
 CREATE TABLE mh_song_info
 (
   songId INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '歌曲对应的ID',
@@ -302,6 +323,7 @@ CREATE TABLE mh_song_info
 
 
 /* MH音乐排行榜 -- 为了效率再次采用反范式方法创建一个专门记录前XX条高聆听的歌曲 */
+#排行榜反范式设计提高效率，单独记录了总聆听次数排名前XX条的歌曲基本信息
 CREATE TABLE mh_listen_rank
 (
   songId INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '歌曲对应的ID',
@@ -312,6 +334,7 @@ CREATE TABLE mh_listen_rank
 
 
 /* MH歌曲评论表 -- 记录用户对歌曲的评论 */
+#评论表详细记录哪个用户在哪一首歌曲做出的评论，并且收到了多少点赞数量
 CREATE TABLE mh_comment
 (
   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
@@ -328,6 +351,7 @@ CREATE TABLE mh_comment
 
 
 /* MH评论点赞表 -- 记录哪个用户点赞了哪条评论 */
+#评论点赞表详细记录了哪个用户分别点赞了哪一条评论
 CREATE TABLE mh_comment_like
 (
   commentId BIGINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '对应的评论ID',
