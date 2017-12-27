@@ -68,6 +68,7 @@
 #modal-collection>.md-content>span {  top:142px; right:168px; position:absolute; z-index:9;  }
 #collectionContent {  height:238px; margin-top:28px; padding:0 0 0 25px;  }
 #collectionContent a {  width:168px; height:28px; margin:2px 0 15px 28px; padding: 6.5px 7px; display:inline-block;  }
+#collectionContent a:hover > span {  text-decoration:underline; color:lightgreen;  }
 #collectionContent a>img {  width:28px; height:28px; border:none; border-radius:3px;  }
 #collectionContent a>span {  width:128px; height:28px; margin-left:5px; overflow:hidden; display:inline-block; font:normal normal normal 13px/28px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; text-align:center;  }
         /* 操作提示 */
@@ -124,6 +125,39 @@
 #styleTagList label {  margin:3px 8px 8px;  }
 #modal-selectStyleTag #buttonGroup {  width:93%; height:42px; text-align:center;  }
 #modal-selectStyleTag #buttonGroup > a {  margin:48px 128px 0 0;  }
-
+        /* 选择私信用户 */
+#modal-searchUser {
+    width:760px;
+}
+#modal-searchUser form {
+    margin:10px 58px; float:left;
+}
+#modal-searchUser .search-user-list {
+    width:168px; height:28px; margin:2px 0 15px 25px; padding: 6px 7px; position:relative; display:inline-block; text-align:left;
+}
+#modal-searchUser .search-user-list > img {
+    width:28px; height:28px; margin-top:-1px; float:left; border:none; border-radius:3px;
+}
+#modal-searchUser .search-user-list > span {
+    width:118px; height:28px; margin-left:8px; float:left; line-height:1.9em; color:#00CDFF;
+}
+#modal-searchUser .search-user-list:hover > span {
+    text-decoration:underline;
+    color:lightgreen!important;
+}
+#modal-searchUser .search-user-list.active {
+    background:#181818;
+    border:1px solid #282828;
+}
+#modal-searchUser .search-user-list.active:after {
+    content:'√';
+    top:-10px;
+    right:-2px;
+    position:absolute;
+    font-size:22px;
+    font-weight:900;
+    font-style:italic;
+    color:#00FFB6;
+}
 
 
