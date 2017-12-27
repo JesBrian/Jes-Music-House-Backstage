@@ -168,8 +168,6 @@ function cancelNiftyModalsForm() {
 }
 
 
-
-
 /**
  * 根据传入的model名字来弹出相应的模拟框
  */

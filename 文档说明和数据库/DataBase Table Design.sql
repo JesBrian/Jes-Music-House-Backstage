@@ -118,7 +118,7 @@ CREATE TABLE mh_user
   salt CHAR(4) NOT NULL DEFAULT '' COMMENT '密码加盐',
   passwd CHAR(32) NOT NULL DEFAULT '' COMMENT '加密后的密码',
   avatar VARCHAR(255) NOT NULL DEFAULT '' COMMENT '用户头像图片',
-  powerId TINYINT UNSIGNED NOT NULL DEFAULT '5' COMMENT '权限类型[默认是 5，为普通用户，还有 4 是会员 ]',
+  powerId TINYINT UNSIGNED NOT NULL DEFAULT '5' COMMENT '权限类型[默认是 5，为普通用户， 1-superadmin-超级管理员 / 2-admin-普通管理员 / 3-singer-歌手 / 4-member-会员 / 5-user-普通用户]',
   status BIT NOT NULL DEFAULT 1 COMMENT '用户账户状态[默认是 1 正常，还有 0 非正常状态]',
   createTime INT UNSIGNED NOT NULL COMMENT '用户账户创建时间[可以用于每天新用户 - 保存在 XX 表中]',
   loginTime INT UNSIGNED NOT NULL COMMENT '用户上一次登录时间[可以用于计算活跃用户 - 保存在 XX 表中]',

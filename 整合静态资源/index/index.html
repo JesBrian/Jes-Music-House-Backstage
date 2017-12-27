@@ -546,7 +546,7 @@
 
     <!-- 拟态框 -->
     <!-- 用户登录 -->
-    <div class="md-container md-effect-1" id="modal-userLogin">
+    <div id="modal-userLogin" class="md-container md-effect-1">
         <div class="md-content">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/login.png">账户登录</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
@@ -586,7 +586,7 @@
     </div>
 
     <!-- 找回密码 -->
-    <div class="md-container md-effect-1" id="modal-forgetPasswd">
+    <div id="modal-forgetPasswd" class="md-container md-effect-1">
         <div class="md-content">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/power.png">重设密码</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
@@ -609,7 +609,7 @@
     </div>
 
     <!-- 用户注册 -->
-    <div class="md-container md-effect-1" id="modal-register">
+    <div id="modal-register" class="md-container md-effect-1">
         <div class="md-content">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/addUser.png">账户注册</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
@@ -642,7 +642,7 @@
     </div>
 
     <!-- 上传图片 -->
-    <div class="md-container md-effect-1" id="modal-uploadAvatar">
+    <div id="modal-uploadAvatar" class="md-container md-effect-1">
         <div class="md-content">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/musicAlbum.png">上传图片</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
@@ -670,7 +670,7 @@
     </div>
 
     <!-- 歌曲收藏 -->
-    <div class="md-container md-effect-1" id="modal-collection">
+    <div id="modal-collection" class="md-container md-effect-1">
         <div class="md-content">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/musicBox.png">歌曲收藏</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
@@ -726,7 +726,7 @@
     </div>
 
     <!-- 新建歌单 -->
-    <div class="md-container md-effect-1" id="modal-newAlbum">
+    <div id="modal-newAlbum" class="md-container md-effect-1">
         <div class="md-content">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/menu.png">新建歌单</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
@@ -751,7 +751,7 @@
     </div>
 
     <!-- 问卷调查 -->
-    <div class="md-container md-effect-1" id="modal-questionnaire">
+    <div id="modal-questionnaire" class="md-container md-effect-1">
         <div class="md-content">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/menu.png">调查问卷</h3>
             <a class="md-close close-all MyIF all-arrow" onclick="cancelNiftyModalsForm();"></a>
@@ -790,7 +790,7 @@
     </div>
 
     <!-- 操作提示 -->
-    <div class="md-container md-effect-1" id="modal-warning">
+    <div id="modal-warning" class="md-container md-effect-1">
         <div class="md-content">
             <h3 class="glass-Bg box-show3"><img src="../img/icon/warning.png">操作提示</h3>
             <a class="md-close close-all MyIF all-arrow"></a>
@@ -799,6 +799,118 @@
                 <a class="joinSinger superBtn MyIF makesure md-close" onclick="alertTips(0,'资料更新失败！');"> 确定保存</a>
                 <a class="joinSinger superBtn MyIF cancel md-close"> 取消返回</a>
             </span>
+        </div>
+    </div>
+
+    <!-- 查找所有用户 -->
+    <div id="modal-searchUser" class="md-container md-effect-1" style="width:760px;">
+        <div class="md-content">
+            <h3 class="glass-Bg box-show3"><img src="../img/icon/avatar.png">查找用户</h3>
+            <a class="md-close close-all MyIF all-arrow"></a>
+            <form style="margin:10px 58px; float:left;">
+                <section class="webdesigntuts-workshop">
+                    <input type="text" class="niftyModalForm" placeholder=" 输入您想要发送私信的用户名 " required style="width:288px;">
+                    <button type="submit"><i class="MyIF search"></i></button>
+                </section>
+            </form>
+            <span style="top:156px; right:138px; position:absolute; float:right;">
+                <a class="superBtn joinSinger md-close MyIF cubes-1"> 确认选择</a>
+            </span>
+
+            <style>
+                .search-user-list {
+                    position:relative;
+                }
+                .search-user-list.active {
+                    background:#181818;
+                    border:1px solid #282828;
+                }
+                .search-user-list.active:after {
+                    content:'√';
+                    top:-10px;
+                    right:-2px;
+                    position:absolute;
+                    font-size:22px;
+                    font-weight:900;
+                    font-style:italic;
+                    color:#00FFB6;
+                }
+            </style>
+            <div id="searchUserResult" style="width:92%; height:218px; margin:18px auto; padding:0; clear:both;">
+                <a class="search-user-list hover-undeline s1c-Bg box-show3" style="width:168px; height:28px; margin:2px 0 15px 25px; padding: 6px 7px; display:inline-block; text-align:left;">
+                    <img src="../img/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:118px; height:28px; margin-left:3px; overflow:hidden; display:inline-block; line-height:2em; color:#00CDFF;">
+                        tfghklcshj
+                    </span>
+                </a>
+                <a class="search-user-list s1c-Bg box-show3" style="width:168px; height:28px; margin:2px 0 15px 25px; padding: 6px 7px; display:inline-block; text-align:left;">
+                    <img src="../img/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:118px; height:28px; margin-left:3px; overflow:hidden; display:inline-block; line-height:2em; color:#00CDFF;">
+                        tfghklcshj
+                    </span>
+                </a>
+                <a class="search-user-list s1c-Bg box-show3" style="width:168px; height:28px; margin:2px 0 15px 25px; padding: 6px 7px; display:inline-block; text-align:left;">
+                    <img src="../img/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:118px; height:28px; margin-left:3px; overflow:hidden; display:inline-block; line-height:2em; color:#00CDFF;">
+                        tfghklcshj
+                    </span>
+                </a>
+                <a class="search-user-list s1c-Bg box-show3" style="width:168px; height:28px; margin:2px 0 15px 25px; padding: 6px 7px; display:inline-block; text-align:left;">
+                    <img src="../img/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:118px; height:28px; margin-left:3px; overflow:hidden; display:inline-block; line-height:2em; color:#00CDFF;">
+                        tfghklcshj
+                    </span>
+                </a>
+                <a class="search-user-list s1c-Bg box-show3" style="width:168px; height:28px; margin:2px 0 15px 25px; padding: 6px 7px; display:inline-block; text-align:left;">
+                    <img src="../img/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:118px; height:28px; margin-left:3px; overflow:hidden; display:inline-block; line-height:2em; color:#00CDFF;">
+                        tfghklcshj
+                    </span>
+                </a>
+                <a class="search-user-list s1c-Bg box-show3" style="width:168px; height:28px; margin:2px 0 15px 25px; padding: 6px 7px; display:inline-block; text-align:left;">
+                    <img src="../img/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:118px; height:28px; margin-left:3px; overflow:hidden; display:inline-block; line-height:2em; color:#00CDFF;">
+                        tfghklcshj
+                    </span>
+                </a>
+                <a class="search-user-list s1c-Bg box-show3" style="width:168px; height:28px; margin:2px 0 15px 25px; padding: 6px 7px; display:inline-block; text-align:left;">
+                    <img src="../img/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:118px; height:28px; margin-left:3px; overflow:hidden; display:inline-block; line-height:2em; color:#00CDFF;">
+                        tfghklcshj
+                    </span>
+                </a>
+                <a class="search-user-list s1c-Bg box-show3" style="width:168px; height:28px; margin:2px 0 15px 25px; padding: 6px 7px; display:inline-block; text-align:left;">
+                    <img src="../img/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:118px; height:28px; margin-left:3px; overflow:hidden; display:inline-block; line-height:2em; color:#00CDFF;">
+                        tfghklcshj
+                    </span>
+                </a>
+                <a class="search-user-list s1c-Bg box-show3" style="width:168px; height:28px; margin:2px 0 15px 25px; padding: 6px 7px; display:inline-block; text-align:left;">
+                    <img src="../img/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:118px; height:28px; margin-left:3px; overflow:hidden; display:inline-block; line-height:2em; color:#00CDFF;">
+                        tfghklcshj
+                    </span>
+                </a>
+                <a class="search-user-list s1c-Bg box-show3" style="width:168px; height:28px; margin:2px 0 15px 25px; padding: 6px 7px; display:inline-block; text-align:left;">
+                    <img src="../img/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:118px; height:28px; margin-left:3px; overflow:hidden; display:inline-block; line-height:2em; color:#00CDFF;">
+                        tfghklcshj
+                    </span>
+                </a>
+                <a class="search-user-list s1c-Bg box-show3" style="width:168px; height:28px; margin:2px 0 15px 25px; padding: 6px 7px; display:inline-block; text-align:left;">
+                    <img src="../img/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:118px; height:28px; margin-left:3px; overflow:hidden; display:inline-block; line-height:2em; color:#00CDFF;">
+                        tfghklcshj
+                    </span>
+                </a>
+                <a class="search-user-list s1c-Bg box-show3" style="width:168px; height:28px; margin:2px 0 15px 25px; padding: 6px 7px; display:inline-block; text-align:left;">
+                    <img src="../img/common/touxiang.jpg" style="width:28px; height:28px; border:none; border-radius:3px;">
+                    <span style="width:118px; height:28px; margin-left:3px; overflow:hidden; display:inline-block; line-height:2em; color:#00CDFF;">
+                        tfghklcshj
+                    </span>
+                </a>
+                <input type="hidden" name="searchUserTemp" value="">
+            </div>
         </div>
     </div>
 
@@ -1133,6 +1245,7 @@
                 $("#songlistContent").mCustomScrollbar({theme:"inset-2"});
                 $("#songLyrics").mCustomScrollbar({theme:"minimal"});
                 $("#collectionContent").mCustomScrollbar({theme:"inset-2"});
+                $("#searchUserResult").mCustomScrollbar({theme:"inset-2"});
                 $("#styleTagList").mCustomScrollbar({theme:"inset"});
             });
         })(jQuery);
@@ -1276,6 +1389,16 @@
             $('#styleTagIdsTemp').val('');
         }
         /* 注意！！！！！ saveStyleTagTempData 与 clearStyleTagSelect 不能调换顺序执行！！！不然会出现undefind */
+
+
+
+        /**
+         * 搜索用户并选择
+         */
+        $('a.search-user-list').click(function () {
+            $('a.search-user-list').removeClass('active');
+            $(this).addClass('active');
+        });
 
 
     </script>
