@@ -68,7 +68,7 @@ footer>.box-show1 {  width:1350px; height:98px; margin:0 auto; z-index:4; positi
 #linkList>span {  margin:0 38px; font-size:13px;  }
 #serverList {  margin:0 108px; float:right; position:relative;  }
 #serverList>a {  width:40px; height:40px; margin:8px; position:relative; border:0.5px solid #2E2E2E; font:normal normal normal 28px/40px Arial, 'Microsoft YaHei', '微软雅黑'; color:#00CDFF; display:inline-block;  }
-#serverList>a>div {  width:160px; height:185px; top:-190px; left:-60px; position:absolute; display:none; font-size:15px;  }
+#serverList>a>div {  width:128px; height:158px; top:-168px; left:-48px; position:absolute; display:none; font-size:15px;  }
 #serverList>a>div>img {  width:80%; margin:0 auto; border:none; border-radius:5px;  }
 #serverList>.MyIF:hover {  border:0.5px solid #464646; color:#70ff92;  }
 

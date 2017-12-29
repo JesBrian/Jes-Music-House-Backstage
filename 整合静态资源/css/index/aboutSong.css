@@ -75,7 +75,7 @@
 #singer-img>img {  width:95%; height:90%; top:5%; left:2.5%; position:absolute; border-radius:3px; box-shadow:0 0 3px #DDD;  }
 #singer-img>span {  right:148px; bottom:20px; position:absolute; z-index:9; opacity:0.88;  }
 #otherSinger {  width:20%; height:326px; margin:8px 0; float:right; border-radius:3px;  }
-#otherSinger>a {  width:88%; height:35px; margin:20px auto; display:block; border-radius:2px; background:#2E2E2E; font:normal normal normal 12.5px/34px '宋体', 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;  }
+#otherSinger>a {  width:88%; height:35px; margin:20px auto; display:block; border-radius:2px; font:normal normal normal 12.5px/34px '宋体', 'Microsoft YaHei', '微软雅黑'; color:#00CDFF;  }
 #otherSinger img {  width:26px; height:25px; margin:5px 2px 6px -1px; border-radius:2px;  }
 #otherSinger p {  width:70%; height:35px; display:inline-block; overflow:hidden;  }
 #otherSinger .otherSinger-title {  margin:0 10px 8px; padding:8px 15px; font-weight:500; border-bottom:1px solid #666;  }
