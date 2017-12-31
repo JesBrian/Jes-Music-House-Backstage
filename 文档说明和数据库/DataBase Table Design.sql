@@ -289,7 +289,7 @@ CREATE TABLE mh_song
 #   songMP3 VARCHAR(255) DEFAULT '' COMMENT '歌曲的MP3内容所在路径',
 #   songTime VARCHAR(10) DEFAULT '' COMMENT '歌曲的播放时间长度',
   songPrice SMALLINT UNSIGNED DEFAULT 0 COMMENT '歌曲的价格 -- 如果有设置的话',
-  status BIT DEFAULT 1 COMMENT '歌曲的状态[默认是 1 正常，还有 0 非正常状态]',
+  status TINYINT UNSIGNED DEFAULT 1 COMMENT '歌曲的状态[默认是 1 正常，0 为审核状态，-1 为删除状态]',
   publicTime INT UNSIGNED NOT NULL COMMENT '该歌曲发行时间',
   createTime INT UNSIGNED NOT NULL COMMENT '该歌曲创建时间',
   INDEX song_songName(songName),
