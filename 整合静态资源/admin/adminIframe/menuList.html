@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据列表</title>
+
+    <!-- CSS部分 -->
+
+    <!-- 自用字体图标 -->
+    <link rel="stylesheet" type="text/css" href="../../plugins/myfonticon/iconfont.css">
+
+    <link rel="stylesheet" type="text/css" href="../../css/common/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/admin/common.css">
+
+    <!-- 临时CSS -->
+    <style type="text/css">
+        .accountTable {
+            margin:1px 0;
+        }
+        .accountTable th {
+            height:36px;
+            border:1px solid #222;
+            background:#333;
+            font-size:20px;
+        }
+        .accountTable > tbody td {
+            border:1px solid #333;
+        }
+        .accountTable > tbody > tr:nth-of-type(even) {
+            background:#666;
+        }
+        .accountTable > tbody > tr:nth-of-type(odd) {
+            background:#555;
+        }
+        .accountTable > tbody > tr:hover {
+            background:#444;
+        }
+
+
+
+        .accountTableOper {
+            width:36px;
+            height:36px;
+            border-radius:4px;
+            text-align:center;
+            position:relative;
+            z-index:8888;
+        }
+        .accountTableOper:hover {
+            background:#222;
+            box-shadow:inset 0 0 2px #FFF, 0 0 5px #000;
+            z-index:9999;
+        }
+        .accountTableOper > .MyIF {
+            width:36px;
+            height:36px;
+            display:inline-block;
+            line-height:35px;
+            font-size:25px;
+            cursor:pointer;
+        }
+        .accountTableOper:hover > .MyIF {
+            color:lightgreen;
+            text-shadow:0.2px 0.2px 0.2px #000;
+        }
+
+
+
+        #accountSearchButton {
+            width:40px; height:40px; margin:8px 1px; float:right; line-height:40px; opacity:0.68;
+        }
+
+        #accountSearchButton:hover {
+            -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 2px 6px 12px rgba(0, 0, 0, 0.5), 2px 2px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 2px 6px 12px rgba(0, 0, 0, 0.5), 2px 2px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 2px 6px 12px rgba(0, 0, 0, 0.5), 2px 2px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            opacity: 0.88;
+        }
+
+
+
+
+        #goPageNum:hover > i.MyIF {
+            text-shadow:0 0 0.5px #22e8ff;
+        }
+        #dataListPaging a {
+            font-weight:600;
+            color:#AAA;
+        }
+        #dataListPaging a:hover {
+            color:#57E692;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+            -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 8px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 8px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 8px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+        }
+        #dataListPaging a.active {
+            border:none;
+            border-radius:2px;
+            background:#252525;
+            color:#22E8FF;
+            text-shadow:none!important;
+            -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+        }
+        #dataListPaging a > .MyIF {
+            text-shadow:none!important;
+        }
+        #dataListPaging a.ban > .MyIF {
+            color:#555;
+            cursor:not-allowed;
+        }
+    </style>
+</head>
+<body id="htmlBody">
+
+    <!-- 回到后台主页浮动按钮 -->
+    <div id="comeBackHomeNav" class="glass-Bg box-show3" title="回到后台主页">
+        <a class="accountOperIframeUrl MyIF home" dataUrl="adminIframe/index.html"></a>
+    </div>
+
+    <!-- 后台操作页面顶部标题 -->
+    <div id="navTitle" class="s1c-Bg box-show3">
+
+        <!-- 后台顶部标题[面包屑导航栏] -->
+        <h4>
+            <a class="accountOperIframeUrl" dataUrl="adminIframe/index.html">后台主页</a>/<a class="active">数据列表</a>
+        </h4>
+
+        <!-- 后台顶部搜索框 -->
+        <div style="width:232px; height:100%; top:0; left:8px; position:absolute; z-index:5;">
+            <input type="text" name="" value="" placeholder="简单综合搜索" style="width:168px; height:38px; margin:8px 0; padding:0 8px; float:left; font-size:18px; color:#1AFD9C; text-shadow:0.3px 0.3px 0.2px #010101;">
+            <a id="accountSearchButton" class="glass-Bg box-show3">
+                <i class="MyIF search" style="font-size:26px;"></i>
+            </a>
+        </div>
+
+        <!-- 后台顶部基本操作[添加/删除] -->
+        <div style="width:175px; height:100%; top:0; right:28px; position:absolute; z-index:5; text-align:right;">
+            <a class="accountOperIframeUrl baseOper superBtn MyIF add-data" dataUrl="adminIframe/addData.html" title="添加数据"></a>
+        </div>
+
+    </div>
+
+
+
+    <!-- 后台显示数据 -->
+    <div id="mainBody" class="s1c-Bg box-show3">
+        <table class="accountTable" style="width:100%;">
+            <thead>
+            <tr>
+                <th style="width:38px;"></th>
+                <th colspan="2">操作</th>
+                <th>名称</th>
+                <th>创建者</th>
+                <th>菜单级数</th>
+                <th>创建时间</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td style="text-align:center;"></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+                <td>2018-01-01 00:00:00</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+                <td>2018-01-01 00:00:00</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+                <td>2018-01-01 00:00:00</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+                <td>2018-01-01 00:00:00</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+                <td>2018-01-01 00:00:00</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+                <td>2018-01-01 00:00:00</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+                <td>2018-01-01 00:00:00</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+                <td>2018-01-01 00:00:00</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+                <td>2018-01-01 00:00:00</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+                <td>2018-01-01 00:00:00</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+                <td>2018-01-01 00:00:00</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+                <td>2018-01-01 00:00:00</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+                <td>2018-01-01 00:00:00</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+                <td>2018-01-01 00:00:00</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;"></td>
+                <td class="accountTableOper"><a class="accountOperIframeUrl MyIF tool" dataUrl="adminIframe/updateData.html" title="修改"></a></td>
+                <td class="accountTableOper"><i class="MyIF search" title="查看详情"></i></td>
+                <td>January</td>
+                <td>$100</td>
+                <td>January</td>
+                <td>2018-01-01 00:00:00</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 后台跳转分页 -->
+    <nav id="pagingContent" style="width:100%; text-align:center;">
+        <div class="glass-Bg box-show3" style="width:900px; height:58px; margin:18px auto 38px; display:inline-block; background:#181818;">
+
+            <div style="width:680px; height:58px; float:left;">
+                <table id="dataListPaging" style="width:90%; height:100%; margin:0 auto; text-align:center;">
+                    <tr style="margin:0; padding:0;">
+                        <td>
+                            <a class="glass-Bg box-show3 ban" style="width:28px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                <i class="MyIF ahead"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a class="glass-Bg box-show3 ban" style="width:28px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                <i class="MyIF double-arrow-left"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a class="glass-Bg box-show3" style="width:60px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                1
+                            </a>
+                        </td>
+                        <td>
+                            <a class="glass-Bg box-show3 active" style="width:60px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                2
+                            </a>
+                        </td>
+                        <td>
+                            <a class="glass-Bg box-show3" style="width:60px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                3
+                            </a>
+                        </td>
+                        <td style="position:relative; width:20px;"><span style="left:0; top:12px; position:absolute; font-weight:900;">...</span></td>
+                        <td>
+                            <a class="glass-Bg box-show3" style="width:60px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                6666
+                            </a>
+                        </td>
+                        <td>
+                            <a class="glass-Bg box-show3" style="width:60px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                88888
+                            </a>
+                        </td>
+                        <td>
+                            <a class="glass-Bg box-show3" style="width:60px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                999999
+                            </a>
+                        </td>
+                        <td>
+                            <a class="glass-Bg box-show3" style="width:28px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                <i class="MyIF double-arrow-right"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a class="glass-Bg box-show3" style="width:28px; height:28px; display:inline-block; vertical-align:bottom; border-radius:0; line-height:28px;">
+                                <i class="MyIF back"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="goPageNum" style="width:220px; height:58px; float:right; line-height:58px; text-align:left; color:#999; font-weight:600;">
+                跳转至 <input type="text" name="" class="s1c-Bg box-show3" style="width:68px; padding:3px; text-align:center; color:#BBB; font-size:15px; font-weight:700;"> 页
+                <i class="MyIF exit-1" style="margin:0 12px; position:absolute; font-size:30px;"></i>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <script type="text/javascript" src="../../js/common/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript">
+        $('a.accountOperIframeUrl').click(function () {
+            window.top.accountOperIframeObj.attr('src', $(this).attr('dataUrl'));
+        });
+
+
+        $('#checkAll').change(function () {
+            $("input[name=dataList]").each(function(){
+                if($("#checkAll").prop("checked") == true){
+                    $(this).prop('checked', true);
+                }
+                else{
+                    $(this).prop('checked', false);
+                }
+            })
+        });
+    </script>
+
+</body>
+</html>
