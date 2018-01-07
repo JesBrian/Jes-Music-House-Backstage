@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加菜单数据</title>
+
+    <!-- CSS部分 -->
+
+    <!-- 自用字体图标 -->
+    <link rel="stylesheet" type="text/css" href="../../plugins/myfonticon/iconfont.css">
+
+    <link rel="stylesheet" type="text/css" href="../../css/common/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/admin/common.css">
+
+
+    <!-- 带搜索框的下拉列表 -->
+    <link href="../../css/common/searchableSelect.css" rel="stylesheet" type="text/css">
+
+
+    <style type="text/css">
+        a.numMinus, a.numAdd {
+            width:40px; height:38px; display:inline-block; font-size:38px; font-weight:900; line-height:39px;
+        }
+
+        a.numMinus:active, a.numAdd:active {
+            transform: translate(0.5px, 0.5px);
+            background: #181818;
+            color: #00CDFF;
+            text-shadow: 0.5px 0.5px 1px #000;
+            -moz-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 2px 4px 6px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            -webkit-box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 2px 4px 6px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+            box-shadow: inset 0 2px 1px -1px rgba(255, 255, 255, 0.2), inset 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 2px 4px 6px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 0 1.8px #272727;
+        }
+    </style>
+
+
+</head>
+<body id="htmlBody">
+
+    <!-- 回到后台主页浮动按钮 -->
+    <div id="comeBackHomeNav" class="glass-Bg box-show3" title="回到后台主页">
+        <a class="accountOperIframeUrl MyIF home" dataUrl="adminIframe/index.html"></a>
+    </div>
+
+    <!-- 后台操作页面顶部标题 -->
+    <div id="navTitle" class="s1c-Bg box-show3">
+
+        <!-- 后台顶部标题[面包屑导航栏] -->
+        <h4>
+            <a class="accountOperIframeUrl" dataUrl="adminIframe/dataList.html">数据主页</a>/<a class="active">添加菜单</a>
+        </h4>
+
+    </div>
+
+
+    <!-- 后台添加/修改数据 -->
+    <div id="mainBody" class="s1c-Bg box-show3">
+        <form style="width:100%; height:100%; padding:8px 0; position:relative;">
+
+            <!-- 添加/修改的数据资料 -->
+            <table style="width:90%; height:100%; margin-top:18px; margin-left:5%;">
+                <tr>
+                    <td style="width:24%; padding:8px 22px 8px 0; text-align:right; font-size:18px; font-weight:900;">菜单名称</td>
+                    <td style="padding:8px 0 8px 22px; text-align:left;">
+                        <input type="text" name="" value="" style="width:288px; padding:5px 12px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:24%; padding:8px 22px 8px 0; text-align:right; font-size:18px; font-weight:900;">菜单等级</td>
+                    <td style="padding:8px 0 8px 22px; text-align:left;">
+                        <select name="mailSuffix">
+                            <option value="@foxmail.com">一级菜单</option>
+                            <option value="@163.com">二级菜单</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:24%; padding:8px 22px 8px 0; text-align:right; font-size:18px; font-weight:900;">所属一级菜单</td>
+                    <td style="padding:8px 0 8px 22px; text-align:left;">
+                        <select name="mailSuffix">
+                            <option value="@foxmail.com">一级菜单</option>
+                            <option value="@163.com">二级菜单</option>
+                            <option value="@163.com">二级菜单</option>
+                            <option value="@163.com">二级菜单</option>
+                            <option value="@163.com">二级菜单</option>
+                            <option value="@163.com">二级菜单</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:24%; padding:8px 22px 8px 0; text-align:right; font-size:18px; font-weight:900;">跳转链接</td>
+                    <td style="padding:8px 0 8px 22px; text-align:left;">
+                        <input type="text" name="" value="" style="width:288px; padding:5px 12px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:24%; padding:8px 22px 8px 0; text-align:right; font-size:18px; font-weight:900;">菜单状态</td>
+                    <td style="padding:8px 0 8px 22px; text-align:left;">
+
+                    </td>
+                </tr>
+            </table>
+
+            <!-- 提交信息 OR 返回按钮 -->
+            <div style="width:60%; height:68px; margin-top:38px; position:relative; text-align:center; z-index:5;">
+                <a class="superBtn joinSinger MyIF cubes-1" style="top:0; margin:0 18px;" onclick="window.top.niftymodalsByModelName('modal-warning','666','确定添加该新数据？');"> 确认添加</a>
+                <a class="accountOperIframeUrl superBtn joinSinger MyIF exit-1" dataUrl="adminIframe/menuList.html" style="top:0; margin:0 18px;"> 取消返回</a>
+            </div>
+
+        </form>
+    </div>
+
+
+
+
+
+    <script type="text/javascript" src="../../js/common/jquery-3.1.1.min.js"></script>
+
+
+    <!-- 带搜索框的下拉列表 -->
+    <script type="text/javascript" src="../../js/searchableSelect.js"></script>
+
+    <script type="text/javascript">
+
+        $('a.accountOperIframeUrl').click(function () {
+            window.top.accountOperIframeObj.attr('src', $(this).attr('dataUrl'));
+        });
+
+    </script>
+
+
+</body>
+</html>
