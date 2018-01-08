@@ -73,7 +73,7 @@ table {border-collapse:collapse;}
 
 
 
-    /**/
+    /* 鼠标移到上面显示下划线 */
 .hover-undeline:hover {  text-decoration:underline;  }
 
 

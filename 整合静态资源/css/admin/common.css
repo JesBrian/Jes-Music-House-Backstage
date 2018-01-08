@@ -28,7 +28,7 @@
 }
 
 #mainBody {
-    width:96%; margin:0 auto 28px;
+    width:96%; margin:0 auto 28px; position:relative;
 }
 
 
