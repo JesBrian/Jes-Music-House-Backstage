@@ -55,49 +55,50 @@
 
     <!-- 后台添加/修改数据 -->
     <div id="mainBody" class="s1c-Bg box-show3">
-        <form style="width:68%; height:100%; min-height:408px; padding:8px 0; box-sizing:border-box; position:relative;">
+        <form style="width:68%; height:100%; min-height:460px; padding:8px 0; box-sizing:border-box; position:relative;">
 
             <!-- 添加/修改的数据资料 -->
             <table style="width:80%; height:100%; margin:18px 0 0 18%;">
                 <tr>
-                    <td style="width:24%; padding:8px 22px 8px 0; text-align:right; font-size:18px; font-weight:900;">菜单名称</td>
-                    <td style="padding:8px 0 8px 22px; text-align:left;">
+                    <td style="width:24%; padding:18px 22px 18px 0; text-align:right; font-size:18px; font-weight:900;">菜单名称</td>
+                    <td style="padding:12px 0 12px 22px; text-align:left;">
                         <input type="text" name="" value="" style="width:288px; padding:5px 12px;">
                     </td>
                 </tr>
                 <tr>
-                    <td style="width:24%; padding:8px 22px 8px 0; text-align:right; font-size:18px; font-weight:900;">菜单等级</td>
-                    <td id="menuLv" style="padding:8px 0 8px 22px; text-align:left;">
-                        <select name="menuLv">
-                            <option value="1" selected="selected">一级菜单</option>
+                    <td style="width:24%; padding:18px 22px 18px 0; text-align:right; font-size:18px; font-weight:900;">菜单等级</td>
+                    <td id="menuLv" style="padding:12px 0 12px 22px; text-align:left;">
+                        <select id="level" name="level">
+                            <option value="1">一级菜单</option>
                             <option value="2">二级菜单</option>
                         </select>
                     </td>
                 </tr>
+            </table>
+            <table id="secondMenuContent" style="width:80%; height:100%; margin:18px 0 0 18%; display:none;">
                 <tr>
-                    <td style="width:24%; padding:8px 22px 8px 0; text-align:right; font-size:18px; font-weight:900;">所属一级菜单</td>
-                    <td style="padding:8px 0 8px 22px; text-align:left;">
-                        <select name="mailSuffix">
-                            <option value="@foxmail.com">一级菜单</option>
-                            <option value="@163.com">二级菜单</option>
-                            <option value="@163.com">二级菜单</option>
-                            <option value="@163.com">二级菜单</option>
-                            <option value="@163.com">二级菜单</option>
-                            <option value="@163.com">二级菜单</option>
+                    <td style="width:24%; padding:18px 22px 18px 0; text-align:right; font-size:18px; font-weight:900;">所属一级菜单</td>
+                    <td style="padding:12px 0 12px 22px; text-align:left;">
+                        <select id="parent_id">
+                            <option value="XX">XX菜单</option>
+                            <option value="YY">YY菜单</option>
+                            <option value="ZZ">ZZ菜单</option>
+                            <option value="AA">AA菜单</option>
+                            <option value="BB">BB菜单</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width:24%; padding:8px 22px 8px 0; text-align:right; font-size:18px; font-weight:900;">跳转链接</td>
-                    <td style="padding:8px 0 8px 22px; text-align:left;">
+                    <td style="width:24%; padding:18px 22px 18px 0; text-align:right; font-size:18px; font-weight:900;">跳转链接</td>
+                    <td style="padding:12px 0 12px 22px; text-align:left;">
                         <input type="text" name="" value="" style="width:288px; padding:5px 12px;">
                     </td>
                 </tr>
                 <tr>
-                    <td style="width:24%; padding:8px 22px 8px 0; text-align:right; font-size:18px; font-weight:900;">菜单状态</td>
-                    <td style="padding:8px 0 8px 22px; text-align:left;">
+                    <td style="width:24%; padding:18px 22px 18px 0; text-align:right; font-size:18px; font-weight:900;">菜单状态</td>
+                    <td style="padding:12px 0 12px 22px; text-align:left;">
 
-                        <input type='radio' id='menuAble' name='radio' class="superInput">
+                        <input type='radio' id='menuAble' name='radio' class="superInput" checked="checked">
                         <label for='menuAble' class="MyIF status-on"><span> 可用</span></label>
                         <input type='radio' id='menuUnable' name='radio' class="superInput">
                         <label for='menuUnable' class="MyIF status-off"><span> 禁用</span></label>
@@ -113,7 +114,7 @@
 
         </form>
 
-        <div style="width:32%; height:408px; top:0; right:0; position:absolute; background:lightgreen;">
+        <div style="width:32%; height:460px; top:0; right:0; position:absolute; background:lightgreen;">
 
         </div>
 
@@ -135,13 +136,13 @@
             window.top.accountOperIframeObj.attr('src', $(this).attr('dataUrl'));
         });
 
+        // setInterval(function () {
+        //     console.log($("#level").val())
+        // }, 5000);
 
-        $('#menuLv div.searchable-select-holder').bind('DOMNodeInserted', function() {
-            // alert('element now contains: ' + $(e.target).html());
-            console.log(666);
-        });
-
-        // console.log($('#menuLv').children('option:selected').val())
+        $("#level").change(function () {
+            console.log($("#level").val())
+        })
 
     </script>
 

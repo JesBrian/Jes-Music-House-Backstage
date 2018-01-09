@@ -42,7 +42,7 @@
         })
     };
     var $sS = $.searchableSelect;
-    $sS.fn = $sS.prototype = { version: '0.0.1' };
+    $sS.fn = $sS.prototype;
     $sS.fn.extend = $sS.extend = $.extend;
     $sS.fn.extend({
         init: function () {
@@ -180,6 +180,12 @@
             if (this.options.afterSelectItem) {
                 this.options.afterSelectItem.apply(this);
             }
+
+
+            if (JSON.stringify(this.options) !== "{}") {
+                this.options(value);
+            }
+
         },
         hasCurrentHoverItem: function () {
             return this.currentHoverItem && this.currentHoverItem.length > 0;
@@ -220,10 +226,21 @@
 })(jQuery);
 
 
-
 /**
  * 将每一个selected都变该样式
  **/
-$(function(){
+$(function () {
     $('select').searchableSelect();
+    $('#level').searchableSelect(selectFistMenu);
 });
+
+
+
+function selectFistMenu(value) {
+    if (value == 2) {
+        // console.log(666);
+        $('#secondMenuContent').fadeIn();
+    } else {
+        $('#secondMenuContent').fadeOut();
+    }
+}
