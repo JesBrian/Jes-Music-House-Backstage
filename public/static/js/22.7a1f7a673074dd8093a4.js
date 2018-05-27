@@ -1,0 +1,2 @@
+webpackJsonp([22],{"3Ydd":function(t,e){},V6lE:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var i={render:function(){var t=this.$createElement,e=this._self._c||t;return e("div",{attrs:{id:"homeLayout"}},[this._v("\n  this is home vip\n  "),e("router-link",{attrs:{to:"/"}},[this._v("To Index")])],1)},staticRenderFns:[]};var r=n("VU/8")({name:"Vip"},i,!1,function(t){n("3Ydd")},"data-v-1b70307c",null);e.default=r.exports}});
+//# sourceMappingURL=22.7a1f7a673074dd8093a4.js.map

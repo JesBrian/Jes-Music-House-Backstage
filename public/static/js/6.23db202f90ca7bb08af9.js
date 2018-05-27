@@ -1,0 +1,2 @@
+webpackJsonp([6],{"3Kjx":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement,t=this._self._c||e;return t("div",{attrs:{id:"homeLayout"}},[this._v("\n  this is home friend\n  "),t("router-link",{attrs:{to:"/"}},[this._v("To Index")])],1)},staticRenderFns:[]};var i=n("VU/8")({name:"Friend"},r,!1,function(e){n("TJ+q")},"data-v-d34a7f2a",null);t.default=i.exports},"TJ+q":function(e,t){}});
+//# sourceMappingURL=6.23db202f90ca7bb08af9.js.map

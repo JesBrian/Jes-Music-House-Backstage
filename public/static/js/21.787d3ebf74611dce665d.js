@@ -1,0 +1,2 @@
+webpackJsonp([21],{KjBU:function(e,t){},vbzQ:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s={render:function(){var e=this.$createElement,t=this._self._c||e;return t("div",{attrs:{id:"homeLayout"}},[this._v("\n  this is home message\n  "),t("router-link",{attrs:{to:"/album"}},[this._v("To Album")])],1)},staticRenderFns:[]};var a=n("VU/8")({name:"Message"},s,!1,function(e){n("KjBU")},"data-v-290fc824",null);t.default=a.exports}});
+//# sourceMappingURL=21.787d3ebf74611dce665d.js.map

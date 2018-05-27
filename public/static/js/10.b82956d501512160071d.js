@@ -1,0 +1,2 @@
+webpackJsonp([10],{CZV1:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var i={render:function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticStyle:{height:"1288px"},attrs:{id:"homeLayout"}},[this._v("\n  this is home song\n  "),e("router-link",{attrs:{to:"/"}},[this._v("To Index")])],1)},staticRenderFns:[]};var s=n("VU/8")({name:"Song"},i,!1,function(t){n("vIqU")},"data-v-6a2de702",null);e.default=s.exports},vIqU:function(t,e){}});
+//# sourceMappingURL=10.b82956d501512160071d.js.map
