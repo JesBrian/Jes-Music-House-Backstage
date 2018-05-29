@@ -75,7 +75,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | SMTP Server Username
+    | SMTP Service Username
     |--------------------------------------------------------------------------
     |
     | If your SMTP server requires a username for authentication, you should
