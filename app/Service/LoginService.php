@@ -4,8 +4,11 @@ namespace App\Service;
 
 class LoginService extends Service
 {
-    public static function loginService()
+    public static function loginService($phone)
     {
-        return parent::ajaxStandardizationReturn('200', [6,8], '666');
+        $phone = [
+            'phone' => $phone
+        ];
+        return parent::ajaxStandardizationReturn('200', $phone, '666');
     }
 }
