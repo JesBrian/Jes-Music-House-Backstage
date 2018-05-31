@@ -16,7 +16,7 @@ class OauthService
 //        $oauthLoginUrl = $loginOAuthModel->getAuthUrl();
         $oauthLoginUrl = 888;
 
-        return $oauthLoginUrl;
+        return Oauth::config['baiduOAuth2AK'];
     }
 
 
