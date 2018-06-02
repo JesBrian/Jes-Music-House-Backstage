@@ -24,6 +24,14 @@ class LoginController extends Controller
         return LoginService::phoneLoginService($phone, $passwd);
     }
 
+    /**
+     * Notes: 获取 OAuth 登录跳转 URL API 接口
+     * User: JesBrian
+     * Date: 2018-06-02
+     * Time: 11:29
+     * @param string $loginOAuthType
+     * @return string
+     */
     public function oauthLogin(string $loginOAuthType)
     {
         return OauthService::loginService($loginOAuthType);

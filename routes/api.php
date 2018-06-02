@@ -17,5 +17,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+/**
+ * 登录相关
+ */
 Route::get('oauth/{loginOAuthType}', 'LoginController@oauthLogin');
 Route::post('phoneLogin', 'LoginController@phoneLogin');
+
+/**
+ * 注册相关
+ */
+Route::post('userRegister', 'RegisterController@userRegister');

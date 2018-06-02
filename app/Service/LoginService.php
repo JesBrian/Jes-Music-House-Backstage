@@ -13,7 +13,7 @@ class LoginService extends Service
      * @param string $passwd
      * @return array
      */
-    public static function phoneLoginService(string $phone,string $passwd): array
+    public static function phoneLoginService(string $phone, string $passwd): array
     {
         return parent::ajaxStandardizationReturn('200', [
             'phone' => $phone,
