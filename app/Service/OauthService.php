@@ -9,7 +9,7 @@ class OauthService
     private static $oauthObj = null;
 
 
-    public static function loginService($loginOAuthType)
+    public static function loginService(string $loginOAuthType): string
     {
         $loginOAuthModel = self::OAuthFactory($loginOAuthType);
 
@@ -20,7 +20,7 @@ class OauthService
     }
 
 
-    public static function OAuthFactory($loginOAuthType)
+    public static function OAuthFactory(string $loginOAuthType): object
     {
         if (self::$oauthObj === null) {
             switch ($loginOAuthType) {

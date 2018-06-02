@@ -15,6 +15,3 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('login/{phone}', 'LoginController@phoneLogin');
-Route::get('oauth/{loginOAuthType}', 'LoginController@oauthLogin');
