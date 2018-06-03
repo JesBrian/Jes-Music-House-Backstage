@@ -17,6 +17,6 @@ class RegisterController extends Controller
     public function checkIdentifyingCode(Request $request): array
     {
         $identifyingCode = $request->post('identifyingCode');
-        return RegisterService::checkIdentifyingCodeService($identifyingCode);
+        return RegisterService::checkIdentifyingCodeService($request, $identifyingCode);
     }
 }

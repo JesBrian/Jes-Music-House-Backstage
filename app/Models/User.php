@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Component\HelpTool;
 use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
@@ -16,4 +17,16 @@ class User extends Model
      * @var bool
      */
     public $timestamps = false;
+
+    public static function addUser($phone, $passwd)
+    {
+        $user = new self();
+        $user->username = $phone;
+        $user->phone = $phone;
+        $user->salt = HelpTool::getRandomString(4);
+        $user->passwd = md5($user->salt . $passwd);
+        $user->createTime = time();
+        $user->loginTime = $user->createTime;
+        $user->save();
+    }
 }
