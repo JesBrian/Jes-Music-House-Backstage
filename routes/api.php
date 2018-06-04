@@ -27,4 +27,4 @@ Route::post('phoneLogin', 'LoginController@phoneLogin');
  * 注册相关
  */
 Route::post('userRegister', 'RegisterController@userRegister');
-Route::post('checkIdentifyingCode', 'RegisterController@checkIdentifyingCode');
+Route::post('createUser', 'RegisterController@checkIdentifyingCodeAndCreateUser');

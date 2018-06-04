@@ -14,10 +14,9 @@ class RegisterController extends Controller
         return RegisterService::userRegisterService($phone, $passwd);
     }
 
-    public function checkIdentifyingCode(Request $request): array
+    public function checkIdentifyingCodeAndCreateUser(Request $request): array
     {
         $identifyingCode = $request->post('identifyingCode');
-        $request->session()->put('identifyingCode', '0000');
         return RegisterService::checkIdentifyingCodeService($identifyingCode);
     }
 }

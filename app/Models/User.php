@@ -18,7 +18,13 @@ class User extends Model
      */
     public $timestamps = false;
 
-    public static function addUser($phone, $passwd)
+    /**
+     * Notes: 添加单个用户
+     * @param string $phone
+     * @param string $passwd
+     * @return bool
+     */
+    public static function addUser(string $phone, string $passwd): bool
     {
         $user = new self();
         $user->username = $phone;
@@ -27,6 +33,16 @@ class User extends Model
         $user->passwd = md5($user->salt . $passwd);
         $user->createTime = time();
         $user->loginTime = $user->createTime;
-        $user->save();
+        return $user->save();
+    }
+
+    /**
+     * Notes: 根据手机判断用户是否存在
+     * @param string $phone
+     * @return bool
+     */
+    public static function checkUserExistByPhone(string $phone): bool
+    {
+        return self::query()->where('phone', $phone)->exists();
     }
 }

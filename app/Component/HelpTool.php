@@ -5,10 +5,7 @@ namespace App\Component;
 class HelpTool
 {
     /**
-     * Notes:
-     * User: JesBrian
-     * Date: 2018-06-03
-     * Time: 20:10
+     * Notes: 获取固定长度的随机字符串
      * @param int $strlen
      * @return string
      */
