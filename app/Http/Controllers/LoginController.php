@@ -10,10 +10,7 @@ use Illuminate\Http\Request;
 class LoginController extends Controller
 {
     /**
-     * Notes: 手机登录 API 接口
-     * User: JesBrian
-     * Date: 2018-06-02
-     * Time: 10:55
+     * Notes: 手机号码登录 API 接口
      * @param Request $request
      * @return array
      */
@@ -26,9 +23,6 @@ class LoginController extends Controller
 
     /**
      * Notes: 获取 OAuth 登录跳转 URL API 接口
-     * User: JesBrian
-     * Date: 2018-06-02
-     * Time: 11:29
      * @param string $loginOAuthType
      * @return string
      */

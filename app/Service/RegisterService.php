@@ -21,7 +21,7 @@ class RegisterService extends Service
 
         $checkUserExistResult = User::checkUserExistByPhone($phone);
 
-        /* 判断手机是否已经注册,用户是否已存在 */
+        /* 判断手机号码是否已经注册,用户是否已存在 */
         if ($checkUserExistResult === true) {
             $returnState = StateCodeConfig::USER_REGISTER_STATE_CODE['phoneExist'];
         } else {

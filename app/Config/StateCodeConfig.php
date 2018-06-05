@@ -17,4 +17,9 @@ class StateCodeConfig
     public const USER_REGISTER_STATE_CODE = [
         'phoneExist' => '611',
     ];
+
+    public const USER_LOGIN_STATE_CODE = [
+        'userNoExistent' => '621',
+        'passwdError' => '622',
+    ];
 }

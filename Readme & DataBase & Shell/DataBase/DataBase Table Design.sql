@@ -121,7 +121,7 @@ CREATE TABLE mh_user
 (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
   username VARCHAR(25) NOT NULL DEFAULT '' COMMENT '用户名',
-  phone CHAR(11) NOT NULL UNIQUE DEFAULT '' COMMENT '用户手机',
+  phone CHAR(11) NOT NULL UNIQUE DEFAULT '' COMMENT '用户手机号码',
   salt CHAR(4) NOT NULL DEFAULT '' COMMENT '密码加盐',
   passwd CHAR(32) NOT NULL DEFAULT '' COMMENT '加密后的密码',
   avatar VARCHAR(255) NOT NULL DEFAULT '' COMMENT '用户头像图片',
@@ -204,7 +204,7 @@ CREATE TABLE mh_singer
   introduction TEXT COMMENT '歌手简介',
   fansNum INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '歌手粉丝数量',
   realName VARCHAR(25) NOT NULL DEFAULT '' COMMENT '歌手真名[审核通过后不能更改]',
-  phone CHAR(13) NOT NULL DEFAULT '' COMMENT '歌手手机',
+  phone CHAR(13) NOT NULL DEFAULT '' COMMENT '歌手手机号码',
   nationality TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '歌手所属国籍[默认 1-中国]',
   IDCardNo CHAR(18) NOT NULL DEFAULT '' COMMENT '歌手身份证号码',
   IDCardImg VARCHAR(255) NOT NULL DEFAULT '' COMMENT '歌手身份证图片[正反两面,使用 ,分隔 - 长度有可能不足]',

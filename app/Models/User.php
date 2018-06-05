@@ -37,7 +37,17 @@ class User extends Model
     }
 
     /**
-     * Notes: 根据手机判断用户是否存在
+     * Notes: 根据手机获取用户信息登录
+     * @param string $phone
+     * @return \Illuminate\Database\Eloquent\Builder|Model|null|object
+     */
+    public static function getUserLoginInfoByPhone(string $phone)
+    {
+        return self::query()->select('phone', 'salt', 'passwd')->where(['phone' => $phone])->first();
+    }
+
+    /**
+     * Notes: 根据手机号码判断用户是否存在
      * @param string $phone
      * @return bool
      */

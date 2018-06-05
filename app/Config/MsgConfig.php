@@ -11,6 +11,9 @@ class MsgConfig
 
         StateCodeConfig::IDENTIFYING_CODE_STATE_CODE['error'] => '验证码填写错误',
 
-        StateCodeConfig::USER_REGISTER_STATE_CODE['phoneExist'] => '该手机已被注册',
+        StateCodeConfig::USER_REGISTER_STATE_CODE['phoneExist'] => '该手机号码已被注册',
+
+        StateCodeConfig::USER_LOGIN_STATE_CODE['userNoExistent'] => '用户不存在',
+        StateCodeConfig::USER_LOGIN_STATE_CODE['passwdError'] => '密码错误',
     ];
 }
