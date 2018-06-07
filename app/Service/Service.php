@@ -2,24 +2,34 @@
 
 namespace App\Service;
 
+use App\Config\MsgConfig;
+
 abstract class Service
 {
     /**
+     * @var string 返回操作结果状态吗
+     */
+    protected static $returnState = '000';
+    /**
+     * @var array 返回操作结果数据
+     */
+    protected static $returnData = [];
+    /**
+     * @var string 返回操作结果信息
+     */
+    protected static $returnMsg = '';
+
+
+    /**
      * Notes: 规范化 ajax-json 数据格式返回
-     * User: JesBrian
-     * Date: 2018-06-03
-     * Time: 20:33
-     * @param string $state
-     * @param array $data
-     * @param string $msg
      * @return array
      */
-    protected final static function ajaxStandardizationReturn(string $state = '000', array $data = [], string $msg = ''): array
+    protected final static function ajaxStandardizationReturn(): array
     {
         return [
-            'state' => $state,
-            'data' => $data,
-            'msg' => $msg
+            'state' => self::$returnState,
+            'data' => self::$returnData,
+            'msg' => self::$returnMsg = MsgConfig::RETURN_MESSAGE[self::$returnState]
         ];
     }
 }

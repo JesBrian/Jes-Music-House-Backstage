@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
+    /**
+     * Notes: 用户注册 API 接口
+     * @param Request $request
+     * @return array
+     */
     public function userRegister(Request $request): array
     {
         $phone = $request->post('phone');
@@ -14,6 +19,11 @@ class RegisterController extends Controller
         return RegisterService::userRegisterService($phone, $passwd);
     }
 
+    /**
+     * Notes: 验证短信验证码 & 保存用户信息 API 接口
+     * @param Request $request
+     * @return array
+     */
     public function checkIdentifyingCodeAndCreateUser(Request $request): array
     {
         $identifyingCode = $request->post('identifyingCode');

@@ -8,7 +8,11 @@ class OauthService
 {
     private static $oauthObj = null;
 
-
+    /**
+     * Notes:
+     * @param string $loginOAuthType
+     * @return string
+     */
     public static function loginService(string $loginOAuthType): string
     {
         $loginOAuthModel = self::OAuthFactory($loginOAuthType);
@@ -19,7 +23,11 @@ class OauthService
         return $oauthLoginUrl;
     }
 
-
+    /**
+     * Notes:
+     * @param string $loginOAuthType
+     * @return object
+     */
     public static function OAuthFactory(string $loginOAuthType): object
     {
         if (self::$oauthObj === null) {
