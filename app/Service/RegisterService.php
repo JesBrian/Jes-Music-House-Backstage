@@ -8,7 +8,7 @@ use App\Models\User;
 class RegisterService extends Service
 {
     /**
-     * Notes:
+     * Notes: 新用户注册发送手机验证码
      * @param string $phone
      * @param string $passwd
      * @return array
@@ -16,10 +16,11 @@ class RegisterService extends Service
     public static function userRegisterService(string $phone, string $passwd): array
     {
         $checkUserExistResult = User::checkUserExistByPhone($phone);
+
         /* 判断手机号码是否已经注册,用户是否已存在 */
-        if ($checkUserExistResult === true) {
+        if ($checkUserExistResult === true) { // 用户已注册
             parent::$returnState = StateCodeConfig::USER_REGISTER_STATE_CODE['phoneExist'];
-        } else {
+        } else { // 用户未注册
             parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
             session(['phone' => $phone, 'passwd' => $passwd, 'identifyingCode' => '0000']);
         }

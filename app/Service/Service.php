@@ -7,7 +7,7 @@ use App\Config\MsgConfig;
 abstract class Service
 {
     /**
-     * @var string 返回操作结果状态吗
+     * @var string 返回操作结果状态码
      */
     protected static $returnState = '000';
     /**

@@ -13,6 +13,7 @@ class MsgConfig
 
         StateCodeConfig::USER_REGISTER_STATE_CODE['phoneExist'] => '该手机号码已被注册',
 
+        StateCodeConfig::USER_LOGIN_STATE_CODE['loginSuccess'] => '用户登陆成功',
         StateCodeConfig::USER_LOGIN_STATE_CODE['userNoExistent'] => '用户不存在',
         StateCodeConfig::USER_LOGIN_STATE_CODE['passwdError'] => '密码错误',
     ];

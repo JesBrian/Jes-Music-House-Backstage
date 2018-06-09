@@ -19,6 +19,7 @@ class StateCodeConfig
     ];
 
     public const USER_LOGIN_STATE_CODE = [
+        'loginSuccess' => '620',
         'userNoExistent' => '621',
         'passwdError' => '622',
     ];
