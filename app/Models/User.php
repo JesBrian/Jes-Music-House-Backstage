@@ -43,7 +43,7 @@ class User extends Model
      */
     public static function getUserLoginInfoByPhone(string $phone)
     {
-        return self::query()->select('phone', 'salt', 'passwd')->where(['phone' => $phone])->first();
+        return self::query()->select('id', 'username', 'avatar', 'phone', 'salt', 'passwd')->where(['phone' => $phone])->first();
     }
 
     /**

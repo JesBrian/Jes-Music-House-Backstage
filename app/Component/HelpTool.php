@@ -21,4 +21,18 @@ class HelpTool
         }
         return $randomStr;
     }
+
+    /**
+     * Notes: 删除关联数组中制定的元素
+     * @param array $operArr
+     * @param array $delElArr
+     * @return array
+     */
+    public static function delArrayElement(array $operArr, array $delElArr):array
+    {
+        foreach ($delElArr as $delEl) {
+            unset($operArr[$delEl]);
+        }
+        return $operArr;
+    }
 }

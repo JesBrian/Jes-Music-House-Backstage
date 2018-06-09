@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use App\Component\HelpTool;
 use App\Config\StateCodeConfig;
 use App\Models\User;
 
@@ -16,13 +17,17 @@ class LoginService extends Service
     public static function phoneLoginService(string $phone, string $passwd)
     {
         parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['base'];
-        $loginUserInfo = User::getUserLoginInfoByPhone($phone);
-        if ($loginUserInfo === null) {
+        $loginUserModel = User::getUserLoginInfoByPhone($phone);
+        if ($loginUserModel === null) {
             parent::$returnState = StateCodeConfig::USER_LOGIN_STATE_CODE['userNoExistent'];
         } else {
-            $loginUserInfo = $loginUserInfo->toArray();
-            if ($loginUserInfo['passwd'] === md5($loginUserInfo['salt'] . $passwd)) {
+            if ($loginUserModel['passwd'] === md5($loginUserModel['salt'] . $passwd)) {
+                $loginUserModel->loginTime = time();
+                $loginUserModel->save();
                 parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
+                $loginUserInfo = $loginUserModel->toArray();
+                $loginUserInfo = HelpTool::delArrayElement($loginUserInfo, ['phone', 'salt', 'passwd', 'loginTime']);
+                parent::$returnData = $loginUserInfo;
             } else {
                 parent::$returnState = StateCodeConfig::USER_LOGIN_STATE_CODE['passwdError'];
             }
