@@ -4,7 +4,13 @@ namespace App\Models;
 
 use App\Component\HelpTool;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
+/**
+ * Notes: 用户基本信息
+ * Class User
+ * @package App\Models
+ */
 class User extends Model
 {
     /**
@@ -26,14 +32,27 @@ class User extends Model
      */
     public static function addUser(string $phone, string $passwd): bool
     {
-        $user = new self();
+
+        $addUserOperationResult = false;
+
+        DB::beginTransaction();
+
+        $user = new User();
         $user->username = $phone;
         $user->phone = $phone;
         $user->salt = HelpTool::getRandomString(4);
         $user->passwd = md5($user->salt . $passwd);
         $user->createTime = time();
         $user->loginTime = $user->createTime;
-        return $user->save();
+
+        if ($user->save() && UserInfo::addUserInfo($user->id)) {
+            DB::commit();
+            $addUserOperationResult = true;
+        } else {
+            DB::rollBack();
+        }
+
+        return $addUserOperationResult;
     }
 
     /**

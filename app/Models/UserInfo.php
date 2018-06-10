@@ -4,6 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Notes: 用户其他信息
+ * Class UserInfo
+ * @package App\Models
+ */
 class UserInfo extends Model
 {
     /**
@@ -21,4 +26,16 @@ class UserInfo extends Model
      * @var string
      */
     protected $primaryKey = 'userId';
+
+    /**
+     * Notes: 创建新的用户信息
+     * @param string $userId
+     * @return bool
+     */
+    public static function addUserInfo(string $userId):bool
+    {
+        $userInfoModel = new self();
+        $userInfoModel->userId = $userId;
+        return $userInfoModel->save();
+    }
 }
