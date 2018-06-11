@@ -42,12 +42,17 @@ class LoginService extends Service
      */
     public static function verifyUserLoginSevice(string $userId, string $username): array
     {
-        $userIsExist = User::checkUserExistByIdAndName($userId, $username);
-        if ($userIsExist === true) {
-            parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
-        } else {
+        $userModel = User::getUserById($userId);
+
+        // 判断用户是否存在 && 用户信息是否正确
+        if (($userModel === null) || ($userModel->username !== $username)) {
             parent::$returnState = StateCodeConfig::USER_LOGIN_STATE_CODE['verifyLoginError'];
+        } else {
+            $userModel->loginTime = time();
+            $userModel->save();
+            parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
         }
+
         return parent::ajaxStandardizationReturn();
     }
 }

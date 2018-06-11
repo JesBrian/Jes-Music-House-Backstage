@@ -78,11 +78,10 @@ class User extends Model
     /**
      * Notes: 根据用户ID和用户名判断用户是否存在
      * @param string $userId
-     * @param string $username
-     * @return bool
+     * @return \Illuminate\Database\Eloquent\Builder|Model|null|object
      */
-    public static function checkUserExistByIdAndName(string $userId, string $username): bool
+    public static function getUserById(string $userId)
     {
-        return self::query()->where(['id' => $userId, 'username' => $username])->exists();
+        return self::query()->where(['id' => $userId])->first();
     }
 }
