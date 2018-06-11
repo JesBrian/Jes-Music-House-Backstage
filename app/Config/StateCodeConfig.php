@@ -22,5 +22,6 @@ class StateCodeConfig
         'loginSuccess' => '620',
         'userNoExistent' => '621',
         'passwdError' => '622',
+        'verifyLoginError' => '623'
     ];
 }

@@ -24,10 +24,22 @@ class LoginController extends Controller
     /**
      * Notes: 获取 OAuth 登录跳转 URL API 接口
      * @param string $loginOAuthType
-     * @return string
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function oauthLogin(string $loginOAuthType)
     {
-        return OauthService::loginService($loginOAuthType);
+        return redirect(OauthService::loginService($loginOAuthType));
+    }
+
+    /**
+     * Notes: 检验用户登录状态和信息 API 接口
+     * @param Request $request
+     * @return array
+     */
+    public function verifyUserLogin(Request $request): array
+    {
+        $userId = $request->post('userId');
+        $username = $request->post('username');
+        return LoginService::verifyUserLoginSevice($userId, $username);
     }
 }

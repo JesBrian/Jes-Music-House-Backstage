@@ -33,4 +33,21 @@ class LoginService extends Service
         }
         return parent::ajaxStandardizationReturn();
     }
+
+    /**
+     * Notes: 检验用户登录状态逻辑处理
+     * @param string $userId
+     * @param string $username
+     * @return array
+     */
+    public static function verifyUserLoginSevice(string $userId, string $username): array
+    {
+        $userIsExist = User::checkUserExistByIdAndName($userId, $username);
+        if ($userIsExist === true) {
+            parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
+        } else {
+            parent::$returnState = StateCodeConfig::USER_LOGIN_STATE_CODE['verifyLoginError'];
+        }
+        return parent::ajaxStandardizationReturn();
+    }
 }

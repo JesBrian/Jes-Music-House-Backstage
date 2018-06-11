@@ -62,7 +62,7 @@ class User extends Model
      */
     public static function getUserLoginInfoByPhone(string $phone)
     {
-        return self::query()->select('id', 'username', 'avatar', 'phone', 'salt', 'passwd')->where(['phone' => $phone])->first();
+        return self::query()->select('id', 'username', 'avatar', 'phone', 'salt', 'passwd')->where('phone', $phone)->first();
     }
 
     /**
@@ -73,5 +73,16 @@ class User extends Model
     public static function checkUserExistByPhone(string $phone): bool
     {
         return self::query()->where('phone', $phone)->exists();
+    }
+
+    /**
+     * Notes: 根据用户ID和用户名判断用户是否存在
+     * @param string $userId
+     * @param string $username
+     * @return bool
+     */
+    public static function checkUserExistByIdAndName(string $userId, string $username): bool
+    {
+        return self::query()->where(['id' => $userId, 'username' => $username])->exists();
     }
 }

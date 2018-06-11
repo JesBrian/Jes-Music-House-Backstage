@@ -22,6 +22,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
  */
 Route::get('oauth/{loginOAuthType}', 'LoginController@oauthLogin');
 Route::post('phoneLogin', 'LoginController@phoneLogin');
+Route::post('verifyUserLogin', 'LoginController@verifyUserLogin');
 
 /**
  * 注册相关
