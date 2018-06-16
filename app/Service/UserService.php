@@ -16,10 +16,11 @@ class UserService extends Service
     public static function createUserService(string $phone, string $passwd): array
     {
         $saveUserResult = User::addUser($phone, $passwd);
-        if ($saveUserResult === true) {
-            parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
-        } else {
+        if ($saveUserResult === false) {
             parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['failure'];
+        } else {
+            parent::$returnData = $saveUserResult;
+            parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
         }
         return parent::ajaxStandardizationReturn();
     }

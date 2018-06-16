@@ -38,6 +38,7 @@ class RegisterService extends Service
         if ($code === session('identifyingCode')) { // 验证码正确
             $createUserResult = UserService::createUserService(session('phone'), session('passwd'));
             if ($createUserResult['state'] === StateCodeConfig::COMMON_STATE_CODE['success']) {
+                parent::$returnData = $createUserResult['data'];
                 /* 删除 session 缓存的注册信息 */
                 session(['phone' => null, 'passwd' => null, 'identifyingCode' => null]);
             }

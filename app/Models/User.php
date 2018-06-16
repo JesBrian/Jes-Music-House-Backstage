@@ -28,15 +28,10 @@ class User extends Model
      * Notes: 添加单个用户
      * @param string $phone
      * @param string $passwd
-     * @return bool
+     * @return bool|mixed
      */
-    public static function addUser(string $phone, string $passwd): bool
+    public static function addUser(string $phone, string $passwd)
     {
-
-        $addUserOperationResult = false;
-
-        DB::beginTransaction();
-
         $user = new User();
         $user->username = $phone;
         $user->phone = $phone;
@@ -45,11 +40,18 @@ class User extends Model
         $user->createTime = time();
         $user->loginTime = $user->createTime;
 
+        DB::beginTransaction();
+
         if ($user->save() && UserInfo::addUserInfo($user->id)) {
             DB::commit();
-            $addUserOperationResult = true;
+            $addUserOperationResult = [
+                'id' => $user->id,
+                'username' => $user->username,
+                'avatar' => ''
+            ];
         } else {
             DB::rollBack();
+            $addUserOperationResult = false;
         }
 
         return $addUserOperationResult;
