@@ -29,3 +29,8 @@ Route::post('verifyUserLogin', 'LoginController@verifyUserLogin');
  */
 Route::post('userRegister', 'RegisterController@userRegister');
 Route::post('createUser', 'RegisterController@checkIdentifyingCodeAndCreateUser');
+
+/**
+ * 搜索相关
+ */
+Route::post('searchInfo', 'SearchController@searchInfo');

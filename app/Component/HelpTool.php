@@ -11,7 +11,7 @@ class HelpTool
      */
     public static function getRandomString(int $strlen): string
     {
-        // 字符集，可任意添加你需要的字符
+        // 字符集,可任意添加你需要的字符
         $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
         $charsLen = strlen($chars) - 1;
         $randomStr = '';
