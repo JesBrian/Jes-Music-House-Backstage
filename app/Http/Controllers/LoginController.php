@@ -6,6 +6,8 @@ use App\Service\{
     LoginService, OauthService
 };
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Validation\Rules\In;
 
 class LoginController extends Controller
 {
@@ -42,51 +44,44 @@ class LoginController extends Controller
      */
     public function oauthLogin(string $loginOAuthType)
     {
-        echo OauthService::loginService($loginOAuthType);
-//        return redirect(OauthService::loginService($loginOAuthType));
+        return redirect(OauthService::loginService($loginOAuthType));
     }
 
 
-    public function actionBaidu()
+    public function baiduOAuthCallBack()
     {
-        $data = \Yii::$app->request->get();
-        $data['type'] = 'Baidu';
+        $data = Input::get();
+        $data['type'] = 'baidu';
         OauthService::commonOAuthCallBack($data);
-        return ;
     }
-    public function actionQq()
+    public function qqOAuthCallBack()
     {
-        $data = \Yii::$app->request->get();
-        $data['type'] = 'QQ';
+        $data = Input::get();
+        $data['type'] = 'qq';
         OauthService::commonOAuthCallBack($data);
-        return ;
     }
-    public function actionWeibo()
+    public function weiboOAuthCallBack()
     {
-        $data = \Yii::$app->request->get();
-        $data['type'] = 'Weibo';
+        $data = Input::get();
+        $data['type'] = 'weibo';
         OauthService::commonOAuthCallBack($data);
-        return ;
     }
-    public function actionGithub()
+    public function githubOAuthCallBack()
     {
-        $data = \Yii::$app->request->get();
-        $data['type'] = 'Github';
+        $data = Input::get();
+        $data['type'] = 'github';
         OauthService::commonOAuthCallBack($data);
-        return ;
     }
-    public function actionGitee()
+    public function giteeOAuthCallBack()
     {
-        $data = \Yii::$app->request->get();
-        $data['type'] = 'Gitee';
+        $data = Input::get();
+        $data['type'] = 'gitee';
         OauthService::commonOAuthCallBack($data);
-        return ;
     }
-    public function actionCoding()
+    public function codingOAuthCallBack()
     {
-        $data = \Yii::$app->request->get();
-        $data['type'] = 'Coding';
+        $data = Input::get();
+        $data['type'] = 'coding';
         OauthService::commonOAuthCallBack($data);
-        return ;
     }
 }

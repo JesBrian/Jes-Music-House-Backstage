@@ -20,9 +20,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 /**
  * 登录相关
  */
-Route::get('oauth/{loginOAuthType}', 'LoginController@oauthLogin');
 Route::post('phoneLogin', 'LoginController@phoneLogin');
 Route::post('verifyUserLogin', 'LoginController@verifyUserLogin');
+
+Route::get('oauth/{loginOAuthType}', 'LoginController@oauthLogin');
+Route::get('baiduOAuthCallBack', 'LoginController@baiduOAuthCallBack');
+Route::get('qqOAuthCallBack', 'LoginController@qqOAuthCallBack');
+Route::get('weiboOAuthCallBack', 'LoginController@weiboOAuthCallBack');
+Route::get('githubOAuthCallBack', 'LoginController@githubOAuthCallBack');
+Route::get('giteeOAuthCallBack', 'LoginController@giteeOAuthCallBack');
+Route::get('codingOAuthCallBack', 'LoginController@codingOAuthCallBack');
 
 /**
  * 注册相关
