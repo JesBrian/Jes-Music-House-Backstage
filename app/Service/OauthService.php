@@ -23,12 +23,31 @@ class OauthService
         return $oauthLoginUrl;
     }
 
+
+    /**
+     * Notes: 通用 OAuth 登录回调函数
+     */
+    public static function commonOAuthCallBack($userData)
+    {
+        self::OAuthFactory($userData['type']);
+        $userData['accessToken'] = self::$oauthObj->getAccessToken($userData['state']);
+
+        // openid，用户在第三方平台的唯一标识
+//        $userData['openid'] = self::$oauthObj->getOpenID($userData['accessToken']);
+
+        // 获取用户资料，第一个参数不传则默认使用getAccessToken方法获取到的结果
+        $userData['userInfo'] = self::$oauthObj->getUserInfo($userData['accessToken']);
+
+        return $userData;
+    }
+
+
     /**
      * Notes:
      * @param string $loginOAuthType
-     * @return object
+     * @return null|\Yurun\OAuthLogin\Baidu\OAuth2|\Yurun\OAuthLogin\Coding\OAuth2|\Yurun\OAuthLogin\Gitee\OAuth2|\Yurun\OAuthLogin\Github\OAuth2|\Yurun\OAuthLogin\QQ\OAuth2|\Yurun\OAuthLogin\Weibo\OAuth2
      */
-    public static function OAuthFactory(string $loginOAuthType): object
+    public static function OAuthFactory(string $loginOAuthType)
     {
         if (self::$oauthObj === null) {
             switch ($loginOAuthType) {
