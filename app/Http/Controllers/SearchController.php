@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
+    /**
+     * Notes: 搜索信息
+     * @param Request $request
+     * @return array
+     */
     public function searchInfo(Request $request)
     {
         $key = $request->post('key');
