@@ -112,7 +112,7 @@ CREATE TABLE mh_backstage_message
   INDEX backstageMessage_fromType(`fromType`),
   INDEX backstageMessage_sendTime(sendTime),
   INDEX backstageMessage_toOne(`toId`,`toType`)
-)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH用户表 -- 普通注册用户 */
@@ -131,7 +131,7 @@ CREATE TABLE mh_user
   INDEX user_phone(phone),
   INDEX user_createTime(createTime),
   INDEX user_loginTime(loginTime)
-)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH用户表其他信息表 -- 记录用户其他一些不常用的信息 */
@@ -156,13 +156,13 @@ CREATE TABLE mh_user_info
 
 /* MH用户听歌情况表 -- 注册用户之后就会自动产生一个用户听歌表记录所听过的歌曲以及对应听的次数 */
 # 听歌表记录用户从注册之后所有的听歌记录,听过什么歌曲,每一首歌曲分别听了多少次
-CREATE TABLE mh_userXX_listen
-(
-  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
-  songId INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '歌曲对应的ID',
-  listenNum TINYINT UNSIGNED DEFAULT 0 COMMENT '歌曲对应聆听次数',
-  INDEX userListen_listenNum(listenNum)
-)ENGINE=Innodb DEFAULT CHARSET=utf8;
+# CREATE TABLE mh_userXX_listen
+# (
+#   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+#   songId INT UNSIGNED NOT NULL UNIQUE DEFAULT 0 COMMENT '歌曲对应的ID',
+#   listenNum TINYINT UNSIGNED DEFAULT 0 COMMENT '歌曲对应聆听次数',
+#   INDEX userListen_listenNum(listenNum)
+# )ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH私信表 -- 发送私信内容表 */
@@ -180,7 +180,7 @@ CREATE TABLE mh_message
   INDEX message_fromType(`fromType`),
   INDEX message_toOne(`toId`,`toType`),
   INDEX message_sendTime(sendTime)
-)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH会员表 -- 普通用户付钱后成为会员 */
@@ -222,7 +222,7 @@ CREATE TABLE mh_singer
   INDEX singer_singerName(singerName),
   INDEX singer_styleId(styleId),
   INDEX singer_createTime(createTime)
-)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH音乐歌手粉丝表 */
@@ -234,7 +234,7 @@ CREATE TABLE mh_fans
   userId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '用户ID',
   INDEX fans_singerId(singerId),
   INDEX fans_userId(userId)
-)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH音乐歌手的粉丝黑名单 */
@@ -247,7 +247,7 @@ CREATE TABLE mh_fans_blacklist
   tips VARCHAR(255) NOT NULL DEFAULT '' COMMENT '拉黑进黑名单原因备注',
   INDEX fansBlacklist_singerId(singerId),
   INDEX fansBlacklist_userId(userId)
-)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH音乐风格表 -- 用于搜索歌单 */
@@ -259,35 +259,35 @@ CREATE TABLE mh_style
   parentId TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '风格的一级父ID,如果有的话[目前只做二级分类]',
   status BIT NOT NULL DEFAULT 1 COMMENT '风格状态[默认是 1 正常,还有 0 非正常状态]',
   INDEX style_parentId(parentId)
-)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH音乐歌单表 -- 歌单分为 1-普通用户歌单,2-歌曲专辑 */
 # 记录所有歌单/专辑的信息
-CREATE TABLE mh_album
+CREATE TABLE mh_play_list
 (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
-  albumName VARCHAR(35) NOT NULL DEFAULT '' COMMENT '歌单名称',
-  albumImg VARCHAR(255) DEFAULT '' COMMENT '歌单的封面图片所在路径',
-  #albumStyle VARCHAR(35) DEFAULT '' COMMENT '歌单所属风格列表[记录风格ID使用 , 分隔且限制只能有三个不同的风格]',
-  albumType BIT NOT NULL DEFAULT 0 COMMENT '歌单创建的类型[ 0-普通用户歌单 / 1-歌曲专辑]',
+  playListName VARCHAR(35) NOT NULL DEFAULT '' COMMENT '歌单名称',
+  playListImg VARCHAR(255) DEFAULT '' COMMENT '歌单的封面图片所在路径',
+  #playListStyle VARCHAR(35) DEFAULT '' COMMENT '歌单所属风格列表[记录风格ID使用 , 分隔且限制只能有三个不同的风格]',
+  playListType BIT NOT NULL DEFAULT 0 COMMENT '歌单创建的类型[ 0-普通用户歌单 / 1-歌曲专辑]',
   songIdList TEXT COMMENT '歌单所收集的所有歌曲列表[记录歌曲ID使用 , 分隔]',
   createBy VARCHAR(25) NOT NULL DEFAULT '' COMMENT '创建人是谁',
   createTime INT UNSIGNED NOT NULL COMMENT '该歌单创建时间',
-  INDEX album_albumType(albumType),
-  INDEX album_createBy(createBy)
-)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  INDEX playList_playListType(playListType),
+  INDEX playList_createBy(createBy)
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH音乐歌单表对应风格 -- 反范式,为了优化搜索提高搜索相似风格的歌单 */
 # 反范式设计,为了查询效率,一个歌单的一个风格即为一条记录[一个歌单限制最多只有3种风格]
-CREATE TABLE mh_album_style
+CREATE TABLE mh_play_list_style
 (
-  albumId INT UNSIGNED ,
+  plaiListId INT UNSIGNED ,
   styleId TINYINT UNSIGNED,
-  INDEX albumStyle_albumId(albumId),
-  INDEX albumStyle_styleId(styleId)
-)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  INDEX playListStyle_playListId(plaiListId),
+  INDEX playListStyle_styleId(styleId)
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH音乐单曲表 -- 记录每一首歌的详细信息 */
@@ -307,12 +307,12 @@ CREATE TABLE mh_song
   createTime INT UNSIGNED NOT NULL COMMENT '该歌曲创建时间',
   INDEX song_songName(songName),
   INDEX song_singerId(singerId)
-)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH音乐歌曲交易表 -- 记录每一首歌的交易记录 */
 # 歌曲交易表,如果某歌曲需要付钱下载或者聆听则记录该首歌曲的销售记录
-CREATE TABLE mh_song_buy
+CREATE TABLE mh_song_deal
 (
   dealID BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
   songId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '歌曲对应的ID',
@@ -343,7 +343,7 @@ CREATE TABLE mh_listen_rank
   songName VARCHAR(35) NOT NULL UNIQUE DEFAULT '' COMMENT '歌曲对应名称',
   listenNum INT UNSIGNED DEFAULT 0 COMMENT '歌曲对应聆听次数',
   INDEX rank_listenNum(listenNum)
-)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH歌曲评论表 -- 记录用户对歌曲的评论 */
@@ -360,7 +360,7 @@ CREATE TABLE mh_comment
   replyTime INT UNSIGNED NOT NULL COMMENT '评论时间',
   INDEX comment_songId(songId),
   INDEX comment_replyUserId(replyUserId)
-)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH评论点赞表 -- 记录哪个用户点赞了哪条评论 */
@@ -371,7 +371,7 @@ CREATE TABLE mh_comment_like
   userId INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '点赞该评论所对应的用户ID',
   INDEX like_commentId(commentId),
   INDEX like_userId(userId)
-)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH问卷表 -- 用户反馈所填的问卷情况 */
@@ -386,7 +386,7 @@ CREATE TABLE mh_questionnaire
   status TINYINT UNSIGNED DEFAULT 0 COMMENT '调查问卷状态[ 0-管理员未查看 / 1-管理员已查看未回邮件 / 2-管理员已回邮件 ]',
   sendTime INT UNSIGNED NOT NULL COMMENT '发送时间',
   INDEX questionnaire_status(status)
-)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
 /* MH音乐分析表 -- 记录每天 1-新用户、2-新会员数量、3-歌曲交易量 */
@@ -398,6 +398,16 @@ CREATE TABLE mh_analysis
   `date` INT UNSIGNED NOT NULL COMMENT '记录每天日期',
   INDEX analysis_type(type),
   INDEX analysis_date(`date`)
-)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
+
+/* MH搜索记录表 -- 记录用户搜索记录 */
+CREATE TABLE mh_search
+(
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+  `key` VARCHAR(32) NOT NULL DEFAULT '',
+  `type` TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '搜索不同的分类[ 1-单曲 / 2-歌单 / 3-歌手 / 4-用户 ]',
+  `date` INT UNSIGNED NOT NULL COMMENT '记录每天日期',
+  INDEX search_date(`date`)
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
 
