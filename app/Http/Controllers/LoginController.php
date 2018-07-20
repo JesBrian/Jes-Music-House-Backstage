@@ -37,6 +37,18 @@ class LoginController extends Controller
 
 
     /**
+     * Notes: 后台登录 API 接口
+     * @return array
+     */
+    public function backstageLogin()
+    {
+        $phone = Input::post('phone');
+        $passwd = Input::post('passwd');
+        return [$phone, $passwd];
+    }
+
+
+    /**
      * Notes: 获取 OAuth 登录跳转 URL API 接口
      * @param string $loginOAuthType
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector

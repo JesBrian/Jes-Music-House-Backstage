@@ -31,13 +31,24 @@ Route::get('githubOAuthCallBack', 'LoginController@githubOAuthCallBack');
 Route::get('giteeOAuthCallBack', 'LoginController@giteeOAuthCallBack');
 Route::get('codingOAuthCallBack', 'LoginController@codingOAuthCallBack');
 
+Route::post('backstageLogin','LoginController@backstageLogin');
+
+
 /**
  * 注册相关
  */
 Route::post('userRegister', 'RegisterController@userRegister');
 Route::post('createUser', 'RegisterController@checkIdentifyingCodeAndCreateUser');
 
+
 /**
  * 搜索相关
  */
 Route::post('searchInfo', 'SearchController@searchInfo');
+
+
+/**
+ *
+ */
+
+
