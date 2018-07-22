@@ -24,4 +24,23 @@ class UserService extends Service
         }
         return parent::ajaxStandardizationReturn();
     }
+
+
+    /**
+     * Notes: 根据用户 ID 获取用户基本信息
+     * @param $userId
+     * @return array
+     */
+    public static function getUserBaseInfoByIdService($userId)
+    {
+        return parent::ajaxStandardizationReturn();
+    }
+
+
+    /**
+     * Notes: 修改用户基本信息
+     */
+    public static function updateUserBaseInfoService()
+    {
+    }
 }

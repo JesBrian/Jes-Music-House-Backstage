@@ -16,4 +16,25 @@ class Singer extends Model
      * @var bool
      */
     public $timestamps = false;
+
+    /**
+     * Notes: 检查是否为歌手
+     */
+    public static function checkUserIsSinger()
+    {
+    }
+
+    /**
+     * Notes: 检查歌手名是否存在
+     */
+    public static function checkSingerNameExist()
+    {
+    }
+
+    /**
+     * Notes: 添加单个歌手
+     */
+    public static function addSinger()
+    {
+    }
 }

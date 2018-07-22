@@ -38,4 +38,20 @@ class UserInfo extends Model
         $userInfoModel->userId = $userId;
         return $userInfoModel->save();
     }
+
+    /**
+     * Notes: 获取用户基本信息
+     * @param $userId
+     */
+    public static function getUserBaseInfoById($userId)
+    {
+    }
+
+    /**
+     * Notes: 更新用户基本信息
+     * @param $infoData
+     */
+    public static function updateUserBaseInfo($infoData)
+    {
+    }
 }

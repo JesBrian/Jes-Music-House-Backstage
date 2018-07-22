@@ -16,4 +16,11 @@ class Admin extends Model
      * @var bool
      */
     public $timestamps = false;
+
+    /**
+     * Notes: 登陆后台
+     */
+    public static function backstageLogin()
+    {
+    }
 }

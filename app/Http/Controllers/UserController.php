@@ -2,23 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Service\UserService;
+use Illuminate\Support\Facades\Input;
+
 class UserController extends Controller
 {
     /**
-     * Notes: 根据 ID 获取信息 API 接口
+     * Notes: 根据用户 ID 获取基本信息 API 接口
      * @return array
      */
-    public function getInfoById()
+    public function getBaseInfoById()
     {
-        return [];
+        $userId = Input::post('id');
+        return UserService::getUserBaseInfoByIdService($userId);
     }
 
 
     /**
-     * Notes: 修改信息 API 接口
+     * Notes: 修改用户基本信息 API 接口
      * @return array
      */
-    public function updateInfo()
+    public function updateUserBaseInfo()
     {
         return [];
     }

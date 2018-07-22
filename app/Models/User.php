@@ -86,4 +86,22 @@ class User extends Model
     {
         return self::query()->where(['id' => $userId])->first();
     }
+
+    /**
+     * Notes: 检查用户名是否存在
+     * @param $username
+     * @return bool
+     */
+    public static function checkUsernameExist($username)
+    {
+        return self::query()->where('username', $username)->exists();
+    }
+
+    /**
+     * Notes: 更新用户名
+     * @param $username
+     */
+    public static function updateUsername($username)
+    {
+    }
 }
