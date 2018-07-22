@@ -48,7 +48,28 @@ Route::post('searchInfo', 'SearchController@searchInfo');
 
 
 /**
- *
+ * 用户相关
+ */
+Route::post('getUserBaseInfo', 'UserController@getBaseInfoById');
+Route::post('updateUserBaseInfo', 'UserController@updateUserBaseInfo');
+
+
+/**
+ * 管理员相关
  */
 
+
+/**
+ * 歌手相关
+ */
+
+
+/**
+ * 歌曲相关
+ */
+
+
+/**
+ * 播放列表相关
+ */
 

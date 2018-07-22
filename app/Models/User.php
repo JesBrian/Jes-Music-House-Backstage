@@ -101,7 +101,10 @@ class User extends Model
      * Notes: 更新用户名
      * @param $username
      */
-    public static function updateUsername($username)
+    public static function updateUsername($userId, $username)
     {
+        $userModel = self::find($userId);
+        $userModel->username = $username;
+        $userModel->save();
     }
 }

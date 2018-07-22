@@ -24,6 +24,7 @@ class UserController extends Controller
      */
     public function updateUserBaseInfo()
     {
-        return [];
+        $infoData = Input::post();
+        return UserService::updateUserBaseInfoService($infoData);
     }
 }

@@ -42,9 +42,11 @@ class UserInfo extends Model
     /**
      * Notes: 获取用户基本信息
      * @param $userId
+     * @return array
      */
     public static function getUserBaseInfoById($userId)
     {
+        return self::query()->select('sex', 'date', 'address', 'description', 'mail')->where('userId', $userId)->first()->toArray();
     }
 
     /**
@@ -53,5 +55,6 @@ class UserInfo extends Model
      */
     public static function updateUserBaseInfo($infoData)
     {
+        $userInfoModel = self::find($infoData['userId']);
     }
 }

@@ -4,6 +4,7 @@ namespace App\Service;
 
 use App\Config\StateCodeConfig;
 use App\Models\User;
+use App\Models\UserInfo;
 
 class UserService extends Service
 {
@@ -33,6 +34,7 @@ class UserService extends Service
      */
     public static function getUserBaseInfoByIdService($userId)
     {
+        parent::$returnData = UserInfo::getUserBaseInfoById($userId);
         return parent::ajaxStandardizationReturn();
     }
 
@@ -40,7 +42,10 @@ class UserService extends Service
     /**
      * Notes: 修改用户基本信息
      */
-    public static function updateUserBaseInfoService()
+    public static function updateUserBaseInfoService($infoData)
     {
+        User::updateUsername($infoData['userId'], $infoData['username']);
+        UserInfo::updateUserBaseInfo($infoData);
+        return parent::ajaxStandardizationReturn();
     }
 }
