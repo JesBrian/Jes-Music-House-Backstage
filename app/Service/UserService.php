@@ -35,6 +35,7 @@ class UserService extends Service
     public static function getUserBaseInfoByIdService($userId)
     {
         parent::$returnData = UserInfo::getUserBaseInfoById($userId);
+        parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
         return parent::ajaxStandardizationReturn();
     }
 
@@ -46,6 +47,7 @@ class UserService extends Service
     {
         User::updateUsername($infoData['userId'], $infoData['username']);
         UserInfo::updateUserBaseInfo($infoData);
+        parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
         return parent::ajaxStandardizationReturn();
     }
 }

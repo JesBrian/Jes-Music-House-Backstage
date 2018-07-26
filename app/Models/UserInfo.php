@@ -46,7 +46,7 @@ class UserInfo extends Model
      */
     public static function getUserBaseInfoById($userId)
     {
-        return self::query()->select('sex', 'date', 'address', 'description', 'mail')->where('userId', $userId)->first()->toArray();
+        return self::query()->select('sex', 'birth', 'address', 'description', 'mail')->where('userId', $userId)->first()->toArray();
     }
 
     /**
@@ -56,5 +56,11 @@ class UserInfo extends Model
     public static function updateUserBaseInfo($infoData)
     {
         $userInfoModel = self::find($infoData['userId']);
+        $userInfoModel->sex = $infoData['sex'];
+        $userInfoModel->birth = $infoData['birth'];
+        $userInfoModel->address = $infoData['address'];
+        $userInfoModel->mail = $infoData['mail'];
+        $userInfoModel->description = $infoData['description'];
+        $userInfoModel->save();
     }
 }
