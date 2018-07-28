@@ -19,9 +19,14 @@ class StateCodeConfig
     ];
 
     public const USER_LOGIN_STATE_CODE = [
-        'loginSuccess' => '620',
         'userNoExistent' => '621',
         'passwdError' => '622',
         'verifyLoginError' => '623'
+    ];
+
+    public const BACKSTAGE_LOGIN_STAGE_CODE = [
+        'accountNoExistent' => '631',
+        'passwdError' => '632',
+        'accountBanState' => '633'
     ];
 }

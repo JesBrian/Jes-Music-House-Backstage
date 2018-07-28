@@ -44,7 +44,7 @@ class LoginController extends Controller
     {
         $phone = Input::post('phone');
         $passwd = Input::post('passwd');
-        return [$phone, $passwd];
+        return LoginService::backstageLoginService($phone, $passwd);
     }
 
 
