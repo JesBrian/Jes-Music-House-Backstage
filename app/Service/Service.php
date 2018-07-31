@@ -26,10 +26,11 @@ abstract class Service
      */
     protected final static function ajaxStandardizationReturn(): array
     {
+        self::$returnMsg = MsgConfig::RETURN_MESSAGE[self::$returnState];
         return [
             'state' => self::$returnState,
             'data' => self::$returnData,
-            'msg' => self::$returnMsg = MsgConfig::RETURN_MESSAGE[self::$returnState]
+            'msg' => self::$returnMsg
         ];
     }
 }
