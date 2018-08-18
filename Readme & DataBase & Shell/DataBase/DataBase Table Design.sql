@@ -248,14 +248,26 @@ CREATE TABLE mh_fans_blacklist
 
 /* MH音乐风格表 -- 用于搜索歌单 */
 # 音乐风格表,提供给歌单/专辑/音乐人选择音乐风格使用,也为了推荐功能使用
-CREATE TABLE mh_style
+CREATE TABLE mh_style_main
 (
   id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
   styleName VARCHAR(15) NOT NULL UNIQUE DEFAULT '' COMMENT '风格名称',
-  parentId TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '风格的一级父ID,如果有的话[目前只做二级分类]',
-  status BIT NOT NULL DEFAULT 1 COMMENT '风格状态[默认是 1 正常,还有 0 非正常状态]',
-  INDEX style_parentId(parentId)
+  icon VARCHAR(18) DEFAULT '' COMMENT '一级分类对应图标',
+  status BIT NOT NULL DEFAULT 1 COMMENT '风格状态[默认是 1 正常,还有 0 非正常状态]'
 )ENGINE=Innodb DEFAULT CHARSET=utf8;
+CREATE TABLE mh_style_cell
+(
+  id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+  styleName VARCHAR(15) NOT NULL UNIQUE DEFAULT '' COMMENT '风格名称',
+  mainId TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '风格的一级父ID,对应mh_style_main表ID[目前只做二级分类]',
+  status BIT NOT NULL DEFAULT 1 COMMENT '风格状态[默认是 1 正常,还有 0 非正常状态]',
+  INDEX style_parentId(mainId)
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
+
+
+INSERT INTO `mh_style_main` VALUES (1,'语种','',''),(2,'风格','',''),(3,'场景','',''),(4,'情感','',''),(5,'主题','','');
+INSERT INTO `mh_style_cell` VALUES (1,'华语',1,''),(2,'欧美',1,''),(3,'日语',1,''),(4,'韩语',1,''),(5,'粤语',1,''),(6,'小语种',1,''),(7,'流行',2,''),(8,'摇滚',2,''),(9,'民谣',2,''),(10,'电子',2,''),(11,'舞曲',2,''),(12,'说唱',2,''),(13,'轻音乐',2,''),(14,'爵士',2,''),(15,'乡村',2,''),(16,'R&B/Soul',2,''),(17,'古典',2,''),(18,'民族',2,''),(19,'英伦',2,''),(20,'金属',2,''),(21,'朋克',2,''),(22,'蓝调',2,''),(23,'雷鬼',2,''),(24,'世界音乐',2,''),(25,'拉丁',2,''),(26,'另类/独立',2,''),(27,'New Age',2,''),(28,'古风',2,''),(29,'后摇',2,''),(30,'Bossa Nova',2,''),(31,'清晨',3,''),(32,'夜晚',3,''),(33,'学习',3,''),(34,'工作',3,''),(35,'午休',3,''),(36,'下午茶',3,''),(37,'地铁',3,''),(38,'驾车',3,''),(39,'运动',3,''),(40,'旅行',3,''),(41,'散步',3,''),(42,'酒吧',3,''),(43,'怀旧',4,''),(44,'清新',4,''),(45,'浪漫',4,''),(46,'性感',4,''),(47,'伤感',4,''),(48,'治愈',4,''),(49,'放松',4,''),(50,'孤独',4,''),(51,'兴奋',4,''),(52,'快乐',4,''),(53,'安静',4,''),(54,'思念',4,''),(55,'影视原声',5,''),(56,'ACG',5,''),(57,'儿童',5,''),(58,'游戏',5,''),(59,'校园',5,''),(60,'70后',5,''),(61,'80后',5,''),(62,'90后',5,''),(63,'00后',5,''),(64,'KTV',5,''),(65,'经典',5,''),(66,'翻唱',5,''),(67,'吉他',5,''),(68,'钢琴',5,''),(69,'器乐',5,''),(70,'榜单',5,''),(71,'网络歌曲',5,'');
+
 
 
 /* MH音乐歌单表 -- 歌单分为 1-普通用户歌单,2-歌曲专辑 */
