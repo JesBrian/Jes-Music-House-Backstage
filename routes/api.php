@@ -60,6 +60,12 @@ Route::post('updateUserBaseInfo', 'UserController@updateUserBaseInfo');
 
 
 /**
+ * 风格相关
+ */
+Route::post('getAllStyle', 'StyleController@getAllStyle');
+
+
+/**
  * 歌手相关
  */
 

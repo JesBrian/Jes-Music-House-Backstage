@@ -35,4 +35,28 @@ class HelpTool
         }
         return $operArr;
     }
+
+
+    /**
+     * Notes: 无限极分类
+     * @param $items
+     * @return array
+     */
+    public static function getTreeFormatArrayData($items)
+    {
+        $tree = [];
+
+        foreach ($items as $item) {
+            $tree[$item['id']] = $item;
+        }
+
+        foreach ($tree as $key => $item) {
+            if ($item['pid'] !== 0) {
+                $tree[$item['pid']]['cell'][] = $tree[$key];
+                unset($tree[$key]);
+            }
+        }
+
+        return $tree;
+    }
 }
