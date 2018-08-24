@@ -20,33 +20,12 @@ CREATE TABLE mh_menu
 (
   id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(28) NOT NULL DEFAULT '' COMMENT '菜单名称',
-  parent_id TINYINT UNSIGNED DEFAULT 0 COMMENT '菜单的父ID [如果是二级菜单则该字段记录一级菜单的ID]',
+  icon VARCHAR(18) DEFAULT '' COMMENT '菜单图标',
+  pid TINYINT UNSIGNED DEFAULT 0 COMMENT '菜单的父ID [如果是二级菜单则该字段记录一级菜单的ID]',
   url VARCHAR(255) NOT NULL DEFAULT '' COMMENT '菜单对应的URL跳转地址',
   level TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '菜单的优先级 [后台左侧菜单栏显示顺序]',
   status BIT NOT NULL DEFAULT 1 COMMENT '菜单状态 [默认是 1 正常,还有 0 非正常状态]'
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-INSERT mh_menu(name, parent_id, url, level)
-  VALUES ('系统管理',0,'',127);
-INSERT mh_menu(name, parent_id, url, level)
-  VALUES ('菜单管理',1,'',52);
-INSERT mh_menu(name, parent_id, url, level)
-  VALUES ('权限管理',1,'',48);
-INSERT mh_menu(name, parent_id, url, level)
-  VALUES ('角色管理',1,'',46);
-INSERT mh_menu(name, parent_id, url, level)
-  VALUES ('登陆日志',1,'',44);
-
-INSERT mh_menu(name, parent_id, url, level)
-  VALUES ('人员管理',0,'',125);
-INSERT mh_menu(name, parent_id, url, level)
-  VALUES ('歌手管理',6,'',52);
-INSERT mh_menu(name, parent_id, url, level)
-  VALUES ('会员管理',6,'',50);
-INSERT mh_menu(name, parent_id, url, level)
-  VALUES ('用户管理',6,'',48);
-
-
 
 
 /* MH权限表 -- 设置普通用户-5、会员-4、歌手-3、普通管理员-2、超级管理员权限-1 */

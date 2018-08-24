@@ -79,3 +79,10 @@ Route::post('getAllStyle', 'StyleController@getAllStyle');
  * 播放列表相关
  */
 
+
+/**
+ * 后台菜单相关
+ */
+Route::post('createMenu', 'MenuController@createMenu');
+Route::post('updateMenuInfo', 'MenuController@updateMenuInfo');
+Route::post('getMenuList', 'MenuController@getMenuList');
