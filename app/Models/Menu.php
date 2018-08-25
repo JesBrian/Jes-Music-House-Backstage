@@ -17,4 +17,29 @@ class Menu extends Model
      */
     public $timestamps = false;
 
+    /**
+     * Notes: 检查菜单名是否存在
+     * @param $menuName
+     * @return bool
+     */
+    public static function checkMenuNameExist($menuName)
+    {
+        return self::query()->where('name', $menuName)->exists();
+    }
+
+    /**
+     * Notes: 创建新的菜单项
+     * @param $menuInfo
+     * @return mixed
+     */
+    public static function createNewMenu($menuInfo)
+    {
+        $menuModel = new self();
+        $menuModel->name = $menuInfo['name'];
+        $menuModel->icon = $menuInfo['icon'];
+        $menuModel->pid = $menuInfo['pid'];
+        $menuModel->url = $menuInfo['url'];
+        $menuModel->save();
+        return $menuModel->id;
+    }
 }

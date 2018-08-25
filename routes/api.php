@@ -38,7 +38,7 @@ Route::post('backstageLogin','LoginController@backstageLogin');
  * 注册相关
  */
 Route::post('userRegister', 'RegisterController@userRegister');
-Route::post('createUser', 'RegisterController@checkIdentifyingCodeAndCreateUser');
+Route::post('createUser', 'RegisterController@checkIdentifyCodeAndCreateUser');
 
 
 /**

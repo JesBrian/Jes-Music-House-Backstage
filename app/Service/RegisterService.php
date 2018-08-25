@@ -22,7 +22,7 @@ class RegisterService extends Service
             parent::$returnState = StateCodeConfig::USER_REGISTER_STATE_CODE['phoneExist'];
         } else { // 用户未注册
             parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
-            session(['phone' => $phone, 'passwd' => $passwd, 'identifyingCode' => '0000']);
+            session(['phone' => $phone, 'passwd' => $passwd, 'identifyCode' => '0000']);
         }
         return parent::ajaxStandardizationReturn();
     }
@@ -32,15 +32,15 @@ class RegisterService extends Service
      * @param string $code
      * @return array
      */
-    public static function checkIdentifyingCodeService(string $code): array
+    public static function checkIdentifyCodeService(string $code): array
     {
         /* 判断输入的验证码正确性 */
-        if ($code === session('identifyingCode')) { // 验证码正确
+        if ($code === session('identifyCode')) { // 验证码正确
             $createUserResult = UserService::createUserService(session('phone'), session('passwd'));
             if ($createUserResult['state'] === StateCodeConfig::COMMON_STATE_CODE['success']) {
                 parent::$returnData = $createUserResult['data'];
                 /* 删除 session 缓存的注册信息 */
-                session(['phone' => null, 'passwd' => null, 'identifyingCode' => null]);
+                session(['phone' => null, 'passwd' => null, 'identifyCode' => null]);
             }
             parent::$returnState = $createUserResult['state'];
         } else { // 验证码错误

@@ -24,9 +24,9 @@ class RegisterController extends Controller
      * @param Request $request
      * @return array
      */
-    public function checkIdentifyingCodeAndCreateUser(Request $request): array
+    public function checkIdentifyCodeAndCreateUser(Request $request): array
     {
-        $identifyingCode = $request->post('identifyingCode');
-        return RegisterService::checkIdentifyingCodeService($identifyingCode);
+        $identifyCode = $request->post('identifyCode');
+        return RegisterService::checkIdentifyCodeService($identifyCode);
     }
 }
