@@ -83,6 +83,7 @@ Route::post('getAllStyle', 'StyleController@getAllStyle');
 /**
  * 后台菜单相关
  */
+Route::post('checkMenuNameExist', 'MenuController@checkMenuNameExistController');
 Route::post('createMenu', 'MenuController@createMenu');
 Route::post('updateMenuInfo', 'MenuController@updateMenuInfo');
 Route::post('getMenuList', 'MenuController@getMenuList');

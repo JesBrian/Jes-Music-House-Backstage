@@ -22,7 +22,7 @@ class LoginService extends Service
         $loginUserModel = User::getUserLoginInfoByPhone($phone);
 
         if ($loginUserModel === null) { // 用户不存在
-            parent::$returnState = StateCodeConfig::USER_LOGIN_STATE_CODE['userNoExistent'];
+            parent::$returnState = StateCodeConfig::USER_LOGIN_STATE_CODE['userNoExist'];
         } else if ($loginUserModel['passwd'] === md5($loginUserModel['salt'] . $passwd)) { // 用户密码正确
             $loginUserModel->loginTime = time();
             $loginUserModel->save();
@@ -74,7 +74,7 @@ class LoginService extends Service
                 parent::$returnState = StateCodeConfig::BACKSTAGE_LOGIN_STAGE_CODE['passwdError'];
             }
         } else {
-            parent::$returnState = StateCodeConfig::BACKSTAGE_LOGIN_STAGE_CODE['accountNoExistent'];
+            parent::$returnState = StateCodeConfig::BACKSTAGE_LOGIN_STAGE_CODE['accountNoExist'];
         }
         return parent::ajaxStandardizationReturn();
     }

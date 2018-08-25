@@ -7,7 +7,7 @@ use App\Service\MenuService;
 
 class MenuController extends Controller
 {
-    public static function checkMenuNameExistService(Request $request)
+    public function checkMenuNameExistController(Request $request)
     {
         $menuName = $request->post('name');
         return MenuService::checkMenuNameExistService($menuName);

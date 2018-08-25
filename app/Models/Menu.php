@@ -34,11 +34,14 @@ class Menu extends Model
      */
     public static function createNewMenu($menuInfo)
     {
+        $menuInfo;
         $menuModel = new self();
         $menuModel->name = $menuInfo['name'];
         $menuModel->icon = $menuInfo['icon'];
-        $menuModel->pid = $menuInfo['pid'];
-        $menuModel->url = $menuInfo['url'];
+        if ($menuInfo['isSecondMenu'] === true) {
+            $menuModel->pid = $menuInfo['pid'];
+            $menuModel->url = $menuInfo['url'];
+        }
         $menuModel->save();
         return $menuModel->id;
     }

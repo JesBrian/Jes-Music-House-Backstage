@@ -19,14 +19,18 @@ class StateCodeConfig
     ];
 
     public const USER_LOGIN_STATE_CODE = [
-        'userNoExistent' => '621',
+        'userNoExist' => '621',
         'passwdError' => '622',
         'verifyLoginError' => '623'
     ];
 
     public const BACKSTAGE_LOGIN_STAGE_CODE = [
-        'accountNoExistent' => '631',
+        'accountNoExist' => '631',
         'passwdError' => '632',
         'accountBanState' => '633'
+    ];
+
+    public const BACKSTAGE_MENU_STAGE_CODE = [
+        'menuNameIsExist' => '641',
     ];
 }

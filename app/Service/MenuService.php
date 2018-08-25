@@ -16,8 +16,9 @@ class MenuService extends Service
     public static function checkMenuNameExistService($menuName)
     {
         if (Menu::checkMenuNameExist($menuName) === true) {
-            parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
+            parent::$returnState = StateCodeConfig::BACKSTAGE_MENU_STAGE_CODE['menuNameIsExist'];
         } else {
+            parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
         }
 
         return parent::ajaxStandardizationReturn();
