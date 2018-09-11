@@ -39,10 +39,10 @@ class HelpTool
 
     /**
      * Notes: 无限极分类
-     * @param $items
+     * @param array $items
      * @return array
      */
-    public static function getTreeFormatArrayData($items)
+    public static function getTreeFormatArrayData(array $items)
     {
         $tree = [];
 
@@ -58,5 +58,18 @@ class HelpTool
         }
 
         return $tree;
+    }
+
+    /**
+     * Notes: 时间字符串转时间戳
+     * @param String $timeString
+     * @return float
+     */
+    public static function timeStringToTimestamp(string $timeString)
+    {
+        $timestamp = 0.0;
+        $tempTimeArr = explode($timeString, ':');
+        $timestamp += $tempTimeArr[0] * 60 + $tempTimeArr[1];
+        return $timestamp;
     }
 }
