@@ -30,7 +30,8 @@ class MenuController extends Controller
     }
 
 
-    public function getMenuList()
+    public function getAllMenuTreeData()
     {
+        return MenuService::getAllMenuTreeDataService();
     }
 }

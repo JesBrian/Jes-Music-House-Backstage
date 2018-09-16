@@ -87,3 +87,5 @@ Route::post('checkMenuNameExist', 'MenuController@checkMenuNameExistController')
 Route::post('createMenu', 'MenuController@createMenu');
 Route::post('updateMenuInfo', 'MenuController@updateMenuInfo');
 Route::post('getMenuList', 'MenuController@getMenuList');
+
+Route::post('getAllMenuTreeData', 'MenuController@getAllMenuTreeData');

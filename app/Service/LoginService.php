@@ -70,6 +70,8 @@ class LoginService extends Service
         if ($accountInfo['powerId'] === 1) { // 待修改
             if (md5($accountInfo['salt'] . $passwd) === $accountInfo['passwd']) {
                 parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
+
+                $menuData = MenuService::getMenuDataByRoleService(0)['data'];
             } else {
                 parent::$returnState = StateCodeConfig::BACKSTAGE_LOGIN_STAGE_CODE['passwdError'];
             }

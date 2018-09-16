@@ -9,6 +9,20 @@ use App\Component\HelpTool;
 class MenuService extends Service
 {
     /**
+     * Notes: 根据角色获取该角色的菜单
+     * @param $power
+     * @return array
+     */
+    public static function getMenuDataByRoleService($power)
+    {
+        $menuArrData = Menu::getMenuDataByRole();
+        $menuTreeData = HelpTool::getTreeFormatArrayData($menuArrData);
+        parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
+        parent::$returnData = $menuTreeData;
+        return parent::ajaxStandardizationReturn();
+    }
+
+    /**
      * Notes:
      * @param $menuName
      * @return array
@@ -36,6 +50,16 @@ class MenuService extends Service
         parent::$returnData = [
             'id' => $newMenuId
         ];
+        return parent::ajaxStandardizationReturn();
+    }
+
+
+    public static function getAllMenuTreeDataService()
+    {
+        $menuData = Menu::getAllMenuData();
+        $menuTreeData = HelpTool::getTreeFormatArrayData($menuData);
+        parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
+        parent::$returnData = $menuTreeData;
         return parent::ajaxStandardizationReturn();
     }
 }

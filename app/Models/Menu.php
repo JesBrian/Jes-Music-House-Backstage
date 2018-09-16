@@ -44,4 +44,21 @@ class Menu extends Model
         $menuModel->save();
         return $menuModel->id;
     }
+
+    /**
+     * Notes: 根据角色获取菜单数据
+     * @return array
+     */
+    public static function getMenuDataByRole()
+    {
+        return [];
+    }
+
+
+    public static function getAllMenuData()
+    {
+        $menuModel = new self();
+        $menuData = $menuModel->query()->where('status','1')->get()->toArray();
+        return $menuData;
+    }
 }
