@@ -55,6 +55,16 @@ class Menu extends Model
     }
 
 
+    /**
+     * Notes: 获取分页的菜单数据
+     * @return array
+     */
+    public static function getPaginationMenuData()
+    {
+        return $menuData = self::query()->where('status','1')->limit(15)->get()->toArray();
+    }
+
+
     public static function getAllMenuData()
     {
         $menuModel = new self();

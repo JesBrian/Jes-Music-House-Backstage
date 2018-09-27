@@ -22,4 +22,14 @@ class Style extends Model
     {
         return self::query()->select('id', 'name', 'pid', 'icon')->where('status','1')->get()->toArray();
     }
+
+
+    /**
+     * Notes:
+     * @return array
+     */
+    public static function getStyleListPagination()
+    {
+        return self::query()->select('id', 'name', 'pid', 'icon')->where('status','1')->limit(15)->get()->toArray();
+    }
 }

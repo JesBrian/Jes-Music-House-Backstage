@@ -30,6 +30,17 @@ class MenuController extends Controller
     }
 
 
+    /**
+     * Notes:
+     * @return array
+     */
+    public function getMenuListPagination(Request $request)
+    {
+        $data = $request->post();
+        return MenuService::getMenuListByPaginationService($data);
+    }
+
+
     public function getAllMenuTreeData()
     {
         return MenuService::getAllMenuTreeDataService();

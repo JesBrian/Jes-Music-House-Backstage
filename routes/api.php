@@ -63,6 +63,7 @@ Route::post('updateUserBaseInfo', 'UserController@updateUserBaseInfo');
  * 风格相关
  */
 Route::post('getAllStyle', 'StyleController@getAllStyle');
+Route::post('getStyleListPagination', 'StyleController@getStyleListPagination');
 
 
 /**
@@ -86,6 +87,6 @@ Route::post('getAllStyle', 'StyleController@getAllStyle');
 Route::post('checkMenuNameExist', 'MenuController@checkMenuNameExistController');
 Route::post('createMenu', 'MenuController@createMenu');
 Route::post('updateMenuInfo', 'MenuController@updateMenuInfo');
-Route::post('getMenuList', 'MenuController@getMenuList');
+Route::post('getMenuListPagination', 'MenuController@getMenuListPagination');
 
 Route::post('getAllMenuTreeData', 'MenuController@getAllMenuTreeData');

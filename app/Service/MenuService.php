@@ -62,4 +62,13 @@ class MenuService extends Service
         parent::$returnData = $menuTreeData;
         return parent::ajaxStandardizationReturn();
     }
+
+
+    public static function getMenuListByPaginationService()
+    {
+        $menuData = Menu::getPaginationMenuData();
+        parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
+        parent::$returnData = $menuData;
+        return parent::ajaxStandardizationReturn();
+    }
 }

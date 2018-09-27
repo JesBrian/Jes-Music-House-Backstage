@@ -12,6 +12,12 @@ class StyleController extends Controller
      */
     public function getAllStyle()
     {
-        return StyleService::getAllStyle();
+        return StyleService::getAllStyleService();
+    }
+
+
+    public function getStyleListPagination()
+    {
+        return StyleService::getStyleListPaginationService();
     }
 }
