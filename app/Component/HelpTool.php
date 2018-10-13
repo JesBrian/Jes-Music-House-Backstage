@@ -57,7 +57,12 @@ class HelpTool
             }
         }
 
-        return $tree;
+        $resultTreeArr = [];
+        foreach ($tree as $v) {
+            array_push($resultTreeArr, $v);
+        }
+
+        return $resultTreeArr;
     }
 
     /**
