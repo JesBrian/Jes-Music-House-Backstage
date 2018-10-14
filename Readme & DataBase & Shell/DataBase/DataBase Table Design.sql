@@ -112,6 +112,22 @@ CREATE TABLE mh_user
 )ENGINE=Innodb DEFAULT CHARSET=utf8;
 
 
+/* MH幻灯片表 -- 首页幻灯片信息 */
+# 记录幻灯片的信息
+CREATE TABLE mh_slider
+(
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+  title VARCHAR(30) NOT NULL DEFAULT '' COMMENT '标题',
+  sliderImg VARCHAR(255) NOT NULL DEFAULT '' COMMENT '图片',
+  url VARCHAR(255) NOT NULL DEFAULT '' COMMENT '跳转链接',
+  local BIT NOT NULL DEFAULT 1 COMMENT '跳转的链接是否外部链接',
+  level TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '优先级 [显示顺序]',
+  descript VARCHAR(500) NOT NULL DEFAULT '描述',
+  status BIT NOT NULL DEFAULT 1 COMMENT '状态[默认是 1 正常,还有 0 非正常状态]',
+  createTime INT UNSIGNED NOT NULL COMMENT '创建时间'
+)ENGINE=Innodb DEFAULT CHARSET=utf8;
+
+
 /* MH用户表其他信息表 -- 记录用户其他一些不常用的信息 */
 # 反范式设计[不常用的用户信息]
 CREATE TABLE mh_user_info

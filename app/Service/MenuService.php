@@ -64,7 +64,7 @@ class MenuService extends Service
     }
 
 
-    public static function getMenuListByPaginationService()
+    public static function getMenuListByPaginationService($data)
     {
         $menuData = Menu::getPaginationMenuData();
         parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];

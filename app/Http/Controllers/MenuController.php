@@ -32,6 +32,7 @@ class MenuController extends Controller
 
     /**
      * Notes:
+     * @param Request $request
      * @return array
      */
     public function getMenuListPagination(Request $request)
