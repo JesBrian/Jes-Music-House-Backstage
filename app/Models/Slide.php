@@ -28,10 +28,14 @@ class Slide extends Model
 
     /**
      * Notes: 获取后台分页幻灯片信息
-     * @return array
+     * @param int $nowPage
+     * @param int $recordNum
+     * @return mixed
      */
-    public static function getPaginationSlideData()
+    public static function getPaginationSlideData($nowPage = 1, $recordNum = 15)
     {
-        return self::query()->limit(15)->get()->toArray();
+        $result['pageCount'] = ceil($pageCount = self::query()->count() / $recordNum);
+        $result['slideData'] = self::query()->offset($recordNum * ($nowPage - 1))->limit($recordNum)->get()->toArray();
+        return $result;
     }
 }

@@ -26,7 +26,7 @@ class SlideService extends Service
      */
     public static function getSlideListByPaginationService($data)
     {
-        $slideData = Slide::getPaginationSlideData();
+        $slideData = Slide::getPaginationSlideData($data['nowPage']);
         parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
         parent::$returnData = $slideData;
         return parent::ajaxStandardizationReturn();
