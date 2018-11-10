@@ -62,8 +62,8 @@ Route::post('updateUserBaseInfo', 'UserController@updateUserBaseInfo');
 /**
  * 轮播图相关
  */
-Route::post('getFrontendSlider','SliderController@getFrontendSlider');
-Route::post('getSliderListPagination','SliderController@getSliderListPagination');
+Route::post('getFrontendSlide','SlideController@getFrontendSlide');
+Route::post('getSlideListPagination','SlideController@getSlideListPagination');
 
 
 /**

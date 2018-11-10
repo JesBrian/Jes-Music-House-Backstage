@@ -57,11 +57,15 @@ class Menu extends Model
 
     /**
      * Notes: 获取分页的菜单数据
+     * @param int $nowPage
+     * @param int $recordNum
      * @return array
      */
-    public static function getPaginationMenuData()
+    public static function getPaginationMenuData($nowPage = 1, $recordNum = 15)
     {
-        return $menuData = self::query()->where('status','1')->limit(15)->get()->toArray();
+        $result['pageCount'] = ceil($pageCount = self::query()->count() / $recordNum);
+        $result['menuData'] = $menuData = self::query()->offset($recordNum * ($nowPage - 1))->limit($recordNum)->get()->toArray();
+        return $result;
     }
 
 
