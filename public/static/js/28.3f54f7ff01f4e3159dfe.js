@@ -1,0 +1,2 @@
+webpackJsonp([28],{"9gSb":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s={render:function(){var e=this.$createElement,t=this._self._c||e;return t("gemini-scrollbar",[t("div",{attrs:{id:"backstageLayout"}},[this._v("\n    分配权限\n  ")])])},staticRenderFns:[]};var a=n("VU/8")({name:"AssignPermissions"},s,!1,function(e){n("MuDY")},"data-v-a7f05722",null);t.default=a.exports},MuDY:function(e,t){}});
+//# sourceMappingURL=28.3f54f7ff01f4e3159dfe.js.map
