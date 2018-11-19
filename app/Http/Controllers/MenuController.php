@@ -29,6 +29,14 @@ class MenuController extends Controller
     {
     }
 
+    /**
+     * Notes: 获取所有一级菜单信息
+     * @return array
+     */
+    public function getAllFirstMenuData()
+    {
+        return MenuService::getAllFirstMenuData();
+    }
 
     /**
      * Notes:

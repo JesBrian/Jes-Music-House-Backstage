@@ -53,7 +53,20 @@ class MenuService extends Service
         return parent::ajaxStandardizationReturn();
     }
 
+    /**
+     * @return array
+     */
+    public static function getAllFirstMenuData()
+    {
+        $menuData = Menu::getAllFirstMenuData();
+        parent::$returnState = StateCodeConfig::COMMON_STATE_CODE['success'];
+        parent::$returnData = $menuData;
+        return parent::ajaxStandardizationReturn();
+    }
 
+    /**
+     * @return array
+     */
     public static function getAllMenuTreeDataService()
     {
         $menuData = Menu::getAllMenuData();
@@ -63,7 +76,10 @@ class MenuService extends Service
         return parent::ajaxStandardizationReturn();
     }
 
-
+    /**
+     * @param $data
+     * @return array
+     */
     public static function getMenuListByPaginationService($data)
     {
         $menuData = Menu::getPaginationMenuData($data['nowPage']);

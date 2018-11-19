@@ -96,4 +96,5 @@ Route::post('createMenu', 'MenuController@createMenu');
 Route::post('updateMenuInfo', 'MenuController@updateMenuInfo');
 Route::post('getMenuListPagination', 'MenuController@getMenuListPagination');
 
+Route::post('getAllFirstMenuData', 'MenuController@getAllFirstMenuData');
 Route::post('getAllMenuTreeData', 'MenuController@getAllMenuTreeData');

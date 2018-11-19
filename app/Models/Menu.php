@@ -68,11 +68,18 @@ class Menu extends Model
         return $result;
     }
 
+    /**
+     * @return array
+     */
+    public static function getAllFirstMenuData()
+    {
+        $menuData = self::query()->select('id', 'name', 'icon')->where('status',1)->where('pid', 0)->get()->toArray();
+        return $menuData;
+    }
 
     public static function getAllMenuData()
     {
-        $menuModel = new self();
-        $menuData = $menuModel->query()->where('status','1')->get()->toArray();
+        $menuData = self::query()->select('id', 'name', 'icon', 'url', 'pid')->where('status',1)->get()->toArray();
         return $menuData;
     }
 }
